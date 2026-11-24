@@ -57,6 +57,7 @@ class CacheOnlyEncoder:
 class BoTSORTPlus(BotSort):
     def __init__(self, plus_config=None, **kwargs):
         self.plus = plus_config or PlusConfig()
+        self.plus.validate_v2()
         self.upstream_hashes = verify_upstream()
         if kwargs.get("per_class",False) or kwargs.get("is_obb",False):
             raise ValueError("This patch implements the baseline's pooled axis-aligned protocol only")
@@ -79,6 +80,17 @@ class BoTSORTPlus(BotSort):
         self.last_events = []
         self._packets = []
         self._rgb_dim = None
+        if self.plus.adapter_mode == "v2":
+            from .adapter_v2 import verify_v2_upstream
+            self.upstream_hashes.update(verify_v2_upstream())
+            from .birth_policy import BirthPolicy
+            from .birth_identity import BirthIdentityGuard
+            if (self.plus.birth.enabled and self.plus.birth_identity.enabled and
+                    self.plus.birth_identity.max_age > self.max_time_lost):
+                raise ValueError("A2 identity max_age exceeds FPS-scaled native retention")
+            self.birth_policy = BirthPolicy(self.plus.birth_policy)
+            self.birth_identity = BirthIdentityGuard(self.plus.birth_identity, self.plus.geometry)
+            self.track_origins = {}
 
     def _features(self, dets, embs, features):
         n = len(dets)
@@ -201,6 +213,9 @@ class BoTSORTPlus(BotSort):
         self.last_events = []
         if not self.plus.enabled:
             return super().update(dets,img,embs=dense if self.with_reid else None)
+        if self.plus.adapter_mode == "v2":
+            from .adapter_v2 import update_v2
+            return update_v2(self, dets, img, dense)
         self.frame_count += 1
         frame = self.frame_count
         activated,refound,lost,removed = [],[],[],[]
@@ -332,3 +347,11 @@ class BoTSORTPlus(BotSort):
                                    "active":len(self.active_tracks),"lost":len(self.lost_stracks),
                                    "candidates":len(self.candidate_pool.candidates)})
         return output.reshape(-1,8)
+
+    def finish_sequence_events(self):
+        """Read-only origin/lifetime summaries; never used for online decisions."""
+        if self.plus.adapter_mode != "v2":
+            return []
+        return [{"event": "track_lifetime", "frame": self.frame_count,
+                 "track_id": int(tid), **dict(info)}
+                for tid, info in sorted(self.track_origins.items())]
