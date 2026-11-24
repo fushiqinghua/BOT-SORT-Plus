@@ -1,0 +1,13 @@
+{
+  "name": "deepsort_max_cos_dist_0p60",
+  "method": "deepsort",
+  "parameter": "max_cos_dist",
+  "value": 0.6,
+  "reused_from": "VTTINY_ROOT/outputs/reid_drop_diagnosis_v1/variants/deepsort_t06",
+  "created": 1795491371.288125,
+  "status": "TRACKS_READY",
+  "elapsed_seconds": 0.06263184547424316,
+  "finished": 1795491372.7286882,
+  "trajectory_files": 30,
+  "protocol_sha256": "03effc7f86c5d1389692ee4082fb70d3c1b51d1ee693c0590b70481c20c30cc4"
+}

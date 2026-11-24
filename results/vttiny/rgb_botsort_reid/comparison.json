@@ -1,0 +1,50 @@
+{
+  "without_reid": {
+    "tracker": "botsort_no_reid",
+    "sequence": "COMBINED_SEQ",
+    "HOTA": 36.35852711140836,
+    "DetA": 23.38539272923042,
+    "AssA": 57.576773473134125,
+    "IDF1": 42.24689083001058,
+    "MOTA": 25.54179738780233,
+    "FP": 11305,
+    "FN": 122310,
+    "IDSW": 240
+  },
+  "selected": {
+    "pretrained": {
+      "name": "botsort_pretrained_a025",
+      "encoder": "pretrained",
+      "appearance_thresh": 0.25,
+      "metrics": {
+        "tracker": "botsort_pretrained_a025",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 36.42766859140277,
+        "DetA": 23.37511494827574,
+        "AssA": 57.81633786273671,
+        "IDF1": 42.3743535713424,
+        "MOTA": 25.496184055359013,
+        "FP": 11407,
+        "FN": 122277,
+        "IDSW": 253
+      }
+    },
+    "finetuned": {
+      "name": "botsort_finetuned_a040",
+      "encoder": "finetuned",
+      "appearance_thresh": 0.4,
+      "metrics": {
+        "tracker": "botsort_finetuned_a040",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 36.48536377227359,
+        "DetA": 23.393206354962196,
+        "AssA": 57.94392684380348,
+        "IDF1": 42.42967945417096,
+        "MOTA": 25.554035111140777,
+        "FP": 11313,
+        "FN": 122281,
+        "IDSW": 239
+      }
+    }
+  }
+}

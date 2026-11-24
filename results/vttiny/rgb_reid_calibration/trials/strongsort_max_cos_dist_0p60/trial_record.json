@@ -1,0 +1,13 @@
+{
+  "name": "strongsort_max_cos_dist_0p60",
+  "method": "strongsort",
+  "parameter": "max_cos_dist",
+  "value": 0.6,
+  "reused_from": "VTTINY_ROOT/outputs/reid_drop_diagnosis_v1/variants/strongsort_t06",
+  "created": 1795491371.2881827,
+  "status": "TRACKS_READY",
+  "elapsed_seconds": 0.06069827079772949,
+  "finished": 1795491407.5891716,
+  "trajectory_files": 30,
+  "protocol_sha256": "1c40bc3d04da85f58d0b10b93925f0f7b3a9eabb2e0797210a984d0ea7141e86"
+}

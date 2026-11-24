@@ -1,0 +1,32 @@
+{
+  "purpose": "Post-hoc causal diagnostic, not independent benchmark or replacement baseline",
+  "cases": [
+    [
+      "deepsort",
+      0.4
+    ],
+    [
+      "deepsort",
+      0.6
+    ],
+    [
+      "deepsort",
+      0.8
+    ],
+    [
+      "strongsort",
+      0.6
+    ],
+    [
+      "strongsort",
+      0.8
+    ],
+    [
+      "strongsort",
+      1.0
+    ]
+  ],
+  "only_changed_parameter": "max_cos_dist",
+  "features": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2/embeddings",
+  "detections": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2/detections"
+}

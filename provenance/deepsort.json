@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/nwojke/deep_sort",
+  "commit": "f08cf1dc470eeb1cd2add1cbf077d95ac6c48aab",
+  "archive_sha256": "7906d4e1dd2ccd48e7524926d51bec4505b30ef66e94f42f2af54d3a34da3f16",
+  "source_modifications": "None; pure package copied under isolated import name. Output bookkeeping is implemented in a separate adapter."
+}

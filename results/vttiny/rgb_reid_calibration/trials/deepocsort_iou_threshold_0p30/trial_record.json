@@ -1,0 +1,13 @@
+{
+  "name": "deepocsort_iou_threshold_0p30",
+  "method": "deepocsort",
+  "parameter": "iou_threshold",
+  "value": 0.3,
+  "reused_from": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2",
+  "created": 1795491371.2882483,
+  "status": "TRACKS_READY",
+  "elapsed_seconds": 0.06272006034851074,
+  "finished": 1795491459.213232,
+  "trajectory_files": 30,
+  "protocol_sha256": "4c9ff38eb52e84b0bf9991cae149d9e5351374243f66affda35241ca8c1c690c"
+}

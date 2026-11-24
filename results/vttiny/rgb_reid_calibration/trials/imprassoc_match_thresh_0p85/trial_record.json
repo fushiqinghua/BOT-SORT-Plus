@@ -1,0 +1,13 @@
+{
+  "name": "imprassoc_match_thresh_0p85",
+  "method": "imprassoc",
+  "parameter": "match_thresh",
+  "value": 0.85,
+  "reused_from": null,
+  "created": 1795491371.2882564,
+  "status": "TRACKS_READY",
+  "elapsed_seconds": 36.64091730117798,
+  "finished": 1795491567.348219,
+  "trajectory_files": 30,
+  "protocol_sha256": "69cb8bdab442584c4bce410e1c0392abc209feb981f90dacd49d36b4ce1e1cd9"
+}

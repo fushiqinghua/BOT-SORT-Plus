@@ -1,0 +1,7 @@
+* text=auto eol=lf
+results/**/source/** -whitespace
+*.patch -whitespace
+*.gz binary
+*.png binary
+results/**/trackers/** -text
+results/**/selected_trackers/**/data/** -text

@@ -1,0 +1,159 @@
+{
+  "evaluation_status": "TEST_SET_SELECTED_AND_TEST_SET_THRESHOLD_TUNED_NOT_HELD_OUT",
+  "selection_rule": [
+    "highest COMBINED_SEQ HOTA",
+    "then highest IDF1",
+    "then lowest IDSW",
+    "then nearest original threshold",
+    "then lowest threshold"
+  ],
+  "selected": {
+    "deepsort": {
+      "case": {
+        "name": "deepsort_max_cos_dist_0p70",
+        "method": "deepsort",
+        "parameter": "max_cos_dist",
+        "value": 0.7,
+        "reused_from": null,
+        "created": 1795491371.2881389
+      },
+      "metrics": {
+        "tracker": "deepsort_max_cos_dist_0p70",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 33.17958909886858,
+        "DetA": 21.118271676718685,
+        "AssA": 53.21298540384609,
+        "IDF1": 37.86924010459457,
+        "MOTA": 23.63326880715573,
+        "FP": 8557,
+        "FN": 128318,
+        "IDSW": 411
+      },
+      "original_threshold": 0.2,
+      "at_grid_boundary": false,
+      "tracker_config": {
+        "min_conf": 0.5,
+        "confidence_comparison": ">",
+        "max_cos_dist": 0.7,
+        "max_iou_dist": 0.7,
+        "max_age": 30,
+        "n_init": 3,
+        "nn_budget": 100,
+        "output_max_time_since_update": 1,
+        "reid": "CLIP-VeRi shared cache"
+      }
+    },
+    "strongsort": {
+      "case": {
+        "name": "strongsort_max_cos_dist_0p70",
+        "method": "strongsort",
+        "parameter": "max_cos_dist",
+        "value": 0.7,
+        "reused_from": null,
+        "created": 1795491371.288197
+      },
+      "metrics": {
+        "tracker": "strongsort_max_cos_dist_0p70",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 30.620588234202227,
+        "DetA": 18.035947188708757,
+        "AssA": 52.93090384309246,
+        "IDF1": 33.82870637581675,
+        "MOTA": 21.50390494626527,
+        "FP": 4088,
+        "FN": 136665,
+        "IDSW": 361
+      },
+      "original_threshold": 0.4,
+      "at_grid_boundary": false,
+      "tracker_config": {
+        "min_conf": 0.6,
+        "max_cos_dist": 0.7,
+        "max_iou_dist": 0.7,
+        "max_age": 30,
+        "n_init": 3,
+        "nn_budget": 100,
+        "mc_lambda": 0.98,
+        "ema_alpha": 0.9
+      }
+    },
+    "deepocsort": {
+      "case": {
+        "name": "deepocsort_iou_threshold_0p05",
+        "method": "deepocsort",
+        "parameter": "iou_threshold",
+        "value": 0.05,
+        "reused_from": null,
+        "created": 1795491371.2882447
+      },
+      "metrics": {
+        "tracker": "deepocsort_iou_threshold_0p05",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 32.11601487029111,
+        "DetA": 19.41773111422082,
+        "AssA": 54.099886933118,
+        "IDF1": 36.26421923474663,
+        "MOTA": 22.72600849965512,
+        "FP": 5600,
+        "FN": 133064,
+        "IDSW": 253
+      },
+      "original_threshold": 0.3,
+      "at_grid_boundary": true,
+      "tracker_config": {
+        "det_thresh": 0.5,
+        "max_age": 30,
+        "min_hits": 3,
+        "iou_threshold": 0.05,
+        "delta_t": 3,
+        "inertia": 0.2,
+        "w_association_emb": 0.75,
+        "alpha_fixed_emb": 0.95,
+        "aw_param": 0.5,
+        "embedding_off": false,
+        "cmc_off": false,
+        "aw_off": false,
+        "Q_xy_scaling": 0.01,
+        "Q_s_scaling": 0.0001
+      }
+    },
+    "imprassoc": {
+      "case": {
+        "name": "imprassoc_match_thresh_0p85",
+        "method": "imprassoc",
+        "parameter": "match_thresh",
+        "value": 0.85,
+        "reused_from": null,
+        "created": 1795491371.2882564
+      },
+      "metrics": {
+        "tracker": "imprassoc_match_thresh_0p85",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 32.980981868955475,
+        "DetA": 23.149935754431517,
+        "AssA": 48.26366572718378,
+        "IDF1": 35.03967837508375,
+        "MOTA": 24.769708297176425,
+        "FP": 11115,
+        "FN": 122917,
+        "IDSW": 1211
+      },
+      "original_threshold": 0.65,
+      "at_grid_boundary": false,
+      "tracker_config": {
+        "track_high_thresh": 0.5,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.5,
+        "track_buffer": 60,
+        "frame_rate": 15,
+        "match_thresh": 0.85,
+        "second_match_thresh": 0.19,
+        "overlap_thresh": 0.55,
+        "proximity_thresh": 0.1,
+        "appearance_thresh": 0.25,
+        "lambda_": 0.05,
+        "with_reid": true
+      }
+    }
+  }
+}

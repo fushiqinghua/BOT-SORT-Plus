@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "requested_cuda_visible_devices": "4",
+  "backend_cuda_visible_devices": "0",
+  "evaluation_status": "TEST_SET_SELECTED_NOT_HELD_OUT",
+  "device_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "trainable_parameters": 14571776,
+  "training_head_parameters": 2615040,
+  "inference_parity": true,
+  "baseline_validation": {
+    "mAP": 25.299659872687496,
+    "rank1": 40.51434491434491,
+    "identities": 825,
+    "queries": 12903
+  }
+}

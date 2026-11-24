@@ -1,0 +1,10 @@
+{"name": "botsort_pretrained_a025", "encoder": "pretrained", "appearance_thresh": 0.25, "seconds": 41.37629433500115, "sequences": 30, "frames": 12590}
+{"name": "botsort_pretrained_a055", "encoder": "pretrained", "appearance_thresh": 0.55, "seconds": 41.53562033700291, "sequences": 30, "frames": 12590}
+{"name": "botsort_pretrained_a010", "encoder": "pretrained", "appearance_thresh": 0.1, "seconds": 41.57476963906083, "sequences": 30, "frames": 12590}
+{"name": "botsort_pretrained_a040", "encoder": "pretrained", "appearance_thresh": 0.4, "seconds": 41.68241012003273, "sequences": 30, "frames": 12590}
+{"name": "botsort_pretrained_a070", "encoder": "pretrained", "appearance_thresh": 0.7, "seconds": 41.4297304910142, "sequences": 30, "frames": 12590}
+{"name": "botsort_finetuned_a010", "encoder": "finetuned", "appearance_thresh": 0.1, "seconds": 41.385842259041965, "sequences": 30, "frames": 12590}
+{"name": "botsort_finetuned_a025", "encoder": "finetuned", "appearance_thresh": 0.25, "seconds": 41.25896660797298, "sequences": 30, "frames": 12590}
+{"name": "botsort_finetuned_a040", "encoder": "finetuned", "appearance_thresh": 0.4, "seconds": 41.38732991297729, "sequences": 30, "frames": 12590}
+{"name": "botsort_finetuned_a055", "encoder": "finetuned", "appearance_thresh": 0.55, "seconds": 41.30069378006738, "sequences": 30, "frames": 12590}
+{"name": "botsort_finetuned_a070", "encoder": "finetuned", "appearance_thresh": 0.7, "seconds": 41.21919581503607, "sequences": 30, "frames": 12590}

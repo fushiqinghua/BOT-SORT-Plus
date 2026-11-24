@@ -1,0 +1,15 @@
+{
+  "epoch": 26,
+  "detector_metrics": {
+    "metrics/precision(B)": 0.60684,
+    "metrics/recall(B)": 0.3428,
+    "metrics/mAP50(B)": 0.3669,
+    "metrics/mAP50-95(B)": 0.17006,
+    "val/box_loss": 2.23624,
+    "val/cls_loss": 3.42527,
+    "val/dfl_loss": 1.0281,
+    "fitness": 0.18975
+  },
+  "sha256": "969b0177bd83166c76365eac8e08fa8deb28156d59e9d48e7ffa580459abb6c1",
+  "source": "VTTINY_ROOT/formal_detection_rgb_testval_v1/runs/rgb_yolo11m/weights/best.pt"
+}

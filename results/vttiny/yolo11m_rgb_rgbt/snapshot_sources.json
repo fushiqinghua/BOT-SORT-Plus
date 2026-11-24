@@ -1,0 +1,10 @@
+{
+  "rgb": {
+    "source": "VTTINY_ROOT/formal_detection_rgb_testval_v1/runs/rgb_yolo11m/weights/best.pt",
+    "sha256": "969b0177bd83166c76365eac8e08fa8deb28156d59e9d48e7ffa580459abb6c1"
+  },
+  "rgbt": {
+    "source": "VTTINY_ROOT/formal_detection_rgbt_testval_v1/runs/mosaic_on/weights/best.pt",
+    "sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec"
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "checkpoints": {
+    "rgb": {
+      "epoch": 26,
+      "detector_metrics": {
+        "metrics/precision(B)": 0.60684,
+        "metrics/recall(B)": 0.3428,
+        "metrics/mAP50(B)": 0.3669,
+        "metrics/mAP50-95(B)": 0.17006,
+        "val/box_loss": 2.23624,
+        "val/cls_loss": 3.42527,
+        "val/dfl_loss": 1.0281,
+        "fitness": 0.18975
+      },
+      "sha256": "969b0177bd83166c76365eac8e08fa8deb28156d59e9d48e7ffa580459abb6c1",
+      "source": "VTTINY_ROOT/formal_detection_rgb_testval_v1/runs/rgb_yolo11m/weights/best.pt"
+    },
+    "rgbt": {
+      "epoch": 36,
+      "detector_metrics": {
+        "metrics/precision(B)": 0.55535,
+        "metrics/recall(B)": 0.39684,
+        "metrics/mAP50(B)": 0.40591,
+        "metrics/mAP50-95(B)": 0.18099,
+        "val/box_loss": 2.22051,
+        "val/cls_loss": 2.64463,
+        "val/dfl_loss": 1.03977,
+        "fitness": 0.20348
+      },
+      "sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+      "source": "VTTINY_ROOT/formal_detection_rgbt_testval_v1/runs/mosaic_on/weights/best.pt"
+    }
+  },
+  "metrics": {
+    "rgb": {
+      "bytetrack": {
+        "tracker": "bytetrack",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 33.88905827235645,
+        "DetA": 21.559481865128223,
+        "AssA": 54.54167673599507,
+        "IDF1": 35.36226160504188,
+        "MOTA": 20.429766593240327,
+        "FP": 13024,
+        "FN": 129484,
+        "IDSW": 537
+      },
+      "ocsort": {
+        "tracker": "ocsort",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 31.54586151085404,
+        "DetA": 18.483087141657926,
+        "AssA": 54.854929248883245,
+        "IDF1": 31.966765059582375,
+        "MOTA": 19.667690185345883,
+        "FP": 6564,
+        "FN": 137433,
+        "IDSW": 418
+      },
+      "botsort_no_reid": {
+        "tracker": "botsort_no_reid",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 35.53908919254825,
+        "DetA": 21.649625112342097,
+        "AssA": 59.540079085377165,
+        "IDF1": 37.65227754237288,
+        "MOTA": 21.316445275126274,
+        "FP": 11636,
+        "FN": 129516,
+        "IDSW": 299
+      },
+      "botsort_reid": {
+        "tracker": "botsort_reid",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 35.54285830405251,
+        "DetA": 21.663707979463336,
+        "AssA": 59.51964224470087,
+        "IDF1": 37.6505538063064,
+        "MOTA": 21.319226575885008,
+        "FP": 11645,
+        "FN": 129498,
+        "IDSW": 303
+      },
+      "deepocsort": {
+        "tracker": "deepocsort",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 32.25068534467189,
+        "DetA": 18.792700157358517,
+        "AssA": 56.312865633731136,
+        "IDF1": 33.24930008577487,
+        "MOTA": 20.021471641857463,
+        "FP": 6812,
+        "FN": 136685,
+        "IDSW": 282
+      },
+      "imprassoc": {
+        "tracker": "imprassoc",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 33.1959357304016,
+        "DetA": 21.89150164387175,
+        "AssA": 51.8193975031594,
+        "IDF1": 33.52025997181721,
+        "MOTA": 20.714015530783435,
+        "FP": 12622,
+        "FN": 128755,
+        "IDSW": 1157
+      },
+      "deepsort": {
+        "tracker": "deepsort",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 32.32100669926234,
+        "DetA": 19.92556617208728,
+        "AssA": 53.53834132339789,
+        "IDF1": 33.69648220740213,
+        "MOTA": 19.938032619095296,
+        "FP": 9791,
+        "FN": 133619,
+        "IDSW": 519
+      },
+      "strongsort": {
+        "tracker": "strongsort",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 31.776054216154144,
+        "DetA": 17.88199089837021,
+        "AssA": 57.298732170473244,
+        "IDF1": 32.322517590139796,
+        "MOTA": 19.444073604343277,
+        "FP": 5477,
+        "FN": 138900,
+        "IDSW": 440
+      }
+    },
+    "rgbt": {
+      "bytetrack": {
+        "tracker": "bytetrack",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 36.67468799796127,
+        "DetA": 25.00589021067967,
+        "AssA": 55.26838239655941,
+        "IDF1": 40.59955530502317,
+        "MOTA": 24.250161315444007,
+        "FP": 15715,
+        "FN": 119803,
+        "IDSW": 659
+      },
+      "ocsort": {
+        "tracker": "ocsort",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 33.911137927922645,
+        "DetA": 21.436240802301786,
+        "AssA": 54.78033401626558,
+        "IDF1": 36.67539046010975,
+        "MOTA": 23.437465233740514,
+        "FP": 7224,
+        "FN": 129868,
+        "IDSW": 546
+      },
+      "botsort_no_reid": {
+        "tracker": "botsort_no_reid",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 37.8120070807683,
+        "DetA": 25.177205298152522,
+        "AssA": 58.24140781721043,
+        "IDF1": 42.364516460174194,
+        "MOTA": 25.75317624546648,
+        "FP": 13392,
+        "FN": 119658,
+        "IDSW": 425
+      },
+      "botsort_reid": {
+        "tracker": "botsort_reid",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 37.86084761921485,
+        "DetA": 25.186472853553692,
+        "AssA": 58.365843006546484,
+        "IDF1": 42.45072958120144,
+        "MOTA": 25.759295107135706,
+        "FP": 13397,
+        "FN": 119645,
+        "IDSW": 422
+      },
+      "deepocsort": {
+        "tracker": "deepocsort",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 34.60870480658495,
+        "DetA": 21.74600157504012,
+        "AssA": 56.22862541027113,
+        "IDF1": 38.066726932537264,
+        "MOTA": 23.83296620163318,
+        "FP": 7398,
+        "FN": 129107,
+        "IDSW": 422
+      },
+      "imprassoc": {
+        "tracker": "imprassoc",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 35.48682824925951,
+        "DetA": 25.548986142025605,
+        "AssA": 51.0577445454199,
+        "IDF1": 37.05411403075427,
+        "MOTA": 25.263111051776693,
+        "FP": 14182,
+        "FN": 118672,
+        "IDSW": 1502
+      },
+      "deepsort": {
+        "tracker": "deepsort",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 34.73043746120937,
+        "DetA": 23.109191338532227,
+        "AssA": 53.53859976015838,
+        "IDF1": 38.09206001684769,
+        "MOTA": 23.78568408873462,
+        "FP": 11250,
+        "FN": 125063,
+        "IDSW": 699
+      },
+      "strongsort": {
+        "tracker": "strongsort",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 34.02896604327939,
+        "DetA": 20.86281096832591,
+        "AssA": 56.51682423217066,
+        "IDF1": 36.97320955360654,
+        "MOTA": 23.377389137351756,
+        "FP": 5743,
+        "FN": 131323,
+        "IDSW": 680
+      }
+    }
+  },
+  "delta_rgbt_minus_rgb": {
+    "bytetrack": {
+      "HOTA": 2.785629725604821,
+      "DetA": 3.446408345551447,
+      "AssA": 0.7267056605643418,
+      "IDF1": 5.237293699981294,
+      "MOTA": 3.8203947222036803,
+      "IDSW": 122,
+      "FP": 2691,
+      "FN": -9681
+    },
+    "ocsort": {
+      "HOTA": 2.365276417068607,
+      "DetA": 2.95315366064386,
+      "AssA": -0.07459523261766776,
+      "IDF1": 4.708625400527378,
+      "MOTA": 3.7697750483946315,
+      "IDSW": 128,
+      "FP": 660,
+      "FN": -7565
+    },
+    "botsort_no_reid": {
+      "HOTA": 2.27291788822005,
+      "DetA": 3.527580185810425,
+      "AssA": -1.2986712681667356,
+      "IDF1": 4.712238917801315,
+      "MOTA": 4.436730970340207,
+      "IDSW": 126,
+      "FP": 1756,
+      "FN": -9858
+    },
+    "botsort_reid": {
+      "HOTA": 2.317989315162343,
+      "DetA": 3.522764874090356,
+      "AssA": -1.1537992381543845,
+      "IDF1": 4.800175774895045,
+      "MOTA": 4.440068531250699,
+      "IDSW": 119,
+      "FP": 1752,
+      "FN": -9853
+    },
+    "deepocsort": {
+      "HOTA": 2.3580194619130594,
+      "DetA": 2.953301417681601,
+      "AssA": -0.08424022346000726,
+      "IDF1": 4.817426846762395,
+      "MOTA": 3.811494559775717,
+      "IDSW": 140,
+      "FP": 586,
+      "FN": -7578
+    },
+    "imprassoc": {
+      "HOTA": 2.290892518857909,
+      "DetA": 3.657484498153856,
+      "AssA": -0.7616529577394999,
+      "IDF1": 3.5338540589370595,
+      "MOTA": 4.549095520993259,
+      "IDSW": 345,
+      "FP": 1560,
+      "FN": -10083
+    },
+    "deepsort": {
+      "HOTA": 2.4094307619470285,
+      "DetA": 3.1836251664449478,
+      "AssA": 0.00025843676048964426,
+      "IDF1": 4.395577809445562,
+      "MOTA": 3.847651469639324,
+      "IDSW": 180,
+      "FP": 1459,
+      "FN": -8556
+    },
+    "strongsort": {
+      "HOTA": 2.2529118271252457,
+      "DetA": 2.9808200699557013,
+      "AssA": -0.7819079383025809,
+      "IDF1": 4.650691963466741,
+      "MOTA": 3.9333155330084786,
+      "IDSW": 240,
+      "FP": 266,
+      "FN": -7577
+    }
+  }
+}

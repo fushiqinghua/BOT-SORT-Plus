@@ -1,0 +1,11 @@
+{
+  "tracker": "deepocsort",
+  "sequence": "DJI_0327_3",
+  "frames": 390,
+  "rows": 14651,
+  "association_seconds": 3.4578331724042073,
+  "reid_seconds": 28.301987596903928,
+  "replay_seconds": 4.013304153108038,
+  "detector_seconds": 1.6769723312463611,
+  "prediction_sha256": "b32ac664d87f911d0f2facceb6361e93344b7a8a42f19ec9abd304c5110aed62"
+}

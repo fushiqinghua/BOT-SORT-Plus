@@ -1,0 +1,13 @@
+{
+  "name": "strongsort_max_cos_dist_0p90",
+  "method": "strongsort",
+  "parameter": "max_cos_dist",
+  "value": 0.9,
+  "reused_from": null,
+  "created": 1795491371.2882218,
+  "status": "TRACKS_READY",
+  "elapsed_seconds": 41.852728605270386,
+  "finished": 1795491449.671511,
+  "trajectory_files": 30,
+  "protocol_sha256": "f791391922faa18e20371bc2d2b682908821e8fdb3093b828ebe6e5f68f0ede0"
+}

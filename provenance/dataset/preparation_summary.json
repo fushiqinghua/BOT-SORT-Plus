@@ -1,0 +1,620 @@
+{
+  "status": "DATA_READY",
+  "dataset": "VT-Tiny-MOT",
+  "classes": [
+    "ship",
+    "car",
+    "cyclist",
+    "pedestrian",
+    "bus",
+    "drone",
+    "plane"
+  ],
+  "official_counts": {
+    "train": {
+      "sequences": 85,
+      "pairs": 34111
+    },
+    "test": {
+      "sequences": 30,
+      "pairs": 12590
+    }
+  },
+  "split_counts": {
+    "train": {
+      "sequences": 68,
+      "pairs": 27838
+    },
+    "val": {
+      "sequences": 17,
+      "pairs": 6273
+    },
+    "test": {
+      "sequences": 30,
+      "pairs": 12590
+    }
+  },
+  "detection": {
+    "rgb/train": {
+      "car": 150029,
+      "plane": 12894,
+      "images": 27838,
+      "boxes": 340614,
+      "cyclist": 40603,
+      "pedestrian": 85904,
+      "bus": 8765,
+      "ship": 35720,
+      "drone": 6699
+    },
+    "rgb/val": {
+      "plane": 2533,
+      "images": 6273,
+      "boxes": 90484,
+      "drone": 1569,
+      "ship": 6784,
+      "car": 44295,
+      "bus": 2562,
+      "pedestrian": 23035,
+      "cyclist": 9706
+    },
+    "ir/train": {
+      "car": 151523,
+      "plane": 11737,
+      "images": 27838,
+      "boxes": 365497,
+      "cyclist": 39645,
+      "pedestrian": 95791,
+      "bus": 8841,
+      "ship": 50314,
+      "drone": 7646
+    },
+    "ir/val": {
+      "plane": 2487,
+      "images": 6273,
+      "boxes": 91255,
+      "drone": 1579,
+      "ship": 7164,
+      "car": 44678,
+      "bus": 2566,
+      "pedestrian": 23143,
+      "cyclist": 9638
+    },
+    "rgb/test": {
+      "car": 103260,
+      "pedestrian": 27026,
+      "images": 12590,
+      "boxes": 180237,
+      "bus": 6108,
+      "ship": 14497,
+      "plane": 5453,
+      "cyclist": 20579,
+      "drone": 3314
+    },
+    "ir/test": {
+      "car": 101505,
+      "pedestrian": 31829,
+      "drone": 3923,
+      "images": 12590,
+      "boxes": 189089,
+      "bus": 5856,
+      "ship": 20949,
+      "plane": 4949,
+      "cyclist": 20078
+    }
+  },
+  "label_changes": {
+    "train/rgb/clipped": 1294,
+    "train/rgb/identical": 103,
+    "train/ir/clipped": 894,
+    "train/ir/identical": 44,
+    "test/rgb/clipped": 222,
+    "test/rgb/identical": 14,
+    "test/ir/clipped": 263,
+    "test/ir/identical": 12
+  },
+  "mot": {
+    "rgb/val/DJI_0067_2": {
+      "frames": 500,
+      "gt_rows": 42453,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0075_3": {
+      "frames": 240,
+      "gt_rows": 37725,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0101_2": {
+      "frames": 120,
+      "gt_rows": 120,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0115_2": {
+      "frames": 290,
+      "gt_rows": 1148,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0117_2": {
+      "frames": 240,
+      "gt_rows": 823,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0127_1": {
+      "frames": 500,
+      "gt_rows": 500,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0131_2": {
+      "frames": 550,
+      "gt_rows": 550,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0143_1": {
+      "frames": 430,
+      "gt_rows": 430,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0157_2": {
+      "frames": 470,
+      "gt_rows": 440,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0177_2": {
+      "frames": 360,
+      "gt_rows": 360,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0217_2": {
+      "frames": 380,
+      "gt_rows": 719,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0287_1": {
+      "frames": 273,
+      "gt_rows": 399,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0287_2": {
+      "frames": 490,
+      "gt_rows": 490,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0291_2": {
+      "frames": 153,
+      "gt_rows": 1256,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0293_1": {
+      "frames": 363,
+      "gt_rows": 305,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0341_2": {
+      "frames": 600,
+      "gt_rows": 1842,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/val/DJI_0341_5": {
+      "frames": 314,
+      "gt_rows": 942,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0067_2": {
+      "frames": 500,
+      "gt_rows": 42088,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0075_3": {
+      "frames": 240,
+      "gt_rows": 38205,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0101_2": {
+      "frames": 120,
+      "gt_rows": 120,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0115_2": {
+      "frames": 290,
+      "gt_rows": 1149,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0117_2": {
+      "frames": 240,
+      "gt_rows": 829,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0127_1": {
+      "frames": 500,
+      "gt_rows": 500,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0131_2": {
+      "frames": 550,
+      "gt_rows": 540,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0143_1": {
+      "frames": 430,
+      "gt_rows": 430,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0157_2": {
+      "frames": 470,
+      "gt_rows": 446,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0177_2": {
+      "frames": 360,
+      "gt_rows": 360,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0217_2": {
+      "frames": 380,
+      "gt_rows": 1103,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0287_1": {
+      "frames": 273,
+      "gt_rows": 388,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0287_2": {
+      "frames": 490,
+      "gt_rows": 411,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0291_2": {
+      "frames": 153,
+      "gt_rows": 1255,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0293_1": {
+      "frames": 363,
+      "gt_rows": 273,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0341_2": {
+      "frames": 600,
+      "gt_rows": 1908,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "ir/val/DJI_0341_5": {
+      "frames": 314,
+      "gt_rows": 1256,
+      "source": "COCO raw bbox and track_id; no clipping; collapse classes only for class-agnostic MOT metrics"
+    },
+    "rgb/test/DJI_0237_2": {
+      "frames": 410,
+      "gt_rows": 1199,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0345_2": {
+      "frames": 600,
+      "gt_rows": 2257,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0309_4": {
+      "frames": 603,
+      "gt_rows": 1415,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0169_3": {
+      "frames": 290,
+      "gt_rows": 5442,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0221_2": {
+      "frames": 590,
+      "gt_rows": 697,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0307_2": {
+      "frames": 180,
+      "gt_rows": 77,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0283_1": {
+      "frames": 450,
+      "gt_rows": 5968,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0049_2": {
+      "frames": 90,
+      "gt_rows": 572,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0277_2": {
+      "frames": 366,
+      "gt_rows": 984,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0255_1": {
+      "frames": 600,
+      "gt_rows": 600,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0129_2": {
+      "frames": 590,
+      "gt_rows": 590,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0073_3": {
+      "frames": 360,
+      "gt_rows": 19190,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0030_2": {
+      "frames": 590,
+      "gt_rows": 4596,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0325_2": {
+      "frames": 595,
+      "gt_rows": 0,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0061_2": {
+      "frames": 240,
+      "gt_rows": 25578,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0225_1": {
+      "frames": 329,
+      "gt_rows": 3682,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0119_2": {
+      "frames": 180,
+      "gt_rows": 360,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0303_2": {
+      "frames": 577,
+      "gt_rows": 2550,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0155_2": {
+      "frames": 410,
+      "gt_rows": 360,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0141_2": {
+      "frames": 410,
+      "gt_rows": 17146,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0181_3": {
+      "frames": 320,
+      "gt_rows": 7870,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0339_2": {
+      "frames": 600,
+      "gt_rows": 1800,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0109_1": {
+      "frames": 90,
+      "gt_rows": 90,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0028_3": {
+      "frames": 570,
+      "gt_rows": 5061,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0032_3": {
+      "frames": 290,
+      "gt_rows": 4688,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0051_2": {
+      "frames": 580,
+      "gt_rows": 1120,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0257_2": {
+      "frames": 590,
+      "gt_rows": 1017,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0159_2": {
+      "frames": 250,
+      "gt_rows": 250,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0173_2": {
+      "frames": 450,
+      "gt_rows": 450,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "rgb/test/DJI_0327_3": {
+      "frames": 390,
+      "gt_rows": 64163,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0237_2": {
+      "frames": 410,
+      "gt_rows": 3717,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0345_2": {
+      "frames": 600,
+      "gt_rows": 3818,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0309_4": {
+      "frames": 603,
+      "gt_rows": 1050,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0169_3": {
+      "frames": 290,
+      "gt_rows": 6143,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0221_2": {
+      "frames": 590,
+      "gt_rows": 697,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0307_2": {
+      "frames": 180,
+      "gt_rows": 161,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0283_1": {
+      "frames": 450,
+      "gt_rows": 5976,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0049_2": {
+      "frames": 90,
+      "gt_rows": 692,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0277_2": {
+      "frames": 366,
+      "gt_rows": 985,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0255_1": {
+      "frames": 600,
+      "gt_rows": 600,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0129_2": {
+      "frames": 590,
+      "gt_rows": 590,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0073_3": {
+      "frames": 360,
+      "gt_rows": 19381,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0030_2": {
+      "frames": 590,
+      "gt_rows": 4576,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0325_2": {
+      "frames": 595,
+      "gt_rows": 4316,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0061_2": {
+      "frames": 240,
+      "gt_rows": 25350,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0225_1": {
+      "frames": 329,
+      "gt_rows": 3622,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0119_2": {
+      "frames": 180,
+      "gt_rows": 360,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0303_2": {
+      "frames": 577,
+      "gt_rows": 1487,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0155_2": {
+      "frames": 410,
+      "gt_rows": 410,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0141_2": {
+      "frames": 410,
+      "gt_rows": 17816,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0181_3": {
+      "frames": 320,
+      "gt_rows": 9634,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0339_2": {
+      "frames": 600,
+      "gt_rows": 2400,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0109_1": {
+      "frames": 90,
+      "gt_rows": 90,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0028_3": {
+      "frames": 570,
+      "gt_rows": 5059,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0032_3": {
+      "frames": 290,
+      "gt_rows": 5149,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0051_2": {
+      "frames": 580,
+      "gt_rows": 1160,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0257_2": {
+      "frames": 590,
+      "gt_rows": 1126,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0159_2": {
+      "frames": 250,
+      "gt_rows": 250,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0173_2": {
+      "frames": 450,
+      "gt_rows": 450,
+      "source": "official GT.zip byte-for-byte"
+    },
+    "ir/test/DJI_0327_3": {
+      "frames": 390,
+      "gt_rows": 61564,
+      "source": "official GT.zip byte-for-byte"
+    }
+  },
+  "policy": {
+    "raw": "unchanged",
+    "detection": "seven classes; RGB own labels, IR own labels; RGBT RGB reference. Clip to image for YOLO only; drop zero-intersection and identical detections with explicit log; do not choose between conflicting identity annotations.",
+    "tracking": "class-agnostic official test GT; COMBINED_SEQ over all sequences separately for RGB and IR coordinate references. All seven detector classes contribute; GT category=1 means object, not pedestrian.",
+    "test": "Original 30-sequence test fixed; never used as validation; official GT preserved byte-for-byte including empty RGB sequence.",
+    "validation": "Internal grouped holdout from original train; same split for RGB, IR and RGBT. See splits.json for fully specified construction.",
+    "train_mot": "No MOT training GT exported: ambiguous raw IDs require review before supervised ReID/association training. Detector training uses identity-free boxes.",
+    "class_aware_mot": "Not enabled: official GT has no semantic classes and DJI_0073_3 boxes differ from COCO; cannot assign labels by exact matching for all rows.",
+    "weights": "Existing M3OT one-class weights are not final seven-class models; new training required.",
+    "parent_overlap": "Official train/test share 8 parent clip names; official split preserved and overlap disclosed. Internal train/val parent groups are disjoint.",
+    "input_channels": {
+      "rgb": 3,
+      "ir": 1,
+      "rgbt": 4
+    },
+    "model_construction": "Use tools/build_vttiny_model.py to inject data channel contract; plain DetectionModel(ch=1) in the current user framework otherwise retains a default 3-channel router."
+  },
+  "checks": [
+    "ZIP CRC/SHA256",
+    "all 93882 raw images decoded and native channels checked",
+    "93402 official-index images paired and hashed; zero exact cross-split duplicates",
+    "480 unindexed test-copy images excluded from derived train/val",
+    "all YOLO labels and paired links verified",
+    "RGB/IR/RGBT actual dataset loaders passed",
+    "seven-class native-channel model CPU forwards passed",
+    "official test GT byte-identical",
+    "HOTA/IDF1/MOTA positive and negative controls passed"
+  ],
+  "remaining": [
+    "Port training launcher to the new split and channel-aware model builder; train three seven-class detectors.",
+    "Adapt the existing seven tracking methods to new manifests and new detector weights; report all test sequences pooled.",
+    "Class-aware MOT and supervised ReID training need further identity/semantic annotation review; current official tracking evaluation is class-agnostic."
+  ]
+}

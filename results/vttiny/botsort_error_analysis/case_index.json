@@ -1,0 +1,376 @@
+[
+  {
+    "case": "A",
+    "sequence": "DJI_0327_3",
+    "gt_id": 40,
+    "frame": 1,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0327_3/00/00000.jpg",
+    "crop": [
+      141,
+      315,
+      209,
+      383
+    ],
+    "gt": [
+      173.0,
+      347.0,
+      5.0,
+      4.0
+    ],
+    "matched_track": -1,
+    "shown_detector": null,
+    "shown_detector_iou": null,
+    "shown_track": null
+  },
+  {
+    "case": "A",
+    "sequence": "DJI_0327_3",
+    "gt_id": 40,
+    "frame": 195,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0327_3/00/00194.jpg",
+    "crop": [
+      139,
+      321,
+      207,
+      389
+    ],
+    "gt": [
+      171.0,
+      353.0,
+      5.0,
+      4.0
+    ],
+    "matched_track": -1,
+    "shown_detector": null,
+    "shown_detector_iou": null,
+    "shown_track": null
+  },
+  {
+    "case": "A",
+    "sequence": "DJI_0327_3",
+    "gt_id": 40,
+    "frame": 390,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0327_3/00/00389.jpg",
+    "crop": [
+      144,
+      322,
+      212,
+      390
+    ],
+    "gt": [
+      176.0,
+      354.0,
+      5.0,
+      4.0
+    ],
+    "matched_track": -1,
+    "shown_detector": null,
+    "shown_detector_iou": null,
+    "shown_track": null
+  },
+  {
+    "case": "B",
+    "sequence": "DJI_0030_2",
+    "gt_id": 5,
+    "frame": 263,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0030_2/00/00262.jpg",
+    "crop": [
+      468,
+      162,
+      549,
+      243
+    ],
+    "gt": [
+      495.0,
+      200.0,
+      27.0,
+      6.0
+    ],
+    "matched_track": -1,
+    "shown_detector": [
+      498.9683837890625,
+      201.2843017578125,
+      521.8134765625,
+      207.0445556640625,
+      0.1586616486310959,
+      0.0
+    ],
+    "shown_detector_iou": 0.5796235970201049,
+    "shown_track": null
+  },
+  {
+    "case": "B",
+    "sequence": "DJI_0030_2",
+    "gt_id": 5,
+    "frame": 304,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0030_2/00/00303.jpg",
+    "crop": [
+      473,
+      164,
+      551,
+      242
+    ],
+    "gt": [
+      499.0,
+      200.0,
+      26.0,
+      6.0
+    ],
+    "matched_track": -1,
+    "shown_detector": [
+      500.215576171875,
+      201.0858154296875,
+      524.603759765625,
+      207.17803955078125,
+      0.33682554960250854,
+      0.0
+    ],
+    "shown_detector_iou": 0.6487732185642693,
+    "shown_track": null
+  },
+  {
+    "case": "B",
+    "sequence": "DJI_0030_2",
+    "gt_id": 5,
+    "frame": 345,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0030_2/00/00344.jpg",
+    "crop": [
+      476,
+      164,
+      554,
+      242
+    ],
+    "gt": [
+      502.0,
+      200.0,
+      26.0,
+      6.0
+    ],
+    "matched_track": -1,
+    "shown_detector": [
+      504.0880432128906,
+      201.3331298828125,
+      528.4808349609375,
+      207.1929931640625,
+      0.15776410698890686,
+      0.0
+    ],
+    "shown_detector_iou": 0.5956622126106778,
+    "shown_track": null
+  },
+  {
+    "case": "C",
+    "sequence": "DJI_0141_2",
+    "gt_id": 7,
+    "frame": 1,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0141_2/00/00000.jpg",
+    "crop": [
+      93,
+      251,
+      161,
+      319
+    ],
+    "gt": [
+      121.0,
+      277.0,
+      13.0,
+      16.0
+    ],
+    "matched_track": -1,
+    "shown_detector": [
+      124.4810791015625,
+      283.5929870605469,
+      132.29244995117188,
+      292.7272033691406,
+      0.0773116797208786,
+      2.0
+    ],
+    "shown_detector_iou": 0.3430324567643066,
+    "shown_track": null
+  },
+  {
+    "case": "C",
+    "sequence": "DJI_0141_2",
+    "gt_id": 7,
+    "frame": 77,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0141_2/00/00076.jpg",
+    "crop": [
+      91,
+      251,
+      159,
+      319
+    ],
+    "gt": [
+      119.0,
+      277.0,
+      13.0,
+      16.0
+    ],
+    "matched_track": -1,
+    "shown_detector": [
+      120.28677368164062,
+      282.7941589355469,
+      129.26971435546875,
+      293.0882263183594,
+      0.4255698025226593,
+      1.0
+    ],
+    "shown_detector_iou": 0.43908881235024005,
+    "shown_track": [
+      30.0,
+      120.32429751907442,
+      282.81549688644003,
+      8.951588049107059,
+      10.27087362681823,
+      0.4255698025226593
+    ]
+  },
+  {
+    "case": "C",
+    "sequence": "DJI_0141_2",
+    "gt_id": 7,
+    "frame": 155,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0141_2/00/00154.jpg",
+    "crop": [
+      89,
+      252,
+      157,
+      320
+    ],
+    "gt": [
+      116.0,
+      279.0,
+      14.0,
+      14.0
+    ],
+    "matched_track": -1,
+    "shown_detector": [
+      119.03009796142578,
+      282.628173828125,
+      127.8484115600586,
+      293.370849609375,
+      0.5704925656318665,
+      2.0
+    ],
+    "shown_detector_iou": 0.4589847578450244,
+    "shown_track": [
+      30.0,
+      119.04067064732605,
+      282.64156371454465,
+      8.821194430176433,
+      10.756574244340413,
+      0.5704925656318665
+    ]
+  },
+  {
+    "case": "D",
+    "sequence": "DJI_0061_2",
+    "gt_id": 9,
+    "frame": 101,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0061_2/00/00100.jpg",
+    "crop": [
+      369,
+      287,
+      437,
+      355
+    ],
+    "gt": [
+      398.0,
+      318.0,
+      10.0,
+      6.0
+    ],
+    "matched_track": 1,
+    "shown_detector": [
+      395.4902038574219,
+      316.88275146484375,
+      409.7695007324219,
+      324.66632080078125,
+      0.6582632660865784,
+      1.0
+    ],
+    "shown_detector_iou": 0.539840706150046,
+    "shown_track": [
+      1.0,
+      395.438500143442,
+      316.90976684646773,
+      14.533368720662338,
+      7.72041638529231,
+      0.6582632660865784
+    ]
+  },
+  {
+    "case": "D",
+    "sequence": "DJI_0061_2",
+    "gt_id": 9,
+    "frame": 108,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0061_2/00/00107.jpg",
+    "crop": [
+      384,
+      284,
+      452,
+      352
+    ],
+    "gt": [
+      414.0,
+      316.0,
+      8.0,
+      5.0
+    ],
+    "matched_track": -1,
+    "shown_detector": [
+      408.04791259765625,
+      313.9468078613281,
+      424.04827880859375,
+      322.2029113769531,
+      0.6593458652496338,
+      1.0
+    ],
+    "shown_detector_iou": 0.3027993503375313,
+    "shown_track": [
+      1.0,
+      408.5388843007489,
+      313.5728485146953,
+      15.807251359367456,
+      8.134539060243128,
+      0.6593458652496338
+    ]
+  },
+  {
+    "case": "D",
+    "sequence": "DJI_0061_2",
+    "gt_id": 9,
+    "frame": 116,
+    "source": "VTTINY_ROOT/data/raw/VT-Tiny-MOT/test2017/DJI_0061_2/00/00115.jpg",
+    "crop": [
+      398,
+      283,
+      466,
+      351
+    ],
+    "gt": [
+      428.0,
+      314.0,
+      8.0,
+      6.0
+    ],
+    "matched_track": 15,
+    "shown_detector": [
+      425.0792236328125,
+      312.4571533203125,
+      436.99853515625,
+      320.152587890625,
+      0.5433179140090942,
+      1.0
+    ],
+    "shown_detector_iou": 0.5233074490049562,
+    "shown_track": [
+      15.0,
+      425.1928286906691,
+      312.8467900068825,
+      12.176080630051047,
+      7.642507697737074,
+      0.5433179140090942
+    ]
+  }
+]

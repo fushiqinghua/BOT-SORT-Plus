@@ -1,0 +1,816 @@
+--- tracker_zoo.py
++++ tracker_zoo.py
+@@ -1,7 +1,7 @@
+ # Mikel Broström 🔥 Yolo Tracking 🧾 AGPL-3.0 license
+ 
+ import yaml
+-from boxmot.utils import BOXMOT, TRACKER_CONFIGS
++from boxmot_legacy.utils import BOXMOT, TRACKER_CONFIGS
+ 
+ def get_tracker_config(tracker_type):
+     """Returns the path to the tracker configuration file."""
+@@ -41,14 +41,14 @@
+ 
+     # Map tracker types to their corresponding classes
+     tracker_mapping = {
+-        'strongsort': 'boxmot.trackers.strongsort.strongsort.StrongSort',
+-        'ocsort': 'boxmot.trackers.ocsort.ocsort.OcSort',
+-        'bytetrack': 'boxmot.trackers.bytetrack.bytetrack.ByteTrack',
+-        'botsort': 'boxmot.trackers.botsort.botsort.BotSort',
+-        'deepocsort': 'boxmot.trackers.deepocsort.deepocsort.DeepOcSort',
+-        'hybridsort': 'boxmot.trackers.hybridsort.hybridsort.HybridSort',
+-        'imprassoc': 'boxmot.trackers.imprassoc.imprassoctrack.ImprAssocTrack',
+-        'boosttrack': 'boxmot.trackers.boosttrack.boosttrack.BoostTrack',
++        'strongsort': 'boxmot_legacy.trackers.strongsort.strongsort.StrongSort',
++        'ocsort': 'boxmot_legacy.trackers.ocsort.ocsort.OcSort',
++        'bytetrack': 'boxmot_legacy.trackers.bytetrack.bytetrack.ByteTrack',
++        'botsort': 'boxmot_legacy.trackers.botsort.botsort.BotSort',
++        'deepocsort': 'boxmot_legacy.trackers.deepocsort.deepocsort.DeepOcSort',
++        'hybridsort': 'boxmot_legacy.trackers.hybridsort.hybridsort.HybridSort',
++        'imprassoc': 'boxmot_legacy.trackers.imprassoc.imprassoctrack.ImprAssocTrack',
++        'boosttrack': 'boxmot_legacy.trackers.boosttrack.boosttrack.BoostTrack',
+     }
+ 
+     # Check if the tracker type exists in the mapping
+--- __init__.py
++++ __init__.py
+@@ -1,21 +1 @@
+-# Mikel Broström 🔥 Yolo Tracking 🧾 AGPL-3.0 license
+-
+-__version__ = '12.0.7'
+-
+-from boxmot.postprocessing.gsi import gsi
+-from boxmot.tracker_zoo import create_tracker, get_tracker_config
+-from boxmot.trackers.botsort.botsort import BotSort
+-from boxmot.trackers.bytetrack.bytetrack import ByteTrack
+-from boxmot.trackers.deepocsort.deepocsort import DeepOcSort
+-from boxmot.trackers.hybridsort.hybridsort import HybridSort
+-from boxmot.trackers.ocsort.ocsort import OcSort
+-from boxmot.trackers.strongsort.strongsort import StrongSort
+-from boxmot.trackers.imprassoc.imprassoctrack import ImprAssocTrack
+-from boxmot.trackers.boosttrack.boosttrack import BoostTrack
+-
+-
+-TRACKERS = ['bytetrack', 'botsort', 'strongsort', 'ocsort', 'deepocsort', 'hybridsort', 'imprassoc', 'boosttrack']
+-
+-__all__ = ("__version__",
+-           "StrongSort", "OcSort", "ByteTrack", "BotSort", "DeepOcSort", "HybridSort", "ImprAssocTrack", "BoostTrack",
+-           "create_tracker", "get_tracker_config", "gsi")
++"""Isolated historical BoxMOT; import only required trackers."""
+--- appearance/reid/export.py
++++ appearance/reid/export.py
+@@ -5,17 +5,17 @@
+ 
+ import torch
+ 
+-from boxmot.appearance.exporters.base_exporter import BaseExporter
+-from boxmot.appearance.exporters.onnx_exporter import ONNXExporter
+-from boxmot.appearance.exporters.openvino_exporter import OpenVINOExporter
+-from boxmot.appearance.exporters.tflite_exporter import TFLiteExporter
+-from boxmot.appearance.exporters.torchscript_exporter import TorchScriptExporter
+-from boxmot.appearance.exporters.tensorrt_exporter import EngineExporter
+-from boxmot.appearance.reid import export_formats
+-from boxmot.appearance.reid.auto_backend import ReidAutoBackend
+-from boxmot.appearance.reid.registry import ReIDModelRegistry
+-from boxmot.utils import WEIGHTS, logger as LOGGER
+-from boxmot.utils.torch_utils import select_device
++from boxmot_legacy.appearance.exporters.base_exporter import BaseExporter
++from boxmot_legacy.appearance.exporters.onnx_exporter import ONNXExporter
++from boxmot_legacy.appearance.exporters.openvino_exporter import OpenVINOExporter
++from boxmot_legacy.appearance.exporters.tflite_exporter import TFLiteExporter
++from boxmot_legacy.appearance.exporters.torchscript_exporter import TorchScriptExporter
++from boxmot_legacy.appearance.exporters.tensorrt_exporter import EngineExporter
++from boxmot_legacy.appearance.reid import export_formats
++from boxmot_legacy.appearance.reid.auto_backend import ReidAutoBackend
++from boxmot_legacy.appearance.reid.registry import ReIDModelRegistry
++from boxmot_legacy.utils import WEIGHTS, logger as LOGGER
++from boxmot_legacy.utils.torch_utils import select_device
+ 
+ 
+ def parse_args():
+--- appearance/reid/registry.py
++++ appearance/reid/registry.py
+@@ -1,10 +1,10 @@
+ # model_registry.py
+ import torch
+ from collections import OrderedDict
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.utils import logger as LOGGER
+ 
+-from boxmot.appearance.reid.config import MODEL_TYPES, TRAINED_URLS, NR_CLASSES_DICT
+-from boxmot.appearance.reid.factory import MODEL_FACTORY
++from boxmot_legacy.appearance.reid.config import MODEL_TYPES, TRAINED_URLS, NR_CLASSES_DICT
++from boxmot_legacy.appearance.reid.factory import MODEL_FACTORY
+ 
+ class ReIDModelRegistry:
+     """Encapsulates model registration and related utilities."""
+@@ -79,7 +79,7 @@
+ 
+         # Special case handling for clip model
+         if 'clip' in name:
+-            from boxmot.appearance.backbones.clip.config.defaults import _C as cfg
++            from boxmot_legacy.appearance.backbones.clip.config.defaults import _C as cfg
+             return MODEL_FACTORY[name](cfg, num_class=num_classes, camera_num=2, view_num=1)
+         
+         return MODEL_FACTORY[name](
+--- appearance/reid/auto_backend.py
++++ appearance/reid/auto_backend.py
+@@ -2,17 +2,17 @@
+ from pathlib import Path
+ from typing import Union, Tuple
+ 
+-from boxmot.utils import WEIGHTS
+-from boxmot.utils import logger as LOGGER
+-from boxmot.utils.torch_utils import select_device
+-from boxmot.appearance.reid import export_formats
+-from boxmot.appearance.backends.onnx_backend import ONNXBackend
+-from boxmot.appearance.backends.openvino_backend import OpenVinoBackend
+-from boxmot.appearance.backends.pytorch_backend import PyTorchBackend
+-from boxmot.appearance.backends.tensorrt_backend import TensorRTBackend
+-from boxmot.appearance.backends.tflite_backend import TFLiteBackend
+-from boxmot.appearance.backends.torchscript_backend import TorchscriptBackend
+-from boxmot.appearance.backends.base_backend import BaseModelBackend
++from boxmot_legacy.utils import WEIGHTS
++from boxmot_legacy.utils import logger as LOGGER
++from boxmot_legacy.utils.torch_utils import select_device
++from boxmot_legacy.appearance.reid import export_formats
++from boxmot_legacy.appearance.backends.onnx_backend import ONNXBackend
++from boxmot_legacy.appearance.backends.openvino_backend import OpenVinoBackend
++from boxmot_legacy.appearance.backends.pytorch_backend import PyTorchBackend
++from boxmot_legacy.appearance.backends.tensorrt_backend import TensorRTBackend
++from boxmot_legacy.appearance.backends.tflite_backend import TFLiteBackend
++from boxmot_legacy.appearance.backends.torchscript_backend import TorchscriptBackend
++from boxmot_legacy.appearance.backends.base_backend import BaseModelBackend
+ 
+ 
+ 
+--- appearance/reid/factory.py
++++ appearance/reid/factory.py
+@@ -1,22 +1,22 @@
+-from boxmot.appearance.backbones.clip.make_model import make_model
+-from boxmot.appearance.backbones.hacnn import HACNN
+-from boxmot.appearance.backbones.lmbn.lmbn_n import LMBN_n
+-from boxmot.appearance.backbones.mlfn import mlfn
+-from boxmot.appearance.backbones.mobilenetv2 import mobilenetv2_x1_0, mobilenetv2_x1_4
+-from boxmot.appearance.backbones.osnet import (
++from boxmot_legacy.appearance.backbones.clip.make_model import make_model
++from boxmot_legacy.appearance.backbones.hacnn import HACNN
++from boxmot_legacy.appearance.backbones.lmbn.lmbn_n import LMBN_n
++from boxmot_legacy.appearance.backbones.mlfn import mlfn
++from boxmot_legacy.appearance.backbones.mobilenetv2 import mobilenetv2_x1_0, mobilenetv2_x1_4
++from boxmot_legacy.appearance.backbones.osnet import (
+     osnet_ibn_x1_0,
+     osnet_x0_5,
+     osnet_x0_25,
+     osnet_x0_75,
+     osnet_x1_0,
+ )
+-from boxmot.appearance.backbones.osnet_ain import (
++from boxmot_legacy.appearance.backbones.osnet_ain import (
+     osnet_ain_x0_5,
+     osnet_ain_x0_25,
+     osnet_ain_x0_75,
+     osnet_ain_x1_0,
+ )
+-from boxmot.appearance.backbones.resnet import resnet50, resnet101
++from boxmot_legacy.appearance.backbones.resnet import resnet50, resnet101
+ 
+ # Map model names to their respective constructors
+ MODEL_FACTORY = {
+--- appearance/backends/base_backend.py
++++ appearance/backends/base_backend.py
+@@ -3,9 +3,9 @@
+ import gdown
+ import numpy as np
+ from abc import ABC, abstractmethod
+-from boxmot.utils import logger as LOGGER
+-from boxmot.appearance.reid.registry import ReIDModelRegistry
+-from boxmot.utils.checks import RequirementsChecker
++from boxmot_legacy.utils import logger as LOGGER
++from boxmot_legacy.appearance.reid.registry import ReIDModelRegistry
++from boxmot_legacy.utils.checks import RequirementsChecker
+ 
+ 
+ class BaseModelBackend:
+--- appearance/backends/pytorch_backend.py
++++ appearance/backends/pytorch_backend.py
+@@ -1,8 +1,8 @@
+ import numpy as np
+ from pathlib import Path
+ 
+-from boxmot.appearance.backends.base_backend import BaseModelBackend
+-from boxmot.appearance.reid.registry import ReIDModelRegistry
++from boxmot_legacy.appearance.backends.base_backend import BaseModelBackend
++from boxmot_legacy.appearance.reid.registry import ReIDModelRegistry
+ 
+ 
+ class PyTorchBackend(BaseModelBackend):
+--- appearance/backends/onnx_backend.py
++++ appearance/backends/onnx_backend.py
+@@ -1,7 +1,7 @@
+ import numpy as np
+ from pathlib import Path
+ 
+-from boxmot.appearance.backends.base_backend import BaseModelBackend
++from boxmot_legacy.appearance.backends.base_backend import BaseModelBackend
+ 
+ 
+ class ONNXBackend(BaseModelBackend):
+--- appearance/backends/tflite_backend.py
++++ appearance/backends/tflite_backend.py
+@@ -1,9 +1,9 @@
+ import torch
+ import numpy as np
+ from pathlib import Path
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.utils import logger as LOGGER
+ 
+-from boxmot.appearance.backends.base_backend import BaseModelBackend
++from boxmot_legacy.appearance.backends.base_backend import BaseModelBackend
+ 
+ 
+ class TFLiteBackend(BaseModelBackend):
+--- appearance/backends/tensorrt_backend.py
++++ appearance/backends/tensorrt_backend.py
+@@ -2,8 +2,8 @@
+ import numpy as np
+ from pathlib import Path
+ from collections import OrderedDict, namedtuple
+-from boxmot.utils import logger as LOGGER
+-from boxmot.appearance.backends.base_backend import BaseModelBackend
++from boxmot_legacy.utils import logger as LOGGER
++from boxmot_legacy.appearance.backends.base_backend import BaseModelBackend
+ 
+ class TensorRTBackend(BaseModelBackend):
+     def __init__(self, weights, device, half):
+--- appearance/backends/openvino_backend.py
++++ appearance/backends/openvino_backend.py
+@@ -1,8 +1,8 @@
+ import numpy as np
+ from pathlib import Path
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.utils import logger as LOGGER
+ 
+-from boxmot.appearance.backends.base_backend import BaseModelBackend
++from boxmot_legacy.appearance.backends.base_backend import BaseModelBackend
+ 
+ 
+ class OpenVinoBackend(BaseModelBackend):
+--- appearance/backends/torchscript_backend.py
++++ appearance/backends/torchscript_backend.py
+@@ -1,9 +1,9 @@
+ import torch
+ import numpy as np
+ from pathlib import Path
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.utils import logger as LOGGER
+ 
+-from boxmot.appearance.backends.base_backend import BaseModelBackend
++from boxmot_legacy.appearance.backends.base_backend import BaseModelBackend
+ 
+ 
+ class TorchscriptBackend(BaseModelBackend):
+--- appearance/backbones/clip/clip/simple_tokenizer.py
++++ appearance/backbones/clip/clip/simple_tokenizer.py
+@@ -7,7 +7,7 @@
+ import ftfy
+ import regex as re
+ 
+-from boxmot.utils import BOXMOT
++from boxmot_legacy.utils import BOXMOT
+ 
+ 
+ @lru_cache()
+--- appearance/backbones/lmbn/lmbn_n.py
++++ appearance/backbones/lmbn/lmbn_n.py
+@@ -5,9 +5,9 @@
+ import torch
+ from torch import nn
+ 
+-from boxmot.appearance.backbones.lmbn.attention import BatchFeatureErase_Top
+-from boxmot.appearance.backbones.lmbn.bnneck import BNNeck, BNNeck3
+-from boxmot.appearance.backbones.osnet import OSBlock, osnet_x1_0
++from boxmot_legacy.appearance.backbones.lmbn.attention import BatchFeatureErase_Top
++from boxmot_legacy.appearance.backbones.lmbn.bnneck import BNNeck, BNNeck3
++from boxmot_legacy.appearance.backbones.osnet import OSBlock, osnet_x1_0
+ 
+ 
+ class LMBN_n(nn.Module):
+--- appearance/exporters/tensorrt_exporter.py
++++ appearance/exporters/tensorrt_exporter.py
+@@ -1,8 +1,8 @@
+ import platform
+ import torch
+-from boxmot.appearance.exporters.base_exporter import BaseExporter
+-from boxmot.appearance.exporters.onnx_exporter import ONNXExporter
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.appearance.exporters.base_exporter import BaseExporter
++from boxmot_legacy.appearance.exporters.onnx_exporter import ONNXExporter
++from boxmot_legacy.utils import logger as LOGGER
+ 
+ 
+ class EngineExporter(BaseExporter):
+--- appearance/exporters/base_exporter.py
++++ appearance/exporters/base_exporter.py
+@@ -1,8 +1,8 @@
+ import logging
+ import torch
+ from pathlib import Path
+-from boxmot.utils.checks import RequirementsChecker
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.utils.checks import RequirementsChecker
++from boxmot_legacy.utils import logger as LOGGER
+ 
+ 
+ def export_decorator(export_func):
+--- appearance/exporters/onnx_exporter.py
++++ appearance/exporters/onnx_exporter.py
+@@ -1,7 +1,7 @@
+ import torch
+ 
+-from boxmot.appearance.exporters.base_exporter import BaseExporter
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.appearance.exporters.base_exporter import BaseExporter
++from boxmot_legacy.utils import logger as LOGGER
+ 
+ 
+ class ONNXExporter(BaseExporter):
+--- appearance/exporters/torchscript_exporter.py
++++ appearance/exporters/torchscript_exporter.py
+@@ -1,6 +1,6 @@
+ import torch
+-from boxmot.appearance.exporters.base_exporter import BaseExporter
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.appearance.exporters.base_exporter import BaseExporter
++from boxmot_legacy.utils import logger as LOGGER
+ 
+ 
+ class TorchScriptExporter(BaseExporter):
+--- appearance/exporters/tflite_exporter.py
++++ appearance/exporters/tflite_exporter.py
+@@ -1,6 +1,6 @@
+ import os
+-from boxmot.appearance.exporters.base_exporter import BaseExporter
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.appearance.exporters.base_exporter import BaseExporter
++from boxmot_legacy.utils import logger as LOGGER
+ 
+ 
+ class TFLiteExporter(BaseExporter):
+--- appearance/exporters/openvino_exporter.py
++++ appearance/exporters/openvino_exporter.py
+@@ -1,7 +1,7 @@
+ import os
+ from pathlib import Path
+-from boxmot.appearance.exporters.base_exporter import BaseExporter
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.appearance.exporters.base_exporter import BaseExporter
++from boxmot_legacy.utils import logger as LOGGER
+ 
+ 
+ class OpenVINOExporter(BaseExporter):
+--- postprocessing/gsi.py
++++ postprocessing/gsi.py
+@@ -3,7 +3,7 @@
+ import argparse
+ from sklearn.gaussian_process import GaussianProcessRegressor as GPR
+ from sklearn.gaussian_process.kernels import RBF
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.utils import logger as LOGGER
+ import concurrent.futures
+ from tqdm import tqdm
+ 
+--- utils/torch_utils.py
++++ utils/torch_utils.py
+@@ -6,7 +6,7 @@
+ 
+ from .. import __version__
+ from . import logger as LOGGER
+-from boxmot.utils import ROOT
++from boxmot_legacy.utils import ROOT
+ 
+ 
+ def get_system_info():
+--- utils/association.py
++++ utils/association.py
+@@ -2,7 +2,7 @@
+ 
+ import numpy as np
+ 
+-from boxmot.utils.iou import AssociationFunction
++from boxmot_legacy.utils.iou import AssociationFunction
+ 
+ 
+ def speed_direction_batch(dets, tracks):
+--- utils/checks.py
++++ utils/checks.py
+@@ -1,11 +1,11 @@
+ # Mikel Broström 🔥 Yolo Tracking 🧾 AGPL-3.0 license
+ 
+ import pkg_resources
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.utils import logger as LOGGER
+ from pathlib import Path
+ import subprocess
+ 
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.utils import logger as LOGGER
+ REQUIREMENTS = Path('requirements.txt')
+ 
+ class RequirementsChecker:
+--- utils/matching.py
++++ utils/matching.py
+@@ -5,7 +5,7 @@
+ import scipy
+ import torch
+ from scipy.spatial.distance import cdist
+-from boxmot.utils.iou import AssociationFunction
++from boxmot_legacy.utils.iou import AssociationFunction
+ 
+ 
+ """
+--- trackers/basetracker.py
++++ trackers/basetracker.py
+@@ -3,8 +3,8 @@
+ import hashlib
+ import colorsys
+ from abc import ABC, abstractmethod
+-from boxmot.utils import logger as LOGGER
+-from boxmot.utils.iou import AssociationFunction
++from boxmot_legacy.utils import logger as LOGGER
++from boxmot_legacy.utils.iou import AssociationFunction
+ 
+ 
+ class BaseTracker(ABC):
+--- trackers/hybridsort/hybridsort.py
++++ trackers/hybridsort/hybridsort.py
+@@ -8,12 +8,12 @@
+ 
+ import numpy as np
+ 
+-from boxmot.appearance.reid.auto_backend import ReidAutoBackend
+-from boxmot.motion.cmc import get_cmc_method
+-from boxmot.trackers.hybridsort.association import (
++from boxmot_legacy.appearance.reid.auto_backend import ReidAutoBackend
++from boxmot_legacy.motion.cmc import get_cmc_method
++from boxmot_legacy.trackers.hybridsort.association import (
+     associate_4_points_with_score, associate_4_points_with_score_with_reid,
+     cal_score_dif_batch_two_score, embedding_distance, linear_assignment)
+-from boxmot.trackers.basetracker import BaseTracker
++from boxmot_legacy.trackers.basetracker import BaseTracker
+ 
+ 
+ np.random.seed(0)
+@@ -128,7 +128,7 @@
+         """
+         # define constant velocity model
+         # if not orig and not args.kalman_GPR:
+-        from boxmot.motion.kalman_filters.aabb.xysr_kf import KalmanFilterXYSR
++        from boxmot_legacy.motion.kalman_filters.aabb.xysr_kf import KalmanFilterXYSR
+         self.kf = KalmanFilterXYSR(dim_x=9, dim_z=5, max_obs=max_obs)
+ 
+         # u, v, s, c, r, ~u, ~v, ~s, ~c
+--- trackers/ocsort/ocsort.py
++++ trackers/ocsort/ocsort.py
+@@ -7,11 +7,11 @@
+ from collections import deque
+ 
+ 
+-from boxmot.motion.kalman_filters.aabb.xysr_kf import KalmanFilterXYSR
+-from boxmot.utils.association import associate, linear_assignment
+-from boxmot.trackers.basetracker import BaseTracker
+-from boxmot.utils.ops import xyxy2xysr
+-from boxmot.motion.kalman_filters.obb.xywha_kf import KalmanBoxTrackerOBB
++from boxmot_legacy.motion.kalman_filters.aabb.xysr_kf import KalmanFilterXYSR
++from boxmot_legacy.utils.association import associate, linear_assignment
++from boxmot_legacy.trackers.basetracker import BaseTracker
++from boxmot_legacy.utils.ops import xyxy2xysr
++from boxmot_legacy.motion.kalman_filters.obb.xywha_kf import KalmanBoxTrackerOBB
+ 
+ 
+ def k_previous_obs(observations, cur_age, k, is_obb=False):
+--- trackers/botsort/botsort_track.py
++++ trackers/botsort/botsort_track.py
+@@ -1,9 +1,9 @@
+ import numpy as np
+ from collections import deque
+ 
+-from boxmot.trackers.botsort.basetrack import BaseTrack, TrackState
+-from boxmot.motion.kalman_filters.aabb.xywh_kf import KalmanFilterXYWH
+-from boxmot.utils.ops import xywh2xyxy, xyxy2xywh
++from boxmot_legacy.trackers.botsort.basetrack import BaseTrack, TrackState
++from boxmot_legacy.motion.kalman_filters.aabb.xywh_kf import KalmanFilterXYWH
++from boxmot_legacy.utils.ops import xywh2xyxy, xyxy2xywh
+ 
+ 
+ class STrack(BaseTrack):
+--- trackers/botsort/botsort.py
++++ trackers/botsort/botsort.py
+@@ -4,16 +4,16 @@
+ import numpy as np
+ from pathlib import Path
+ 
+-from boxmot.motion.kalman_filters.aabb.xywh_kf import KalmanFilterXYWH
+-from boxmot.appearance.reid.auto_backend import ReidAutoBackend
+-from boxmot.motion.cmc.sof import SOF
+-from boxmot.trackers.botsort.basetrack import BaseTrack, TrackState
+-from boxmot.utils.matching import (embedding_distance, fuse_score,
++from boxmot_legacy.motion.kalman_filters.aabb.xywh_kf import KalmanFilterXYWH
++from boxmot_legacy.appearance.reid.auto_backend import ReidAutoBackend
++from boxmot_legacy.motion.cmc.sof import SOF
++from boxmot_legacy.trackers.botsort.basetrack import BaseTrack, TrackState
++from boxmot_legacy.utils.matching import (embedding_distance, fuse_score,
+                                    iou_distance, linear_assignment)
+-from boxmot.trackers.basetracker import BaseTracker
+-from boxmot.trackers.botsort.botsort_utils import joint_stracks, sub_stracks, remove_duplicate_stracks 
+-from boxmot.trackers.botsort.botsort_track import STrack
+-from boxmot.motion.cmc import get_cmc_method
++from boxmot_legacy.trackers.basetracker import BaseTracker
++from boxmot_legacy.trackers.botsort.botsort_utils import joint_stracks, sub_stracks, remove_duplicate_stracks 
++from boxmot_legacy.trackers.botsort.botsort_track import STrack
++from boxmot_legacy.motion.cmc import get_cmc_method
+ 
+ 
+ 
+--- trackers/botsort/botsort_utils.py
++++ trackers/botsort/botsort_utils.py
+@@ -2,7 +2,7 @@
+ 
+ import numpy as np
+ from typing import List, Tuple
+-from boxmot.utils.matching import iou_distance
++from boxmot_legacy.utils.matching import iou_distance
+ 
+ 
+ def joint_stracks(tlista: List['STrack'], tlistb: List['STrack']) -> List['STrack']:
+--- trackers/bytetrack/bytetrack.py
++++ trackers/bytetrack/bytetrack.py
+@@ -3,11 +3,11 @@
+ import numpy as np
+ from collections import deque
+ 
+-from boxmot.motion.kalman_filters.aabb.xyah_kf import KalmanFilterXYAH
+-from boxmot.trackers.bytetrack.basetrack import BaseTrack, TrackState
+-from boxmot.utils.matching import fuse_score, iou_distance, linear_assignment
+-from boxmot.utils.ops import tlwh2xyah, xywh2tlwh, xywh2xyxy, xyxy2xywh
+-from boxmot.trackers.basetracker import BaseTracker
++from boxmot_legacy.motion.kalman_filters.aabb.xyah_kf import KalmanFilterXYAH
++from boxmot_legacy.trackers.bytetrack.basetrack import BaseTrack, TrackState
++from boxmot_legacy.utils.matching import fuse_score, iou_distance, linear_assignment
++from boxmot_legacy.utils.ops import tlwh2xyah, xywh2tlwh, xywh2xyxy, xyxy2xywh
++from boxmot_legacy.trackers.basetracker import BaseTracker
+ 
+ 
+ class STrack(BaseTrack):
+--- trackers/deepocsort/deepocsort.py
++++ trackers/deepocsort/deepocsort.py
+@@ -5,12 +5,12 @@
+ from pathlib import Path
+ from collections import deque
+ 
+-from boxmot.appearance.reid.auto_backend import ReidAutoBackend
+-from boxmot.motion.cmc import get_cmc_method
+-from boxmot.motion.kalman_filters.aabb.xysr_kf import KalmanFilterXYSR
+-from boxmot.utils.association import associate, linear_assignment
+-from boxmot.trackers.basetracker import BaseTracker
+-from boxmot.utils.ops import xyxy2xysr
++from boxmot_legacy.appearance.reid.auto_backend import ReidAutoBackend
++from boxmot_legacy.motion.cmc import get_cmc_method
++from boxmot_legacy.motion.kalman_filters.aabb.xysr_kf import KalmanFilterXYSR
++from boxmot_legacy.utils.association import associate, linear_assignment
++from boxmot_legacy.trackers.basetracker import BaseTracker
++from boxmot_legacy.utils.ops import xyxy2xysr
+ 
+ 
+ def k_previous_obs(observations, cur_age, k):
+--- trackers/boosttrack/boosttrack.py
++++ trackers/boosttrack/boosttrack.py
+@@ -2,17 +2,17 @@
+ from typing import Optional, List
+ from collections import deque
+ 
+-from boxmot.trackers.boosttrack.assoc import (
++from boxmot_legacy.trackers.boosttrack.assoc import (
+     associate,
+     iou_batch,
+     MhDist_similarity,
+     shape_similarity,
+     soft_biou_batch,
+ )
+-from boxmot.appearance.reid.auto_backend import ReidAutoBackend
+-from boxmot.trackers.boosttrack.kalmanfilter import KalmanFilter
+-from boxmot.trackers.boosttrack.ecc import ECC
+-from boxmot.trackers.basetracker import BaseTracker
++from boxmot_legacy.appearance.reid.auto_backend import ReidAutoBackend
++from boxmot_legacy.trackers.boosttrack.kalmanfilter import KalmanFilter
++from boxmot_legacy.trackers.boosttrack.ecc import ECC
++from boxmot_legacy.trackers.basetracker import BaseTracker
+ 
+ 
+ def convert_bbox_to_z(bbox):
+--- trackers/strongsort/strongsort.py
++++ trackers/strongsort/strongsort.py
+@@ -4,13 +4,13 @@
+ from torch import device
+ from pathlib import Path
+ 
+-from boxmot.appearance.reid.auto_backend import ReidAutoBackend
+-from boxmot.motion.cmc import get_cmc_method
+-from boxmot.trackers.strongsort.sort.detection import Detection
+-from boxmot.trackers.strongsort.sort.tracker import Tracker
+-from boxmot.utils.matching import NearestNeighborDistanceMetric
+-from boxmot.utils.ops import xyxy2tlwh
+-from boxmot.trackers.basetracker import BaseTracker
++from boxmot_legacy.appearance.reid.auto_backend import ReidAutoBackend
++from boxmot_legacy.motion.cmc import get_cmc_method
++from boxmot_legacy.trackers.strongsort.sort.detection import Detection
++from boxmot_legacy.trackers.strongsort.sort.tracker import Tracker
++from boxmot_legacy.utils.matching import NearestNeighborDistanceMetric
++from boxmot_legacy.utils.ops import xyxy2tlwh
++from boxmot_legacy.trackers.basetracker import BaseTracker
+ 
+ 
+ class StrongSort(object):
+--- trackers/strongsort/sort/track.py
++++ trackers/strongsort/sort/track.py
+@@ -3,7 +3,7 @@
+ import os
+ import numpy as np
+ 
+-from boxmot.motion.kalman_filters.aabb.xyah_kf import KalmanFilterXYAH
++from boxmot_legacy.motion.kalman_filters.aabb.xyah_kf import KalmanFilterXYAH
+ 
+ 
+ class TrackState:
+--- trackers/strongsort/sort/tracker.py
++++ trackers/strongsort/sort/tracker.py
+@@ -4,10 +4,10 @@
+ 
+ import numpy as np
+ 
+-from boxmot.motion.cmc import get_cmc_method
+-from boxmot.trackers.strongsort.sort import iou_matching, linear_assignment
+-from boxmot.trackers.strongsort.sort.track import Track
+-from boxmot.utils.matching import chi2inv95
++from boxmot_legacy.motion.cmc import get_cmc_method
++from boxmot_legacy.trackers.strongsort.sort import iou_matching, linear_assignment
++from boxmot_legacy.trackers.strongsort.sort.track import Track
++from boxmot_legacy.utils.matching import chi2inv95
+ 
+ 
+ class Tracker:
+--- trackers/strongsort/sort/linear_assignment.py
++++ trackers/strongsort/sort/linear_assignment.py
+@@ -5,7 +5,7 @@
+ import numpy as np
+ from scipy.optimize import linear_sum_assignment
+ 
+-from boxmot.utils.matching import chi2inv95
++from boxmot_legacy.utils.matching import chi2inv95
+ 
+ INFTY_COST = 1e5
+ 
+--- trackers/imprassoc/imprassoctrack.py
++++ trackers/imprassoc/imprassoctrack.py
+@@ -5,15 +5,15 @@
+ from pathlib import Path
+ from torch import device
+ 
+-from boxmot.appearance.reid.auto_backend import ReidAutoBackend
+-from boxmot.motion.cmc.sof import SOF
+-from boxmot.motion.kalman_filters.aabb.xywh_kf import KalmanFilterXYWH
+-from boxmot.trackers.imprassoc.basetrack import BaseTrack, TrackState
+-from boxmot.utils.matching import (embedding_distance, fuse_score,
++from boxmot.reid.core.auto_backend import ReidAutoBackend
++from boxmot_legacy.motion.cmc.sof import SOF
++from boxmot_legacy.motion.kalman_filters.aabb.xywh_kf import KalmanFilterXYWH
++from boxmot_legacy.trackers.imprassoc.basetrack import BaseTrack, TrackState
++from boxmot_legacy.utils.matching import (embedding_distance, fuse_score,
+                                    iou_distance, linear_assignment,
+                                    d_iou_distance)
+-from boxmot.utils.ops import xywh2xyxy, xyxy2xywh
+-from boxmot.trackers.basetracker import BaseTracker
++from boxmot_legacy.utils.ops import xywh2xyxy, xyxy2xywh
++from boxmot_legacy.trackers.basetracker import BaseTracker
+ 
+ 
+ class STrack(BaseTrack):
+@@ -36,10 +36,10 @@
+ 
+         self.smooth_feat = None
+         self.curr_feat = None
++        self.features = deque([], maxlen=feat_history)
++        self.alpha = 0.9
+         if feat is not None:
+             self.update_features(feat)
+-        self.features = deque([], maxlen=feat_history)
+-        self.alpha = 0.9
+ 
+     def update_features(self, feat):
+         feat /= np.linalg.norm(feat)
+@@ -259,7 +259,7 @@
+             rab = ReidAutoBackend(
+                 weights=reid_weights, device=device, half=half
+             )
+-            self.model = rab.get_backend()
++            self.model = rab.model
+ 
+         self.cmc = SOF()
+ 
+@@ -292,7 +292,7 @@
+         # appearance descriptor extraction
+         if self.with_reid:
+             if embs is not None:
+-                features_high = embs
++                features_high = embs[first_mask]
+             else:
+                 # (Ndets x X) [512, 1024, 2048]
+                 features_high = self.model.get_features(dets_first[:, 0:4], img)
+--- motion/kalman_filters/aabb/xyah_kf.py
++++ motion/kalman_filters/aabb/xyah_kf.py
+@@ -1,6 +1,6 @@
+ import numpy as np
+ from typing import Tuple
+-from boxmot.motion.kalman_filters.aabb.base_kalman_filter import BaseKalmanFilter
++from boxmot_legacy.motion.kalman_filters.aabb.base_kalman_filter import BaseKalmanFilter
+ 
+ 
+ class KalmanFilterXYAH(BaseKalmanFilter):
+--- motion/kalman_filters/aabb/xywh_kf.py
++++ motion/kalman_filters/aabb/xywh_kf.py
+@@ -1,6 +1,6 @@
+ import numpy as np
+ from typing import Tuple
+-from boxmot.motion.kalman_filters.aabb.base_kalman_filter import BaseKalmanFilter
++from boxmot_legacy.motion.kalman_filters.aabb.base_kalman_filter import BaseKalmanFilter
+ 
+ 
+ class KalmanFilterXYWH(BaseKalmanFilter):
+--- motion/cmc/sift.py
++++ motion/cmc/sift.py
+@@ -6,8 +6,8 @@
+ import cv2
+ import numpy as np
+ 
+-from boxmot.motion.cmc.base_cmc import BaseCMC
+-from boxmot.utils import BOXMOT
++from boxmot_legacy.motion.cmc.base_cmc import BaseCMC
++from boxmot_legacy.utils import BOXMOT
+ 
+ 
+ class SIFT(BaseCMC):
+--- motion/cmc/ecc.py
++++ motion/cmc/ecc.py
+@@ -5,9 +5,9 @@
+ import cv2
+ import numpy as np
+ 
+-from boxmot.motion.cmc.base_cmc import BaseCMC
+-from boxmot.utils import BOXMOT
+-from boxmot.utils import logger as LOGGER
++from boxmot_legacy.motion.cmc.base_cmc import BaseCMC
++from boxmot_legacy.utils import BOXMOT
++from boxmot_legacy.utils import logger as LOGGER
+ 
+ 
+ class ECC(BaseCMC):
+--- motion/cmc/orb.py
++++ motion/cmc/orb.py
+@@ -6,8 +6,8 @@
+ import cv2
+ import numpy as np
+ 
+-from boxmot.motion.cmc.base_cmc import BaseCMC
+-from boxmot.utils import BOXMOT
++from boxmot_legacy.motion.cmc.base_cmc import BaseCMC
++from boxmot_legacy.utils import BOXMOT
+ 
+ 
+ class ORB(BaseCMC):
+--- motion/cmc/__init__.py
++++ motion/cmc/__init__.py
+@@ -1,9 +1,9 @@
+ # Mikel Broström 🔥 Yolo Tracking 🧾 AGPL-3.0 license
+ 
+-from boxmot.motion.cmc.ecc import ECC
+-from boxmot.motion.cmc.orb import ORB
+-from boxmot.motion.cmc.sift import SIFT
+-from boxmot.motion.cmc.sof import SOF
++from boxmot_legacy.motion.cmc.ecc import ECC
++from boxmot_legacy.motion.cmc.orb import ORB
++from boxmot_legacy.motion.cmc.sift import SIFT
++from boxmot_legacy.motion.cmc.sof import SOF
+ 
+ 
+ def get_cmc_method(cmc_method):
+--- motion/cmc/sof.py
++++ motion/cmc/sof.py
+@@ -2,7 +2,7 @@
+ import numpy as np
+ import copy
+ import time
+-from boxmot.motion.cmc.base_cmc import BaseCMC
++from boxmot_legacy.motion.cmc.base_cmc import BaseCMC
+ 
+ 
+ class SOF(BaseCMC):

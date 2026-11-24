@@ -1,0 +1,15 @@
+{
+  "epoch": 36,
+  "detector_metrics": {
+    "metrics/precision(B)": 0.55535,
+    "metrics/recall(B)": 0.39684,
+    "metrics/mAP50(B)": 0.40591,
+    "metrics/mAP50-95(B)": 0.18099,
+    "val/box_loss": 2.22051,
+    "val/cls_loss": 2.64463,
+    "val/dfl_loss": 1.03977,
+    "fitness": 0.20348
+  },
+  "sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+  "source": "VTTINY_ROOT/formal_detection_rgbt_testval_v1/runs/mosaic_on/weights/best.pt"
+}

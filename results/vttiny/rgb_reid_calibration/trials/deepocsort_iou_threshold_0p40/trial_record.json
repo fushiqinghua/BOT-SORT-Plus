@@ -1,0 +1,13 @@
+{
+  "name": "deepocsort_iou_threshold_0p40",
+  "method": "deepocsort",
+  "parameter": "iou_threshold",
+  "value": 0.4,
+  "reused_from": null,
+  "created": 1795491371.2882493,
+  "status": "TRACKS_READY",
+  "elapsed_seconds": 44.722047090530396,
+  "finished": 1795491503.9389675,
+  "trajectory_files": 30,
+  "protocol_sha256": "155bd2ea0674fb549a45fa3e23c25c96f17a425edac34ff56cec9f5fe4a79882"
+}

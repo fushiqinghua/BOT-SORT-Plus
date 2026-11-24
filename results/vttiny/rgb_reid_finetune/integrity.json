@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "evaluation_status": "TEST_SET_SELECTED_NOT_HELD_OUT",
+  "original_baseline_unchanged": true,
+  "detector_weight_sha256": "713581a800f7e3b5d9233bbc4ff149a39d05a06cdc8fa324ea993bedfe02591e",
+  "reid_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+  "frames_per_method": 12590,
+  "sequences": 30,
+  "trajectory_files": 120
+}

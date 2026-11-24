@@ -1,0 +1,172 @@
+[
+  {
+    "name": "botsort_pretrained_a010",
+    "encoder": "pretrained",
+    "appearance_thresh": 0.1,
+    "metrics": {
+      "tracker": "botsort_pretrained_a010",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 36.36825195652907,
+      "DetA": 23.376397518755436,
+      "AssA": 57.632748385525,
+      "IDF1": 42.33514417721875,
+      "MOTA": 25.49451527490377,
+      "FP": 11420,
+      "FN": 122277,
+      "IDSW": 243
+    }
+  },
+  {
+    "name": "botsort_pretrained_a025",
+    "encoder": "pretrained",
+    "appearance_thresh": 0.25,
+    "metrics": {
+      "tracker": "botsort_pretrained_a025",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 36.42766859140277,
+      "DetA": 23.37511494827574,
+      "AssA": 57.81633786273671,
+      "IDF1": 42.3743535713424,
+      "MOTA": 25.496184055359013,
+      "FP": 11407,
+      "FN": 122277,
+      "IDSW": 253
+    }
+  },
+  {
+    "name": "botsort_pretrained_a040",
+    "encoder": "pretrained",
+    "appearance_thresh": 0.4,
+    "metrics": {
+      "tracker": "botsort_pretrained_a040",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 36.425156920592734,
+      "DetA": 23.374841689632863,
+      "AssA": 57.80985460418674,
+      "IDF1": 42.37947216670621,
+      "MOTA": 25.492846494448525,
+      "FP": 11411,
+      "FN": 122278,
+      "IDSW": 254
+    }
+  },
+  {
+    "name": "botsort_pretrained_a055",
+    "encoder": "pretrained",
+    "appearance_thresh": 0.55,
+    "metrics": {
+      "tracker": "botsort_pretrained_a055",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 36.425156920592734,
+      "DetA": 23.374841689632863,
+      "AssA": 57.80985460418674,
+      "IDF1": 42.37947216670621,
+      "MOTA": 25.492846494448525,
+      "FP": 11411,
+      "FN": 122278,
+      "IDSW": 254
+    }
+  },
+  {
+    "name": "botsort_pretrained_a070",
+    "encoder": "pretrained",
+    "appearance_thresh": 0.7,
+    "metrics": {
+      "tracker": "botsort_pretrained_a070",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 36.425156920592734,
+      "DetA": 23.374841689632863,
+      "AssA": 57.80985460418674,
+      "IDF1": 42.37947216670621,
+      "MOTA": 25.492846494448525,
+      "FP": 11411,
+      "FN": 122278,
+      "IDSW": 254
+    }
+  },
+  {
+    "name": "botsort_finetuned_a010",
+    "encoder": "finetuned",
+    "appearance_thresh": 0.1,
+    "metrics": {
+      "tracker": "botsort_finetuned_a010",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 36.35848968652211,
+      "DetA": 23.384885867563927,
+      "AssA": 57.57757450065797,
+      "IDF1": 42.246845628942964,
+      "MOTA": 25.53845982689184,
+      "FP": 11310,
+      "FN": 122310,
+      "IDSW": 241
+    }
+  },
+  {
+    "name": "botsort_finetuned_a025",
+    "encoder": "finetuned",
+    "appearance_thresh": 0.25,
+    "metrics": {
+      "tracker": "botsort_finetuned_a025",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 36.37315409226053,
+      "DetA": 23.39026897016038,
+      "AssA": 57.610405252190624,
+      "IDF1": 42.28129601171463,
+      "MOTA": 25.5484725096233,
+      "FP": 11318,
+      "FN": 122284,
+      "IDSW": 241
+    }
+  },
+  {
+    "name": "botsort_finetuned_a040",
+    "encoder": "finetuned",
+    "appearance_thresh": 0.4,
+    "metrics": {
+      "tracker": "botsort_finetuned_a040",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 36.48536377227359,
+      "DetA": 23.393206354962196,
+      "AssA": 57.94392684380348,
+      "IDF1": 42.42967945417096,
+      "MOTA": 25.554035111140777,
+      "FP": 11313,
+      "FN": 122281,
+      "IDSW": 239
+    }
+  },
+  {
+    "name": "botsort_finetuned_a055",
+    "encoder": "finetuned",
+    "appearance_thresh": 0.55,
+    "metrics": {
+      "tracker": "botsort_finetuned_a055",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 36.48536377227359,
+      "DetA": 23.393206354962196,
+      "AssA": 57.94392684380348,
+      "IDF1": 42.42967945417096,
+      "MOTA": 25.554035111140777,
+      "FP": 11313,
+      "FN": 122281,
+      "IDSW": 239
+    }
+  },
+  {
+    "name": "botsort_finetuned_a070",
+    "encoder": "finetuned",
+    "appearance_thresh": 0.7,
+    "metrics": {
+      "tracker": "botsort_finetuned_a070",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 36.48536377227359,
+      "DetA": 23.393206354962196,
+      "AssA": 57.94392684380348,
+      "IDF1": 42.42967945417096,
+      "MOTA": 25.554035111140777,
+      "FP": 11313,
+      "FN": 122281,
+      "IDSW": 239
+    }
+  }
+]

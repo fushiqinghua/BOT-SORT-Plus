@@ -1,0 +1,22 @@
+path: "SERVER_HOME/paper/\u76EE\u6807\u8DDF\u8E2A/VT_Tiny_MOT_Baseline_v1/formal_detection_rgbt_testval_v1/data/mosaic_off"
+train: images/train
+val: images/val
+names:
+  0: ship
+  1: car
+  2: cyclist
+  3: pedestrian
+  4: bus
+  5: drone
+  6: plane
+modality:
+  rgb: images
+  x: images_ir
+modality_used:
+- rgb
+- x
+modality_ch:
+  rgb: 3
+  x: 1
+Xch: 1
+channels: 3

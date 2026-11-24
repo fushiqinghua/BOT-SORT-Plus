@@ -1,0 +1,8 @@
+{
+  "name": "botsort_pretrained_a025",
+  "encoder": "pretrained",
+  "appearance_thresh": 0.25,
+  "seconds": 41.37629433500115,
+  "sequences": 30,
+  "frames": 12590
+}

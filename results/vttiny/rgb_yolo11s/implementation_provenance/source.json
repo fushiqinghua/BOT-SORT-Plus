@@ -1,0 +1,12 @@
+{
+  "url": "https://github.com/mikel-brostrom/boxmot",
+  "tag": "v12.0.8",
+  "commit": "a1622d89bc928a6640dd225f06362fe49a4a699d",
+  "changes": [
+    "Isolated namespace and lazy root init",
+    "Use existing v16 ReID loader with .model interface",
+    "Initialize feature deque/EMA alpha before first feature update (upstream crashes for nonempty features)",
+    "Mask precomputed embeddings by exact high detection mask (upstream assumes prefiltered inputs)"
+  ],
+  "algorithm": "Original combined matching, combined distance and occlusion-aware initialization retained"
+}

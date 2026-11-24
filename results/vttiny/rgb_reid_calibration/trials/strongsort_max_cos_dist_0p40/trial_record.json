@@ -1,0 +1,13 @@
+{
+  "name": "strongsort_max_cos_dist_0p40",
+  "method": "strongsort",
+  "parameter": "max_cos_dist",
+  "value": 0.4,
+  "reused_from": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2",
+  "created": 1795491371.2881675,
+  "status": "TRACKS_READY",
+  "elapsed_seconds": 0.057227134704589844,
+  "finished": 1795491372.8529832,
+  "trajectory_files": 30,
+  "protocol_sha256": "701edd72e271688227468526a54898554aa0a53b32abfcecaa1f59b82642f23d"
+}

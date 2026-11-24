@@ -1,0 +1,13 @@
+{
+  "name": "imprassoc_match_thresh_0p65",
+  "method": "imprassoc",
+  "parameter": "match_thresh",
+  "value": 0.65,
+  "reused_from": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2",
+  "created": 1795491371.2882552,
+  "status": "TRACKS_READY",
+  "elapsed_seconds": 0.06612181663513184,
+  "finished": 1795491504.0096598,
+  "trajectory_files": 30,
+  "protocol_sha256": "4dd8e61e3c9952566a3760cbe9dc54a99f53ad936970dd4d460f4d00808c209b"
+}

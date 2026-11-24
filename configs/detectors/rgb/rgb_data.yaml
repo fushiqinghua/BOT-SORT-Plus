@@ -1,0 +1,12 @@
+path: ${VTTINY_ROOT}/formal_detection_rgb_testval_v1/data
+train: images/train
+val: images/val
+names:
+  0: ship
+  1: car
+  2: cyclist
+  3: pedestrian
+  4: bus
+  5: drone
+  6: plane
+channels: 3

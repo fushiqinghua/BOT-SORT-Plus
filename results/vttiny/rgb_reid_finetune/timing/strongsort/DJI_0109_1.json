@@ -1,0 +1,11 @@
+{
+  "tracker": "strongsort",
+  "sequence": "DJI_0109_1",
+  "frames": 90,
+  "rows": 58,
+  "association_seconds": 0.060429457924328744,
+  "reid_seconds": 0.43112851155456156,
+  "replay_seconds": 0.12235435203183442,
+  "detector_seconds": 0.37274352880194783,
+  "prediction_sha256": "cb4d8940c58e53b396db6933ed3dd8398cd7aea559d5544e91eb97e1ef747325"
+}

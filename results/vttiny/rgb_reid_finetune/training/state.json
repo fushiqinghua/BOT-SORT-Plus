@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETE",
+  "physical_gpu": 4,
+  "pid": 1707961,
+  "epochs": 20,
+  "best_validation_mAP": 32.49720211968198,
+  "baseline_validation": {
+    "mAP": 25.299659872687496,
+    "rank1": 40.51434491434491,
+    "identities": 825,
+    "queries": 12903
+  },
+  "elapsed_seconds": 966.8121168613434,
+  "updated": 1795490159.5870888,
+  "best_weight_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "deepsort_max_cos_dist_0p50",
+  "method": "deepsort",
+  "parameter": "max_cos_dist",
+  "value": 0.5,
+  "reused_from": null,
+  "created": 1795491371.2881105,
+  "status": "TRACKS_READY",
+  "elapsed_seconds": 35.15499925613403,
+  "finished": 1795491407.7422962,
+  "trajectory_files": 30,
+  "protocol_sha256": "ab25d1f57f33988697d9b393a3cb1ebb831575f7fbb6e2538d0868befb1dec42"
+}

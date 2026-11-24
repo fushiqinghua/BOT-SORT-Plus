@@ -1,0 +1,304 @@
+{
+  "status": "FROZEN_BEFORE_THIS_GRID_RUN",
+  "created": 1795491371.2882578,
+  "evaluation_status": "TEST_SET_SELECTED_AND_TEST_SET_THRESHOLD_TUNED_NOT_HELD_OUT",
+  "history": "Search ranges informed by prior test-set diagnosis; not preregistered before observing test results.",
+  "data": "Official RGB test, all30 sequences12590frames",
+  "selection_rule": [
+    "highest COMBINED_SEQ HOTA",
+    "then highest IDF1",
+    "then lowest IDSW",
+    "then nearest original threshold",
+    "then lowest threshold"
+  ],
+  "grid": {
+    "deepsort": [
+      "max_cos_dist",
+      [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8
+      ]
+    ],
+    "strongsort": [
+      "max_cos_dist",
+      [
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0
+      ]
+    ],
+    "deepocsort": [
+      "iou_threshold",
+      [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.4,
+        0.5
+      ]
+    ],
+    "imprassoc": [
+      "match_thresh",
+      [
+        0.45,
+        0.55,
+        0.65,
+        0.75,
+        0.85,
+        0.95
+      ]
+    ]
+  },
+  "cases": [
+    {
+      "name": "deepsort_max_cos_dist_0p20",
+      "method": "deepsort",
+      "parameter": "max_cos_dist",
+      "value": 0.2,
+      "reused_from": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2",
+      "created": 1795491371.2880256
+    },
+    {
+      "name": "deepsort_max_cos_dist_0p30",
+      "method": "deepsort",
+      "parameter": "max_cos_dist",
+      "value": 0.3,
+      "reused_from": null,
+      "created": 1795491371.2880378
+    },
+    {
+      "name": "deepsort_max_cos_dist_0p40",
+      "method": "deepsort",
+      "parameter": "max_cos_dist",
+      "value": 0.4,
+      "reused_from": "VTTINY_ROOT/outputs/reid_drop_diagnosis_v1/variants/deepsort_t04",
+      "created": 1795491371.288091
+    },
+    {
+      "name": "deepsort_max_cos_dist_0p50",
+      "method": "deepsort",
+      "parameter": "max_cos_dist",
+      "value": 0.5,
+      "reused_from": null,
+      "created": 1795491371.2881105
+    },
+    {
+      "name": "deepsort_max_cos_dist_0p60",
+      "method": "deepsort",
+      "parameter": "max_cos_dist",
+      "value": 0.6,
+      "reused_from": "VTTINY_ROOT/outputs/reid_drop_diagnosis_v1/variants/deepsort_t06",
+      "created": 1795491371.288125
+    },
+    {
+      "name": "deepsort_max_cos_dist_0p70",
+      "method": "deepsort",
+      "parameter": "max_cos_dist",
+      "value": 0.7,
+      "reused_from": null,
+      "created": 1795491371.2881389
+    },
+    {
+      "name": "deepsort_max_cos_dist_0p80",
+      "method": "deepsort",
+      "parameter": "max_cos_dist",
+      "value": 0.8,
+      "reused_from": "VTTINY_ROOT/outputs/reid_drop_diagnosis_v1/variants/deepsort_t08",
+      "created": 1795491371.2881513
+    },
+    {
+      "name": "strongsort_max_cos_dist_0p40",
+      "method": "strongsort",
+      "parameter": "max_cos_dist",
+      "value": 0.4,
+      "reused_from": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2",
+      "created": 1795491371.2881675
+    },
+    {
+      "name": "strongsort_max_cos_dist_0p50",
+      "method": "strongsort",
+      "parameter": "max_cos_dist",
+      "value": 0.5,
+      "reused_from": null,
+      "created": 1795491371.2881694
+    },
+    {
+      "name": "strongsort_max_cos_dist_0p60",
+      "method": "strongsort",
+      "parameter": "max_cos_dist",
+      "value": 0.6,
+      "reused_from": "VTTINY_ROOT/outputs/reid_drop_diagnosis_v1/variants/strongsort_t06",
+      "created": 1795491371.2881827
+    },
+    {
+      "name": "strongsort_max_cos_dist_0p70",
+      "method": "strongsort",
+      "parameter": "max_cos_dist",
+      "value": 0.7,
+      "reused_from": null,
+      "created": 1795491371.288197
+    },
+    {
+      "name": "strongsort_max_cos_dist_0p80",
+      "method": "strongsort",
+      "parameter": "max_cos_dist",
+      "value": 0.8,
+      "reused_from": "VTTINY_ROOT/outputs/reid_drop_diagnosis_v1/variants/strongsort_t08",
+      "created": 1795491371.2882092
+    },
+    {
+      "name": "strongsort_max_cos_dist_0p90",
+      "method": "strongsort",
+      "parameter": "max_cos_dist",
+      "value": 0.9,
+      "reused_from": null,
+      "created": 1795491371.2882218
+    },
+    {
+      "name": "strongsort_max_cos_dist_1p00",
+      "method": "strongsort",
+      "parameter": "max_cos_dist",
+      "value": 1.0,
+      "reused_from": "VTTINY_ROOT/outputs/reid_drop_diagnosis_v1/variants/strongsort_t10",
+      "created": 1795491371.2882333
+    },
+    {
+      "name": "deepocsort_iou_threshold_0p05",
+      "method": "deepocsort",
+      "parameter": "iou_threshold",
+      "value": 0.05,
+      "reused_from": null,
+      "created": 1795491371.2882447
+    },
+    {
+      "name": "deepocsort_iou_threshold_0p10",
+      "method": "deepocsort",
+      "parameter": "iou_threshold",
+      "value": 0.1,
+      "reused_from": null,
+      "created": 1795491371.2882454
+    },
+    {
+      "name": "deepocsort_iou_threshold_0p15",
+      "method": "deepocsort",
+      "parameter": "iou_threshold",
+      "value": 0.15,
+      "reused_from": null,
+      "created": 1795491371.2882462
+    },
+    {
+      "name": "deepocsort_iou_threshold_0p20",
+      "method": "deepocsort",
+      "parameter": "iou_threshold",
+      "value": 0.2,
+      "reused_from": null,
+      "created": 1795491371.288247
+    },
+    {
+      "name": "deepocsort_iou_threshold_0p25",
+      "method": "deepocsort",
+      "parameter": "iou_threshold",
+      "value": 0.25,
+      "reused_from": null,
+      "created": 1795491371.2882478
+    },
+    {
+      "name": "deepocsort_iou_threshold_0p30",
+      "method": "deepocsort",
+      "parameter": "iou_threshold",
+      "value": 0.3,
+      "reused_from": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2",
+      "created": 1795491371.2882483
+    },
+    {
+      "name": "deepocsort_iou_threshold_0p40",
+      "method": "deepocsort",
+      "parameter": "iou_threshold",
+      "value": 0.4,
+      "reused_from": null,
+      "created": 1795491371.2882493
+    },
+    {
+      "name": "deepocsort_iou_threshold_0p50",
+      "method": "deepocsort",
+      "parameter": "iou_threshold",
+      "value": 0.5,
+      "reused_from": null,
+      "created": 1795491371.2882528
+    },
+    {
+      "name": "imprassoc_match_thresh_0p45",
+      "method": "imprassoc",
+      "parameter": "match_thresh",
+      "value": 0.45,
+      "reused_from": null,
+      "created": 1795491371.288254
+    },
+    {
+      "name": "imprassoc_match_thresh_0p55",
+      "method": "imprassoc",
+      "parameter": "match_thresh",
+      "value": 0.55,
+      "reused_from": null,
+      "created": 1795491371.2882547
+    },
+    {
+      "name": "imprassoc_match_thresh_0p65",
+      "method": "imprassoc",
+      "parameter": "match_thresh",
+      "value": 0.65,
+      "reused_from": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2",
+      "created": 1795491371.2882552
+    },
+    {
+      "name": "imprassoc_match_thresh_0p75",
+      "method": "imprassoc",
+      "parameter": "match_thresh",
+      "value": 0.75,
+      "reused_from": null,
+      "created": 1795491371.288256
+    },
+    {
+      "name": "imprassoc_match_thresh_0p85",
+      "method": "imprassoc",
+      "parameter": "match_thresh",
+      "value": 0.85,
+      "reused_from": null,
+      "created": 1795491371.2882564
+    },
+    {
+      "name": "imprassoc_match_thresh_0p95",
+      "method": "imprassoc",
+      "parameter": "match_thresh",
+      "value": 0.95,
+      "reused_from": null,
+      "created": 1795491371.2882574
+    }
+  ],
+  "unchanged": [
+    "detector checkpoint",
+    "detections",
+    "fine-tuned ReID checkpoint",
+    "embeddings",
+    "all other tracker parameters",
+    "official GT and evaluation"
+  ],
+  "caveats": [
+    "Deep OC-SORT tunes IoU acceptance gate, NOT a nonexistent cosine appearance gate. Embedding weight .75 stays fixed.",
+    "ImprAsso tunes active combined-cost match_thresh. appearance_thresh is unused in this implementation. lambda=.05, proximity=.1, second_match=.19 stay fixed; internal low-score cost scaling match_thresh/second_match_thresh follows native code.",
+    "This compares joint ReID adaptation + threshold calibration against original untuned baseline; it does not isolate a pure ReID-only gain.",
+    "No claims that grid maximum is global optimum. No unrecorded adaptive expansion."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "physical_gpu": 4,
+  "pid": 1707961,
+  "requested_visible_devices": "4",
+  "nvidia_smi": "GPU-fcb75e69-b298-9289-47e7-a4ffb0bd95b0, 1707961, 1436 MiB",
+  "updated": 1795489164.8104012
+}

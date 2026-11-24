@@ -1,0 +1,1927 @@
+{
+  "source": "VTTINY_ROOT/outputs/yolo11m_rgb_rgbt_mot_test_v1",
+  "protocol": "Official test 30 sequences. Both detectors used official test for checkpoint selection. ReID and gates also previously selected/calibrated on official test. No new gating search in this run.",
+  "detector": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+  "reid": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+  "rgb_detector": "969b0177bd83166c76365eac8e08fa8deb28156d59e9d48e7ffa580459abb6c1",
+  "config": {
+    "det_thresh": 0.5,
+    "track_high_thresh": 0.5,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.6,
+    "match_thresh": 0.8,
+    "track_buffer": 60,
+    "frame_rate": 15,
+    "with_reid": true,
+    "cmc_method": "sof",
+    "proximity_thresh": 0.5,
+    "appearance_thresh": 0.4,
+    "fuse_first_associate": false
+  },
+  "counts": {
+    "size_gt": {
+      "8-16": 62234,
+      "16-32": 27540,
+      "<8": 86974,
+      "32+": 3024
+    },
+    "paired_rgb": {
+      "main_tp|control_tp": 43252,
+      "main_fn|control_fn": 112623,
+      "main_fn|control_tp": 7022,
+      "main_tp|control_fn": 16875
+    },
+    "paired_no_reid": {
+      "main_tp|control_tp": 60110,
+      "main_fn|control_fn": 119641,
+      "main_tp|control_fn": 17,
+      "main_fn|control_tp": 4
+    },
+    "fn_by_candidate": {
+      "low_assoc": 10795,
+      "high_below_birth": 1094,
+      "birth_eligible": 1703,
+      "overlap_30_50": 14761,
+      "overlap_lt10": 77205,
+      "overlap_10_30": 10305,
+      "outside_assoc_gate": 3782
+    },
+    "size_fn": {
+      "<8": 77672,
+      "8-16": 34117,
+      "16-32": 7284,
+      "32+": 572
+    },
+    "size_candidate": {
+      "<8|low_assoc": 4539,
+      "8-16|low_assoc": 5561,
+      "8-16|high_below_birth": 494,
+      "8-16|birth_eligible": 938,
+      "<8|high_below_birth": 533,
+      "<8|overlap_30_50": 8720,
+      "<8|birth_eligible": 410,
+      "8-16|overlap_30_50": 4970,
+      "<8|overlap_lt10": 55448,
+      "<8|overlap_10_30": 6669,
+      "8-16|overlap_lt10": 17607,
+      "8-16|overlap_10_30": 2473,
+      "8-16|outside_assoc_gate": 2074,
+      "<8|outside_assoc_gate": 1353,
+      "16-32|birth_eligible": 321,
+      "16-32|overlap_10_30": 918,
+      "16-32|overlap_lt10": 4015,
+      "16-32|low_assoc": 668,
+      "16-32|high_below_birth": 59,
+      "16-32|outside_assoc_gate": 340,
+      "16-32|overlap_30_50": 963,
+      "32+|overlap_10_30": 245,
+      "32+|low_assoc": 27,
+      "32+|overlap_30_50": 108,
+      "32+|high_below_birth": 8,
+      "32+|birth_eligible": 34,
+      "32+|overlap_lt10": 135,
+      "32+|outside_assoc_gate": 15
+    },
+    "false_positive": {
+      "overlap_30_50": 6890,
+      "overlap_10_30": 2464,
+      "overlap_lt10": 3518,
+      "overlap_ge50": 496,
+      "empty_gt_frame": 29
+    },
+    "trajectories": {
+      "with_match": 509,
+      "never_matched": 361
+    },
+    "transitions": {
+      "0": 57595,
+      "31+": 126,
+      "11-30": 267,
+      "4-10": 425,
+      "1-3": 1205
+    },
+    "fn_temporal": {
+      "internal": 17409,
+      "before_first": 15582,
+      "after_last": 16032,
+      "never_matched": 70622
+    },
+    "phase_candidate": {
+      "internal|birth_eligible": 689,
+      "internal|outside_assoc_gate": 1201,
+      "internal|low_assoc": 3682,
+      "internal|high_below_birth": 386,
+      "before_first|low_assoc": 2716,
+      "before_first|high_below_birth": 471,
+      "before_first|overlap_30_50": 2526,
+      "before_first|birth_eligible": 613,
+      "internal|overlap_lt10": 3429,
+      "internal|overlap_30_50": 6391,
+      "internal|overlap_10_30": 1631,
+      "after_last|outside_assoc_gate": 766,
+      "after_last|low_assoc": 1980,
+      "after_last|overlap_30_50": 3011,
+      "after_last|birth_eligible": 217,
+      "after_last|overlap_10_30": 1917,
+      "after_last|overlap_lt10": 8039,
+      "before_first|overlap_lt10": 6932,
+      "before_first|outside_assoc_gate": 647,
+      "never_matched|overlap_10_30": 5080,
+      "never_matched|overlap_lt10": 58805,
+      "never_matched|outside_assoc_gate": 1168,
+      "never_matched|overlap_30_50": 2833,
+      "never_matched|low_assoc": 2417,
+      "never_matched|high_below_birth": 135,
+      "never_matched|birth_eligible": 184,
+      "before_first|overlap_10_30": 1677,
+      "after_last|high_below_birth": 102
+    },
+    "switches": {
+      "31+": 98,
+      "11-30": 100,
+      "4-10": 79,
+      "1-3": 75,
+      "0": 70
+    },
+    "switch_annotation": {
+      "gt_interrupted": 45,
+      "gt_present_throughout": 377
+    },
+    "internal_gap_fn": {
+      "31+": 8867,
+      "11-30": 4287,
+      "4-10": 2424,
+      "1-3": 1831
+    },
+    "continuous_internal_gap_fn": {
+      "31+": 8082,
+      "4-10": 2353,
+      "1-3": 1826,
+      "11-30": 3892
+    },
+    "official_main": {
+      "TP": 60127,
+      "FN": 119645,
+      "FP": 13397,
+      "IDSW": 422
+    },
+    "official_no_reid": {
+      "TP": 60114,
+      "FN": 119658,
+      "FP": 13392,
+      "IDSW": 425
+    },
+    "official_rgb": {
+      "TP": 50274,
+      "FN": 129498,
+      "FP": 11645,
+      "IDSW": 303
+    }
+  },
+  "sequences": [
+    {
+      "sequence": "DJI_0028_3",
+      "frames": 570,
+      "gt": 5061,
+      "counts": {
+        "TP": 3947,
+        "FN": 1114,
+        "FP": 447,
+        "IDSW": 35
+      },
+      "fn_candidates": {
+        "low_assoc": 199,
+        "high_below_birth": 41,
+        "birth_eligible": 65,
+        "overlap_30_50": 597,
+        "overlap_lt10": 116,
+        "overlap_10_30": 33,
+        "outside_assoc_gate": 63
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0028_3",
+          "HOTA": 47.93021394261237,
+          "DetA": 56.19472796606617,
+          "AssA": 42.63129578600589,
+          "IDF1": 58.02221047065045,
+          "MOTA": 68.46473029045643,
+          "FP": 447,
+          "FN": 1114,
+          "IDSW": 35
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0028_3",
+          "HOTA": 48.03703994538025,
+          "DetA": 56.192616989059765,
+          "AssA": 42.82126788153982,
+          "IDF1": 58.12797461660497,
+          "MOTA": 68.50424817229796,
+          "FP": 447,
+          "FN": 1114,
+          "IDSW": 33
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0028_3",
+          "HOTA": 59.508331229991526,
+          "DetA": 64.4123631301403,
+          "AssA": 55.46146782895695,
+          "IDF1": 70.61425555443851,
+          "MOTA": 78.3837186326813,
+          "FP": 444,
+          "FN": 619,
+          "IDSW": 31
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0030_2",
+      "frames": 590,
+      "gt": 4596,
+      "counts": {
+        "TP": 1542,
+        "FN": 3054,
+        "FP": 1163,
+        "IDSW": 2
+      },
+      "fn_candidates": {
+        "low_assoc": 695,
+        "overlap_10_30": 770,
+        "overlap_lt10": 789,
+        "overlap_30_50": 635,
+        "outside_assoc_gate": 104,
+        "birth_eligible": 11,
+        "high_below_birth": 50
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0030_2",
+          "HOTA": 27.084866382358953,
+          "DetA": 20.8701437659717,
+          "AssA": 35.70397086341672,
+          "IDF1": 32.95438980961512,
+          "MOTA": 8.202785030461271,
+          "FP": 1163,
+          "FN": 3054,
+          "IDSW": 2
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0030_2",
+          "HOTA": 27.084866382358953,
+          "DetA": 20.8701437659717,
+          "AssA": 35.70397086341672,
+          "IDF1": 32.95438980961512,
+          "MOTA": 8.202785030461271,
+          "FP": 1163,
+          "FN": 3054,
+          "IDSW": 2
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0030_2",
+          "HOTA": 31.47766871853419,
+          "DetA": 24.307245683667222,
+          "AssA": 41.868072873410775,
+          "IDF1": 40.61224489795918,
+          "MOTA": 19.40818102697998,
+          "FP": 685,
+          "FN": 3017,
+          "IDSW": 2
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0032_3",
+      "frames": 290,
+      "gt": 4688,
+      "counts": {
+        "TP": 2882,
+        "FN": 1806,
+        "FP": 166,
+        "IDSW": 10
+      },
+      "fn_candidates": {
+        "low_assoc": 98,
+        "high_below_birth": 25,
+        "overlap_lt10": 1390,
+        "outside_assoc_gate": 48,
+        "birth_eligible": 51,
+        "overlap_30_50": 88,
+        "overlap_10_30": 106
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0032_3",
+          "HOTA": 59.719150641294824,
+          "DetA": 48.803191552740294,
+          "AssA": 73.26817390873612,
+          "IDF1": 72.23371251292657,
+          "MOTA": 57.721843003412964,
+          "FP": 166,
+          "FN": 1806,
+          "IDSW": 10
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0032_3",
+          "HOTA": 59.69031776827889,
+          "DetA": 48.78399951363659,
+          "AssA": 73.2266119090366,
+          "IDF1": 72.21000905211432,
+          "MOTA": 57.7005119453925,
+          "FP": 165,
+          "FN": 1808,
+          "IDSW": 10
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0032_3",
+          "HOTA": 50.5928092673886,
+          "DetA": 37.47065279503803,
+          "AssA": 68.62893659528649,
+          "IDF1": 61.361079865016876,
+          "MOTA": 43.003412969283275,
+          "FP": 198,
+          "FN": 2462,
+          "IDSW": 12
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0049_2",
+      "frames": 90,
+      "gt": 572,
+      "counts": {
+        "TP": 62,
+        "FN": 510,
+        "FP": 50
+      },
+      "fn_candidates": {
+        "overlap_lt10": 255,
+        "low_assoc": 65,
+        "overlap_10_30": 83,
+        "overlap_30_50": 79,
+        "outside_assoc_gate": 17,
+        "high_below_birth": 6,
+        "birth_eligible": 5
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0049_2",
+          "HOTA": 22.652778003680336,
+          "DetA": 11.282529550439572,
+          "AssA": 46.80346862321279,
+          "IDF1": 18.128654970760234,
+          "MOTA": 2.097902097902098,
+          "FP": 50,
+          "FN": 510,
+          "IDSW": 0
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0049_2",
+          "HOTA": 22.652778003680336,
+          "DetA": 11.282529550439572,
+          "AssA": 46.80346862321279,
+          "IDF1": 18.128654970760234,
+          "MOTA": 2.097902097902098,
+          "FP": 50,
+          "FN": 510,
+          "IDSW": 0
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0049_2",
+          "HOTA": 9.434859458946047,
+          "DetA": 4.173237131436783,
+          "AssA": 21.337808501768613,
+          "IDF1": 10.381679389312977,
+          "MOTA": -2.6223776223776225,
+          "FP": 49,
+          "FN": 538,
+          "IDSW": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0051_2",
+      "frames": 580,
+      "gt": 1120,
+      "counts": {
+        "TP": 768,
+        "FN": 352,
+        "FP": 0,
+        "IDSW": 12
+      },
+      "fn_candidates": {
+        "overlap_lt10": 126,
+        "low_assoc": 124,
+        "outside_assoc_gate": 43,
+        "birth_eligible": 47,
+        "high_below_birth": 10,
+        "overlap_30_50": 2
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0051_2",
+          "HOTA": 57.76793516949711,
+          "DetA": 53.988505683327034,
+          "AssA": 61.892762954414536,
+          "IDF1": 67.79661016949152,
+          "MOTA": 67.5,
+          "FP": 0,
+          "FN": 352,
+          "IDSW": 12
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0051_2",
+          "HOTA": 57.77230946889741,
+          "DetA": 53.988505683327034,
+          "AssA": 61.90219146015459,
+          "IDF1": 67.79661016949152,
+          "MOTA": 67.67857142857143,
+          "FP": 0,
+          "FN": 352,
+          "IDSW": 10
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0051_2",
+          "HOTA": 58.17309998252966,
+          "DetA": 62.10784686341187,
+          "AssA": 55.21699733467456,
+          "IDF1": 67.21232546942706,
+          "MOTA": 83.125,
+          "FP": 9,
+          "FN": 172,
+          "IDSW": 8
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0061_2",
+      "frames": 240,
+      "gt": 25578,
+      "counts": {
+        "TP": 8052,
+        "FN": 17526,
+        "FP": 1871,
+        "IDSW": 158
+      },
+      "fn_candidates": {
+        "high_below_birth": 288,
+        "overlap_30_50": 4801,
+        "low_assoc": 2013,
+        "overlap_10_30": 3831,
+        "outside_assoc_gate": 433,
+        "overlap_lt10": 5934,
+        "birth_eligible": 226
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0061_2",
+          "HOTA": 31.628542182516,
+          "DetA": 24.010607728552717,
+          "AssA": 42.58607038021782,
+          "IDF1": 37.125714768598066,
+          "MOTA": 23.547579951520838,
+          "FP": 1871,
+          "FN": 17526,
+          "IDSW": 158
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0061_2",
+          "HOTA": 31.19552014347338,
+          "DetA": 23.98025192840983,
+          "AssA": 41.51415938075407,
+          "IDF1": 36.51830985915493,
+          "MOTA": 23.520212682774257,
+          "FP": 1871,
+          "FN": 17527,
+          "IDSW": 164
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0061_2",
+          "HOTA": 30.1949498077912,
+          "DetA": 21.60088064067614,
+          "AssA": 43.004442839264335,
+          "IDF1": 33.73423803838202,
+          "MOTA": 20.478536242083038,
+          "FP": 1693,
+          "FN": 18510,
+          "IDSW": 137
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0073_3",
+      "frames": 360,
+      "gt": 19190,
+      "counts": {
+        "TP": 11650,
+        "FN": 7540,
+        "FP": 1436,
+        "IDSW": 17
+      },
+      "fn_candidates": {
+        "overlap_lt10": 5094,
+        "overlap_30_50": 1065,
+        "high_below_birth": 59,
+        "outside_assoc_gate": 205,
+        "low_assoc": 468,
+        "overlap_10_30": 574,
+        "birth_eligible": 75
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0073_3",
+          "HOTA": 57.096829216322575,
+          "DetA": 45.69107078202121,
+          "AssA": 71.9537084293748,
+          "IDF1": 69.07299541454951,
+          "MOTA": 53.13705054715998,
+          "FP": 1436,
+          "FN": 7540,
+          "IDSW": 17
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0073_3",
+          "HOTA": 57.0539344048311,
+          "DetA": 45.68021961934286,
+          "AssA": 71.8647485156565,
+          "IDF1": 69.01744492300065,
+          "MOTA": 53.12141740489839,
+          "FP": 1436,
+          "FN": 7543,
+          "IDSW": 17
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0073_3",
+          "HOTA": 53.009654847465306,
+          "DetA": 40.431520947336516,
+          "AssA": 69.84199505065692,
+          "IDF1": 63.60803553669694,
+          "MOTA": 45.78426263679,
+          "FP": 1084,
+          "FN": 9298,
+          "IDSW": 22
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0109_1",
+      "frames": 90,
+      "gt": 90,
+      "counts": {
+        "TP": 67,
+        "FN": 23,
+        "FP": 0,
+        "IDSW": 13
+      },
+      "fn_candidates": {
+        "outside_assoc_gate": 5,
+        "overlap_lt10": 3,
+        "low_assoc": 14,
+        "birth_eligible": 1
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0109_1",
+          "HOTA": 44.18361618368416,
+          "DetA": 56.11192107656707,
+          "AssA": 34.791880285809604,
+          "IDF1": 63.69426751592356,
+          "MOTA": 60.0,
+          "FP": 0,
+          "FN": 23,
+          "IDSW": 13
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0109_1",
+          "HOTA": 44.18361618368416,
+          "DetA": 56.11192107656707,
+          "AssA": 34.791880285809604,
+          "IDF1": 63.69426751592356,
+          "MOTA": 60.0,
+          "FP": 0,
+          "FN": 23,
+          "IDSW": 13
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0109_1",
+          "HOTA": 5.015417409693866,
+          "DetA": 5.015417409693866,
+          "AssA": 5.015417409693866,
+          "IDF1": 12.5,
+          "MOTA": 6.666666666666667,
+          "FP": 0,
+          "FN": 84,
+          "IDSW": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0119_2",
+      "frames": 180,
+      "gt": 360,
+      "counts": {
+        "TP": 167,
+        "FN": 193,
+        "FP": 0
+      },
+      "fn_candidates": {
+        "low_assoc": 8,
+        "overlap_lt10": 180,
+        "high_below_birth": 4,
+        "birth_eligible": 1
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0119_2",
+          "HOTA": 55.271129678641614,
+          "DetA": 39.291102463913404,
+          "AssA": 77.77673479014405,
+          "IDF1": 63.37760910815939,
+          "MOTA": 46.38888888888889,
+          "FP": 0,
+          "FN": 193,
+          "IDSW": 0
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0119_2",
+          "HOTA": 55.271129678641614,
+          "DetA": 39.291102463913404,
+          "AssA": 77.77673479014405,
+          "IDF1": 63.37760910815939,
+          "MOTA": 46.38888888888889,
+          "FP": 0,
+          "FN": 193,
+          "IDSW": 0
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0119_2",
+          "HOTA": 47.97770122000755,
+          "DetA": 35.89267847424929,
+          "AssA": 64.14322260354209,
+          "IDF1": 69.32849364791288,
+          "MOTA": 53.05555555555556,
+          "FP": 0,
+          "FN": 169,
+          "IDSW": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0129_2",
+      "frames": 590,
+      "gt": 590,
+      "counts": {
+        "TP": 540,
+        "FN": 50,
+        "FP": 7
+      },
+      "fn_candidates": {
+        "high_below_birth": 3,
+        "birth_eligible": 1,
+        "overlap_30_50": 4,
+        "outside_assoc_gate": 13,
+        "overlap_10_30": 1,
+        "overlap_lt10": 3,
+        "low_assoc": 25
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0129_2",
+          "HOTA": 66.83461743352925,
+          "DetA": 66.83461743352925,
+          "AssA": 66.83461743352925,
+          "IDF1": 94.9868073878628,
+          "MOTA": 90.33898305084746,
+          "FP": 7,
+          "FN": 50,
+          "IDSW": 0
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0129_2",
+          "HOTA": 66.83461743352925,
+          "DetA": 66.83461743352925,
+          "AssA": 66.83461743352925,
+          "IDF1": 94.9868073878628,
+          "MOTA": 90.33898305084746,
+          "FP": 7,
+          "FN": 50,
+          "IDSW": 0
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0129_2",
+          "HOTA": 46.69913969941989,
+          "DetA": 48.92064614649884,
+          "AssA": 44.588032179093155,
+          "IDF1": 78.06691449814126,
+          "MOTA": 66.61016949152543,
+          "FP": 46,
+          "FN": 150,
+          "IDSW": 1
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0141_2",
+      "frames": 410,
+      "gt": 17146,
+      "counts": {
+        "TP": 6140,
+        "FN": 11006,
+        "FP": 1278,
+        "IDSW": 17
+      },
+      "fn_candidates": {
+        "overlap_lt10": 7235,
+        "overlap_30_50": 1144,
+        "overlap_10_30": 876,
+        "low_assoc": 1140,
+        "high_below_birth": 124,
+        "outside_assoc_gate": 456,
+        "birth_eligible": 31
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0141_2",
+          "HOTA": 41.84924386505283,
+          "DetA": 27.84273295027937,
+          "AssA": 64.17791852207205,
+          "IDF1": 44.35759648265755,
+          "MOTA": 28.257319491426568,
+          "FP": 1278,
+          "FN": 11006,
+          "IDSW": 17
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0141_2",
+          "HOTA": 41.84924386505283,
+          "DetA": 27.84273295027937,
+          "AssA": 64.17791852207205,
+          "IDF1": 44.35759648265755,
+          "MOTA": 28.257319491426568,
+          "FP": 1278,
+          "FN": 11006,
+          "IDSW": 17
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0141_2",
+          "HOTA": 45.65160047161223,
+          "DetA": 31.72020137599228,
+          "AssA": 66.57492141229075,
+          "IDF1": 53.095863302507894,
+          "MOTA": 34.05458999183483,
+          "FP": 1640,
+          "FN": 9655,
+          "IDSW": 12
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0155_2",
+      "frames": 410,
+      "gt": 360,
+      "counts": {
+        "TP": 62,
+        "FN": 298,
+        "FP": 11,
+        "IDSW": 3
+      },
+      "fn_candidates": {
+        "overlap_30_50": 16,
+        "overlap_lt10": 182,
+        "overlap_10_30": 7,
+        "high_below_birth": 6,
+        "low_assoc": 60,
+        "outside_assoc_gate": 20,
+        "birth_eligible": 7
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0155_2",
+          "HOTA": 7.393753835177385,
+          "DetA": 11.988355537797709,
+          "AssA": 4.611605728342823,
+          "IDF1": 14.780600461893764,
+          "MOTA": 13.333333333333334,
+          "FP": 11,
+          "FN": 298,
+          "IDSW": 3
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0155_2",
+          "HOTA": 7.292761041806707,
+          "DetA": 11.573255895298496,
+          "AssA": 4.662582673799417,
+          "IDF1": 14.849187935034802,
+          "MOTA": 12.777777777777777,
+          "FP": 11,
+          "FN": 300,
+          "IDSW": 3
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0155_2",
+          "HOTA": 0.15626556629070512,
+          "DetA": 0.11135030806918567,
+          "AssA": 0.21929824561403513,
+          "IDF1": 0.28169014084507044,
+          "MOTA": -96.66666666666667,
+          "FP": 349,
+          "FN": 359,
+          "IDSW": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0159_2",
+      "frames": 250,
+      "gt": 250,
+      "counts": {
+        "TP": 33,
+        "FN": 217,
+        "FP": 0,
+        "IDSW": 1
+      },
+      "fn_candidates": {
+        "high_below_birth": 5,
+        "birth_eligible": 8,
+        "low_assoc": 93,
+        "overlap_lt10": 69,
+        "outside_assoc_gate": 42
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0159_2",
+          "HOTA": 7.853435182110262,
+          "DetA": 10.123148530814479,
+          "AssA": 6.113527240485818,
+          "IDF1": 16.25441696113074,
+          "MOTA": 12.8,
+          "FP": 0,
+          "FN": 217,
+          "IDSW": 1
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0159_2",
+          "HOTA": 7.853435182110262,
+          "DetA": 10.123148530814479,
+          "AssA": 6.113527240485818,
+          "IDF1": 16.25441696113074,
+          "MOTA": 12.8,
+          "FP": 0,
+          "FN": 217,
+          "IDSW": 1
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0159_2",
+          "HOTA": 10.052177484333177,
+          "DetA": 14.017470590357926,
+          "AssA": 7.209225572981634,
+          "IDF1": 16.99346405228758,
+          "MOTA": 14.799999999999999,
+          "FP": 9,
+          "FN": 203,
+          "IDSW": 1
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0169_3",
+      "frames": 290,
+      "gt": 5442,
+      "counts": {
+        "TP": 2520,
+        "FN": 2922,
+        "FP": 1405,
+        "IDSW": 11
+      },
+      "fn_candidates": {
+        "overlap_30_50": 594,
+        "overlap_lt10": 1464,
+        "low_assoc": 338,
+        "high_below_birth": 37,
+        "overlap_10_30": 158,
+        "outside_assoc_gate": 144,
+        "birth_eligible": 187
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0169_3",
+          "HOTA": 46.16123619746524,
+          "DetA": 30.652518693423936,
+          "AssA": 71.2198113919314,
+          "IDF1": 52.5248211807409,
+          "MOTA": 20.286659316427784,
+          "FP": 1405,
+          "FN": 2922,
+          "IDSW": 11
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0169_3",
+          "HOTA": 46.16123619746524,
+          "DetA": 30.652518693423936,
+          "AssA": 71.2198113919314,
+          "IDF1": 52.5248211807409,
+          "MOTA": 20.286659316427784,
+          "FP": 1405,
+          "FN": 2922,
+          "IDSW": 11
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0169_3",
+          "HOTA": 46.148316618692434,
+          "DetA": 31.343680748459633,
+          "AssA": 69.16937892219013,
+          "IDF1": 55.19679472071647,
+          "MOTA": 33.49871370819552,
+          "FP": 607,
+          "FN": 3005,
+          "IDSW": 7
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0173_2",
+      "frames": 450,
+      "gt": 450,
+      "counts": {
+        "TP": 198,
+        "FN": 252,
+        "FP": 147,
+        "IDSW": 31
+      },
+      "fn_candidates": {
+        "overlap_30_50": 154,
+        "birth_eligible": 65,
+        "low_assoc": 20,
+        "outside_assoc_gate": 2,
+        "overlap_lt10": 4,
+        "high_below_birth": 6,
+        "overlap_10_30": 1
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0173_2",
+          "HOTA": 10.323463163393228,
+          "DetA": 38.22348641890186,
+          "AssA": 2.8186565603348823,
+          "IDF1": 7.044025157232705,
+          "MOTA": 4.444444444444445,
+          "FP": 147,
+          "FN": 252,
+          "IDSW": 31
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0173_2",
+          "HOTA": 10.277965063844233,
+          "DetA": 37.82462612161005,
+          "AssA": 2.8291842592411727,
+          "IDF1": 7.079646017699115,
+          "MOTA": 4.0,
+          "FP": 146,
+          "FN": 255,
+          "IDSW": 31
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0173_2",
+          "HOTA": 9.071745479868904,
+          "DetA": 32.143565503015296,
+          "AssA": 2.589482048749168,
+          "IDF1": 5.277044854881266,
+          "MOTA": -11.11111111111111,
+          "FP": 168,
+          "FN": 310,
+          "IDSW": 22
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0181_3",
+      "frames": 320,
+      "gt": 7870,
+      "counts": {
+        "TP": 3781,
+        "FN": 4089,
+        "FP": 729,
+        "IDSW": 8
+      },
+      "fn_candidates": {
+        "low_assoc": 414,
+        "overlap_lt10": 2667,
+        "outside_assoc_gate": 156,
+        "high_below_birth": 52,
+        "overlap_30_50": 523,
+        "birth_eligible": 64,
+        "overlap_10_30": 213
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0181_3",
+          "HOTA": 50.763618562577015,
+          "DetA": 35.50044245977815,
+          "AssA": 73.64959350621713,
+          "IDF1": 59.676898222940224,
+          "MOTA": 38.678526048284624,
+          "FP": 729,
+          "FN": 4089,
+          "IDSW": 8
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0181_3",
+          "HOTA": 50.763618562577015,
+          "DetA": 35.50044245977815,
+          "AssA": 73.64959350621713,
+          "IDF1": 59.676898222940224,
+          "MOTA": 38.678526048284624,
+          "FP": 729,
+          "FN": 4089,
+          "IDSW": 8
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0181_3",
+          "HOTA": 45.4529308450894,
+          "DetA": 29.458302993686015,
+          "AssA": 71.16191150950726,
+          "IDF1": 53.5142658315936,
+          "MOTA": 32.096569250317664,
+          "FP": 550,
+          "FN": 4794,
+          "IDSW": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0221_2",
+      "frames": 590,
+      "gt": 697,
+      "counts": {
+        "TP": 97,
+        "FN": 600,
+        "FP": 99,
+        "IDSW": 6
+      },
+      "fn_candidates": {
+        "low_assoc": 188,
+        "outside_assoc_gate": 47,
+        "overlap_30_50": 199,
+        "high_below_birth": 22,
+        "birth_eligible": 20,
+        "overlap_lt10": 109,
+        "overlap_10_30": 15
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0221_2",
+          "HOTA": 8.789280344184762,
+          "DetA": 13.883139203936464,
+          "AssA": 5.570946986440657,
+          "IDF1": 11.422172452407615,
+          "MOTA": -1.1477761836441895,
+          "FP": 99,
+          "FN": 600,
+          "IDSW": 6
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0221_2",
+          "HOTA": 8.789280344184762,
+          "DetA": 13.883139203936464,
+          "AssA": 5.570946986440657,
+          "IDF1": 11.422172452407615,
+          "MOTA": -1.1477761836441895,
+          "FP": 99,
+          "FN": 600,
+          "IDSW": 6
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0221_2",
+          "HOTA": 1.6021352158218871,
+          "DetA": 2.3887233479406484,
+          "AssA": 1.075164292668815,
+          "IDF1": 2.7472527472527473,
+          "MOTA": 0.2869440459110474,
+          "FP": 13,
+          "FN": 679,
+          "IDSW": 3
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0225_1",
+      "frames": 329,
+      "gt": 3682,
+      "counts": {
+        "TP": 1847,
+        "FN": 1835,
+        "FP": 134,
+        "IDSW": 6
+      },
+      "fn_candidates": {
+        "overlap_10_30": 69,
+        "overlap_lt10": 1310,
+        "outside_assoc_gate": 38,
+        "low_assoc": 185,
+        "birth_eligible": 96,
+        "overlap_30_50": 114,
+        "high_below_birth": 23
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0225_1",
+          "HOTA": 53.41639412800492,
+          "DetA": 38.72360296856961,
+          "AssA": 73.9984112733898,
+          "IDF1": 64.73600565071517,
+          "MOTA": 46.36067354698533,
+          "FP": 134,
+          "FN": 1835,
+          "IDSW": 6
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0225_1",
+          "HOTA": 53.421971118203835,
+          "DetA": 38.691354144527715,
+          "AssA": 74.07184127226614,
+          "IDF1": 64.7703180212014,
+          "MOTA": 46.36067354698533,
+          "FP": 133,
+          "FN": 1837,
+          "IDSW": 5
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0225_1",
+          "HOTA": 52.854546392268155,
+          "DetA": 38.64209785003212,
+          "AssA": 72.39623573138489,
+          "IDF1": 64.18992388546575,
+          "MOTA": 47.36556219445953,
+          "FP": 44,
+          "FN": 1890,
+          "IDSW": 4
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0237_2",
+      "frames": 410,
+      "gt": 1199,
+      "counts": {
+        "TP": 506,
+        "FN": 693,
+        "FP": 28,
+        "IDSW": 1
+      },
+      "fn_candidates": {
+        "overlap_lt10": 584,
+        "low_assoc": 64,
+        "high_below_birth": 5,
+        "outside_assoc_gate": 22,
+        "overlap_30_50": 11,
+        "birth_eligible": 7
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0237_2",
+          "HOTA": 41.48283312973647,
+          "DetA": 28.95680164152071,
+          "AssA": 59.67668532431313,
+          "IDF1": 57.93421811886902,
+          "MOTA": 39.783152627189324,
+          "FP": 28,
+          "FN": 693,
+          "IDSW": 1
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0237_2",
+          "HOTA": 41.48283312973647,
+          "DetA": 28.95680164152071,
+          "AssA": 59.67668532431313,
+          "IDF1": 57.93421811886902,
+          "MOTA": 39.783152627189324,
+          "FP": 28,
+          "FN": 693,
+          "IDSW": 1
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0237_2",
+          "HOTA": 32.06913762728974,
+          "DetA": 20.87861519612159,
+          "AssA": 52.47890262232249,
+          "IDF1": 25.115207373271893,
+          "MOTA": -8.423686405337781,
+          "FP": 319,
+          "FN": 981,
+          "IDSW": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0255_1",
+      "frames": 600,
+      "gt": 600,
+      "counts": {
+        "TP": 396,
+        "FN": 204,
+        "FP": 5,
+        "IDSW": 8
+      },
+      "fn_candidates": {
+        "overlap_lt10": 93,
+        "outside_assoc_gate": 9,
+        "low_assoc": 57,
+        "high_below_birth": 5,
+        "birth_eligible": 23,
+        "overlap_30_50": 15,
+        "overlap_10_30": 2
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0255_1",
+          "HOTA": 31.328916207983415,
+          "DetA": 48.86732932330437,
+          "AssA": 20.086135374440744,
+          "IDF1": 49.75024975024975,
+          "MOTA": 63.83333333333333,
+          "FP": 5,
+          "FN": 204,
+          "IDSW": 8
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0255_1",
+          "HOTA": 31.328916207983415,
+          "DetA": 48.86732932330437,
+          "AssA": 20.086135374440744,
+          "IDF1": 49.75024975024975,
+          "MOTA": 63.83333333333333,
+          "FP": 5,
+          "FN": 204,
+          "IDSW": 8
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0255_1",
+          "HOTA": 22.88270547197817,
+          "DetA": 43.84707124413687,
+          "AssA": 11.95773375155153,
+          "IDF1": 35.160289555325754,
+          "MOTA": 58.5,
+          "FP": 4,
+          "FN": 237,
+          "IDSW": 8
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0257_2",
+      "frames": 590,
+      "gt": 1017,
+      "counts": {
+        "TP": 540,
+        "FN": 477,
+        "FP": 180,
+        "IDSW": 16
+      },
+      "fn_candidates": {
+        "overlap_30_50": 125,
+        "birth_eligible": 63,
+        "low_assoc": 26,
+        "overlap_lt10": 230,
+        "outside_assoc_gate": 6,
+        "high_below_birth": 9,
+        "overlap_10_30": 18
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0257_2",
+          "HOTA": 28.5586258369826,
+          "DetA": 38.63263013767477,
+          "AssA": 21.67284799023945,
+          "IDF1": 39.72366148531952,
+          "MOTA": 33.82497541789577,
+          "FP": 180,
+          "FN": 477,
+          "IDSW": 16
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0257_2",
+          "HOTA": 30.13548340159445,
+          "DetA": 38.64005676604962,
+          "AssA": 23.747130214562162,
+          "IDF1": 40.18422567645366,
+          "MOTA": 33.82497541789577,
+          "FP": 180,
+          "FN": 477,
+          "IDSW": 16
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0257_2",
+          "HOTA": 23.375330412228717,
+          "DetA": 26.109390008189457,
+          "AssA": 20.966197570823134,
+          "IDF1": 37.1900826446281,
+          "MOTA": 25.073746312684364,
+          "FP": 88,
+          "FN": 670,
+          "IDSW": 4
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0277_2",
+      "frames": 366,
+      "gt": 984,
+      "counts": {
+        "TP": 888,
+        "FN": 96,
+        "FP": 0,
+        "IDSW": 7
+      },
+      "fn_candidates": {
+        "low_assoc": 39,
+        "high_below_birth": 5,
+        "birth_eligible": 22,
+        "outside_assoc_gate": 25,
+        "overlap_lt10": 5
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0277_2",
+          "HOTA": 57.135105790247366,
+          "DetA": 67.40848550645025,
+          "AssA": 48.498522122823,
+          "IDF1": 70.72649572649573,
+          "MOTA": 89.53252032520325,
+          "FP": 0,
+          "FN": 96,
+          "IDSW": 7
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0277_2",
+          "HOTA": 57.135105790247366,
+          "DetA": 67.40848550645025,
+          "AssA": 48.498522122823,
+          "IDF1": 70.72649572649573,
+          "MOTA": 89.53252032520325,
+          "FP": 0,
+          "FN": 96,
+          "IDSW": 7
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0277_2",
+          "HOTA": 59.62675790723231,
+          "DetA": 68.48920267540367,
+          "AssA": 51.96519737912206,
+          "IDF1": 82.70908158029758,
+          "MOTA": 97.15447154471545,
+          "FP": 0,
+          "FN": 19,
+          "IDSW": 9
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0283_1",
+      "frames": 450,
+      "gt": 5968,
+      "counts": {
+        "TP": 3191,
+        "FN": 2777,
+        "FP": 1179,
+        "IDSW": 3
+      },
+      "fn_candidates": {
+        "overlap_30_50": 964,
+        "overlap_10_30": 556,
+        "overlap_lt10": 1151,
+        "low_assoc": 62,
+        "birth_eligible": 15,
+        "outside_assoc_gate": 19,
+        "high_below_birth": 10
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0283_1",
+          "HOTA": 47.91216760412731,
+          "DetA": 40.347673907381306,
+          "AssA": 58.31559226938147,
+          "IDF1": 61.34648868253048,
+          "MOTA": 33.66286863270778,
+          "FP": 1179,
+          "FN": 2777,
+          "IDSW": 3
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0283_1",
+          "HOTA": 47.91216760412731,
+          "DetA": 40.347673907381306,
+          "AssA": 58.31559226938147,
+          "IDF1": 61.34648868253048,
+          "MOTA": 33.66286863270778,
+          "FP": 1179,
+          "FN": 2777,
+          "IDSW": 3
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0283_1",
+          "HOTA": 42.97355964959862,
+          "DetA": 35.02386088218275,
+          "AssA": 55.184149980580074,
+          "IDF1": 54.96,
+          "MOTA": 24.581099195710458,
+          "FP": 1282,
+          "FN": 3218,
+          "IDSW": 1
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0303_2",
+      "frames": 577,
+      "gt": 2550,
+      "counts": {
+        "TP": 1012,
+        "FN": 1538,
+        "FP": 110,
+        "IDSW": 9
+      },
+      "fn_candidates": {
+        "low_assoc": 354,
+        "overlap_10_30": 120,
+        "overlap_lt10": 666,
+        "outside_assoc_gate": 66,
+        "birth_eligible": 29,
+        "high_below_birth": 45,
+        "overlap_30_50": 258
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0303_2",
+          "HOTA": 32.51239212994432,
+          "DetA": 29.043010080209925,
+          "AssA": 36.40251132879214,
+          "IDF1": 47.05882352941176,
+          "MOTA": 35.01960784313726,
+          "FP": 110,
+          "FN": 1538,
+          "IDSW": 9
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0303_2",
+          "HOTA": 32.46382555421574,
+          "DetA": 29.0452589757707,
+          "AssA": 36.29081111758061,
+          "IDF1": 46.949891067538125,
+          "MOTA": 34.94117647058824,
+          "FP": 110,
+          "FN": 1538,
+          "IDSW": 11
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0303_2",
+          "HOTA": 31.860211666237547,
+          "DetA": 28.963092432174868,
+          "AssA": 35.06948419617872,
+          "IDF1": 42.13237187741437,
+          "MOTA": 16.980392156862745,
+          "FP": 446,
+          "FN": 1663,
+          "IDSW": 8
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0307_2",
+      "frames": 180,
+      "gt": 77,
+      "counts": {
+        "TP": 39,
+        "FN": 38,
+        "FP": 0
+      },
+      "fn_candidates": {
+        "overlap_lt10": 22,
+        "overlap_30_50": 9,
+        "overlap_10_30": 7
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0307_2",
+          "HOTA": 28.985248161449533,
+          "DetA": 28.985248161449533,
+          "AssA": 28.985248161449533,
+          "IDF1": 67.24137931034483,
+          "MOTA": 50.649350649350644,
+          "FP": 0,
+          "FN": 38,
+          "IDSW": 0
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0307_2",
+          "HOTA": 28.985248161449533,
+          "DetA": 28.985248161449533,
+          "AssA": 28.985248161449533,
+          "IDF1": 67.24137931034483,
+          "MOTA": 50.649350649350644,
+          "FP": 0,
+          "FN": 38,
+          "IDSW": 0
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0307_2",
+          "HOTA": 19.79252533326672,
+          "DetA": 19.79252533326672,
+          "AssA": 19.79252533326672,
+          "IDF1": 46.0,
+          "MOTA": 29.87012987012987,
+          "FP": 0,
+          "FN": 54,
+          "IDSW": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0309_4",
+      "frames": 603,
+      "gt": 1415,
+      "counts": {
+        "TP": 430,
+        "FN": 985,
+        "FP": 29,
+        "IDSW": 18
+      },
+      "fn_candidates": {
+        "high_below_birth": 35,
+        "low_assoc": 224,
+        "birth_eligible": 95,
+        "overlap_10_30": 19,
+        "outside_assoc_gate": 89,
+        "overlap_lt10": 442,
+        "overlap_30_50": 81
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0309_4",
+          "HOTA": 19.72867698455639,
+          "DetA": 21.270949773123753,
+          "AssA": 18.325698173163218,
+          "IDF1": 26.680896478121664,
+          "MOTA": 27.06713780918728,
+          "FP": 29,
+          "FN": 985,
+          "IDSW": 18
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0309_4",
+          "HOTA": 19.72867698455639,
+          "DetA": 21.270949773123753,
+          "AssA": 18.325698173163218,
+          "IDF1": 26.680896478121664,
+          "MOTA": 27.06713780918728,
+          "FP": 29,
+          "FN": 985,
+          "IDSW": 18
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0309_4",
+          "HOTA": 31.195937482169732,
+          "DetA": 34.7320420238586,
+          "AssA": 28.152660812544607,
+          "IDF1": 38.22884699693117,
+          "MOTA": 43.25088339222615,
+          "FP": 124,
+          "FN": 673,
+          "IDSW": 6
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0325_2",
+      "frames": 595,
+      "gt": 0,
+      "counts": {
+        "TP": 0,
+        "FN": 0,
+        "FP": 29
+      },
+      "fn_candidates": {},
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0325_2",
+          "HOTA": 0.0,
+          "DetA": 0.0,
+          "AssA": 0.0,
+          "IDF1": 0.0,
+          "MOTA": 0.0,
+          "FP": 29,
+          "FN": 0,
+          "IDSW": 0
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0325_2",
+          "HOTA": 0.0,
+          "DetA": 0.0,
+          "AssA": 0.0,
+          "IDF1": 0.0,
+          "MOTA": 0.0,
+          "FP": 29,
+          "FN": 0,
+          "IDSW": 0
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0325_2",
+          "HOTA": 0.0,
+          "DetA": 0.0,
+          "AssA": 0.0,
+          "IDF1": 0.0,
+          "MOTA": 0.0,
+          "FP": 0,
+          "FN": 0,
+          "IDSW": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "frames": 390,
+      "gt": 64163,
+      "counts": {
+        "TP": 8347,
+        "FN": 55816,
+        "FP": 1276,
+        "IDSW": 30
+      },
+      "fn_candidates": {
+        "low_assoc": 3773,
+        "overlap_lt10": 44751,
+        "overlap_10_30": 2020,
+        "outside_assoc_gate": 1663,
+        "high_below_birth": 214,
+        "birth_eligible": 483,
+        "overlap_30_50": 2912
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0327_3",
+          "HOTA": 19.679727974701432,
+          "DetA": 9.603223596522016,
+          "AssA": 40.55014839852134,
+          "IDF1": 21.01482666088418,
+          "MOTA": 10.973614076648536,
+          "FP": 1276,
+          "FN": 55816,
+          "IDSW": 30
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0327_3",
+          "HOTA": 19.679999374541122,
+          "DetA": 9.601556902111232,
+          "AssA": 40.557705024060624,
+          "IDF1": 21.015965953755657,
+          "MOTA": 10.979848199117871,
+          "FP": 1272,
+          "FN": 55816,
+          "IDSW": 30
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0327_3",
+          "HOTA": 8.548062329141459,
+          "DetA": 2.6021522977248024,
+          "AssA": 28.416884548123456,
+          "IDF1": 5.140991392104482,
+          "MOTA": 0.9538207378083943,
+          "FP": 1300,
+          "FN": 62246,
+          "IDSW": 5
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0339_2",
+      "frames": 600,
+      "gt": 1800,
+      "counts": {
+        "TP": 411,
+        "FN": 1389,
+        "FP": 814
+      },
+      "fn_candidates": {
+        "overlap_30_50": 204,
+        "overlap_lt10": 671,
+        "overlap_10_30": 408,
+        "outside_assoc_gate": 47,
+        "low_assoc": 49,
+        "high_below_birth": 5,
+        "birth_eligible": 5
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0339_2",
+          "HOTA": 23.482486219349276,
+          "DetA": 14.352444506978273,
+          "AssA": 39.97762414688348,
+          "IDF1": 27.173553719008265,
+          "MOTA": -22.38888888888889,
+          "FP": 814,
+          "FN": 1389,
+          "IDSW": 0
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0339_2",
+          "HOTA": 23.468342204899216,
+          "DetA": 14.343763950895083,
+          "AssA": 39.96092048351741,
+          "IDF1": 27.155599603567886,
+          "MOTA": -22.5,
+          "FP": 816,
+          "FN": 1389,
+          "IDSW": 0
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0339_2",
+          "HOTA": 23.393543028627757,
+          "DetA": 16.659527064870474,
+          "AssA": 33.768595254153865,
+          "IDF1": 18.64541832669323,
+          "MOTA": -13.444444444444445,
+          "FP": 476,
+          "FN": 1566,
+          "IDSW": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0345_2",
+      "frames": 600,
+      "gt": 2257,
+      "counts": {
+        "TP": 12,
+        "FN": 2245,
+        "FP": 804
+      },
+      "fn_candidates": {
+        "overlap_10_30": 418,
+        "overlap_lt10": 1660,
+        "overlap_30_50": 167
+      },
+      "official": {
+        "main": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0345_2",
+          "HOTA": 11.560672096220289,
+          "DetA": 5.767413521874952,
+          "AssA": 23.237674475616473,
+          "IDF1": 0.780995769606248,
+          "MOTA": -35.090828533451486,
+          "FP": 804,
+          "FN": 2245,
+          "IDSW": 0
+        },
+        "no_reid": {
+          "tracker": "botsort_no_reid",
+          "sequence": "DJI_0345_2",
+          "HOTA": 11.560672096220289,
+          "DetA": 5.767413521874952,
+          "AssA": 23.237674475616473,
+          "IDF1": 0.780995769606248,
+          "MOTA": -35.090828533451486,
+          "FP": 804,
+          "FN": 2245,
+          "IDSW": 0
+        },
+        "rgb": {
+          "tracker": "botsort_reid",
+          "sequence": "DJI_0345_2",
+          "HOTA": 0.0,
+          "DetA": 0.0,
+          "AssA": 0.0,
+          "IDF1": 0.0,
+          "MOTA": -0.7975188303057155,
+          "FP": 18,
+          "FN": 2257,
+          "IDSW": 0
+        }
+      }
+    }
+  ],
+  "metrics": {
+    "main": {
+      "tracker": "botsort_reid",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 37.86084761921485,
+      "DetA": 25.186472853553692,
+      "AssA": 58.365843006546484,
+      "IDF1": 42.45072958120144,
+      "MOTA": 25.759295107135706,
+      "FP": 13397,
+      "FN": 119645,
+      "IDSW": 422
+    },
+    "no_reid": {
+      "tracker": "botsort_no_reid",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 37.8120070807683,
+      "DetA": 25.177205298152522,
+      "AssA": 58.24140781721043,
+      "IDF1": 42.364516460174194,
+      "MOTA": 25.75317624546648,
+      "FP": 13392,
+      "FN": 119658,
+      "IDSW": 425
+    },
+    "rgb": {
+      "tracker": "botsort_reid",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 35.54285830405251,
+      "DetA": 21.663707979463336,
+      "AssA": 59.51964224470087,
+      "IDF1": 37.6505538063064,
+      "MOTA": 21.319226575885008,
+      "FP": 11645,
+      "FN": 129498,
+      "IDSW": 303
+    }
+  },
+  "checks": "per-sequence CLEAR FN, FP, IDSW match frozen TrackEval for all three variants"
+}

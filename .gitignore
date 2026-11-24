@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+*.pt
+*.pth
+*.onnx
+*.npz
+*.zip
+*.mp4
+/data/
+/external/
+/outputs/

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "inputs_unchanged": true,
+  "no_reid_metrics_reproduced": true,
+  "selected_trajectory_files": 60,
+  "frames_per_variant": 12590,
+  "sequences": 30
+}

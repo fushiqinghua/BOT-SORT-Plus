@@ -1,0 +1,8 @@
+{
+  "rule": "Sequences at indices 0,14,29 of sorted official test list; frame min(100,sequence_length). Not selected by metric.",
+  "sequences": [
+    "DJI_0028_3",
+    "DJI_0173_2",
+    "DJI_0345_2"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "deepsort_max_cos_dist_0p20",
+  "method": "deepsort",
+  "parameter": "max_cos_dist",
+  "value": 0.2,
+  "reused_from": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2",
+  "created": 1795491371.2880256,
+  "status": "TRACKS_READY",
+  "elapsed_seconds": 0.07826614379882812,
+  "finished": 1795491372.6640446,
+  "trajectory_files": 30,
+  "protocol_sha256": "e6db8c5a9fa8568e69220799c180d817f6c1f8facbc34dc0c2c7b950063854b7"
+}

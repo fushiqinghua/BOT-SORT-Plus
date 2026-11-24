@@ -1,0 +1,11 @@
+{
+  "tracker": "imprassoc",
+  "sequence": "DJI_0051_2",
+  "frames": 580,
+  "rows": 799,
+  "association_seconds": 0.9988794807577506,
+  "reid_seconds": 3.005945936194621,
+  "replay_seconds": 1.5815014239633456,
+  "detector_seconds": 2.4903414350701496,
+  "prediction_sha256": "404346176361b4b0a3617bd034833741b4bd38bac58db14f2eb286e0fcf14b32"
+}

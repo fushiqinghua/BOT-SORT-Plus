@@ -1,0 +1,4 @@
+{
+  "status": "PASS",
+  "checks": "All seven: leading empty frame, low/high confidence mixed feature alignment, missed frames and reappearance, finite outputs."
+}

@@ -1,0 +1,317 @@
+{
+  "purpose": "POST_HOC_DIAGNOSTIC_NOT_FORMAL_TUNED_BASELINE",
+  "method": "Same >0.5 detection caches; one-to-one Hungarian GT association IoU>=0.5; compare last observed same-GT feature within30frames; nearest other-ID feature in history ignores tracker motion gate and is only a proxy.",
+  "cache_alignment": "PASS",
+  "unit_norm": "PASS",
+  "statistics": {
+    "pretrained/same_id/all": {
+      "count": 51520,
+      "mean": 0.10560968906867393,
+      "quantiles": {
+        "p10": 0.014115029573440553,
+        "p50": 0.07772767543792725,
+        "p90": 0.23694710731506347,
+        "p95": 0.29643116593360896
+      },
+      "exceeds": {
+        "0.2": 14.943711180124222,
+        "0.4": 1.3761645962732918,
+        "0.6": 0.06793478260869565,
+        "0.8": 0.0,
+        "1.0": 0.0
+      }
+    },
+    "pretrained/same_id/gap1": {
+      "count": 48038,
+      "mean": 0.10540473742436209,
+      "quantiles": {
+        "p10": 0.014083158969879151,
+        "p50": 0.07835358381271362,
+        "p90": 0.23527328968048097,
+        "p95": 0.29319161474704747
+      },
+      "exceeds": {
+        "0.2": 14.823681252341897,
+        "0.4": 1.255256255464424,
+        "0.6": 0.06036887464090927,
+        "0.8": 0.0,
+        "1.0": 0.0
+      }
+    },
+    "finetuned/same_id/all": {
+      "count": 51520,
+      "mean": 0.29951277971846163,
+      "quantiles": {
+        "p10": 0.1014616131782532,
+        "p50": 0.2847473621368408,
+        "p90": 0.5139064729213715,
+        "p95": 0.5778431922197341
+      },
+      "exceeds": {
+        "0.2": 70.76086956521739,
+        "0.4": 25.456133540372672,
+        "0.6": 3.804347826086957,
+        "0.8": 0.18827639751552794,
+        "1.0": 0.0
+      }
+    },
+    "finetuned/same_id/gap1": {
+      "count": 48038,
+      "mean": 0.2901057372683713,
+      "quantiles": {
+        "p10": 0.09790928959846497,
+        "p50": 0.2762232720851898,
+        "p90": 0.49835147857666023,
+        "p95": 0.5604153603315354
+      },
+      "exceeds": {
+        "0.2": 69.25142595445273,
+        "0.4": 23.294058870061203,
+        "0.6": 2.8956242974312003,
+        "0.8": 0.08534909863025106,
+        "1.0": 0.0
+      }
+    },
+    "pretrained/nearest_other_id": {
+      "count": 49691,
+      "mean": 0.2477204820907343,
+      "quantiles": {
+        "p10": 0.06027287244796753,
+        "p50": 0.21644622087478638,
+        "p90": 0.47250431776046753,
+        "p95": 0.5557100772857666
+      },
+      "exceeds": {
+        "0.2": 52.81238051156145,
+        "0.4": 17.977098468535548,
+        "0.6": 3.580125173572679,
+        "0.8": 0.8291239862349319,
+        "1.0": 0.002012436859793524
+      }
+    },
+    "finetuned/nearest_other_id": {
+      "count": 49691,
+      "mean": 0.6775989671769317,
+      "quantiles": {
+        "p10": 0.5094946622848511,
+        "p50": 0.6734001040458679,
+        "p90": 0.8528947830200195,
+        "p95": 0.9059626162052155
+      },
+      "exceeds": {
+        "0.2": 99.96377613652372,
+        "0.4": 97.78028214364774,
+        "0.6": 71.61055321889276,
+        "0.8": 18.592904147632368,
+        "1.0": 1.2698476585297136
+      }
+    },
+    "pretrained/same_id/gap2_5": {
+      "count": 2682,
+      "mean": 0.10563350537212636,
+      "quantiles": {
+        "p10": 0.013891160488128662,
+        "p50": 0.06645983457565308,
+        "p90": 0.2570294022560121,
+        "p95": 0.3382383167743682
+      },
+      "exceeds": {
+        "0.2": 16.10738255033557,
+        "0.4": 2.9455630126771064,
+        "0.6": 0.14914243102162564,
+        "0.8": 0.0,
+        "1.0": 0.0
+      }
+    },
+    "finetuned/same_id/gap2_5": {
+      "count": 2682,
+      "mean": 0.40822954539217937,
+      "quantiles": {
+        "p10": 0.20201839208602906,
+        "p50": 0.4026379883289337,
+        "p90": 0.6250498414039611,
+        "p95": 0.6898364067077636
+      },
+      "exceeds": {
+        "0.2": 90.1193139448173,
+        "0.4": 50.6338553318419,
+        "0.6": 12.826249067859807,
+        "0.8": 0.8202833706189411,
+        "1.0": 0.0
+      }
+    },
+    "pretrained/same_id/gap6_30": {
+      "count": 800,
+      "mean": 0.11783667877316475,
+      "quantiles": {
+        "p10": 0.01880464553833008,
+        "p50": 0.07713600993156433,
+        "p90": 0.27677640318870544,
+        "p95": 0.362663784623146
+      },
+      "exceeds": {
+        "0.2": 18.25,
+        "0.4": 3.375,
+        "0.6": 0.25,
+        "0.8": 0.0,
+        "1.0": 0.0
+      }
+    },
+    "finetuned/same_id/gap6_30": {
+      "count": 800,
+      "mean": 0.49990920431911945,
+      "quantiles": {
+        "p10": 0.2727878212928772,
+        "p50": 0.49505990743637085,
+        "p90": 0.7344328701496124,
+        "p95": 0.7942571580410003
+      },
+      "exceeds": {
+        "0.2": 96.5,
+        "0.4": 70.875,
+        "0.6": 28.125,
+        "0.8": 4.25,
+        "1.0": 0.0
+      }
+    }
+  },
+  "same_box_old_new_cosine_similarity": {
+    "count": 60851,
+    "mean": 0.3750488751171838,
+    "quantiles": {
+      "p10": 0.18315480649471283,
+      "p50": 0.37250885367393494,
+      "p90": 0.5675051212310791,
+      "p95": 0.601225733757019
+    },
+    "exceeds": {
+      "0.2": 87.29683982185995,
+      "0.4": 44.184976417807434,
+      "0.6": 5.148641764309543,
+      "0.8": 0.0,
+      "1.0": 0.0
+    }
+  },
+  "sequences": [
+    {
+      "sequence": "DJI_0028_3",
+      "matched_high_confidence_detections": 3986
+    },
+    {
+      "sequence": "DJI_0030_2",
+      "matched_high_confidence_detections": 1556
+    },
+    {
+      "sequence": "DJI_0032_3",
+      "matched_high_confidence_detections": 1987
+    },
+    {
+      "sequence": "DJI_0049_2",
+      "matched_high_confidence_detections": 71
+    },
+    {
+      "sequence": "DJI_0051_2",
+      "matched_high_confidence_detections": 773
+    },
+    {
+      "sequence": "DJI_0061_2",
+      "matched_high_confidence_detections": 246
+    },
+    {
+      "sequence": "DJI_0073_3",
+      "matched_high_confidence_detections": 8265
+    },
+    {
+      "sequence": "DJI_0109_1",
+      "matched_high_confidence_detections": 74
+    },
+    {
+      "sequence": "DJI_0119_2",
+      "matched_high_confidence_detections": 130
+    },
+    {
+      "sequence": "DJI_0129_2",
+      "matched_high_confidence_detections": 292
+    },
+    {
+      "sequence": "DJI_0141_2",
+      "matched_high_confidence_detections": 6496
+    },
+    {
+      "sequence": "DJI_0155_2",
+      "matched_high_confidence_detections": 88
+    },
+    {
+      "sequence": "DJI_0159_2",
+      "matched_high_confidence_detections": 120
+    },
+    {
+      "sequence": "DJI_0169_3",
+      "matched_high_confidence_detections": 2303
+    },
+    {
+      "sequence": "DJI_0173_2",
+      "matched_high_confidence_detections": 8
+    },
+    {
+      "sequence": "DJI_0181_3",
+      "matched_high_confidence_detections": 3293
+    },
+    {
+      "sequence": "DJI_0221_2",
+      "matched_high_confidence_detections": 0
+    },
+    {
+      "sequence": "DJI_0225_1",
+      "matched_high_confidence_detections": 1865
+    },
+    {
+      "sequence": "DJI_0237_2",
+      "matched_high_confidence_detections": 317
+    },
+    {
+      "sequence": "DJI_0255_1",
+      "matched_high_confidence_detections": 320
+    },
+    {
+      "sequence": "DJI_0257_2",
+      "matched_high_confidence_detections": 586
+    },
+    {
+      "sequence": "DJI_0277_2",
+      "matched_high_confidence_detections": 768
+    },
+    {
+      "sequence": "DJI_0283_1",
+      "matched_high_confidence_detections": 2485
+    },
+    {
+      "sequence": "DJI_0303_2",
+      "matched_high_confidence_detections": 825
+    },
+    {
+      "sequence": "DJI_0307_2",
+      "matched_high_confidence_detections": 7
+    },
+    {
+      "sequence": "DJI_0309_4",
+      "matched_high_confidence_detections": 587
+    },
+    {
+      "sequence": "DJI_0325_2",
+      "matched_high_confidence_detections": 0
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "matched_high_confidence_detections": 14580
+    },
+    {
+      "sequence": "DJI_0339_2",
+      "matched_high_confidence_detections": 62
+    },
+    {
+      "sequence": "DJI_0345_2",
+      "matched_high_confidence_detections": 0
+    }
+  ]
+}

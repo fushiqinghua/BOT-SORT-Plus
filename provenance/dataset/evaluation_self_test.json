@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "purpose": "SOFTWARE_DIAGNOSTIC_ONLY_NOT_MODEL_RESULTS",
+  "sequences": [
+    "DJI_0030_2",
+    "DJI_0073_3",
+    "DJI_0325_2"
+  ],
+  "checks": "Perfect GT yields 100; one removed detection + one unmatched false positive yields FN=1, FP=1. Includes empty RGB GT and the official-vs-COCO discrepancy sequence.",
+  "results": {
+    "rgb": {
+      "perfect_gt": {
+        "tracker": "perfect_gt",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 100.0,
+        "DetA": 100.0,
+        "AssA": 100.0,
+        "IDF1": 100.0,
+        "MOTA": 100.0,
+        "FP": 0,
+        "FN": 0,
+        "IDSW": 0
+      },
+      "one_miss_one_fp": {
+        "tracker": "one_miss_one_fp",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 99.99369739863513,
+        "DetA": 99.99159204607557,
+        "AssA": 99.99580279552346,
+        "IDF1": 99.99579584629615,
+        "MOTA": 99.99159169259228,
+        "FP": 1,
+        "FN": 1,
+        "IDSW": 0
+      }
+    },
+    "ir": {
+      "perfect_gt": {
+        "tracker": "perfect_gt",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 100.0,
+        "DetA": 100.0,
+        "AssA": 100.0,
+        "IDF1": 100.0,
+        "MOTA": 100.0,
+        "FP": 0,
+        "FN": 0,
+        "IDSW": 0
+      },
+      "one_miss_one_fp": {
+        "tracker": "one_miss_one_fp",
+        "sequence": "COMBINED_SEQ",
+        "HOTA": 99.99469762931055,
+        "DetA": 99.99292636344344,
+        "AssA": 99.99646892655367,
+        "IDF1": 99.99646305662647,
+        "MOTA": 99.99292611325292,
+        "FP": 1,
+        "FN": 1,
+        "IDSW": 0
+      }
+    }
+  }
+}

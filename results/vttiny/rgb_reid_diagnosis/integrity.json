@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "original_baseline_unchanged": true,
+  "only_tracker_parameter_changed": "max_cos_dist",
+  "diagnostic_variants": 6,
+  "frames_per_variant": 12590,
+  "sequence_count": 30
+}

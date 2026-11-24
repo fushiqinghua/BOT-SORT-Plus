@@ -1,0 +1,15 @@
+{
+  "name": "CLIP-ReID ViT-B/16 VeRi",
+  "weights": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2/weights/clip_veri.pt",
+  "sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+  "source": "https://drive.google.com/uc?id=1RyfHdOBI2pan_wIGSim5-l6cM4S2WN8e",
+  "inference_state_keys_verified": 162,
+  "input_hw": [
+    256,
+    256
+  ],
+  "precision": "float32",
+  "training_domain": "VeRi initialization + VT-Tiny-MOT cleaned train RGB identity adaptation",
+  "rgbt_embedding_reference": "RGB crop from fused detector box; not cross-modal ReID fusion",
+  "finetuning": "VTTINY_ROOT/reid_rgb_official85_testselect_v2"
+}

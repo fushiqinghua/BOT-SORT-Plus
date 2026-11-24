@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "inputs_unchanged": true,
+  "selected_trajectory_files": 120,
+  "frames_per_method": 12590,
+  "original_and_finetuned_baselines_preserved": true
+}

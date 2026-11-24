@@ -1,0 +1,67 @@
+{
+  "created": 1795492007.3136837,
+  "dataset": "VT-Tiny-MOT official RGB test, all 30 sequences and 12590 frames",
+  "baseline": "VTTINY_ROOT/outputs/rgb_test_7trackers_v1",
+  "fine_tuned_source": "VTTINY_ROOT/outputs/rgb_test_4trackers_reid_testselect_v2",
+  "selection": [
+    "highest unrounded HOTA",
+    "highest IDF1",
+    "fewest IDSW",
+    "nearest 0.25",
+    "lowest threshold"
+  ],
+  "protocol_note": "Official test set used for threshold selection and reporting. Adapted checkpoint was also selected on official test retrieval mAP. Same grid for both encoders.",
+  "fixed": "Same detector, detections, confidence thresholds, SoF camera motion compensation, IoU proximity gate 0.5, match_thresh 0.8 and track management. Native BoxMOT appearance gating and cost fusion.",
+  "trials": [
+    {
+      "name": "botsort_pretrained_a010",
+      "encoder": "pretrained",
+      "appearance_thresh": 0.1
+    },
+    {
+      "name": "botsort_pretrained_a025",
+      "encoder": "pretrained",
+      "appearance_thresh": 0.25
+    },
+    {
+      "name": "botsort_pretrained_a040",
+      "encoder": "pretrained",
+      "appearance_thresh": 0.4
+    },
+    {
+      "name": "botsort_pretrained_a055",
+      "encoder": "pretrained",
+      "appearance_thresh": 0.55
+    },
+    {
+      "name": "botsort_pretrained_a070",
+      "encoder": "pretrained",
+      "appearance_thresh": 0.7
+    },
+    {
+      "name": "botsort_finetuned_a010",
+      "encoder": "finetuned",
+      "appearance_thresh": 0.1
+    },
+    {
+      "name": "botsort_finetuned_a025",
+      "encoder": "finetuned",
+      "appearance_thresh": 0.25
+    },
+    {
+      "name": "botsort_finetuned_a040",
+      "encoder": "finetuned",
+      "appearance_thresh": 0.4
+    },
+    {
+      "name": "botsort_finetuned_a055",
+      "encoder": "finetuned",
+      "appearance_thresh": 0.55
+    },
+    {
+      "name": "botsort_finetuned_a070",
+      "encoder": "finetuned",
+      "appearance_thresh": 0.7
+    }
+  ]
+}

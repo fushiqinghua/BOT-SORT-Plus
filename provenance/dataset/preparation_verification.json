@@ -1,0 +1,162 @@
+{
+  "rgb/train": {
+    "images": 27838,
+    "boxes": 340614,
+    "negative_images": 1558,
+    "classes": {
+      "ship": 35720,
+      "car": 150029,
+      "cyclist": 40603,
+      "pedestrian": 85904,
+      "bus": 8765,
+      "drone": 6699,
+      "plane": 12894
+    }
+  },
+  "rgb/val": {
+    "images": 6273,
+    "boxes": 90484,
+    "negative_images": 110,
+    "classes": {
+      "car": 44295,
+      "ship": 6784,
+      "pedestrian": 23035,
+      "cyclist": 9706,
+      "bus": 2562,
+      "plane": 2533,
+      "drone": 1569
+    }
+  },
+  "rgb/test": {
+    "images": 12590,
+    "boxes": 180237,
+    "negative_images": 832,
+    "classes": {
+      "ship": 14497,
+      "car": 103260,
+      "cyclist": 20579,
+      "pedestrian": 27026,
+      "bus": 6108,
+      "drone": 3314,
+      "plane": 5453
+    }
+  },
+  "ir/train": {
+    "images": 27838,
+    "boxes": 365497,
+    "negative_images": 748,
+    "classes": {
+      "ship": 50314,
+      "car": 151523,
+      "cyclist": 39645,
+      "pedestrian": 95791,
+      "bus": 8841,
+      "drone": 7646,
+      "plane": 11737
+    }
+  },
+  "ir/val": {
+    "images": 6273,
+    "boxes": 91255,
+    "negative_images": 230,
+    "classes": {
+      "car": 44678,
+      "ship": 7164,
+      "pedestrian": 23143,
+      "cyclist": 9638,
+      "bus": 2566,
+      "plane": 2487,
+      "drone": 1579
+    }
+  },
+  "ir/test": {
+    "images": 12590,
+    "boxes": 189089,
+    "negative_images": 71,
+    "classes": {
+      "ship": 20949,
+      "car": 101505,
+      "cyclist": 20078,
+      "pedestrian": 31829,
+      "bus": 5856,
+      "drone": 3923,
+      "plane": 4949
+    }
+  },
+  "rgbt/train": {
+    "images": 27838,
+    "boxes": 340614,
+    "negative_images": 1558,
+    "classes": {
+      "ship": 35720,
+      "car": 150029,
+      "cyclist": 40603,
+      "pedestrian": 85904,
+      "bus": 8765,
+      "drone": 6699,
+      "plane": 12894
+    }
+  },
+  "rgbt/val": {
+    "images": 6273,
+    "boxes": 90484,
+    "negative_images": 110,
+    "classes": {
+      "car": 44295,
+      "ship": 6784,
+      "pedestrian": 23035,
+      "cyclist": 9706,
+      "bus": 2562,
+      "plane": 2533,
+      "drone": 1569
+    }
+  },
+  "rgbt/test": {
+    "images": 12590,
+    "boxes": 180237,
+    "negative_images": 832,
+    "classes": {
+      "ship": 14497,
+      "car": 103260,
+      "cyclist": 20579,
+      "pedestrian": 27026,
+      "bus": 6108,
+      "drone": 3314,
+      "plane": 5453
+    }
+  },
+  "integrity": "PASS",
+  "framework_loader_smoke": {
+    "rgb": {
+      "batch_shape": [
+        2,
+        3,
+        640,
+        640
+      ],
+      "labels": 249,
+      "dataset_size": 4
+    },
+    "ir": {
+      "batch_shape": [
+        2,
+        1,
+        640,
+        640
+      ],
+      "labels": 247,
+      "dataset_size": 4
+    },
+    "rgbt": {
+      "batch_shape": [
+        2,
+        4,
+        640,
+        640
+      ],
+      "labels": 249,
+      "dataset_size": 4
+    }
+  },
+  "status": "PASS"
+}

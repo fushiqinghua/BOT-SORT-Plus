@@ -1,0 +1,8 @@
+{
+  "file": "TRACKING_RUNTIME_ROOT/tracking_runtime/boxmot/motion/kalman_filters/aabb/xysr_kf.py",
+  "old": "float(h)",
+  "new": "float(np.asarray(h).item())",
+  "reason": "NumPy 2.4 rejects converting a one-element nonzero-dimensional array using float; extract its scalar value explicitly. No tracking formulas changed.",
+  "before_sha256": "5b46ffea4814f10d7425534083ae775fdcfbb3fa7108e9cc6b7eba2b97260da2",
+  "after_sha256": "c23ab877f255ed12f22c94bb27d7fa18e8ac863d29c9105b4edb556aafec1549"
+}

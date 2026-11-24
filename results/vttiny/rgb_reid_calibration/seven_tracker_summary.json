@@ -1,0 +1,96 @@
+{
+  "evaluation_status": "MIXED: four test-calibrated appearance methods; other three original unchanged",
+  "results": [
+    {
+      "tracker": "bytetrack",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 34.96027732263718,
+      "DetA": 23.243998025378286,
+      "AssA": 53.74880824256654,
+      "IDF1": 39.95534468322634,
+      "MOTA": 24.20677302360768,
+      "FP": 13541,
+      "FN": 122275,
+      "IDSW": 439,
+      "configuration": "unchanged original baseline"
+    },
+    {
+      "tracker": "ocsort",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 31.425616526685594,
+      "DetA": 19.080136247104367,
+      "AssA": 52.745116299821845,
+      "IDF1": 35.08913188402033,
+      "MOTA": 22.335513873128185,
+      "FP": 5352,
+      "FN": 133890,
+      "IDSW": 377,
+      "configuration": "unchanged original baseline"
+    },
+    {
+      "tracker": "botsort_no_reid",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 36.35852711140836,
+      "DetA": 23.38539272923042,
+      "AssA": 57.576773473134125,
+      "IDF1": 42.24689083001058,
+      "MOTA": 25.54179738780233,
+      "FP": 11305,
+      "FN": 122310,
+      "IDSW": 240,
+      "configuration": "unchanged original baseline"
+    },
+    {
+      "tracker": "deepocsort",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 32.11601487029111,
+      "DetA": 19.41773111422082,
+      "AssA": 54.099886933118,
+      "IDF1": 36.26421923474663,
+      "MOTA": 22.72600849965512,
+      "FP": 5600,
+      "FN": 133064,
+      "IDSW": 253,
+      "configuration": "fine-tuned ReID + test-calibrated threshold"
+    },
+    {
+      "tracker": "imprassoc",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 32.980981868955475,
+      "DetA": 23.149935754431517,
+      "AssA": 48.26366572718378,
+      "IDF1": 35.03967837508375,
+      "MOTA": 24.769708297176425,
+      "FP": 11115,
+      "FN": 122917,
+      "IDSW": 1211,
+      "configuration": "fine-tuned ReID + test-calibrated threshold"
+    },
+    {
+      "tracker": "deepsort",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 33.17958909886858,
+      "DetA": 21.118271676718685,
+      "AssA": 53.21298540384609,
+      "IDF1": 37.86924010459457,
+      "MOTA": 23.63326880715573,
+      "FP": 8557,
+      "FN": 128318,
+      "IDSW": 411,
+      "configuration": "fine-tuned ReID + test-calibrated threshold"
+    },
+    {
+      "tracker": "strongsort",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 30.620588234202227,
+      "DetA": 18.035947188708757,
+      "AssA": 52.93090384309246,
+      "IDF1": 33.82870637581675,
+      "MOTA": 21.50390494626527,
+      "FP": 4088,
+      "FN": 136665,
+      "IDSW": 361,
+      "configuration": "fine-tuned ReID + test-calibrated threshold"
+    }
+  ]
+}

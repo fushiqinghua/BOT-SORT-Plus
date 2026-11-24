@@ -1,0 +1,7 @@
+{
+  "boxmot_distribution": "16.0.11",
+  "numpy": "2.4.6",
+  "opencv": "5.0.0",
+  "torch": "2.8.0+cu128",
+  "python": "python"
+}

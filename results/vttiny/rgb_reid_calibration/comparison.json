@@ -1,0 +1,234 @@
+[
+  {
+    "method": "deepsort",
+    "parameter": "max_cos_dist",
+    "old_threshold": 0.2,
+    "selected_threshold": 0.7,
+    "baseline": {
+      "tracker": "deepsort",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 32.895835800375785,
+      "DetA": 21.097441035156788,
+      "AssA": 52.38481478574485,
+      "IDF1": 37.52743355447073,
+      "MOTA": 23.5537236054558,
+      "FP": 8554,
+      "FN": 128428,
+      "IDSW": 447
+    },
+    "finetuned_default": {
+      "tracker": "deepsort",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 28.844869572364374,
+      "DetA": 19.759791640547192,
+      "AssA": 43.36769886023809,
+      "IDF1": 29.432518343659186,
+      "MOTA": 21.911087377344636,
+      "FP": 7111,
+      "FN": 131969,
+      "IDSW": 1302
+    },
+    "calibrated": {
+      "tracker": "deepsort_max_cos_dist_0p70",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 33.17958909886858,
+      "DetA": 21.118271676718685,
+      "AssA": 53.21298540384609,
+      "IDF1": 37.86924010459457,
+      "MOTA": 23.63326880715573,
+      "FP": 8557,
+      "FN": 128318,
+      "IDSW": 411
+    },
+    "delta_vs_baseline": {
+      "HOTA": 0.2837532984927975,
+      "DetA": 0.020830641561897068,
+      "AssA": 0.8281706181012396,
+      "IDF1": 0.34180655012383454,
+      "MOTA": 0.07954520169992918,
+      "FP": 3,
+      "FN": -110,
+      "IDSW": -36
+    },
+    "delta_vs_finetuned_default": {
+      "HOTA": 4.334719526504209,
+      "IDF1": 8.43672176093538,
+      "MOTA": 1.7221814298110942,
+      "IDSW": -891
+    }
+  },
+  {
+    "method": "strongsort",
+    "parameter": "max_cos_dist",
+    "old_threshold": 0.4,
+    "selected_threshold": 0.7,
+    "baseline": {
+      "tracker": "strongsort",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 30.57978937928818,
+      "DetA": 18.074034669243023,
+      "AssA": 52.6775473022183,
+      "IDF1": 33.81753974998569,
+      "MOTA": 21.520592750817702,
+      "FP": 4132,
+      "FN": 136569,
+      "IDSW": 383
+    },
+    "finetuned_default": {
+      "tracker": "strongsort",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 29.40374761112425,
+      "DetA": 17.535372278738077,
+      "AssA": 50.29420745537687,
+      "IDF1": 31.339410473085366,
+      "MOTA": 20.71290301047994,
+      "FP": 3812,
+      "FN": 137921,
+      "IDSW": 803
+    },
+    "calibrated": {
+      "tracker": "strongsort_max_cos_dist_0p70",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 30.620588234202227,
+      "DetA": 18.035947188708757,
+      "AssA": 52.93090384309246,
+      "IDF1": 33.82870637581675,
+      "MOTA": 21.50390494626527,
+      "FP": 4088,
+      "FN": 136665,
+      "IDSW": 361
+    },
+    "delta_vs_baseline": {
+      "HOTA": 0.040798854914047666,
+      "DetA": -0.038087480534265694,
+      "AssA": 0.25335654087415804,
+      "IDF1": 0.011166625831059207,
+      "MOTA": -0.016687804552432794,
+      "FP": -44,
+      "FN": 96,
+      "IDSW": -22
+    },
+    "delta_vs_finetuned_default": {
+      "HOTA": 1.216840623077978,
+      "IDF1": 2.489295902731385,
+      "MOTA": 0.791001935785328,
+      "IDSW": -442
+    }
+  },
+  {
+    "method": "deepocsort",
+    "parameter": "iou_threshold",
+    "old_threshold": 0.3,
+    "selected_threshold": 0.05,
+    "baseline": {
+      "tracker": "deepocsort",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 31.719323998237982,
+      "DetA": 19.303190066763335,
+      "AssA": 53.1062376113165,
+      "IDF1": 35.46913324351401,
+      "MOTA": 22.62087533097479,
+      "FP": 5404,
+      "FN": 133372,
+      "IDSW": 330
+    },
+    "finetuned_default": {
+      "tracker": "deepocsort",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 31.8826396714995,
+      "DetA": 19.30379559113164,
+      "AssA": 53.65490295861228,
+      "IDF1": 35.77873913081021,
+      "MOTA": 22.60808134748459,
+      "FP": 5439,
+      "FN": 133365,
+      "IDSW": 325
+    },
+    "calibrated": {
+      "tracker": "deepocsort_iou_threshold_0p05",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 32.11601487029111,
+      "DetA": 19.41773111422082,
+      "AssA": 54.099886933118,
+      "IDF1": 36.26421923474663,
+      "MOTA": 22.72600849965512,
+      "FP": 5600,
+      "FN": 133064,
+      "IDSW": 253
+    },
+    "delta_vs_baseline": {
+      "HOTA": 0.3966908720531279,
+      "DetA": 0.11454104745748594,
+      "AssA": 0.9936493218014988,
+      "IDF1": 0.7950859912326251,
+      "MOTA": 0.10513316868032874,
+      "FP": 196,
+      "FN": -308,
+      "IDSW": -77
+    },
+    "delta_vs_finetuned_default": {
+      "HOTA": 0.2333751987916095,
+      "IDF1": 0.4854801039364247,
+      "MOTA": 0.11792715217053029,
+      "IDSW": -72
+    }
+  },
+  {
+    "method": "imprassoc",
+    "parameter": "match_thresh",
+    "old_threshold": 0.65,
+    "selected_threshold": 0.85,
+    "baseline": {
+      "tracker": "imprassoc",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 32.64166379963866,
+      "DetA": 23.115325864182346,
+      "AssA": 47.40260179599864,
+      "IDF1": 34.50573413018898,
+      "MOTA": 24.734663907616312,
+      "FP": 11067,
+      "FN": 122971,
+      "IDSW": 1268
+    },
+    "finetuned_default": {
+      "tracker": "imprassoc",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 32.57991584198222,
+      "DetA": 23.019338913956506,
+      "AssA": 47.39571865559503,
+      "IDF1": 34.586757981637284,
+      "MOTA": 24.51605366797944,
+      "FP": 11059,
+      "FN": 123254,
+      "IDSW": 1386
+    },
+    "calibrated": {
+      "tracker": "imprassoc_match_thresh_0p85",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 32.980981868955475,
+      "DetA": 23.149935754431517,
+      "AssA": 48.26366572718378,
+      "IDF1": 35.03967837508375,
+      "MOTA": 24.769708297176425,
+      "FP": 11115,
+      "FN": 122917,
+      "IDSW": 1211
+    },
+    "delta_vs_baseline": {
+      "HOTA": 0.3393180693168176,
+      "DetA": 0.034609890249171826,
+      "AssA": 0.8610639311851358,
+      "IDF1": 0.5339442448947693,
+      "MOTA": 0.03504438956011313,
+      "FP": 48,
+      "FN": -54,
+      "IDSW": -57
+    },
+    "delta_vs_finetuned_default": {
+      "HOTA": 0.401066026973254,
+      "IDF1": 0.45292039344646895,
+      "MOTA": 0.253654629196987,
+      "IDSW": -175
+    }
+  }
+]

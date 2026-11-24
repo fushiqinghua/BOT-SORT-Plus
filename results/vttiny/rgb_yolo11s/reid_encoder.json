@@ -1,0 +1,14 @@
+{
+  "name": "CLIP-ReID ViT-B/16 VeRi",
+  "weights": "VTTINY_ROOT/outputs/rgb_test_7trackers_v1/weights/clip_veri.pt",
+  "sha256": "71f6f2723be4d563f1df201133daa53f57bee2a67266486559d5ce453a60f805",
+  "source": "https://drive.google.com/uc?id=1RyfHdOBI2pan_wIGSim5-l6cM4S2WN8e",
+  "inference_state_keys_verified": 162,
+  "input_hw": [
+    256,
+    256
+  ],
+  "precision": "float32",
+  "training_domain": "VeRi visible-light vehicles; not adapted to VT-Tiny-MOT aerial seven-class targets",
+  "rgbt_embedding_reference": "RGB crop from fused detector box; not cross-modal ReID fusion"
+}

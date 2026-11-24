@@ -1,0 +1,8 @@
+{
+  "name": "botsort_finetuned_a070",
+  "encoder": "finetuned",
+  "appearance_thresh": 0.7,
+  "seconds": 41.21919581503607,
+  "sequences": 30,
+  "frames": 12590
+}

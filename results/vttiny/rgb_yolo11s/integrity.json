@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "sequences": 30,
+  "frames_per_method": 12590,
+  "methods": 7,
+  "trajectory_files": 210,
+  "weight_sha256": "713581a800f7e3b5d9233bbc4ff149a39d05a06cdc8fa324ea993bedfe02591e"
+}
