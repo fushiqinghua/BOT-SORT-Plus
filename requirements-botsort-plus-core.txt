@@ -1,0 +1,4 @@
+# Pure A/B/C core. Reuse the baseline's pinned tracking environment for native runs.
+# Do not replace an already working BoxMOT/CUDA environment using this file.
+numpy>=1.24,<3
+scipy>=1.10,<2

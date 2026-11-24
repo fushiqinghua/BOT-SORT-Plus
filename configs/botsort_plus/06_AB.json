@@ -1,0 +1,9 @@
+{
+  "name": "AB",
+  "birth": {
+    "enabled": true
+  },
+  "recovery": {
+    "enabled": true
+  }
+}

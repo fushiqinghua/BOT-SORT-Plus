@@ -1,0 +1,6 @@
+{
+  "name": "long_buffer",
+  "native_overrides": {
+    "track_buffer": 120
+  }
+}

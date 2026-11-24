@@ -1,0 +1,9 @@
+{
+  "name": "instant_weak_birth",
+  "birth": {
+    "enabled": true,
+    "mode": "fixed_hits",
+    "window": 1,
+    "min_hits": 1
+  }
+}

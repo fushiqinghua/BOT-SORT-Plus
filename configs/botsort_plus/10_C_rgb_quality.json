@@ -1,0 +1,7 @@
+{
+  "name": "C_rgb_quality",
+  "appearance": {
+    "enabled": true,
+    "weight_thermal": 0
+  }
+}

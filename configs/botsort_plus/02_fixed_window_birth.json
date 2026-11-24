@@ -1,0 +1,7 @@
+{
+  "name": "fixed_window_birth",
+  "birth": {
+    "enabled": true,
+    "mode": "fixed_hits"
+  }
+}

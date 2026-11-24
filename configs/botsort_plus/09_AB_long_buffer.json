@@ -1,0 +1,13 @@
+{
+  "name": "AB_long_buffer",
+  "birth": {
+    "enabled": true
+  },
+  "recovery": {
+    "enabled": true,
+    "max_age": 60
+  },
+  "native_overrides": {
+    "track_buffer": 120
+  }
+}

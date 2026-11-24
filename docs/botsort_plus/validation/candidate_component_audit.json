@@ -1,0 +1,352 @@
+{
+  "scope": "candidate_component_only",
+  "input": "RGBT post-NMS cache, all .1 < score < .5 detections; no GT selection",
+  "limitations": [
+    "No original images, no GMC, no feature embeddings, no native BoT-SORT ownership filtering.",
+    "Confirmation counts are component events, NOT true positives or MOT scores.",
+    "Ready candidates retained until ordinary component expiry; IDs are internal candidate IDs, not public tracking identities."
+  ],
+  "sequences": [
+    {
+      "sequence": "DJI_0028_3",
+      "frames": 570,
+      "weak_detections": 1200,
+      "candidate_seeds": 199,
+      "confirmed_unique": 88,
+      "pool_peak": 10,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 117,
+      "expired_candidates": 197
+    },
+    {
+      "sequence": "DJI_0030_2",
+      "frames": 590,
+      "weak_detections": 2273,
+      "candidate_seeds": 227,
+      "confirmed_unique": 152,
+      "pool_peak": 9,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 135,
+      "expired_candidates": 223
+    },
+    {
+      "sequence": "DJI_0032_3",
+      "frames": 290,
+      "weak_detections": 1183,
+      "candidate_seeds": 332,
+      "confirmed_unique": 76,
+      "pool_peak": 13,
+      "suppressed_observations": 16,
+      "deferred_competing_links": 266,
+      "expired_candidates": 327
+    },
+    {
+      "sequence": "DJI_0049_2",
+      "frames": 90,
+      "weak_detections": 203,
+      "candidate_seeds": 28,
+      "confirmed_unique": 17,
+      "pool_peak": 5,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 19,
+      "expired_candidates": 26
+    },
+    {
+      "sequence": "DJI_0051_2",
+      "frames": 580,
+      "weak_detections": 276,
+      "candidate_seeds": 129,
+      "confirmed_unique": 16,
+      "pool_peak": 4,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 1,
+      "expired_candidates": 127
+    },
+    {
+      "sequence": "DJI_0061_2",
+      "frames": 240,
+      "weak_detections": 7315,
+      "candidate_seeds": 945,
+      "confirmed_unique": 520,
+      "pool_peak": 49,
+      "suppressed_observations": 28,
+      "deferred_competing_links": 1885,
+      "expired_candidates": 913
+    },
+    {
+      "sequence": "DJI_0073_3",
+      "frames": 360,
+      "weak_detections": 3250,
+      "candidate_seeds": 620,
+      "confirmed_unique": 274,
+      "pool_peak": 21,
+      "suppressed_observations": 55,
+      "deferred_competing_links": 252,
+      "expired_candidates": 609
+    },
+    {
+      "sequence": "DJI_0109_1",
+      "frames": 90,
+      "weak_detections": 227,
+      "candidate_seeds": 37,
+      "confirmed_unique": 12,
+      "pool_peak": 5,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 48,
+      "expired_candidates": 33
+    },
+    {
+      "sequence": "DJI_0119_2",
+      "frames": 180,
+      "weak_detections": 19,
+      "candidate_seeds": 8,
+      "confirmed_unique": 2,
+      "pool_peak": 1,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 0,
+      "expired_candidates": 8
+    },
+    {
+      "sequence": "DJI_0129_2",
+      "frames": 590,
+      "weak_detections": 233,
+      "candidate_seeds": 78,
+      "confirmed_unique": 17,
+      "pool_peak": 4,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 23,
+      "expired_candidates": 77
+    },
+    {
+      "sequence": "DJI_0141_2",
+      "frames": 410,
+      "weak_detections": 4435,
+      "candidate_seeds": 511,
+      "confirmed_unique": 316,
+      "pool_peak": 19,
+      "suppressed_observations": 53,
+      "deferred_competing_links": 332,
+      "expired_candidates": 500
+    },
+    {
+      "sequence": "DJI_0155_2",
+      "frames": 410,
+      "weak_detections": 208,
+      "candidate_seeds": 60,
+      "confirmed_unique": 20,
+      "pool_peak": 3,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 19,
+      "expired_candidates": 59
+    },
+    {
+      "sequence": "DJI_0159_2",
+      "frames": 250,
+      "weak_detections": 100,
+      "candidate_seeds": 17,
+      "confirmed_unique": 10,
+      "pool_peak": 1,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 0,
+      "expired_candidates": 16
+    },
+    {
+      "sequence": "DJI_0169_3",
+      "frames": 290,
+      "weak_detections": 2343,
+      "candidate_seeds": 303,
+      "confirmed_unique": 152,
+      "pool_peak": 15,
+      "suppressed_observations": 7,
+      "deferred_competing_links": 545,
+      "expired_candidates": 295
+    },
+    {
+      "sequence": "DJI_0173_2",
+      "frames": 450,
+      "weak_detections": 102,
+      "candidate_seeds": 73,
+      "confirmed_unique": 3,
+      "pool_peak": 5,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 2,
+      "expired_candidates": 71
+    },
+    {
+      "sequence": "DJI_0181_3",
+      "frames": 320,
+      "weak_detections": 5557,
+      "candidate_seeds": 661,
+      "confirmed_unique": 296,
+      "pool_peak": 28,
+      "suppressed_observations": 4,
+      "deferred_competing_links": 1310,
+      "expired_candidates": 638
+    },
+    {
+      "sequence": "DJI_0221_2",
+      "frames": 590,
+      "weak_detections": 687,
+      "candidate_seeds": 145,
+      "confirmed_unique": 53,
+      "pool_peak": 6,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 62,
+      "expired_candidates": 142
+    },
+    {
+      "sequence": "DJI_0225_1",
+      "frames": 329,
+      "weak_detections": 1052,
+      "candidate_seeds": 292,
+      "confirmed_unique": 77,
+      "pool_peak": 13,
+      "suppressed_observations": 25,
+      "deferred_competing_links": 138,
+      "expired_candidates": 288
+    },
+    {
+      "sequence": "DJI_0237_2",
+      "frames": 410,
+      "weak_detections": 297,
+      "candidate_seeds": 95,
+      "confirmed_unique": 22,
+      "pool_peak": 6,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 19,
+      "expired_candidates": 95
+    },
+    {
+      "sequence": "DJI_0255_1",
+      "frames": 600,
+      "weak_detections": 136,
+      "candidate_seeds": 58,
+      "confirmed_unique": 10,
+      "pool_peak": 3,
+      "suppressed_observations": 1,
+      "deferred_competing_links": 5,
+      "expired_candidates": 58
+    },
+    {
+      "sequence": "DJI_0257_2",
+      "frames": 590,
+      "weak_detections": 270,
+      "candidate_seeds": 89,
+      "confirmed_unique": 14,
+      "pool_peak": 3,
+      "suppressed_observations": 20,
+      "deferred_competing_links": 20,
+      "expired_candidates": 88
+    },
+    {
+      "sequence": "DJI_0277_2",
+      "frames": 366,
+      "weak_detections": 132,
+      "candidate_seeds": 29,
+      "confirmed_unique": 14,
+      "pool_peak": 3,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 0,
+      "expired_candidates": 29
+    },
+    {
+      "sequence": "DJI_0283_1",
+      "frames": 450,
+      "weak_detections": 1664,
+      "candidate_seeds": 233,
+      "confirmed_unique": 120,
+      "pool_peak": 11,
+      "suppressed_observations": 46,
+      "deferred_competing_links": 173,
+      "expired_candidates": 229
+    },
+    {
+      "sequence": "DJI_0303_2",
+      "frames": 577,
+      "weak_detections": 912,
+      "candidate_seeds": 189,
+      "confirmed_unique": 65,
+      "pool_peak": 13,
+      "suppressed_observations": 1,
+      "deferred_competing_links": 159,
+      "expired_candidates": 188
+    },
+    {
+      "sequence": "DJI_0307_2",
+      "frames": 180,
+      "weak_detections": 28,
+      "candidate_seeds": 2,
+      "confirmed_unique": 2,
+      "pool_peak": 1,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 5,
+      "expired_candidates": 2
+    },
+    {
+      "sequence": "DJI_0309_4",
+      "frames": 603,
+      "weak_detections": 991,
+      "candidate_seeds": 269,
+      "confirmed_unique": 64,
+      "pool_peak": 16,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 128,
+      "expired_candidates": 266
+    },
+    {
+      "sequence": "DJI_0325_2",
+      "frames": 595,
+      "weak_detections": 9,
+      "candidate_seeds": 4,
+      "confirmed_unique": 1,
+      "pool_peak": 1,
+      "suppressed_observations": 0,
+      "deferred_competing_links": 0,
+      "expired_candidates": 4
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "frames": 390,
+      "weak_detections": 9103,
+      "candidate_seeds": 799,
+      "confirmed_unique": 561,
+      "pool_peak": 35,
+      "suppressed_observations": 71,
+      "deferred_competing_links": 2170,
+      "expired_candidates": 769
+    },
+    {
+      "sequence": "DJI_0339_2",
+      "frames": 600,
+      "weak_detections": 1558,
+      "candidate_seeds": 178,
+      "confirmed_unique": 110,
+      "pool_peak": 8,
+      "suppressed_observations": 18,
+      "deferred_competing_links": 67,
+      "expired_candidates": 173
+    },
+    {
+      "sequence": "DJI_0345_2",
+      "frames": 600,
+      "weak_detections": 512,
+      "candidate_seeds": 61,
+      "confirmed_unique": 36,
+      "pool_peak": 3,
+      "suppressed_observations": 20,
+      "deferred_competing_links": 3,
+      "expired_candidates": 61
+    }
+  ],
+  "totals": {
+    "frames": 12590,
+    "weak_detections": 46275,
+    "candidate_seeds": 6671,
+    "confirmed_unique": 3120,
+    "suppressed_observations": 365,
+    "deferred_competing_links": 7903,
+    "expired_candidates": 6511,
+    "pool_peak": 49
+  },
+  "component_wall_seconds": 20.3401007690004
+}

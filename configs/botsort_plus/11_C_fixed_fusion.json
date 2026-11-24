@@ -1,0 +1,7 @@
+{
+  "name": "C_fixed_fusion",
+  "appearance": {
+    "enabled": true,
+    "weighting": "fixed"
+  }
+}
