@@ -1,0 +1,679 @@
+{
+  "scope": "9 retrospective calibration sequences, archived BoT-SORT RGB ReID",
+  "diagnostic_matching": "offline, IoU >= 0.5",
+  "parameters": {
+    "iou_threshold": 0.5,
+    "geometry_radius_px": 64.0,
+    "max_pairs_per_sequence_per_kind": 10000,
+    "seed": 0,
+    "memory_max_age_frames": 30,
+    "max_negative_neighbors": 5
+  },
+  "counts": {
+    "native_detection_crop_size": {
+      "16-32": 11345,
+      "8-16": 29632,
+      "32+": 1438,
+      "<8": 19397
+    },
+    "native_valid_feature_crop_size": {
+      "16-32": 9143,
+      "8-16": 16068,
+      "32+": 1252,
+      "<8": 3702
+    },
+    "gt_by_size": {
+      "16-32": 11114,
+      "8-16": 21113,
+      "<8": 32528,
+      "32+": 1559
+    },
+    "candidate_by_size": {
+      "16-32|birth_eligible": 8701,
+      "16-32|low_association": 399,
+      "16-32|high_below_birth": 158,
+      "8-16|no_aligned_candidate": 6906,
+      "<8|no_aligned_candidate": 25145,
+      "8-16|birth_eligible": 10865,
+      "16-32|outside_association_gate": 113,
+      "32+|birth_eligible": 1350,
+      "16-32|no_aligned_candidate": 1743,
+      "<8|outside_association_gate": 601,
+      "8-16|outside_association_gate": 461,
+      "<8|low_association": 3208,
+      "8-16|low_association": 2146,
+      "32+|no_aligned_candidate": 126,
+      "8-16|high_below_birth": 735,
+      "32+|low_association": 45,
+      "32+|high_below_birth": 35,
+      "32+|outside_association_gate": 3,
+      "<8|birth_eligible": 2643,
+      "<8|high_below_birth": 931
+    },
+    "unmatched_output_by_candidate": {
+      "low_association": 4004,
+      "high_below_birth": 538,
+      "no_aligned_candidate": 33728,
+      "outside_association_gate": 1169,
+      "birth_eligible": 553
+    },
+    "unmatched_output_by_size": {
+      "16-32": 2238,
+      "8-16": 8976,
+      "<8": 28603,
+      "32+": 175
+    },
+    "trajectories": {
+      "has_output_match": 299,
+      "never_output_matched": 146
+    },
+    "matched_transitions": {
+      "0": 24910,
+      "1-3": 631,
+      "31+": 57,
+      "4-10": 253,
+      "11-30": 172
+    },
+    "low_score_runs": {
+      "1-3": 2276,
+      "4-10": 276,
+      "11-30": 48,
+      "31+": 8
+    },
+    "low_score_run_frames": {
+      "1-3": 3283,
+      "4-10": 1469,
+      "11-30": 724,
+      "31+": 322
+    },
+    "identity_changes_in_diagnostic_matching": {
+      "31+": 40,
+      "11-30": 65,
+      "0": 45,
+      "1-3": 42,
+      "4-10": 45
+    },
+    "totals": {
+      "frames_with_thermal_path": 2759,
+      "detections_birth_eligible": 26520,
+      "valid_features_birth_eligible": 26520,
+      "detections_high_below_birth": 3645,
+      "valid_features_high_below_birth": 3645,
+      "detections_low_association": 21530,
+      "detections_outside_association_gate": 10117,
+      "gt_instances": 66314,
+      "ambiguous_feature_assignments_excluded": 50
+    }
+  },
+  "appearance_distributions": {
+    "different_id": {
+      "samples": 34676,
+      "mean": 0.8794574641855485,
+      "p10": 0.6849183177610638,
+      "p50": 0.906806065582979,
+      "p90": 1.030022657137677,
+      "fraction_above_0_4": 0.9978082823855116
+    },
+    "different_id|gap=0": {
+      "samples": 22621,
+      "mean": 0.8675834391457536,
+      "p10": 0.6729185514444973,
+      "p50": 0.8899976807575581,
+      "p90": 1.0248189733284192,
+      "fraction_above_0_4": 0.9972591839441227
+    },
+    "different_id|gap=1-3": {
+      "samples": 3266,
+      "mean": 0.884842901883982,
+      "p10": 0.6861110638838895,
+      "p50": 0.9177701852407825,
+      "p90": 1.0301986546164676,
+      "fraction_above_0_4": 0.9975505205143906
+    },
+    "different_id|gap=11-30": {
+      "samples": 5088,
+      "mean": 0.9095838057247108,
+      "p10": 0.735209918433517,
+      "p50": 0.9352576940811089,
+      "p90": 1.0385301991101346,
+      "fraction_above_0_4": 0.9992138364779874
+    },
+    "different_id|gap=4-10": {
+      "samples": 3701,
+      "mean": 0.9058640178604627,
+      "p10": 0.7130854734394558,
+      "p50": 0.9354029952999662,
+      "p90": 1.0389065588252904,
+      "fraction_above_0_4": 0.9994596055120237
+    },
+    "different_id|size=16-32": {
+      "samples": 9827,
+      "mean": 0.8789518487062685,
+      "p10": 0.677549788371425,
+      "p50": 0.9117406874411172,
+      "p90": 1.028139655048063,
+      "fraction_above_0_4": 0.9984735931616974
+    },
+    "different_id|size=32+": {
+      "samples": 977,
+      "mean": 0.8647573495178468,
+      "p10": 0.6597203987824755,
+      "p50": 0.8985211117419099,
+      "p90": 1.0107887983454313,
+      "fraction_above_0_4": 0.9989764585465711
+    },
+    "different_id|size=8-16": {
+      "samples": 18432,
+      "mean": 0.8943656768608855,
+      "p10": 0.720977975440654,
+      "p50": 0.9169180164848902,
+      "p90": 1.036661516375569,
+      "fraction_above_0_4": 0.9986436631944444
+    },
+    "different_id|size=<8": {
+      "samples": 5440,
+      "mean": 0.8324983684711025,
+      "p10": 0.6104159650151095,
+      "p50": 0.8578593240999866,
+      "p90": 1.013551161974014,
+      "fraction_above_0_4": 0.9935661764705882
+    },
+    "same_id": {
+      "samples": 24643,
+      "mean": 0.34855771927982004,
+      "p10": 0.10630801038248608,
+      "p50": 0.35104551921596006,
+      "p90": 0.5715641239056075,
+      "fraction_above_0_4": 0.3888325285070811
+    },
+    "same_id|gap=0": {
+      "samples": 22986,
+      "mean": 0.336396181626262,
+      "p10": 0.10168979393423339,
+      "p50": 0.34005238254036596,
+      "p90": 0.5524916925576049,
+      "fraction_above_0_4": 0.3637866527451492
+    },
+    "same_id|gap=1-3": {
+      "samples": 1075,
+      "mean": 0.4870513237982293,
+      "p10": 0.27337587027557975,
+      "p50": 0.4792196031886502,
+      "p90": 0.7232680810357973,
+      "fraction_above_0_4": 0.6772093023255814
+    },
+    "same_id|gap=11-30": {
+      "samples": 229,
+      "mean": 0.5841348345464261,
+      "p10": 0.3712893872400083,
+      "p50": 0.593853040692544,
+      "p90": 0.7584593635093112,
+      "fraction_above_0_4": 0.8602620087336245
+    },
+    "same_id|gap=4-10": {
+      "samples": 353,
+      "mean": 0.5658872384054326,
+      "p10": 0.35716729111736867,
+      "p50": 0.579583621792185,
+      "p90": 0.7603679070901416,
+      "fraction_above_0_4": 0.8356940509915014
+    },
+    "same_id|size=16-32": {
+      "samples": 8698,
+      "mean": 0.3447125684338069,
+      "p10": 0.09396648164818215,
+      "p50": 0.35099761923384476,
+      "p90": 0.5590804746836614,
+      "fraction_above_0_4": 0.38422625891009426
+    },
+    "same_id|size=32+": {
+      "samples": 1348,
+      "mean": 0.2932376781447335,
+      "p10": 0.12753635540810718,
+      "p50": 0.2842295024552177,
+      "p90": 0.4640092952213661,
+      "fraction_above_0_4": 0.20252225519287834
+    },
+    "same_id|size=8-16": {
+      "samples": 11288,
+      "mean": 0.3518692853797989,
+      "p10": 0.10148166723272636,
+      "p50": 0.35748178620536747,
+      "p90": 0.5861777619498267,
+      "fraction_above_0_4": 0.410347271438696
+    },
+    "same_id|size=<8": {
+      "samples": 3309,
+      "mean": 0.3699042225654523,
+      "p10": 0.15530333582368497,
+      "p50": 0.36296267460479803,
+      "p90": 0.5940655866015181,
+      "fraction_above_0_4": 0.40344514959202177
+    }
+  },
+  "per_sequence": [
+    {
+      "sequence": "DJI_0032_3",
+      "frames": 290,
+      "detection_sha256": "ad4eda055951838d2471946969461ba0eaca949aabeb853dfe1908de4f341ddf",
+      "gt_sha256": "3ae8afb25434ae76aba059e1c1e5247b9d989a04893810dc9bfde75c38a52b46",
+      "features": {
+        "status": "available",
+        "valid": 3060,
+        "zero_vectors_excluded": 0,
+        "nonfinite_vectors_excluded": 0,
+        "dimension": 1280,
+        "encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+        "features_sha256": "a913e163659a254f55337d5dd9e6a2f98e1a40abbbfaa49de99a244912fd9b0b"
+      },
+      "feature_coverage": {
+        "birth_eligible": {
+          "detections": 2873,
+          "valid_features": 2873,
+          "missing_or_invalid": 0
+        },
+        "high_below_birth": {
+          "detections": 187,
+          "valid_features": 187,
+          "missing_or_invalid": 0
+        },
+        "low_association": {
+          "detections": 1183,
+          "valid_features": 0,
+          "missing_or_invalid": 1183
+        },
+        "outside_association_gate": {
+          "detections": 783,
+          "valid_features": 0,
+          "missing_or_invalid": 783
+        }
+      },
+      "appearance_sampling": {
+        "same_id": {
+          "eligible_pairs_seen": 2786,
+          "sampled_pairs": 2786
+        },
+        "different_id": {
+          "eligible_pairs_seen": 1337,
+          "sampled_pairs": 1337
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0049_2",
+      "frames": 90,
+      "detection_sha256": "c111e510cc5d8105cd3c6f2f3fef3525b20faab82b10eae1544dc94681a80780",
+      "gt_sha256": "544fa0931afba5ea350d879996eecbb7886a77929db404f80c65816682ae77dd",
+      "features": {
+        "status": "available",
+        "valid": 82,
+        "zero_vectors_excluded": 0,
+        "nonfinite_vectors_excluded": 0,
+        "dimension": 1280,
+        "encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+        "features_sha256": "0295db774b6f693f2aaf16bfef355bf9e7aa715e1196e484f4d3b5fcf11567d8"
+      },
+      "feature_coverage": {
+        "birth_eligible": {
+          "detections": 49,
+          "valid_features": 49,
+          "missing_or_invalid": 0
+        },
+        "high_below_birth": {
+          "detections": 33,
+          "valid_features": 33,
+          "missing_or_invalid": 0
+        },
+        "low_association": {
+          "detections": 203,
+          "valid_features": 0,
+          "missing_or_invalid": 203
+        },
+        "outside_association_gate": {
+          "detections": 53,
+          "valid_features": 0,
+          "missing_or_invalid": 53
+        }
+      },
+      "appearance_sampling": {
+        "same_id": {
+          "eligible_pairs_seen": 49,
+          "sampled_pairs": 49
+        },
+        "different_id": {
+          "eligible_pairs_seen": 0,
+          "sampled_pairs": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0061_2",
+      "frames": 240,
+      "detection_sha256": "07deee481d622a9c9aee8720c565b9bd0e3e364e3b259fc32492da41f6bbbe37",
+      "gt_sha256": "0ce40ba303ff643b36c9164e3b0f5e7253172a41236883e834c7143b2953aee6",
+      "features": {
+        "status": "available",
+        "valid": 9246,
+        "zero_vectors_excluded": 0,
+        "nonfinite_vectors_excluded": 0,
+        "dimension": 1280,
+        "encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+        "features_sha256": "5bacabd97ea5923854ecaa419a9056a21b96968e12230d6489de972e3fc69408"
+      },
+      "feature_coverage": {
+        "birth_eligible": {
+          "detections": 7554,
+          "valid_features": 7554,
+          "missing_or_invalid": 0
+        },
+        "high_below_birth": {
+          "detections": 1692,
+          "valid_features": 1692,
+          "missing_or_invalid": 0
+        },
+        "low_association": {
+          "detections": 7315,
+          "valid_features": 0,
+          "missing_or_invalid": 7315
+        },
+        "outside_association_gate": {
+          "detections": 2342,
+          "valid_features": 0,
+          "missing_or_invalid": 2342
+        }
+      },
+      "appearance_sampling": {
+        "same_id": {
+          "eligible_pairs_seen": 7175,
+          "sampled_pairs": 7175
+        },
+        "different_id": {
+          "eligible_pairs_seen": 36536,
+          "sampled_pairs": 10000
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0119_2",
+      "frames": 180,
+      "detection_sha256": "5794f52452aae4ce9cc695ad67c2bc509732ebb7b905add545c251a4bedf03f3",
+      "gt_sha256": "bc5333e0e308986d374be6ee303bd3a1693c3c473d381469ef7a7f6469bc69ef",
+      "features": {
+        "status": "available",
+        "valid": 161,
+        "zero_vectors_excluded": 0,
+        "nonfinite_vectors_excluded": 0,
+        "dimension": 1280,
+        "encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+        "features_sha256": "3da8faf568af852dac67d3043d4873317d73a32af00492ffd9316538fcbefca1"
+      },
+      "feature_coverage": {
+        "birth_eligible": {
+          "detections": 133,
+          "valid_features": 133,
+          "missing_or_invalid": 0
+        },
+        "high_below_birth": {
+          "detections": 28,
+          "valid_features": 28,
+          "missing_or_invalid": 0
+        },
+        "low_association": {
+          "detections": 19,
+          "valid_features": 0,
+          "missing_or_invalid": 19
+        },
+        "outside_association_gate": {
+          "detections": 1,
+          "valid_features": 0,
+          "missing_or_invalid": 1
+        }
+      },
+      "appearance_sampling": {
+        "same_id": {
+          "eligible_pairs_seen": 160,
+          "sampled_pairs": 160
+        },
+        "different_id": {
+          "eligible_pairs_seen": 0,
+          "sampled_pairs": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0141_2",
+      "frames": 410,
+      "detection_sha256": "a805f64f8ce0c30755fba04e57fd334f2dc9a34e18feef1e8013f072724f3d07",
+      "gt_sha256": "40752ca09de1a71e460b7ce4bc0c1615839afb0c78131efc0b713bf2be064347",
+      "features": {
+        "status": "available",
+        "valid": 6781,
+        "zero_vectors_excluded": 0,
+        "nonfinite_vectors_excluded": 0,
+        "dimension": 1280,
+        "encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+        "features_sha256": "a109a66b2b7569d411c6cde747da7096da2b97d05e8b558cbabe6cf41a12eb44"
+      },
+      "feature_coverage": {
+        "birth_eligible": {
+          "detections": 5994,
+          "valid_features": 5994,
+          "missing_or_invalid": 0
+        },
+        "high_below_birth": {
+          "detections": 787,
+          "valid_features": 787,
+          "missing_or_invalid": 0
+        },
+        "low_association": {
+          "detections": 4435,
+          "valid_features": 0,
+          "missing_or_invalid": 4435
+        },
+        "outside_association_gate": {
+          "detections": 1923,
+          "valid_features": 0,
+          "missing_or_invalid": 1923
+        }
+      },
+      "appearance_sampling": {
+        "same_id": {
+          "eligible_pairs_seen": 5681,
+          "sampled_pairs": 5681
+        },
+        "different_id": {
+          "eligible_pairs_seen": 14899,
+          "sampled_pairs": 10000
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0173_2",
+      "frames": 450,
+      "detection_sha256": "010561e748e8381d0dd33bda1876460b5105df9555ab05f408f23e8952a23b72",
+      "gt_sha256": "f7b78b829cafa8cbe864186dca8daceb143665bfed3580e984167cdfcbf9967d",
+      "features": {
+        "status": "available",
+        "valid": 421,
+        "zero_vectors_excluded": 0,
+        "nonfinite_vectors_excluded": 0,
+        "dimension": 1280,
+        "encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+        "features_sha256": "76cce5fb4803025d032a0e210429ba3868fced36034d437f762c01d5a4b628c5"
+      },
+      "feature_coverage": {
+        "birth_eligible": {
+          "detections": 394,
+          "valid_features": 394,
+          "missing_or_invalid": 0
+        },
+        "high_below_birth": {
+          "detections": 27,
+          "valid_features": 27,
+          "missing_or_invalid": 0
+        },
+        "low_association": {
+          "detections": 102,
+          "valid_features": 0,
+          "missing_or_invalid": 102
+        },
+        "outside_association_gate": {
+          "detections": 102,
+          "valid_features": 0,
+          "missing_or_invalid": 102
+        }
+      },
+      "appearance_sampling": {
+        "same_id": {
+          "eligible_pairs_seen": 259,
+          "sampled_pairs": 259
+        },
+        "different_id": {
+          "eligible_pairs_seen": 0,
+          "sampled_pairs": 0
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0181_3",
+      "frames": 320,
+      "detection_sha256": "0c3b313d1e80bc7bc777d42b9e3d53405856551443f3b8b76ef0810b6b600b33",
+      "gt_sha256": "5d87e3184fbe23fb44ebd5478c92e07119fc9278d79f7a8a10eae97c918cc84d",
+      "features": {
+        "status": "available",
+        "valid": 4240,
+        "zero_vectors_excluded": 0,
+        "nonfinite_vectors_excluded": 0,
+        "dimension": 1280,
+        "encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+        "features_sha256": "13e4c61b977a3da7a48357b38cd3dce5d9eb157830bad6a3acebd7c1e0eacc11"
+      },
+      "feature_coverage": {
+        "birth_eligible": {
+          "detections": 3775,
+          "valid_features": 3775,
+          "missing_or_invalid": 0
+        },
+        "high_below_birth": {
+          "detections": 465,
+          "valid_features": 465,
+          "missing_or_invalid": 0
+        },
+        "low_association": {
+          "detections": 5557,
+          "valid_features": 0,
+          "missing_or_invalid": 5557
+        },
+        "outside_association_gate": {
+          "detections": 3682,
+          "valid_features": 0,
+          "missing_or_invalid": 3682
+        }
+      },
+      "appearance_sampling": {
+        "same_id": {
+          "eligible_pairs_seen": 3640,
+          "sampled_pairs": 3640
+        },
+        "different_id": {
+          "eligible_pairs_seen": 6267,
+          "sampled_pairs": 6267
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0225_1",
+      "frames": 329,
+      "detection_sha256": "01e29f7bbcd03d8b50a02280ae4e854a4a69581a80f1f6d7465bb09779c59d45",
+      "gt_sha256": "cbf32a09a7dc7bb69494e03b5952749380b7ab78d30f09bd8eeccd4738d212a4",
+      "features": {
+        "status": "available",
+        "valid": 2129,
+        "zero_vectors_excluded": 0,
+        "nonfinite_vectors_excluded": 0,
+        "dimension": 1280,
+        "encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+        "features_sha256": "89db62d6150877f627c1bc7ae13b67842d9880d64ea1917aff426b68aceb30f3"
+      },
+      "feature_coverage": {
+        "birth_eligible": {
+          "detections": 2008,
+          "valid_features": 2008,
+          "missing_or_invalid": 0
+        },
+        "high_below_birth": {
+          "detections": 121,
+          "valid_features": 121,
+          "missing_or_invalid": 0
+        },
+        "low_association": {
+          "detections": 1052,
+          "valid_features": 0,
+          "missing_or_invalid": 1052
+        },
+        "outside_association_gate": {
+          "detections": 419,
+          "valid_features": 0,
+          "missing_or_invalid": 419
+        }
+      },
+      "appearance_sampling": {
+        "same_id": {
+          "eligible_pairs_seen": 1835,
+          "sampled_pairs": 1835
+        },
+        "different_id": {
+          "eligible_pairs_seen": 1961,
+          "sampled_pairs": 1961
+        }
+      }
+    },
+    {
+      "sequence": "DJI_0283_1",
+      "frames": 450,
+      "detection_sha256": "1036fd5ec0d61f33b92c0a6dfd19693b71150a454cad8c12977b551ae7c4d4be",
+      "gt_sha256": "5ff9962377dc4bfae3caea9c80383621d10e5d2b59e59a99c9558539b057abc2",
+      "features": {
+        "status": "available",
+        "valid": 4045,
+        "zero_vectors_excluded": 0,
+        "nonfinite_vectors_excluded": 0,
+        "dimension": 1280,
+        "encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+        "features_sha256": "c9f2d007243fda4ae1f4562fe2a29aaa2e6aed5bc6ddcba924bef8eedf172191"
+      },
+      "feature_coverage": {
+        "birth_eligible": {
+          "detections": 3740,
+          "valid_features": 3740,
+          "missing_or_invalid": 0
+        },
+        "high_below_birth": {
+          "detections": 305,
+          "valid_features": 305,
+          "missing_or_invalid": 0
+        },
+        "low_association": {
+          "detections": 1664,
+          "valid_features": 0,
+          "missing_or_invalid": 1664
+        },
+        "outside_association_gate": {
+          "detections": 812,
+          "valid_features": 0,
+          "missing_or_invalid": 812
+        }
+      },
+      "appearance_sampling": {
+        "same_id": {
+          "eligible_pairs_seen": 3058,
+          "sampled_pairs": 3058
+        },
+        "different_id": {
+          "eligible_pairs_seen": 5111,
+          "sampled_pairs": 5111
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "noise": {
+    "mode": "calibrated",
+    "floor_std": [
+      0.34795988051767823,
+      0.7691047234137902,
+      1.2332817225378203,
+      1.7261541671848637
+    ],
+    "size_scale": [
+      0.03890717900767575,
+      0.03693581795255112,
+      0.08909233105529318,
+      0.06550788552443901
+    ],
+    "score_scale": [
+      3.0096861821657424,
+      2.269014285705224,
+      3.937249230755683,
+      2.514368951248458
+    ],
+    "min_variance": 1e-06
+  },
+  "provenance": {
+    "purpose": "offline_calibration_only_no_gt_during_tracking",
+    "interpretation": "retrospective_development_only",
+    "calibration_sequences": [
+      "DJI_0032_3",
+      "DJI_0049_2",
+      "DJI_0061_2",
+      "DJI_0119_2",
+      "DJI_0141_2",
+      "DJI_0173_2",
+      "DJI_0181_3",
+      "DJI_0225_1",
+      "DJI_0283_1"
+    ],
+    "evaluation_sequences": [
+      "DJI_0028_3",
+      "DJI_0030_2",
+      "DJI_0051_2",
+      "DJI_0073_3",
+      "DJI_0109_1",
+      "DJI_0129_2",
+      "DJI_0155_2",
+      "DJI_0159_2",
+      "DJI_0169_3",
+      "DJI_0221_2",
+      "DJI_0237_2",
+      "DJI_0255_1",
+      "DJI_0257_2",
+      "DJI_0277_2",
+      "DJI_0303_2",
+      "DJI_0307_2",
+      "DJI_0309_4",
+      "DJI_0325_2",
+      "DJI_0327_3",
+      "DJI_0339_2",
+      "DJI_0345_2"
+    ],
+    "detector_model_sha256": [
+      "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec"
+    ],
+    "inputs": {
+      "DJI_0032_3": {
+        "detections_sha256": "f67f95f89bb542fd00d0cfc50e611eab8651389759dbf9466d29ad5e0f272173",
+        "gt_sha256": "3ae8afb25434ae76aba059e1c1e5247b9d989a04893810dc9bfde75c38a52b46"
+      },
+      "DJI_0049_2": {
+        "detections_sha256": "16ea1e634d31e8b799dac701539ba6c476551b7abf31791e508c5356161e1d4e",
+        "gt_sha256": "544fa0931afba5ea350d879996eecbb7886a77929db404f80c65816682ae77dd"
+      },
+      "DJI_0061_2": {
+        "detections_sha256": "3040326f436beb7097201cfbc67afc97aa07d0544c1db427da5749adee1c555d",
+        "gt_sha256": "0ce40ba303ff643b36c9164e3b0f5e7253172a41236883e834c7143b2953aee6"
+      },
+      "DJI_0119_2": {
+        "detections_sha256": "f736def88bc9e4f81823fdcd690b4302098af3e0e7a3cbaeef458d6fc0ed02ff",
+        "gt_sha256": "bc5333e0e308986d374be6ee303bd3a1693c3c473d381469ef7a7f6469bc69ef"
+      },
+      "DJI_0141_2": {
+        "detections_sha256": "754ddbd851969fccd9749a80383c760299cc109ef395222844b62ed0c0329d1f",
+        "gt_sha256": "40752ca09de1a71e460b7ce4bc0c1615839afb0c78131efc0b713bf2be064347"
+      },
+      "DJI_0173_2": {
+        "detections_sha256": "5b2eb7857608f97f26de1f35378cb63926a096327f78eb3aff6ff7f59b06a6a9",
+        "gt_sha256": "f7b78b829cafa8cbe864186dca8daceb143665bfed3580e984167cdfcbf9967d"
+      },
+      "DJI_0181_3": {
+        "detections_sha256": "7e5e45789f8c734b5ea2087e1885e5b7b76d15113a87e1d55ac417c29822d91b",
+        "gt_sha256": "5d87e3184fbe23fb44ebd5478c92e07119fc9278d79f7a8a10eae97c918cc84d"
+      },
+      "DJI_0225_1": {
+        "detections_sha256": "2145035ce00b45ed9c1952cb50c47bc7b88795a703a5494f0a6039d6cebdd566",
+        "gt_sha256": "cbf32a09a7dc7bb69494e03b5952749380b7ab78d30f09bd8eeccd4738d212a4"
+      },
+      "DJI_0283_1": {
+        "detections_sha256": "4cecf50388ed2e163324cb4474b36721e277bcf9f985fcb368988de145e42a05",
+        "gt_sha256": "5ff9962377dc4bfae3caea9c80383621d10e5d2b59e59a99c9558539b057abc2"
+      }
+    },
+    "seed": 0,
+    "max_pairs_per_sequence": 20000,
+    "pair_selection": {
+      "center_gate": 1.5,
+      "size_ratio_gate": 4.0,
+      "ambiguity_margin": 0.2,
+      "min_score_strictly_above": 0.1,
+      "iou_gate": null
+    },
+    "fit": "Nonnegative least squares of squared residuals on [1, detection_size^2, (1-score)^2], separately for cx,cy,w,h; uniform reservoir cap per sequence."
+  },
+  "diagnostics": {
+    "samples": 35045,
+    "axis_order": [
+      "cx",
+      "cy",
+      "w",
+      "h"
+    ],
+    "design_rank": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "design_condition_number": [
+      2.8256710495386823,
+      2.601832749638136,
+      2.8256710495386823,
+      2.601832749638136
+    ],
+    "residual_mean": [
+      0.24266716710747963,
+      0.30306143045663525,
+      0.1502380697579914,
+      0.5627558040523651
+    ],
+    "residual_median": [
+      0.3052215576171875,
+      0.32159423828125,
+      0.4283447265625,
+      0.6302490234375
+    ],
+    "residual_rmse": [
+      1.4927154215941476,
+      1.3310591462609376,
+      2.646830391904339,
+      2.2304930771720697
+    ],
+    "standardized_residual_rms": [
+      0.9857255353418677,
+      0.9680027363269181,
+      0.9981947081673512,
+      0.9892503013340571
+    ],
+    "in_sample_detection_residual_4d_coverage_at_9_4877": 0.9392780710515052,
+    "warnings": [
+      "Fit uses squared residuals, including annotation error and systematic detector bias; it is not a causal decomposition of camera and detector noise.",
+      "Geometric matching and ambiguity exclusion truncate the residual population; coverage is in-sample and conditional on selected pairs.",
+      "Adjacent frames are correlated. Pair count is not an independent-sample count; use recording-level evaluation.",
+      "Zero-mean diagonal Gaussian measurement error remains a modeling assumption, not a validated distribution."
+    ],
+    "sequences": {
+      "DJI_0032_3": {
+        "detections": 5026,
+        "ground_truth": 4688,
+        "below_tracking_score": 783,
+        "candidate_pairs": 4286,
+        "assigned_pairs": 3174,
+        "ambiguous_pairs": 163,
+        "accepted_pairs": 3011,
+        "frames": 290,
+        "retained_pairs": 3011
+      },
+      "DJI_0049_2": {
+        "detections": 338,
+        "ground_truth": 572,
+        "below_tracking_score": 53,
+        "candidate_pairs": 330,
+        "assigned_pairs": 226,
+        "ambiguous_pairs": 81,
+        "accepted_pairs": 145,
+        "frames": 90,
+        "retained_pairs": 145
+      },
+      "DJI_0061_2": {
+        "detections": 18903,
+        "ground_truth": 25578,
+        "below_tracking_score": 2342,
+        "candidate_pairs": 67113,
+        "assigned_pairs": 16030,
+        "ambiguous_pairs": 4397,
+        "accepted_pairs": 11633,
+        "frames": 240,
+        "retained_pairs": 11633
+      },
+      "DJI_0119_2": {
+        "detections": 181,
+        "ground_truth": 360,
+        "below_tracking_score": 1,
+        "candidate_pairs": 180,
+        "assigned_pairs": 180,
+        "ambiguous_pairs": 0,
+        "accepted_pairs": 180,
+        "frames": 180,
+        "retained_pairs": 180
+      },
+      "DJI_0141_2": {
+        "detections": 13139,
+        "ground_truth": 17146,
+        "below_tracking_score": 1923,
+        "candidate_pairs": 17141,
+        "assigned_pairs": 9159,
+        "ambiguous_pairs": 946,
+        "accepted_pairs": 8213,
+        "frames": 410,
+        "retained_pairs": 8213
+      },
+      "DJI_0173_2": {
+        "detections": 625,
+        "ground_truth": 450,
+        "below_tracking_score": 102,
+        "candidate_pairs": 443,
+        "assigned_pairs": 443,
+        "ambiguous_pairs": 0,
+        "accepted_pairs": 443,
+        "frames": 450,
+        "retained_pairs": 443
+      },
+      "DJI_0181_3": {
+        "detections": 13479,
+        "ground_truth": 7870,
+        "below_tracking_score": 3682,
+        "candidate_pairs": 9473,
+        "assigned_pairs": 4928,
+        "ambiguous_pairs": 310,
+        "accepted_pairs": 4618,
+        "frames": 320,
+        "retained_pairs": 4618
+      },
+      "DJI_0225_1": {
+        "detections": 3600,
+        "ground_truth": 3682,
+        "below_tracking_score": 419,
+        "candidate_pairs": 3829,
+        "assigned_pairs": 2336,
+        "ambiguous_pairs": 172,
+        "accepted_pairs": 2164,
+        "frames": 329,
+        "retained_pairs": 2164
+      },
+      "DJI_0283_1": {
+        "detections": 6521,
+        "ground_truth": 5968,
+        "below_tracking_score": 812,
+        "candidate_pairs": 6984,
+        "assigned_pairs": 4789,
+        "ambiguous_pairs": 151,
+        "accepted_pairs": 4638,
+        "frames": 450,
+        "retained_pairs": 4638
+      }
+    },
+    "accepted_pair_strata": {
+      "16to32/high_gt0.5": 8614,
+      "16to32/low_0.1to0.5": 281,
+      "8to16/high_gt0.5": 13675,
+      "8to16/low_0.1to0.5": 3248,
+      "ge32/high_gt0.5": 1147,
+      "ge32/low_0.1to0.5": 24,
+      "lt8/high_gt0.5": 3076,
+      "lt8/low_0.1to0.5": 4980
+    },
+    "retained_pair_strata": {
+      "16to32/high_gt0.5": 8614,
+      "16to32/low_0.1to0.5": 281,
+      "8to16/high_gt0.5": 13675,
+      "8to16/low_0.1to0.5": 3248,
+      "ge32/high_gt0.5": 1147,
+      "ge32/low_0.1to0.5": 24,
+      "lt8/high_gt0.5": 3076,
+      "lt8/low_0.1to0.5": 4980
+    }
+  }
+}
