@@ -7,6 +7,8 @@ from .appearance import AppearanceConfig
 from .candidates import BirthConfig
 from .geometry import GeometryConfig
 from .recovery import RecoveryConfig
+from .birth_policy import BirthPolicyConfig
+from .birth_identity import BirthIdentityConfig
 
 
 @dataclass
@@ -17,6 +19,11 @@ class PlusConfig:
     appearance: AppearanceConfig = field(default_factory=AppearanceConfig)
     geometry: GeometryConfig = field(default_factory=GeometryConfig)
     native_overrides: dict = field(default_factory=dict)
+    # Old configurations retain the exact v0.1 adapter path.  "v2" opts into
+    # native list parity, isolated observation mode, and transactional birth.
+    adapter_mode: str = "legacy"
+    birth_policy: BirthPolicyConfig = field(default_factory=BirthPolicyConfig)
+    birth_identity: BirthIdentityConfig = field(default_factory=BirthIdentityConfig)
 
     @property
     def enabled(self):
@@ -27,18 +34,24 @@ class PlusConfig:
 
     @classmethod
     def from_dict(cls, data):
+        if not isinstance(data, dict):
+            raise ValueError("Experiment configuration must be an object")
         unknown = set(data) - {f.name for f in fields(cls)}
         if unknown:
             raise ValueError(f"Unknown experiment options: {sorted(unknown)}")
         data = dict(data)
         for key, kind in (("birth",BirthConfig), ("recovery",RecoveryConfig),
-                          ("appearance",AppearanceConfig), ("geometry",GeometryConfig)):
+                          ("appearance",AppearanceConfig), ("geometry",GeometryConfig),
+                          ("birth_policy",BirthPolicyConfig), ("birth_identity",BirthIdentityConfig)):
             if key in data:
+                if not isinstance(data[key], dict):
+                    raise ValueError(f"{key} configuration must be an object")
                 extra = set(data[key]) - {f.name for f in fields(kind)}
                 if extra:
                     raise ValueError(f"Unknown {key} options: {sorted(extra)}")
                 data[key] = kind(**data[key])
         result = cls(**data)
+        result.validate_v2()
         if not result.name or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-" for c in result.name):
             raise ValueError("Experiment name must be a plain filename component")
         if not isinstance(result.native_overrides, dict):
@@ -57,6 +70,21 @@ class PlusConfig:
         if result.recovery.enabled and result.recovery.window > result.birth.max_age:
             raise ValueError("Candidate pool max_age must cover B's verification window")
         return result
+
+    def validate_v2(self):
+        if self.adapter_mode not in ("legacy", "v2"):
+            raise ValueError("adapter_mode must be legacy or v2")
+        if self.adapter_mode == "legacy" and (
+                self.birth_policy != BirthPolicyConfig() or
+                self.birth_identity != BirthIdentityConfig()):
+            raise ValueError("Custom birth_policy/birth_identity require adapter_mode=v2")
+        if self.adapter_mode == "v2" and self.birth.enabled:
+            policy = self.birth_policy
+            needed = (policy.fixed_window if policy.mode == "fixed_window"
+                      else max(policy.collect_window, policy.verify_window))
+            if needed > self.birth.max_age:
+                raise ValueError("Candidate max_age must cover A2 confirmation windows")
+        return self
 
     @classmethod
     def load(cls, path):

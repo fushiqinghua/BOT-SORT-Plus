@@ -1,44 +1,39 @@
-# BoT-SORT-Plus：A / B / C 增量实现 v0.1
+# BoT-SORT-Plus v0.2：A 的分阶段确认与身份约束
 
-本补丁针对上传的 `BOT-SORT-Plus-baseline.zip`。保留原检测缓存、已完成结果、原训练与评估脚本；新增可独立开关的跟踪扩展和运行入口。
+本版本接续已完成真实实验的 v0.1：主基线为 YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID。针对 A 的持续误起轨和旧身份竞争，实现可独立开关的 E（存在确认）与 I（新身份准入），保留原 B/C 入口。
 
-**已实现的是可执行机制和实验通路，尚没有新的 VT-Tiny-MOT HOTA / IDF1 收益结论。** 所有新增阈值都是初始实验设置。软件测试中的图像、向量和 TorchScript 模型是测试夹具，不是训练模型或真实数据集结果。
+**交付内容是已通过软件验证的实现与接入工具。v0.2 尚未完成用户真实图像、特征缓存上的全量回放；不能把软件测试通过解释为 HOTA/IDF1 已改善。** 默认门槛是开发初值。`docs/botsort_plus/validation/` 下原有文件属于 v0.1 历史验证；当前验证见 `docs/botsort_plus/validation_v0.2/`。
 
-## 模块
+## 主要入口
 
-|模块|实现|作用|
-|---|---|---|
-|A 时序弱观测起轨|`botsort_plus/candidates.py`|尺度感知几何、短窗口命中、证据积累、歧义拒绝、重复抑制|
-|B 短轨迹身份恢复|`botsort_plus/recovery.py`|同帧历史 KF 验证、有限不确定性搜索、可信外观、身份预留、一对一恢复|
-|C 质量感知 RGB–T 外观|`botsort_plus/appearance.py`|分模态可信记忆、质量加权距离、先判定后更新、缺失模态回退|
-|真正接入 BoT-SORT|`botsort_plus/native_adapter.py`|原生高分→低分→未确认匹配后，先 B，再 A / 原生起轨|
-|真实特征导出|`tools/export_botsort_plus_features.py`|微调 RGB ReID + 显式热红外 TorchScript 编码器，包含低分检测|
-|回放 / 评估|`tools/run_botsort_plus.py`、`tools/evaluate_botsort_plus.py`|冻结检测、SOF GMC、日志、完整性校验、独立 TrackEval 评估|
+| 功能 | 文件 |
+|---|---|
+| 新存在确认与时间状态 | `botsort_plus/birth_policy.py` |
+| 旧身份竞争的只读检查 | `botsort_plus/birth_identity.py` |
+| 原生交接与出生提交 | `botsort_plus/adapter_v2.py` |
+| 原 B 恢复 | `botsort_plus/recovery.py`（算法文件保持 v0.1 字节） |
+| 运行、评估 | `tools/run_botsort_plus.py`、`tools/evaluate_botsort_plus.py` |
+| 输出和事件一致性审计 | `tools/audit_botsort_plus_a2.py` |
+| 机制与理论复核 | `docs/botsort_plus/A2_DESIGN_AND_REVIEW.md` |
+| 接入和回放步骤 | `docs/botsort_plus/A2_INTEGRATION.md` |
+| 完整消融配置矩阵 | `docs/botsort_plus/A2_CONFIGS.md` |
 
-完整机制和理论复核见 [设计与复核](docs/botsort_plus/DESIGN_AND_REVIEW.md)；完整命令、消融和输入要求见 [实验指南](docs/botsort_plus/EXPERIMENTS.md)。来源及许可见 [来源说明](docs/botsort_plus/PROVENANCE.md)。本次验证记录位于 `docs/botsort_plus/validation/`。
+## 版本选择
 
-## 最短使用顺序
+- 原配置 `00`—`11` 保留，默认 `adapter_mode="legacy"`，继续走 v0.1 跟踪路径。
+- 新配置 `12`—`26` 显式选择 `adapter_mode="v2"`。原生 lost 列表枚举、A-only 观察旁路与弱出生提交流程构成单独的 v2 基座。
+- `birth.enabled` 是 A 开关；`birth_policy.mode` 选择 `legacy`、`score_window`、`fixed_window` 或 `two_stage`；`birth_identity.enabled` 是 I 开关。
+- `birth_policy.observe_only=true` 记录判断、不提交 A 轨迹。A shadow 与 baseline_ref 比，AB shadow 与 B_ref 比。
+- 新配置全部关闭 C；C 的接口保留，不需要为了运行 A2 另训 thermal ReID。
 
-1. 应用补丁后，在**现有 baseline 的 Python 环境**中运行 `python -m unittest discover -s tests/botsort_plus -v`。纯核心只依赖 NumPy/SciPy；原生集成测试需要 BoxMOT、PyTorch、OpenCV。
-2. 用原始 RGB 图像和已微调 `clip_veri.pt` 导出新特征缓存。旧压缩包未包含这些图像或权重；旧高分缓存也不能冒充低分特征。
-3. 先跑 `00_baseline.json`，再跑 A、B、A+B。它们必须共用同一份新特征缓存和冻结检测。
-4. 通过独立评估入口比较 HOTA、DetA、AssA、IDF1、MOTA、FP、FN、IDSW。
-5. 准备真实 thermal 编码器、明确其预处理与 RGB→thermal 空间映射后，再跑 C 与 A+B+C。
+## 建议首次运行
+
+先看接入说明并复用上轮已经验证的原图、完整特征缓存和固定 BoxMOT 环境。依次运行 `12_baseline_ref`、`13_B_ref`、`25_A2_shadow`、`26_A2B_shadow`，通过观察模式的逐文件一致性检查后，再运行 `16_A2` 和 `19_A2B`。
 
 ```bash
-python tools/run_botsort_plus.py \
-  --config configs/botsort_plus/06_AB.json \
-  --images-root /path/to/VT-Tiny-MOT \
-  --features-dir /path/to/features_rgb_plus \
-  --preflight
+python tools/run_botsort_plus.py --config configs/botsort_plus/19_A2B.json --images-root /path/to/VT-Tiny-MOT --features-dir /path/to/features_rgb_plus --output-dir outputs/botsort_plus_v2 --preflight
 ```
 
-`--images-root` 应直接包含缓存路径里的 `test2017/`。`--preflight` 缺输入时返回退出码 2；它不会用黑图代替真实 SOF 输入。正式运行去掉 `--preflight`，增加 `--trace` 可保留逐帧决策日志。默认输出到 `outputs/botsort_plus_v1/`，同名实验拒绝覆盖。
+预检成功后去掉 `--preflight`，添加 `--trace` 正式回放。始终显式指定新的 `--output-dir`；运行器的旧默认目录为兼容性保留，不会自动覆盖旧结果。
 
-## 本版的重要边界
-
-- **B 是残余恢复。** 原生已经接受的匹配不会被撤销。原生能够直接恢复的目标仍走原流程，B 的补充路径默认需要 3 次观测。
-- 默认 `track_buffer=60, frame_rate=15`，实际原生保留窗口为 30 帧；B 不会暗中延长该窗口。
-- A、B 都是在线因果实现。确认之前不输出候选；确认之后只输出当前帧，不回填、插值或改写旧 ID。
-- C 的融合与记忆已经实现；补丁不含训练好的 thermal ReID 权重。不能把 RGB 编码器未经验证地套用热红外后称为已完成热红外适配。
-- 此前官方 test 已用于选模、校准和错因诊断，本轮同一划分上的结果属于开发实验。独立泛化结论仍需真正未使用的数据。
+实际预测不读取 GT、不会回填确认前输出、不会改变过去 ID，也不会用测试图像或伪造特征补齐缺失输入。HOTA 等指标继续由独立的固定 TrackEval 入口计算。

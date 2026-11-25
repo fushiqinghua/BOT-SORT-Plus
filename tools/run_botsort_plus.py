@@ -18,6 +18,7 @@ import traceback
 REPO=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(REPO))
 import numpy as np
+from botsort_plus import __version__ as plus_version
 from botsort_plus.config import PlusConfig
 from botsort_plus.io import (FeatureCache, detection_files, detection_fingerprint,
                             forbid_ground_truth, read_detection_cache, resolve_image,
@@ -84,6 +85,9 @@ def prepare(args):
                 (fc.arrays[mode+"_quality"]>=cfg.appearance.min_update_quality)).sum())
     return cfg,selected,{
         "schema":"botsort_plus_run_v1", "status":"READY" if not missing else "MISSING_INPUTS",
+        "implementation_version":plus_version,
+        "implementation_sha256":{str(p.relative_to(REPO)):sha256(p)
+                                 for p in sorted((REPO/"botsort_plus").glob("*.py"))},
         "name":cfg.name,"config":cfg.to_dict(),"native_config":native,
         "sequences":sequences,"subset":chosen!=expected,
         "detector_sha256":detector_sha,"rgb_encoder_sha256":rgb_sha,
@@ -167,6 +171,11 @@ def run(args):
                             if event_stream:
                                 event_stream.write(json.dumps({"sequence":seq,"frame":row["frame"],**event},
                                                               ensure_ascii=False,allow_nan=False)+"\n")
+                for event in tracker.finish_sequence_events():
+                    event_counts[event["event"]]+=1
+                    if event_stream:
+                        event_stream.write(json.dumps({"sequence":seq, **event},
+                                                      ensure_ascii=False,allow_nan=False)+"\n")
                 temp.replace(dest)
             finally:
                 if event_stream:
