@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "70f28b112ba34014b851152fbeedf007dd7cbb52",
+  "status": "unvalidated_research_starting_point",
+  "expected_image_shape": [512, 640],
+  "tracker": {
+    "det_thresh": 0.5,
+    "track_high_thresh": 0.5,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.6,
+    "match_thresh": 0.8,
+    "track_buffer": 60,
+    "frame_rate": 15,
+    "with_reid": false,
+    "cmc_method": "sof",
+    "fuse_first_associate": false
+  },
+  "m2": {
+    "noise": {
+      "mode": "floor",
+      "floor_std": [1.5, 1.5, 1.5, 1.5],
+      "size_scale": [0.05, 0.05, 0.05, 0.05],
+      "score_scale": [2.0, 2.0, 2.0, 2.0],
+      "min_variance": 0.000001
+    },
+    "association": {
+      "first": {
+        "miss_cost": 8.0,
+        "unassigned_cost": 8.0,
+        "gate_chi2": 18.4668,
+        "max_center_distance_px": 64.0,
+        "max_size_ratio": 4.0
+      },
+      "second": {
+        "miss_cost": 6.0,
+        "unassigned_cost": 6.0,
+        "gate_chi2": 13.2767,
+        "max_center_distance_px": 32.0,
+        "max_size_ratio": 3.0
+      }
+    }
+  },
+  "notes": [
+    "Starting values are not calibrated and imply no measured improvement.",
+    "M2 starts with geometry only; archived RGB ReID remains a separate reference.",
+    "Four-dimensional Gaussian NLL retains its common 0.5*4*log(2*pi) constant; null costs use that convention.",
+    "Noise standard deviations and center gates are in native image pixels.",
+    "Official test sequences were previously used for model/threshold selection. New subdivisions are retrospective development partitions."
+  ]
+}

@@ -1,0 +1,7 @@
+# Lightweight calibration, diagnostics and numerical tests.
+# Prefer the existing frozen runtime for tracking; do not upgrade it implicitly.
+numpy>=1.26,<3
+scipy>=1.11,<2
+# Image diagnostics/replay additionally need cv2; original runtime: OpenCV 5.0.0.93.
+# Replay needs the reviewed BoxMOT 16.0.11 source and its PyTorch dependencies.
+# Evaluation needs the TrackEval revision in provenance/trackeval.json.

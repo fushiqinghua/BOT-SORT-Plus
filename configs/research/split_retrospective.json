@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "interpretation": "retrospective_development_only",
+  "grouping": "DJI flight prefix",
+  "seed": 0,
+  "requested_calibration_group_fraction": 0.3,
+  "calibration": [
+    "DJI_0032_3",
+    "DJI_0049_2",
+    "DJI_0061_2",
+    "DJI_0119_2",
+    "DJI_0141_2",
+    "DJI_0173_2",
+    "DJI_0181_3",
+    "DJI_0225_1",
+    "DJI_0283_1"
+  ],
+  "evaluation": [
+    "DJI_0028_3",
+    "DJI_0030_2",
+    "DJI_0051_2",
+    "DJI_0073_3",
+    "DJI_0109_1",
+    "DJI_0129_2",
+    "DJI_0155_2",
+    "DJI_0159_2",
+    "DJI_0169_3",
+    "DJI_0221_2",
+    "DJI_0237_2",
+    "DJI_0255_1",
+    "DJI_0257_2",
+    "DJI_0277_2",
+    "DJI_0303_2",
+    "DJI_0307_2",
+    "DJI_0309_4",
+    "DJI_0325_2",
+    "DJI_0327_3",
+    "DJI_0339_2",
+    "DJI_0345_2"
+  ],
+  "limitations": [
+    "The archived official test set already informed model/checkpoint selection; this split is not a fresh independent test.",
+    "A DJI recording prefix is a grouping proxy, not proof of independent flights, sites, subjects or capture times.",
+    "Replace this manifest with an explicitly audited recording-level split before making generalization claims."
+  ]
+}
