@@ -1,0 +1,32 @@
+{
+  "schema": "botsort_diagnostics_parity_v1",
+  "status": "PASS",
+  "tracker": "B_early_moderate",
+  "reference_protocol_sha256": "c951286b9da932fb2a4be88ded10cee1643cda4ef537694a8485430abe151a12",
+  "observed_protocol_sha256": "b91280ea2d60e941da11e0cca3c2c33cb6165d770be3f4da809e1a2a5e131822",
+  "compared_identity_fields": [
+    "sequences",
+    "subset",
+    "native_config",
+    "detector_sha256",
+    "rgb_encoder_sha256",
+    "source_protocol_sha256",
+    "detection_fingerprints",
+    "encoder_contracts",
+    "feature_hashes",
+    "implementation_sha256",
+    "boxmot_source_hashes",
+    "decoded_image_hashes"
+  ],
+  "sequences": {
+    "DJI_0030_2": {
+      "byte_identical": true,
+      "sha256": "da2dc3b9e0dead0b60e08aceb390f79c1621d537883576963e511c4017156f56",
+      "original_events_byte_identical": true,
+      "original_events_sha256": "68a0e5368965963a2a83ab993927269471bfc0c49d6dc4a2769d61208a90e556",
+      "trace_sha256": "a8158b680b5be74028c0781bf692619d37b87a6c137d7ca3e552d5b14e6af69d",
+      "frames": 590
+    }
+  },
+  "meaning": "Identical inputs, MOT bytes and original events with diagnostics off/on; trace files verified against COMPLETE manifests. Not an accuracy result."
+}

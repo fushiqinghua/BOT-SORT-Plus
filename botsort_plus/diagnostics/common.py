@@ -198,7 +198,8 @@ def iter_trace(path, sequence, frames):
                     if isinstance(tid, bool) or not isinstance(tid, int) or tid < 1 or tid in ids:
                         raise ValueError(f"{sequence}: invalid/duplicate snapshot identity")
                     ids.add(tid)
-                    if (snapshot["state"] not in (0, 1, 2, 3)
+                    # BoxMOT v16.0.11 uses 4 for Removed.
+                    if (snapshot["state"] not in (0, 1, 2, 3, 4)
                             or not isinstance(snapshot["last_seen"], int)
                             or not 1 <= snapshot["last_seen"] <= count):
                         raise ValueError(f"{sequence}: invalid snapshot state/last observation")

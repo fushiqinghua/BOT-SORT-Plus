@@ -153,6 +153,13 @@ class DiagnosticAnalysisTests(unittest.TestCase):
         with path.open(encoding="utf-8-sig", newline="") as stream:
             return list(csv.DictReader(stream))
 
+    def test_trace_accepts_native_boxmot_removed_state(self):
+        fixture = AuditFixture(self.root)
+        fixture.records[-1]["after_update"][0]["state"] = 4
+        fixture.rewrite_trace()
+        records = list(iter_trace(fixture.trace, "s1", len(fixture.records)))
+        self.assertEqual(records[-1]["after_update"][0]["state"], 4)
+
     def test_assignment_rejects_forced_pairs_and_keeps_unique_threshold_edge(self):
         truth = [{"gt_id": 1, "xyxy": [0, 0, 10, 10]},
                  {"gt_id": 2, "xyxy": [30, 0, 40, 10]}]

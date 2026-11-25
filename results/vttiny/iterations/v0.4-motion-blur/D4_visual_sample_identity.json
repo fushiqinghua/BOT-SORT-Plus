@@ -1,0 +1,254 @@
+[
+  {
+    "sequence": "DJI_0303_2",
+    "frame": 84,
+    "det_index": 3,
+    "gt_id": null,
+    "short_side_px": 9.2547607421875,
+    "neighbors": [
+      [
+        83,
+        "same image location"
+      ],
+      [
+        84,
+        "selected"
+      ],
+      [
+        85,
+        "same image location"
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0303_2",
+    "frame": 489,
+    "det_index": 4,
+    "gt_id": null,
+    "short_side_px": 9.1739501953125,
+    "neighbors": [
+      [
+        488,
+        "same image location"
+      ],
+      [
+        489,
+        "selected"
+      ],
+      [
+        490,
+        "same image location"
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0155_2",
+    "frame": 54,
+    "det_index": 0,
+    "gt_id": null,
+    "short_side_px": 7.7294921875,
+    "neighbors": [
+      [
+        53,
+        "same image location"
+      ],
+      [
+        54,
+        "selected"
+      ],
+      [
+        55,
+        "same image location"
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0345_2",
+    "frame": 133,
+    "det_index": 0,
+    "gt_id": "1",
+    "short_side_px": 15.93963623046875,
+    "neighbors": [
+      [
+        132,
+        "same GT detection"
+      ],
+      [
+        133,
+        "selected"
+      ],
+      [
+        134,
+        "same image location"
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0073_3",
+    "frame": 74,
+    "det_index": 21,
+    "gt_id": null,
+    "short_side_px": 32.6265869140625,
+    "neighbors": [
+      [
+        73,
+        "same image location"
+      ],
+      [
+        74,
+        "selected"
+      ],
+      [
+        75,
+        "same image location"
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0073_3",
+    "frame": 61,
+    "det_index": 22,
+    "gt_id": null,
+    "short_side_px": 33.7384033203125,
+    "neighbors": [
+      [
+        60,
+        "same image location"
+      ],
+      [
+        61,
+        "selected"
+      ],
+      [
+        62,
+        "same image location"
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0225_1",
+    "frame": 100,
+    "det_index": 7,
+    "gt_id": "14",
+    "short_side_px": 31.1861572265625,
+    "neighbors": [
+      [
+        99,
+        "same GT detection"
+      ],
+      [
+        100,
+        "selected"
+      ],
+      [
+        101,
+        "same GT detection"
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0225_1",
+    "frame": 208,
+    "det_index": 12,
+    "gt_id": "15",
+    "short_side_px": 17.451171875,
+    "neighbors": [
+      [
+        207,
+        "same GT detection"
+      ],
+      [
+        208,
+        "selected"
+      ],
+      [
+        209,
+        "same image location"
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0225_1",
+    "frame": 270,
+    "det_index": 9,
+    "gt_id": "35",
+    "short_side_px": 21.47900390625,
+    "neighbors": [
+      [
+        269,
+        "same GT detection"
+      ],
+      [
+        270,
+        "selected"
+      ],
+      [
+        271,
+        "same GT detection"
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0225_1",
+    "frame": 32,
+    "det_index": 3,
+    "gt_id": "1",
+    "short_side_px": 28.1685791015625,
+    "neighbors": [
+      [
+        31,
+        "same image location"
+      ],
+      [
+        32,
+        "selected"
+      ],
+      [
+        33,
+        "same GT detection"
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0307_2",
+    "frame": 140,
+    "det_index": 0,
+    "gt_id": null,
+    "short_side_px": 7.32196044921875,
+    "neighbors": [
+      [
+        139,
+        "same image location"
+      ],
+      [
+        140,
+        "selected"
+      ],
+      [
+        141,
+        "same image location"
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0181_3",
+    "frame": 119,
+    "det_index": 10,
+    "gt_id": "31",
+    "short_side_px": 8.70361328125,
+    "neighbors": [
+      [
+        118,
+        "same GT detection"
+      ],
+      [
+        119,
+        "selected"
+      ],
+      [
+        120,
+        "same GT detection"
+      ]
+    ]
+  }
+]

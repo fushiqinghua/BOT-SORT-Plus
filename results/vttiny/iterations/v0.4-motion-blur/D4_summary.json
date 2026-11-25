@@ -1,0 +1,289 @@
+{
+  "schema": "botsort_blur_diagnostics_v1",
+  "status": "COMPLETE",
+  "run_protocol_sha256": "5be88ef93661106132e7f332a73ac56e7eb213441876ccf986c11f85246a52c2",
+  "offline_implementation_sha256": {
+    "botsort_plus/diagnostics/blur.py": "86e3b887076b3d03688c34fa79e71880caed29ddc2ca500cebbcd2356c37484e",
+    "botsort_plus/io.py": "44cbfe26a152cfac5ad0826b27728ed4be6b970cc865bbb6860e5d064d8dd22b",
+    "botsort_plus/types.py": "b72c8f3366896a6a8889d6bd691e7986a550694c7b7471711355a133fbb001fb"
+  },
+  "offline_implementation_semantics": "Current D4 source files at analysis time; distinct from the capture implementation recorded in the replay protocol.",
+  "audit_csv_sha256": "0abf8fb8291854c530f25950131fd5742f6c5990d920a8364c84b11f0bda7ff1",
+  "audit_summary_sha256": "edeb362011f4ebe9fed768712bdfdbda897fc53f568db5b322eddde8d34e8fb2",
+  "manual_labels_sha256": null,
+  "sequences": {
+    "DJI_0028_3": {
+      "frames": 570,
+      "observations": 5679,
+      "trace_sha256": "83c5398f0caff1b91d4847948657d69dd282115a6920dda2acb77f095d5be14a",
+      "decoded_images_fingerprint": "daca9efded4f5538cd6f6a9a63d98cb6cc0761d7f3a59ee1cd0f52c4b9b8c416"
+    },
+    "DJI_0030_2": {
+      "frames": 590,
+      "observations": 4891,
+      "trace_sha256": "a8158b680b5be74028c0781bf692619d37b87a6c137d7ca3e552d5b14e6af69d",
+      "decoded_images_fingerprint": "17da0cea11224f89f1d59e904a49d6561df43ec5d74bb99043e3104892540627"
+    },
+    "DJI_0032_3": {
+      "frames": 290,
+      "observations": 5026,
+      "trace_sha256": "715feb0f3a1169d8b4667f62451449f4d51980ab717b614766adac93e041f864",
+      "decoded_images_fingerprint": "8a68da76bdc7b7cd831eef3d83a368334fc0c1eea3c6c24d3ae242800498e0f6"
+    },
+    "DJI_0049_2": {
+      "frames": 90,
+      "observations": 338,
+      "trace_sha256": "8e85edf0f9bcc3c3891525f60b2fd7218236847a70dcb9b70965724afd391954",
+      "decoded_images_fingerprint": "0aec6a09fb04c70ec766131a328de5489a143cb78dda473ea693e6d91f6a0e4b"
+    },
+    "DJI_0051_2": {
+      "frames": 580,
+      "observations": 1195,
+      "trace_sha256": "071f4b7255cdbae98378e1ea2bc9256b7924126739ba859e2d968fd3f41d8b0c",
+      "decoded_images_fingerprint": "d36402d72caf3f78a1a4516753563354e25906091be34a1bef4931e1b1bc8bc8"
+    },
+    "DJI_0061_2": {
+      "frames": 240,
+      "observations": 18903,
+      "trace_sha256": "5652ee962f1c266533373423448fef42d0435f08f7971b1c7d298a1ac8ea0687",
+      "decoded_images_fingerprint": "e47d55cd9e35065bca9ffae5cedafcbda4286a377616f67184d38b731a6a8b47"
+    },
+    "DJI_0073_3": {
+      "frames": 360,
+      "observations": 16951,
+      "trace_sha256": "1bb7d2361e9afa3a6407017466433641470beb4acaa053bb734465fd2673b028",
+      "decoded_images_fingerprint": "d780f1cfa4be21070e7ce060429884829a5d9bd650a6d803aeaa53b3b137228e"
+    },
+    "DJI_0109_1": {
+      "frames": 90,
+      "observations": 481,
+      "trace_sha256": "ecc5d32bfe0d0dea56733f626d8eb642e3e883b18fc4c556ffd812f4563436b0",
+      "decoded_images_fingerprint": "0adaa1227b387a5cbe3f1967a9a01f5c1a35dd17a77864ff5d6dc0f5d61ee751"
+    },
+    "DJI_0119_2": {
+      "frames": 180,
+      "observations": 181,
+      "trace_sha256": "8e9ca9e08dbf5c1a944a0b3300391e0e6d2edb326269984fa6a8e9cf3d146998",
+      "decoded_images_fingerprint": "2afc2dad95a06576c6d9f5dbde7db6655bbc6f48671d379bf32a7f1e15aa84f5"
+    },
+    "DJI_0129_2": {
+      "frames": 590,
+      "observations": 864,
+      "trace_sha256": "ba202b4ba826e1a22a08dfbd465330ddc8bbe53715fe07411d329338004aa084",
+      "decoded_images_fingerprint": "475c385466165caab3d03833531a68f42faaaaed1d940ec138b342aca3f37ad1"
+    },
+    "DJI_0141_2": {
+      "frames": 410,
+      "observations": 13139,
+      "trace_sha256": "e85fb9f893fa2a1787e279219e8e911077691564942b969886218369cc8fc464",
+      "decoded_images_fingerprint": "f7ecea957f393f1f532ae3ca3e7ae54c5c967f1b89901c2c01017b2d7bf54f85"
+    },
+    "DJI_0155_2": {
+      "frames": 410,
+      "observations": 412,
+      "trace_sha256": "8f4d5599f6362c9235c6469cab8e759ed4d77da9f6d68718f81ca2e7c77dfeb9",
+      "decoded_images_fingerprint": "285784c0adf95642ab3dea78be2f4fe40f778e8c588af1ec25c7bdf28ecca828"
+    },
+    "DJI_0159_2": {
+      "frames": 250,
+      "observations": 181,
+      "trace_sha256": "af8b907fed30068c873dbfb211f169e89d5d36a26a085825251872d6dd48c17a",
+      "decoded_images_fingerprint": "7492feeaef354db50a72944fdbae9ec89d80f1f0b361fe9d370530ce095bfd0f"
+    },
+    "DJI_0169_3": {
+      "frames": 290,
+      "observations": 7245,
+      "trace_sha256": "83b6c3b47639a5059b27bbdbdab25d3c27370a6c20b8f47cb3b607211f0148fe",
+      "decoded_images_fingerprint": "cc3902f3dac8ecce910f0ad6aad27b1c9716caa2e02c5cac8e9ff6efe0de718a"
+    },
+    "DJI_0173_2": {
+      "frames": 450,
+      "observations": 625,
+      "trace_sha256": "7daa87e9b452a38719e6c562d6b3b99046a51335840a8201e8fd369f726ca171",
+      "decoded_images_fingerprint": "5d011bff1e303c7b782c843252a4f4712ae6a0bfefd7aa2035fc414ff4bcb7a9"
+    },
+    "DJI_0181_3": {
+      "frames": 320,
+      "observations": 13479,
+      "trace_sha256": "1678eae2677a0ed9af01b63ac1286a7202c3e0ad9f4fbc9d54cc148753f75059",
+      "decoded_images_fingerprint": "0312aa46cf6104b16bed5a51c21d1caabc024e8017263f637717088b4c0866bb"
+    },
+    "DJI_0221_2": {
+      "frames": 590,
+      "observations": 1308,
+      "trace_sha256": "6ea0bde2971ba75a7efd87b76b5dd49df4c1c6007c34e37a3e8afd20cfbcec72",
+      "decoded_images_fingerprint": "977d94dc75bf63b69ee5e860c348edc82328487a91f56eb8590e0cb8be8de164"
+    },
+    "DJI_0225_1": {
+      "frames": 329,
+      "observations": 3600,
+      "trace_sha256": "58051b33d611ff0b734ccd6e2b6ceac69578f36567aee9395f98533831722780",
+      "decoded_images_fingerprint": "a8e0bdd20f06b8ff81243cfe34fef50bd3827d8b33c60c67ba1f1678275229ae"
+    },
+    "DJI_0237_2": {
+      "frames": 410,
+      "observations": 993,
+      "trace_sha256": "8b5704e80929ab80182012c7b798bb6fff08aa4e631b470a2f22d665cd767e37",
+      "decoded_images_fingerprint": "42a2fa903d215829bea0213ea60647c4b7284e76d31dc481d501f35e95678c32"
+    },
+    "DJI_0255_1": {
+      "frames": 600,
+      "observations": 517,
+      "trace_sha256": "018f7034937bb030beda849be4851b2e4fe51d65f602653295fb28c3adc6a6ce",
+      "decoded_images_fingerprint": "5826cde91eeb1c1f4316de96b876ca41335c9936f856408f1605635a5892bc8f"
+    },
+    "DJI_0257_2": {
+      "frames": 590,
+      "observations": 1225,
+      "trace_sha256": "c01451500deeb77b27351619f3ac86c31a1973310fae1f716196aa3ca54f9b63",
+      "decoded_images_fingerprint": "ab5cf6f1e97c3f144e52dc296cdaead7cc1dd35222a9fa7b19c82029dad5a69e"
+    },
+    "DJI_0277_2": {
+      "frames": 366,
+      "observations": 979,
+      "trace_sha256": "87a1adf0eb79165354884f5131f9f5eeb2da6134d411fd0eb83b89a3b2fbbd89",
+      "decoded_images_fingerprint": "669dd42574a46ff56c0eaa8c9fa5c302349607be80e01bed226dfb4ad7d5f4f8"
+    },
+    "DJI_0283_1": {
+      "frames": 450,
+      "observations": 6521,
+      "trace_sha256": "b97dad3ed8c9ad8e9c55f538dd03ddb88d39b729c90dcae4bf13abbc077559b3",
+      "decoded_images_fingerprint": "6b623188b7f055c989faf57a25f1e969156d5f59dc970986466209025e5aa839"
+    },
+    "DJI_0303_2": {
+      "frames": 577,
+      "observations": 2338,
+      "trace_sha256": "3f8247aaef87e2d25fef9ada4d558c6215f2d9ec55e5ff8fabcff1152ef4cf04",
+      "decoded_images_fingerprint": "1cce40a327b4adcada20da1f160bb10af403a6c3de82c8a1d2cccaeef708380a"
+    },
+    "DJI_0307_2": {
+      "frames": 180,
+      "observations": 75,
+      "trace_sha256": "7a3c11ea68aeb2d65ec23a64d232e427162f6dfd99a94f22ffcf6a014a8c7ed8",
+      "decoded_images_fingerprint": "a53b41a907793f4c32d7eb7b8260eeecf6a49f35bd91314c61cf3273245b91cf"
+    },
+    "DJI_0309_4": {
+      "frames": 603,
+      "observations": 2112,
+      "trace_sha256": "c2356ddccbdd01943b41a440a9f981d86dd9d43be91203b36a52d4cba4681e19",
+      "decoded_images_fingerprint": "3edffb88f0a228d2c8ce70de92487ab18cf3be90976d9523eac8be00dd7f914e"
+    },
+    "DJI_0325_2": {
+      "frames": 595,
+      "observations": 44,
+      "trace_sha256": "118190e3082e46ac92744226fa6b7e1b03e6882d7aa374e6ba0f30a643735468",
+      "decoded_images_fingerprint": "c5d4c81ee0b3608fb1267efbdaf8ce05e5d23f56bc441738f65a06f1861b0bd4"
+    },
+    "DJI_0327_3": {
+      "frames": 390,
+      "observations": 19319,
+      "trace_sha256": "2d93bdb257ed9b6b19de205f16d5c3e31ef0f0f8c54b0b860bf817c16059dd7c",
+      "decoded_images_fingerprint": "a9120252f12f0420a7fa0cb9f82558db61223965bb775b3498239a14f800cf78"
+    },
+    "DJI_0339_2": {
+      "frames": 600,
+      "observations": 3425,
+      "trace_sha256": "7fc3d97f16f97ee306ef86b6d00a0a27f0f6b8eb7af0f97d44553703e4cebcad",
+      "decoded_images_fingerprint": "8bb51df3ff5a293baec23a22e12e1d0b3ab6652d9d71611773676f982b49bbc0"
+    },
+    "DJI_0345_2": {
+      "frames": 600,
+      "observations": 1340,
+      "trace_sha256": "243e8ec6eb4b99a190a05c3ee5217db22691900366040abd552d6af3ee2ad666",
+      "decoded_images_fingerprint": "72119a517f98632bccecbfe3f8534062cfe1312163ec5dfecf120b3bab578fea"
+    }
+  },
+  "quality_is_blur_label": false,
+  "scope": "Offline GT-assisted diagnostic; no tracker changes, no MOT metric redefinition.",
+  "image_hash_semantics": "SHA256 of decoded contiguous uint8 BGR pixels, matched to online trace",
+  "limitations": [
+    "Only unambiguous IoU-assigned GT detections enter identity pairs.",
+    "Quality derivatives confound scale, contrast, shape and blur; they are not blur detectors.",
+    "Adjacent identity distances require actual adjacent frames and two valid embeddings.",
+    "Hard negative is another unambiguous GT detection in the current frame using the same previous-frame anchor.",
+    "Manual review is stratified descriptive sampling, not a prevalence estimate or causal experiment.",
+    "Previous observation quality/labels are retained; unknown prior quality and unknown occlusion remain confounds.",
+    "No comparison can identify the cause of complete detection disappearance from detector rows alone."
+  ],
+  "overall": {
+    "observations": 133386,
+    "gt_matched": 74516,
+    "valid_rgb": 113447,
+    "metrics": {
+      "det_center_error_px": {
+        "n": 74516,
+        "mean": 1.2167152423516507,
+        "median": 1.0098691286329164,
+        "p90": 2.296020419424141
+      },
+      "det_center_error_norm": {
+        "n": 74516,
+        "mean": 0.11822504491196863,
+        "median": 0.09640187378263539,
+        "p90": 0.23302224460651888
+      },
+      "same_gt_cosine_adjacent": {
+        "n": 64390,
+        "mean": 0.3118514003416043,
+        "median": 0.3021147009886067,
+        "p90": 0.525288145062781
+      },
+      "hard_negative_cosine": {
+        "n": 61055,
+        "mean": 0.6869414480679084,
+        "median": 0.688956377518353,
+        "p90": 0.8553585129904193
+      },
+      "appearance_margin": {
+        "n": 61055,
+        "mean": 0.37483957000439827,
+        "median": 0.36759021496033795,
+        "p90": 0.666890715532824
+      },
+      "gradient_rms": {
+        "n": 133386,
+        "mean": 0.09461763767844912,
+        "median": 0.0974074589131159,
+        "p90": 0.14603775052251225
+      },
+      "laplacian_variance": {
+        "n": 133386,
+        "mean": 0.05542749047061689,
+        "median": 0.047444816324802186,
+        "p90": 0.11524787326574301
+      },
+      "rgb_quality": {
+        "n": 113447,
+        "mean": 0.5684953799884648,
+        "median": 0.5641568303108215,
+        "p90": 0.9382509827613831
+      }
+    }
+  },
+  "appearance_status_counts": {
+    "no_previous_gt_detection": 547,
+    "unknown_gt_identity": 58870,
+    "adjacent_comparable": 61055,
+    "nonconsecutive_gt_detection": 3830,
+    "missing_current_feature": 3939,
+    "missing_previous_feature": 1810,
+    "adjacent_no_negative": 3335
+  },
+  "roi_status_counts": {
+    "ok": 133386
+  },
+  "manual_review_rows": 120,
+  "manual_label_status": "NEEDS_MORE_COMPARABLE_MANUAL_LABELS",
+  "review_sampling": {
+    "method": "Up to four deterministic hash-sampled rows per sequence/size/score/contrast/GT-class/GT-visibility stratum; paired strata first; no outcome-based selection.",
+    "candidate_strata": 736,
+    "max_review": 120
+  },
+  "derived_files_sha256": {
+    "manual_label_summary.json": "38df93be62a4b0dc88d3aa52b868a41005eceae62e92cc33257649fb25b8e25e",
+    "manual_review.csv": "7c200b064cb3e85ed02e05474e7699d07916a0b06d1629b92b8cedf19eeaf39b",
+    "manual_label_comparisons.csv": "c453ee82987a5f280baaee2f9056d598c2c57e9e1c043ca21044bf33bad8b6d7",
+    "quality_strata.csv": "b4229c09e502750aad3eeb20e08e153fada0eeaf63ddc6e27afe15f2fb4b3a05",
+    "observation_quality.csv": "c92e39025ee157dd7c27ee3802fa0c11e3f20d01bd6cccf06088e9a1a1d7fbf0"
+  }
+}

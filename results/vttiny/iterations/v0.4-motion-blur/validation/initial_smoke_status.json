@@ -1,0 +1,16 @@
+{
+  "status": "FAILED",
+  "commit": "02f8d892310117e1dc21affb719d31d967fa4745",
+  "stage": "smoke",
+  "stages": {
+    "preflight": {
+      "sequences": 30,
+      "frames": 12590,
+      "status": "READY"
+    }
+  },
+  "settings": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/configs/diagnostics/motion_blur_v0.4.local.json",
+  "smoke_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_smoke_DJI_0030_2",
+  "full_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1",
+  "error": "Traceback (most recent call last):\n  File \"${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/round1/run_round.py\", line 85, in main\n    invoke(\"smoke\", \"run\", \"--sequences\", \"DJI_0030_2\", \"--output-root\", SMOKE)\n  File \"${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/round1/run_round.py\", line 45, in invoke\n    subprocess.run(command, cwd=REPO, env=env(), stdout=log, stderr=subprocess.STDOUT, check=True)\n  File \"${REDETR_ENV}/lib/python3.11/subprocess.py\", line 569, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['${REDETR_ENV}/bin/python', '-X', 'utf8', '-u', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/tools/run_botsort_diagnostics.py', 'run', '--settings', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/configs/diagnostics/motion_blur_v0.4.local.json', '--sequences', 'DJI_0030_2', '--output-root', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_smoke_DJI_0030_2']' returned non-zero exit status 1.\n"
+}

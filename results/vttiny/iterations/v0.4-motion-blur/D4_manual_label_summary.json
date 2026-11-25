@@ -1,0 +1,81 @@
+{
+  "status": "NEEDS_MORE_COMPARABLE_MANUAL_LABELS",
+  "counts": {
+    "unreviewed": 133386
+  },
+  "within_sequence_matched_strata": 0,
+  "comparison_rows": 0,
+  "labels": [
+    "clear",
+    "defocus",
+    "low_contrast",
+    "motion_blur",
+    "occlusion",
+    "too_small",
+    "uncertain",
+    "unreviewed"
+  ],
+  "occlusion_values": [
+    "no",
+    "uncertain",
+    "yes"
+  ],
+  "scope": "Descriptive differences within sequence/size/score/contrast/GT-class/GT-visibility/occlusion strata; unknown occlusion remains a confound; no causal effect or MOT gain is asserted.",
+  "by_label": {
+    "unreviewed": {
+      "observations": 133386,
+      "gt_matched": 74516,
+      "valid_rgb": 113447,
+      "metrics": {
+        "det_center_error_px": {
+          "n": 74516,
+          "mean": 1.2167152423516507,
+          "median": 1.0098691286329164,
+          "p90": 2.296020419424141
+        },
+        "det_center_error_norm": {
+          "n": 74516,
+          "mean": 0.11822504491196863,
+          "median": 0.09640187378263539,
+          "p90": 0.23302224460651888
+        },
+        "same_gt_cosine_adjacent": {
+          "n": 64390,
+          "mean": 0.3118514003416043,
+          "median": 0.3021147009886067,
+          "p90": 0.525288145062781
+        },
+        "hard_negative_cosine": {
+          "n": 61055,
+          "mean": 0.6869414480679084,
+          "median": 0.688956377518353,
+          "p90": 0.8553585129904193
+        },
+        "appearance_margin": {
+          "n": 61055,
+          "mean": 0.37483957000439827,
+          "median": 0.36759021496033795,
+          "p90": 0.666890715532824
+        },
+        "gradient_rms": {
+          "n": 133386,
+          "mean": 0.09461763767844912,
+          "median": 0.0974074589131159,
+          "p90": 0.14603775052251225
+        },
+        "laplacian_variance": {
+          "n": 133386,
+          "mean": 0.05542749047061689,
+          "median": 0.047444816324802186,
+          "p90": 0.11524787326574301
+        },
+        "rgb_quality": {
+          "n": 113447,
+          "mean": 0.5684953799884648,
+          "median": 0.5641568303108215,
+          "p90": 0.9382509827613831
+        }
+      }
+    }
+  }
+}

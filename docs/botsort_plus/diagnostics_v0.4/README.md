@@ -1,5 +1,7 @@
 # v0.4：运动模型、GMC、B 恢复与模糊诊断实验
 
+首轮 30 段真实数据的统计、校验记录和完整证据附件见 [v0.4 诊断归档](../../../results/vttiny/iterations/v0.4-motion-blur/README.md)。
+
 这套实验回答一个具体问题：在当前有效的 B 基座上，剩余错误主要来自预测、观测、全局运动补偿，还是身份恢复后的续轨？据此决定下一项模块应改哪里。
 
 本分支基于 `iteration/v0.3-c2-identity` 的 `667eb40a6aa624c35fb86eb73656bb334b107a11`。主入口固定使用现有 `configs/botsort_plus/B_early_moderate.json`，保持原检测、原 RGB ReID 特征与原生 BoT-SORT 参数；A、旧 C、C2、raw-IR、motion2 和位置修正均关闭。本轮不训练模型、不修改跟踪决策，不预设任何候选改进一定有效。

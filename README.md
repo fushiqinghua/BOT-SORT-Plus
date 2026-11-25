@@ -4,7 +4,7 @@
 
 **当前分支：`diagnostics/v0.4-motion-blur`。当前任务：以已验证有效的 B 为参考，运行四组诊断，确定下一步应优先改进运动预测、相机运动补偿、恢复后续轨，还是模糊相关观测与外观。**
 
-[完整运行说明](docs/botsort_plus/diagnostics_v0.4/README.md) · [实现机制与统计口径](docs/botsort_plus/diagnostics_v0.4/MECHANISM.md) · [软件验证记录](docs/botsort_plus/diagnostics_v0.4/VALIDATION.md) · [已有真实实验](results/vttiny/iterations/v0.3-c2-identity/README.md)
+[完整运行说明](docs/botsort_plus/diagnostics_v0.4/README.md) · [实现机制与统计口径](docs/botsort_plus/diagnostics_v0.4/MECHANISM.md) · [软件验证记录](docs/botsort_plus/diagnostics_v0.4/VALIDATION.md) · [v0.4 首轮真实实验](results/vttiny/iterations/v0.4-motion-blur/README.md) · [v0.3 归档](results/vttiny/iterations/v0.3-c2-identity/README.md)
 
 ## 当前进展与实验基座
 
@@ -14,7 +14,7 @@
 | A / A2 弱观测起轨 | 已完成真实数据消融与错因分析，历史收益和误报代价保留在[实验归档](results/vttiny/iterations/v0.2-a2/README.md)；本轮关闭 |
 | B 短轨迹身份恢复 | 真实数据已验证收益并完成多组消融；本轮固定使用 [B_early_moderate](configs/botsort_plus/B_early_moderate.json) |
 | C2、短时外推及位置修正 | 已有消融、错因分析和逐序列证据，见[迭代索引](results/vttiny/iterations/v0.3-c2-identity/README.md)；本轮关闭以便归因 |
-| v0.4 四组诊断 | 采集、分析、统一入口、人工复核表和证据打包已实现并通过软件验证；真实数据诊断待本地执行后汇总 |
+| v0.4 四组诊断 | 30 段、12,590 帧的自动诊断已归档，轨迹和原有事件逐字节一致。D4 的真实运动模糊仍待同层人工复核。 [首轮实验](results/vttiny/iterations/v0.4-motion-blur/README.md) |
 
 B 利用原生关联后未消费的候选形成短轨迹，对仍在 Lost 池中的旧轨迹进行时序验证和一对一身份恢复。本轮记录原生 KF/GMC 和 B 的实际过程，保持原检测、原 RGB 特征及跟踪决策。
 

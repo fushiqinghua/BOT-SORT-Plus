@@ -1,0 +1,286 @@
+{
+  "schema": "botsort_diagnostic_analysis_v1",
+  "status": "COMPLETE",
+  "tracker": "B_early_moderate",
+  "run_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_smoke_DJI_0030_2/observed",
+  "run_protocol_sha256": "b91280ea2d60e941da11e0cca3c2c33cb6165d770be3f4da809e1a2a5e131822",
+  "reference_run_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_smoke_DJI_0030_2/reference",
+  "reference_tracker": "B_early_moderate",
+  "reference_protocol_sha256": "c951286b9da932fb2a4be88ded10cee1643cda4ef537694a8485430abe151a12",
+  "identical_prediction_bytes": true,
+  "identical_original_event_bytes": true,
+  "original_events_sha256": {
+    "DJI_0030_2": "68a0e5368965963a2a83ab993927269471bfc0c49d6dc4a2769d61208a90e556"
+  },
+  "analysis_source_sha256": {
+    "botsort_plus/diagnostics/analysis.py": "77e84f6fb267d72bddd11eda33407f281fa60032c17a67bcfa6f4000caaffd48",
+    "botsort_plus/diagnostics/common.py": "418ace4d60c94d0bf5872f3d5696a0177382ee55999e8f57974689ebec9e9e72",
+    "tools/evaluate_botsort_plus.py": "bd4b03c8ca2218b81b046019c3442f5b439bd153aba2abd153b81ba8eb35755d"
+  },
+  "ground_truth": {
+    "root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/data/official_gt/GT/GT_00/test",
+    "sha256": {
+      "DJI_0030_2": "ab2838acc1855700f93dcf0cf50457b8b6b7912444b654fa9def805cb4bd7fd9"
+    },
+    "provenance": "Caller-supplied official RGB GT; original bytes hashed, never modified"
+  },
+  "sequences": {
+    "DJI_0030_2": 590
+  },
+  "iou_threshold": 0.5,
+  "ambiguity_margin": 0.05,
+  "horizons": [
+    3,
+    5,
+    10
+  ],
+  "metric_scope": "diagnostic independent-frame IoU labels; NOT TrackEval HOTA/IDSW/FP/FN",
+  "identity_anchor": "previous accepted real detection at snapshot.last_seen only; never current/future GT",
+  "gt_policy": "all classes pooled; zero-marked rows removed; absent annotation remains unknown",
+  "limitations": [
+    "GMC statistics are deterministic optical-flow proxies, not the native RANSAC inlier mask.",
+    "GMC before/after residual is same-state diagnostic, not an independent no-GMC tracker ablation.",
+    "GMC correlations do not establish causality; common residual includes common target motion.",
+    "State covariance/innovation coverage is diagnostic; GT has annotation noise and anchors are selected.",
+    "NIS uses GT-paired available detections including unused detections, not only accepted matches.",
+    "B endpoint identity is local evidence, not a guarantee of pure appearance or the whole trajectory.",
+    "Missing GT, ambiguity and end-of-video censoring are excluded from fully observable stability windows.",
+    "Historical official test was used in design; these are development diagnostics, not blind generalization."
+  ],
+  "D1": {
+    "pred_center_error_px": {
+      "n": 1425,
+      "mean": 0.9509195516784613,
+      "median": 0.7879739978093497,
+      "p90": 1.7815535710892083,
+      "p95": 2.241085734098472
+    },
+    "pred_center_error_norm": {
+      "n": 1425,
+      "mean": 0.16673126534729235,
+      "median": 0.1475720233855875,
+      "p90": 0.28665677051789723,
+      "p95": 0.332600209322483
+    },
+    "pre_gmc_center_error_px": {
+      "n": 1425,
+      "mean": 1.3803039912137252,
+      "median": 1.0175447492919765,
+      "p90": 2.387988844493838,
+      "p95": 3.1090066765390025
+    },
+    "post_center_error_px": {
+      "n": 1425,
+      "mean": 0.8761558693836373,
+      "median": 0.7335741292970187,
+      "p90": 1.6769153158716708,
+      "p95": 2.0630240479359765
+    },
+    "det_center_error_px": {
+      "n": 1348,
+      "mean": 0.8324962687668747,
+      "median": 0.7261848337096566,
+      "p90": 1.5639475423135725,
+      "p95": 1.9020659283656982
+    },
+    "det_center_error_norm": {
+      "n": 1348,
+      "mean": 0.14565631886717167,
+      "median": 0.1376158637262171,
+      "p90": 0.2505369647782429,
+      "p95": 0.29307971494916796
+    },
+    "state_position_standardized_sq": {
+      "n": 1425,
+      "mean": 3.9336834004167547,
+      "median": 1.963446002175548,
+      "p90": 8.268559438477602,
+      "p95": 11.949868631129567
+    },
+    "gt_paired_nis4": {
+      "n": 1348,
+      "mean": 1.2798143763573595,
+      "median": 0.2549227034820097,
+      "p90": 1.15678501044038,
+      "p95": 2.5611702462446266
+    },
+    "paired_prediction_minus_detection_error_px": {
+      "n": 1348,
+      "mean": 0.1003915212887804,
+      "median": 0.057800671996161956,
+      "p90": 0.39036948690081874,
+      "p95": 0.5343974516270624
+    },
+    "state_position_95_covered": {
+      "n": 1425,
+      "fraction": 0.8196491228070175
+    },
+    "gt_paired_nis4_95_covered": {
+      "n": 1348,
+      "fraction": 0.9814540059347181
+    },
+    "all_matched_detection_errors": {
+      "center_error_px": {
+        "n": 2275,
+        "mean": 1.0376343057006208,
+        "median": 0.860456297960006,
+        "p90": 1.9904510122071197,
+        "p95": 2.503464124332902
+      },
+      "center_error_norm": {
+        "n": 2275,
+        "mean": 0.18364583287836858,
+        "median": 0.15864793953916276,
+        "p90": 0.3287574366381606,
+        "p95": 0.4468421012359253
+      }
+    },
+    "by_gt_size": {
+      "lt8": {
+        "n": 1236,
+        "mean": 0.16623054751560748,
+        "median": 0.14594912844101296,
+        "p90": 0.2931492752668876,
+        "p95": 0.3434335232309207
+      },
+      "8to16": {
+        "n": 189,
+        "mean": 0.1700058010084697,
+        "median": 0.1677916790321281,
+        "p90": 0.27183518856762395,
+        "p95": 0.2881649423811947
+      },
+      "16to32": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "p95": null
+      },
+      "ge32": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "p95": null
+      }
+    },
+    "anchor_status_counts": {
+      "present": 1425,
+      "unknown_identity": 1615,
+      "unannotated": 64
+    },
+    "accepted_identity_counts": {
+      "same": 1338,
+      "unknown": 1484,
+      "no_update": 282
+    }
+  },
+  "D2": {
+    "status_counts": {
+      "initialized": 1,
+      "estimated": 589
+    },
+    "same_state_gmc_error_change_px": {
+      "n": 587,
+      "mean": -0.40034888283565934,
+      "median": -0.21635211651527167,
+      "p90": 0.32573533661223514,
+      "p95": 0.553284166387729
+    },
+    "correlations": {
+      "reprojection_median_px": {
+        "pred_error_mean_px": {
+          "n": 587,
+          "spearman": 0.15352428858700368
+        },
+        "common_residual_norm_px": {
+          "n": 587,
+          "spearman": 0.09539879815733121
+        }
+      },
+      "inlier_ratio_proxy": {
+        "pred_error_mean_px": {
+          "n": 587,
+          "spearman": -0.2923899784510989
+        },
+        "common_residual_norm_px": {
+          "n": 587,
+          "spearman": -0.03343419015209264
+        }
+      },
+      "spatial_coverage": {
+        "pred_error_mean_px": {
+          "n": 587,
+          "spearman": 0.026573556180739106
+        },
+        "common_residual_norm_px": {
+          "n": 587,
+          "spearman": -0.01941286868774478
+        }
+      }
+    }
+  },
+  "D3": {
+    "recovery_identity_counts": {
+      "unknown": 16,
+      "same_gt": 2
+    },
+    "windows": {
+      "3": {
+        "events": 18,
+        "complete_observable_same_gt_events": 2,
+        "stable_all_frames_count": 2,
+        "stable_all_frames_fraction": 1.0,
+        "right_censored_events": 0,
+        "unknown_recovery_identity_events": 16,
+        "observed_first_failure_reasons_including_censored": {},
+        "complete_window_first_failure_reasons": {}
+      },
+      "5": {
+        "events": 18,
+        "complete_observable_same_gt_events": 2,
+        "stable_all_frames_count": 2,
+        "stable_all_frames_fraction": 1.0,
+        "right_censored_events": 0,
+        "unknown_recovery_identity_events": 16,
+        "observed_first_failure_reasons_including_censored": {},
+        "complete_window_first_failure_reasons": {}
+      },
+      "10": {
+        "events": 18,
+        "complete_observable_same_gt_events": 2,
+        "stable_all_frames_count": 2,
+        "stable_all_frames_fraction": 1.0,
+        "right_censored_events": 0,
+        "unknown_recovery_identity_events": 16,
+        "observed_first_failure_reasons_including_censored": {},
+        "complete_window_first_failure_reasons": {}
+      }
+    }
+  },
+  "detection_label_counts": {
+    "matched": 2275,
+    "unmatched": 2333,
+    "ambiguous": 283
+  },
+  "per_sequence": {
+    "DJI_0030_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 2275,
+      "detections_unmatched": 2333,
+      "prediction_present": 1425,
+      "prediction_unknown_identity": 1615,
+      "detections_ambiguous": 283,
+      "prediction_unannotated": 64
+    }
+  },
+  "files_sha256": {
+    "detection_audit.csv": "fb958c35be6a2c207d34f8d548ab9eeef659cc3a6c913f8ba20002d5c6e2e43a",
+    "frame_error.csv": "38dfefcf45f7e1db1b640bd77bf8f0f94f1e137a479a3e8f281d6d267dbb878d",
+    "recovery_checks.csv": "39c16f0be1acad10ea6334da5f95bb1148ceaeb274a6ec5a1032604d76a92d90",
+    "recovery_events.csv": "dc6ea372ea4e4ddb8c7a3f5ccc4f25fc4a3edb1e167d6e33a81ee42b50882774",
+    "recovery_windows.csv": "6fa5d8f7bf4fb7eb03f976876d96e3e30b37505a9b6e5e631448a92fa815cfb6",
+    "track_error.csv": "b5d91efddbac25e516637d7baaae75f2b3e7f0002a50e0f119b0dd2423793ad0"
+  }
+}

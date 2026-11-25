@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETE",
+  "commit": "02f8d892310117e1dc21affb719d31d967fa4745",
+  "stage": "analysis",
+  "stages": {
+    "preflight": {
+      "sequences": 30,
+      "frames": 12590,
+      "status": "READY"
+    },
+    "smoke": {
+      "status": "PASS",
+      "reused_original_parity": true,
+      "frames": 590,
+      "analysis": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_smoke_DJI_0030_2/analysis_native_state_retry",
+      "blur": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_smoke_DJI_0030_2/blur_native_state_retry"
+    },
+    "full": {
+      "sequences": 30,
+      "frames": 12590,
+      "analysis_complete": true,
+      "manual_review": "PENDING_MANUAL_REVIEW"
+    }
+  },
+  "settings": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/configs/diagnostics/motion_blur_v0.4.local.json",
+  "smoke_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_smoke_DJI_0030_2",
+  "full_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1"
+}

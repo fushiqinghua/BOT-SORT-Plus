@@ -1,0 +1,630 @@
+{
+  "schema": "botsort_diagnostic_analysis_v1",
+  "status": "COMPLETE",
+  "tracker": "B_early_moderate",
+  "run_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1/observed",
+  "run_protocol_sha256": "5be88ef93661106132e7f332a73ac56e7eb213441876ccf986c11f85246a52c2",
+  "reference_run_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1/reference",
+  "reference_tracker": "B_early_moderate",
+  "reference_protocol_sha256": "09bb4eb7304426e75a97179abe614563ed9254e39bffbb97512e841a267c67a0",
+  "identical_prediction_bytes": true,
+  "identical_original_event_bytes": true,
+  "original_events_sha256": {
+    "DJI_0028_3": "7b10b5d9b5c8a6a1b5919bb42ca7bd8296b4a57512bc45cc1c5a1a0f1118b672",
+    "DJI_0030_2": "68a0e5368965963a2a83ab993927269471bfc0c49d6dc4a2769d61208a90e556",
+    "DJI_0032_3": "2da66e85a5ce89a91319b6e904a95ae3ddde609a1418092f7f9e6aad0a5e4941",
+    "DJI_0049_2": "195ff0907135ede7e729087e0b6598c525cad748d0caa27198980209af430552",
+    "DJI_0051_2": "2d0ba5de5d5cdfaaaaed8cd7a64d143b4fbc2444f21724c6d1d6e45bd525224d",
+    "DJI_0061_2": "9a0b1db6147d23093ab31fc856e8468aca8e0198fa0a0761d1d42e40947f6a76",
+    "DJI_0073_3": "7d6819300c26e75514d9901d4a0099362aadcd5098014c87e1949b8e68c253b0",
+    "DJI_0109_1": "d0e9d44b404712850a712a6ee8a2632d05f22ab4011486b0bb35d2bf96e9ad12",
+    "DJI_0119_2": "0f6821f1463d69cb09ac7fe52d812b7967c55fce04bd46bda526fb33f5a26f95",
+    "DJI_0129_2": "8519d5db6ccebc9614909885dbe86dbc64487140ba5c6712cd8b888e0eb6dc40",
+    "DJI_0141_2": "b3845fd61ad760859ece31383de4b8c3bc85bcc512d0cffbbecfb6af6f75321b",
+    "DJI_0155_2": "0c99e65b758de4fb98c76d8af8f056e0b44eceeeadbed51821fccfc5475ebdf4",
+    "DJI_0159_2": "f8c65b3ad84c6835341a6d26f691d03f1fc6b925a9f25d94c35ec7a190491467",
+    "DJI_0169_3": "ff9e4a2c112277817fa84e083f5aee16e7c8f1a2417423f7059721df5ebb481c",
+    "DJI_0173_2": "e6ade793bfd05f2f04dd900c9b65d7cbda885c3ae5f433150a3984968d4dde47",
+    "DJI_0181_3": "3d2249c9579610548c1047b236c8c48c90fbb765a8ece86709eb5568c1b35abd",
+    "DJI_0221_2": "2b64e5b21652c1d255c3d4aa9c8888a6149481048560192547d759bdcdac65ca",
+    "DJI_0225_1": "c940a0629e7b4d473bed09006bfd20f0935b50eefe4d677d89cbe44e9a21de0c",
+    "DJI_0237_2": "5b572eb23b5e802cde0f1985cdfd4817092497f0bd5a4ca583a2fbeef8a9dfb6",
+    "DJI_0255_1": "c6835a11e131b9375e1215a643e498dd251e7ebe02148516d07fb072520ffd65",
+    "DJI_0257_2": "f34a8d12dc8568490b34f9b7aabf08492158899840610df9452d132d366674f5",
+    "DJI_0277_2": "136e884ed676e3b2cbab638ed14742e9d1bb7cf6b7c9550d3eaa6b16b82aa3eb",
+    "DJI_0283_1": "3829816d862b2309e6c205070141aa47cd7bbfb1f7889af497435fef5cdb2d39",
+    "DJI_0303_2": "d584a1da73d83c897a47829f447baf6a392a4bad4ae2120ab460e801439f3966",
+    "DJI_0307_2": "9d051fa8dc43f7ae95142ac9f3f1ab5473ba1b526059aa6b026a602b1a8893db",
+    "DJI_0309_4": "013c2dc8a9487979327d51ca3dc63c69fce6c43004850cdbb2e3ac3659525ec7",
+    "DJI_0325_2": "37079655755dc5ad5705b4d589a662478b28c681d23242cf7f36c6cb6ec05c20",
+    "DJI_0327_3": "0aae647b297ba5eed1de26e663f79d39ec5de4bb6aa71d3a96ca9bd1381d6f0d",
+    "DJI_0339_2": "373450db5d41780dd3d96c778ad95e6892b10ef5ea3eaa82f3e039b821399b39",
+    "DJI_0345_2": "30c8e17a24d004ca0e6dd75de0f9e669cccb3ae462d34682c238a129d23da865"
+  },
+  "analysis_source_sha256": {
+    "botsort_plus/diagnostics/analysis.py": "77e84f6fb267d72bddd11eda33407f281fa60032c17a67bcfa6f4000caaffd48",
+    "botsort_plus/diagnostics/common.py": "418ace4d60c94d0bf5872f3d5696a0177382ee55999e8f57974689ebec9e9e72",
+    "tools/evaluate_botsort_plus.py": "bd4b03c8ca2218b81b046019c3442f5b439bd153aba2abd153b81ba8eb35755d"
+  },
+  "ground_truth": {
+    "root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/data/official_gt/GT/GT_00/test",
+    "sha256": {
+      "DJI_0028_3": "5227e9fb66105ff161944d80143e1e0aec867077f8a8daa271eb2729b9a0ab1c",
+      "DJI_0030_2": "ab2838acc1855700f93dcf0cf50457b8b6b7912444b654fa9def805cb4bd7fd9",
+      "DJI_0032_3": "3ae8afb25434ae76aba059e1c1e5247b9d989a04893810dc9bfde75c38a52b46",
+      "DJI_0049_2": "544fa0931afba5ea350d879996eecbb7886a77929db404f80c65816682ae77dd",
+      "DJI_0051_2": "abe863cad93f9c40a4bdccfb5e7da1c57d95ce7d072c4bfded0d0c537d5b05ab",
+      "DJI_0061_2": "0ce40ba303ff643b36c9164e3b0f5e7253172a41236883e834c7143b2953aee6",
+      "DJI_0073_3": "b60b00d7e6ffb24a7deb7237608fe5d37f819d8b5e17addc321984cd359af5ff",
+      "DJI_0109_1": "014a9d4b558e01900d829c02d796606fd0e56b7e34d1668f5f56747875765d95",
+      "DJI_0119_2": "bc5333e0e308986d374be6ee303bd3a1693c3c473d381469ef7a7f6469bc69ef",
+      "DJI_0129_2": "9f8ba6228889bb9da854db6bd27ea504b3ef35d9d1d3ef4d99e39c0a93441800",
+      "DJI_0141_2": "40752ca09de1a71e460b7ce4bc0c1615839afb0c78131efc0b713bf2be064347",
+      "DJI_0155_2": "74c6d92dd099d75ac0b5c9a609fe9e59172746e8995d6a7c53e2700956141c7d",
+      "DJI_0159_2": "3ffd6d1a95f4027b36243efa0d92989df8c683a6905a516d2fd328eaa5c4e9eb",
+      "DJI_0169_3": "30bb31e54d93496dcba1227e18c16d6528be7f375897a85986dd5b68d586a338",
+      "DJI_0173_2": "f7b78b829cafa8cbe864186dca8daceb143665bfed3580e984167cdfcbf9967d",
+      "DJI_0181_3": "5d87e3184fbe23fb44ebd5478c92e07119fc9278d79f7a8a10eae97c918cc84d",
+      "DJI_0221_2": "09b924a0aba9719a2105d178dc729c461590b39e56b93c64a7e1d644a6763966",
+      "DJI_0225_1": "cbf32a09a7dc7bb69494e03b5952749380b7ab78d30f09bd8eeccd4738d212a4",
+      "DJI_0237_2": "c1880e8b509229ee739c3a25d32a5798b8f5234afef456ff0cd17e591cbea74e",
+      "DJI_0255_1": "0fd683061f577c87c9620b6701db9d9ebf30a8cf0a18c88d84f55e4a3f8d4aa6",
+      "DJI_0257_2": "cdf468bd038dd10e292d4a473460dca483c1b053407bfc93c8ac17333af85c3c",
+      "DJI_0277_2": "e774bb7ffc1d7d1fcef240eccf3d348c59d5b8098d8a52d1cbefd9a606096de5",
+      "DJI_0283_1": "5ff9962377dc4bfae3caea9c80383621d10e5d2b59e59a99c9558539b057abc2",
+      "DJI_0303_2": "52d00ded4251e3eb58dbdaf3c96c88f6bab08fcba341ce9e50954725c4144c73",
+      "DJI_0307_2": "bcf6fc6f3535d9503f1246aaaacea427551257e3e17b4e09816895f13dbf3eae",
+      "DJI_0309_4": "1ce1aa3f4920c6eeb8bcfe9088d007732cbf6d519c037c91890abc9c70d07e2e",
+      "DJI_0325_2": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "DJI_0327_3": "d4ffb8bdb0b8065c2bea3595c4e65f2a095d42690740c75e6989e140c2b1dc23",
+      "DJI_0339_2": "0ff15c4204487ce4816e4f3c0753e6c6aae23a31e01a99fd58df7e151b00d186",
+      "DJI_0345_2": "3dbde9653d16a051187f8b7ef7e464b0b0b2cd4ad162bc66756e9952cee29bad"
+    },
+    "provenance": "Caller-supplied official RGB GT; original bytes hashed, never modified"
+  },
+  "sequences": {
+    "DJI_0028_3": 570,
+    "DJI_0030_2": 590,
+    "DJI_0032_3": 290,
+    "DJI_0049_2": 90,
+    "DJI_0051_2": 580,
+    "DJI_0061_2": 240,
+    "DJI_0073_3": 360,
+    "DJI_0109_1": 90,
+    "DJI_0119_2": 180,
+    "DJI_0129_2": 590,
+    "DJI_0141_2": 410,
+    "DJI_0155_2": 410,
+    "DJI_0159_2": 250,
+    "DJI_0169_3": 290,
+    "DJI_0173_2": 450,
+    "DJI_0181_3": 320,
+    "DJI_0221_2": 590,
+    "DJI_0225_1": 329,
+    "DJI_0237_2": 410,
+    "DJI_0255_1": 600,
+    "DJI_0257_2": 590,
+    "DJI_0277_2": 366,
+    "DJI_0283_1": 450,
+    "DJI_0303_2": 577,
+    "DJI_0307_2": 180,
+    "DJI_0309_4": 603,
+    "DJI_0325_2": 595,
+    "DJI_0327_3": 390,
+    "DJI_0339_2": 600,
+    "DJI_0345_2": 600
+  },
+  "iou_threshold": 0.5,
+  "ambiguity_margin": 0.05,
+  "horizons": [
+    3,
+    5,
+    10
+  ],
+  "metric_scope": "diagnostic independent-frame IoU labels; NOT TrackEval HOTA/IDSW/FP/FN",
+  "identity_anchor": "previous accepted real detection at snapshot.last_seen only; never current/future GT",
+  "gt_policy": "all classes pooled; zero-marked rows removed; absent annotation remains unknown",
+  "limitations": [
+    "GMC statistics are deterministic optical-flow proxies, not the native RANSAC inlier mask.",
+    "GMC before/after residual is same-state diagnostic, not an independent no-GMC tracker ablation.",
+    "GMC correlations do not establish causality; common residual includes common target motion.",
+    "State covariance/innovation coverage is diagnostic; GT has annotation noise and anchors are selected.",
+    "NIS uses GT-paired available detections including unused detections, not only accepted matches.",
+    "B endpoint identity is local evidence, not a guarantee of pure appearance or the whole trajectory.",
+    "Missing GT, ambiguity and end-of-video censoring are excluded from fully observable stability windows.",
+    "Historical official test was used in design; these are development diagnostics, not blind generalization."
+  ],
+  "D1": {
+    "pred_center_error_px": {
+      "n": 68060,
+      "mean": 2.629597229134438,
+      "median": 1.1941666208603412,
+      "p90": 3.304524656669171,
+      "p95": 5.587903610037284
+    },
+    "pred_center_error_norm": {
+      "n": 68060,
+      "mean": 0.29095482750957663,
+      "median": 0.10899216470089405,
+      "p90": 0.33366268261562576,
+      "p95": 0.6463601458888522
+    },
+    "pre_gmc_center_error_px": {
+      "n": 68060,
+      "mean": 2.881537196470613,
+      "median": 1.2290494839958415,
+      "p90": 3.6569437178756963,
+      "p95": 6.5283559841881775
+    },
+    "post_center_error_px": {
+      "n": 68060,
+      "mean": 2.4891317724317665,
+      "median": 1.0972940779256266,
+      "p90": 2.925518043825045,
+      "p95": 4.924159803412926
+    },
+    "det_center_error_px": {
+      "n": 61301,
+      "mean": 1.1726839234510256,
+      "median": 0.9732954432045127,
+      "p90": 2.221247287685881,
+      "p95": 2.734996197165447
+    },
+    "det_center_error_norm": {
+      "n": 61301,
+      "mean": 0.10573919201776744,
+      "median": 0.08775909967122905,
+      "p90": 0.2061840930410822,
+      "p95": 0.2493298164254602
+    },
+    "state_position_standardized_sq": {
+      "n": 68060,
+      "mean": 6.97978252802486,
+      "median": 1.3795992104206776,
+      "p90": 8.513940504231382,
+      "p95": 13.868423909778588
+    },
+    "gt_paired_nis4": {
+      "n": 61301,
+      "mean": 4.295157256668686,
+      "median": 0.24634117319048235,
+      "p90": 3.0905475236244513,
+      "p95": 7.328307302547462
+    },
+    "paired_prediction_minus_detection_error_px": {
+      "n": 61301,
+      "mean": 1.0618317700783773,
+      "median": 0.04811407868512374,
+      "p90": 1.1058957284207036,
+      "p95": 2.551915053305111
+    },
+    "state_position_95_covered": {
+      "n": 68060,
+      "fraction": 0.8492800470173376
+    },
+    "gt_paired_nis4_95_covered": {
+      "n": 61301,
+      "fraction": 0.958972936819954
+    },
+    "all_matched_detection_errors": {
+      "center_error_px": {
+        "n": 74516,
+        "mean": 1.2167152423516507,
+        "median": 1.0098691286329164,
+        "p90": 2.296020419424141,
+        "p95": 2.837589900389208
+      },
+      "center_error_norm": {
+        "n": 74516,
+        "mean": 0.11822504491196863,
+        "median": 0.09640187378263539,
+        "p90": 0.23302224460651888,
+        "p95": 0.28333347187198515
+      }
+    },
+    "by_gt_size": {
+      "lt8": {
+        "n": 17914,
+        "mean": 0.5143737297006085,
+        "median": 0.17193234571628307,
+        "p90": 0.7419083728457152,
+        "p95": 1.9097257768079463
+      },
+      "8to16": {
+        "n": 32373,
+        "mean": 0.2710599182896684,
+        "median": 0.11202436921577924,
+        "p90": 0.28688825633332526,
+        "p95": 0.47181229329100205
+      },
+      "16to32": {
+        "n": 16708,
+        "mean": 0.10230023296745329,
+        "median": 0.07208350625469309,
+        "p90": 0.17001760844811364,
+        "p95": 0.21642446339468835
+      },
+      "ge32": {
+        "n": 1065,
+        "mean": 0.09731412134595537,
+        "median": 0.07217226652704092,
+        "p90": 0.21473617386215796,
+        "p95": 0.27959589618602054
+      }
+    },
+    "anchor_status_counts": {
+      "present": 68060,
+      "unknown_identity": 29551,
+      "unannotated": 4062
+    },
+    "accepted_identity_counts": {
+      "same": 57079,
+      "unknown": 20512,
+      "no_update": 23970,
+      "different": 112
+    }
+  },
+  "D2": {
+    "status_counts": {
+      "initialized": 30,
+      "estimated": 12560
+    },
+    "same_state_gmc_error_change_px": {
+      "n": 9675,
+      "mean": -0.4304576420412916,
+      "median": -0.0060465303485273125,
+      "p90": 0.13118844110513775,
+      "p95": 0.3125279063908379
+    },
+    "correlations": {
+      "reprojection_median_px": {
+        "pred_error_mean_px": {
+          "n": 9675,
+          "spearman": 0.29374039377520017
+        },
+        "common_residual_norm_px": {
+          "n": 9675,
+          "spearman": 0.2650116709114159
+        }
+      },
+      "inlier_ratio_proxy": {
+        "pred_error_mean_px": {
+          "n": 9675,
+          "spearman": -0.18761528340422093
+        },
+        "common_residual_norm_px": {
+          "n": 9675,
+          "spearman": -0.2164335840587886
+        }
+      },
+      "spatial_coverage": {
+        "pred_error_mean_px": {
+          "n": 9675,
+          "spearman": 0.08578005651928315
+        },
+        "common_residual_norm_px": {
+          "n": 9675,
+          "spearman": 0.03919529994391802
+        }
+      }
+    }
+  },
+  "D3": {
+    "recovery_identity_counts": {
+      "same_gt": 302,
+      "unknown": 607,
+      "different_gt": 26
+    },
+    "windows": {
+      "3": {
+        "events": 935,
+        "complete_observable_same_gt_events": 295,
+        "stable_all_frames_count": 154,
+        "stable_all_frames_fraction": 0.5220338983050847,
+        "right_censored_events": 7,
+        "unknown_recovery_identity_events": 607,
+        "observed_first_failure_reasons_including_censored": {
+          "missing_without_usable_detection": 124,
+          "missing_with_usable_detection": 19
+        },
+        "complete_window_first_failure_reasons": {
+          "missing_without_usable_detection": 123,
+          "missing_with_usable_detection": 18
+        }
+      },
+      "5": {
+        "events": 935,
+        "complete_observable_same_gt_events": 292,
+        "stable_all_frames_count": 122,
+        "stable_all_frames_fraction": 0.4178082191780822,
+        "right_censored_events": 17,
+        "unknown_recovery_identity_events": 607,
+        "observed_first_failure_reasons_including_censored": {
+          "missing_without_usable_detection": 154,
+          "missing_with_usable_detection": 20
+        },
+        "complete_window_first_failure_reasons": {
+          "missing_without_usable_detection": 152,
+          "missing_with_usable_detection": 18
+        }
+      },
+      "10": {
+        "events": 935,
+        "complete_observable_same_gt_events": 287,
+        "stable_all_frames_count": 77,
+        "stable_all_frames_fraction": 0.2682926829268293,
+        "right_censored_events": 29,
+        "unknown_recovery_identity_events": 607,
+        "observed_first_failure_reasons_including_censored": {
+          "missing_without_usable_detection": 194,
+          "missing_with_usable_detection": 25
+        },
+        "complete_window_first_failure_reasons": {
+          "missing_without_usable_detection": 188,
+          "missing_with_usable_detection": 22
+        }
+      }
+    }
+  },
+  "detection_label_counts": {
+    "matched": 74516,
+    "ambiguous": 5566,
+    "unmatched": 53155,
+    "no_gt": 149
+  },
+  "per_sequence": {
+    "DJI_0028_3": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 4293,
+      "detections_ambiguous": 44,
+      "detections_unmatched": 1342,
+      "prediction_present": 4470,
+      "prediction_unknown_identity": 940,
+      "prediction_unannotated": 241
+    },
+    "DJI_0030_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 2275,
+      "detections_unmatched": 2333,
+      "prediction_present": 1425,
+      "prediction_unknown_identity": 1615,
+      "detections_ambiguous": 283,
+      "prediction_unannotated": 64
+    },
+    "DJI_0032_3": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 3069,
+      "detections_unmatched": 1769,
+      "detections_ambiguous": 188,
+      "prediction_present": 2966,
+      "prediction_unannotated": 842,
+      "prediction_unknown_identity": 1026
+    },
+    "DJI_0049_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 155,
+      "detections_unmatched": 180,
+      "prediction_present": 155,
+      "detections_ambiguous": 3,
+      "prediction_unknown_identity": 51
+    },
+    "DJI_0051_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 991,
+      "prediction_present": 1037,
+      "detections_unmatched": 203,
+      "prediction_unannotated": 30,
+      "detections_ambiguous": 1,
+      "prediction_unknown_identity": 1
+    },
+    "DJI_0061_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 10458,
+      "detections_ambiguous": 927,
+      "detections_unmatched": 7518,
+      "prediction_present": 9839,
+      "prediction_unknown_identity": 5538,
+      "prediction_unannotated": 742
+    },
+    "DJI_0073_3": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 11586,
+      "detections_ambiguous": 1898,
+      "detections_unmatched": 3467,
+      "prediction_present": 11169,
+      "prediction_unknown_identity": 3174,
+      "prediction_unannotated": 536
+    },
+    "DJI_0109_1": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 87,
+      "detections_unmatched": 394,
+      "prediction_present": 130
+    },
+    "DJI_0119_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 180,
+      "prediction_present": 166,
+      "detections_unmatched": 1
+    },
+    "DJI_0129_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 580,
+      "detections_unmatched": 252,
+      "prediction_present": 563,
+      "detections_ambiguous": 32,
+      "prediction_unknown_identity": 24
+    },
+    "DJI_0141_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 7801,
+      "detections_unmatched": 5092,
+      "prediction_present": 7205,
+      "prediction_unknown_identity": 2272,
+      "prediction_unannotated": 195,
+      "detections_ambiguous": 246
+    },
+    "DJI_0155_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_unmatched": 161,
+      "prediction_unknown_identity": 72,
+      "detections_matched": 154,
+      "prediction_present": 170,
+      "detections_ambiguous": 2,
+      "prediction_unannotated": 19,
+      "detections_no_gt": 95
+    },
+    "DJI_0159_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 181,
+      "prediction_present": 120
+    },
+    "DJI_0169_3": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 3136,
+      "detections_unmatched": 3880,
+      "prediction_present": 2529,
+      "prediction_unknown_identity": 2200,
+      "detections_ambiguous": 229,
+      "prediction_unannotated": 113
+    },
+    "DJI_0173_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_unmatched": 342,
+      "prediction_unknown_identity": 312,
+      "detections_matched": 283,
+      "prediction_present": 628
+    },
+    "DJI_0181_3": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 4409,
+      "detections_unmatched": 8931,
+      "detections_ambiguous": 139,
+      "prediction_present": 3876,
+      "prediction_unannotated": 343,
+      "prediction_unknown_identity": 2370
+    },
+    "DJI_0221_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_unmatched": 901,
+      "detections_matched": 348,
+      "detections_ambiguous": 59,
+      "prediction_present": 201,
+      "prediction_unknown_identity": 224
+    },
+    "DJI_0225_1": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 2110,
+      "detections_ambiguous": 227,
+      "detections_unmatched": 1263,
+      "prediction_present": 1836,
+      "prediction_unknown_identity": 1052,
+      "prediction_unannotated": 281
+    },
+    "DJI_0237_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 601,
+      "detections_unmatched": 371,
+      "detections_ambiguous": 12,
+      "prediction_present": 574,
+      "prediction_unknown_identity": 181,
+      "prediction_unannotated": 125,
+      "detections_no_gt": 9
+    },
+    "DJI_0255_1": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 488,
+      "detections_ambiguous": 4,
+      "prediction_present": 652,
+      "detections_unmatched": 25,
+      "prediction_unknown_identity": 6
+    },
+    "DJI_0257_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 575,
+      "detections_unmatched": 500,
+      "prediction_present": 690,
+      "detections_ambiguous": 150,
+      "prediction_unknown_identity": 398,
+      "prediction_unannotated": 11
+    },
+    "DJI_0277_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 979,
+      "prediction_present": 1057,
+      "prediction_unannotated": 123
+    },
+    "DJI_0283_1": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 3250,
+      "detections_unmatched": 3199,
+      "prediction_present": 3240,
+      "prediction_unknown_identity": 1875,
+      "detections_ambiguous": 72,
+      "prediction_unannotated": 251
+    },
+    "DJI_0303_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 1468,
+      "detections_unmatched": 754,
+      "prediction_present": 1341,
+      "detections_ambiguous": 116,
+      "prediction_unknown_identity": 337
+    },
+    "DJI_0307_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_no_gt": 1,
+      "detections_unmatched": 31,
+      "detections_matched": 37,
+      "prediction_present": 35,
+      "detections_ambiguous": 6,
+      "prediction_unknown_identity": 3
+    },
+    "DJI_0309_4": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 851,
+      "detections_unmatched": 1182,
+      "prediction_present": 929,
+      "detections_ambiguous": 79,
+      "prediction_unknown_identity": 159,
+      "prediction_unannotated": 30
+    },
+    "DJI_0325_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_no_gt": 44,
+      "prediction_unknown_identity": 95
+    },
+    "DJI_0327_3": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_matched": 13651,
+      "detections_ambiguous": 839,
+      "detections_unmatched": 4829,
+      "prediction_present": 10637,
+      "prediction_unknown_identity": 3236,
+      "prediction_unannotated": 116
+    },
+    "DJI_0339_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_unmatched": 2904,
+      "prediction_unknown_identity": 1334,
+      "detections_matched": 511,
+      "detections_ambiguous": 10,
+      "prediction_present": 411
+    },
+    "DJI_0345_2": {
+      "ignored_zero_marked_gt_rows": 0,
+      "detections_unmatched": 1331,
+      "prediction_unknown_identity": 1056,
+      "detections_matched": 9,
+      "prediction_present": 9
+    }
+  },
+  "files_sha256": {
+    "detection_audit.csv": "0abf8fb8291854c530f25950131fd5742f6c5990d920a8364c84b11f0bda7ff1",
+    "frame_error.csv": "2197baae5711022c15b99f4542778055fdfe2a694a5673deda70c3ca2812ccd4",
+    "recovery_checks.csv": "793ddcb86e51af02fbd7ffa0623f772572d99f11ab33476b7b99dc37fb13c7b7",
+    "recovery_events.csv": "ef6b67b8c3b21dd99126a6545bf90567dabb678ddb36fddb3134c2f2c58044de",
+    "recovery_windows.csv": "91822fa975dcd178a99e154d038ee5854662d3dcb7f71c7f72f6077a7bdf0439",
+    "track_error.csv": "6aea133b46e0fda328ef2acb9015dbf73e5732357d7ce13287979b30a8c18861"
+  }
+}

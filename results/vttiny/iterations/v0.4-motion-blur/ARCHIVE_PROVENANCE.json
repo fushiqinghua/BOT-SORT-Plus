@@ -1,0 +1,21 @@
+{
+  "source_archive_sha256": "2a57d959a19b44c98691da6d5139112956c698d2e20ea23289e0b869b1c63bec",
+  "source_evidence_files": 265,
+  "source_capture_commit": "02f8d892310117e1dc21affb719d31d967fa4745",
+  "settings_profile": "B_early_moderate",
+  "relocated_path_placeholders": [
+    "${TRACKING_ROOT}",
+    "${REDETR_ENV}"
+  ],
+  "relocated_members": [
+    "analysis/summary.json",
+    "experiment.json",
+    "observed/protocols/B_early_moderate.json",
+    "preflight.json",
+    "reference/protocols/B_early_moderate.json",
+    "round1_findings/completed_run_status.json",
+    "round1_findings/initial_smoke_status.json",
+    "round1_findings/smoke_analysis_after_reader_fix.json"
+  ],
+  "note": "Only machine-local path prefixes were replaced. Metrics, MOT/event bytes, and source-derived review images are unchanged. Embedded source run, trace, or protocol digests refer to original bytes and are preserved. Re-import D4 labels against the original run and operator form."
+}
