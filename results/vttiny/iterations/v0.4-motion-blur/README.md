@@ -68,3 +68,7 @@
 - 公开附件 SHA-256 为 `aadca757e247682f68ed936da567523b11ca9f820c196a5b688ef1654260a6be`。校验依据为 [公开文件清单](EVIDENCE_MANIFEST.json)。
 - 原实验包 SHA-256 为 `2a57d959a19b44c98691da6d5139112956c698d2e20ea23289e0b869b1c63bec`。原始协议与运行日志中记录的 SHA-256 对应原服务器字节。 [原始摘要清单](SOURCE_EVIDENCE_MANIFEST.json) · [路径处理记录](ARCHIVE_PROVENANCE.json)
 - D4 复核回填使用原运行协议及原操作表。当前状态为 `NEEDS_MORE_COMPARABLE_MANUAL_LABELS`。
+
+## D3 后续核验
+
+已归档两组中断的逐帧复核、短时低分续接和紧邻帧门控、只补帧验证，以及背景误报溯源与输出筛选。各轮统一使用冻结 B、官方 30 段和固定 D3 恢复窗口。 [后续核验与证据索引](d3-follow-up/README.md)

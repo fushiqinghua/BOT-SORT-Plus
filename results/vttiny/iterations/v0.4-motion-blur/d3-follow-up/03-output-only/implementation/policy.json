@@ -1,0 +1,25 @@
+{
+  "name": "B_postlow_output_v1",
+  "frozen_tracker": "B_early_moderate",
+  "causal": true,
+  "observes": "native newly lost active tracks and explicit B recoveries",
+  "applied_after": "native track processing and optional downstream position update",
+  "outputs": "append only raw detector xyxy and score, use original track ID",
+  "state": "No track IDs, embeddings, candidates, recovery decisions or tracking state are written; observer metadata is held only by the MOT writer.",
+  "score": "[0.05, 0.10)",
+  "min_prediction_iou": 0.5,
+  "row_and_track_margin": 0.1,
+  "occupied_iou_reject": 0.5,
+  "age_after_last_native_B_recovery": [
+    1,
+    3
+  ],
+  "last_native_observation_lag": 1,
+  "max_weak_outputs_per_recovery": 2,
+  "implementation_sha256": {
+    "tools/run_botsort_plus.py": "08cd01bd880672af7c9ffc50631dec7f7cb8cc875e2f29aaec75e6b0b7042570",
+    "botsort_plus/adapter_v2.py": "4882d5d60d861d819ee6ad715982b872921b61763c9a17d8928fd0371c30142a",
+    "botsort_plus/native_adapter.py": "bde0335319adbe3c088990356aa141f709ef067d768a77b8621e41ea05cd4a4f",
+    "botsort_plus/weak_output.py": "2395e06f69bc538710ea7d1718aa98ec1aefea2b97079a266f72274e3eef08e8"
+  }
+}

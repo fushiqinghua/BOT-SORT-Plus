@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "sequences": {
+    "DJI_0327_3": 390,
+    "DJI_0339_2": 600
+  },
+  "fields": [
+    "native_config",
+    "detector_sha256",
+    "rgb_encoder_sha256",
+    "source_protocol_sha256",
+    "encoder_contracts",
+    "boxmot_source_hashes",
+    "sequences",
+    "feature_hashes",
+    "decoded_image_hashes",
+    "detection_fingerprints"
+  ],
+  "effective_config_equal": true,
+  "protocol_sha256": "043e4a05a352599a7890737b9b6f687db1e42d28e88ab2d9be16e378082494d5"
+}

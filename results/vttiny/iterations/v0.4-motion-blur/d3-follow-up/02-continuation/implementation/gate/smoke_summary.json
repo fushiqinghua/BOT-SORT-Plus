@@ -1,0 +1,63 @@
+{
+  "disabled": {
+    "variant": "B_early_moderate",
+    "num_sequences": 2,
+    "per_input_verification": "same detector, config (except name), features, pixels and runtime as frozen B",
+    "changed_sequences": [],
+    "num_changed": 0,
+    "probe_reasons": {},
+    "accepted": []
+  },
+  "enabled": {
+    "variant": "B_adjacent_gate",
+    "num_sequences": 2,
+    "per_input_verification": "same detector, config (except name), features, pixels and runtime as frozen B",
+    "changed_sequences": [
+      "DJI_0159_2"
+    ],
+    "num_changed": 1,
+    "probe_reasons": {
+      "no_candidate": 4,
+      "accepted": 3,
+      "prior_geometry": 1
+    },
+    "accepted": [
+      {
+        "sequence": "DJI_0159_2",
+        "frame": 30,
+        "event": "match",
+        "stage": "low_adjacent_fallback",
+        "track_id": 1,
+        "det_index": 0,
+        "cost": 0.572935564659963,
+        "recovery_frame": 28,
+        "normalized_centroid_motion": 0.49435796924941844,
+        "track_origin": "native"
+      },
+      {
+        "sequence": "DJI_0159_2",
+        "frame": 34,
+        "event": "match",
+        "stage": "low_adjacent_fallback",
+        "track_id": 1,
+        "det_index": 0,
+        "cost": 0.5563765787254928,
+        "recovery_frame": 33,
+        "normalized_centroid_motion": 0.4463692680826435,
+        "track_origin": "native"
+      },
+      {
+        "sequence": "DJI_0159_2",
+        "frame": 54,
+        "event": "match",
+        "stage": "low_adjacent_fallback",
+        "track_id": 1,
+        "det_index": 0,
+        "cost": 0.5816890566351616,
+        "recovery_frame": 52,
+        "normalized_centroid_motion": 0.15358390504160765,
+        "track_origin": "native"
+      }
+    ]
+  }
+}

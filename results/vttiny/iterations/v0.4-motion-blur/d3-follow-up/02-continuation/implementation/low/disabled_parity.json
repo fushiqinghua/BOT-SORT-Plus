@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "sequences": [
+    "DJI_0051_2",
+    "DJI_0327_3"
+  ],
+  "byte_equal_mot_and_events": true
+}

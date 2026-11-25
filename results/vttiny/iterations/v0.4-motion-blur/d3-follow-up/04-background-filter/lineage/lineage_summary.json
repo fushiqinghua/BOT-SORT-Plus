@@ -1,0 +1,197 @@
+{
+  "total": 191,
+  "clear_fp": 119,
+  "clear_tp": 72,
+  "categories": {
+    "tp_same_id_double_witness": 61,
+    "fp_displaced_or_different_gt": 18,
+    "fp_weak_unconfirmed_overlap": 8,
+    "fp_persistent_background": 45,
+    "fp_localization_same_anchor": 44,
+    "fp_unconfirmed_no_overlap": 3,
+    "tp_same_gt_longer_history_only": 9,
+    "tp_different_from_recent_clear_gt": 2,
+    "fp_competing_assignment": 1
+  },
+  "sequences": {
+    "DJI_0028_3": {
+      "tp_same_id_double_witness": 1,
+      "fp_displaced_or_different_gt": 2,
+      "fp_weak_unconfirmed_overlap": 1
+    },
+    "DJI_0030_2": {
+      "fp_persistent_background": 2,
+      "fp_localization_same_anchor": 5
+    },
+    "DJI_0032_3": {
+      "fp_unconfirmed_no_overlap": 1,
+      "fp_localization_same_anchor": 1
+    },
+    "DJI_0049_2": {
+      "tp_same_id_double_witness": 1
+    },
+    "DJI_0051_2": {
+      "tp_same_id_double_witness": 3
+    },
+    "DJI_0061_2": {
+      "fp_localization_same_anchor": 4,
+      "tp_same_id_double_witness": 6,
+      "tp_same_gt_longer_history_only": 3,
+      "fp_weak_unconfirmed_overlap": 3,
+      "fp_displaced_or_different_gt": 4,
+      "tp_different_from_recent_clear_gt": 1
+    },
+    "DJI_0073_3": {
+      "fp_persistent_background": 14,
+      "tp_same_id_double_witness": 1,
+      "fp_localization_same_anchor": 4,
+      "fp_competing_assignment": 1,
+      "fp_displaced_or_different_gt": 1
+    },
+    "DJI_0141_2": {
+      "fp_persistent_background": 7,
+      "tp_same_id_double_witness": 13,
+      "fp_localization_same_anchor": 1,
+      "fp_unconfirmed_no_overlap": 2,
+      "tp_same_gt_longer_history_only": 1
+    },
+    "DJI_0155_2": {
+      "fp_displaced_or_different_gt": 1
+    },
+    "DJI_0169_3": {
+      "fp_localization_same_anchor": 5
+    },
+    "DJI_0181_3": {
+      "fp_localization_same_anchor": 1,
+      "fp_persistent_background": 7,
+      "tp_same_id_double_witness": 1,
+      "fp_displaced_or_different_gt": 6
+    },
+    "DJI_0221_2": {
+      "tp_same_gt_longer_history_only": 1
+    },
+    "DJI_0225_1": {
+      "fp_persistent_background": 3
+    },
+    "DJI_0237_2": {
+      "tp_same_id_double_witness": 1
+    },
+    "DJI_0277_2": {
+      "tp_same_id_double_witness": 1
+    },
+    "DJI_0283_1": {
+      "fp_weak_unconfirmed_overlap": 2,
+      "fp_displaced_or_different_gt": 3
+    },
+    "DJI_0303_2": {
+      "tp_same_gt_longer_history_only": 1,
+      "fp_localization_same_anchor": 1
+    },
+    "DJI_0309_4": {
+      "tp_same_id_double_witness": 4,
+      "fp_localization_same_anchor": 1
+    },
+    "DJI_0327_3": {
+      "tp_same_id_double_witness": 29,
+      "fp_localization_same_anchor": 21,
+      "tp_same_gt_longer_history_only": 3,
+      "tp_different_from_recent_clear_gt": 1,
+      "fp_displaced_or_different_gt": 1
+    },
+    "DJI_0339_2": {
+      "fp_persistent_background": 10
+    },
+    "DJI_0345_2": {
+      "fp_weak_unconfirmed_overlap": 2,
+      "fp_persistent_background": 2
+    }
+  },
+  "fp_by_current_best_iou": {
+    "zero": 59,
+    "between_0_and_0p1": 4,
+    "between_0p1_and_0p3": 9,
+    "between_0p3_and_0p5": 46,
+    "at_least_0p5": 1
+  },
+  "past_background": {
+    "schema": "all native committed detector/output boxes of the same numeric ID strictly before supplemental f; minimum 3 measured frames and current/prior maximum GT IoU strictly below .10; diagnostic only",
+    "rows": 45,
+    "tracks": 20,
+    "sequences": {
+      "DJI_0030_2": 2,
+      "DJI_0073_3": 14,
+      "DJI_0141_2": 7,
+      "DJI_0181_3": 7,
+      "DJI_0225_1": 3,
+      "DJI_0339_2": 10,
+      "DJI_0345_2": 2
+    },
+    "sensitivities": [
+      {
+        "history_minimum": 1,
+        "iou_strict_upper": 1e-06,
+        "eligible_fp": 41
+      },
+      {
+        "history_minimum": 1,
+        "iou_strict_upper": 0.05,
+        "eligible_fp": 45
+      },
+      {
+        "history_minimum": 1,
+        "iou_strict_upper": 0.1,
+        "eligible_fp": 45
+      },
+      {
+        "history_minimum": 1,
+        "iou_strict_upper": 0.2,
+        "eligible_fp": 46
+      },
+      {
+        "history_minimum": 3,
+        "iou_strict_upper": 1e-06,
+        "eligible_fp": 41
+      },
+      {
+        "history_minimum": 3,
+        "iou_strict_upper": 0.05,
+        "eligible_fp": 45
+      },
+      {
+        "history_minimum": 3,
+        "iou_strict_upper": 0.1,
+        "eligible_fp": 45
+      },
+      {
+        "history_minimum": 3,
+        "iou_strict_upper": 0.2,
+        "eligible_fp": 46
+      },
+      {
+        "history_minimum": 5,
+        "iou_strict_upper": 1e-06,
+        "eligible_fp": 41
+      },
+      {
+        "history_minimum": 5,
+        "iou_strict_upper": 0.05,
+        "eligible_fp": 45
+      },
+      {
+        "history_minimum": 5,
+        "iou_strict_upper": 0.1,
+        "eligible_fp": 45
+      },
+      {
+        "history_minimum": 5,
+        "iou_strict_upper": 0.2,
+        "eligible_fp": 46
+      }
+    ]
+  },
+  "trigger_fp_have_prior_clear_gt": 63,
+  "native_past_all_unmatched": {
+    "clear_fp": 56,
+    "clear_tp": 0
+  }
+}

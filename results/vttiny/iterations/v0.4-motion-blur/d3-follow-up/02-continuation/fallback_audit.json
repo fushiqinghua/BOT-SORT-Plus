@@ -1,0 +1,23 @@
+{
+  "B_postlow_v1": {
+    "same_gt": 68,
+    "emits_output": 243,
+    "anchor_iou_ge_half": 71,
+    "anchor_available": 81,
+    "same_gt_missing_in_B": 68,
+    "unknown_identity": 175,
+    "triggers": 243,
+    "sequences": 21
+  },
+  "B_adjacent_gate": {
+    "unknown_identity": 14,
+    "emits_output": 19,
+    "anchor_iou_ge_half": 5,
+    "anchor_available": 7,
+    "same_gt_missing_in_B": 4,
+    "same_gt": 4,
+    "different_gt": 1,
+    "triggers": 19,
+    "sequences": 9
+  }
+}

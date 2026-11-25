@@ -1,0 +1,12 @@
+{
+  "variant": "B_adjacent_gate",
+  "recovery_window": 3,
+  "consecutive_measurement": 1,
+  "fallback_limit_per_restore": 1,
+  "iou_range": "[0.40,0.50)",
+  "prior_normalized_center_displacement_max": 0.5,
+  "candidate_guard": "Only unassigned native low detections; one candidate in residual row at .4, no other low-track row at .4 for that candidate",
+  "method_sha256": "14d082c793e92d2bef6203d889d680ab341ef0226dceb8170915eaed1ac3d07d",
+  "original_adapter_sha256": "d779ea7c50cd71746278f2499641957fe2a265a5aa186d444861194708d1d96d",
+  "patched_adapter_sha256": "5222a56167c065494c3a0de6e1c0e216d865575ee112a56521902b36025cbbc5"
+}

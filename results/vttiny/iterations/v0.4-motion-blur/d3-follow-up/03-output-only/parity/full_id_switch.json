@@ -1,0 +1,376 @@
+{
+  "sequences": [
+    {
+      "sequence": "DJI_0028_3",
+      "IDSW": {
+        "B_early_moderate": 28,
+        "B_postlow_v1": 28,
+        "B_postlow_output_v1": 28
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0030_2",
+      "IDSW": {
+        "B_early_moderate": 0,
+        "B_postlow_v1": 0,
+        "B_postlow_output_v1": 0
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0032_3",
+      "IDSW": {
+        "B_early_moderate": 9,
+        "B_postlow_v1": 9,
+        "B_postlow_output_v1": 9
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0049_2",
+      "IDSW": {
+        "B_early_moderate": 0,
+        "B_postlow_v1": 0,
+        "B_postlow_output_v1": 0
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0051_2",
+      "IDSW": {
+        "B_early_moderate": 5,
+        "B_postlow_v1": 5,
+        "B_postlow_output_v1": 5
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0061_2",
+      "IDSW": {
+        "B_early_moderate": 178,
+        "B_postlow_v1": 177,
+        "B_postlow_output_v1": 179
+      },
+      "introduced": [
+        {
+          "frame": 169,
+          "gt": 30,
+          "from_id": 151,
+          "to_id": 177,
+          "from_frame": 152,
+          "from_supplement": false,
+          "to_supplement": true
+        }
+      ],
+      "removed": [],
+      "different_transition_same_frame": [
+        {
+          "before": {
+            "frame": 171,
+            "gt": 30,
+            "from_id": 151,
+            "to_id": 95,
+            "from_frame": 152,
+            "from_supplement": false,
+            "to_supplement": false
+          },
+          "after": {
+            "frame": 171,
+            "gt": 30,
+            "from_id": 177,
+            "to_id": 95,
+            "from_frame": 169,
+            "from_supplement": true,
+            "to_supplement": false
+          }
+        }
+      ]
+    },
+    {
+      "sequence": "DJI_0073_3",
+      "IDSW": {
+        "B_early_moderate": 20,
+        "B_postlow_v1": 20,
+        "B_postlow_output_v1": 20
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0109_1",
+      "IDSW": {
+        "B_early_moderate": 15,
+        "B_postlow_v1": 15,
+        "B_postlow_output_v1": 15
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0119_2",
+      "IDSW": {
+        "B_early_moderate": 0,
+        "B_postlow_v1": 0,
+        "B_postlow_output_v1": 0
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0129_2",
+      "IDSW": {
+        "B_early_moderate": 0,
+        "B_postlow_v1": 0,
+        "B_postlow_output_v1": 0
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0141_2",
+      "IDSW": {
+        "B_early_moderate": 11,
+        "B_postlow_v1": 11,
+        "B_postlow_output_v1": 11
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0155_2",
+      "IDSW": {
+        "B_early_moderate": 2,
+        "B_postlow_v1": 2,
+        "B_postlow_output_v1": 2
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0159_2",
+      "IDSW": {
+        "B_early_moderate": 0,
+        "B_postlow_v1": 0,
+        "B_postlow_output_v1": 0
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0169_3",
+      "IDSW": {
+        "B_early_moderate": 11,
+        "B_postlow_v1": 11,
+        "B_postlow_output_v1": 11
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0173_2",
+      "IDSW": {
+        "B_early_moderate": 24,
+        "B_postlow_v1": 24,
+        "B_postlow_output_v1": 24
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0181_3",
+      "IDSW": {
+        "B_early_moderate": 4,
+        "B_postlow_v1": 3,
+        "B_postlow_output_v1": 4
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0221_2",
+      "IDSW": {
+        "B_early_moderate": 2,
+        "B_postlow_v1": 2,
+        "B_postlow_output_v1": 2
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0225_1",
+      "IDSW": {
+        "B_early_moderate": 5,
+        "B_postlow_v1": 5,
+        "B_postlow_output_v1": 5
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0237_2",
+      "IDSW": {
+        "B_early_moderate": 0,
+        "B_postlow_v1": 0,
+        "B_postlow_output_v1": 0
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0255_1",
+      "IDSW": {
+        "B_early_moderate": 7,
+        "B_postlow_v1": 7,
+        "B_postlow_output_v1": 7
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0257_2",
+      "IDSW": {
+        "B_early_moderate": 10,
+        "B_postlow_v1": 10,
+        "B_postlow_output_v1": 10
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0277_2",
+      "IDSW": {
+        "B_early_moderate": 4,
+        "B_postlow_v1": 4,
+        "B_postlow_output_v1": 4
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0283_1",
+      "IDSW": {
+        "B_early_moderate": 2,
+        "B_postlow_v1": 2,
+        "B_postlow_output_v1": 2
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0303_2",
+      "IDSW": {
+        "B_early_moderate": 9,
+        "B_postlow_v1": 9,
+        "B_postlow_output_v1": 9
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0307_2",
+      "IDSW": {
+        "B_early_moderate": 0,
+        "B_postlow_v1": 0,
+        "B_postlow_output_v1": 0
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0309_4",
+      "IDSW": {
+        "B_early_moderate": 7,
+        "B_postlow_v1": 7,
+        "B_postlow_output_v1": 7
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0325_2",
+      "IDSW": {
+        "B_early_moderate": 0,
+        "B_postlow_v1": 0,
+        "B_postlow_output_v1": 0
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "IDSW": {
+        "B_early_moderate": 21,
+        "B_postlow_v1": 20,
+        "B_postlow_output_v1": 22
+      },
+      "introduced": [
+        {
+          "frame": 289,
+          "gt": 89,
+          "from_id": 41,
+          "to_id": 48,
+          "from_frame": 232,
+          "from_supplement": true,
+          "to_supplement": true
+        }
+      ],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0339_2",
+      "IDSW": {
+        "B_early_moderate": 0,
+        "B_postlow_v1": 0,
+        "B_postlow_output_v1": 0
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    },
+    {
+      "sequence": "DJI_0345_2",
+      "IDSW": {
+        "B_early_moderate": 0,
+        "B_postlow_v1": 0,
+        "B_postlow_output_v1": 0
+      },
+      "introduced": [],
+      "removed": [],
+      "different_transition_same_frame": []
+    }
+  ],
+  "definition": "CLEAR counts an identity switch against the last matched ID for a GT, across any length of no match. A supplemental output can shift the frame scored."
+}

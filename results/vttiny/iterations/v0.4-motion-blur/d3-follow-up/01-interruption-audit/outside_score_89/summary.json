@@ -1,0 +1,201 @@
+{
+  "scope": "Only aligned_but_outside_score at the first interruption in complete same-GT recovery+1..+10 windows.",
+  "events": 89,
+  "sequences": {
+    "DJI_0028_3": 1,
+    "DJI_0049_2": 3,
+    "DJI_0051_2": 5,
+    "DJI_0061_2": 3,
+    "DJI_0073_3": 3,
+    "DJI_0141_2": 17,
+    "DJI_0155_2": 2,
+    "DJI_0159_2": 1,
+    "DJI_0181_3": 2,
+    "DJI_0237_2": 2,
+    "DJI_0277_2": 1,
+    "DJI_0303_2": 3,
+    "DJI_0309_4": 6,
+    "DJI_0327_3": 40
+  },
+  "source_hashes": {
+    "observed/protocols/B_early_moderate.json": "5be88ef93661106132e7f332a73ac56e7eb213441876ccf986c11f85246a52c2",
+    "analysis/summary.json": "edeb362011f4ebe9fed768712bdfdbda897fc53f568db5b322eddde8d34e8fb2",
+    "round1_findings/D3_complete_first_failure_candidates.csv": "266be73e95119706e42f9af76f84802234452fa6b616a58f48cd6402e1f38b84",
+    "analysis/detection_audit.csv": "0abf8fb8291854c530f25950131fd5742f6c5990d920a8364c84b11f0bda7ff1",
+    "blur/observation_quality.csv": "c92e39025ee157dd7c27ee3802fa0c11e3f20d01bd6cccf06088e9a1a1d7fbf0",
+    "analysis/track_error.csv": "6aea133b46e0fda328ef2acb9015dbf73e5732357d7ce13287979b30a8c18861"
+  },
+  "thresholds": {
+    "low": 0.1,
+    "high": 0.5,
+    "diagnostic_iou": 0.5,
+    "diagnostic_ambiguity_margin": 0.05
+  },
+  "first_failure_offset_after_recovery": {
+    "1": 28,
+    "2": 13,
+    "3": 12,
+    "4": 8,
+    "5": 7,
+    "6": 4,
+    "7": 5,
+    "8": 3,
+    "9": 3,
+    "10": 6
+  },
+  "failure_target_short_side_lt_8": 36,
+  "all_aligned_scores_at_failure": {
+    "n": 93,
+    "min": 0.05310404300689697,
+    "median": 0.07975978404283524,
+    "max": 0.09952058643102646
+  },
+  "max_aligned_score_per_event": {
+    "n": 89,
+    "min": 0.05310404300689697,
+    "median": 0.07975978404283524,
+    "max": 0.09952058643102646
+  },
+  "candidate_counts": {
+    "aligned": 93,
+    "at_or_below_low": 93,
+    "equal_high_boundary": 0,
+    "same_gt_assigned": 88,
+    "ambiguous": 5,
+    "overlaps_another_gt_above_iou_threshold": 0
+  },
+  "events_with_same_gt_at_first_failure": 88,
+  "events_with_multiple_aligned_candidates": 4,
+  "events_with_other_gt_overlap_at_failure": 0,
+  "representative_same_gt_with_valid_rgb": 0,
+  "same_gt_representative_rgb_quality": {
+    "n": 0
+  },
+  "same_gt_representative_adjacent_cosine": {
+    "n": 0
+  },
+  "same_gt_representative_appearance_margin": {
+    "n": 0
+  },
+  "positive_appearance_margin": 0,
+  "continuity_prefix": {
+    "1": {
+      "exposed": 89,
+      "aligned_outside_band": 89,
+      "same_gt_low_only": 88
+    },
+    "2": {
+      "exposed": 83,
+      "aligned_outside_band": 23,
+      "same_gt_low_only": 23
+    },
+    "3": {
+      "exposed": 80,
+      "aligned_outside_band": 14,
+      "same_gt_low_only": 14
+    },
+    "5": {
+      "exposed": 72,
+      "aligned_outside_band": 3,
+      "same_gt_low_only": 3
+    }
+  },
+  "strict_prefix_right_censored": 6,
+  "next_same_gt_eligible_within_original_window": 69,
+  "bridge_opportunities_by_low_prefix_length": {
+    "1": 40,
+    "2": 6,
+    "3": 4,
+    "4": 2,
+    "5": 2
+  },
+  "sensitivity_ge_0.05_and_same_gt_at_failure": 88,
+  "sensitivity_ge_0.075_and_same_gt_at_failure": 51,
+  "example_cases": {
+    "same_gt_low_prefix_then_eligible": {
+      "case_id": 66,
+      "sequence": "DJI_0327_3",
+      "recovery_frame": 181,
+      "first_failure_frame": 182,
+      "frame": 182,
+      "offset_from_failure": 0,
+      "original_track_id": 27,
+      "target_gt_id": 76,
+      "aligned": 1,
+      "score_eligible_aligned": 0,
+      "same_gt_aligned": 1,
+      "same_gt_at_or_below_low": 1,
+      "same_gt_eligible_aligned": 0,
+      "ambiguous_aligned": 0,
+      "other_gt_overlap_aligned": 0,
+      "target_short_side_px": 10.0,
+      "representative_det": 40,
+      "representative_score": 0.09582848101854324,
+      "representative_iou": 0.8006263133946124,
+      "representative_best_rival_iou": 0.08787623178670154,
+      "representative_assignment_status": "matched",
+      "representative_gt": 76,
+      "representative_rgb_valid": false,
+      "representative_rgb_quality": null,
+      "appearance_margin": null,
+      "adjacent_identity_cosine": null,
+      "original_track_state_after": "2",
+      "original_track_output_status": "missing_without_usable_detection",
+      "original_track_pred_center_error_px": 0.831149248372113,
+      "original_track_gap_frames": "1",
+      "max_aligned_score": 0.09582848101854324,
+      "min_aligned_score": 0.09582848101854324,
+      "aligned_at_or_below_low": 1,
+      "aligned_at_high_boundary": 0,
+      "followup_available_frames": 10,
+      "aligned_outside_band_prefix": 5,
+      "same_gt_low_only_prefix": 5,
+      "same_gt_low_prefix_right_censored": false,
+      "next_same_gt_eligible_offset": 5,
+      "immediate_usable_after_same_gt_low_prefix": true
+    },
+    "no_unique_same_gt": {
+      "case_id": 59,
+      "sequence": "DJI_0327_3",
+      "recovery_frame": 122,
+      "first_failure_frame": 127,
+      "frame": 127,
+      "offset_from_failure": 0,
+      "original_track_id": 47,
+      "target_gt_id": 168,
+      "aligned": 2,
+      "score_eligible_aligned": 0,
+      "same_gt_aligned": 0,
+      "same_gt_at_or_below_low": 0,
+      "same_gt_eligible_aligned": 0,
+      "ambiguous_aligned": 2,
+      "other_gt_overlap_aligned": 0,
+      "target_short_side_px": 16.0,
+      "representative_det": 53,
+      "representative_score": 0.08319534361362457,
+      "representative_iou": 0.6754796575084498,
+      "representative_best_rival_iou": 0.020142981480065592,
+      "representative_assignment_status": "ambiguous",
+      "representative_gt": null,
+      "representative_rgb_valid": false,
+      "representative_rgb_quality": null,
+      "appearance_margin": null,
+      "adjacent_identity_cosine": null,
+      "original_track_state_after": "2",
+      "original_track_output_status": "missing_without_usable_detection",
+      "original_track_pred_center_error_px": 3.354324811958249,
+      "original_track_gap_frames": "1",
+      "max_aligned_score": 0.08319534361362457,
+      "min_aligned_score": 0.06753455102443695,
+      "aligned_at_or_below_low": 2,
+      "aligned_at_high_boundary": 0,
+      "followup_available_frames": 6,
+      "aligned_outside_band_prefix": 1,
+      "same_gt_low_only_prefix": 0,
+      "same_gt_low_prefix_right_censored": false,
+      "next_same_gt_eligible_offset": 1,
+      "immediate_usable_after_same_gt_low_prefix": false
+    }
+  },
+  "interpretation": "Oracle GT used only for offline classification. Score sensitivity and prefix/bridge do not measure online eligibility, association success, false positives, or benefit. Prefixes stop at original recovery+10; error target is fixed to the recovery identity."
+}

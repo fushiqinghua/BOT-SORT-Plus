@@ -1,0 +1,63 @@
+{
+  "archive_sha256": "2a57d959a19b44c98691da6d5139112956c698d2e20ea23289e0b869b1c63bec",
+  "complete_windows": 287,
+  "stable_windows": 77,
+  "first_interruptions": 210,
+  "all_failure_counts": {
+    "aligned_but_outside_score": 89,
+    "aligned_and_eligible": 22,
+    "no_aligned_box": 95,
+    "no_detector_rows": 4
+  },
+  "groups": {
+    "aligned_but_outside_score": {
+      "events": 89,
+      "recording_segments": 14,
+      "recording_prefixes": 14,
+      "distinct_gt_frames": 89,
+      "distinct_track_ids_by_sequence": 50,
+      "offset_first_3": 53,
+      "offset_first_5": 68,
+      "sequence_counts": {
+        "DJI_0327_3": 40,
+        "DJI_0141_2": 17,
+        "DJI_0309_4": 6,
+        "DJI_0051_2": 5,
+        "DJI_0049_2": 3,
+        "DJI_0061_2": 3,
+        "DJI_0073_3": 3,
+        "DJI_0303_2": 3,
+        "DJI_0155_2": 2,
+        "DJI_0181_3": 2,
+        "DJI_0237_2": 2,
+        "DJI_0028_3": 1,
+        "DJI_0159_2": 1,
+        "DJI_0277_2": 1
+      }
+    },
+    "aligned_and_eligible": {
+      "events": 22,
+      "recording_segments": 13,
+      "recording_prefixes": 13,
+      "distinct_gt_frames": 22,
+      "distinct_track_ids_by_sequence": 15,
+      "offset_first_3": 16,
+      "offset_first_5": 17,
+      "sequence_counts": {
+        "DJI_0159_2": 5,
+        "DJI_0051_2": 3,
+        "DJI_0109_1": 3,
+        "DJI_0309_4": 2,
+        "DJI_0032_3": 1,
+        "DJI_0061_2": 1,
+        "DJI_0155_2": 1,
+        "DJI_0173_2": 1,
+        "DJI_0221_2": 1,
+        "DJI_0255_1": 1,
+        "DJI_0257_2": 1,
+        "DJI_0303_2": 1,
+        "DJI_0327_3": 1
+      }
+    }
+  }
+}

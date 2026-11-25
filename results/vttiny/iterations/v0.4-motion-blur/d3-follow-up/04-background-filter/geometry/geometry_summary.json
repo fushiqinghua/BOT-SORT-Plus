@@ -1,0 +1,768 @@
+{
+  "bins": {
+    "TP": 72,
+    "zero_iou_but_near_center": 4,
+    "iou_0_to_025": 10,
+    "zero_iou_and_far_center": 54,
+    "iou_025_to_050": 49,
+    "iou_above_050_clear_conflict": 1,
+    "no_annotated_target": 1
+  },
+  "sequence_bins": {
+    "DJI_0028_3": {
+      "CLEAR_same_gt_and_prior_detection_agree": 1,
+      "zero_iou_but_near_center": 2,
+      "iou_0_to_025": 1
+    },
+    "DJI_0030_2": {
+      "zero_iou_and_far_center": 2,
+      "iou_025_to_050": 5
+    },
+    "DJI_0032_3": {
+      "iou_0_to_025": 1,
+      "iou_025_to_050": 1
+    },
+    "DJI_0049_2": {
+      "CLEAR_same_gt_and_prior_detection_agree": 1
+    },
+    "DJI_0051_2": {
+      "CLEAR_same_gt_and_prior_detection_agree": 3
+    },
+    "DJI_0061_2": {
+      "iou_025_to_050": 7,
+      "CLEAR_same_gt_and_prior_detection_agree": 6,
+      "CLEAR_matched_prior_identity_unverified": 4,
+      "iou_0_to_025": 4
+    },
+    "DJI_0073_3": {
+      "zero_iou_and_far_center": 15,
+      "CLEAR_same_gt_and_prior_detection_agree": 1,
+      "iou_025_to_050": 4,
+      "iou_above_050_clear_conflict": 1
+    },
+    "DJI_0141_2": {
+      "zero_iou_and_far_center": 8,
+      "CLEAR_same_gt_and_prior_detection_agree": 13,
+      "iou_025_to_050": 1,
+      "zero_iou_but_near_center": 1,
+      "CLEAR_matched_prior_identity_unverified": 1
+    },
+    "DJI_0155_2": {
+      "no_annotated_target": 1
+    },
+    "DJI_0169_3": {
+      "iou_025_to_050": 3,
+      "iou_0_to_025": 2
+    },
+    "DJI_0181_3": {
+      "iou_025_to_050": 1,
+      "zero_iou_and_far_center": 13,
+      "CLEAR_same_gt_and_prior_detection_agree": 1
+    },
+    "DJI_0221_2": {
+      "CLEAR_matched_prior_identity_unverified": 1
+    },
+    "DJI_0225_1": {
+      "zero_iou_and_far_center": 2,
+      "zero_iou_but_near_center": 1
+    },
+    "DJI_0237_2": {
+      "CLEAR_same_gt_and_prior_detection_agree": 1
+    },
+    "DJI_0277_2": {
+      "CLEAR_same_gt_and_prior_detection_agree": 1
+    },
+    "DJI_0283_1": {
+      "iou_025_to_050": 2,
+      "zero_iou_and_far_center": 2,
+      "iou_0_to_025": 1
+    },
+    "DJI_0303_2": {
+      "CLEAR_matched_prior_identity_unverified": 1,
+      "iou_025_to_050": 1
+    },
+    "DJI_0309_4": {
+      "CLEAR_same_gt_and_prior_detection_agree": 4,
+      "iou_025_to_050": 1
+    },
+    "DJI_0327_3": {
+      "CLEAR_same_gt_and_prior_detection_agree": 29,
+      "iou_025_to_050": 21,
+      "CLEAR_matched_prior_identity_unverified": 4,
+      "iou_0_to_025": 1
+    },
+    "DJI_0339_2": {
+      "zero_iou_and_far_center": 10
+    },
+    "DJI_0345_2": {
+      "iou_025_to_050": 2,
+      "zero_iou_and_far_center": 2
+    }
+  },
+  "histories": {
+    "('DJI_0339_2', 6)": {
+      "hits": 384,
+      "start": 186,
+      "end": 600,
+      "max_gt_iou": 0.0,
+      "min_max_native_score": [
+        0.10159040242433548,
+        0.8130569458007812
+      ]
+    },
+    "('DJI_0339_2', 2)": {
+      "hits": 125,
+      "start": 9,
+      "end": 206,
+      "max_gt_iou": 0.0,
+      "min_max_native_score": [
+        0.10069802403450012,
+        0.7177112698554993
+      ]
+    }
+  },
+  "historical_GT_support": {
+    "TP": {
+      "total": 72,
+      "previous_det_and_native_output_support_same_gt": 61,
+      "recovery_raw_det_labelled": 62,
+      "prior_raw_det_labelled": 62,
+      "recovery_and_previous_raw_det_support_same_gt": 59,
+      "recovered_gt_absent_from_original_matches": 72,
+      "matched_truth_equals_recovery_truth": 62
+    },
+    "FP_zero_iou": {
+      "total": 59,
+      "previous_det_and_native_output_support_same_gt": 0,
+      "recovery_raw_det_labelled": 0,
+      "prior_raw_det_labelled": 0,
+      "recovery_and_previous_raw_det_support_same_gt": 0,
+      "recovered_gt_absent_from_original_matches": 0,
+      "matched_truth_equals_recovery_truth": 0
+    },
+    "FP_partial_overlap": {
+      "total": 59,
+      "previous_det_and_native_output_support_same_gt": 9,
+      "recovery_raw_det_labelled": 11,
+      "prior_raw_det_labelled": 10,
+      "recovery_and_previous_raw_det_support_same_gt": 8,
+      "recovered_gt_absent_from_original_matches": 0,
+      "matched_truth_equals_recovery_truth": 0
+    },
+    "FP_competition": {
+      "total": 1,
+      "previous_det_and_native_output_support_same_gt": false,
+      "recovery_raw_det_labelled": false,
+      "prior_raw_det_labelled": false,
+      "recovery_and_previous_raw_det_support_same_gt": false,
+      "recovered_gt_absent_from_original_matches": false,
+      "matched_truth_equals_recovery_truth": false
+    }
+  },
+  "closest_fp": [
+    {
+      "seq": "DJI_0073_3",
+      "frame": 92,
+      "tid": 63,
+      "iou": 0.5436517667758637,
+      "nearest": [
+        0.21930398947091015,
+        20
+      ],
+      "box": [
+        261.15643310546875,
+        261.66339111328125,
+        289.68756103515625,
+        284.57904052734375
+      ],
+      "target": [
+        273.0,
+        261.0,
+        291.0,
+        285.0
+      ],
+      "target_gt": 20,
+      "prior_det_gt": "",
+      "prior_output_gt": ""
+    },
+    {
+      "seq": "DJI_0327_3",
+      "frame": 121,
+      "tid": 5,
+      "iou": 0.4984114130422225,
+      "nearest": [
+        0.21704381440093884,
+        27
+      ],
+      "box": [
+        279.25140380859375,
+        475.18670654296875,
+        288.55499267578125,
+        485.20294189453125
+      ],
+      "target": [
+        280.0,
+        479.0,
+        288.0,
+        486.0
+      ],
+      "target_gt": 27,
+      "prior_det_gt": "",
+      "prior_output_gt": ""
+    },
+    {
+      "seq": "DJI_0327_3",
+      "frame": 316,
+      "tid": 62,
+      "iou": 0.49449094406570415,
+      "nearest": [
+        0.17293969269177067,
+        217
+      ],
+      "box": [
+        205.96514892578125,
+        417.53375244140625,
+        214.40869140625,
+        427.593017578125
+      ],
+      "target": [
+        207.0,
+        418.0,
+        214.0,
+        424.0
+      ],
+      "target_gt": 217,
+      "prior_det_gt": "217",
+      "prior_output_gt": "217"
+    },
+    {
+      "seq": "DJI_0327_3",
+      "frame": 327,
+      "tid": 73,
+      "iou": 0.49377275095621787,
+      "nearest": [
+        0.19727578525188738,
+        232
+      ],
+      "box": [
+        602.4419555664062,
+        455.43408203125,
+        614.6185913085938,
+        467.783935546875
+      ],
+      "target": [
+        603.0,
+        449.0,
+        616.0,
+        466.0
+      ],
+      "target_gt": 232,
+      "prior_det_gt": "232",
+      "prior_output_gt": "232"
+    },
+    {
+      "seq": "DJI_0327_3",
+      "frame": 330,
+      "tid": 71,
+      "iou": 0.48574334889923804,
+      "nearest": [
+        0.13169287412246208,
+        203
+      ],
+      "box": [
+        208.07565307617188,
+        398.6943054199219,
+        215.80679321289062,
+        408.1010437011719
+      ],
+      "target": [
+        208.0,
+        401.0,
+        214.0,
+        407.0
+      ],
+      "target_gt": 203,
+      "prior_det_gt": "",
+      "prior_output_gt": ""
+    },
+    {
+      "seq": "DJI_0181_3",
+      "frame": 39,
+      "tid": 19,
+      "iou": 0.48356100315153316,
+      "nearest": [
+        0.17442942166906256,
+        16
+      ],
+      "box": [
+        586.440185546875,
+        127.70603942871094,
+        593.996337890625,
+        137.82554626464844
+      ],
+      "target": [
+        589.0,
+        126.0,
+        595.0,
+        137.0
+      ],
+      "target_gt": 16,
+      "prior_det_gt": "16",
+      "prior_output_gt": "16"
+    },
+    {
+      "seq": "DJI_0327_3",
+      "frame": 232,
+      "tid": 38,
+      "iou": 0.48315007895130624,
+      "nearest": [
+        0.0778618119849174,
+        165
+      ],
+      "box": [
+        186.87557983398438,
+        375.17840576171875,
+        194.23916625976562,
+        383.61077880859375
+      ],
+      "target": [
+        188.0,
+        377.0,
+        193.0,
+        383.0
+      ],
+      "target_gt": 165,
+      "prior_det_gt": "165",
+      "prior_output_gt": "165"
+    },
+    {
+      "seq": "DJI_0327_3",
+      "frame": 342,
+      "tid": 62,
+      "iou": 0.47725255592264726,
+      "nearest": [
+        0.09311142504945977,
+        217
+      ],
+      "box": [
+        198.5986785888672,
+        401.06793212890625,
+        206.8239288330078,
+        409.65264892578125
+      ],
+      "target": [
+        200.0,
+        403.0,
+        207.0,
+        408.0
+      ],
+      "target_gt": 217,
+      "prior_det_gt": "",
+      "prior_output_gt": ""
+    }
+  ],
+  "cases": {
+    "('DJI_0061_2', 169, 177)": {
+      "clear_gt": "30",
+      "diagnostic_gt": "30",
+      "score": 0.07568913698196411,
+      "prediction_iou": 0.6248041841901396,
+      "raw_box": [
+        321.2242126464844,
+        323.5697021484375,
+        328.0511779785156,
+        330.873779296875
+      ],
+      "gt_box": [
+        319.0,
+        325.0,
+        328.0,
+        331.0
+      ],
+      "best_iou": 0.6212339653358305,
+      "nearest_center": [
+        0.12743485437619137,
+        30
+      ],
+      "previous_native": [
+        322.58100001137007,
+        323.070884332024,
+        328.86833641820397,
+        329.9969515173344,
+        0.27671459317207336
+      ],
+      "previous_max_iou": [
+        0.47509436996439625,
+        30
+      ],
+      "recovery_box": [
+        322.58100001137007,
+        323.070884332024,
+        328.86833641820397,
+        329.9969515173344,
+        0.27671459317207336
+      ],
+      "recovery_frame": 168,
+      "recovery_gt": "30",
+      "native_outputs_also_covering_best_gt": []
+    },
+    "('DJI_0073_3', 92, 63)": {
+      "clear_gt": "",
+      "diagnostic_gt": "",
+      "score": 0.0895778015255928,
+      "prediction_iou": 0.9173931248313697,
+      "raw_box": [
+        261.15643310546875,
+        261.66339111328125,
+        289.68756103515625,
+        284.57904052734375
+      ],
+      "gt_box": [
+        273.0,
+        261.0,
+        291.0,
+        285.0
+      ],
+      "best_iou": 0.5436517667758637,
+      "nearest_center": [
+        0.21930398947091015,
+        20
+      ],
+      "previous_native": [
+        262.23561871600396,
+        261.39758127858505,
+        289.8654945125338,
+        284.55682802926884,
+        0.11652356386184692
+      ],
+      "previous_max_iou": [
+        0.5317517297737548,
+        20
+      ],
+      "recovery_box": [
+        262.67735652314144,
+        261.35497084573717,
+        291.44400560805246,
+        284.928632288214,
+        0.1211567297577858
+      ],
+      "recovery_frame": 89,
+      "recovery_gt": "",
+      "native_outputs_also_covering_best_gt": [
+        [
+          0.8013644113486879,
+          46,
+          0.4472827100758214
+        ]
+      ]
+    },
+    "('DJI_0327_3', 182, 27)": {
+      "clear_gt": "76",
+      "diagnostic_gt": "76",
+      "score": 0.09582848101854324,
+      "prediction_iou": 0.9545171154718225,
+      "raw_box": [
+        477.97430419921875,
+        480.32867431640625,
+        487.67059326171875,
+        491.64654541015625
+      ],
+      "gt_box": [
+        477.0,
+        480.0,
+        487.0,
+        492.0
+      ],
+      "best_iou": 0.8006263133946124,
+      "nearest_center": [
+        0.05265785907037314,
+        76
+      ],
+      "previous_native": [
+        478.0066418763619,
+        480.3280532929539,
+        487.489024866736,
+        491.65609086473455,
+        0.12977486848831177
+      ],
+      "previous_max_iou": [
+        0.8666274064405476,
+        76
+      ],
+      "recovery_box": [
+        478.0066418763619,
+        480.3280532929539,
+        487.489024866736,
+        491.65609086473455,
+        0.12977486848831177
+      ],
+      "recovery_frame": 181,
+      "recovery_gt": "76",
+      "native_outputs_also_covering_best_gt": []
+    },
+    "('DJI_0327_3', 232, 41)": {
+      "clear_gt": "89",
+      "diagnostic_gt": "89",
+      "score": 0.07780706137418747,
+      "prediction_iou": 0.9383019510800096,
+      "raw_box": [
+        498.9244384765625,
+        458.03253173828125,
+        508.9833984375,
+        469.50628662109375
+      ],
+      "gt_box": [
+        498.0,
+        459.0,
+        507.0,
+        468.0
+      ],
+      "best_iou": 0.5873895711454459,
+      "nearest_center": [
+        0.1161751600539276,
+        89
+      ],
+      "previous_native": [
+        498.53871861497583,
+        457.91276252142484,
+        508.8979684977342,
+        469.64078743754067,
+        0.1359751671552658
+      ],
+      "previous_max_iou": [
+        0.6027411904142455,
+        89
+      ],
+      "recovery_box": [
+        498.4331544231365,
+        457.76126927582845,
+        508.9094327880835,
+        469.9166366000404,
+        0.16389666497707367
+      ],
+      "recovery_frame": 229,
+      "recovery_gt": "89",
+      "native_outputs_also_covering_best_gt": []
+    },
+    "('DJI_0327_3', 268, 7)": {
+      "clear_gt": "70",
+      "diagnostic_gt": "70",
+      "score": 0.09692640602588654,
+      "prediction_iou": 0.9508313962123283,
+      "raw_box": [
+        486.220947265625,
+        485.59075927734375,
+        495.841552734375,
+        499.13629150390625
+      ],
+      "gt_box": [
+        485.0,
+        487.0,
+        496.0,
+        498.0
+      ],
+      "best_iou": 0.7273831829578118,
+      "nearest_center": [
+        0.035258893814071636,
+        70
+      ],
+      "previous_native": [
+        486.35430895722874,
+        485.6148594437944,
+        495.97785058989797,
+        499.11728026166116,
+        0.1957974135875702
+      ],
+      "previous_max_iou": [
+        0.7296483908306486,
+        70
+      ],
+      "recovery_box": [
+        486.35430895722874,
+        485.6148594437944,
+        495.97785058989797,
+        499.11728026166116,
+        0.1957974135875702
+      ],
+      "recovery_frame": 267,
+      "recovery_gt": "70",
+      "native_outputs_also_covering_best_gt": []
+    },
+    "('DJI_0327_3', 289, 48)": {
+      "clear_gt": "89",
+      "diagnostic_gt": "89",
+      "score": 0.07761912792921066,
+      "prediction_iou": 0.8564970572063206,
+      "raw_box": [
+        499.6628723144531,
+        453.5972900390625,
+        509.8285827636719,
+        467.4998779296875
+      ],
+      "gt_box": [
+        500.0,
+        459.0,
+        509.0,
+        468.0
+      ],
+      "best_iou": 0.5245730737737748,
+      "nearest_center": [
+        0.23268744628556545,
+        89
+      ],
+      "previous_native": [
+        500.12159600914794,
+        452.89904623617616,
+        510.4190056831864,
+        467.1443193919926,
+        0.14675430953502655
+      ],
+      "previous_max_iou": [
+        0.46536336419987334,
+        89
+      ],
+      "recovery_box": [
+        500.8261335963808,
+        452.2253067447753,
+        511.03275776856196,
+        466.5093616921866,
+        0.1350395828485489
+      ],
+      "recovery_frame": 287,
+      "recovery_gt": "",
+      "native_outputs_also_covering_best_gt": []
+    },
+    "('DJI_0327_3', 316, 62)": {
+      "clear_gt": "",
+      "diagnostic_gt": "",
+      "score": 0.09783578664064407,
+      "prediction_iou": 0.9156200411288221,
+      "raw_box": [
+        205.96514892578125,
+        417.53375244140625,
+        214.40869140625,
+        427.593017578125
+      ],
+      "gt_box": [
+        207.0,
+        418.0,
+        214.0,
+        424.0
+      ],
+      "best_iou": 0.49449094406570415,
+      "nearest_center": [
+        0.17293969269177067,
+        217
+      ],
+      "previous_native": [
+        207.0196346381711,
+        418.2186012416205,
+        215.4037593470888,
+        428.18107585366215,
+        0.1753450632095337
+      ],
+      "previous_max_iou": [
+        0.5840327436942863,
+        217
+      ],
+      "recovery_box": [
+        207.0196346381711,
+        418.2186012416205,
+        215.4037593470888,
+        428.18107585366215,
+        0.1753450632095337
+      ],
+      "recovery_frame": 315,
+      "recovery_gt": "217",
+      "native_outputs_also_covering_best_gt": []
+    },
+    "('DJI_0339_2', 48, 2)": {
+      "clear_gt": "",
+      "diagnostic_gt": "",
+      "score": 0.0680130273103714,
+      "prediction_iou": 0.9008203878564418,
+      "raw_box": [
+        215.96633911132812,
+        199.4835205078125,
+        223.37991333007812,
+        206.90185546875
+      ],
+      "gt_box": [
+        249.0,
+        99.0,
+        258.0,
+        107.0
+      ],
+      "best_iou": 0.0,
+      "nearest_center": [
+        6.202040938028308,
+        1
+      ],
+      "previous_native": [
+        216.26149213800045,
+        199.45600538925527,
+        223.7107164083498,
+        206.92825122780965,
+        0.13529086112976074
+      ],
+      "previous_max_iou": [
+        0.0,
+        3
+      ],
+      "recovery_box": [
+        216.26149213800045,
+        199.45600538925527,
+        223.7107164083498,
+        206.92825122780965,
+        0.13529086112976074
+      ],
+      "recovery_frame": 47,
+      "recovery_gt": "",
+      "native_outputs_also_covering_best_gt": []
+    },
+    "('DJI_0339_2', 207, 2)": {
+      "clear_gt": "",
+      "diagnostic_gt": "",
+      "score": 0.06555505096912384,
+      "prediction_iou": 0.6284733348686263,
+      "raw_box": [
+        234.46395874023438,
+        194.6197509765625,
+        241.99771118164062,
+        202.0906982421875
+      ],
+      "gt_box": [
+        264.0,
+        95.0,
+        272.0,
+        103.0
+      ],
+      "best_iou": 0.0,
+      "nearest_center": [
+        5.818550470668362,
+        1
+      ],
+      "previous_native": [
+        233.16818033255043,
+        195.02530983874274,
+        240.79165133231845,
+        202.65845227711984,
+        0.10150666534900665
+      ],
+      "previous_max_iou": [
+        0.0,
+        3
+      ],
+      "recovery_box": [
+        233.16818033255043,
+        195.02530983874274,
+        240.79165133231845,
+        202.65845227711984,
+        0.10150666534900665
+      ],
+      "recovery_frame": 206,
+      "recovery_gt": "",
+      "native_outputs_also_covering_best_gt": []
+    }
+  }
+}

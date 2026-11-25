@@ -1,0 +1,1091 @@
+[
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "all",
+    "available_CLEAR_TP": 72,
+    "available_D3_same_original_ID": 49,
+    "available_CLEAR_FP": 119,
+    "kept_CLEAR_FP": 84,
+    "kept_CLEAR_TP": 66,
+    "kept_D3_same_original_ID": 46,
+    "kept_verified_prev_same_GT": 57
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0028_3",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "all",
+    "available_CLEAR_TP": 72,
+    "available_D3_same_original_ID": 49,
+    "kept_CLEAR_TP": 62,
+    "kept_D3_same_original_ID": 41,
+    "kept_verified_prev_same_GT": 53,
+    "available_CLEAR_FP": 119,
+    "kept_CLEAR_FP": 93
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0028_3",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1,
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "all",
+    "available_CLEAR_TP": 72,
+    "available_D3_same_original_ID": 49,
+    "kept_CLEAR_TP": 71,
+    "kept_D3_same_original_ID": 48,
+    "kept_verified_prev_same_GT": 60,
+    "available_CLEAR_FP": 119,
+    "kept_CLEAR_FP": 102
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0028_3",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1,
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "all",
+    "available_CLEAR_TP": 72,
+    "available_D3_same_original_ID": 49,
+    "kept_CLEAR_TP": 71,
+    "kept_D3_same_original_ID": 48,
+    "kept_verified_prev_same_GT": 60,
+    "available_CLEAR_FP": 119,
+    "kept_CLEAR_FP": 104
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0028_3",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1,
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "all",
+    "available_CLEAR_TP": 72,
+    "available_D3_same_original_ID": 49,
+    "kept_CLEAR_TP": 67,
+    "kept_D3_same_original_ID": 46,
+    "kept_verified_prev_same_GT": 57,
+    "available_CLEAR_FP": 119,
+    "kept_CLEAR_FP": 91
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0028_3",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1,
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "all",
+    "available_CLEAR_TP": 72,
+    "available_D3_same_original_ID": 49,
+    "kept_CLEAR_TP": 59,
+    "kept_D3_same_original_ID": 37,
+    "kept_verified_prev_same_GT": 49,
+    "available_CLEAR_FP": 119,
+    "kept_CLEAR_FP": 96
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0028_3",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1,
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0030_2",
+    "available_CLEAR_FP": 7,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0030_2",
+    "available_CLEAR_FP": 7,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0030_2",
+    "available_CLEAR_FP": 7,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0030_2",
+    "available_CLEAR_FP": 7,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0030_2",
+    "available_CLEAR_FP": 7,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0030_2",
+    "available_CLEAR_FP": 7,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0032_3",
+    "available_CLEAR_FP": 2,
+    "kept_CLEAR_FP": 2
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0032_3",
+    "available_CLEAR_FP": 2,
+    "kept_CLEAR_FP": 2
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0032_3",
+    "available_CLEAR_FP": 2,
+    "kept_CLEAR_FP": 2
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0032_3",
+    "available_CLEAR_FP": 2,
+    "kept_CLEAR_FP": 2
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0032_3",
+    "available_CLEAR_FP": 2,
+    "kept_CLEAR_FP": 2
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0032_3",
+    "available_CLEAR_FP": 2,
+    "kept_CLEAR_FP": 2
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0049_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0049_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0049_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0049_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0049_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0049_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0051_2",
+    "available_CLEAR_TP": 3,
+    "available_D3_same_original_ID": 3,
+    "kept_CLEAR_TP": 3,
+    "kept_D3_same_original_ID": 3,
+    "kept_verified_prev_same_GT": 3
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0051_2",
+    "available_CLEAR_TP": 3,
+    "available_D3_same_original_ID": 3,
+    "kept_CLEAR_TP": 3,
+    "kept_D3_same_original_ID": 3,
+    "kept_verified_prev_same_GT": 3
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0051_2",
+    "available_CLEAR_TP": 3,
+    "available_D3_same_original_ID": 3,
+    "kept_CLEAR_TP": 3,
+    "kept_D3_same_original_ID": 3,
+    "kept_verified_prev_same_GT": 3
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0051_2",
+    "available_CLEAR_TP": 3,
+    "available_D3_same_original_ID": 3,
+    "kept_CLEAR_TP": 3,
+    "kept_D3_same_original_ID": 3,
+    "kept_verified_prev_same_GT": 3
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0051_2",
+    "available_CLEAR_TP": 3,
+    "available_D3_same_original_ID": 3,
+    "kept_CLEAR_TP": 3,
+    "kept_D3_same_original_ID": 3,
+    "kept_verified_prev_same_GT": 3
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0051_2",
+    "available_CLEAR_TP": 3,
+    "available_D3_same_original_ID": 3,
+    "kept_CLEAR_TP": 3,
+    "kept_D3_same_original_ID": 3,
+    "kept_verified_prev_same_GT": 3
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0061_2",
+    "available_CLEAR_FP": 11,
+    "kept_CLEAR_FP": 7,
+    "available_CLEAR_TP": 10,
+    "kept_CLEAR_TP": 7,
+    "kept_verified_prev_same_GT": 5,
+    "available_D3_same_original_ID": 2,
+    "kept_D3_same_original_ID": 2
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0061_2",
+    "available_CLEAR_FP": 11,
+    "kept_CLEAR_FP": 8,
+    "available_CLEAR_TP": 10,
+    "kept_CLEAR_TP": 10,
+    "kept_verified_prev_same_GT": 6,
+    "available_D3_same_original_ID": 2,
+    "kept_D3_same_original_ID": 2
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0061_2",
+    "available_CLEAR_FP": 11,
+    "kept_CLEAR_FP": 8,
+    "available_CLEAR_TP": 10,
+    "kept_CLEAR_TP": 10,
+    "kept_verified_prev_same_GT": 6,
+    "available_D3_same_original_ID": 2,
+    "kept_D3_same_original_ID": 2
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0061_2",
+    "available_CLEAR_FP": 11,
+    "kept_CLEAR_FP": 11,
+    "available_CLEAR_TP": 10,
+    "kept_CLEAR_TP": 10,
+    "kept_verified_prev_same_GT": 6,
+    "available_D3_same_original_ID": 2,
+    "kept_D3_same_original_ID": 2
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0061_2",
+    "available_CLEAR_FP": 11,
+    "kept_CLEAR_FP": 10,
+    "available_CLEAR_TP": 10,
+    "kept_CLEAR_TP": 9,
+    "kept_verified_prev_same_GT": 5,
+    "available_D3_same_original_ID": 2,
+    "kept_D3_same_original_ID": 2
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0061_2",
+    "available_CLEAR_FP": 11,
+    "kept_CLEAR_FP": 11,
+    "available_CLEAR_TP": 10,
+    "kept_CLEAR_TP": 10,
+    "kept_verified_prev_same_GT": 6,
+    "available_D3_same_original_ID": 2,
+    "kept_D3_same_original_ID": 2
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0073_3",
+    "available_CLEAR_FP": 20,
+    "kept_CLEAR_FP": 18,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0073_3",
+    "available_CLEAR_FP": 20,
+    "kept_CLEAR_FP": 17,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0073_3",
+    "available_CLEAR_FP": 20,
+    "kept_CLEAR_FP": 20,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0073_3",
+    "available_CLEAR_FP": 20,
+    "kept_CLEAR_FP": 19,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0073_3",
+    "available_CLEAR_FP": 20,
+    "kept_CLEAR_FP": 18,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0073_3",
+    "available_CLEAR_FP": 20,
+    "kept_CLEAR_FP": 18,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0141_2",
+    "available_CLEAR_FP": 10,
+    "available_CLEAR_TP": 14,
+    "available_D3_same_original_ID": 12,
+    "kept_CLEAR_TP": 13,
+    "kept_D3_same_original_ID": 11,
+    "kept_verified_prev_same_GT": 12,
+    "kept_CLEAR_FP": 6
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0141_2",
+    "available_CLEAR_FP": 10,
+    "kept_CLEAR_FP": 8,
+    "available_CLEAR_TP": 14,
+    "available_D3_same_original_ID": 12,
+    "kept_CLEAR_TP": 11,
+    "kept_D3_same_original_ID": 10,
+    "kept_verified_prev_same_GT": 11
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0141_2",
+    "available_CLEAR_FP": 10,
+    "kept_CLEAR_FP": 9,
+    "available_CLEAR_TP": 14,
+    "available_D3_same_original_ID": 12,
+    "kept_CLEAR_TP": 13,
+    "kept_D3_same_original_ID": 11,
+    "kept_verified_prev_same_GT": 12
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0141_2",
+    "available_CLEAR_FP": 10,
+    "available_CLEAR_TP": 14,
+    "available_D3_same_original_ID": 12,
+    "kept_CLEAR_TP": 13,
+    "kept_D3_same_original_ID": 11,
+    "kept_verified_prev_same_GT": 12,
+    "kept_CLEAR_FP": 7
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0141_2",
+    "available_CLEAR_FP": 10,
+    "available_CLEAR_TP": 14,
+    "available_D3_same_original_ID": 12,
+    "kept_CLEAR_TP": 13,
+    "kept_D3_same_original_ID": 11,
+    "kept_verified_prev_same_GT": 12,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0141_2",
+    "available_CLEAR_FP": 10,
+    "available_CLEAR_TP": 14,
+    "available_D3_same_original_ID": 12,
+    "kept_CLEAR_TP": 8,
+    "kept_D3_same_original_ID": 7,
+    "kept_verified_prev_same_GT": 8,
+    "kept_CLEAR_FP": 6
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0155_2",
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0155_2",
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0155_2",
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0155_2",
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0155_2",
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0155_2",
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0169_3",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0169_3",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0169_3",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0169_3",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0169_3",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0169_3",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0181_3",
+    "available_CLEAR_FP": 14,
+    "kept_CLEAR_FP": 6,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0181_3",
+    "available_CLEAR_FP": 14,
+    "kept_CLEAR_FP": 9,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0181_3",
+    "available_CLEAR_FP": 14,
+    "kept_CLEAR_FP": 9,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0181_3",
+    "available_CLEAR_FP": 14,
+    "kept_CLEAR_FP": 10,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0181_3",
+    "available_CLEAR_FP": 14,
+    "kept_CLEAR_FP": 8,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0181_3",
+    "available_CLEAR_FP": 14,
+    "kept_CLEAR_FP": 10,
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0221_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0221_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0221_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0221_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0221_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0221_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0225_1",
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0225_1",
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 2
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0225_1",
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0225_1",
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0225_1",
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0225_1",
+    "available_CLEAR_FP": 3,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0237_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0237_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0237_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0237_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0237_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0237_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0277_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0277_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0277_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0277_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0277_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0277_2",
+    "available_CLEAR_TP": 1,
+    "available_D3_same_original_ID": 1,
+    "kept_CLEAR_TP": 1,
+    "kept_D3_same_original_ID": 1,
+    "kept_verified_prev_same_GT": 1
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0283_1",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0283_1",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 4
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0283_1",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0283_1",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0283_1",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0283_1",
+    "available_CLEAR_FP": 5,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0303_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0303_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0303_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0303_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0303_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0303_2",
+    "available_CLEAR_TP": 1,
+    "kept_CLEAR_TP": 1,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0309_4",
+    "available_CLEAR_TP": 4,
+    "available_D3_same_original_ID": 4,
+    "kept_CLEAR_TP": 4,
+    "kept_D3_same_original_ID": 4,
+    "kept_verified_prev_same_GT": 4,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0309_4",
+    "available_CLEAR_TP": 4,
+    "available_D3_same_original_ID": 4,
+    "kept_CLEAR_TP": 4,
+    "kept_D3_same_original_ID": 4,
+    "kept_verified_prev_same_GT": 4,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0309_4",
+    "available_CLEAR_TP": 4,
+    "available_D3_same_original_ID": 4,
+    "kept_CLEAR_TP": 4,
+    "kept_D3_same_original_ID": 4,
+    "kept_verified_prev_same_GT": 4,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0309_4",
+    "available_CLEAR_TP": 4,
+    "available_D3_same_original_ID": 4,
+    "kept_CLEAR_TP": 4,
+    "kept_D3_same_original_ID": 4,
+    "kept_verified_prev_same_GT": 4,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0309_4",
+    "available_CLEAR_TP": 4,
+    "available_D3_same_original_ID": 4,
+    "kept_CLEAR_TP": 4,
+    "kept_D3_same_original_ID": 4,
+    "kept_verified_prev_same_GT": 4,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0309_4",
+    "available_CLEAR_TP": 4,
+    "available_D3_same_original_ID": 4,
+    "kept_CLEAR_TP": 4,
+    "kept_D3_same_original_ID": 4,
+    "kept_verified_prev_same_GT": 4,
+    "available_CLEAR_FP": 1,
+    "kept_CLEAR_FP": 1
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0327_3",
+    "available_CLEAR_TP": 33,
+    "available_D3_same_original_ID": 24,
+    "kept_CLEAR_TP": 32,
+    "kept_D3_same_original_ID": 23,
+    "kept_verified_prev_same_GT": 28,
+    "available_CLEAR_FP": 22,
+    "kept_CLEAR_FP": 18
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0327_3",
+    "available_CLEAR_TP": 33,
+    "available_D3_same_original_ID": 24,
+    "available_CLEAR_FP": 22,
+    "kept_CLEAR_FP": 18,
+    "kept_CLEAR_TP": 26,
+    "kept_D3_same_original_ID": 18,
+    "kept_verified_prev_same_GT": 23
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0327_3",
+    "available_CLEAR_TP": 33,
+    "available_D3_same_original_ID": 24,
+    "kept_CLEAR_TP": 33,
+    "kept_D3_same_original_ID": 24,
+    "kept_verified_prev_same_GT": 29,
+    "available_CLEAR_FP": 22,
+    "kept_CLEAR_FP": 20
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0327_3",
+    "available_CLEAR_TP": 33,
+    "available_D3_same_original_ID": 24,
+    "kept_CLEAR_TP": 33,
+    "kept_D3_same_original_ID": 24,
+    "kept_verified_prev_same_GT": 29,
+    "available_CLEAR_FP": 22,
+    "kept_CLEAR_FP": 22
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0327_3",
+    "available_CLEAR_TP": 33,
+    "available_D3_same_original_ID": 24,
+    "kept_CLEAR_TP": 30,
+    "kept_D3_same_original_ID": 22,
+    "kept_verified_prev_same_GT": 27,
+    "available_CLEAR_FP": 22,
+    "kept_CLEAR_FP": 20
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0327_3",
+    "available_CLEAR_TP": 33,
+    "available_D3_same_original_ID": 24,
+    "kept_CLEAR_TP": 26,
+    "kept_D3_same_original_ID": 17,
+    "kept_verified_prev_same_GT": 22,
+    "available_CLEAR_FP": 22,
+    "kept_CLEAR_FP": 18
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0339_2",
+    "available_CLEAR_FP": 10,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0339_2",
+    "available_CLEAR_FP": 10,
+    "kept_CLEAR_FP": 6
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0339_2",
+    "available_CLEAR_FP": 10,
+    "kept_CLEAR_FP": 6
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0339_2",
+    "available_CLEAR_FP": 10,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0339_2",
+    "available_CLEAR_FP": 10,
+    "kept_CLEAR_FP": 2
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0339_2",
+    "available_CLEAR_FP": 10,
+    "kept_CLEAR_FP": 5
+  },
+  {
+    "rule": "veto_tiny_and_static",
+    "scope": "DJI_0345_2",
+    "available_CLEAR_FP": 4,
+    "kept_CLEAR_FP": 4
+  },
+  {
+    "rule": "veto_static_and_repeated",
+    "scope": "DJI_0345_2",
+    "available_CLEAR_FP": 4,
+    "kept_CLEAR_FP": 3
+  },
+  {
+    "rule": "veto_tiny_static_and_repeated",
+    "scope": "DJI_0345_2",
+    "available_CLEAR_FP": 4,
+    "kept_CLEAR_FP": 4
+  },
+  {
+    "rule": "veto_tiny_static_and_no_high",
+    "scope": "DJI_0345_2",
+    "available_CLEAR_FP": 4,
+    "kept_CLEAR_FP": 4
+  },
+  {
+    "rule": "veto_tiny_and_no_high",
+    "scope": "DJI_0345_2",
+    "available_CLEAR_FP": 4,
+    "kept_CLEAR_FP": 4
+  },
+  {
+    "rule": "veto_static_and_no_high",
+    "scope": "DJI_0345_2",
+    "available_CLEAR_FP": 4,
+    "kept_CLEAR_FP": 2
+  }
+]

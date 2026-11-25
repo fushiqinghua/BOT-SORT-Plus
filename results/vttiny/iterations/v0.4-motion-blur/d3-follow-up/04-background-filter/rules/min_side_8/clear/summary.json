@@ -1,0 +1,1257 @@
+{
+  "status": "PASS",
+  "rule": "B_postlow_output_v1",
+  "sequence_count": 30,
+  "frames": 12590,
+  "same_protocol_fields": [
+    "sequences",
+    "detection_fingerprints",
+    "feature_hashes",
+    "decoded_image_hashes",
+    "native_config",
+    "detector_sha256",
+    "rgb_encoder_sha256",
+    "source_protocol_sha256",
+    "encoder_contracts",
+    "boxmot_source_hashes"
+  ],
+  "defined_same_gt": "synthetic row CLEAR assignment, prior real detection diagnostic GT, and prior native MOT row CLEAR assignment all share same GT identity",
+  "native_match_note": "CLEAR reassignment can occur through evaluation even with byte-exact native MOT rows",
+  "synthetic_rows": 81,
+  "synthetic_attribution": {
+    "CLEAR_false_positive": 42,
+    "CLEAR_same_gt_and_prior_detection_agree": 34,
+    "CLEAR_matched_prior_identity_unverified": 5
+  },
+  "sequences": [
+    {
+      "sequence": "DJI_0028_3",
+      "frames": 570,
+      "native_mot_rows": 4609,
+      "native_trace_rows": 12632,
+      "native_recovery_events": 27,
+      "native_appearance_updates": 3812,
+      "native_candidate_checks": 2230,
+      "native_trace_sha256": "7b10b5d9b5c8a6a1b5919bb42ca7bd8296b4a57512bc45cc1c5a1a0f1118b672",
+      "native_mot_sha256": "d6bd35f48178970318afb8c37bb143f7c1718015427438720f4dce5eacf444ec",
+      "variant_trace_sha256": "d78b1981050832b0b1df81b703821eec7b8e40007c42f0f6def03a83712c6436",
+      "variant_mot_sha256": "d6bd35f48178970318afb8c37bb143f7c1718015427438720f4dce5eacf444ec",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 8,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 4079,
+          "CLR_FN": 982,
+          "CLR_FP": 530,
+          "IDSW": 28
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 4081,
+          "CLR_FN": 980,
+          "CLR_FP": 538,
+          "IDSW": 28
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 4079,
+          "CLR_FN": 982,
+          "CLR_FP": 530,
+          "IDSW": 28
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0030_2",
+      "frames": 590,
+      "native_mot_rows": 2835,
+      "native_trace_rows": 6685,
+      "native_recovery_events": 18,
+      "native_appearance_updates": 295,
+      "native_candidate_checks": 807,
+      "native_trace_sha256": "68a0e5368965963a2a83ab993927269471bfc0c49d6dc4a2769d61208a90e556",
+      "native_mot_sha256": "da2dc3b9e0dead0b60e08aceb390f79c1621d537883576963e511c4017156f56",
+      "variant_trace_sha256": "747744fe4f556b42bc3322753825f07c9693efaaa1a7810ef2022400140aee9e",
+      "variant_mot_sha256": "da2dc3b9e0dead0b60e08aceb390f79c1621d537883576963e511c4017156f56",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 8,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 1555,
+          "CLR_FN": 3041,
+          "CLR_FP": 1280,
+          "IDSW": 0
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 1555,
+          "CLR_FN": 3041,
+          "CLR_FP": 1297,
+          "IDSW": 0
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 1555,
+          "CLR_FN": 3041,
+          "CLR_FP": 1280,
+          "IDSW": 0
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0032_3",
+      "frames": 290,
+      "native_mot_rows": 3055,
+      "native_trace_rows": 14585,
+      "native_recovery_events": 10,
+      "native_appearance_updates": 3087,
+      "native_candidate_checks": 5437,
+      "native_trace_sha256": "2da66e85a5ce89a91319b6e904a95ae3ddde609a1418092f7f9e6aad0a5e4941",
+      "native_mot_sha256": "ccdef5b621c58ce8f968819e43cf3319d0971ae57f55ee67191e1b71faa8a8c9",
+      "variant_trace_sha256": "7860188132fa503c178ce19ae09b7a6c98738abe3b0e5404d89bfee6d703e352",
+      "variant_mot_sha256": "0544babd26acbae08009858ea512829ddf0570982b578b90d4f74b46d920a0d8",
+      "synthetic_rows": 2,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 5,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 2876,
+          "CLR_FN": 1812,
+          "CLR_FP": 179,
+          "IDSW": 9
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 2876,
+          "CLR_FN": 1812,
+          "CLR_FP": 182,
+          "IDSW": 9
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 2876,
+          "CLR_FN": 1812,
+          "CLR_FP": 181,
+          "IDSW": 9
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_false_positive": 2
+      },
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0049_2",
+      "frames": 90,
+      "native_mot_rows": 138,
+      "native_trace_rows": 709,
+      "native_recovery_events": 6,
+      "native_appearance_updates": 125,
+      "native_candidate_checks": 114,
+      "native_trace_sha256": "195ff0907135ede7e729087e0b6598c525cad748d0caa27198980209af430552",
+      "native_mot_sha256": "d03207017440231fdb19a27c65e6e3bad2c69532e2bad269c38e42e88cfb67ff",
+      "variant_trace_sha256": "bc122a5afb336d64f530e69be0c22ebb74d6c183c41ff368dd6cfc67c36fdaec",
+      "variant_mot_sha256": "d03207017440231fdb19a27c65e6e3bad2c69532e2bad269c38e42e88cfb67ff",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 2,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 88,
+          "CLR_FN": 484,
+          "CLR_FP": 50,
+          "IDSW": 0
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 91,
+          "CLR_FN": 481,
+          "CLR_FP": 50,
+          "IDSW": 0
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 88,
+          "CLR_FN": 484,
+          "CLR_FP": 50,
+          "IDSW": 0
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0051_2",
+      "frames": 580,
+      "native_mot_rows": 798,
+      "native_trace_rows": 2936,
+      "native_recovery_events": 17,
+      "native_appearance_updates": 580,
+      "native_candidate_checks": 171,
+      "native_trace_sha256": "2d0ba5de5d5cdfaaaaed8cd7a64d143b4fbc2444f21724c6d1d6e45bd525224d",
+      "native_mot_sha256": "4891233fc5d6b951b3c870b54198698356ccbc0cdc5f7416d68fc20cf987a6f6",
+      "variant_trace_sha256": "d4ebde3c2a1015a0bba6b6a4f36d3cf6a5cb58fd8efca408f7e0fba1965f5310",
+      "variant_mot_sha256": "4891233fc5d6b951b3c870b54198698356ccbc0cdc5f7416d68fc20cf987a6f6",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 14,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 798,
+          "CLR_FN": 322,
+          "CLR_FP": 0,
+          "IDSW": 5
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 802,
+          "CLR_FN": 318,
+          "CLR_FP": 0,
+          "IDSW": 5
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 798,
+          "CLR_FN": 322,
+          "CLR_FP": 0,
+          "IDSW": 5
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0061_2",
+      "frames": 240,
+      "native_mot_rows": 10626,
+      "native_trace_rows": 141528,
+      "native_recovery_events": 221,
+      "native_appearance_updates": 9839,
+      "native_candidate_checks": 110690,
+      "native_trace_sha256": "9a0b1db6147d23093ab31fc856e8468aca8e0198fa0a0761d1d42e40947f6a76",
+      "native_mot_sha256": "2da088b0f394f683832cfcc129d1fce1e37f0273af5f890b7a05aca7ed9d9ab4",
+      "variant_trace_sha256": "f4df3fe12876c77ed24a54da489c7e24289dc7a7dc0cb0e8cd43904cdf2abda1",
+      "variant_mot_sha256": "4e147ff6572db91c1d3805309a815384b1956a041bacac40eeb9181ad07f24e7",
+      "synthetic_rows": 4,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 71,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 8325,
+          "CLR_FN": 17253,
+          "CLR_FP": 2301,
+          "IDSW": 178
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 8350,
+          "CLR_FN": 17228,
+          "CLR_FP": 2289,
+          "IDSW": 177
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 8327,
+          "CLR_FN": 17251,
+          "CLR_FP": 2303,
+          "IDSW": 178
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_false_positive": 2,
+        "CLEAR_same_gt_and_prior_detection_agree": 2
+      },
+      "synthetic_missed_gt_recovered": 2,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0073_3",
+      "frames": 360,
+      "native_mot_rows": 12981,
+      "native_trace_rows": 40896,
+      "native_recovery_events": 75,
+      "native_appearance_updates": 12628,
+      "native_candidate_checks": 10097,
+      "native_trace_sha256": "7d6819300c26e75514d9901d4a0099362aadcd5098014c87e1949b8e68c253b0",
+      "native_mot_sha256": "c7448d164a2702110a75574e789c9642e12a3f013c374c2df446dbb7fb6ca8a0",
+      "variant_trace_sha256": "9761c3304b4b0e48edb3b1e138098dca5529189a4d93bc9556aa2c7de0c5290b",
+      "variant_mot_sha256": "14a4fbaa63654d37c4b68bed25de3396de6746a6b3fe9270cea629aecd9711ff",
+      "synthetic_rows": 14,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 45,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 11711,
+          "CLR_FN": 7479,
+          "CLR_FP": 1270,
+          "IDSW": 20
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 11712,
+          "CLR_FN": 7478,
+          "CLR_FP": 1310,
+          "IDSW": 20
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 11711,
+          "CLR_FN": 7479,
+          "CLR_FP": 1284,
+          "IDSW": 20
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_false_positive": 14
+      },
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0109_1",
+      "frames": 90,
+      "native_mot_rows": 70,
+      "native_trace_rows": 677,
+      "native_recovery_events": 3,
+      "native_appearance_updates": 0,
+      "native_candidate_checks": 155,
+      "native_trace_sha256": "d0e9d44b404712850a712a6ee8a2632d05f22ab4011486b0bb35d2bf96e9ad12",
+      "native_mot_sha256": "38ae96b098944cfafc1a2b9fc35b46b4051ee0ff42391770249058b019472993",
+      "variant_trace_sha256": "83311a3c3b9f6c58b5e9b824d9ec14790989120151fdab91f38632fa2cee43b9",
+      "variant_mot_sha256": "38ae96b098944cfafc1a2b9fc35b46b4051ee0ff42391770249058b019472993",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 2,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 70,
+          "CLR_FN": 20,
+          "CLR_FP": 0,
+          "IDSW": 15
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 70,
+          "CLR_FN": 20,
+          "CLR_FP": 0,
+          "IDSW": 15
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 70,
+          "CLR_FN": 20,
+          "CLR_FP": 0,
+          "IDSW": 15
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0119_2",
+      "frames": 180,
+      "native_mot_rows": 167,
+      "native_trace_rows": 441,
+      "native_recovery_events": 0,
+      "native_appearance_updates": 77,
+      "native_candidate_checks": 0,
+      "native_trace_sha256": "0f6821f1463d69cb09ac7fe52d812b7967c55fce04bd46bda526fb33f5a26f95",
+      "native_mot_sha256": "6d10856ef08245e31a0d44433a903f27329d223e507d25eab44568a9ff683ced",
+      "variant_trace_sha256": "0f6821f1463d69cb09ac7fe52d812b7967c55fce04bd46bda526fb33f5a26f95",
+      "variant_mot_sha256": "6d10856ef08245e31a0d44433a903f27329d223e507d25eab44568a9ff683ced",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 0,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 167,
+          "CLR_FN": 193,
+          "CLR_FP": 0,
+          "IDSW": 0
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 167,
+          "CLR_FN": 193,
+          "CLR_FP": 0,
+          "IDSW": 0
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 167,
+          "CLR_FN": 193,
+          "CLR_FP": 0,
+          "IDSW": 0
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0129_2",
+      "frames": 590,
+      "native_mot_rows": 557,
+      "native_trace_rows": 1727,
+      "native_recovery_events": 3,
+      "native_appearance_updates": 69,
+      "native_candidate_checks": 24,
+      "native_trace_sha256": "8519d5db6ccebc9614909885dbe86dbc64487140ba5c6712cd8b888e0eb6dc40",
+      "native_mot_sha256": "556787e7dff9215e749c6a7c49e74a6838edff235552afca3862e0b4ec0442bc",
+      "variant_trace_sha256": "8519d5db6ccebc9614909885dbe86dbc64487140ba5c6712cd8b888e0eb6dc40",
+      "variant_mot_sha256": "556787e7dff9215e749c6a7c49e74a6838edff235552afca3862e0b4ec0442bc",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 0,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 550,
+          "CLR_FN": 40,
+          "CLR_FP": 7,
+          "IDSW": 0
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 550,
+          "CLR_FN": 40,
+          "CLR_FP": 7,
+          "IDSW": 0
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 550,
+          "CLR_FN": 40,
+          "CLR_FP": 7,
+          "IDSW": 0
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0141_2",
+      "frames": 410,
+      "native_mot_rows": 8209,
+      "native_trace_rows": 31342,
+      "native_recovery_events": 75,
+      "native_appearance_updates": 6996,
+      "native_candidate_checks": 11012,
+      "native_trace_sha256": "b3845fd61ad760859ece31383de4b8c3bc85bcc512d0cffbbecfb6af6f75321b",
+      "native_mot_sha256": "d787d585e0d256f02676aa6c886cb9d49c4644ecde11461aca799025246502b8",
+      "variant_trace_sha256": "50db24d19ac74641c6a7f195295bf92c72676f0298fadf8f6ddaa1ab27b9f071",
+      "variant_mot_sha256": "1f2b916d1ea2aff5b6f0d723f6dbd41aa4fefda7248092263e3989137c425166",
+      "synthetic_rows": 15,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 26,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 6670,
+          "CLR_FN": 10476,
+          "CLR_FP": 1539,
+          "IDSW": 11
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 6690,
+          "CLR_FN": 10456,
+          "CLR_FP": 1559,
+          "IDSW": 11
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 6683,
+          "CLR_FN": 10463,
+          "CLR_FP": 1541,
+          "IDSW": 11
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_same_gt_and_prior_detection_agree": 12,
+        "CLEAR_false_positive": 2,
+        "CLEAR_matched_prior_identity_unverified": 1
+      },
+      "synthetic_missed_gt_recovered": 13,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0155_2",
+      "frames": 410,
+      "native_mot_rows": 83,
+      "native_trace_rows": 1047,
+      "native_recovery_events": 5,
+      "native_appearance_updates": 0,
+      "native_candidate_checks": 95,
+      "native_trace_sha256": "0c99e65b758de4fb98c76d8af8f056e0b44eceeeadbed51821fccfc5475ebdf4",
+      "native_mot_sha256": "6ffe7363682ab36673931ca7f682a910f788edd0ba3cbb517cb711b2a304f012",
+      "variant_trace_sha256": "856e24c7e4184ecb547aa0dfb398505dd5b94df9f6c1127150b2d72dbbdc53d5",
+      "variant_mot_sha256": "6ffe7363682ab36673931ca7f682a910f788edd0ba3cbb517cb711b2a304f012",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 2,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 71,
+          "CLR_FN": 289,
+          "CLR_FP": 12,
+          "IDSW": 2
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 71,
+          "CLR_FN": 289,
+          "CLR_FP": 22,
+          "IDSW": 2
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 71,
+          "CLR_FN": 289,
+          "CLR_FP": 12,
+          "IDSW": 2
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0159_2",
+      "frames": 250,
+      "native_mot_rows": 54,
+      "native_trace_rows": 519,
+      "native_recovery_events": 10,
+      "native_appearance_updates": 0,
+      "native_candidate_checks": 37,
+      "native_trace_sha256": "f8c65b3ad84c6835341a6d26f691d03f1fc6b925a9f25d94c35ec7a190491467",
+      "native_mot_sha256": "ceab0adcfa8f7bba58b8606c7cfa7ec600fda319d3bbfb4da616d3d76eae9d2e",
+      "variant_trace_sha256": "771449dbadf1acfd33b3dd465d4c8290c1bc7b9aba128e076f5ff77c05bcde83",
+      "variant_mot_sha256": "ceab0adcfa8f7bba58b8606c7cfa7ec600fda319d3bbfb4da616d3d76eae9d2e",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 7,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 52,
+          "CLR_FN": 198,
+          "CLR_FP": 2,
+          "IDSW": 0
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 52,
+          "CLR_FN": 198,
+          "CLR_FP": 2,
+          "IDSW": 0
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 52,
+          "CLR_FN": 198,
+          "CLR_FP": 2,
+          "IDSW": 0
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0169_3",
+      "frames": 290,
+      "native_mot_rows": 4048,
+      "native_trace_rows": 16970,
+      "native_recovery_events": 35,
+      "native_appearance_updates": 4029,
+      "native_candidate_checks": 4785,
+      "native_trace_sha256": "ff9e4a2c112277817fa84e083f5aee16e7c8f1a2417423f7059721df5ebb481c",
+      "native_mot_sha256": "1aaf932833751adbcc1eff13118c961ebd60103240909678e16eac3250e33a74",
+      "variant_trace_sha256": "3a763485f66d33f0089506730794e45399bc36fbcfdae6edee5b19e40050a76b",
+      "variant_mot_sha256": "cf8da4670be6ca0099a3b8904d9b94148eddc71811abeb0f39cefad659dedbe1",
+      "synthetic_rows": 3,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 9,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 2537,
+          "CLR_FN": 2905,
+          "CLR_FP": 1511,
+          "IDSW": 11
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 2537,
+          "CLR_FN": 2905,
+          "CLR_FP": 1523,
+          "IDSW": 11
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 2537,
+          "CLR_FN": 2905,
+          "CLR_FP": 1514,
+          "IDSW": 11
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_false_positive": 3
+      },
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0173_2",
+      "frames": 450,
+      "native_mot_rows": 342,
+      "native_trace_rows": 1786,
+      "native_recovery_events": 12,
+      "native_appearance_updates": 0,
+      "native_candidate_checks": 310,
+      "native_trace_sha256": "e6ade793bfd05f2f04dd900c9b65d7cbda885c3ae5f433150a3984968d4dde47",
+      "native_mot_sha256": "d116e3ac3c738bb46a908fe676e12bdd745415ed9331d4e768d6c0a04c9d78a3",
+      "variant_trace_sha256": "62aac7abba15ed4214feb93bab3f2a83cb9d5d8867c18b3e35ca25355f1caf33",
+      "variant_mot_sha256": "d116e3ac3c738bb46a908fe676e12bdd745415ed9331d4e768d6c0a04c9d78a3",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 6,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 192,
+          "CLR_FN": 258,
+          "CLR_FP": 150,
+          "IDSW": 24
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 192,
+          "CLR_FN": 258,
+          "CLR_FP": 150,
+          "IDSW": 24
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 192,
+          "CLR_FN": 258,
+          "CLR_FP": 150,
+          "IDSW": 24
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0181_3",
+      "frames": 320,
+      "native_mot_rows": 4895,
+      "native_trace_rows": 37447,
+      "native_recovery_events": 64,
+      "native_appearance_updates": 4321,
+      "native_candidate_checks": 20217,
+      "native_trace_sha256": "3d2249c9579610548c1047b236c8c48c90fbb765a8ece86709eb5568c1b35abd",
+      "native_mot_sha256": "ec10639b6561dda3c049b3d83249797ffd9710e8fe02cb37bd8636720c4adc64",
+      "variant_trace_sha256": "d07640fd6aa3f9f7caa3519cf7c792dd3be6b46a472f5a967a666bed8ff7309b",
+      "variant_mot_sha256": "923227b803db395472707b56894b2e1cbc0d5d53203e55ec2c8d46a50890e960",
+      "synthetic_rows": 1,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 25,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 3768,
+          "CLR_FN": 4102,
+          "CLR_FP": 1127,
+          "IDSW": 4
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 3771,
+          "CLR_FN": 4099,
+          "CLR_FP": 1156,
+          "IDSW": 3
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 3769,
+          "CLR_FN": 4101,
+          "CLR_FP": 1127,
+          "IDSW": 4
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_same_gt_and_prior_detection_agree": 1
+      },
+      "synthetic_missed_gt_recovered": 1,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0221_2",
+      "frames": 590,
+      "native_mot_rows": 263,
+      "native_trace_rows": 2388,
+      "native_recovery_events": 15,
+      "native_appearance_updates": 3,
+      "native_candidate_checks": 204,
+      "native_trace_sha256": "2b64e5b21652c1d255c3d4aa9c8888a6149481048560192547d759bdcdac65ca",
+      "native_mot_sha256": "8abf522b4ae646b811c50e3c1ffd5e17da05727949944f7f8e4fe4431bbdb17e",
+      "variant_trace_sha256": "49173434b31b9f59d54362b3d37e754d785b5ae3e5f6073b2f8e3a84ac1fd8d2",
+      "variant_mot_sha256": "bbfed2a217bc393a9259cf454c2afd2b1ff1415234fa317347c1d5eb7587639d",
+      "synthetic_rows": 1,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 6,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 153,
+          "CLR_FN": 544,
+          "CLR_FP": 110,
+          "IDSW": 2
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 154,
+          "CLR_FN": 543,
+          "CLR_FP": 110,
+          "IDSW": 2
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 154,
+          "CLR_FN": 543,
+          "CLR_FP": 110,
+          "IDSW": 2
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_matched_prior_identity_unverified": 1
+      },
+      "synthetic_missed_gt_recovered": 1,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0225_1",
+      "frames": 329,
+      "native_mot_rows": 2002,
+      "native_trace_rows": 11151,
+      "native_recovery_events": 10,
+      "native_appearance_updates": 2145,
+      "native_candidate_checks": 3910,
+      "native_trace_sha256": "c940a0629e7b4d473bed09006bfd20f0935b50eefe4d677d89cbe44e9a21de0c",
+      "native_mot_sha256": "4e75d481a9eac3c2f81b3fdb302fee37a33b7bbd24b6eb87fedf2bc51307a024",
+      "variant_trace_sha256": "fc1e24d17e1755dc7dd3a62c29a5732dcf4a91cc2aabf5b02d3d96a440f1b985",
+      "variant_mot_sha256": "84cf6790397da13e1163c64a8a04786d8ada71f2b466931d65d7ae82e75d7ec3",
+      "synthetic_rows": 3,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 4,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 1837,
+          "CLR_FN": 1845,
+          "CLR_FP": 165,
+          "IDSW": 5
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 1837,
+          "CLR_FN": 1845,
+          "CLR_FP": 173,
+          "IDSW": 5
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 1837,
+          "CLR_FN": 1845,
+          "CLR_FP": 168,
+          "IDSW": 5
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_false_positive": 3
+      },
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0237_2",
+      "frames": 410,
+      "native_mot_rows": 548,
+      "native_trace_rows": 2416,
+      "native_recovery_events": 8,
+      "native_appearance_updates": 557,
+      "native_candidate_checks": 257,
+      "native_trace_sha256": "5b572eb23b5e802cde0f1985cdfd4817092497f0bd5a4ca583a2fbeef8a9dfb6",
+      "native_mot_sha256": "912f81c608dc258c9d737f45a9b4f4d914f7942b2fab60ac7439290486a6ec89",
+      "variant_trace_sha256": "95130be061ae245b20b6408b8fff5c9293b95412366bac8e24aa309c775a1e1b",
+      "variant_mot_sha256": "912f81c608dc258c9d737f45a9b4f4d914f7942b2fab60ac7439290486a6ec89",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 6,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 517,
+          "CLR_FN": 682,
+          "CLR_FP": 31,
+          "IDSW": 0
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 519,
+          "CLR_FN": 680,
+          "CLR_FP": 31,
+          "IDSW": 0
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 517,
+          "CLR_FN": 682,
+          "CLR_FP": 31,
+          "IDSW": 0
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0255_1",
+      "frames": 600,
+      "native_mot_rows": 402,
+      "native_trace_rows": 1303,
+      "native_recovery_events": 2,
+      "native_appearance_updates": 0,
+      "native_candidate_checks": 77,
+      "native_trace_sha256": "c6835a11e131b9375e1215a643e498dd251e7ebe02148516d07fb072520ffd65",
+      "native_mot_sha256": "d936465ca37d9dd48408182cdeed74780719e79e80b53ab24ecbfbfd13c22e5f",
+      "variant_trace_sha256": "04afa5a276466051bd383c367870e439c1f8320caf021cc174cc5a3f8509b474",
+      "variant_mot_sha256": "d936465ca37d9dd48408182cdeed74780719e79e80b53ab24ecbfbfd13c22e5f",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 1,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 397,
+          "CLR_FN": 203,
+          "CLR_FP": 5,
+          "IDSW": 7
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 397,
+          "CLR_FN": 203,
+          "CLR_FP": 5,
+          "IDSW": 7
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 397,
+          "CLR_FN": 203,
+          "CLR_FP": 5,
+          "IDSW": 7
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0257_2",
+      "frames": 590,
+      "native_mot_rows": 697,
+      "native_trace_rows": 2505,
+      "native_recovery_events": 3,
+      "native_appearance_updates": 254,
+      "native_candidate_checks": 192,
+      "native_trace_sha256": "f34a8d12dc8568490b34f9b7aabf08492158899840610df9452d132d366674f5",
+      "native_mot_sha256": "b014f73bf722b50340b18e39a20e467159b4fdfde16d888e8180db763ed76f01",
+      "variant_trace_sha256": "8e9b271137cd350d480d5ed88079dbaffe5f0aca4096b9ffa700721856357bb3",
+      "variant_mot_sha256": "b014f73bf722b50340b18e39a20e467159b4fdfde16d888e8180db763ed76f01",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 1,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 541,
+          "CLR_FN": 476,
+          "CLR_FP": 156,
+          "IDSW": 10
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 541,
+          "CLR_FN": 476,
+          "CLR_FP": 156,
+          "IDSW": 10
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 541,
+          "CLR_FN": 476,
+          "CLR_FP": 156,
+          "IDSW": 10
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0277_2",
+      "frames": 366,
+      "native_mot_rows": 908,
+      "native_trace_rows": 1553,
+      "native_recovery_events": 10,
+      "native_appearance_updates": 7,
+      "native_candidate_checks": 125,
+      "native_trace_sha256": "136e884ed676e3b2cbab638ed14742e9d1bb7cf6b7c9550d3eaa6b16b82aa3eb",
+      "native_mot_sha256": "d81f00415053cfb5d5641e0ea6a3e9fed986e937386b7df5e48c492e6fd8e580",
+      "variant_trace_sha256": "e10e7dd7404b87d1e6a14138cfa96fe3e27f078ad2ba45b9d4371fa058f667a7",
+      "variant_mot_sha256": "d81f00415053cfb5d5641e0ea6a3e9fed986e937386b7df5e48c492e6fd8e580",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 5,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 908,
+          "CLR_FN": 76,
+          "CLR_FP": 0,
+          "IDSW": 4
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 911,
+          "CLR_FN": 73,
+          "CLR_FP": 0,
+          "IDSW": 4
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 908,
+          "CLR_FN": 76,
+          "CLR_FP": 0,
+          "IDSW": 4
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0283_1",
+      "frames": 450,
+      "native_mot_rows": 4566,
+      "native_trace_rows": 11436,
+      "native_recovery_events": 30,
+      "native_appearance_updates": 2536,
+      "native_candidate_checks": 2072,
+      "native_trace_sha256": "3829816d862b2309e6c205070141aa47cd7bbfb1f7889af497435fef5cdb2d39",
+      "native_mot_sha256": "1058233c7dcec58374e710cd2cf774d0237f1ce6d23616cab0a89f40b9102033",
+      "variant_trace_sha256": "86126b5dbdef118268ef7f0fdd18bf8ab1746d3b3556ae9513553c3f69832744",
+      "variant_mot_sha256": "132a815a4f549983e5367d8962fc753d31002c33882c3d1a17c9b017f78744bd",
+      "synthetic_rows": 2,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 7,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 3199,
+          "CLR_FN": 2769,
+          "CLR_FP": 1367,
+          "IDSW": 2
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 3199,
+          "CLR_FN": 2769,
+          "CLR_FP": 1372,
+          "IDSW": 2
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 3199,
+          "CLR_FN": 2769,
+          "CLR_FP": 1369,
+          "IDSW": 2
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_false_positive": 2
+      },
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0303_2",
+      "frames": 577,
+      "native_mot_rows": 1291,
+      "native_trace_rows": 4390,
+      "native_recovery_events": 32,
+      "native_appearance_updates": 510,
+      "native_candidate_checks": 634,
+      "native_trace_sha256": "d584a1da73d83c897a47829f447baf6a392a4bad4ae2120ab460e801439f3966",
+      "native_mot_sha256": "bfc0deceac3393c81d329e9952f47287ec249451821deec352436dabc36b6c1f",
+      "variant_trace_sha256": "0a58e4a0165834d1cee0b63b70a79f1a02a0073deecd4727c824f814cd35c60c",
+      "variant_mot_sha256": "20143e18bae52c0002af336afb96e9823e89b3e600e7fe95743f615efe71c8a9",
+      "synthetic_rows": 1,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 15,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 1158,
+          "CLR_FN": 1392,
+          "CLR_FP": 133,
+          "IDSW": 9
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 1161,
+          "CLR_FN": 1389,
+          "CLR_FP": 137,
+          "IDSW": 9
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 1159,
+          "CLR_FN": 1391,
+          "CLR_FP": 133,
+          "IDSW": 9
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_matched_prior_identity_unverified": 1
+      },
+      "synthetic_missed_gt_recovered": 1,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0307_2",
+      "frames": 180,
+      "native_mot_rows": 39,
+      "native_trace_rows": 248,
+      "native_recovery_events": 0,
+      "native_appearance_updates": 0,
+      "native_candidate_checks": 0,
+      "native_trace_sha256": "9d051fa8dc43f7ae95142ac9f3f1ab5473ba1b526059aa6b026a602b1a8893db",
+      "native_mot_sha256": "a8495a971dfabe97f68796b2b1e19001b7d353943aca30747461ca2d4833cb39",
+      "variant_trace_sha256": "9d051fa8dc43f7ae95142ac9f3f1ab5473ba1b526059aa6b026a602b1a8893db",
+      "variant_mot_sha256": "a8495a971dfabe97f68796b2b1e19001b7d353943aca30747461ca2d4833cb39",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 0,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 39,
+          "CLR_FN": 38,
+          "CLR_FP": 0,
+          "IDSW": 0
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 39,
+          "CLR_FN": 38,
+          "CLR_FP": 0,
+          "IDSW": 0
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 39,
+          "CLR_FN": 38,
+          "CLR_FP": 0,
+          "IDSW": 0
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0309_4",
+      "frames": 603,
+      "native_mot_rows": 601,
+      "native_trace_rows": 4140,
+      "native_recovery_events": 21,
+      "native_appearance_updates": 78,
+      "native_candidate_checks": 765,
+      "native_trace_sha256": "013c2dc8a9487979327d51ca3dc63c69fce6c43004850cdbb2e3ac3659525ec7",
+      "native_mot_sha256": "d409a5e7140c2f25b97c06ce961e5996e69c95484019af98f3377616f08c0bac",
+      "variant_trace_sha256": "6f5aecad191af8ff0e6b61e9694f8ce53f27c8b3c0dd79354dc45c6c6552642c",
+      "variant_mot_sha256": "d409a5e7140c2f25b97c06ce961e5996e69c95484019af98f3377616f08c0bac",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 9,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 571,
+          "CLR_FN": 844,
+          "CLR_FP": 30,
+          "IDSW": 7
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 579,
+          "CLR_FN": 836,
+          "CLR_FP": 32,
+          "IDSW": 7
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 571,
+          "CLR_FN": 844,
+          "CLR_FP": 30,
+          "IDSW": 7
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0325_2",
+      "frames": 595,
+      "native_mot_rows": 29,
+      "native_trace_rows": 682,
+      "native_recovery_events": 0,
+      "native_appearance_updates": 32,
+      "native_candidate_checks": 0,
+      "native_trace_sha256": "37079655755dc5ad5705b4d589a662478b28c681d23242cf7f36c6cb6ec05c20",
+      "native_mot_sha256": "f15cb6ea13a8002dad776275cb9b0d5fa0bb001c83844fc9f448ec87d231d142",
+      "variant_trace_sha256": "37079655755dc5ad5705b4d589a662478b28c681d23242cf7f36c6cb6ec05c20",
+      "variant_mot_sha256": "f15cb6ea13a8002dad776275cb9b0d5fa0bb001c83844fc9f448ec87d231d142",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 0,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 0,
+          "CLR_FN": 0,
+          "CLR_FP": 29,
+          "IDSW": 0
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 0,
+          "CLR_FN": 0,
+          "CLR_FP": 29,
+          "IDSW": 0
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 0,
+          "CLR_FN": 0,
+          "CLR_FP": 29,
+          "IDSW": 0
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "frames": 390,
+      "native_mot_rows": 11162,
+      "native_trace_rows": 63541,
+      "native_recovery_events": 183,
+      "native_appearance_updates": 11208,
+      "native_candidate_checks": 33163,
+      "native_trace_sha256": "0aae647b297ba5eed1de26e663f79d39ec5de4bb6aa71d3a96ca9bd1381d6f0d",
+      "native_mot_sha256": "1d11f555aee58c2e88e2ff34201b203c0594e3683e3df4a3b9f92e1b3d65423b",
+      "variant_trace_sha256": "98e91a80d884ec4385c29ec1bfbe5f7d51fefdfad3feeb089681fa6518876584",
+      "variant_mot_sha256": "a294b27927518532cb7468e582e22973a05a0298ed37ee7f9bc8039b60a6d51f",
+      "synthetic_rows": 31,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 81,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 9256,
+          "CLR_FN": 54907,
+          "CLR_FP": 1906,
+          "IDSW": 21
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 9319,
+          "CLR_FN": 54844,
+          "CLR_FP": 1947,
+          "IDSW": 20
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 9277,
+          "CLR_FN": 54886,
+          "CLR_FP": 1916,
+          "IDSW": 22
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_same_gt_and_prior_detection_agree": 19,
+        "CLEAR_false_positive": 10,
+        "CLEAR_matched_prior_identity_unverified": 2
+      },
+      "synthetic_missed_gt_recovered": 21,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0339_2",
+      "frames": 600,
+      "native_mot_rows": 1566,
+      "native_trace_rows": 4941,
+      "native_recovery_events": 23,
+      "native_appearance_updates": 599,
+      "native_candidate_checks": 428,
+      "native_trace_sha256": "373450db5d41780dd3d96c778ad95e6892b10ef5ea3eaa82f3e039b821399b39",
+      "native_mot_sha256": "2b459accc5c11689dbf9a09cadc040eb4ef553a5677bf81e00fcb82cb14d3d8d",
+      "variant_trace_sha256": "3dea88e309ba47e8770ef483c008810fad9c294f0f814aa43a509d0e98e110c0",
+      "variant_mot_sha256": "2b459accc5c11689dbf9a09cadc040eb4ef553a5677bf81e00fcb82cb14d3d8d",
+      "synthetic_rows": 0,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 12,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 411,
+          "CLR_FN": 1389,
+          "CLR_FP": 1155,
+          "IDSW": 0
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 411,
+          "CLR_FN": 1389,
+          "CLR_FP": 1368,
+          "IDSW": 0
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 411,
+          "CLR_FN": 1389,
+          "CLR_FP": 1155,
+          "IDSW": 0
+        }
+      },
+      "synthetic_attribution": {},
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    },
+    {
+      "sequence": "DJI_0345_2",
+      "frames": 600,
+      "native_mot_rows": 910,
+      "native_trace_rows": 2435,
+      "native_recovery_events": 17,
+      "native_appearance_updates": 386,
+      "native_candidate_checks": 64,
+      "native_trace_sha256": "30c8e17a24d004ca0e6dd75de0f9e669cccb3ae462d34682c238a129d23da865",
+      "native_mot_sha256": "3bb009007f62a5129d83062371fbad5658db9bf2063ee2def8ad387c528ea2b4",
+      "variant_trace_sha256": "6afc338cd00f415d9d3e18d649b39259af54ff92837fefaff3886ab7a1e5af56",
+      "variant_mot_sha256": "522a6fbc9c656bbf619b85b3041c4f76b2bbcf34da614a4656006c0f39e2e81d",
+      "synthetic_rows": 4,
+      "byte_exact_native_trace": true,
+      "byte_exact_native_mot": true,
+      "supplemental_probes": 5,
+      "CLEAR": {
+        "B_early_moderate": {
+          "CLR_TP": 12,
+          "CLR_FN": 2245,
+          "CLR_FP": 898,
+          "IDSW": 0
+        },
+        "B_postlow_v1": {
+          "CLR_TP": 12,
+          "CLR_FN": 2245,
+          "CLR_FP": 904,
+          "IDSW": 0
+        },
+        "B_postlow_output_v1": {
+          "CLR_TP": 12,
+          "CLR_FN": 2245,
+          "CLR_FP": 902,
+          "IDSW": 0
+        }
+      },
+      "synthetic_attribution": {
+        "CLEAR_false_positive": 4
+      },
+      "synthetic_missed_gt_recovered": 0,
+      "native_CLEAR_assignment_changes": 0
+    }
+  ]
+}

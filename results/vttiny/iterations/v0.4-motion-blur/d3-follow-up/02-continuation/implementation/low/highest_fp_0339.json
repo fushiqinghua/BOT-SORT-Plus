@@ -1,0 +1,5733 @@
+{
+  "sequence": "DJI_0339_2",
+  "official": {
+    "scope": "full30",
+    "method": "B_postlow_v1",
+    "sequence": "DJI_0339_2",
+    "HOTA": "21.33492625177465",
+    "DetA": "11.809756751678014",
+    "AssA": "39.997990889284445",
+    "IDF1": "22.967309304274938",
+    "MOTA": "-53.166666666666664",
+    "FP": "1368",
+    "FN": "1389",
+    "IDSW": "0",
+    "delta_HOTA": "-0.8144028326453565",
+    "delta_DetA": "-0.934438391054325",
+    "delta_AssA": "0.0",
+    "delta_IDF1": "-1.4533680575788956",
+    "delta_MOTA": "-11.833333333333329",
+    "delta_FP": "213",
+    "delta_FN": "0",
+    "delta_IDSW": "0"
+  },
+  "baseline_fp": 1155,
+  "variant_fp": 1368,
+  "added_fp": 214,
+  "removed_fp": 1,
+  "direct_trigger_emissions": 28,
+  "fp_from_direct_trigger": 28,
+  "added_fp_from_direct_trigger": 28,
+  "added_fp_after_other_output_paths": 186,
+  "added_fp_by_track_id": {
+    "2": 209,
+    "6": 5
+  },
+  "removed_fp_by_track_id": {
+    "2": 1
+  },
+  "main_track_id": 2,
+  "main_track_before_frame_count": 125,
+  "main_track_after_frame_count": 333,
+  "main_track_after": [
+    {
+      "frame": 9,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "unconfirmed",
+          "det_index": 0,
+          "cost": 0.15197517861365867
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.1648230488393797
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.11110572591957779
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.4204693782954104
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.32074528308039296
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 1,
+          "age": 2,
+          "cost": 0.24469844870640822
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.449668855255802
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.13972336949806563
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.1235964646747636
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.06812916261108226
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.2523571356776919
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 0,
+          "cost": 0.15102206605329893
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.2616021980657386
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.1914826518893743
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 1,
+          "cost": 0.2616251679498117
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.18549997018960507
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.18853514454055376
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.14048255198575732
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.17129421765581476
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.20378516857335227
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.0715015911570146
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.10382825704991339
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.1775323502755165
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.12072073541286032
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.07703945022080749
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.09728668645209071
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.07185952887526859
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.10144593085410203
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.47903959938830476
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 0,
+          "cost": 0.18359329171193195
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 0,
+          "cost": 0.07972048601222403
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 0,
+          "cost": 0.1826915794232441
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.14450225880714196
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.13613904603931648
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.10479844861357701
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 5,
+          "age": 3,
+          "cost": 0.11668665708640387
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 7,
+          "score": 0.0680130273103714,
+          "cost": 0.0991796121435582,
+          "b_recovery_frame": 47
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 3,
+          "score": 0.0973251610994339,
+          "cost": 0.2297177811485902,
+          "b_recovery_frame": 47
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 4,
+          "age": 5,
+          "cost": 0.20622455913072285
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.13683812933016848
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.22776393228907033
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.10861671056153077
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.17127675865383618
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.219278014677444
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.11660677307150713
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.24848824181728757
+        }
+      ]
+    },
+    {
+      "frame": 62,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.09793473657918572
+        }
+      ]
+    },
+    {
+      "frame": 82,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 2,
+          "age": 20,
+          "cost": 0.5294669302601301
+        }
+      ]
+    },
+    {
+      "frame": 83,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.1536358763681338
+        }
+      ]
+    },
+    {
+      "frame": 84,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.16537909162450226
+        }
+      ]
+    },
+    {
+      "frame": 85,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 4,
+          "score": 0.08299211412668228,
+          "cost": 0.29357479966512556,
+          "b_recovery_frame": 82
+        }
+      ]
+    },
+    {
+      "frame": 88,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 1,
+          "age": 3,
+          "cost": 0.19133126432069605
+        }
+      ]
+    },
+    {
+      "frame": 89,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.09312045596085838
+        }
+      ]
+    },
+    {
+      "frame": 90,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.3475988889434978
+        }
+      ]
+    },
+    {
+      "frame": 91,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.3079291285282927
+        }
+      ]
+    },
+    {
+      "frame": 92,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.1310081299997936
+        }
+      ]
+    },
+    {
+      "frame": 93,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.29228761681085924
+        }
+      ]
+    },
+    {
+      "frame": 94,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.021581388815743008
+        }
+      ]
+    },
+    {
+      "frame": 99,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 5,
+          "cost": 0.12172168564947192
+        }
+      ]
+    },
+    {
+      "frame": 100,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.11350344981286331
+        }
+      ]
+    },
+    {
+      "frame": 101,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 3,
+          "score": 0.07759277522563934,
+          "cost": 0.23809362417377755,
+          "b_recovery_frame": 99
+        }
+      ]
+    },
+    {
+      "frame": 109,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 8,
+          "cost": 0.2113580172570408
+        }
+      ]
+    },
+    {
+      "frame": 110,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.2681081233818934
+        }
+      ]
+    },
+    {
+      "frame": 111,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.08661188562538225
+        }
+      ]
+    },
+    {
+      "frame": 112,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.1145709631583498
+        }
+      ]
+    },
+    {
+      "frame": 115,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 3,
+          "cost": 0.11375328610148067
+        }
+      ]
+    },
+    {
+      "frame": 116,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.22486021667035472
+        }
+      ]
+    },
+    {
+      "frame": 117,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.4897671547828977
+        }
+      ]
+    },
+    {
+      "frame": 118,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 6,
+          "score": 0.06337761133909225,
+          "cost": 0.1469835525286799,
+          "b_recovery_frame": 115
+        }
+      ]
+    },
+    {
+      "frame": 119,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.1964210140668089
+        }
+      ]
+    },
+    {
+      "frame": 120,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.19735997076769574
+        }
+      ]
+    },
+    {
+      "frame": 125,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 5,
+          "cost": 0.1259155742855485
+        }
+      ]
+    },
+    {
+      "frame": 136,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 2,
+          "age": 11,
+          "cost": 0.5389229262276276
+        }
+      ]
+    },
+    {
+      "frame": 137,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.20712548952261933
+        }
+      ]
+    },
+    {
+      "frame": 138,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 3,
+          "score": 0.0726604089140892,
+          "cost": 0.16419966670945363,
+          "b_recovery_frame": 136
+        }
+      ]
+    },
+    {
+      "frame": 139,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.31194739748472566
+        }
+      ]
+    },
+    {
+      "frame": 144,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 5,
+          "cost": 0.17037946238685964
+        }
+      ]
+    },
+    {
+      "frame": 145,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.2690520004124285
+        }
+      ]
+    },
+    {
+      "frame": 146,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.16692619662080665
+        }
+      ]
+    },
+    {
+      "frame": 147,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.06226672454223736
+        }
+      ]
+    },
+    {
+      "frame": 148,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.056054931095765315
+        }
+      ]
+    },
+    {
+      "frame": 149,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.17050009430102253
+        }
+      ]
+    },
+    {
+      "frame": 152,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 4,
+          "age": 3,
+          "cost": 0.0678369561504659
+        }
+      ]
+    },
+    {
+      "frame": 153,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.03857924525720047
+        }
+      ]
+    },
+    {
+      "frame": 154,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 5,
+          "score": 0.09293601661920547,
+          "cost": 0.06525008732229032,
+          "b_recovery_frame": 152
+        }
+      ]
+    },
+    {
+      "frame": 155,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.06584666053109633
+        }
+      ]
+    },
+    {
+      "frame": 156,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.14636641258713456
+        }
+      ]
+    },
+    {
+      "frame": 157,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.0946807450407513
+        }
+      ]
+    },
+    {
+      "frame": 158,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.09134053035069789
+        }
+      ]
+    },
+    {
+      "frame": 159,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.36080906338021845
+        }
+      ]
+    },
+    {
+      "frame": 160,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.06270396556246938
+        }
+      ]
+    },
+    {
+      "frame": 161,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.18890826283292028
+        }
+      ]
+    },
+    {
+      "frame": 162,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.22221006564598178
+        }
+      ]
+    },
+    {
+      "frame": 163,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.17055649698266828
+        }
+      ]
+    },
+    {
+      "frame": 164,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.27731841524765455
+        }
+      ]
+    },
+    {
+      "frame": 165,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.235067778852024
+        }
+      ]
+    },
+    {
+      "frame": 166,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.0912559823677439
+        }
+      ]
+    },
+    {
+      "frame": 167,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.3393606436374319
+        }
+      ]
+    },
+    {
+      "frame": 168,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.11321967087352391
+        }
+      ]
+    },
+    {
+      "frame": 169,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.18679826001328836
+        }
+      ]
+    },
+    {
+      "frame": 170,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.11669380759255044
+        }
+      ]
+    },
+    {
+      "frame": 171,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.058532994825381435
+        }
+      ]
+    },
+    {
+      "frame": 172,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.10118791523847992
+        }
+      ]
+    },
+    {
+      "frame": 173,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.0840627019059933
+        }
+      ]
+    },
+    {
+      "frame": 174,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.036378163058258806
+        }
+      ]
+    },
+    {
+      "frame": 175,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.06283253102255659
+        }
+      ]
+    },
+    {
+      "frame": 176,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.09839368051930253
+        }
+      ]
+    },
+    {
+      "frame": 177,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.046004025467921594
+        }
+      ]
+    },
+    {
+      "frame": 178,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 2,
+          "cost": 0.04191096060381028
+        }
+      ]
+    },
+    {
+      "frame": 179,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.09140161199977803
+        }
+      ]
+    },
+    {
+      "frame": 180,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 2,
+          "cost": 0.06730481099930175
+        }
+      ]
+    },
+    {
+      "frame": 181,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 3,
+          "cost": 0.19909981483607642
+        }
+      ]
+    },
+    {
+      "frame": 182,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 2,
+          "cost": 0.10254294391743835
+        }
+      ]
+    },
+    {
+      "frame": 183,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 2,
+          "cost": 0.19057093945694548
+        }
+      ]
+    },
+    {
+      "frame": 184,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 2,
+          "cost": 0.0869915247959383
+        }
+      ]
+    },
+    {
+      "frame": 185,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 3,
+          "cost": 0.1152820443184055
+        }
+      ]
+    },
+    {
+      "frame": 186,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 3,
+          "cost": 0.1387466657119012
+        }
+      ]
+    },
+    {
+      "frame": 187,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.20432549545814926
+        }
+      ]
+    },
+    {
+      "frame": 188,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.3685040249856184
+        }
+      ]
+    },
+    {
+      "frame": 189,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.21395544845188819
+        }
+      ]
+    },
+    {
+      "frame": 190,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 2,
+          "cost": 0.18756255199207694
+        }
+      ]
+    },
+    {
+      "frame": 191,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 3,
+          "cost": 0.06876656134941772
+        }
+      ]
+    },
+    {
+      "frame": 192,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 3,
+          "cost": 0.08707060450132209
+        }
+      ]
+    },
+    {
+      "frame": 193,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.10989272764962044
+        }
+      ]
+    },
+    {
+      "frame": 194,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.2904586903483314
+        }
+      ]
+    },
+    {
+      "frame": 195,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.059840749592312004
+        }
+      ]
+    },
+    {
+      "frame": 196,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.19478556975685013
+        }
+      ]
+    },
+    {
+      "frame": 197,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.2791546054379943
+        }
+      ]
+    },
+    {
+      "frame": 198,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.24632681138670143
+        }
+      ]
+    },
+    {
+      "frame": 199,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.350216001877222
+        }
+      ]
+    },
+    {
+      "frame": 200,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.310002722786351
+        }
+      ]
+    },
+    {
+      "frame": 201,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.12101192016474949
+        }
+      ]
+    },
+    {
+      "frame": 202,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.23949603782652795
+        }
+      ]
+    },
+    {
+      "frame": 206,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": true,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 4,
+          "age": 4,
+          "cost": 0.17015630693013642
+        }
+      ]
+    },
+    {
+      "frame": 207,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 5,
+          "score": 0.06555505096912384,
+          "cost": 0.3715341953184632,
+          "b_recovery_frame": 206
+        }
+      ]
+    },
+    {
+      "frame": 236,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 4,
+          "age": 29,
+          "cost": 0.30257983689051526
+        }
+      ]
+    },
+    {
+      "frame": 237,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.17830976698998768
+        }
+      ]
+    },
+    {
+      "frame": 238,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.10373827029023619
+        }
+      ]
+    },
+    {
+      "frame": 239,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.16860247956454688
+        }
+      ]
+    },
+    {
+      "frame": 240,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.06686909552829845
+        }
+      ]
+    },
+    {
+      "frame": 251,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 11,
+          "cost": 0.1806340207106549
+        }
+      ]
+    },
+    {
+      "frame": 252,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.18819967221550327
+        }
+      ]
+    },
+    {
+      "frame": 253,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 3,
+          "score": 0.06744899600744247,
+          "cost": 0.06726272169720293,
+          "b_recovery_frame": 251
+        }
+      ]
+    },
+    {
+      "frame": 254,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 3,
+          "score": 0.06033124029636383,
+          "cost": 0.06933576157678789,
+          "b_recovery_frame": 251
+        }
+      ]
+    },
+    {
+      "frame": 260,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 6,
+          "cost": 0.09235193624466663
+        }
+      ]
+    },
+    {
+      "frame": 261,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.17707495735149437
+        }
+      ]
+    },
+    {
+      "frame": 262,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.15593195996283493
+        }
+      ]
+    },
+    {
+      "frame": 263,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.169029869084951
+        }
+      ]
+    },
+    {
+      "frame": 264,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.11663595140914362
+        }
+      ]
+    },
+    {
+      "frame": 278,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 4,
+          "age": 14,
+          "cost": 0.1306915236858471
+        }
+      ]
+    },
+    {
+      "frame": 286,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 8,
+          "cost": 0.08170520613367993
+        }
+      ]
+    },
+    {
+      "frame": 287,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.1306035598593679
+        }
+      ]
+    },
+    {
+      "frame": 288,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.21661332880754558
+        }
+      ]
+    },
+    {
+      "frame": 289,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 4,
+          "score": 0.09177573770284653,
+          "cost": 0.1523599872302438,
+          "b_recovery_frame": 286
+        }
+      ]
+    },
+    {
+      "frame": 290,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.11388897260838438
+        }
+      ]
+    },
+    {
+      "frame": 291,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.13814518473765214
+        }
+      ]
+    },
+    {
+      "frame": 292,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.05770372437454141
+        }
+      ]
+    },
+    {
+      "frame": 293,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.028651881749514496
+        }
+      ]
+    },
+    {
+      "frame": 294,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.15665690370270613
+        }
+      ]
+    },
+    {
+      "frame": 295,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.10170978367291694
+        }
+      ]
+    },
+    {
+      "frame": 296,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.05219367594516
+        }
+      ]
+    },
+    {
+      "frame": 297,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.40262360463672364
+        }
+      ]
+    },
+    {
+      "frame": 298,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.17803470963540047
+        }
+      ]
+    },
+    {
+      "frame": 299,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.04018710773154288
+        }
+      ]
+    },
+    {
+      "frame": 300,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.18399474097629542
+        }
+      ]
+    },
+    {
+      "frame": 301,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.05756049835397303
+        }
+      ]
+    },
+    {
+      "frame": 302,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.07836127585538422
+        }
+      ]
+    },
+    {
+      "frame": 303,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.07272789762325804
+        }
+      ]
+    },
+    {
+      "frame": 304,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.28385551949033105
+        }
+      ]
+    },
+    {
+      "frame": 305,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.3002980041589123
+        }
+      ]
+    },
+    {
+      "frame": 306,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.11294696812017924
+        }
+      ]
+    },
+    {
+      "frame": 307,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.11809096130119046
+        }
+      ]
+    },
+    {
+      "frame": 308,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.1966315097441319
+        }
+      ]
+    },
+    {
+      "frame": 309,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.34129651125568916
+        }
+      ]
+    },
+    {
+      "frame": 310,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.06548002089322369
+        }
+      ]
+    },
+    {
+      "frame": 313,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 3,
+          "cost": 0.20390137117743468
+        }
+      ]
+    },
+    {
+      "frame": 314,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.3567957925835462
+        }
+      ]
+    },
+    {
+      "frame": 315,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.06485508010728402
+        }
+      ]
+    },
+    {
+      "frame": 316,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.17683872902000308
+        }
+      ]
+    },
+    {
+      "frame": 317,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.1611325884411583
+        }
+      ]
+    },
+    {
+      "frame": 318,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.07850211951482622
+        }
+      ]
+    },
+    {
+      "frame": 319,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.11140011834019448
+        }
+      ]
+    },
+    {
+      "frame": 320,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.06947788723508375
+        }
+      ]
+    },
+    {
+      "frame": 321,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.06421465681774019
+        }
+      ]
+    },
+    {
+      "frame": 322,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.07074127610877434
+        }
+      ]
+    },
+    {
+      "frame": 323,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.24732651795695038
+        }
+      ]
+    },
+    {
+      "frame": 324,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 1,
+          "cost": 0.20165068836731403
+        }
+      ]
+    },
+    {
+      "frame": 325,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.06288857806562809
+        }
+      ]
+    },
+    {
+      "frame": 326,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 2,
+          "cost": 0.12519658058667482
+        }
+      ]
+    },
+    {
+      "frame": 327,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.1646476193340306
+        }
+      ]
+    },
+    {
+      "frame": 328,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.07464907912525454
+        }
+      ]
+    },
+    {
+      "frame": 329,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.25264781318701823
+        }
+      ]
+    },
+    {
+      "frame": 330,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.16242265537871015
+        }
+      ]
+    },
+    {
+      "frame": 331,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.20432662064671703
+        }
+      ]
+    },
+    {
+      "frame": 332,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.2073162028519029
+        }
+      ]
+    },
+    {
+      "frame": 333,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.43717215002324816
+        }
+      ]
+    },
+    {
+      "frame": 334,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.43290595848619784
+        }
+      ]
+    },
+    {
+      "frame": 335,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.12013942557561663
+        }
+      ]
+    },
+    {
+      "frame": 336,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.10300918985007357
+        }
+      ]
+    },
+    {
+      "frame": 339,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 5,
+          "age": 3,
+          "cost": 0.24914792892307192
+        }
+      ]
+    },
+    {
+      "frame": 340,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.1325320175809641
+        }
+      ]
+    },
+    {
+      "frame": 341,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.26091859601094236
+        }
+      ]
+    },
+    {
+      "frame": 342,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.04937393661082645
+        }
+      ]
+    },
+    {
+      "frame": 346,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 4,
+          "age": 4,
+          "cost": 0.13318594161890696
+        }
+      ]
+    },
+    {
+      "frame": 347,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.18297477654059968
+        }
+      ]
+    },
+    {
+      "frame": 348,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.4440887627082246
+        }
+      ]
+    },
+    {
+      "frame": 349,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.19473342560865103
+        }
+      ]
+    },
+    {
+      "frame": 350,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.23626753283948998
+        }
+      ]
+    },
+    {
+      "frame": 351,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.03888332273667994
+        }
+      ]
+    },
+    {
+      "frame": 352,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.23794704758530727
+        }
+      ]
+    },
+    {
+      "frame": 353,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.1149447605470103
+        }
+      ]
+    },
+    {
+      "frame": 354,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.05869310823618479
+        }
+      ]
+    },
+    {
+      "frame": 357,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 4,
+          "age": 3,
+          "cost": 0.20069563835626225
+        }
+      ]
+    },
+    {
+      "frame": 358,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.14660707817732355
+        }
+      ]
+    },
+    {
+      "frame": 359,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 4,
+          "score": 0.07449838519096375,
+          "cost": 0.33675419863403666,
+          "b_recovery_frame": 357
+        }
+      ]
+    },
+    {
+      "frame": 360,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.32475914839445164
+        }
+      ]
+    },
+    {
+      "frame": 361,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.09544489695344183
+        }
+      ]
+    },
+    {
+      "frame": 362,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.19380607331173938
+        }
+      ]
+    },
+    {
+      "frame": 363,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.250916940467131
+        }
+      ]
+    },
+    {
+      "frame": 364,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.20796875853036567
+        }
+      ]
+    },
+    {
+      "frame": 367,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 5,
+          "age": 3,
+          "cost": 0.07334107909922899
+        }
+      ]
+    },
+    {
+      "frame": 368,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 7,
+          "score": 0.05519215017557144,
+          "cost": 0.11099493133339644,
+          "b_recovery_frame": 367
+        }
+      ]
+    },
+    {
+      "frame": 369,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 6,
+          "score": 0.06059914082288742,
+          "cost": 0.263233665002621,
+          "b_recovery_frame": 367
+        }
+      ]
+    },
+    {
+      "frame": 393,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 2,
+          "age": 24,
+          "cost": 0.4896761046805426
+        }
+      ]
+    },
+    {
+      "frame": 394,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 2,
+          "score": 0.06271682679653168,
+          "cost": 0.17143670299744485,
+          "b_recovery_frame": 393
+        }
+      ]
+    },
+    {
+      "frame": 395,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.17592804061705092
+        }
+      ]
+    },
+    {
+      "frame": 422,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 4,
+          "age": 27,
+          "cost": 0.5242625870200603
+        }
+      ]
+    },
+    {
+      "frame": 423,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.11379499777998436
+        }
+      ]
+    },
+    {
+      "frame": 424,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.07985463813690385
+        }
+      ]
+    },
+    {
+      "frame": 425,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.174706288769796
+        }
+      ]
+    },
+    {
+      "frame": 426,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.0893693416188659
+        }
+      ]
+    },
+    {
+      "frame": 427,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.25041668005484585
+        }
+      ]
+    },
+    {
+      "frame": 428,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.03809288902906027
+        }
+      ]
+    },
+    {
+      "frame": 429,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.16693568989295116
+        }
+      ]
+    },
+    {
+      "frame": 430,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.2966888381913153
+        }
+      ]
+    },
+    {
+      "frame": 431,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 2,
+          "cost": 0.06904069959573078
+        }
+      ]
+    },
+    {
+      "frame": 432,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.09489451230727608
+        }
+      ]
+    },
+    {
+      "frame": 433,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.09193152952232342
+        }
+      ]
+    },
+    {
+      "frame": 434,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 1,
+          "cost": 0.09019489762238553
+        }
+      ]
+    },
+    {
+      "frame": 435,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.20173654130985152
+        }
+      ]
+    },
+    {
+      "frame": 436,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 2,
+          "cost": 0.05832143330908357
+        }
+      ]
+    },
+    {
+      "frame": 437,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.23718227591810281
+        }
+      ]
+    },
+    {
+      "frame": 438,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.23107973499607393
+        }
+      ]
+    },
+    {
+      "frame": 439,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 1,
+          "cost": 0.15166257480866607
+        }
+      ]
+    },
+    {
+      "frame": 440,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.07903423399863674
+        }
+      ]
+    },
+    {
+      "frame": 441,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.10312680687942666
+        }
+      ]
+    },
+    {
+      "frame": 442,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.13322250542995484
+        }
+      ]
+    },
+    {
+      "frame": 443,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.1785352442027769
+        }
+      ]
+    },
+    {
+      "frame": 444,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.044057196371986684
+        }
+      ]
+    },
+    {
+      "frame": 445,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.09654831512404993
+        }
+      ]
+    },
+    {
+      "frame": 446,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.3429747730772865
+        }
+      ]
+    },
+    {
+      "frame": 447,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.07639137836625487
+        }
+      ]
+    },
+    {
+      "frame": 448,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.3104753986936021
+        }
+      ]
+    },
+    {
+      "frame": 449,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.10453252498624221
+        }
+      ]
+    },
+    {
+      "frame": 450,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.43641066330475964
+        }
+      ]
+    },
+    {
+      "frame": 451,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.14980400907153113
+        }
+      ]
+    },
+    {
+      "frame": 452,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.11918129246912679
+        }
+      ]
+    },
+    {
+      "frame": 453,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.24885945283205302
+        }
+      ]
+    },
+    {
+      "frame": 454,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.36187680925398746
+        }
+      ]
+    },
+    {
+      "frame": 455,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.1892096509139336
+        }
+      ]
+    },
+    {
+      "frame": 456,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.09517225430958953
+        }
+      ]
+    },
+    {
+      "frame": 457,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.06744406671011394
+        }
+      ]
+    },
+    {
+      "frame": 458,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.2536612761493312
+        }
+      ]
+    },
+    {
+      "frame": 459,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.24604402348295307
+        }
+      ]
+    },
+    {
+      "frame": 460,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.21603497694105944
+        }
+      ]
+    },
+    {
+      "frame": 461,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.20802889336087416
+        }
+      ]
+    },
+    {
+      "frame": 462,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.24234156834738252
+        }
+      ]
+    },
+    {
+      "frame": 463,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.11875933974818975
+        }
+      ]
+    },
+    {
+      "frame": 464,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.2236301672865153
+        }
+      ]
+    },
+    {
+      "frame": 465,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.084885205886441
+        }
+      ]
+    },
+    {
+      "frame": 474,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 9,
+          "cost": 0.5039452802187077
+        }
+      ]
+    },
+    {
+      "frame": 475,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 4,
+          "score": 0.07643591612577438,
+          "cost": 0.09822852849808406,
+          "b_recovery_frame": 474
+        }
+      ]
+    },
+    {
+      "frame": 476,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.19976204538171705
+        }
+      ]
+    },
+    {
+      "frame": 477,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 4,
+          "score": 0.05470733344554901,
+          "cost": 0.2005058837608913,
+          "b_recovery_frame": 474
+        }
+      ]
+    },
+    {
+      "frame": 490,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 2,
+          "age": 13,
+          "cost": 0.3649814672525555
+        }
+      ]
+    },
+    {
+      "frame": 491,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.030445510255890595
+        }
+      ]
+    },
+    {
+      "frame": 492,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 5,
+          "score": 0.08878464251756668,
+          "cost": 0.1521887651361965,
+          "b_recovery_frame": 490
+        }
+      ]
+    },
+    {
+      "frame": 493,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.17209847538115042
+        }
+      ]
+    },
+    {
+      "frame": 498,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 5,
+          "cost": 0.28730087701647433
+        }
+      ]
+    },
+    {
+      "frame": 499,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.3299963005120713
+        }
+      ]
+    },
+    {
+      "frame": 500,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.19837558826128177
+        }
+      ]
+    },
+    {
+      "frame": 501,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 3,
+          "score": 0.0919281616806984,
+          "cost": 0.13537244325212805,
+          "b_recovery_frame": 498
+        }
+      ]
+    },
+    {
+      "frame": 502,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.10604229291168799
+        }
+      ]
+    },
+    {
+      "frame": 505,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 3,
+          "cost": 0.1125452194374386
+        }
+      ]
+    },
+    {
+      "frame": 506,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.12287451428516094
+        }
+      ]
+    },
+    {
+      "frame": 507,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.2813430332351692
+        }
+      ]
+    },
+    {
+      "frame": 508,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.09028224677223062
+        }
+      ]
+    },
+    {
+      "frame": 509,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.14211240019190652
+        }
+      ]
+    },
+    {
+      "frame": 510,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.13528078960377676
+        }
+      ]
+    },
+    {
+      "frame": 511,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.23577526232170143
+        }
+      ]
+    },
+    {
+      "frame": 512,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.16882888221669656
+        }
+      ]
+    },
+    {
+      "frame": 513,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.15726968561616217
+        }
+      ]
+    },
+    {
+      "frame": 514,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.11286248014089761
+        }
+      ]
+    },
+    {
+      "frame": 515,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.2794522154840886
+        }
+      ]
+    },
+    {
+      "frame": 516,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.2274926925298255
+        }
+      ]
+    },
+    {
+      "frame": 517,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.06024901521602588
+        }
+      ]
+    },
+    {
+      "frame": 518,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.23519891672122273
+        }
+      ]
+    },
+    {
+      "frame": 536,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 4,
+          "age": 18,
+          "cost": 0.28586164141334225
+        }
+      ]
+    },
+    {
+      "frame": 550,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 14,
+          "cost": 0.540850093331731
+        }
+      ]
+    },
+    {
+      "frame": 551,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 3,
+          "score": 0.0741204246878624,
+          "cost": 0.1556345449061971,
+          "b_recovery_frame": 550
+        }
+      ]
+    },
+    {
+      "frame": 552,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.05180882056557767
+        }
+      ]
+    },
+    {
+      "frame": 553,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 3,
+          "score": 0.09451430290937424,
+          "cost": 0.16802955700403976,
+          "b_recovery_frame": 550
+        }
+      ]
+    },
+    {
+      "frame": 561,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 3,
+          "age": 8,
+          "cost": 0.6144163141236033
+        }
+      ]
+    },
+    {
+      "frame": 562,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 6,
+          "score": 0.09170544892549515,
+          "cost": 0.17928112684332498,
+          "b_recovery_frame": 561
+        }
+      ]
+    },
+    {
+      "frame": 566,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 5,
+          "age": 4,
+          "cost": 0.25300438286388544
+        }
+      ]
+    },
+    {
+      "frame": 567,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 5,
+          "score": 0.09046471863985062,
+          "cost": 0.3088769092663388,
+          "b_recovery_frame": 566
+        }
+      ]
+    },
+    {
+      "frame": 568,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.4303384214888829
+        }
+      ]
+    },
+    {
+      "frame": 569,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.23926127258328023
+        }
+      ]
+    },
+    {
+      "frame": 575,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "recovered",
+          "det_index": 5,
+          "age": 6,
+          "cost": 0.4341583436475307
+        }
+      ]
+    },
+    {
+      "frame": 576,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 5,
+          "score": 0.059556931257247925,
+          "cost": 0.17977127367354717,
+          "b_recovery_frame": 575
+        }
+      ]
+    },
+    {
+      "frame": 577,
+      "direct_weak": true,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "post_B_weak",
+          "det_index": 6,
+          "score": 0.07728389650583267,
+          "cost": 0.30682970080197947,
+          "b_recovery_frame": 575
+        }
+      ]
+    },
+    {
+      "frame": 578,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.18270765180951065
+        }
+      ]
+    },
+    {
+      "frame": 579,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 6,
+          "cost": 0.3668401223390617
+        }
+      ]
+    },
+    {
+      "frame": 580,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.2721472740429235
+        }
+      ]
+    },
+    {
+      "frame": 581,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.11413264277767432
+        }
+      ]
+    },
+    {
+      "frame": 582,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 2,
+          "cost": 0.22782399810182152
+        }
+      ]
+    },
+    {
+      "frame": 583,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.1765158969490358
+        }
+      ]
+    },
+    {
+      "frame": 584,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.15919877685230954
+        }
+      ]
+    },
+    {
+      "frame": 585,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.04802078420258893
+        }
+      ]
+    },
+    {
+      "frame": 586,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.47361106173105794
+        }
+      ]
+    },
+    {
+      "frame": 587,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 2,
+          "cost": 0.06439635941578159
+        }
+      ]
+    },
+    {
+      "frame": 588,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.13795960017685804
+        }
+      ]
+    },
+    {
+      "frame": 589,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.1672198487261627
+        }
+      ]
+    },
+    {
+      "frame": 590,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.1994899707509329
+        }
+      ]
+    },
+    {
+      "frame": 591,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.14531303330609457
+        }
+      ]
+    },
+    {
+      "frame": 592,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 3,
+          "cost": 0.3545524076259513
+        }
+      ]
+    },
+    {
+      "frame": 593,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "high",
+          "det_index": 3,
+          "cost": 0.17357227378248996
+        }
+      ]
+    },
+    {
+      "frame": 594,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.1369840336414998
+        }
+      ]
+    },
+    {
+      "frame": 595,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.0785907211643847
+        }
+      ]
+    },
+    {
+      "frame": 596,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.04446558996569683
+        }
+      ]
+    },
+    {
+      "frame": 597,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 4,
+          "cost": 0.31705108954446437
+        }
+      ]
+    },
+    {
+      "frame": 598,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 6,
+          "cost": 0.15089547649298185
+        }
+      ]
+    },
+    {
+      "frame": 599,
+      "direct_weak": false,
+      "false_positive": true,
+      "best_gt_iou": 0.0,
+      "original_mot_emitted": false,
+      "variant_match": [
+        {
+          "event": "match",
+          "stage": "low",
+          "det_index": 5,
+          "cost": 0.22374477662435477
+        }
+      ]
+    }
+  ],
+  "main_track_before": [
+    {
+      "frame": 9,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 10,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 11,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 12,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 13,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 15,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 16,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 17,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 18,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 19,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 20,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 21,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 22,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 23,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 24,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 25,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 26,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 27,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 28,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 29,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 30,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 31,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 32,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 33,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 34,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 35,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 36,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 37,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 38,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 39,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 40,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 41,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 42,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 43,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 44,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 47,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 54,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 55,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 56,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 57,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 58,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 59,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 60,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 61,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 62,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 82,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 83,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 84,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 88,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 89,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 90,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 91,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 92,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 93,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 94,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 99,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 100,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 109,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 110,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 111,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 112,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 115,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 116,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 117,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 120,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 125,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 136,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 137,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 143,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 144,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 145,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 146,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 147,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 148,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 149,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 152,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 153,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 156,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 157,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 158,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 159,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 160,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 161,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 162,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 163,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 164,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 165,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 166,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 167,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 168,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 169,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 170,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 171,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 172,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 173,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 174,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 175,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 176,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 177,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 178,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 179,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 180,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 181,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 182,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 183,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 184,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 185,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 186,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 187,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 188,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 189,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 190,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 191,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 192,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 193,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 194,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 195,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 196,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 197,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 198,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 199,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 200,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 201,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 202,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    },
+    {
+      "frame": 206,
+      "false_positive": true,
+      "best_gt_iou": 0.0
+    }
+  ],
+  "baseline_recovery_frames": [
+    15,
+    47,
+    54,
+    82,
+    88,
+    99,
+    109,
+    115,
+    120,
+    125,
+    136,
+    143,
+    152,
+    156,
+    206
+  ]
+}
