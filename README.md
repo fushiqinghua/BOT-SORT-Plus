@@ -20,6 +20,18 @@ B 利用原生关联后未消费的候选形成短轨迹，对仍在 Lost 池中
 
 当前分支从 `iteration/v0.3-c2-identity` 的 `667eb40a6aa624c35fb86eb73656bb334b107a11` 接续。主入口锁定完整有效的 B 配置，关闭 A、旧 C、C2、raw-IR、motion2 和位置修正。历史组合配置的最高分仍可在已有实验中查阅；本轮选择 B 参考是为了分析新增误差来源。
 
+## 下一轮任务（v0.4 round 2）
+
+首轮真实诊断与 D3 后续验证已完成。**继续固定 B_early_moderate，暂停继续扩展低分续接规则。** 下一轮优先审计 Lost 关联机会及固定状态预测反事实，另做一次 191 行补框坐标对照，并审计正式 B 的持续误报。D4 暂只补人工可比标签。
+
+- [下一轮逐步执行计划](docs/botsort_plus/diagnostics_v0.4/NEXT_ROUND.md)（含输入、失败环节、预测方案、对照、验收与回传要求）
+- [任务状态与冻结配置](configs/diagnostics/v0.4_followup_tasks.json)
+- [Lost 队列提取入口](tools/prepare_v04_lost_cohort.py)：先在现有首轮完整实验目录执行；反事实匹配、坐标复评与误报审计的本地实现任务见计划，尚未运行真实数据。
+
+```bash
+python -X utf8 tools/prepare_v04_lost_cohort.py --run-root outputs/diagnostics_v0.4_full30_round1 --output outputs/v0.4_followup_round2/E1_cohort
+```
+
 ## 四组诊断
 
 | 组别 | 实验内容 | 主要证据 |
@@ -111,7 +123,7 @@ python -X utf8 tools/run_botsort_diagnostics.py run --settings configs/diagnosti
 
 诊断配对标签用于错因分析；HOTA、IDF1、MOTA 继续使用原有 TrackEval 口径。GMC 内点和图像清晰度是质量代理，需结合人工复核和具体事件解释；缺 GT、身份歧义与视频尾部截断保留为未知。诊断开启的计时含采集开销，不能作为算法 FPS 结果。
 
-历史官方测试集参与过选模、门限校准和错因分析，因此既有指标和本轮分析按开发实验解读。真实数据诊断结论需等待本地执行，当前软件测试不代表新模块的性能收益。
+历史官方测试集参与过选模、门限校准和错因分析，因此既有指标和本轮分析按开发实验解读。首轮真实诊断与 D3 后续验证已归档；下一轮仍需本地执行，软件测试不代表新模块的性能收益。
 
 ## 历史实验与复现入口
 
