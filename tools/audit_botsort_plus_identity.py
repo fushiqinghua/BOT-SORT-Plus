@@ -155,7 +155,15 @@ def _validate_decision(event, cfg):
         raise ValueError("Private anchor was written despite a rejected decision")
     if allow and (quality < cfg.min_quality or quality <= 0):
         raise ValueError("Write eligibility contradicts configured quality gate")
-    if gate and not allow and (native or custom):
+    if gate and cfg.recent_confirmed_bank:
+        recent = _flag(event, "recent_rgb_agrees")
+        permit = _flag(event, "bank_write_permitted", allow or (event["reason"] == "history_conflict" and recent))
+        if recent and (stage != "high" or geometry > .50 or
+                       (event["geometry_margin"] is not None and event["geometry_margin"] < .10)):
+            raise ValueError("Recent RGB confirmation contradicts its association stage or geometry")
+        if custom and not permit:
+            raise ValueError("Unconfirmed observation reached the recovery bank")
+    elif gate and not allow and (native or custom):
         raise ValueError("Rejected identity write reached native/custom memory")
     if stage == "low" and native:
         raise ValueError("Low-score stage must never write native features")
@@ -188,8 +196,8 @@ def _validate_seed(event, cfg):
     _flag(event, "private_anchor_written", allow)
     native = _flag(event, "native_feature_present")
     custom = _modalities(event.get("custom_modalities_written"))
-    if gate and not allow and (native or custom):
-        raise ValueError("Rejected birth seed remains in native/custom memory")
+    if gate and not allow and (custom or (native and not cfg.recent_confirmed_bank)):
+        raise ValueError("Rejected birth seed reached a gated memory writer")
 
 
 def _sequence(path, sequence, frames, cfg, aggregate):

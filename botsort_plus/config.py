@@ -13,8 +13,27 @@ from .identity_reliability import IdentityConfig
 
 
 @dataclass
+class RawInfraredConfig:
+    presence: str | None = None
+    native: str | None = None
+    recovery: str | None = None
+    shift: bool = False
+
+    def __post_init__(self):
+        if (self.presence not in (None, "shadow", "guard", "sensitive", "position") or
+                self.native not in (None, "shadow", "rerank") or
+                self.recovery not in (None, "shadow", "rerank", "delay") or type(self.shift) is not bool):
+            raise ValueError("Unknown raw infrared policy")
+
+    @property
+    def enabled(self):
+        return bool(self.presence or self.native or self.recovery)
+
+
+@dataclass
 class PlusConfig:
     name: str = "baseline"
+    raw_ir: RawInfraredConfig = field(default_factory=RawInfraredConfig)
     birth: BirthConfig = field(default_factory=BirthConfig)
     recovery: RecoveryConfig = field(default_factory=RecoveryConfig)
     appearance: AppearanceConfig = field(default_factory=AppearanceConfig)
@@ -46,7 +65,7 @@ class PlusConfig:
         for key, kind in (("birth",BirthConfig), ("recovery",RecoveryConfig),
                           ("appearance",AppearanceConfig), ("geometry",GeometryConfig),
                           ("birth_policy",BirthPolicyConfig), ("birth_identity",BirthIdentityConfig),
-                          ("identity",IdentityConfig)):
+                          ("identity",IdentityConfig), ("raw_ir",RawInfraredConfig)):
             if key in data:
                 if not isinstance(data[key], dict):
                     raise ValueError(f"{key} configuration must be an object")
@@ -55,6 +74,8 @@ class PlusConfig:
                     raise ValueError(f"Unknown {key} options: {sorted(extra)}")
                 data[key] = kind(**data[key])
         result = cls(**data)
+        if result.recovery.output_prediction_frames and result.adapter_mode != "v2":
+            raise ValueError("Online prediction output requires the v2 adapter")
         result.validate_v2()
         if not result.name or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-" for c in result.name):
             raise ValueError("Experiment name must be a plain filename component")
@@ -76,6 +97,12 @@ class PlusConfig:
         return result
 
     def validate_v2(self):
+        if self.raw_ir.enabled and (self.adapter_mode != "v2" or not self.recovery.enabled):
+            raise ValueError("Raw infrared evidence needs the v2 recovery pipeline")
+        if self.raw_ir.presence and not self.recovery.output_prediction_frames:
+            raise ValueError("Presence checks require a projection output")
+        if self.raw_ir.native and not self.identity.enabled:
+            raise ValueError("Raw-IR native reranking requires the C2 high association path")
         if self.adapter_mode not in ("legacy", "v2"):
             raise ValueError("adapter_mode must be legacy or v2")
         if self.identity.enabled:

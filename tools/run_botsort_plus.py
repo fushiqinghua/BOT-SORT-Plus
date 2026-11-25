@@ -105,6 +105,34 @@ def prepare(args):
 def run(args):
     sys.addaudithook(forbid_ground_truth)
     cfg,paths,protocol=prepare(args)
+    if cfg.raw_ir.enabled:
+        if args.ir_tiles is None or args.ir_registration is None:
+            raise ValueError("Raw IR requires the matching tile cache and registration settings")
+        from dataclasses import asdict
+        from botsort_plus.thermal_observer import ThermalObserver
+        registration = json.loads(args.ir_registration.read_bytes())
+        ir_meta = {seq: json.loads((args.ir_tiles/(seq+".json")).read_bytes()) for seq in paths}
+        registration_hash = sha256(args.ir_registration)
+        if any(v["registration_sha256"] != registration_hash for v in ir_meta.values()):
+            raise ValueError("IR registration differs from cache")
+        protocol["raw_ir_inputs"] = dict(registration_sha256=registration_hash,
+                cache_root=str(args.ir_tiles.resolve()), descriptor="raw intensity patch, no learned embedding",
+                metadata_sha256={s:sha256(args.ir_tiles/(s+".json")) for s in paths})
+    if args.position_rgb_first and args.position_policy is None:
+        raise ValueError("--position-rgb-first needs a locked position policy")
+    position_policy = None
+    if args.position_policy is not None:
+        if args.position_registration is None or not cfg.recovery.output_prediction_frames or cfg.raw_ir.enabled:
+            raise ValueError("Position refinement requires a registration file and the original motion-output policy")
+        position_policy = json.loads(args.position_policy.read_bytes())
+        registration = json.loads(args.position_registration.read_bytes())
+        if (sha256(REPO/"botsort_plus/position_localizer.py") != position_policy["localizer_sha256"]
+                or sha256(args.position_registration) != position_policy["registration_sha256"]):
+            raise ValueError("Position policy, registration and implementation disagree")
+        from botsort_plus.online_position import OnlinePosition, RgbFirstPosition
+        position_class = RgbFirstPosition if args.position_rgb_first else OnlinePosition
+        protocol["output_position"] = {"kind":"RGB then IR fallback" if args.position_rgb_first else "causal relative IR translation", "policy_sha256":sha256(args.position_policy),
+                                       "registration_sha256":sha256(args.position_registration), "sequence_reasons":{}}
     if args.preflight:
         print(json.dumps(protocol,ensure_ascii=False,indent=2))
         return 0 if protocol["status"]=="READY" else 2
@@ -141,6 +169,11 @@ def run(args):
             cv2.setRNGSeed(0)
             tracker=BoTSORTPlus(plus_config=cfg,reid_weights=Path("cache-only.pt"),device=torch.device("cpu"),
                                half=False,**protocol["native_config"])
+            position = position_class(position_policy, registration) if position_policy is not None else None
+            if cfg.raw_ir.enabled:
+                tracker.raw_ir_observer=ThermalObserver(args.ir_tiles,seq,protocol["detection_fingerprints"][seq],
+                                                       asdict(cfg.raw_ir),registration)
+                tracker.recovery_matcher.raw_ir_observer=tracker.raw_ir_observer
             protocol["boxmot_source_hashes"]=tracker.upstream_hashes
             dest=tracker_dir/"data"/(seq+".txt"); temp=dest.with_suffix(".tmp")
             event_stream=None; event_counts=Counter(); rows=0; seconds=0.; wall=time.perf_counter()
@@ -158,14 +191,21 @@ def run(args):
                             raise ValueError(f"Expected original 512x640 RGB image: {image_path}")
                         det=np.asarray(row["detections"],np.float32).reshape(-1,6); det[:,5]=0
                         packets=fc.frame(index)
+                        if cfg.raw_ir.enabled:
+                            tracker.raw_ir_observer.begin(row["frame"],image_path,len(det))
                         t=time.perf_counter(); prediction=tracker.update(det,image,features=packets); seconds+=time.perf_counter()-t
+                        translation = position.update(row["frame"],image_path,prediction,tracker.last_events) if position else {}
                         seen=set()
                         for item in prediction:
                             x1,y1,x2,y2,tid,score,cls,det_idx=map(float,item)
                             if not np.isfinite(item).all() or tid!=int(tid) or tid<=0 or tid in seen or cls!=0 or x2<=x1 or y2<=y1:
                                 raise RuntimeError("Invalid/duplicate MOT output")
                             seen.add(tid)
-                            writer.writerow([row["frame"],int(tid),x1,y1,x2-x1,y2-y1,score,-1,-1,-1]); rows+=1
+                            w,h=x2-x1,y2-y1
+                            if int(tid) in translation:
+                                dx,dy=translation[int(tid)]
+                                x1,y1=x1+dx,y1+dy
+                            writer.writerow([row["frame"],int(tid),x1,y1,w,h,score,-1,-1,-1]); rows+=1
                         for event in tracker.last_events:
                             event_counts[event["event"]]+=1
                             if event_stream:
@@ -177,6 +217,8 @@ def run(args):
                         event_stream.write(json.dumps({"sequence":seq, **event},
                                                       ensure_ascii=False,allow_nan=False)+"\n")
                 temp.replace(dest)
+                if position is not None:
+                    protocol["output_position"]["sequence_reasons"][seq] = dict(position.status)
             finally:
                 if event_stream:
                     event_stream.close()
@@ -209,6 +251,11 @@ def parser():
     p.add_argument("--output-dir",type=Path,default=REPO/"outputs/botsort_plus_v1")
     p.add_argument("--runtime-root",type=Path)
     p.add_argument("--sequences",nargs="+")
+    p.add_argument("--position-rgb-first",action="store_true")
+    p.add_argument("--position-policy",type=Path)
+    p.add_argument("--position-registration",type=Path)
+    p.add_argument("--ir-tiles",type=Path)
+    p.add_argument("--ir-registration",type=Path)
     p.add_argument("--preflight",action="store_true")
     p.add_argument("--trace",action="store_true",help="Write association/candidate/recovery/memory JSONL logs")
     return p

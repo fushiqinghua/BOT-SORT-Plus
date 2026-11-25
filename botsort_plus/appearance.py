@@ -111,6 +111,8 @@ class MemoryBank:
         self.prototypes: dict[str, np.ndarray] = {}
         self.qualities: dict[str, float] = {}
         self.update_counts: dict[str, int] = {}
+        self.last_stable_low_frame: int | None = None
+        self.recent_rgb_observation: tuple[int, np.ndarray] | None = None
 
     def update(self, features: Mapping[str, Feature]) -> list[str]:
         validated = _validated_features(features)

@@ -150,10 +150,10 @@ class BoTSORTPlus(BotSort):
             vector = self._trusted_rgb(index) if self.with_reid else None
         return STrack(row, vector, max_obs=self.max_obs)
 
-    def _write_memory(self, track, det_index):
+    def _write_memory(self, track, det_index, *, rgb_only=False):
         memory = self.memories.setdefault(track.id, MemoryBank(self.plus.appearance))
         packet = self._packets[det_index]
-        if not self.plus.appearance.enabled:
+        if rgb_only or not self.plus.appearance.enabled:
             packet = {k:v for k,v in packet.items() if k == "rgb"}
         updated = memory.update(packet)
         if updated:

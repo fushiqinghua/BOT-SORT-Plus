@@ -22,6 +22,10 @@ from .geometry import GeometryConfig, geometry_cost
 from .types import Feature, LostTrackView, Observation
 
 
+# Per-frame maxima for early recovery, ordered as (geometry, appearance).
+EARLY_EVIDENCE_LIMITS = {"strong": (0.30, 0.48), "moderate": (0.42, 0.55)}
+
+
 @dataclass(frozen=True)
 class RecoveryConfig:
     enabled: bool = False
@@ -37,6 +41,9 @@ class RecoveryConfig:
     appearance_max_cost: float = 0.65
     require_appearance: bool = False
     reservation_frames: int = 5
+    output_prediction_frames: int = 0
+
+    early_evidence: str = "off"
 
     def __post_init__(self):
         for name in ("enabled", "require_appearance"):
@@ -46,6 +53,12 @@ class RecoveryConfig:
             value = getattr(self, name)
             if isinstance(value, bool) or not isinstance(value, (int, np.integer)) or value < 1:
                 raise ValueError(f"{name} must be a positive integer")
+        if self.early_evidence not in ("off", *EARLY_EVIDENCE_LIMITS):
+            raise ValueError("recovery.early_evidence must be off, strong or moderate")
+        if type(self.output_prediction_frames) is not int or self.output_prediction_frames not in (0,1,2):
+            raise ValueError("output_prediction_frames must be 0, 1 or 2")
+        if self.output_prediction_frames and not self.enabled:
+            raise ValueError("Online prediction output requires recovery motion history")
         if self.min_hits > self.window:
             raise ValueError("min_hits must fit in the trailing window")
         if self.min_age > self.max_age:
@@ -178,6 +191,15 @@ class RecoveryMatcher:
         cost = float(total / weights)
         info.update(cost=cost, geometry_cost=geom_mean, appearance_cost=app_mean,
                     appearance_hits=len(appearance), ready=len(history) >= cfg.min_hits)
+        # The two observations must support a single old identity. Compare
+        # each to the pre-recovery memory and its own same-frame prediction.
+        if (cfg.early_evidence != "off" and cfg.min_hits == 3 and len(history) == 2
+                and history[0].frame == frame - 1 and len(appearance) == 2):
+            max_geometry, max_appearance = EARLY_EVIDENCE_LIMITS[cfg.early_evidence]
+            worst_geometry, worst_appearance = max(geom), max(appearance)
+            if worst_geometry <= max_geometry and worst_appearance <= max_appearance:
+                info.update(two_hit_evidence=True, two_hit_max_geometry=worst_geometry,
+                            two_hit_max_appearance=worst_appearance)
         return {**info, "reason": "plausible" if cost < cfg.max_cost else "cost_reject"}
 
     def match(self, frame: int, lost_views: Iterable[LostTrackView], candidates: Iterable[Any],
@@ -212,6 +234,10 @@ class RecoveryMatcher:
                 if info["reason"] == "plausible":
                     raw_costs[i, j] = info["cost"]
 
+        observer=getattr(self,"raw_ir_observer",None)
+        if observer is not None:
+            raw_costs=observer.recovery(raw_costs,pair_info,views,histories,ids,self.config.max_cost)
+
         # Reserve unresolved plausible candidates, including those with too few
         # hits. This prevents the usual high-score birth branch from stealing a
         # potential old identity before short-trajectory verification finishes.
@@ -223,8 +249,16 @@ class RecoveryMatcher:
 
         eligible = raw_costs.copy()
         for j, history in enumerate(histories):
-            if len(history) < self.config.min_hits:
+            if len(history) >= self.config.min_hits:
+                continue
+            if self.config.early_evidence == "off":
                 eligible[:, j] = np.inf
+                continue
+            # Remove uncertified edges from assignment, retaining raw costs
+            # for the rival and reservation checks, including immature rivals.
+            for i in range(len(views)):
+                if not pair_info[i, j].get("two_hit_evidence", False):
+                    eligible[i, j] = np.inf
         # Include not-yet-confirmed alternatives in ambiguity checks. Otherwise
         # deleting their columns can manufacture a large best/second-best gap.
         margin = self.config.ambiguity_margin

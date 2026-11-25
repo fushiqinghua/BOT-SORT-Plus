@@ -106,6 +106,8 @@ def update_v2(tracker, dets, img, dense):
     tracker.frame_count += 1
     frame = tracker.frame_count
     plus = tracker.plus
+    if plus.raw_ir.enabled and (not hasattr(tracker,"raw_ir_observer") or tracker.raw_ir_observer.frame != frame):
+        raise ValueError("Expected current aligned raw IR frame before tracker update")
     if plus.identity.enabled:
         # Freeze past-only identity evidence before any stage can write memory.
         tracker.identity_reliability.begin_frame(frame)
@@ -366,4 +368,16 @@ def update_v2(tracker, dets, img, dense):
                                   "active": len(tracker.active_tracks), "lost": len(tracker.lost_stracks),
                                   "candidates": len(tracker.candidate_pool.candidates),
                                   "adapter_mode": "v2"})
+    if plus.recovery.output_prediction_frames:
+        from .prediction_output import extend
+        output = extend(tracker, output, img.shape, all_dets, live)
+    if plus.raw_ir.enabled:
+        observer=tracker.raw_ir_observer
+        output=observer.check_output(output)
+        observer.finish(output)
+        rejected={e["track_id"] for e in observer.audit if e["event"]=="ir_projection_check" and not e["kept"]}
+        for e in tracker.last_events:
+            if e["event"]=="motion_output" and e["track_id"] in rejected:
+                e["event"]="ir_rejected_projection"
+        tracker.last_events.extend(observer.audit)
     return output

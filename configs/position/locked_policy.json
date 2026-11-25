@@ -1,0 +1,51 @@
+{
+  "profile": "permissive",
+  "gain": 0.5,
+  "presets": {
+    "permissive": {
+      "corr": 0.5,
+      "lift": 0.018,
+      "margin": 0.012,
+      "agree": 3.5,
+      "history": 0.25,
+      "salience": 0.4
+    },
+    "balanced": {
+      "corr": 0.62,
+      "lift": 0.035,
+      "margin": 0.025,
+      "agree": 2.5,
+      "history": 0.4,
+      "salience": 0.65
+    },
+    "strict": {
+      "corr": 0.72,
+      "lift": 0.055,
+      "margin": 0.045,
+      "agree": 2.0,
+      "history": 0.55,
+      "salience": 0.85
+    }
+  },
+  "alternatives": [
+    0.5,
+    0.85
+  ],
+  "training_inputs_sha256": "6b454f1687cbd788dee56f6152d2c58db609464362e069180e0b2ff3190a6a62",
+  "training_split_sha256": "0a0e5edf47ff2e9e0ad625f295d28aec58a7cb7da1eca2338ade6ed04e735bfe",
+  "registration_sha256": "b0269178e85f5d578d775da218702a88dfebde98b2bcb0853f60cb100786f9de",
+  "localizer_sha256": "195f2f3944d8fa101f2876e41dad844d1723f01443d26cc85dcd33a3b606a5ec",
+  "observe_sha256": "e35ea653291f4cb8617b4cbb42e75eb23ccc53ab2ba9c182db3ab1c3a72a75c7",
+  "calibration_sha256": "5f4190103fd1b181814a6971afe49a5d561113972575c23a821bb43ccb6b2463",
+  "criterion": "maximize mean parent-video delta anchor IoU on fit groups only",
+  "primary": "all strict historical anchors; delta IoU and center error",
+  "edge": "pre-correction fixed-target IoU in [0.10,0.50)",
+  "controls": [
+    "unaltered",
+    "shifted IR +48/-48 px",
+    "identical rule on grayscale RGB",
+    "same accepted offsets with reversed sign"
+  ],
+  "neighbor_risk": "track anchor loses highest IoU to another annotated target; complementary harmful displacement if other gains >=0.02 and anchor loses >=0.02",
+  "no_test_labels_used": true
+}

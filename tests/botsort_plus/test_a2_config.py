@@ -16,7 +16,7 @@ class A2ConfigurationTests(unittest.TestCase):
         return PlusConfig.load(CONFIGS / filename)
 
     def test_twelve_original_configs_still_choose_legacy_adapter(self):
-        files = sorted(p for p in CONFIGS.glob("*.json") if int(p.name.split("_", 1)[0]) < 12)
+        files = sorted(p for p in CONFIGS.glob("[0-9][0-9]_*.json") if int(p.name.split("_", 1)[0]) < 12)
         self.assertEqual(len(files), 12)
         for path in files:
             original = json.loads(path.read_text(encoding="utf-8"))
@@ -32,7 +32,7 @@ class A2ConfigurationTests(unittest.TestCase):
                 self.assertEqual(cfg.native_overrides, original.get("native_overrides", {}))
 
     def test_all_fifteen_new_configs_roundtrip_without_silent_defaults(self):
-        files = sorted(p for p in CONFIGS.glob("*.json") if 12 <= int(p.name.split("_", 1)[0]) <= 26)
+        files = sorted(p for p in CONFIGS.glob("[0-9][0-9]_*.json") if 12 <= int(p.name.split("_", 1)[0]) <= 26)
         self.assertEqual(len(files), 15)
         names = set()
         for path in files:

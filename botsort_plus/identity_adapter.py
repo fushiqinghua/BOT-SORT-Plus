@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import numpy as np
 
+from .appearance import MemoryBank
+
 from boxmot.trackers.botsort.basetrack import TrackState
 from boxmot.utils.matching import fuse_score, iou_distance, linear_assignment
 
@@ -19,12 +21,64 @@ def pair_decisions(tracker, tracks, detections, geometry, stage, threshold):
         geometry, tracker._packets, stage, threshold)
 
 
+def _recent_rgb_agrees(tracker, track_id, det_index, decision, reactivate):
+    """Record each accepted match; only adjacent eligible high-score matches can agree."""
+    memory = tracker.memories.get(track_id)
+    if memory is None:
+        memory = tracker.memories[track_id] = MemoryBank(tracker.plus.appearance)
+    previous = memory.recent_rgb_observation
+    memory.recent_rgb_observation = None
+    feature = tracker._packets[det_index].get("rgb")
+    if (reactivate or decision.stage != "high" or decision.geometry_cost > .50
+            or (decision.geometry_margin is not None and decision.geometry_margin < .10)
+            or feature is None or feature.quality < memory.config.min_update_quality):
+        return False
+    vector = np.asarray(feature.vector, dtype=float)
+    norm = np.linalg.norm(vector)
+    if not np.isfinite(norm) or norm < 1e-12:
+        return False
+    vector = vector / norm
+    frame = tracker.frame_count
+    memory.recent_rgb_observation = (frame, vector)
+    return (previous is not None and previous[0] == frame - 1
+            and 1. - float(vector @ previous[1]) <= .40)
+
+
+def _low_warmup_status(memory, decision, cfg, reactivate):
+    """Two adjacent accepted, unambiguous low observations of the same track."""
+    previous = memory.last_stable_low_frame
+    memory.last_stable_low_frame = None
+    if reactivate or decision.stage != "low":
+        return "outside_low"
+    if decision.reason != "warmup_requires_high":
+        return decision.reason
+    if decision.quality < max(cfg.min_quality, memory.config.min_update_quality):
+        return "low_quality"
+    if decision.geometry_cost > cfg.bootstrap_max_iou_cost:
+        return "poor_geometry"
+    if decision.competitor_count and (decision.geometry_margin is None
+                                      or decision.geometry_margin < cfg.geometry_margin):
+        return "ambiguous_geometry"
+    memory.last_stable_low_frame = decision.frame
+    return "eligible" if previous == decision.frame - 1 else "first_qualified_frame"
+
+
 def apply_match(tracker, track, detection, decision, *, reactivate=False,
                 reference_cost=None, applied_cost=None, base_cost=None):
-    """Keep geometry/lifecycle updates, conditionally permit BOTH existing writers."""
+    """Apply the accepted track update and route appearance writes according to policy."""
     cfg = tracker.plus.identity
     gate_applied = cfg.memory_enabled and not cfg.observe_only
-    block_write = gate_applied and not decision.allow_write
+    permit_bank = not gate_applied or decision.allow_write
+    block_write = not permit_bank
+    recent_agrees = False
+    low_status = None
+    if cfg.recent_confirmed_bank and gate_applied:
+        recent_agrees = _recent_rgb_agrees(tracker, track.id, int(detection.det_ind), decision, reactivate)
+        permit_bank = decision.allow_write or (decision.reason == "history_conflict" and recent_agrees)
+        if cfg.stable_low_warmup:
+            low_status = _low_warmup_status(tracker.memories[track.id], decision, cfg, reactivate)
+            permit_bank = permit_bank or low_status == "eligible"
+        block_write = False  # Keep BoT-SORT's native feature updates.
     native_feature = detection.curr_feat
     # STrack mutates native smooth_feat/curr_feat/features inside update().
     # Passing no feature prevents all three writes; restore the detection object
@@ -39,7 +93,10 @@ def apply_match(tracker, track, detection, decision, *, reactivate=False,
     finally:
         if block_write:
             detection.curr_feat = native_feature
-    updated = [] if block_write else tracker._write_memory(track, int(detection.det_ind))
+    if low_status == "eligible":
+        updated = tracker._write_memory(track, int(detection.det_ind), rgb_only=True)
+    else:
+        updated = [] if not permit_bank else tracker._write_memory(track, int(detection.det_ind))
     private_write = tracker.identity_reliability.commit(
         int(track.id), tracker._packets[int(detection.det_ind)], decision, tracker.frame_count)
     tracker.last_events.append({
@@ -48,7 +105,10 @@ def apply_match(tracker, track, detection, decision, *, reactivate=False,
         "association_applied": bool(cfg.association_enabled and not cfg.observe_only
                                     and decision.stage in ("high", "unconfirmed")),
         "memory_gate_applied": gate_applied,
+        **({"recent_rgb_agrees": recent_agrees, "bank_write_permitted": permit_bank}
+           if cfg.recent_confirmed_bank and gate_applied else {}),
         "native_feature_written": bool(native_feature is not None and not block_write),
+        **({"low_warmup_status": low_status} if low_status is not None else {}),
         "custom_modalities_written": updated,
         "private_anchor_written": bool(private_write),
         "reference_cost": None if reference_cost is None else float(reference_cost),
@@ -70,6 +130,8 @@ def associate(tracker, tracks, detections, threshold, stage, activated, refound,
     cfg = tracker.plus.identity
     applied = cfg.association_enabled and not cfg.observe_only
     costs = proposed if applied else reference
+    if stage=="high" and tracker.plus.raw_ir.native:
+        costs=tracker.raw_ir_observer.native(costs,geometry,tracks,detections,threshold,tracker.proximity_thresh)
     tracker.last_events.append({
         "event": "identity_association", "frame": tracker.frame_count, "stage": stage,
         "pair_count": int(reference.size), "applied": bool(applied),
@@ -98,7 +160,7 @@ def seed_identity(tracker, track, det_index):
     accepted = tracker.identity_reliability.seed(
         int(track.id), tracker._packets[det_index], tracker.frame_count)
     blocked = cfg.memory_enabled and not cfg.observe_only and not accepted
-    if blocked:
+    if blocked and not cfg.recent_confirmed_bank:
         # STrack was constructed before activation and already contains a seed.
         # Do not leave an unqualified native seed while claiming to block memory.
         track.smooth_feat = None

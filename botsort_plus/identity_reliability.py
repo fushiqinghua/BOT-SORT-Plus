@@ -34,11 +34,15 @@ class IdentityConfig:
     bootstrap_max_iou_cost: float = .30
     write_max_iou_cost: float = .50
     ema: float = .95
+    recent_confirmed_bank: bool = False
+    stable_low_warmup: bool = False
 
     def __post_init__(self):
-        for name in ("enabled", "observe_only", "association_enabled", "memory_enabled"):
+        for name in ("enabled", "observe_only", "association_enabled", "memory_enabled", "recent_confirmed_bank", "stable_low_warmup"):
             if not isinstance(getattr(self, name), bool):
                 raise ValueError(f"identity.{name} must be bool")
+        if self.stable_low_warmup and not (self.enabled and self.memory_enabled and self.recent_confirmed_bank and not self.observe_only):
+            raise ValueError("stable_low_warmup requires active recent-confirmed identity memory")
         if self.enabled and not (self.association_enabled or self.memory_enabled):
             raise ValueError("Enabled identity module needs at least one intervention")
         if isinstance(self.min_history, bool) or not isinstance(self.min_history, Integral) or self.min_history < 1:
