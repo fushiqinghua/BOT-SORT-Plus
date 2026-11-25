@@ -1,0 +1,32 @@
+{
+  "sequence": "DJI_0327_3",
+  "frames": 390,
+  "output_rows": 11991,
+  "association_and_gmc_seconds": 14.219195467303507,
+  "replay_wall_seconds": 15.11448923801072,
+  "feature_extraction_seconds": 27.065018444438465,
+  "feature_metadata_sha256": "2943048ac344c00418a922ed39acc5e51028df48dda322183dab70a502abce94",
+  "prediction_sha256": "7c02da6576918b2257c3c0c4ea2ce269ccc2d08316ce1e398354e9c06b2a1858",
+  "event_counts": {
+    "frame": 390,
+    "candidate_seed": 722,
+    "memory_update": 11902,
+    "candidate_removed": 705,
+    "native_birth": 43,
+    "birth_evidence": 4740,
+    "birth_identity": 4740,
+    "first_emitted": 205,
+    "match": 11810,
+    "candidate_observation_suppressed": 121,
+    "candidate_hit": 2898,
+    "candidate_miss": 1510,
+    "candidate_seed_deferred": 558,
+    "birth_proposed": 169,
+    "birth_committed": 164,
+    "weak_birth": 164,
+    "birth_rejected": 392,
+    "birth_deferred": 68,
+    "track_lifetime": 207
+  },
+  "timing_note": "Replay includes cached features; this is not detector+ReID end-to-end FPS."
+}

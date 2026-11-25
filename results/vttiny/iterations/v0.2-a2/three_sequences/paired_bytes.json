@@ -1,0 +1,12 @@
+{
+  "baseline_ref=A2_shadow": {
+    "DJI_0030_2": "ed9b4775b4539446a0e87d7a2f77bbb92edbe898a5fe36a2b8c63add6b579489",
+    "DJI_0129_2": "605d745d79a77fa27b523b7bec36c9cedf96b1ee2667dee93ef74f8dadc9c682",
+    "DJI_0327_3": "2d0ff56b4b8f43c3d6bf6a1f02e03ef1e08a37897d8f275e2e5173415d3626f8"
+  },
+  "B_ref=A2B_shadow": {
+    "DJI_0030_2": "ce55fd28893f73770fcc2f1f5e36faca49c4c17547380e5494d8473c50afd8bc",
+    "DJI_0129_2": "0282bdbd11ec4fc3d6a4727fbe30b48cdb901a5e763e62305e75869e23125084",
+    "DJI_0327_3": "401a891b4688d4b4c9736fad5eb0e736cad87cef102e3a4690ddf2bc26bad2a4"
+  }
+}

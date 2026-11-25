@@ -1,0 +1,22 @@
+done three_sequences baseline_ref
+done three_sequences B_ref
+done three_sequences A2B_shadow
+done three_sequences A2_shadow
+paired byte equality three_sequences
+done full30 baseline_ref
+done full30 B_ref
+done full30 A2_shadow
+done full30 A2B_shadow
+done full30 A1B_ref
+done full30 A2B_E
+done full30 A2B
+done full30 A2B_I
+done full30 A1_ref
+done full30 A2_E
+done full30 A2
+done full30 A2_I
+done full30 A2B_score_window
+done full30 A2B_fixed_window
+done full30 A2B_score020
+paired byte equality full30
+COMPLETE

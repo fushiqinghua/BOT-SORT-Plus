@@ -1,0 +1,165 @@
+{
+  "sequence": "DJI_0283_1",
+  "title": "提高门限后消失的误报",
+  "kind": "fp",
+  "focus_id": 33,
+  "pivot_frame": 302,
+  "pivot_A2B_tid": 33,
+  "pivot_det_index": 11,
+  "methods": {
+    "B_ref": {
+      "pivot_candidate": 136,
+      "actual_row_updates": [],
+      "pivot_evidence": null,
+      "identity_status": null,
+      "guard_reason_counts": {},
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    },
+    "A2B": {
+      "pivot_candidate": 136,
+      "actual_row_updates": [
+        {
+          "sequence": "DJI_0283_1",
+          "frame": 302,
+          "event": "birth_committed",
+          "track_id": 33,
+          "candidate_id": 136,
+          "det_index": 11,
+          "mode": "two_stage",
+          "candidate_first_frame": 283,
+          "birth_frame": 302,
+          "confirmation_delay_frames": 19,
+          "support": {
+            "epoch_start": 297,
+            "armed_frame": 300,
+            "verification_deadline": 303,
+            "verified_at": 302,
+            "armed_frames": [
+              298,
+              299,
+              300
+            ],
+            "armed_mean_score": 0.18019293248653412,
+            "collect_frames": [
+              298,
+              299,
+              300,
+              301,
+              302
+            ],
+            "collect_hits": 5,
+            "collect_mean_score": 0.2147423267364502,
+            "verify_frames": [
+              301,
+              302
+            ],
+            "verify_hits": 2,
+            "verify_mean_score": 0.2665664181113243,
+            "current_hit": true,
+            "threshold": 0.18
+          },
+          "identity_status": "CLEAR_NEW",
+          "track_origin": "weak_birth"
+        }
+      ],
+      "pivot_evidence": {
+        "sequence": "DJI_0283_1",
+        "frame": 302,
+        "event": "birth_evidence",
+        "candidate_id": 136,
+        "mode": "two_stage",
+        "ready": true,
+        "phase": "READY",
+        "reason": "fresh_verification_supported",
+        "stats": {
+          "epoch_start": 297,
+          "armed_frame": 300,
+          "verification_deadline": 303,
+          "verified_at": 302,
+          "armed_frames": [
+            298,
+            299,
+            300
+          ],
+          "armed_mean_score": 0.18019293248653412,
+          "collect_frames": [
+            298,
+            299,
+            300,
+            301,
+            302
+          ],
+          "collect_hits": 5,
+          "collect_mean_score": 0.2147423267364502,
+          "verify_frames": [
+            301,
+            302
+          ],
+          "verify_hits": 2,
+          "verify_mean_score": 0.2665664181113243,
+          "current_hit": true,
+          "threshold": 0.18
+        }
+      },
+      "identity_status": "CLEAR_NEW",
+      "guard_reason_counts": {
+        "current_geometry_excludes": 2
+      },
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    },
+    "A2B_score020": {
+      "pivot_candidate": 136,
+      "actual_row_updates": [],
+      "pivot_evidence": {
+        "sequence": "DJI_0283_1",
+        "frame": 302,
+        "event": "birth_evidence",
+        "candidate_id": 136,
+        "mode": "two_stage",
+        "ready": false,
+        "phase": "COLLECTING",
+        "reason": "insufficient_hits",
+        "stats": {
+          "epoch_start": 300,
+          "armed_frame": null,
+          "verification_deadline": null,
+          "verified_at": null,
+          "armed_frames": [],
+          "armed_mean_score": null,
+          "collect_frames": [
+            301,
+            302
+          ],
+          "collect_hits": 2,
+          "collect_mean_score": 0.2665664181113243,
+          "verify_frames": [],
+          "verify_hits": 0,
+          "verify_mean_score": null,
+          "current_hit": true,
+          "threshold": 0.2
+        }
+      },
+      "identity_status": "CLEAR_NEW",
+      "guard_reason_counts": {
+        "current_geometry_excludes": 2
+      },
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    }
+  },
+  "whole_track": {
+    "output_frames": 45,
+    "first": 302,
+    "last": 421,
+    "max_iou_gt": 0.0,
+    "B_ref_max_spatial_iou": 0.0,
+    "B_ref_same_detector_row_frames": 0,
+    "A2B_score020_max_spatial_iou": 0.0,
+    "A2B_score020_same_detector_row_frames": 0
+  }
+}

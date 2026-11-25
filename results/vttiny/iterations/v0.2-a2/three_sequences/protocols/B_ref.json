@@ -1,0 +1,202 @@
+{
+  "schema": "botsort_plus_run_v1",
+  "status": "COMPLETE",
+  "implementation_version": "0.2.0",
+  "implementation_sha256": {
+    "botsort_plus/__init__.py": "70337e6e1a77664d0ae312f0a4b7324ab2e8ba903ac4092a1a88a6aa527e02a6",
+    "botsort_plus/adapter_v2.py": "e1dd7cd743decc48f21799643ca7a317993ff3fd1d2ea5dae4e877ec98c36e82",
+    "botsort_plus/appearance.py": "babaff13f9c8fd2e95561c021b9849a57677a81f73ca2ab5cb9d13528c5c7af5",
+    "botsort_plus/assignment.py": "aa45363951ea9b35ff4a5d5c3b9e90eb69b10c5c72d01192b2e70e1001e3c8e2",
+    "botsort_plus/birth_identity.py": "54efdded7c349ba0e0c0e33d8aed478df68c5141fd54be3fde5f32408b622009",
+    "botsort_plus/birth_policy.py": "ea49630e144668bad7b79dae5673229c3c8786ea0c0bc1986c2ee1008928d66e",
+    "botsort_plus/candidates.py": "9a48209fdc826704726cd03a7391004928e8233243f66039e284f681b71dc138",
+    "botsort_plus/config.py": "c25b32a17fdaada231790543834f007244482c1a5c5511d0c89cf114d171b8bc",
+    "botsort_plus/feature_export.py": "dda56497e7db58729c58fe00b6340e9b2f49caea1e594cccd735a6ae5b1753ab",
+    "botsort_plus/geometry.py": "5bcda3d12e575ee4ac5f5323dd7cfbe249bfe5b1b03375c353057d28b65a5640",
+    "botsort_plus/io.py": "44cbfe26a152cfac5ad0826b27728ed4be6b970cc865bbb6860e5d064d8dd22b",
+    "botsort_plus/native_adapter.py": "6f729e72aebd27d6d2b581cb734a4668c09accfb3f107f38520e6ddbfc220238",
+    "botsort_plus/recovery.py": "6ea44c728d30fb06c660ddd3babd4f4a305e5ab204caedc8130901189d1b42d2",
+    "botsort_plus/types.py": "b72c8f3366896a6a8889d6bd691e7986a550694c7b7471711355a133fbb001fb"
+  },
+  "name": "B_ref",
+  "config": {
+    "name": "B_ref",
+    "birth": {
+      "enabled": false,
+      "window": 5,
+      "min_hits": 3,
+      "max_misses": 2,
+      "decay": 0.8,
+      "score_weight": 0.5,
+      "evidence_threshold": 1.2,
+      "miss_penalty": 0.4,
+      "link_max_cost": 0.85,
+      "ambiguity_margin": 0.08,
+      "duplicate_iou": 0.7,
+      "max_candidates": 256,
+      "max_age": 20,
+      "score_low": 0.1,
+      "score_high": 0.5,
+      "mode": "adaptive",
+      "velocity_alpha": 0.5
+    },
+    "recovery": {
+      "enabled": true,
+      "min_hits": 3,
+      "window": 5,
+      "min_age": 2,
+      "max_age": 30,
+      "max_cost": 0.65,
+      "ambiguity_margin": 0.1,
+      "geometry_weight": 0.65,
+      "appearance_weight": 0.25,
+      "time_weight": 0.1,
+      "appearance_max_cost": 0.65,
+      "require_appearance": false,
+      "reservation_frames": 5
+    },
+    "appearance": {
+      "enabled": false,
+      "weighting": "quality",
+      "min_observation_quality": 0.15,
+      "min_update_quality": 0.35,
+      "ema": 0.9,
+      "weight_rgb": 1.0,
+      "weight_thermal": 1.0,
+      "rgb_distance_scale": 1.0,
+      "thermal_distance_scale": 1.0,
+      "max_distance": 0.6
+    },
+    "geometry": {
+      "pixel_floor": 4.0,
+      "center_gate_scale": 2.0,
+      "max_center_pixels": 48.0,
+      "max_scale_ratio": 2.5,
+      "uncertainty_sigma": 2.0,
+      "tiny_size": 16.0,
+      "size_weight": 0.1
+    },
+    "native_overrides": {},
+    "adapter_mode": "v2",
+    "birth_policy": {
+      "mode": "legacy",
+      "collect_window": 5,
+      "collect_hits": 3,
+      "mean_score": 0.18,
+      "verify_window": 3,
+      "verify_hits": 2,
+      "fixed_window": 8,
+      "fixed_hits": 5,
+      "observe_only": false
+    },
+    "birth_identity": {
+      "enabled": false,
+      "window": 5,
+      "max_age": 30,
+      "wait_frames": 5,
+      "appearance_max_cost": 0.65
+    }
+  },
+  "native_config": {
+    "det_thresh": 0.5,
+    "track_high_thresh": 0.5,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.6,
+    "match_thresh": 0.8,
+    "track_buffer": 60,
+    "frame_rate": 15,
+    "with_reid": true,
+    "cmc_method": "sof",
+    "proximity_thresh": 0.5,
+    "appearance_thresh": 0.4,
+    "fuse_first_associate": false
+  },
+  "sequences": {
+    "DJI_0030_2": 590,
+    "DJI_0129_2": 590,
+    "DJI_0327_3": 390
+  },
+  "subset": true,
+  "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+  "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+  "source_protocol_sha256": "6f0fdff3b198315f8aac72972fcf5117c53b917e84f6c7b5f9814b9012ef2ff2",
+  "detection_fingerprints": {
+    "DJI_0030_2": "39756d8acb1c7040b8a95dc855c9deca19bf420c8f311797ba1382438ba4d699",
+    "DJI_0129_2": "f16b542f3b94aacffd5c093a37b2f370c108a77963bb5134d212248573d7e1b2",
+    "DJI_0327_3": "524ad37fb5f831ac58625d7cc3657e2cf400db2296b33dfa019601d5f053b20d"
+  },
+  "encoder_contracts": {
+    "rgb": {
+      "sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+      "weights_name": "clip_veri.pt",
+      "encoder": "baseline CLIP-ReID ViT-B/16 VeRi, supplied fine-tuned checkpoint",
+      "input_hw": [
+        256,
+        256
+      ],
+      "output_dim": 1280,
+      "precision": "float32",
+      "verified_visual_state_keys": 162,
+      "crop_source": "RGB BGR-to-RGB",
+      "mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "std": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "feature_hashes": {
+    "DJI_0030_2": {
+      "features": "7297fda0c3430c3417fe3b503e98335b18745e56078b66f468923b1196284a88",
+      "metadata": "137aa68fc2124fdfa9e5a1f907a77d1be1d35ef2cc5ad3548c5614a5b80c12fb"
+    },
+    "DJI_0129_2": {
+      "features": "75df021af3b8ad57e29b7c75a824aa5f5db4dfdde7cba265f1f62b70c66dfae3",
+      "metadata": "ad0ce97450bf82ce39bd2b5cdf6de6cbb6e1ab776021811ff94bca0ed3318ee1"
+    },
+    "DJI_0327_3": {
+      "features": "14cf442b2e647d5ca565d66aa1b533d89b35a08a017604f2a41a35cd0ccc657c",
+      "metadata": "2943048ac344c00418a922ed39acc5e51028df48dda322183dab70a502abce94"
+    }
+  },
+  "input_roots": {
+    "baseline": "${REPO_ROOT}/results/vttiny/yolo11m_rgb_rgbt/rgbt",
+    "images": "${VTTINY_FRAME_ROOT}",
+    "features": "${BOTSORT_PLUS_FEATURES}"
+  },
+  "feature_coverage": {
+    "rgb_valid": 21194,
+    "rgb_quality_for_memory": 16572
+  },
+  "missing_count": 0,
+  "missing_examples": [],
+  "evaluation_context": "Historical official test was previously used for checkpoint/gate selection; treat new runs here as development experiments, not an unseen test.",
+  "causal": true,
+  "backfilled_frames": 0,
+  "interpolation": false,
+  "started_utc": "2026-11-24T17:20:58Z",
+  "runtime": {
+    "python": "3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC 11.3.0]",
+    "numpy": "2.4.6",
+    "torch": "2.8.0+cu128",
+    "opencv": "5.0.0"
+  },
+  "output_prediction_hashes": {
+    "DJI_0030_2": "ce55fd28893f73770fcc2f1f5e36faca49c4c17547380e5494d8473c50afd8bc",
+    "DJI_0129_2": "0282bdbd11ec4fc3d6a4727fbe30b48cdb901a5e763e62305e75869e23125084",
+    "DJI_0327_3": "401a891b4688d4b4c9736fad5eb0e736cad87cef102e3a4690ddf2bc26bad2a4"
+  },
+  "boxmot_source_hashes": {
+    "trackers/botsort/botsort.py": "d8b69ec680b59e915b079994756c27b4bdf81ecd214a2866b97b31122fcdc93d",
+    "trackers/botsort/botsort_track.py": "bcd42eaa3e9d06716fa71749b8983bf7c16d2a96b5829bb97f5c549e0f0cb0bc",
+    "trackers/basetracker.py": "f5eb9838128d999944c444733b18948ae895c3682977eee1e4eeb07046ca04a1",
+    "motion/kalman_filters/aabb/xywh_kf.py": "a12ea28981ac7044bd1c7a60d3701b54754bc88fbd7770eda3fecd4a02a735a2",
+    "utils/matching.py": "c56c0d03e78dbe10e17761b2e95fd4f9064f1cd864d47ac0e45243a907d42096",
+    "trackers/botsort/botsort_utils.py": "99902964de7c01878e5410ba89b2b1da0821db3db0efb5fa6d0c2693d4af4052"
+  }
+}

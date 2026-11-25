@@ -1,0 +1,754 @@
+{
+  "B_ref": {
+    "fp_origin": {
+      "native": 15753
+    },
+    "fp_stage": {
+      "unconfirmed": 196,
+      "high": 8807,
+      "low": 6277,
+      "recovered": 455,
+      "native_birth": 18
+    },
+    "fp_geom": {
+      ".3_.5": 8121,
+      ".1_.3": 2819,
+      "0_.1": 4669,
+      ".5_1": 144
+    },
+    "fp_raw_geom": {
+      ".3_.5 to .3_.5": 7551,
+      ".5_1 to .3_.5": 440,
+      ".1_.3 to .1_.3": 2719,
+      "0_.1 to .1_.3": 24,
+      "0_.1 to 0_.1": 4652,
+      ".1_.3 to 0_.1": 17,
+      ".1_.3 to .3_.5": 130,
+      ".3_.5 to .1_.3": 76,
+      ".5_1 to .5_1": 133,
+      ".3_.5 to .5_1": 11
+    },
+    "switch_stage": {
+      "unconfirmed": 139,
+      "high": 175,
+      "low": 37,
+      "recovered": 30
+    },
+    "switch_pair": {
+      "native->native": 381
+    },
+    "switch_endpoints_B": {
+      "different": 381
+    },
+    "recovery_origin_endpoints": {
+      "native|same_gt": 293,
+      "native|unobserved": 525,
+      "native|different_gt": 22
+    }
+  },
+  "A2B": {
+    "fp_origin": {
+      "weak": 15728,
+      "native": 7954
+    },
+    "fp_stage": {
+      "high": 9577,
+      "low": 12574,
+      "birth_committed": 380,
+      "recovered": 1022,
+      "unconfirmed": 111,
+      "native_birth": 18
+    },
+    "fp_geom": {
+      ".3_.5": 9858,
+      ".1_.3": 3772,
+      "0_.1": 9847,
+      ".5_1": 205
+    },
+    "fp_raw_geom": {
+      ".3_.5 to .3_.5": 9167,
+      ".5_1 to .3_.5": 518,
+      ".1_.3 to .1_.3": 3619,
+      "0_.1 to 0_.1": 9823,
+      "0_.1 to .1_.3": 34,
+      ".1_.3 to 0_.1": 24,
+      ".1_.3 to .3_.5": 173,
+      ".3_.5 to .1_.3": 119,
+      ".5_1 to .5_1": 193,
+      ".3_.5 to .5_1": 12
+    },
+    "switch_stage": {
+      "unconfirmed": 109,
+      "high": 212,
+      "birth_committed": 107,
+      "low": 82,
+      "recovered": 53
+    },
+    "switch_pair": {
+      "weak->native": 96,
+      "native->native": 209,
+      "native->weak": 108,
+      "weak->weak": 150
+    },
+    "switch_endpoints_B": {
+      "different": 283,
+      "same": 42,
+      "previous_only": 111,
+      "neither": 77,
+      "current_only": 50
+    },
+    "guard_last_GT_tid_at_switch_birth": {
+      "absent_last_output_over_30": 49,
+      "absent_old_emitted_now": 20,
+      "current_appearance_excludes": 24,
+      "current_geometry_excludes": 14
+    },
+    "recovery_check_last_tid_at_switch_birth": {
+      "no_pair_check": 69,
+      "appearance_contradiction": 22,
+      "overlaps_last_observation": 4,
+      "geometry_gate": 12
+    },
+    "recovery_origin_endpoints": {
+      "weak_birth|unobserved": 876,
+      "native|same_gt": 196,
+      "weak_birth|same_gt": 274,
+      "native|unobserved": 276,
+      "weak_birth|different_gt": 14,
+      "native|different_gt": 11
+    },
+    "birth_outcome": {
+      "ever_matched": 362,
+      "near_unmatched": 89,
+      "never_near": 172
+    },
+    "birth_support_x_outcome": {
+      "same_gt_all|ever_matched": 161,
+      "no_aligned_hit|near_unmatched": 59,
+      "no_aligned_hit|ever_matched": 59,
+      "no_aligned_hit|never_near": 171,
+      "mixed|ever_matched": 142,
+      "mixed|near_unmatched": 28,
+      "mixed|never_near": 1,
+      "same_gt_all|near_unmatched": 2
+    },
+    "gain_role": {
+      "new_target_frames": 1031,
+      "early_frames": 1902,
+      "internal_frames": 900,
+      "late_frames": 414
+    },
+    "new_ID_quality": {
+      "n": 72,
+      "one_frame": 12,
+      "at_most_three": 29,
+      "at_least_20": 16,
+      "median_frames": 6.0
+    },
+    "birth_support": {
+      "too_low_for_020_at_same_time": 182
+    },
+    "far_continuation": {
+      "all_output_frames": 6622,
+      "no_B_row": 4104,
+      "raw_support_all_lt10": 162,
+      "ever_recovered_ids": 103
+    }
+  },
+  "A2B_score020": {
+    "fp_origin": {
+      "weak": 14834,
+      "native": 8256
+    },
+    "fp_stage": {
+      "high": 9565,
+      "low": 12101,
+      "birth_committed": 337,
+      "recovered": 953,
+      "unconfirmed": 116,
+      "native_birth": 18
+    },
+    "fp_geom": {
+      ".3_.5": 9752,
+      ".1_.3": 3716,
+      "0_.1": 9434,
+      ".5_1": 188
+    },
+    "fp_raw_geom": {
+      ".3_.5 to .3_.5": 9070,
+      ".5_1 to .3_.5": 508,
+      ".1_.3 to .1_.3": 3567,
+      "0_.1 to 0_.1": 9408,
+      "0_.1 to .1_.3": 34,
+      ".1_.3 to 0_.1": 26,
+      ".1_.3 to .3_.5": 174,
+      ".3_.5 to .1_.3": 115,
+      ".5_1 to .5_1": 177,
+      ".3_.5 to .5_1": 11
+    },
+    "switch_stage": {
+      "unconfirmed": 110,
+      "high": 211,
+      "birth_committed": 99,
+      "low": 74,
+      "recovered": 53
+    },
+    "switch_pair": {
+      "weak->native": 93,
+      "native->native": 216,
+      "native->weak": 103,
+      "weak->weak": 135
+    },
+    "switch_endpoints_B": {
+      "different": 287,
+      "same": 43,
+      "previous_only": 100,
+      "neither": 75,
+      "current_only": 42
+    },
+    "guard_last_GT_tid_at_switch_birth": {
+      "absent_last_output_over_30": 46,
+      "absent_old_emitted_now": 21,
+      "current_appearance_excludes": 18,
+      "current_geometry_excludes": 13,
+      "absent_other_within_30": 1
+    },
+    "recovery_check_last_tid_at_switch_birth": {
+      "no_pair_check": 68,
+      "appearance_contradiction": 17,
+      "overlaps_last_observation": 3,
+      "geometry_gate": 11
+    },
+    "recovery_origin_endpoints": {
+      "weak_birth|unobserved": 793,
+      "native|same_gt": 200,
+      "weak_birth|same_gt": 254,
+      "native|unobserved": 292,
+      "weak_birth|different_gt": 12,
+      "native|different_gt": 10
+    },
+    "birth_outcome": {
+      "ever_matched": 337,
+      "near_unmatched": 80,
+      "never_near": 151
+    },
+    "birth_support_x_outcome": {
+      "same_gt_all|ever_matched": 148,
+      "no_aligned_hit|near_unmatched": 54,
+      "no_aligned_hit|ever_matched": 51,
+      "no_aligned_hit|never_near": 149,
+      "mixed|ever_matched": 138,
+      "mixed|near_unmatched": 25,
+      "mixed|never_near": 2,
+      "same_gt_all|near_unmatched": 1
+    },
+    "gain_role": {
+      "new_target_frames": 959,
+      "early_frames": 1867,
+      "internal_frames": 828,
+      "late_frames": 414
+    },
+    "new_ID_quality": {
+      "n": 67,
+      "one_frame": 12,
+      "at_most_three": 25,
+      "at_least_20": 16,
+      "median_frames": 6.0
+    },
+    "birth_support": {
+      "too_low_for_020_at_same_time": 0
+    },
+    "far_continuation": {
+      "all_output_frames": 6238,
+      "no_B_row": 3782,
+      "raw_support_all_lt10": 142,
+      "ever_recovered_ids": 91
+    }
+  },
+  "A2B_vs_B_ref": {
+    "detection_row": {
+      "TP to TP": 62168,
+      "FP to FP": 15564,
+      "absent to FP": 8074,
+      "absent to TP": 4202,
+      "FP to TP": 58,
+      "TP to FP": 44,
+      "FP to absent": 131,
+      "TP to absent": 78
+    },
+    "switch_pair": {
+      "shared": 294,
+      "variant_only": 269,
+      "ref_only": 87
+    },
+    "gained_origin": {
+      "weak": 4011,
+      "native": 236
+    },
+    "gained_stage": {
+      "birth_committed": 238,
+      "high": 765,
+      "low": 2971,
+      "recovered": 268,
+      "unconfirmed": 5
+    },
+    "gained_aligned_score": {
+      "lt0.5": 3360,
+      "ge0.5": 774,
+      "no_aligned_raw": 113
+    },
+    "variant_only_switch_new_origin_pair": {
+      "native->weak": 80,
+      "weak->weak": 134,
+      "weak->native": 40,
+      "native->native": 15
+    },
+    "variant_only_switch_stage": {
+      "birth_committed": 107,
+      "high": 67,
+      "recovered": 31,
+      "low": 51,
+      "unconfirmed": 13
+    },
+    "variant_only_switch_ref_endpoints": {
+      "previous_only": 111,
+      "same": 42,
+      "neither": 77,
+      "different": 5,
+      "current_only": 34
+    },
+    "fp_breakdown": {
+      "added": {
+        "max_gt_iou": {
+          ".1_.3": 972,
+          "0_.1": 5215,
+          ".3_.5": 1854,
+          ".5_1": 77
+        },
+        "origin": {
+          "weak": 7848,
+          "native": 270
+        },
+        "stage": {
+          "birth_committed": 376,
+          "low": 6354,
+          "high": 739,
+          "recovered": 642,
+          "unconfirmed": 7
+        },
+        "raw_to_output": {
+          ".1_.3 to .1_.3": 926,
+          "0_.1 to 0_.1": 5207,
+          ".3_.5 to .3_.5": 1703,
+          ".1_.3 to .3_.5": 45,
+          ".5_1 to .3_.5": 106,
+          ".1_.3 to 0_.1": 8,
+          ".3_.5 to .1_.3": 36,
+          "0_.1 to .1_.3": 10,
+          ".5_1 to .5_1": 75,
+          ".3_.5 to .5_1": 2
+        },
+        "track_lifetime": {
+          "near_unmatched": 1659,
+          "never_near": 4105,
+          "matched_sometime": 2354
+        },
+        "source_and_lifetime": {
+          "weak|near_unmatched": 1584,
+          "weak|never_near": 4104,
+          "weak|matched_sometime": 2160,
+          "native|matched_sometime": 194,
+          "native|never_near": 1,
+          "native|near_unmatched": 75
+        }
+      },
+      "removed": {
+        "max_gt_iou": {
+          ".3_.5": 112,
+          "0_.1": 34,
+          ".1_.3": 28,
+          ".5_1": 15
+        },
+        "origin": {
+          "native": 189
+        },
+        "stage": {
+          "low": 74,
+          "high": 60,
+          "recovered": 51,
+          "unconfirmed": 4
+        },
+        "raw_to_output": {
+          ".5_1 to .3_.5": 28,
+          "0_.1 to 0_.1": 34,
+          "0_.1 to .1_.3": 2,
+          ".3_.5 to .3_.5": 81,
+          ".1_.3 to .1_.3": 26,
+          ".5_1 to .5_1": 15,
+          ".1_.3 to .3_.5": 3
+        },
+        "track_lifetime": {
+          "matched_sometime": 163,
+          "near_unmatched": 18,
+          "never_near": 8
+        },
+        "source_and_lifetime": {
+          "native|matched_sometime": 163,
+          "native|near_unmatched": 18,
+          "native|never_near": 8
+        }
+      }
+    }
+  },
+  "A2B_score020_vs_B_ref": {
+    "detection_row": {
+      "TP to TP": 62157,
+      "FP to FP": 15556,
+      "absent to FP": 7488,
+      "absent to TP": 4024,
+      "FP to TP": 58,
+      "TP to FP": 46,
+      "FP to absent": 139,
+      "TP to absent": 87
+    },
+    "switch_pair": {
+      "shared": 297,
+      "variant_only": 250,
+      "ref_only": 84
+    },
+    "gained_origin": {
+      "weak": 3832,
+      "native": 236
+    },
+    "gained_stage": {
+      "birth_committed": 226,
+      "high": 751,
+      "low": 2833,
+      "recovered": 253,
+      "unconfirmed": 5
+    },
+    "gained_aligned_score": {
+      "lt0.5": 3203,
+      "ge0.5": 758,
+      "no_aligned_raw": 107
+    },
+    "variant_only_switch_new_origin_pair": {
+      "native->weak": 74,
+      "weak->weak": 120,
+      "weak->native": 38,
+      "native->native": 18
+    },
+    "variant_only_switch_stage": {
+      "birth_committed": 99,
+      "high": 61,
+      "low": 43,
+      "recovered": 31,
+      "unconfirmed": 16
+    },
+    "variant_only_switch_ref_endpoints": {
+      "previous_only": 100,
+      "same": 43,
+      "neither": 75,
+      "different": 4,
+      "current_only": 28
+    },
+    "fp_breakdown": {
+      "added": {
+        "max_gt_iou": {
+          ".3_.5": 1750,
+          ".1_.3": 920,
+          "0_.1": 4804,
+          ".5_1": 60
+        },
+        "origin": {
+          "weak": 7245,
+          "native": 289
+        },
+        "stage": {
+          "low": 5892,
+          "high": 728,
+          "birth_committed": 335,
+          "recovered": 572,
+          "unconfirmed": 7
+        },
+        "raw_to_output": {
+          ".3_.5 to .3_.5": 1607,
+          ".1_.3 to .1_.3": 878,
+          "0_.1 to 0_.1": 4795,
+          ".1_.3 to .3_.5": 47,
+          ".5_1 to .3_.5": 96,
+          ".1_.3 to 0_.1": 9,
+          ".3_.5 to .1_.3": 32,
+          "0_.1 to .1_.3": 10,
+          ".5_1 to .5_1": 59,
+          ".3_.5 to .5_1": 1
+        },
+        "track_lifetime": {
+          "matched_sometime": 2228,
+          "near_unmatched": 1523,
+          "never_near": 3783
+        },
+        "source_and_lifetime": {
+          "weak|matched_sometime": 2015,
+          "weak|near_unmatched": 1448,
+          "weak|never_near": 3782,
+          "native|matched_sometime": 213,
+          "native|never_near": 1,
+          "native|near_unmatched": 75
+        }
+      },
+      "removed": {
+        "max_gt_iou": {
+          ".3_.5": 113,
+          "0_.1": 37,
+          ".1_.3": 32,
+          ".5_1": 15
+        },
+        "origin": {
+          "native": 197
+        },
+        "stage": {
+          "low": 87,
+          "high": 57,
+          "recovered": 49,
+          "unconfirmed": 4
+        },
+        "raw_to_output": {
+          ".5_1 to .3_.5": 28,
+          "0_.1 to 0_.1": 37,
+          "0_.1 to .1_.3": 2,
+          ".3_.5 to .3_.5": 82,
+          ".1_.3 to .1_.3": 30,
+          ".5_1 to .5_1": 15,
+          ".1_.3 to .3_.5": 3
+        },
+        "track_lifetime": {
+          "matched_sometime": 162,
+          "near_unmatched": 18,
+          "never_near": 17
+        },
+        "source_and_lifetime": {
+          "native|matched_sometime": 162,
+          "native|near_unmatched": 18,
+          "native|never_near": 17
+        }
+      }
+    }
+  },
+  "A2B_score020_vs_A2B": {
+    "detection_row": {
+      "TP to TP": 66149,
+      "FP to FP": 22956,
+      "FP to absent": 718,
+      "TP to absent": 271,
+      "absent to FP": 126,
+      "absent to TP": 82,
+      "TP to FP": 8,
+      "FP to TP": 8
+    },
+    "switch_pair": {
+      "shared": 497,
+      "ref_only": 66,
+      "variant_only": 50
+    },
+    "variant_only_switch_new_origin_pair": {
+      "native->weak": 7,
+      "weak->native": 5,
+      "weak->weak": 33,
+      "native->native": 5
+    },
+    "variant_only_switch_stage": {
+      "low": 7,
+      "high": 8,
+      "recovered": 7,
+      "unconfirmed": 4,
+      "birth_committed": 24
+    },
+    "variant_only_switch_ref_endpoints": {
+      "different": 24,
+      "previous_only": 11,
+      "same": 11,
+      "current_only": 3,
+      "neither": 1
+    },
+    "gained_origin": {
+      "weak": 84,
+      "native": 5
+    },
+    "gained_stage": {
+      "recovered": 20,
+      "low": 50,
+      "high": 7,
+      "birth_committed": 12
+    },
+    "gained_aligned_score": {
+      "lt0.5": 79,
+      "ge0.5": 6,
+      "no_aligned_raw": 4
+    },
+    "fp_breakdown": {
+      "added": {
+        "max_gt_iou": {
+          "0_.1": 75,
+          ".3_.5": 46,
+          ".1_.3": 10,
+          ".5_1": 3
+        },
+        "origin": {
+          "weak": 127,
+          "native": 7
+        },
+        "stage": {
+          "high": 16,
+          "low": 70,
+          "birth_committed": 21,
+          "recovered": 27
+        },
+        "raw_to_output": {
+          "0_.1 to 0_.1": 75,
+          ".3_.5 to .3_.5": 39,
+          ".1_.3 to .1_.3": 10,
+          ".1_.3 to .3_.5": 3,
+          ".5_1 to .5_1": 3,
+          ".5_1 to .3_.5": 4
+        },
+        "track_lifetime": {
+          "never_near": 55,
+          "matched_sometime": 61,
+          "near_unmatched": 18
+        },
+        "source_and_lifetime": {
+          "weak|never_near": 55,
+          "weak|matched_sometime": 54,
+          "weak|near_unmatched": 18,
+          "native|matched_sometime": 7
+        }
+      },
+      "removed": {
+        "max_gt_iou": {
+          ".1_.3": 64,
+          "0_.1": 490,
+          ".3_.5": 150,
+          ".5_1": 22
+        },
+        "origin": {
+          "weak": 718,
+          "native": 8
+        },
+        "stage": {
+          "birth_committed": 132,
+          "low": 479,
+          "recovered": 96,
+          "high": 19
+        },
+        "raw_to_output": {
+          ".1_.3 to .1_.3": 61,
+          "0_.1 to 0_.1": 490,
+          ".3_.5 to .3_.5": 137,
+          ".5_1 to .3_.5": 12,
+          ".5_1 to .5_1": 21,
+          ".3_.5 to .5_1": 1,
+          ".3_.5 to .1_.3": 3,
+          ".1_.3 to .3_.5": 1
+        },
+        "track_lifetime": {
+          "near_unmatched": 105,
+          "never_near": 432,
+          "matched_sometime": 189
+        },
+        "source_and_lifetime": {
+          "weak|near_unmatched": 105,
+          "weak|never_near": 428,
+          "weak|matched_sometime": 185,
+          "native|never_near": 4,
+          "native|matched_sometime": 4
+        }
+      }
+    }
+  },
+  "category_frames": {
+    "bus": 5331,
+    "car": 102637,
+    "cyclist": 20575,
+    "drone": 3314,
+    "pedestrian": 27039,
+    "plane": 5453,
+    "ship": 14497,
+    "unmatched": 926
+  },
+  "gt_intersection": {
+    "0,0,0": 113154,
+    "0,0,1": 81,
+    "0,1,0": 260,
+    "0,1,1": 3987,
+    "1,0,0": 101,
+    "1,0,1": 8,
+    "1,1,0": 18,
+    "1,1,1": 62163
+  },
+  "official": {
+    "B_ref": {
+      "tracker": "B_ref",
+      "HOTA": 38.726980885101895,
+      "DetA": 25.99623248192813,
+      "AssA": 59.20335820176318,
+      "IDF1": 43.86168376549076,
+      "MOTA": 25.674743564070045,
+      "FP": 15753,
+      "FN": 117482,
+      "IDSW": 381,
+      "delta": {
+        "HOTA": 0.0,
+        "DetA": 0.0,
+        "AssA": 0.0,
+        "IDF1": 0.0,
+        "MOTA": 0.0,
+        "FP": 0,
+        "FN": 0,
+        "IDSW": 0
+      }
+    },
+    "A2B": {
+      "tracker": "A2B",
+      "HOTA": 38.75168405063968,
+      "DetA": 26.814067872146612,
+      "AssA": 57.71797210850443,
+      "IDF1": 43.953283286769775,
+      "MOTA": 23.464721981176158,
+      "FP": 23682,
+      "FN": 113344,
+      "IDSW": 563,
+      "delta": {
+        "HOTA": 0.02470316553778673,
+        "DetA": 0.8178353902184838,
+        "AssA": -1.4853860932587466,
+        "IDF1": 0.09159952127901505,
+        "MOTA": -2.210021582893887,
+        "FP": 7929,
+        "FN": -4138,
+        "IDSW": 182
+      }
+    },
+    "A2B_score020": {
+      "tracker": "A2B_score020",
+      "HOTA": 38.81641043764019,
+      "DetA": 26.803049634793965,
+      "AssA": 57.914656317439785,
+      "IDF1": 44.09496806031936,
+      "MOTA": 23.69779498475847,
+      "FP": 23090,
+      "FN": 113533,
+      "IDSW": 547,
+      "delta": {
+        "HOTA": 0.08942955253829155,
+        "DetA": 0.8068171528658361,
+        "AssA": -1.2887018843233946,
+        "IDF1": 0.23328429482860003,
+        "MOTA": -1.9769485793115749,
+        "FP": 7337,
+        "FN": -3949,
+        "IDSW": 166
+      }
+    }
+  }
+}

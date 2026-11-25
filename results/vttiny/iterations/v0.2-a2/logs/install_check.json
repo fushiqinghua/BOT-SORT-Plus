@@ -1,0 +1,10 @@
+{
+  "status": "CHECK_PASS",
+  "version": "0.2.0",
+  "repository": "${REPO_ROOT}",
+  "new_files": 34,
+  "upgraded_files": 5,
+  "identical_existing_files": 42,
+  "baseline_anchors_checked": 38,
+  "backup_directory": null
+}

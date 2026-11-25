@@ -1,0 +1,29 @@
+test_anchor_mismatch_rejects_before_change (test_install_patch.InstallerTests.test_anchor_mismatch_rejects_before_change) ... ok
+test_apply_failure_restores_completed_changes (test_install_patch.InstallerTests.test_apply_failure_restores_completed_changes) ... ok
+test_backup_directory_symlink_is_rejected (test_install_patch.InstallerTests.test_backup_directory_symlink_is_rejected) ... ok
+test_bundle_version_must_match_rollback_receipt (test_install_patch.InstallerTests.test_bundle_version_must_match_rollback_receipt) ... ok
+test_cli_defaults_to_check (test_install_patch.InstallerTests.test_cli_defaults_to_check) ... ok
+test_concurrent_edit_during_failure_is_not_overwritten_by_rollback (test_install_patch.InstallerTests.test_concurrent_edit_during_failure_is_not_overwritten_by_rollback) ... ok
+test_corrupt_backup_blocks_rollback_before_mutation (test_install_patch.InstallerTests.test_corrupt_backup_blocks_rollback_before_mutation) ... ok
+test_corrupt_payload_rejects_before_change (test_install_patch.InstallerTests.test_corrupt_payload_rejects_before_change) ... ok
+test_crlf_drift_is_not_silently_normalized (test_install_patch.InstallerTests.test_crlf_drift_is_not_silently_normalized) ... ok
+test_default_check_is_read_only_and_reports_plan (test_install_patch.InstallerTests.test_default_check_is_read_only_and_reports_plan) ... ok
+test_existing_lock_is_not_removed (test_install_patch.InstallerTests.test_existing_lock_is_not_removed) ... ok
+test_file_parent_conflict_and_anchor_overlay_overlap_rejected (test_install_patch.InstallerTests.test_file_parent_conflict_and_anchor_overlay_overlap_rejected) ... ok
+test_fresh_install_creates_only_overlay_and_receipt (test_install_patch.InstallerTests.test_fresh_install_creates_only_overlay_and_receipt) ... ok
+test_known_v1_upgrade_saves_exact_previous_bytes (test_install_patch.InstallerTests.test_known_v1_upgrade_saves_exact_previous_bytes) ... ok
+test_local_edit_blocks_all_rollback_changes (test_install_patch.InstallerTests.test_local_edit_blocks_all_rollback_changes) ... ok
+test_missing_preexisting_file_is_a_local_change_not_restored_silently (test_install_patch.InstallerTests.test_missing_preexisting_file_is_a_local_change_not_restored_silently) ... ok
+test_new_files_only_rollback_does_not_delete_user_files_in_their_directories (test_install_patch.InstallerTests.test_new_files_only_rollback_does_not_delete_user_files_in_their_directories) ... ok
+test_receipt_cannot_target_unrelated_file (test_install_patch.InstallerTests.test_receipt_cannot_target_unrelated_file) ... ok
+test_repeat_apply_is_noop_without_another_backup (test_install_patch.InstallerTests.test_repeat_apply_is_noop_without_another_backup) ... ok
+test_second_preflight_detects_change_after_initial_check (test_install_patch.InstallerTests.test_second_preflight_detects_change_after_initial_check) ... ok
+test_symlink_parent_and_dangling_target_are_rejected (test_install_patch.InstallerTests.test_symlink_parent_and_dangling_target_are_rejected) ... ok
+test_unknown_local_edit_rejects_entire_plan_before_mutation (test_install_patch.InstallerTests.test_unknown_local_edit_rejects_entire_plan_before_mutation) ... ok
+test_unsafe_manifest_paths_rejected (test_install_patch.InstallerTests.test_unsafe_manifest_paths_rejected) ... ok
+test_upgrade_and_fresh_file_rollback_preserves_unrelated_results (test_install_patch.InstallerTests.test_upgrade_and_fresh_file_rollback_preserves_unrelated_results) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.146s
+
+OK

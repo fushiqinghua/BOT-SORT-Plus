@@ -1,0 +1,509 @@
+{
+  "sequence": "DJI_0061_2",
+  "title": "新建身份时排除了旧行人 ID",
+  "kind": "gt",
+  "focus_id": 161,
+  "pivot_frame": 181,
+  "pivot_A2B_tid": 266,
+  "pivot_det_index": 38,
+  "methods": {
+    "B_ref": {
+      "pivot_candidate": null,
+      "actual_row_updates": [
+        {
+          "sequence": "DJI_0061_2",
+          "frame": 181,
+          "event": "match",
+          "stage": "low",
+          "track_id": 197,
+          "det_index": 38,
+          "cost": 0.1553903201930048,
+          "track_origin": "native"
+        }
+      ],
+      "pivot_evidence": null,
+      "identity_status": null,
+      "guard_reason_counts": {},
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    },
+    "A2B": {
+      "pivot_candidate": 995,
+      "actual_row_updates": [
+        {
+          "sequence": "DJI_0061_2",
+          "frame": 181,
+          "event": "birth_committed",
+          "track_id": 266,
+          "candidate_id": 995,
+          "det_index": 38,
+          "mode": "two_stage",
+          "candidate_first_frame": 177,
+          "birth_frame": 181,
+          "confirmation_delay_frames": 4,
+          "support": {
+            "epoch_start": 0,
+            "armed_frame": 179,
+            "verification_deadline": 182,
+            "verified_at": 181,
+            "armed_frames": [
+              177,
+              178,
+              179
+            ],
+            "armed_mean_score": 0.29077749451001483,
+            "collect_frames": [
+              177,
+              178,
+              179,
+              180,
+              181
+            ],
+            "collect_hits": 5,
+            "collect_mean_score": 0.3592136144638062,
+            "verify_frames": [
+              180,
+              181
+            ],
+            "verify_hits": 2,
+            "verify_mean_score": 0.4618677943944931,
+            "current_hit": true,
+            "threshold": 0.18
+          },
+          "identity_status": "CLEAR_NEW",
+          "track_origin": "weak_birth"
+        }
+      ],
+      "pivot_evidence": {
+        "sequence": "DJI_0061_2",
+        "frame": 181,
+        "event": "birth_evidence",
+        "candidate_id": 995,
+        "mode": "two_stage",
+        "ready": true,
+        "phase": "READY",
+        "reason": "fresh_verification_supported",
+        "stats": {
+          "epoch_start": 0,
+          "armed_frame": 179,
+          "verification_deadline": 182,
+          "verified_at": 181,
+          "armed_frames": [
+            177,
+            178,
+            179
+          ],
+          "armed_mean_score": 0.29077749451001483,
+          "collect_frames": [
+            177,
+            178,
+            179,
+            180,
+            181
+          ],
+          "collect_hits": 5,
+          "collect_mean_score": 0.3592136144638062,
+          "verify_frames": [
+            180,
+            181
+          ],
+          "verify_hits": 2,
+          "verify_mean_score": 0.4618677943944931,
+          "current_hit": true,
+          "threshold": 0.18
+        }
+      },
+      "identity_status": "CLEAR_NEW",
+      "guard_reason_counts": {
+        "current_geometry_excludes": 45,
+        "current_appearance_excludes": 2
+      },
+      "previous_GT_id_guard": [
+        {
+          "track_id": 250,
+          "candidate_id": 995,
+          "age": 9,
+          "conflict": false,
+          "current_geometry": 0.4145660026435558,
+          "current_appearance": 0.6988353366168636,
+          "history_geometry": [
+            {
+              "frame": 177,
+              "cost": 0.35536601151351754,
+              "reason": "compatible"
+            },
+            {
+              "frame": 178,
+              "cost": 0.40250553864970967,
+              "reason": "compatible"
+            },
+            {
+              "frame": 179,
+              "cost": 0.3988391101490232,
+              "reason": "compatible"
+            },
+            {
+              "frame": 180,
+              "cost": 0.40408103255333194,
+              "reason": "compatible"
+            },
+            {
+              "frame": 181,
+              "cost": 0.4145660026435558,
+              "reason": "compatible"
+            }
+          ],
+          "history_appearance_mean": 0.6967277832670933,
+          "appearance_hits": 5,
+          "history_before_last_seen": [],
+          "reason": "current_appearance_excludes"
+        }
+      ],
+      "previous_GT_id_recovery_check": [
+        {
+          "sequence": "DJI_0061_2",
+          "frame": 181,
+          "event": "recovery_check",
+          "track_id": 250,
+          "candidate_id": 995,
+          "age": 9,
+          "hits": 5,
+          "cost": null,
+          "reason": "appearance_contradiction",
+          "track_origin": "weak_birth"
+        }
+      ],
+      "switches_in_window": [
+        {
+          "sequence": "DJI_0061_2",
+          "method": "A2B",
+          "gt": "161",
+          "frame": "166",
+          "previous_frame": "159",
+          "gap": "6",
+          "old_tid": "215",
+          "new_tid": "250",
+          "old_origin": "weak",
+          "new_origin": "weak",
+          "stage": "high",
+          "new_tid_age": "4",
+          "switch_at_weak_birth": "0",
+          "last_gt_on_arriving_tid": "",
+          "old_tid_gt_now": "",
+          "old_tid_output_now": "0",
+          "old_tid_last_output_before": "163",
+          "guard_for_old_tid": "",
+          "old_pred_age": "",
+          "recovery_check_for_old_tid": "",
+          "B_ref_previous": "197",
+          "B_ref_current": "",
+          "B_ref_switch_here": "0",
+          "B_ref_endpoints": "previous_only",
+          "A2B_previous": "215",
+          "A2B_current": "250",
+          "A2B_switch_here": "1",
+          "A2B_endpoints": "different",
+          "A2B_score020_previous": "211",
+          "A2B_score020_current": "243",
+          "A2B_score020_switch_here": "1",
+          "A2B_score020_endpoints": "different"
+        },
+        {
+          "sequence": "DJI_0061_2",
+          "method": "A2B",
+          "gt": "161",
+          "frame": "181",
+          "previous_frame": "172",
+          "gap": "8",
+          "old_tid": "250",
+          "new_tid": "266",
+          "old_origin": "weak",
+          "new_origin": "weak",
+          "stage": "birth_committed",
+          "new_tid_age": "0",
+          "switch_at_weak_birth": "1",
+          "last_gt_on_arriving_tid": "",
+          "old_tid_gt_now": "",
+          "old_tid_output_now": "0",
+          "old_tid_last_output_before": "172",
+          "guard_for_old_tid": "current_appearance_excludes",
+          "old_pred_age": "9",
+          "recovery_check_for_old_tid": "appearance_contradiction",
+          "B_ref_previous": "197",
+          "B_ref_current": "197",
+          "B_ref_switch_here": "0",
+          "B_ref_endpoints": "same",
+          "A2B_previous": "250",
+          "A2B_current": "266",
+          "A2B_switch_here": "1",
+          "A2B_endpoints": "different",
+          "A2B_score020_previous": "243",
+          "A2B_score020_current": "259",
+          "A2B_score020_switch_here": "1",
+          "A2B_score020_endpoints": "different"
+        }
+      ]
+    },
+    "A2B_score020": {
+      "pivot_candidate": 990,
+      "actual_row_updates": [
+        {
+          "sequence": "DJI_0061_2",
+          "frame": 181,
+          "event": "birth_committed",
+          "track_id": 259,
+          "candidate_id": 990,
+          "det_index": 38,
+          "mode": "two_stage",
+          "candidate_first_frame": 177,
+          "birth_frame": 181,
+          "confirmation_delay_frames": 4,
+          "support": {
+            "epoch_start": 0,
+            "armed_frame": 179,
+            "verification_deadline": 182,
+            "verified_at": 181,
+            "armed_frames": [
+              177,
+              178,
+              179
+            ],
+            "armed_mean_score": 0.29077749451001483,
+            "collect_frames": [
+              177,
+              178,
+              179,
+              180,
+              181
+            ],
+            "collect_hits": 5,
+            "collect_mean_score": 0.3592136144638062,
+            "verify_frames": [
+              180,
+              181
+            ],
+            "verify_hits": 2,
+            "verify_mean_score": 0.4618677943944931,
+            "current_hit": true,
+            "threshold": 0.2
+          },
+          "identity_status": "CLEAR_NEW",
+          "track_origin": "weak_birth"
+        }
+      ],
+      "pivot_evidence": {
+        "sequence": "DJI_0061_2",
+        "frame": 181,
+        "event": "birth_evidence",
+        "candidate_id": 990,
+        "mode": "two_stage",
+        "ready": true,
+        "phase": "READY",
+        "reason": "fresh_verification_supported",
+        "stats": {
+          "epoch_start": 0,
+          "armed_frame": 179,
+          "verification_deadline": 182,
+          "verified_at": 181,
+          "armed_frames": [
+            177,
+            178,
+            179
+          ],
+          "armed_mean_score": 0.29077749451001483,
+          "collect_frames": [
+            177,
+            178,
+            179,
+            180,
+            181
+          ],
+          "collect_hits": 5,
+          "collect_mean_score": 0.3592136144638062,
+          "verify_frames": [
+            180,
+            181
+          ],
+          "verify_hits": 2,
+          "verify_mean_score": 0.4618677943944931,
+          "current_hit": true,
+          "threshold": 0.2
+        }
+      },
+      "identity_status": "CLEAR_NEW",
+      "guard_reason_counts": {
+        "current_geometry_excludes": 43,
+        "current_appearance_excludes": 2
+      },
+      "previous_GT_id_guard": [
+        {
+          "track_id": 243,
+          "candidate_id": 990,
+          "age": 9,
+          "conflict": false,
+          "current_geometry": 0.4145660026435558,
+          "current_appearance": 0.6988353366168636,
+          "history_geometry": [
+            {
+              "frame": 177,
+              "cost": 0.35536601151351754,
+              "reason": "compatible"
+            },
+            {
+              "frame": 178,
+              "cost": 0.40250553864970967,
+              "reason": "compatible"
+            },
+            {
+              "frame": 179,
+              "cost": 0.3988391101490232,
+              "reason": "compatible"
+            },
+            {
+              "frame": 180,
+              "cost": 0.40408103255333194,
+              "reason": "compatible"
+            },
+            {
+              "frame": 181,
+              "cost": 0.4145660026435558,
+              "reason": "compatible"
+            }
+          ],
+          "history_appearance_mean": 0.6967277832670933,
+          "appearance_hits": 5,
+          "history_before_last_seen": [],
+          "reason": "current_appearance_excludes"
+        }
+      ],
+      "previous_GT_id_recovery_check": [
+        {
+          "sequence": "DJI_0061_2",
+          "frame": 181,
+          "event": "recovery_check",
+          "track_id": 243,
+          "candidate_id": 990,
+          "age": 9,
+          "hits": 5,
+          "cost": null,
+          "reason": "appearance_contradiction",
+          "track_origin": "weak_birth"
+        }
+      ],
+      "switches_in_window": [
+        {
+          "sequence": "DJI_0061_2",
+          "method": "A2B_score020",
+          "gt": "161",
+          "frame": "166",
+          "previous_frame": "159",
+          "gap": "6",
+          "old_tid": "211",
+          "new_tid": "243",
+          "old_origin": "weak",
+          "new_origin": "weak",
+          "stage": "high",
+          "new_tid_age": "4",
+          "switch_at_weak_birth": "0",
+          "last_gt_on_arriving_tid": "",
+          "old_tid_gt_now": "",
+          "old_tid_output_now": "0",
+          "old_tid_last_output_before": "163",
+          "guard_for_old_tid": "",
+          "old_pred_age": "",
+          "recovery_check_for_old_tid": "",
+          "B_ref_previous": "197",
+          "B_ref_current": "",
+          "B_ref_switch_here": "0",
+          "B_ref_endpoints": "previous_only",
+          "A2B_previous": "215",
+          "A2B_current": "250",
+          "A2B_switch_here": "1",
+          "A2B_endpoints": "different",
+          "A2B_score020_previous": "211",
+          "A2B_score020_current": "243",
+          "A2B_score020_switch_here": "1",
+          "A2B_score020_endpoints": "different"
+        },
+        {
+          "sequence": "DJI_0061_2",
+          "method": "A2B_score020",
+          "gt": "161",
+          "frame": "181",
+          "previous_frame": "172",
+          "gap": "8",
+          "old_tid": "243",
+          "new_tid": "259",
+          "old_origin": "weak",
+          "new_origin": "weak",
+          "stage": "birth_committed",
+          "new_tid_age": "0",
+          "switch_at_weak_birth": "1",
+          "last_gt_on_arriving_tid": "",
+          "old_tid_gt_now": "",
+          "old_tid_output_now": "0",
+          "old_tid_last_output_before": "172",
+          "guard_for_old_tid": "current_appearance_excludes",
+          "old_pred_age": "9",
+          "recovery_check_for_old_tid": "appearance_contradiction",
+          "B_ref_previous": "197",
+          "B_ref_current": "197",
+          "B_ref_switch_here": "0",
+          "B_ref_endpoints": "same",
+          "A2B_previous": "250",
+          "A2B_current": "266",
+          "A2B_switch_here": "1",
+          "A2B_endpoints": "different",
+          "A2B_score020_previous": "243",
+          "A2B_score020_current": "259",
+          "A2B_score020_switch_here": "1",
+          "A2B_score020_endpoints": "different"
+        }
+      ]
+    }
+  },
+  "target": {
+    "sequence": "DJI_0061_2",
+    "gt": "161",
+    "category": "pedestrian",
+    "category_supported_frames": "85",
+    "categories_observed": "{\"pedestrian\": 85}",
+    "annotated_frames": "85",
+    "first_gt": "156",
+    "last_gt": "240",
+    "median_sqrt_area_px": "6.325",
+    "size_bin": "lt8",
+    "B_ref_matched": "32",
+    "B_ref_first": "156",
+    "B_ref_last": "236",
+    "B_ref_ids": "1",
+    "B_ref_switches": "0",
+    "A2B_matched": "34",
+    "A2B_first": "156",
+    "A2B_last": "236",
+    "A2B_ids": "5",
+    "A2B_switches": "4",
+    "A2B_score020_matched": "34",
+    "A2B_score020_first": "156",
+    "A2B_score020_last": "236",
+    "A2B_score020_ids": "5",
+    "A2B_score020_switches": "4",
+    "A2B_gained": "6",
+    "A2B_lost": "4",
+    "A2B_novel_id": "0",
+    "A2B_new_target_frames": "0",
+    "A2B_early_frames": "0",
+    "A2B_late_frames": "0",
+    "A2B_internal_frames": "6",
+    "A2B_score020_gained": "6",
+    "A2B_score020_lost": "4",
+    "A2B_score020_novel_id": "0",
+    "A2B_score020_new_target_frames": "0",
+    "A2B_score020_early_frames": "0",
+    "A2B_score020_late_frames": "0",
+    "A2B_score020_internal_frames": "6",
+    "score020_only_frames": "0",
+    "score018_only_frames": "0"
+  }
+}

@@ -1,0 +1,4 @@
+B_ref {"FN": 117482, "FP": 15753, "IDSW": 381, "gained_vs_B": 0, "lost_vs_B": 0}
+A2B {"FN": 113344, "FP": 23682, "IDSW": 563, "gained_vs_B": 4247, "lost_vs_B": 109}
+A2B_score020 {"FN": 113533, "FP": 23090, "IDSW": 547, "gained_vs_B": 4068, "lost_vs_B": 119}
+PASS: 90 prediction files and their CLEAR counts.

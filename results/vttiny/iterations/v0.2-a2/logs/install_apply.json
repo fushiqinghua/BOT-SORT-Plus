@@ -1,0 +1,10 @@
+{
+  "status": "APPLIED",
+  "version": "0.2.0",
+  "repository": "${REPO_ROOT}",
+  "new_files": 34,
+  "upgraded_files": 5,
+  "identical_existing_files": 42,
+  "baseline_anchors_checked": 38,
+  "backup_directory": "${REPO_ROOT}/.botsort_plus_patch_backups/v0.2.0-20261124T172024502875Z-cz5_6_xz"
+}

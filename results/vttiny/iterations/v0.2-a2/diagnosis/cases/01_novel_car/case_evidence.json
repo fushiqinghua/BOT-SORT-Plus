@@ -1,0 +1,260 @@
+{
+  "sequence": "DJI_0327_3",
+  "title": "新增车辆与小框定位",
+  "kind": "gt",
+  "focus_id": 65,
+  "pivot_frame": 8,
+  "pivot_A2B_tid": 32,
+  "pivot_det_index": 31,
+  "methods": {
+    "B_ref": {
+      "pivot_candidate": 41,
+      "actual_row_updates": [],
+      "pivot_evidence": null,
+      "identity_status": null,
+      "guard_reason_counts": {},
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    },
+    "A2B": {
+      "pivot_candidate": 41,
+      "actual_row_updates": [
+        {
+          "sequence": "DJI_0327_3",
+          "frame": 8,
+          "event": "birth_committed",
+          "track_id": 32,
+          "candidate_id": 41,
+          "det_index": 31,
+          "mode": "two_stage",
+          "candidate_first_frame": 1,
+          "birth_frame": 8,
+          "confirmation_delay_frames": 7,
+          "support": {
+            "epoch_start": 0,
+            "armed_frame": 6,
+            "verification_deadline": 9,
+            "verified_at": 8,
+            "armed_frames": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "armed_mean_score": 0.20385948121547698,
+            "collect_frames": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "collect_hits": 5,
+            "collect_mean_score": 0.23716967105865477,
+            "verify_frames": [
+              7,
+              8
+            ],
+            "verify_hits": 2,
+            "verify_mean_score": 0.2588932365179062,
+            "current_hit": true,
+            "threshold": 0.18
+          },
+          "identity_status": "CLEAR_NEW",
+          "track_origin": "weak_birth"
+        }
+      ],
+      "pivot_evidence": {
+        "sequence": "DJI_0327_3",
+        "frame": 8,
+        "event": "birth_evidence",
+        "candidate_id": 41,
+        "mode": "two_stage",
+        "ready": true,
+        "phase": "READY",
+        "reason": "fresh_verification_supported",
+        "stats": {
+          "epoch_start": 0,
+          "armed_frame": 6,
+          "verification_deadline": 9,
+          "verified_at": 8,
+          "armed_frames": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "armed_mean_score": 0.20385948121547698,
+          "collect_frames": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "collect_hits": 5,
+          "collect_mean_score": 0.23716967105865477,
+          "verify_frames": [
+            7,
+            8
+          ],
+          "verify_hits": 2,
+          "verify_mean_score": 0.2588932365179062,
+          "current_hit": true,
+          "threshold": 0.18
+        }
+      },
+      "identity_status": "CLEAR_NEW",
+      "guard_reason_counts": {
+        "current_appearance_excludes": 1
+      },
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    },
+    "A2B_score020": {
+      "pivot_candidate": 41,
+      "actual_row_updates": [
+        {
+          "sequence": "DJI_0327_3",
+          "frame": 8,
+          "event": "birth_committed",
+          "track_id": 32,
+          "candidate_id": 41,
+          "det_index": 31,
+          "mode": "two_stage",
+          "candidate_first_frame": 1,
+          "birth_frame": 8,
+          "confirmation_delay_frames": 7,
+          "support": {
+            "epoch_start": 0,
+            "armed_frame": 6,
+            "verification_deadline": 9,
+            "verified_at": 8,
+            "armed_frames": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "armed_mean_score": 0.20385948121547698,
+            "collect_frames": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "collect_hits": 5,
+            "collect_mean_score": 0.23716967105865477,
+            "verify_frames": [
+              7,
+              8
+            ],
+            "verify_hits": 2,
+            "verify_mean_score": 0.2588932365179062,
+            "current_hit": true,
+            "threshold": 0.2
+          },
+          "identity_status": "CLEAR_NEW",
+          "track_origin": "weak_birth"
+        }
+      ],
+      "pivot_evidence": {
+        "sequence": "DJI_0327_3",
+        "frame": 8,
+        "event": "birth_evidence",
+        "candidate_id": 41,
+        "mode": "two_stage",
+        "ready": true,
+        "phase": "READY",
+        "reason": "fresh_verification_supported",
+        "stats": {
+          "epoch_start": 0,
+          "armed_frame": 6,
+          "verification_deadline": 9,
+          "verified_at": 8,
+          "armed_frames": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "armed_mean_score": 0.20385948121547698,
+          "collect_frames": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "collect_hits": 5,
+          "collect_mean_score": 0.23716967105865477,
+          "verify_frames": [
+            7,
+            8
+          ],
+          "verify_hits": 2,
+          "verify_mean_score": 0.2588932365179062,
+          "current_hit": true,
+          "threshold": 0.2
+        }
+      },
+      "identity_status": "CLEAR_NEW",
+      "guard_reason_counts": {
+        "current_appearance_excludes": 1
+      },
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    }
+  },
+  "target": {
+    "sequence": "DJI_0327_3",
+    "gt": "65",
+    "category": "car",
+    "category_supported_frames": "390",
+    "categories_observed": "{\"car\": 390}",
+    "annotated_frames": "390",
+    "first_gt": "1",
+    "last_gt": "390",
+    "median_sqrt_area_px": "10.198",
+    "size_bin": "8_16",
+    "B_ref_matched": "0",
+    "B_ref_first": "",
+    "B_ref_last": "",
+    "B_ref_ids": "0",
+    "B_ref_switches": "0",
+    "A2B_matched": "137",
+    "A2B_first": "13",
+    "A2B_last": "184",
+    "A2B_ids": "1",
+    "A2B_switches": "0",
+    "A2B_score020_matched": "137",
+    "A2B_score020_first": "13",
+    "A2B_score020_last": "184",
+    "A2B_score020_ids": "1",
+    "A2B_score020_switches": "0",
+    "A2B_gained": "137",
+    "A2B_lost": "0",
+    "A2B_novel_id": "1",
+    "A2B_new_target_frames": "137",
+    "A2B_early_frames": "0",
+    "A2B_late_frames": "0",
+    "A2B_internal_frames": "0",
+    "A2B_score020_gained": "137",
+    "A2B_score020_lost": "0",
+    "A2B_score020_novel_id": "1",
+    "A2B_score020_new_target_frames": "137",
+    "A2B_score020_early_frames": "0",
+    "A2B_score020_late_frames": "0",
+    "A2B_score020_internal_frames": "0",
+    "score020_only_frames": "0",
+    "score018_only_frames": "0"
+  }
+}

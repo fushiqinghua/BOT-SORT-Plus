@@ -1,0 +1,30 @@
+{
+  "A2B vs B_ref": {
+    "birth.enabled": [
+      false,
+      true
+    ],
+    "birth_identity.enabled": [
+      false,
+      true
+    ],
+    "birth_policy.mode": [
+      "legacy",
+      "two_stage"
+    ],
+    "name": [
+      "B_ref",
+      "A2B"
+    ]
+  },
+  "A2B_score020 vs A2B": {
+    "birth_policy.mean_score": [
+      0.18,
+      0.2
+    ],
+    "name": [
+      "A2B",
+      "A2B_score020"
+    ]
+  }
+}

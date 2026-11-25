@@ -1,0 +1,129 @@
+{
+  "sequence": "DJI_0129_2",
+  "title": "短缺口后保留同一身份",
+  "kind": "gt",
+  "focus_id": 1,
+  "pivot_frame": 78,
+  "pivot_A2B_tid": 1,
+  "pivot_det_index": 1,
+  "methods": {
+    "B_ref": {
+      "pivot_candidate": 15,
+      "actual_row_updates": [
+        {
+          "sequence": "DJI_0129_2",
+          "frame": 78,
+          "event": "recovered",
+          "track_id": 1,
+          "candidate_id": 15,
+          "det_index": 1,
+          "cost": 0.38069071048342634,
+          "geometry_cost": 0.4349099112546156,
+          "appearance_cost": 0.3253304060050382,
+          "age": 5,
+          "hits": 3,
+          "track_origin": "native"
+        }
+      ],
+      "pivot_evidence": null,
+      "identity_status": null,
+      "guard_reason_counts": {},
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    },
+    "A2B": {
+      "pivot_candidate": 15,
+      "actual_row_updates": [
+        {
+          "sequence": "DJI_0129_2",
+          "frame": 78,
+          "event": "recovered",
+          "track_id": 1,
+          "candidate_id": 15,
+          "det_index": 1,
+          "cost": 0.38069071048342634,
+          "geometry_cost": 0.4349099112546156,
+          "appearance_cost": 0.3253304060050382,
+          "age": 5,
+          "hits": 3,
+          "track_origin": "native"
+        }
+      ],
+      "pivot_evidence": null,
+      "identity_status": null,
+      "guard_reason_counts": {},
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    },
+    "A2B_score020": {
+      "pivot_candidate": 15,
+      "actual_row_updates": [
+        {
+          "sequence": "DJI_0129_2",
+          "frame": 78,
+          "event": "recovered",
+          "track_id": 1,
+          "candidate_id": 15,
+          "det_index": 1,
+          "cost": 0.38069071048342634,
+          "geometry_cost": 0.4349099112546156,
+          "appearance_cost": 0.3253304060050382,
+          "age": 5,
+          "hits": 3,
+          "track_origin": "native"
+        }
+      ],
+      "pivot_evidence": null,
+      "identity_status": null,
+      "guard_reason_counts": {},
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    }
+  },
+  "target": {
+    "sequence": "DJI_0129_2",
+    "gt": "1",
+    "category": "plane",
+    "category_supported_frames": "590",
+    "categories_observed": "{\"plane\": 590}",
+    "annotated_frames": "590",
+    "first_gt": "1",
+    "last_gt": "590",
+    "median_sqrt_area_px": "7.483",
+    "size_bin": "lt8",
+    "B_ref_matched": "549",
+    "B_ref_first": "3",
+    "B_ref_last": "590",
+    "B_ref_ids": "1",
+    "B_ref_switches": "0",
+    "A2B_matched": "549",
+    "A2B_first": "3",
+    "A2B_last": "590",
+    "A2B_ids": "1",
+    "A2B_switches": "0",
+    "A2B_score020_matched": "549",
+    "A2B_score020_first": "3",
+    "A2B_score020_last": "590",
+    "A2B_score020_ids": "1",
+    "A2B_score020_switches": "0",
+    "A2B_gained": "0",
+    "A2B_lost": "0",
+    "A2B_novel_id": "0",
+    "A2B_new_target_frames": "0",
+    "A2B_early_frames": "0",
+    "A2B_late_frames": "0",
+    "A2B_internal_frames": "0",
+    "A2B_score020_gained": "0",
+    "A2B_score020_lost": "0",
+    "A2B_score020_novel_id": "0",
+    "A2B_score020_new_target_frames": "0",
+    "A2B_score020_early_frames": "0",
+    "A2B_score020_late_frames": "0",
+    "A2B_score020_internal_frames": "0",
+    "score020_only_frames": "0",
+    "score018_only_frames": "0"
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "sequence": "DJI_0141_2",
+  "title": "提高门限后丢失的真目标",
+  "kind": "gt",
+  "focus_id": 33,
+  "pivot_frame": 132,
+  "pivot_A2B_tid": 50,
+  "pivot_det_index": 24,
+  "methods": {
+    "B_ref": {
+      "pivot_candidate": 142,
+      "actual_row_updates": [],
+      "pivot_evidence": null,
+      "identity_status": null,
+      "guard_reason_counts": {},
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    },
+    "A2B": {
+      "pivot_candidate": 146,
+      "actual_row_updates": [
+        {
+          "sequence": "DJI_0141_2",
+          "frame": 132,
+          "event": "birth_committed",
+          "track_id": 50,
+          "candidate_id": 146,
+          "det_index": 24,
+          "mode": "two_stage",
+          "candidate_first_frame": 121,
+          "birth_frame": 132,
+          "confirmation_delay_frames": 11,
+          "support": {
+            "epoch_start": 0,
+            "armed_frame": 130,
+            "verification_deadline": 133,
+            "verified_at": 132,
+            "armed_frames": [
+              126,
+              127,
+              128,
+              129,
+              130
+            ],
+            "armed_mean_score": 0.19136030077934266,
+            "collect_frames": [
+              128,
+              129,
+              130,
+              131,
+              132
+            ],
+            "collect_hits": 5,
+            "collect_mean_score": 0.20204392671585084,
+            "verify_frames": [
+              131,
+              132
+            ],
+            "verify_hits": 2,
+            "verify_mean_score": 0.18800321221351624,
+            "current_hit": true,
+            "threshold": 0.18
+          },
+          "identity_status": "CLEAR_NEW",
+          "track_origin": "weak_birth"
+        }
+      ],
+      "pivot_evidence": {
+        "sequence": "DJI_0141_2",
+        "frame": 132,
+        "event": "birth_evidence",
+        "candidate_id": 146,
+        "mode": "two_stage",
+        "ready": true,
+        "phase": "READY",
+        "reason": "fresh_verification_supported",
+        "stats": {
+          "epoch_start": 0,
+          "armed_frame": 130,
+          "verification_deadline": 133,
+          "verified_at": 132,
+          "armed_frames": [
+            126,
+            127,
+            128,
+            129,
+            130
+          ],
+          "armed_mean_score": 0.19136030077934266,
+          "collect_frames": [
+            128,
+            129,
+            130,
+            131,
+            132
+          ],
+          "collect_hits": 5,
+          "collect_mean_score": 0.20204392671585084,
+          "verify_frames": [
+            131,
+            132
+          ],
+          "verify_hits": 2,
+          "verify_mean_score": 0.18800321221351624,
+          "current_hit": true,
+          "threshold": 0.18
+        }
+      },
+      "identity_status": "CLEAR_NEW",
+      "guard_reason_counts": {
+        "current_geometry_excludes": 4
+      },
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    },
+    "A2B_score020": {
+      "pivot_candidate": 145,
+      "actual_row_updates": [],
+      "pivot_evidence": {
+        "sequence": "DJI_0141_2",
+        "frame": 132,
+        "event": "birth_evidence",
+        "candidate_id": 145,
+        "mode": "two_stage",
+        "ready": false,
+        "phase": "VERIFYING",
+        "reason": "insufficient_new_hits",
+        "stats": {
+          "epoch_start": 0,
+          "armed_frame": 131,
+          "verification_deadline": 134,
+          "verified_at": null,
+          "armed_frames": [
+            127,
+            128,
+            129,
+            130,
+            131
+          ],
+          "armed_mean_score": 0.20859355926513673,
+          "collect_frames": [
+            128,
+            129,
+            130,
+            131,
+            132
+          ],
+          "collect_hits": 5,
+          "collect_mean_score": 0.20204392671585084,
+          "verify_frames": [
+            132
+          ],
+          "verify_hits": 1,
+          "verify_mean_score": 0.17269185185432434,
+          "current_hit": true,
+          "threshold": 0.2
+        }
+      },
+      "identity_status": "CLEAR_NEW",
+      "guard_reason_counts": {
+        "current_geometry_excludes": 5
+      },
+      "previous_GT_id_guard": [],
+      "previous_GT_id_recovery_check": [],
+      "switches_in_window": []
+    }
+  },
+  "target": {
+    "sequence": "DJI_0141_2",
+    "gt": "33",
+    "category": "car",
+    "category_supported_frames": "410",
+    "categories_observed": "{\"car\": 410}",
+    "annotated_frames": "410",
+    "first_gt": "1",
+    "last_gt": "410",
+    "median_sqrt_area_px": "8.367",
+    "size_bin": "8_16",
+    "B_ref_matched": "0",
+    "B_ref_first": "",
+    "B_ref_last": "",
+    "B_ref_ids": "0",
+    "B_ref_switches": "0",
+    "A2B_matched": "25",
+    "A2B_first": "132",
+    "A2B_last": "166",
+    "A2B_ids": "1",
+    "A2B_switches": "0",
+    "A2B_score020_matched": "0",
+    "A2B_score020_first": "",
+    "A2B_score020_last": "",
+    "A2B_score020_ids": "0",
+    "A2B_score020_switches": "0",
+    "A2B_gained": "25",
+    "A2B_lost": "0",
+    "A2B_novel_id": "1",
+    "A2B_new_target_frames": "25",
+    "A2B_early_frames": "0",
+    "A2B_late_frames": "0",
+    "A2B_internal_frames": "0",
+    "A2B_score020_gained": "0",
+    "A2B_score020_lost": "0",
+    "A2B_score020_novel_id": "0",
+    "A2B_score020_new_target_frames": "0",
+    "A2B_score020_early_frames": "0",
+    "A2B_score020_late_frames": "0",
+    "A2B_score020_internal_frames": "0",
+    "score020_only_frames": "0",
+    "score018_only_frames": "25"
+  }
+}

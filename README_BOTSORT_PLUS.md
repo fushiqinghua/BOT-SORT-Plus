@@ -2,7 +2,7 @@
 
 本版本接续已完成真实实验的 v0.1：主基线为 YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID。针对 A 的持续误起轨和旧身份竞争，实现可独立开关的 E（存在确认）与 I（新身份准入），保留原 B/C 入口。
 
-**交付内容是已通过软件验证的实现与接入工具。v0.2 尚未完成用户真实图像、特征缓存上的全量回放；不能把软件测试通过解释为 HOTA/IDF1 已改善。** 默认门槛是开发初值。`docs/botsort_plus/validation/` 下原有文件属于 v0.1 历史验证；当前验证见 `docs/botsort_plus/validation_v0.2/`。
+补丁接入后已完成三段 shadow 验收和 30 段、15 组全量回放。默认 A2B 采用 0.18，另有门槛 0.20 的对照。`docs/botsort_plus/validation/` 与 `validation_v0.2/` 记录补丁交付时的软件测试。实跑结果、逐帧证据和复算记录见[第二轮实验索引](results/vttiny/iterations/v0.2-a2/README.md)。
 
 ## 主要入口
 

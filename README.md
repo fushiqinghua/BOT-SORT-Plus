@@ -1,8 +1,8 @@
-# BoT-SORT Plus · 第一轮 A/B 实验
+# BoT-SORT Plus · 第二轮 A2 实验
 
-从冻结的 BoT-SORT 出发，A 允许多帧低分检测累积后起轨，B 让短时丢失的轨迹以旧 ID 恢复。官方 30 段上，A 额外覆盖 102 个真实身份，也多出 1,127 次换号。B 的 HOTA 从 37.86 提高到 38.73，换号从 422 降到 380。官方测试集参与了选模与门限校准，以下按开发实验解读。
+第一轮的弱起轨让更多微小目标获得轨迹，也把部分背景响应发布为新 ID。第二轮将弱起轨拆为存在确认 E 与身份准入 I，再与短时恢复 B 组合。在相同的 30 段上，A2B_score020 相对本轮 B_ref 净补回 3,949 个目标帧，同时增加 7,337 个误报和 166 次换号。官方测试集参与选模与调参，结果按开发实验解读。
 
-[第一轮实验索引](results/vttiny/iterations/v0.1-ab/README.md) · [四组消融与两项事件统计](results/vttiny/iterations/v0.1-ab/full30/实验报告.md) · [模块 A 错因与控制实验](results/vttiny/iterations/v0.1-ab/module_a/错因分析.md) · [实现说明](README_BOTSORT_PLUS.md)
+[两轮实验与复算入口](results/vttiny/iterations/v0.2-a2/README.md) · [15 组全量消融](results/vttiny/iterations/v0.2-a2/全量消融.md) · [三组真值对照与错因分析](results/vttiny/iterations/v0.2-a2/diagnosis/错因分析.md) · [八组逐帧案例](results/vttiny/iterations/v0.2-a2/diagnosis/cases/案例索引.md) · [第一轮 A/B 记录](results/vttiny/iterations/v0.1-ab/README.md)
 
 
 ## 冻结基线 · VT-Tiny-MOT

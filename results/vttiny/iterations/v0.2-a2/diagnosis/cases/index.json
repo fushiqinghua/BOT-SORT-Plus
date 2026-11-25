@@ -1,0 +1,1872 @@
+[
+  {
+    "folder": "01_novel_car",
+    "sequence": "DJI_0327_3",
+    "focus_type": "gt",
+    "focus": 65,
+    "title": "新增车辆与小框定位",
+    "note": "GT #65 全程 390 帧。两组 A2 均命中 137 帧，B_ref 全程漏跟。第 8 至 12 帧 A2 已有近框，第 13 帧首次达到 CLEAR 匹配条件。",
+    "windows": [
+      [
+        6,
+        18
+      ]
+    ],
+    "keyframes": [
+      8,
+      13,
+      15,
+      16
+    ],
+    "all_video_frames": 390,
+    "rendered": 13,
+    "keyframe_source": [
+      {
+        "frame": 6,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 7,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 8,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "无 CLEAR 匹配",
+          "近框 #32  ·  IoU 0.44",
+          "近框 #32  ·  IoU 0.44"
+        ]
+      },
+      {
+        "frame": 9,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "无 CLEAR 匹配",
+          "近框 #32  ·  IoU 0.42",
+          "近框 #32  ·  IoU 0.42"
+        ]
+      },
+      {
+        "frame": 10,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "无 CLEAR 匹配",
+          "近框 #32  ·  IoU 0.45",
+          "近框 #32  ·  IoU 0.45"
+        ]
+      },
+      {
+        "frame": 11,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "近框 #22  ·  IoU 0.10",
+          "近框 #32  ·  IoU 0.46",
+          "近框 #32  ·  IoU 0.46"
+        ]
+      },
+      {
+        "frame": 12,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "近框 #22  ·  IoU 0.10",
+          "近框 #32  ·  IoU 0.45",
+          "近框 #32  ·  IoU 0.45"
+        ]
+      },
+      {
+        "frame": 13,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #32  ·  IoU 0.50",
+          "命中 #32  ·  IoU 0.50"
+        ]
+      },
+      {
+        "frame": 14,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #32  ·  IoU 0.54",
+          "命中 #32  ·  IoU 0.54"
+        ]
+      },
+      {
+        "frame": 15,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "无 CLEAR 匹配",
+          "近框 #32  ·  IoU 0.48",
+          "近框 #32  ·  IoU 0.48"
+        ]
+      },
+      {
+        "frame": 16,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #32  ·  IoU 0.56",
+          "命中 #32  ·  IoU 0.56"
+        ]
+      },
+      {
+        "frame": 17,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #32  ·  IoU 0.53",
+          "命中 #32  ·  IoU 0.53"
+        ]
+      },
+      {
+        "frame": 18,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #65  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #32  ·  IoU 0.52",
+          "命中 #32  ·  IoU 0.52"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "02_earlier_ship",
+    "sequence": "DJI_0030_2",
+    "focus_type": "gt",
+    "focus": 3,
+    "title": "已知船舶提前起跟",
+    "note": "GT #3 首次匹配分别在第 489、6、11 帧。全段匹配帧数分别为 100、500、495，三组在各自命中帧中均维持一个预测 ID。",
+    "windows": [
+      [
+        1,
+        14
+      ]
+    ],
+    "keyframes": [
+      4,
+      6,
+      10,
+      11
+    ],
+    "all_video_frames": 590,
+    "rendered": 14,
+    "keyframe_source": [
+      {
+        "frame": 1,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 2,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 3,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 4,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 5,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 6,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "命中 #7  ·  IoU 0.55",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 7,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "命中 #7  ·  IoU 0.58",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 8,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "命中 #7  ·  IoU 0.58",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 9,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "命中 #7  ·  IoU 0.57",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 10,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "命中 #7  ·  IoU 0.52",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 11,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "命中 #7  ·  IoU 0.52",
+          "命中 #7  ·  IoU 0.52"
+        ]
+      },
+      {
+        "frame": 12,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "命中 #7  ·  IoU 0.56",
+          "命中 #7  ·  IoU 0.56"
+        ]
+      },
+      {
+        "frame": 13,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "命中 #7  ·  IoU 0.56",
+          "命中 #7  ·  IoU 0.57"
+        ]
+      },
+      {
+        "frame": 14,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #3  ·  ship",
+          "无 CLEAR 匹配",
+          "命中 #7  ·  IoU 0.57",
+          "命中 #7  ·  IoU 0.58"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "03_threshold_true_loss",
+    "sequence": "DJI_0141_2",
+    "focus_type": "gt",
+    "focus": 33,
+    "title": "提高门限后丢失的真目标",
+    "note": "GT #33 是 0.18 独自补回的五个目标之一。A2B #50 命中 25 帧；B_ref 和 0.20 全程漏跟。两阶段实际均分为 0.191 和 0.188。",
+    "windows": [
+      [
+        121,
+        145
+      ]
+    ],
+    "keyframes": [
+      128,
+      132,
+      138,
+      142
+    ],
+    "all_video_frames": 410,
+    "rendered": 25,
+    "keyframe_source": [
+      {
+        "frame": 121,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 122,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 123,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 124,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 125,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 126,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 127,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 128,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 129,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 130,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 131,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 132,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #50  ·  IoU 0.71",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 133,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #50  ·  IoU 0.62",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 134,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #50  ·  IoU 0.73",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 135,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #50  ·  IoU 0.66",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 136,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #50  ·  IoU 0.67",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 137,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #50  ·  IoU 0.65",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 138,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 139,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 140,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 141,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 142,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #50  ·  IoU 0.82",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 143,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #50  ·  IoU 0.80",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 144,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #50  ·  IoU 0.74",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 145,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #33  ·  car",
+          "无 CLEAR 匹配",
+          "命中 #50  ·  IoU 0.86",
+          "无 CLEAR 匹配"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "04_persistent_false",
+    "sequence": "DJI_0181_3",
+    "focus_type": "fp",
+    "focus": 12,
+    "title": "高于两个门限的长时误报",
+    "note": "A2B #12 在第 5 至 200 帧之间共输出 170 帧，其框与任何 GT、任何 B_ref 框的整个时段最大 IoU 均为 0。0.20 在这 170 帧均输出同一检测行。",
+    "windows": [
+      [
+        1,
+        12
+      ],
+      [
+        29,
+        40
+      ]
+    ],
+    "keyframes": [
+      5,
+      32,
+      34,
+      36
+    ],
+    "all_video_frames": 320,
+    "rendered": 24,
+    "keyframe_source": [
+      {
+        "frame": 1,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 2,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 3,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 4,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 5,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 6,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 7,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 8,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 9,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 10,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 11,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 12,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 29,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 30,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 31,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 32,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 33,
+        "anchor_source": null,
+        "panels": [
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测"
+        ]
+      },
+      {
+        "frame": 34,
+        "anchor_source": null,
+        "panels": [
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测"
+        ]
+      },
+      {
+        "frame": 35,
+        "anchor_source": null,
+        "panels": [
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测"
+        ]
+      },
+      {
+        "frame": 36,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 37,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 38,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 39,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      },
+      {
+        "frame": 40,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#12  ·  FP  ·  同一检测行",
+          "#12  ·  FP  ·  同一检测行"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "05_threshold_fp_removed",
+    "sequence": "DJI_0283_1",
+    "focus_type": "fp",
+    "focus": 33,
+    "title": "提高门限后消失的误报",
+    "note": "A2B #33 的第一阶段均分为 0.18019，第二阶段为 0.26657。45 个输出帧均与 GT、B_ref 和 0.20 的框零重叠。",
+    "windows": [
+      [
+        283,
+        317
+      ]
+    ],
+    "keyframes": [
+      298,
+      302,
+      309,
+      314
+    ],
+    "all_video_frames": 450,
+    "rendered": 35,
+    "keyframe_source": [
+      {
+        "frame": 283,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 284,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 285,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 286,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 287,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 288,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 289,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 290,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 291,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 292,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 293,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 294,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 295,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 296,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 297,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 298,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 299,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 300,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 301,
+        "anchor_source": "raw_candidate",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "无邻近输出",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 302,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#33  ·  FP  ·  同一检测行",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 303,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#33  ·  FP  ·  同一检测行",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 304,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#33  ·  FP  ·  同一检测行",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 305,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#33  ·  FP  ·  同一检测行",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 306,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#33  ·  FP  ·  同一检测行",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 307,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#33  ·  FP  ·  同一检测行",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 308,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#33  ·  FP  ·  同一检测行",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 309,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#33  ·  FP  ·  同一检测行",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 310,
+        "anchor_source": null,
+        "panels": [
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测"
+        ]
+      },
+      {
+        "frame": 311,
+        "anchor_source": null,
+        "panels": [
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测"
+        ]
+      },
+      {
+        "frame": 312,
+        "anchor_source": null,
+        "panels": [
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测"
+        ]
+      },
+      {
+        "frame": 313,
+        "anchor_source": null,
+        "panels": [
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测"
+        ]
+      },
+      {
+        "frame": 314,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#33  ·  FP  ·  同一检测行",
+          "无邻近输出"
+        ]
+      },
+      {
+        "frame": 315,
+        "anchor_source": null,
+        "panels": [
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测"
+        ]
+      },
+      {
+        "frame": 316,
+        "anchor_source": null,
+        "panels": [
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测",
+          "参照轨迹本帧缺测"
+        ]
+      },
+      {
+        "frame": 317,
+        "anchor_source": "A2B_output",
+        "panels": [
+          "最近 GT IoU 0.00",
+          "无邻近输出",
+          "#33  ·  FP  ·  同一检测行",
+          "无邻近输出"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "06_guard_switch",
+    "sequence": "DJI_0061_2",
+    "focus_type": "gt",
+    "focus": 161,
+    "title": "新建身份时排除了旧行人 ID",
+    "note": "GT #161 在 B_ref 下始终由 #197 匹配。第 181 帧两组 A2 都将旧 ID 排除，日志记录当前外观距离为 0.699，超过 0.65。",
+    "windows": [
+      [
+        165,
+        185
+      ]
+    ],
+    "keyframes": [
+      172,
+      177,
+      181,
+      184
+    ],
+    "all_video_frames": 240,
+    "rendered": 21,
+    "keyframe_source": [
+      {
+        "frame": 165,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "无 CLEAR 匹配",
+          "近框 #250  ·  IoU 0.46",
+          "近框 #243  ·  IoU 0.46"
+        ]
+      },
+      {
+        "frame": 166,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "无 CLEAR 匹配",
+          "命中 #250  ·  IoU 0.78",
+          "命中 #243  ·  IoU 0.78"
+        ]
+      },
+      {
+        "frame": 167,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "无 CLEAR 匹配",
+          "命中 #250  ·  IoU 0.77",
+          "命中 #243  ·  IoU 0.77"
+        ]
+      },
+      {
+        "frame": 168,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.62",
+          "命中 #250  ·  IoU 0.74",
+          "命中 #243  ·  IoU 0.74"
+        ]
+      },
+      {
+        "frame": 169,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.56",
+          "命中 #250  ·  IoU 0.58",
+          "命中 #243  ·  IoU 0.58"
+        ]
+      },
+      {
+        "frame": 170,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.61",
+          "命中 #250  ·  IoU 0.65",
+          "命中 #243  ·  IoU 0.65"
+        ]
+      },
+      {
+        "frame": 171,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.58",
+          "命中 #250  ·  IoU 0.58",
+          "命中 #243  ·  IoU 0.58"
+        ]
+      },
+      {
+        "frame": 172,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.62",
+          "命中 #250  ·  IoU 0.60",
+          "命中 #243  ·  IoU 0.60"
+        ]
+      },
+      {
+        "frame": 173,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 174,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 175,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 176,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 177,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.56",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 178,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.61",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 179,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "近框 #197  ·  IoU 0.43",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 180,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.57",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 181,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.58",
+          "命中 #266  ·  IoU 0.56",
+          "命中 #259  ·  IoU 0.56"
+        ]
+      },
+      {
+        "frame": 182,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.54",
+          "命中 #266  ·  IoU 0.52",
+          "命中 #259  ·  IoU 0.52"
+        ]
+      },
+      {
+        "frame": 183,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.67",
+          "命中 #266  ·  IoU 0.66",
+          "命中 #259  ·  IoU 0.66"
+        ]
+      },
+      {
+        "frame": 184,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "命中 #197  ·  IoU 0.62",
+          "命中 #266  ·  IoU 0.64",
+          "命中 #259  ·  IoU 0.64"
+        ]
+      },
+      {
+        "frame": 185,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #161  ·  pedestrian",
+          "近框 #197  ·  IoU 0.46",
+          "近框 #266  ·  IoU 0.47",
+          "近框 #259  ·  IoU 0.47"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "07_existing_id_switch",
+    "sequence": "DJI_0061_2",
+    "focus_type": "gt",
+    "focus": 172,
+    "title": "已有 ID 回到另一个真目标",
+    "note": "第 192 帧，新旧预测 ID 的交替发生在高分关联。A2B 的 #250、0.20 的 #243 先前都匹配过 GT #161，此处开始匹配 GT #172。",
+    "windows": [
+      [
+        183,
+        195
+      ]
+    ],
+    "keyframes": [
+      184,
+      188,
+      192,
+      193
+    ],
+    "all_video_frames": 240,
+    "rendered": 13,
+    "keyframe_source": [
+      {
+        "frame": 183,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "近框 #215  ·  IoU 0.48",
+          "近框 #215  ·  IoU 0.50",
+          "近框 #211  ·  IoU 0.50"
+        ]
+      },
+      {
+        "frame": 184,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "命中 #215  ·  IoU 0.54",
+          "命中 #215  ·  IoU 0.54",
+          "命中 #211  ·  IoU 0.54"
+        ]
+      },
+      {
+        "frame": 185,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "近框 #215  ·  IoU 0.30",
+          "近框 #215  ·  IoU 0.30",
+          "近框 #211  ·  IoU 0.30"
+        ]
+      },
+      {
+        "frame": 186,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 187,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 188,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "无 CLEAR 匹配",
+          "近框 #250  ·  IoU 0.27",
+          "近框 #243  ·  IoU 0.27"
+        ]
+      },
+      {
+        "frame": 189,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 190,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "近框 #215  ·  IoU 0.30",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 191,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "近框 #215  ·  IoU 0.24",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 192,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "命中 #215  ·  IoU 0.70",
+          "命中 #250  ·  IoU 0.63",
+          "命中 #243  ·  IoU 0.63"
+        ]
+      },
+      {
+        "frame": 193,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "近框 #215  ·  IoU 0.49",
+          "命中 #250  ·  IoU 0.53",
+          "命中 #243  ·  IoU 0.53"
+        ]
+      },
+      {
+        "frame": 194,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "近框 #215  ·  IoU 0.36",
+          "近框 #250  ·  IoU 0.35",
+          "近框 #243  ·  IoU 0.35"
+        ]
+      },
+      {
+        "frame": 195,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #172  ·  pedestrian",
+          "命中 #215  ·  IoU 0.52",
+          "近框 #250  ·  IoU 0.47",
+          "近框 #243  ·  IoU 0.47"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "08_continuity_control",
+    "sequence": "DJI_0129_2",
+    "focus_type": "gt",
+    "focus": 1,
+    "title": "短缺口后保留同一身份",
+    "note": "该飞机在原 A 诊断中出现过短缺口换号。本次三组对 GT #1 均命中 549/590 帧，各使用一个 ID，均无换号。",
+    "windows": [
+      [
+        40,
+        49
+      ],
+      [
+        70,
+        81
+      ]
+    ],
+    "keyframes": [
+      42,
+      45,
+      46,
+      78
+    ],
+    "all_video_frames": 590,
+    "rendered": 22,
+    "keyframe_source": [
+      {
+        "frame": 40,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.89",
+          "命中 #1  ·  IoU 0.89",
+          "命中 #1  ·  IoU 0.89"
+        ]
+      },
+      {
+        "frame": 41,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.84",
+          "命中 #1  ·  IoU 0.84",
+          "命中 #1  ·  IoU 0.84"
+        ]
+      },
+      {
+        "frame": 42,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.88",
+          "命中 #1  ·  IoU 0.88",
+          "命中 #1  ·  IoU 0.88"
+        ]
+      },
+      {
+        "frame": 43,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 44,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 45,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 46,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.80",
+          "命中 #1  ·  IoU 0.80",
+          "命中 #1  ·  IoU 0.80"
+        ]
+      },
+      {
+        "frame": 47,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.72",
+          "命中 #1  ·  IoU 0.72",
+          "命中 #1  ·  IoU 0.72"
+        ]
+      },
+      {
+        "frame": 48,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.73",
+          "命中 #1  ·  IoU 0.73",
+          "命中 #1  ·  IoU 0.73"
+        ]
+      },
+      {
+        "frame": 49,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.55",
+          "命中 #1  ·  IoU 0.55",
+          "命中 #1  ·  IoU 0.55"
+        ]
+      },
+      {
+        "frame": 70,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.60",
+          "命中 #1  ·  IoU 0.60",
+          "命中 #1  ·  IoU 0.60"
+        ]
+      },
+      {
+        "frame": 71,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.81",
+          "命中 #1  ·  IoU 0.81",
+          "命中 #1  ·  IoU 0.81"
+        ]
+      },
+      {
+        "frame": 72,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.69",
+          "命中 #1  ·  IoU 0.69",
+          "命中 #1  ·  IoU 0.69"
+        ]
+      },
+      {
+        "frame": 73,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "近框 #1  ·  IoU 0.39",
+          "近框 #1  ·  IoU 0.39",
+          "近框 #1  ·  IoU 0.39"
+        ]
+      },
+      {
+        "frame": 74,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 75,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 76,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 77,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配",
+          "无 CLEAR 匹配"
+        ]
+      },
+      {
+        "frame": 78,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.52",
+          "命中 #1  ·  IoU 0.52",
+          "命中 #1  ·  IoU 0.52"
+        ]
+      },
+      {
+        "frame": 79,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.60",
+          "命中 #1  ·  IoU 0.60",
+          "命中 #1  ·  IoU 0.60"
+        ]
+      },
+      {
+        "frame": 80,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.65",
+          "命中 #1  ·  IoU 0.65",
+          "命中 #1  ·  IoU 0.65"
+        ]
+      },
+      {
+        "frame": 81,
+        "anchor_source": "official_gt",
+        "panels": [
+          "GT #1  ·  plane",
+          "命中 #1  ·  IoU 0.62",
+          "命中 #1  ·  IoU 0.62",
+          "命中 #1  ·  IoU 0.62"
+        ]
+      }
+    ]
+  }
+]
