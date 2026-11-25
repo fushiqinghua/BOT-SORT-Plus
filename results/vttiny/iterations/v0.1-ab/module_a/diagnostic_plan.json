@@ -1,0 +1,10 @@
+{
+  "base": "${V01_RESULTS}/full30",
+  "controls": {
+    "shadow_A": "candidate pool and adapter enabled, evidence threshold 1e6 blocks weak promotion",
+    "window_A": "same 3/5 window; remove evidence requirement only",
+    "native_confirmation_A": "accepted weak birth follows native unconfirmed state, requiring high-score reconfirmation; later matching can change",
+    "audit_A": "log lost pool and duplicate removal at weak births without changing decisions"
+  },
+  "frozen_before_replay": true
+}

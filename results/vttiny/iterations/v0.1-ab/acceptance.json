@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "base_commit": "70f28b112ba34014b851152fbeedf007dd7cbb52",
+  "integration_commit": "3698607beb10898c00484adc8c1dcb67dd180794",
+  "branch": "integration/abc-v0.1.0",
+  "repo": "${REPO_ROOT}",
+  "anchors": 38,
+  "patch_files": 47,
+  "test_suite": "138 passed, 0 skipped",
+  "features": "${BOTSORT_PLUS_FEATURES}",
+  "counts": {
+    "detections": 133386,
+    "eligible_score_gt_0_1": 113447,
+    "high_score_gt_0_5": 67172,
+    "rgb_valid": 113447,
+    "rgb_zero_outputs": 0
+  },
+  "preflight": {
+    "00_baseline": {
+      "status": "READY",
+      "sequences": 30,
+      "frames": 12590,
+      "coverage": {
+        "rgb_valid": 113447,
+        "rgb_quality_for_memory": 86334
+      }
+    },
+    "06_AB": {
+      "status": "READY",
+      "sequences": 30,
+      "frames": 12590,
+      "coverage": {
+        "rgb_valid": 113447,
+        "rgb_quality_for_memory": 86334
+      }
+    },
+    "10_C_rgb_quality": {
+      "status": "READY",
+      "sequences": 30,
+      "frames": 12590,
+      "coverage": {
+        "rgb_valid": 113447,
+        "rgb_quality_for_memory": 86334
+      }
+    }
+  },
+  "smoke_sequence": "DJI_0030_2",
+  "smoke_eval": "${V01_STAGE}/smoke_DJI_0030_2/metrics",
+  "smoke_eval_status": "COMPLETE",
+  "smoke": {
+    "original": {
+      "tracker": "botsort_reid",
+      "sequence": "DJI_0030_2",
+      "HOTA": 27.084866382358953,
+      "DetA": 20.8701437659717,
+      "AssA": 35.70397086341672,
+      "IDF1": 32.95438980961512,
+      "MOTA": 8.202785030461271,
+      "FP": 1163,
+      "FN": 3054,
+      "IDSW": 2
+    },
+    "fresh": {
+      "baseline": {
+        "tracker": "baseline",
+        "sequence": "DJI_0030_2",
+        "HOTA": 27.084866382358953,
+        "DetA": 20.8701437659717,
+        "AssA": 35.70397086341672,
+        "IDF1": 32.95438980961512,
+        "MOTA": 8.202785030461271,
+        "FP": 1163,
+        "FN": 3054,
+        "IDSW": 2
+      },
+      "AB": {
+        "tracker": "AB",
+        "sequence": "DJI_0030_2",
+        "HOTA": 36.97224194633282,
+        "DetA": 30.051185085704503,
+        "AssA": 46.253747090763866,
+        "IDF1": 45.37521815008726,
+        "MOTA": 8.224543080939947,
+        "FP": 1806,
+        "FN": 2403,
+        "IDSW": 9
+      },
+      "C_rgb_quality": {
+        "tracker": "C_rgb_quality",
+        "sequence": "DJI_0030_2",
+        "HOTA": 27.084866382358953,
+        "DetA": 20.8701437659717,
+        "AssA": 35.70397086341672,
+        "IDF1": 32.95438980961512,
+        "MOTA": 8.202785030461271,
+        "FP": 1163,
+        "FN": 3054,
+        "IDSW": 2
+      }
+    },
+    "byte_equal": true,
+    "numeric_equal": true
+  },
+  "full_C": "Thermal ReID TorchScript, encoder preprocessing and spatial mapping are still required; full RGB-T C not evaluated."
+}

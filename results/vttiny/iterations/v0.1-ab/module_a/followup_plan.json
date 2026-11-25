@@ -1,0 +1,5 @@
+{
+  "phase": "post hoc targeted controls after first four replays",
+  "empty_pool_A": "full A adapter; candidate update returns no candidates or suppression events",
+  "velocity_A": "copy GMC-adjusted candidate center velocity to the native XYWH Kalman vx,vy at weak birth; all other decisions use A unchanged"
+}

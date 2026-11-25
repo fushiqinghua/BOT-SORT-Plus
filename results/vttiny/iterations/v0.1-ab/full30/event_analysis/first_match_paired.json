@@ -1,0 +1,29 @@
+{
+  "A": {
+    "common_gt": 509,
+    "earlier": 171,
+    "later": 1,
+    "equal": 337,
+    "total_delay_difference": -6370,
+    "newly_matched": 102,
+    "lost_gt": 0
+  },
+  "B": {
+    "common_gt": 508,
+    "earlier": 17,
+    "later": 21,
+    "equal": 470,
+    "total_delay_difference": -262,
+    "newly_matched": 10,
+    "lost_gt": 1
+  },
+  "AB": {
+    "common_gt": 509,
+    "earlier": 170,
+    "later": 13,
+    "equal": 326,
+    "total_delay_difference": -6310,
+    "newly_matched": 102,
+    "lost_gt": 0
+  }
+}

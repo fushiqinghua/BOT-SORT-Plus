@@ -1,0 +1,158 @@
+{
+  "schema": "botsort_plus_run_v1",
+  "status": "COMPLETE",
+  "name": "native_lost_pool_check",
+  "config": {
+    "name": "native_lost_pool_check",
+    "birth": {
+      "enabled": true,
+      "window": 5,
+      "min_hits": 3,
+      "max_misses": 2,
+      "decay": 0.8,
+      "score_weight": 0.5,
+      "evidence_threshold": 1.2,
+      "miss_penalty": 0.4,
+      "link_max_cost": 0.85,
+      "ambiguity_margin": 0.08,
+      "duplicate_iou": 0.7,
+      "max_candidates": 256,
+      "max_age": 20,
+      "score_low": 0.1,
+      "score_high": 0.5,
+      "mode": "adaptive",
+      "velocity_alpha": 0.5
+    },
+    "recovery": {
+      "enabled": false,
+      "min_hits": 3,
+      "window": 5,
+      "min_age": 2,
+      "max_age": 30,
+      "max_cost": 0.65,
+      "ambiguity_margin": 0.1,
+      "geometry_weight": 0.65,
+      "appearance_weight": 0.25,
+      "time_weight": 0.1,
+      "appearance_max_cost": 0.65,
+      "require_appearance": false,
+      "reservation_frames": 5
+    },
+    "appearance": {
+      "enabled": false,
+      "weighting": "quality",
+      "min_observation_quality": 0.15,
+      "min_update_quality": 0.35,
+      "ema": 0.9,
+      "weight_rgb": 1.0,
+      "weight_thermal": 1.0,
+      "rgb_distance_scale": 1.0,
+      "thermal_distance_scale": 1.0,
+      "max_distance": 0.6
+    },
+    "geometry": {
+      "pixel_floor": 4.0,
+      "center_gate_scale": 2.0,
+      "max_center_pixels": 48.0,
+      "max_scale_ratio": 2.5,
+      "uncertainty_sigma": 2.0,
+      "tiny_size": 16.0,
+      "size_weight": 0.1
+    },
+    "native_overrides": {}
+  },
+  "native_config": {
+    "det_thresh": 0.5,
+    "track_high_thresh": 0.5,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.6,
+    "match_thresh": 0.8,
+    "track_buffer": 60,
+    "frame_rate": 15,
+    "with_reid": true,
+    "cmc_method": "sof",
+    "proximity_thresh": 0.5,
+    "appearance_thresh": 0.4,
+    "fuse_first_associate": false
+  },
+  "sequences": {
+    "DJI_0061_2": 240,
+    "DJI_0073_3": 360
+  },
+  "subset": true,
+  "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+  "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+  "source_protocol_sha256": "6f0fdff3b198315f8aac72972fcf5117c53b917e84f6c7b5f9814b9012ef2ff2",
+  "detection_fingerprints": {
+    "DJI_0061_2": "d488450df7bfa09af24b1a9f122a746a74b286a2228a190ca7002bf99aa9a7dc",
+    "DJI_0073_3": "36f0f5e3c3c8275f5212a68806dec8df44c0fb5ebe835b659763ad4db05b1a41"
+  },
+  "encoder_contracts": {
+    "rgb": {
+      "sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+      "weights_name": "clip_veri.pt",
+      "encoder": "baseline CLIP-ReID ViT-B/16 VeRi, supplied fine-tuned checkpoint",
+      "input_hw": [
+        256,
+        256
+      ],
+      "output_dim": 1280,
+      "precision": "float32",
+      "verified_visual_state_keys": 162,
+      "crop_source": "RGB BGR-to-RGB",
+      "mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "std": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "feature_hashes": {
+    "DJI_0061_2": {
+      "features": "47fbfba54a1b6308e1a3f75b90d0076f4e5f765e614a3cb89ad5bfcd12883a43",
+      "metadata": "094e71c1a1820f72f9bc8bed4ebe459ed7f5a4b946c3324648a0e5588a8ae985"
+    },
+    "DJI_0073_3": {
+      "features": "c3754d5c921f20498acc51f101e719d52a0eecf7268f888eaf5d0d457dfbb20e",
+      "metadata": "421926af55ccf832d8197c72f86be84f782cce511c2c2e606a8d6d895148ec7d"
+    }
+  },
+  "input_roots": {
+    "baseline": "${REPO_ROOT}/results/vttiny/yolo11m_rgb_rgbt/rgbt",
+    "images": "${VTTINY_FRAME_ROOT}",
+    "features": "${BOTSORT_PLUS_FEATURES}"
+  },
+  "feature_coverage": {
+    "rgb_valid": 32209,
+    "rgb_quality_for_memory": 27826
+  },
+  "missing_count": 0,
+  "missing_examples": [],
+  "evaluation_context": "Historical official test was previously used for checkpoint/gate selection; treat new runs here as development experiments, not an unseen test.",
+  "causal": true,
+  "backfilled_frames": 0,
+  "interpolation": false,
+  "started_utc": "2026-11-24T15:50:22Z",
+  "runtime": {
+    "python": "3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC 11.3.0]",
+    "numpy": "2.4.6",
+    "torch": "2.8.0+cu128",
+    "opencv": "5.0.0"
+  },
+  "output_prediction_hashes": {
+    "DJI_0061_2": "40ef20f3a87ded50198da251286276f21b27126c8e11f23c6dcd07c0100863d6",
+    "DJI_0073_3": "fae8079dd77780aa232ae2bce8991509b0fb5b0e5483458b8bac07133b79a48e"
+  },
+  "boxmot_source_hashes": {
+    "trackers/botsort/botsort.py": "d8b69ec680b59e915b079994756c27b4bdf81ecd214a2866b97b31122fcdc93d",
+    "trackers/botsort/botsort_track.py": "bcd42eaa3e9d06716fa71749b8983bf7c16d2a96b5829bb97f5c549e0f0cb0bc",
+    "trackers/basetracker.py": "f5eb9838128d999944c444733b18948ae895c3682977eee1e4eeb07046ca04a1",
+    "motion/kalman_filters/aabb/xywh_kf.py": "a12ea28981ac7044bd1c7a60d3701b54754bc88fbd7770eda3fecd4a02a735a2",
+    "utils/matching.py": "c56c0d03e78dbe10e17761b2e95fd4f9064f1cd864d47ac0e45243a907d42096"
+  }
+}

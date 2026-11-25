@@ -1,0 +1,7 @@
+{
+  "name": "shadow_A",
+  "birth": {
+    "enabled": true,
+    "evidence_threshold": 1000000
+  }
+}

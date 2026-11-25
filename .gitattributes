@@ -5,3 +5,6 @@ results/**/source/** -whitespace
 *.png binary
 results/**/trackers/** -text
 results/**/selected_trackers/**/data/** -text
+results/vttiny/iterations/**/*.csv -text whitespace=cr-at-eol
+results/vttiny/iterations/**/object_summary.txt -text whitespace=cr-at-eol
+results/vttiny/iterations/**/source_snapshot/** -whitespace

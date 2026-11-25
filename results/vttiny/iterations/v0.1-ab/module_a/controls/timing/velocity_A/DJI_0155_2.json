@@ -1,0 +1,22 @@
+{
+  "sequence": "DJI_0155_2",
+  "frames": 410,
+  "output_rows": 131,
+  "association_and_gmc_seconds": 0.5646611368283629,
+  "replay_wall_seconds": 0.898712738067843,
+  "feature_extraction_seconds": 1.1148877723608166,
+  "feature_metadata_sha256": "35175c05333d8ed68f6477a25453eca234af9fb14e12263d21a87e0a861d3059",
+  "prediction_sha256": "92433e73ee065bc9399da6e8dddefe556f56120d7daf6c4a50a0e29a8e215f78",
+  "event_counts": {
+    "frame": 410,
+    "candidate_seed": 73,
+    "native_birth": 5,
+    "match": 104,
+    "candidate_miss": 139,
+    "candidate_hit": 87,
+    "weak_birth": 27,
+    "candidate_removed": 40,
+    "candidate_seed_deferred": 16
+  },
+  "timing_note": "Replay includes cached features; this is not detector+ReID end-to-end FPS."
+}

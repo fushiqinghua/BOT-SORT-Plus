@@ -1,0 +1,104 @@
+{
+  "input_keys_identical": [
+    "detector_sha256",
+    "rgb_encoder_sha256",
+    "source_protocol_sha256",
+    "sequences",
+    "detection_fingerprints",
+    "feature_hashes",
+    "native_config",
+    "boxmot_source_hashes"
+  ],
+  "sequences": 30,
+  "frames": 12590,
+  "prediction_files_sha256_verified": 240,
+  "weak_birth_and_native_veto": {
+    "baseline": {
+      "weak_birth": 0,
+      "suppressed_native_birth": 0
+    },
+    "A": {
+      "weak_birth": 3393,
+      "suppressed_native_birth": 259
+    },
+    "audit_A": {
+      "weak_birth": 3393,
+      "suppressed_native_birth": 259
+    },
+    "empty_pool_A": {
+      "weak_birth": 0,
+      "suppressed_native_birth": 0
+    },
+    "shadow_A": {
+      "weak_birth": 0,
+      "suppressed_native_birth": 261
+    },
+    "window_A": {
+      "weak_birth": 4185,
+      "suppressed_native_birth": 260
+    },
+    "native_confirmation_A": {
+      "weak_birth": 6711,
+      "suppressed_native_birth": 260
+    },
+    "velocity_A": {
+      "weak_birth": 3361,
+      "suppressed_native_birth": 263
+    }
+  },
+  "nonidentical_prediction_files": {
+    "audit_A": [],
+    "empty_pool_A": [
+      "DJI_0061_2",
+      "DJI_0073_3"
+    ],
+    "shadow_A": [
+      "DJI_0032_3",
+      "DJI_0061_2",
+      "DJI_0073_3",
+      "DJI_0141_2",
+      "DJI_0169_3",
+      "DJI_0181_3",
+      "DJI_0225_1",
+      "DJI_0257_2",
+      "DJI_0283_1",
+      "DJI_0339_2"
+    ]
+  },
+  "native_lost_rule_subset": [
+    "DJI_0061_2",
+    "DJI_0073_3"
+  ],
+  "native_lost_rule_subset_still_different": [],
+  "net_fp_by_max_gt_iou": {
+    "under_10": 7155,
+    "10_30": 1620,
+    "30_50": 3672,
+    "ge_50": -200
+  },
+  "weak_birth_switches": 840,
+  "previous_id_still_lost": 671,
+  "prior_lost_iou_50_to_85": 276,
+  "prior_lost_iou_under_50": 395,
+  "switches_on_gt_never_seen_by_baseline": 201,
+  "same_baseline_id_at_both_observations": 134,
+  "gt_with_more_switches": 300,
+  "no_output": 463,
+  "no_output_all_removed_by_duplicate_check": true,
+  "no_output_all_last_window_hits_same_gt": 165,
+  "never_near_ids": 936,
+  "never_near_output_frames": 8306,
+  "confirmation_window_entirely_iou_below_10": 903,
+  "missing_smooth_rgb_at_weak_birth": 1242,
+  "sustained_fp_case": {
+    "sequence": "DJI_0327_3",
+    "A_id": 212,
+    "frames": [
+      111,
+      218
+    ],
+    "count": 108,
+    "max_overlap_GT": 0.0,
+    "max_overlap_baseline": 0.0
+  }
+}

@@ -1,0 +1,1815 @@
+{
+  "counts": {
+    "outputs": {
+      "baseline|TP": 60127,
+      "native|TP": 41022,
+      "weak|TP": 26169,
+      "weak|FP": 22253,
+      "baseline|FP": 13397,
+      "native|FP": 3391
+    },
+    "paired_gt": {
+      "both": 60044,
+      "neither": 112498,
+      "gained": 7147,
+      "lost": 83
+    },
+    "paired_source": {
+      "both|native": 40981,
+      "gained|weak": 7106,
+      "both|weak": 19063,
+      "gained|native": 41
+    },
+    "switch_pair": {
+      "base_no|A_no": 178064,
+      "base_no|A_yes": 1286,
+      "base_yes|A_yes": 263,
+      "base_yes|A_no": 159
+    },
+    "fp_geometry": {
+      "weak|30_50": 8355,
+      "weak|10_30": 3684,
+      "weak|under_10": 9969,
+      "baseline|30_50": 6890,
+      "native|30_50": 2207,
+      "baseline|10_30": 2464,
+      "native|10_30": 400,
+      "baseline|under_10": 3547,
+      "native|under_10": 733,
+      "weak|ge_50": 245,
+      "baseline|ge_50": 496,
+      "native|ge_50": 51
+    },
+    "fp_raw_vs_track": {
+      "weak|30_50|30_50": 7894,
+      "weak|ge_50|30_50": 327,
+      "weak|10_30|10_30": 3565,
+      "weak|under_10|under_10": 9948,
+      "native|30_50|30_50": 2006,
+      "weak|under_10|10_30": 29,
+      "native|ge_50|30_50": 170,
+      "native|10_30|10_30": 386,
+      "native|under_10|under_10": 732,
+      "native|10_30|under_10": 1,
+      "weak|10_30|30_50": 134,
+      "weak|30_50|10_30": 90,
+      "weak|10_30|under_10": 21,
+      "native|10_30|30_50": 31,
+      "native|30_50|10_30": 13,
+      "weak|ge_50|ge_50": 234,
+      "native|under_10|10_30": 1,
+      "native|ge_50|ge_50": 49,
+      "weak|30_50|ge_50": 11,
+      "native|30_50|ge_50": 2
+    },
+    "fp_stage": {
+      "weak|high": 7526,
+      "weak|low": 12845,
+      "weak|weak_birth": 1882,
+      "native|high": 2373,
+      "native|low": 922,
+      "native|unconfirmed": 78,
+      "native|native_birth": 18
+    },
+    "switch_origin": {
+      "weak->weak": 1146,
+      "weak->native": 103,
+      "native->native": 129,
+      "native->weak": 171
+    }
+  },
+  "promotion_support": {
+    "same_gt_all": {
+      "matched": 759,
+      "no_output": 165,
+      "other_unmatched": 15
+    },
+    "no_aligned_hit": {
+      "other_unmatched": 464,
+      "never_near": 929,
+      "no_output": 272,
+      "matched": 204
+    },
+    "mixed": {
+      "other_unmatched": 122,
+      "matched": 430,
+      "no_output": 26,
+      "never_near": 7
+    }
+  },
+  "evidence": {
+    "ever_matched": {
+      "evidence": {
+        "n": 1393,
+        "p25": 1.376123537116829,
+        "median": 1.5407377173539043,
+        "p75": 1.7486458820967135
+      },
+      "mean_score": {
+        "n": 1393,
+        "p25": 0.19065319498380026,
+        "median": 0.2524557212988536,
+        "p75": 0.31763460487127304
+      },
+      "mean_geometry": {
+        "n": 1393,
+        "p25": 0.04511180686390567,
+        "median": 0.0757800249794305,
+        "p75": 0.1619168752441343
+      },
+      "output_frames": {
+        "n": 1393,
+        "p25": 2.0,
+        "median": 7.0,
+        "p75": 20.0
+      },
+      "3_hits_in_3_frames": 1063
+    },
+    "never_near": {
+      "evidence": {
+        "n": 936,
+        "p25": 1.2940067859653392,
+        "median": 1.4015046753927443,
+        "p75": 1.5470397334809312
+      },
+      "mean_score": {
+        "n": 936,
+        "p25": 0.15138252265751362,
+        "median": 0.18684873264282942,
+        "p75": 0.2535385961333911
+      },
+      "mean_geometry": {
+        "n": 936,
+        "p25": 0.03929457045067862,
+        "median": 0.06440000680616054,
+        "p75": 0.13016928330352895
+      },
+      "output_frames": {
+        "n": 936,
+        "p25": 1.0,
+        "median": 3.0,
+        "p75": 7.0
+      },
+      "3_hits_in_3_frames": 620
+    },
+    "all": {
+      "evidence": {
+        "n": 3393,
+        "p25": 1.33176550957157,
+        "median": 1.4655120690470356,
+        "p75": 1.6691591748545358
+      },
+      "mean_score": {
+        "n": 3393,
+        "p25": 0.16716957092285156,
+        "median": 0.22334153453509012,
+        "p75": 0.2931446184714635
+      },
+      "mean_geometry": {
+        "n": 3393,
+        "p25": 0.03630720917056717,
+        "median": 0.06518277065697536,
+        "p75": 0.13575169236632265
+      },
+      "output_frames": {
+        "n": 3393,
+        "p25": 1.0,
+        "median": 3.0,
+        "p75": 10.0
+      },
+      "3_hits_in_3_frames": 2504
+    }
+  },
+  "sequence": {
+    "DJI_0028_3": {
+      "outputs": {
+        "baseline|TP": 3947,
+        "native|TP": 3055,
+        "weak|TP": 1072,
+        "weak|FP": 673,
+        "baseline|FP": 447,
+        "native|FP": 119
+      },
+      "paired_gt": {
+        "both": 3946,
+        "neither": 933,
+        "gained": 181,
+        "lost": 1
+      },
+      "paired_source": {
+        "both|native": 3055,
+        "gained|weak": 181,
+        "both|weak": 891
+      },
+      "switch_pair": {
+        "base_no|A_no": 5011,
+        "base_no|A_yes": 15,
+        "base_yes|A_yes": 27,
+        "base_yes|A_no": 8
+      },
+      "fp_geometry": {
+        "weak|30_50": 373,
+        "weak|10_30": 94,
+        "weak|under_10": 206,
+        "baseline|30_50": 343,
+        "native|30_50": 89,
+        "baseline|10_30": 67,
+        "native|10_30": 12,
+        "baseline|under_10": 37,
+        "native|under_10": 18
+      },
+      "fp_raw_vs_track": {
+        "weak|30_50|30_50": 364,
+        "weak|ge_50|30_50": 5,
+        "weak|10_30|10_30": 88,
+        "weak|under_10|under_10": 205,
+        "native|30_50|30_50": 81,
+        "weak|under_10|10_30": 2,
+        "native|ge_50|30_50": 7,
+        "native|10_30|10_30": 12,
+        "native|under_10|under_10": 17,
+        "native|10_30|under_10": 1,
+        "weak|10_30|30_50": 4,
+        "weak|30_50|10_30": 4,
+        "weak|10_30|under_10": 1,
+        "native|10_30|30_50": 1
+      },
+      "fp_stage": {
+        "weak|high": 247,
+        "weak|low": 367,
+        "weak|weak_birth": 59,
+        "native|high": 61,
+        "native|low": 53,
+        "native|unconfirmed": 5
+      },
+      "switch_origin": {
+        "weak->weak": 12,
+        "weak->native": 3,
+        "native->native": 21,
+        "native->weak": 6
+      }
+    },
+    "DJI_0030_2": {
+      "outputs": {
+        "baseline|TP": 1542,
+        "baseline|FP": 1163,
+        "native|TP": 1199,
+        "native|FP": 304,
+        "weak|FP": 1460,
+        "weak|TP": 974
+      },
+      "fp_geometry": {
+        "baseline|under_10": 463,
+        "baseline|10_30": 541,
+        "native|under_10": 99,
+        "native|10_30": 165,
+        "weak|10_30": 543,
+        "weak|30_50": 470,
+        "baseline|30_50": 159,
+        "native|30_50": 40,
+        "weak|under_10": 442,
+        "weak|ge_50": 5
+      },
+      "fp_raw_vs_track": {
+        "native|under_10|under_10": 99,
+        "native|10_30|10_30": 161,
+        "weak|10_30|10_30": 526,
+        "weak|30_50|30_50": 453,
+        "native|30_50|30_50": 34,
+        "weak|under_10|under_10": 432,
+        "weak|ge_50|30_50": 14,
+        "weak|10_30|under_10": 10,
+        "native|ge_50|30_50": 4,
+        "weak|under_10|10_30": 13,
+        "native|30_50|10_30": 4,
+        "native|10_30|30_50": 2,
+        "weak|ge_50|ge_50": 5,
+        "weak|10_30|30_50": 3,
+        "weak|30_50|10_30": 4
+      },
+      "fp_stage": {
+        "native|native_birth": 2,
+        "native|low": 192,
+        "native|high": 110,
+        "weak|weak_birth": 41,
+        "weak|low": 772,
+        "weak|high": 647
+      },
+      "paired_gt": {
+        "both": 1540,
+        "neither": 2421,
+        "gained": 633,
+        "lost": 2
+      },
+      "paired_source": {
+        "both|native": 1199,
+        "gained|weak": 633,
+        "both|weak": 341
+      },
+      "switch_pair": {
+        "base_no|A_no": 4564,
+        "base_no|A_yes": 30,
+        "base_yes|A_yes": 2
+      },
+      "switch_origin": {
+        "weak->weak": 29,
+        "native->native": 2,
+        "native->weak": 1
+      }
+    },
+    "DJI_0032_3": {
+      "outputs": {
+        "baseline|TP": 2882,
+        "native|TP": 2602,
+        "weak|FP": 346,
+        "weak|TP": 316,
+        "baseline|FP": 166,
+        "native|FP": 52
+      },
+      "paired_gt": {
+        "both": 2881,
+        "neither": 1769,
+        "gained": 37,
+        "lost": 1
+      },
+      "paired_source": {
+        "both|native": 2602,
+        "gained|weak": 37,
+        "both|weak": 279
+      },
+      "switch_pair": {
+        "base_no|A_no": 4665,
+        "base_no|A_yes": 13,
+        "base_yes|A_yes": 9,
+        "base_yes|A_no": 1
+      },
+      "fp_geometry": {
+        "weak|under_10": 240,
+        "weak|10_30": 57,
+        "baseline|under_10": 93,
+        "baseline|30_50": 32,
+        "native|30_50": 19,
+        "native|under_10": 12,
+        "weak|30_50": 42,
+        "weak|ge_50": 7,
+        "baseline|10_30": 41,
+        "native|10_30": 21
+      },
+      "fp_raw_vs_track": {
+        "weak|under_10|under_10": 240,
+        "weak|10_30|10_30": 56,
+        "native|30_50|30_50": 16,
+        "native|under_10|under_10": 12,
+        "weak|30_50|30_50": 36,
+        "weak|ge_50|ge_50": 7,
+        "weak|ge_50|30_50": 2,
+        "weak|10_30|30_50": 4,
+        "native|10_30|10_30": 20,
+        "native|ge_50|30_50": 2,
+        "native|under_10|10_30": 1,
+        "native|10_30|30_50": 1,
+        "weak|30_50|10_30": 1
+      },
+      "fp_stage": {
+        "weak|weak_birth": 72,
+        "weak|low": 165,
+        "weak|high": 109,
+        "native|high": 26,
+        "native|unconfirmed": 6,
+        "native|low": 20
+      },
+      "switch_origin": {
+        "native->weak": 6,
+        "weak->native": 6,
+        "weak->weak": 3,
+        "native->native": 7
+      }
+    },
+    "DJI_0049_2": {
+      "outputs": {
+        "baseline|TP": 62,
+        "native|TP": 5,
+        "weak|TP": 97,
+        "weak|FP": 91,
+        "baseline|FP": 50
+      },
+      "paired_gt": {
+        "neither": 470,
+        "both": 62,
+        "gained": 40
+      },
+      "switch_pair": {
+        "base_no|A_no": 567,
+        "base_no|A_yes": 5
+      },
+      "paired_source": {
+        "both|native": 5,
+        "gained|weak": 40,
+        "both|weak": 57
+      },
+      "fp_geometry": {
+        "weak|30_50": 74,
+        "weak|under_10": 15,
+        "weak|10_30": 2,
+        "baseline|30_50": 50
+      },
+      "fp_raw_vs_track": {
+        "weak|30_50|30_50": 73,
+        "weak|under_10|under_10": 15,
+        "weak|30_50|10_30": 2,
+        "weak|10_30|30_50": 1
+      },
+      "fp_stage": {
+        "weak|low": 55,
+        "weak|weak_birth": 6,
+        "weak|high": 30
+      },
+      "switch_origin": {
+        "native->weak": 1,
+        "weak->weak": 4
+      }
+    },
+    "DJI_0051_2": {
+      "outputs": {
+        "baseline|TP": 768,
+        "native|TP": 699,
+        "weak|TP": 115,
+        "weak|FP": 4
+      },
+      "paired_gt": {
+        "both": 766,
+        "neither": 304,
+        "gained": 48,
+        "lost": 2
+      },
+      "paired_source": {
+        "both|native": 699,
+        "gained|weak": 48,
+        "both|weak": 67
+      },
+      "switch_pair": {
+        "base_no|A_no": 1092,
+        "base_yes|A_yes": 7,
+        "base_no|A_yes": 16,
+        "base_yes|A_no": 5
+      },
+      "switch_origin": {
+        "native->native": 2,
+        "native->weak": 6,
+        "weak->weak": 10,
+        "weak->native": 5
+      },
+      "fp_geometry": {
+        "weak|30_50": 2,
+        "weak|under_10": 2
+      },
+      "fp_raw_vs_track": {
+        "weak|30_50|30_50": 1,
+        "weak|ge_50|30_50": 1,
+        "weak|under_10|under_10": 2
+      },
+      "fp_stage": {
+        "weak|weak_birth": 2,
+        "weak|high": 1,
+        "weak|low": 1
+      }
+    },
+    "DJI_0061_2": {
+      "outputs": {
+        "baseline|TP": 8052,
+        "baseline|FP": 1871,
+        "native|TP": 4494,
+        "native|FP": 308,
+        "weak|FP": 3393,
+        "weak|TP": 4898
+      },
+      "fp_geometry": {
+        "baseline|30_50": 1551,
+        "baseline|ge_50": 47,
+        "native|30_50": 252,
+        "native|ge_50": 28,
+        "baseline|10_30": 223,
+        "native|10_30": 21,
+        "weak|30_50": 2330,
+        "weak|ge_50": 63,
+        "weak|10_30": 643,
+        "baseline|under_10": 50,
+        "native|under_10": 7,
+        "weak|under_10": 357
+      },
+      "fp_raw_vs_track": {
+        "native|30_50|30_50": 227,
+        "native|ge_50|ge_50": 28,
+        "native|10_30|10_30": 18,
+        "weak|30_50|30_50": 2181,
+        "weak|ge_50|ge_50": 62,
+        "weak|10_30|10_30": 612,
+        "native|under_10|under_10": 7,
+        "native|ge_50|30_50": 20,
+        "weak|under_10|under_10": 355,
+        "weak|ge_50|30_50": 101,
+        "native|10_30|30_50": 5,
+        "weak|10_30|30_50": 48,
+        "native|30_50|10_30": 3,
+        "weak|30_50|10_30": 28,
+        "weak|30_50|ge_50": 1,
+        "weak|10_30|under_10": 2,
+        "weak|under_10|10_30": 3
+      },
+      "fp_stage": {
+        "native|native_birth": 4,
+        "native|high": 224,
+        "native|low": 68,
+        "native|unconfirmed": 12,
+        "weak|weak_birth": 414,
+        "weak|high": 1346,
+        "weak|low": 1633
+      },
+      "paired_gt": {
+        "both": 8010,
+        "neither": 16144,
+        "gained": 1382,
+        "lost": 42
+      },
+      "paired_source": {
+        "both|native": 4468,
+        "gained|weak": 1356,
+        "both|weak": 3542,
+        "gained|native": 26
+      },
+      "switch_pair": {
+        "base_no|A_no": 24965,
+        "base_yes|A_yes": 87,
+        "base_no|A_yes": 455,
+        "base_yes|A_no": 71
+      },
+      "switch_origin": {
+        "native->native": 27,
+        "weak->weak": 429,
+        "native->weak": 55,
+        "weak->native": 31
+      }
+    },
+    "DJI_0073_3": {
+      "outputs": {
+        "baseline|TP": 11650,
+        "baseline|FP": 1436,
+        "native|TP": 9260,
+        "native|FP": 412,
+        "weak|FP": 1391,
+        "weak|TP": 2682
+      },
+      "fp_geometry": {
+        "baseline|30_50": 577,
+        "native|30_50": 389,
+        "weak|under_10": 830,
+        "weak|30_50": 362,
+        "baseline|ge_50": 372,
+        "weak|10_30": 137,
+        "baseline|10_30": 93,
+        "native|ge_50": 11,
+        "baseline|under_10": 394,
+        "weak|ge_50": 62,
+        "native|10_30": 4,
+        "native|under_10": 8
+      },
+      "fp_raw_vs_track": {
+        "native|30_50|30_50": 356,
+        "weak|under_10|under_10": 830,
+        "weak|30_50|30_50": 338,
+        "native|ge_50|30_50": 32,
+        "weak|10_30|10_30": 135,
+        "weak|30_50|10_30": 2,
+        "weak|10_30|30_50": 4,
+        "native|ge_50|ge_50": 11,
+        "weak|ge_50|30_50": 20,
+        "weak|ge_50|ge_50": 59,
+        "weak|30_50|ge_50": 3,
+        "native|10_30|10_30": 4,
+        "native|under_10|under_10": 8,
+        "native|10_30|30_50": 1
+      },
+      "fp_stage": {
+        "native|native_birth": 1,
+        "native|high": 334,
+        "native|unconfirmed": 4,
+        "weak|weak_birth": 123,
+        "weak|low": 837,
+        "weak|high": 431,
+        "native|low": 73
+      },
+      "paired_gt": {
+        "neither": 7245,
+        "both": 11647,
+        "gained": 295,
+        "lost": 3
+      },
+      "switch_pair": {
+        "base_no|A_no": 19113,
+        "base_no|A_yes": 60,
+        "base_yes|A_yes": 8,
+        "base_yes|A_no": 9
+      },
+      "paired_source": {
+        "both|native": 9251,
+        "gained|weak": 286,
+        "both|weak": 2396,
+        "gained|native": 9
+      },
+      "switch_origin": {
+        "weak->weak": 39,
+        "native->native": 5,
+        "native->weak": 16,
+        "weak->native": 8
+      }
+    },
+    "DJI_0109_1": {
+      "outputs": {
+        "baseline|TP": 67,
+        "native|TP": 48,
+        "weak|FP": 75,
+        "weak|TP": 23
+      },
+      "paired_gt": {
+        "both": 67,
+        "neither": 19,
+        "gained": 4
+      },
+      "paired_source": {
+        "both|native": 48,
+        "gained|weak": 4,
+        "both|weak": 19
+      },
+      "switch_pair": {
+        "base_no|A_no": 70,
+        "base_no|A_yes": 7,
+        "base_yes|A_no": 1,
+        "base_yes|A_yes": 12
+      },
+      "fp_geometry": {
+        "weak|under_10": 75
+      },
+      "fp_raw_vs_track": {
+        "weak|under_10|under_10": 75
+      },
+      "fp_stage": {
+        "weak|weak_birth": 21,
+        "weak|low": 52,
+        "weak|high": 2
+      },
+      "switch_origin": {
+        "native->weak": 9,
+        "weak->native": 8,
+        "weak->weak": 2
+      }
+    },
+    "DJI_0119_2": {
+      "paired_gt": {
+        "neither": 182,
+        "gained": 11,
+        "both": 167
+      },
+      "switch_pair": {
+        "base_no|A_no": 360
+      },
+      "outputs": {
+        "weak|TP": 178,
+        "baseline|TP": 167
+      },
+      "paired_source": {
+        "gained|weak": 11,
+        "both|weak": 167
+      },
+      "switch_origin": {}
+    },
+    "DJI_0129_2": {
+      "paired_gt": {
+        "neither": 41,
+        "both": 540,
+        "gained": 9
+      },
+      "switch_pair": {
+        "base_no|A_no": 584,
+        "base_no|A_yes": 6
+      },
+      "outputs": {
+        "baseline|TP": 540,
+        "native|TP": 57,
+        "baseline|FP": 7,
+        "native|FP": 7,
+        "weak|TP": 492,
+        "weak|FP": 13
+      },
+      "paired_source": {
+        "both|native": 57,
+        "gained|weak": 9,
+        "both|weak": 483
+      },
+      "fp_geometry": {
+        "baseline|30_50": 7,
+        "native|30_50": 6,
+        "native|ge_50": 1,
+        "weak|30_50": 1,
+        "weak|under_10": 11,
+        "weak|10_30": 1
+      },
+      "fp_raw_vs_track": {
+        "native|30_50|30_50": 5,
+        "native|10_30|30_50": 1,
+        "native|ge_50|ge_50": 1,
+        "weak|30_50|30_50": 1,
+        "weak|under_10|under_10": 11,
+        "weak|10_30|10_30": 1
+      },
+      "fp_stage": {
+        "native|high": 4,
+        "native|low": 3,
+        "weak|high": 1,
+        "weak|weak_birth": 4,
+        "weak|low": 8
+      },
+      "switch_origin": {
+        "native->weak": 2,
+        "weak->native": 1,
+        "weak->weak": 3
+      }
+    },
+    "DJI_0141_2": {
+      "outputs": {
+        "baseline|TP": 6140,
+        "baseline|FP": 1278,
+        "native|TP": 4509,
+        "native|FP": 440,
+        "weak|TP": 2445,
+        "weak|FP": 2311
+      },
+      "fp_geometry": {
+        "baseline|under_10": 341,
+        "native|under_10": 63,
+        "baseline|30_50": 715,
+        "native|30_50": 347,
+        "weak|10_30": 373,
+        "weak|under_10": 1142,
+        "weak|30_50": 791,
+        "baseline|ge_50": 20,
+        "weak|ge_50": 5,
+        "baseline|10_30": 202,
+        "native|ge_50": 10,
+        "native|10_30": 20
+      },
+      "fp_raw_vs_track": {
+        "native|under_10|under_10": 63,
+        "native|30_50|30_50": 339,
+        "weak|10_30|10_30": 358,
+        "weak|under_10|under_10": 1140,
+        "weak|30_50|30_50": 760,
+        "native|ge_50|30_50": 4,
+        "weak|ge_50|30_50": 14,
+        "weak|ge_50|ge_50": 5,
+        "weak|30_50|10_30": 13,
+        "weak|10_30|30_50": 17,
+        "weak|under_10|10_30": 2,
+        "weak|10_30|under_10": 2,
+        "native|ge_50|ge_50": 8,
+        "native|30_50|ge_50": 2,
+        "native|10_30|10_30": 19,
+        "native|30_50|10_30": 1,
+        "native|10_30|30_50": 4
+      },
+      "fp_stage": {
+        "native|native_birth": 1,
+        "native|high": 376,
+        "native|low": 60,
+        "weak|weak_birth": 133,
+        "weak|low": 1539,
+        "weak|high": 639,
+        "native|unconfirmed": 3
+      },
+      "paired_gt": {
+        "neither": 10191,
+        "both": 6139,
+        "gained": 815,
+        "lost": 1
+      },
+      "switch_pair": {
+        "base_no|A_no": 17060,
+        "base_no|A_yes": 69,
+        "base_yes|A_yes": 10,
+        "base_yes|A_no": 7
+      },
+      "paired_source": {
+        "both|native": 4508,
+        "gained|weak": 814,
+        "both|weak": 1631,
+        "gained|native": 1
+      },
+      "switch_origin": {
+        "native->weak": 9,
+        "weak->weak": 61,
+        "native->native": 6,
+        "weak->native": 3
+      }
+    },
+    "DJI_0155_2": {
+      "outputs": {
+        "baseline|FP": 11,
+        "native|FP": 10,
+        "weak|FP": 28,
+        "weak|TP": 35,
+        "baseline|TP": 62,
+        "native|TP": 51
+      },
+      "fp_geometry": {
+        "baseline|under_10": 8,
+        "native|under_10": 8,
+        "weak|30_50": 6,
+        "weak|10_30": 1,
+        "weak|under_10": 21,
+        "baseline|30_50": 3,
+        "native|30_50": 2
+      },
+      "fp_raw_vs_track": {
+        "native|under_10|under_10": 8,
+        "weak|30_50|30_50": 6,
+        "weak|10_30|10_30": 1,
+        "weak|under_10|under_10": 21,
+        "native|ge_50|30_50": 2
+      },
+      "fp_stage": {
+        "native|native_birth": 1,
+        "native|high": 7,
+        "native|low": 2,
+        "weak|weak_birth": 15,
+        "weak|low": 10,
+        "weak|high": 3
+      },
+      "paired_gt": {
+        "neither": 274,
+        "gained": 24,
+        "both": 62
+      },
+      "switch_pair": {
+        "base_no|A_no": 345,
+        "base_no|A_yes": 12,
+        "base_yes|A_yes": 3
+      },
+      "paired_source": {
+        "gained|weak": 24,
+        "both|weak": 11,
+        "both|native": 51
+      },
+      "switch_origin": {
+        "weak->weak": 11,
+        "weak->native": 2,
+        "native->native": 1,
+        "native->weak": 1
+      }
+    },
+    "DJI_0159_2": {
+      "paired_gt": {
+        "neither": 191,
+        "both": 33,
+        "gained": 26
+      },
+      "switch_pair": {
+        "base_no|A_no": 233,
+        "base_no|A_yes": 16,
+        "base_yes|A_yes": 1
+      },
+      "outputs": {
+        "baseline|TP": 33,
+        "native|TP": 33,
+        "weak|TP": 26
+      },
+      "paired_source": {
+        "both|native": 33,
+        "gained|weak": 26
+      },
+      "switch_origin": {
+        "native->weak": 2,
+        "weak->weak": 14,
+        "weak->native": 1
+      }
+    },
+    "DJI_0169_3": {
+      "outputs": {
+        "baseline|TP": 2520,
+        "baseline|FP": 1405,
+        "native|TP": 2182,
+        "native|FP": 561,
+        "weak|TP": 522,
+        "weak|FP": 1598
+      },
+      "fp_geometry": {
+        "baseline|30_50": 472,
+        "baseline|under_10": 813,
+        "native|30_50": 164,
+        "native|under_10": 378,
+        "weak|under_10": 641,
+        "weak|10_30": 394,
+        "weak|30_50": 539,
+        "weak|ge_50": 24,
+        "baseline|10_30": 107,
+        "native|10_30": 19,
+        "baseline|ge_50": 13
+      },
+      "fp_raw_vs_track": {
+        "native|30_50|30_50": 150,
+        "native|under_10|under_10": 378,
+        "weak|under_10|under_10": 639,
+        "weak|10_30|10_30": 391,
+        "weak|30_50|30_50": 500,
+        "weak|ge_50|ge_50": 22,
+        "native|10_30|10_30": 19,
+        "weak|10_30|30_50": 12,
+        "weak|ge_50|30_50": 27,
+        "native|ge_50|30_50": 13,
+        "weak|30_50|10_30": 2,
+        "weak|10_30|under_10": 2,
+        "weak|30_50|ge_50": 2,
+        "weak|under_10|10_30": 1,
+        "native|10_30|30_50": 1
+      },
+      "fp_stage": {
+        "native|native_birth": 3,
+        "native|high": 348,
+        "native|unconfirmed": 5,
+        "weak|weak_birth": 121,
+        "native|low": 205,
+        "weak|high": 731,
+        "weak|low": 746
+      },
+      "paired_gt": {
+        "both": 2516,
+        "neither": 2734,
+        "gained": 188,
+        "lost": 4
+      },
+      "paired_source": {
+        "both|native": 2181,
+        "gained|weak": 187,
+        "both|weak": 335,
+        "gained|native": 1
+      },
+      "switch_pair": {
+        "base_no|A_no": 5390,
+        "base_no|A_yes": 41,
+        "base_yes|A_no": 6,
+        "base_yes|A_yes": 5
+      },
+      "switch_origin": {
+        "weak->weak": 39,
+        "native->weak": 3,
+        "weak->native": 3,
+        "native->native": 1
+      }
+    },
+    "DJI_0173_2": {
+      "outputs": {
+        "baseline|FP": 147,
+        "native|FP": 143,
+        "baseline|TP": 198,
+        "native|TP": 199,
+        "weak|FP": 9,
+        "weak|TP": 9
+      },
+      "fp_geometry": {
+        "baseline|30_50": 147,
+        "native|30_50": 143,
+        "weak|30_50": 7,
+        "weak|under_10": 2
+      },
+      "fp_raw_vs_track": {
+        "native|30_50|30_50": 117,
+        "native|ge_50|30_50": 25,
+        "weak|30_50|30_50": 5,
+        "weak|ge_50|30_50": 2,
+        "native|10_30|30_50": 1,
+        "weak|under_10|under_10": 2
+      },
+      "fp_stage": {
+        "native|native_birth": 1,
+        "native|high": 133,
+        "native|unconfirmed": 9,
+        "weak|weak_birth": 2,
+        "weak|low": 2,
+        "weak|high": 5
+      },
+      "paired_gt": {
+        "neither": 241,
+        "both": 197,
+        "gained": 11,
+        "lost": 1
+      },
+      "switch_pair": {
+        "base_no|A_no": 415,
+        "base_yes|A_yes": 29,
+        "base_no|A_yes": 4,
+        "base_yes|A_no": 2
+      },
+      "paired_source": {
+        "both|native": 196,
+        "gained|weak": 8,
+        "both|weak": 1,
+        "gained|native": 3
+      },
+      "switch_origin": {
+        "native->native": 28,
+        "native->weak": 1,
+        "weak->weak": 3,
+        "weak->native": 1
+      }
+    },
+    "DJI_0181_3": {
+      "outputs": {
+        "baseline|TP": 3781,
+        "native|TP": 2953,
+        "baseline|FP": 729,
+        "native|FP": 97,
+        "weak|FP": 3138,
+        "weak|TP": 1073
+      },
+      "paired_gt": {
+        "both": 3773,
+        "neither": 3836,
+        "gained": 253,
+        "lost": 8
+      },
+      "paired_source": {
+        "both|native": 2952,
+        "gained|weak": 252,
+        "both|weak": 821,
+        "gained|native": 1
+      },
+      "switch_pair": {
+        "base_no|A_no": 7804,
+        "base_no|A_yes": 58,
+        "base_yes|A_yes": 8
+      },
+      "fp_geometry": {
+        "baseline|under_10": 399,
+        "native|under_10": 12,
+        "weak|under_10": 2780,
+        "weak|30_50": 291,
+        "baseline|30_50": 305,
+        "native|30_50": 83,
+        "weak|10_30": 66,
+        "baseline|10_30": 25,
+        "weak|ge_50": 1,
+        "native|10_30": 2
+      },
+      "fp_raw_vs_track": {
+        "native|under_10|under_10": 12,
+        "weak|under_10|under_10": 2779,
+        "weak|30_50|30_50": 271,
+        "native|30_50|30_50": 72,
+        "weak|10_30|10_30": 59,
+        "native|ge_50|30_50": 9,
+        "native|10_30|30_50": 2,
+        "weak|10_30|under_10": 1,
+        "weak|ge_50|30_50": 11,
+        "weak|30_50|10_30": 6,
+        "weak|10_30|30_50": 9,
+        "weak|ge_50|ge_50": 1,
+        "native|30_50|10_30": 1,
+        "weak|under_10|10_30": 1,
+        "native|10_30|10_30": 1
+      },
+      "fp_stage": {
+        "native|high": 82,
+        "weak|weak_birth": 312,
+        "weak|low": 2440,
+        "weak|high": 386,
+        "native|low": 13,
+        "native|unconfirmed": 2
+      },
+      "switch_origin": {
+        "weak->native": 6,
+        "weak->weak": 54,
+        "native->weak": 5,
+        "native->native": 1
+      }
+    },
+    "DJI_0221_2": {
+      "paired_gt": {
+        "neither": 498,
+        "gained": 102,
+        "both": 95,
+        "lost": 2
+      },
+      "switch_pair": {
+        "base_no|A_no": 660,
+        "base_no|A_yes": 31,
+        "base_yes|A_no": 4,
+        "base_yes|A_yes": 2
+      },
+      "outputs": {
+        "weak|TP": 127,
+        "weak|FP": 175,
+        "baseline|TP": 97,
+        "baseline|FP": 99,
+        "native|TP": 70,
+        "native|FP": 79
+      },
+      "paired_source": {
+        "gained|weak": 102,
+        "both|weak": 25,
+        "both|native": 70
+      },
+      "fp_geometry": {
+        "weak|under_10": 120,
+        "weak|30_50": 55,
+        "baseline|30_50": 99,
+        "native|30_50": 79
+      },
+      "fp_raw_vs_track": {
+        "weak|under_10|under_10": 120,
+        "weak|ge_50|30_50": 4,
+        "weak|30_50|30_50": 51,
+        "native|30_50|30_50": 69,
+        "native|ge_50|30_50": 9,
+        "native|10_30|30_50": 1
+      },
+      "fp_stage": {
+        "weak|weak_birth": 53,
+        "weak|low": 98,
+        "weak|high": 24,
+        "native|high": 74,
+        "native|unconfirmed": 2,
+        "native|low": 3
+      },
+      "switch_origin": {
+        "weak->weak": 28,
+        "weak->native": 2,
+        "native->native": 1,
+        "native->weak": 2
+      }
+    },
+    "DJI_0225_1": {
+      "outputs": {
+        "baseline|TP": 1847,
+        "native|TP": 1732,
+        "weak|FP": 305,
+        "baseline|FP": 134,
+        "native|FP": 64,
+        "weak|TP": 159
+      },
+      "paired_gt": {
+        "both": 1847,
+        "neither": 1791,
+        "gained": 44
+      },
+      "paired_source": {
+        "both|native": 1732,
+        "gained|weak": 44,
+        "both|weak": 115
+      },
+      "switch_pair": {
+        "base_no|A_no": 3652,
+        "base_no|A_yes": 24,
+        "base_yes|A_yes": 5,
+        "base_yes|A_no": 1
+      },
+      "fp_geometry": {
+        "weak|under_10": 266,
+        "baseline|30_50": 48,
+        "native|30_50": 39,
+        "weak|10_30": 14,
+        "weak|30_50": 21,
+        "baseline|10_30": 16,
+        "native|10_30": 13,
+        "baseline|under_10": 65,
+        "native|under_10": 11,
+        "weak|ge_50": 4,
+        "baseline|ge_50": 5,
+        "native|ge_50": 1
+      },
+      "fp_raw_vs_track": {
+        "weak|under_10|under_10": 266,
+        "native|30_50|30_50": 32,
+        "weak|10_30|10_30": 12,
+        "weak|30_50|30_50": 20,
+        "native|10_30|10_30": 12,
+        "native|under_10|under_10": 11,
+        "weak|under_10|10_30": 1,
+        "native|30_50|10_30": 1,
+        "native|ge_50|30_50": 5,
+        "native|10_30|30_50": 2,
+        "weak|ge_50|ge_50": 4,
+        "weak|30_50|10_30": 1,
+        "weak|ge_50|30_50": 1,
+        "native|ge_50|ge_50": 1
+      },
+      "fp_stage": {
+        "weak|weak_birth": 59,
+        "weak|low": 177,
+        "weak|high": 69,
+        "native|high": 39,
+        "native|unconfirmed": 12,
+        "native|low": 13
+      },
+      "switch_origin": {
+        "weak->native": 3,
+        "native->native": 5,
+        "weak->weak": 20,
+        "native->weak": 1
+      }
+    },
+    "DJI_0237_2": {
+      "outputs": {
+        "baseline|TP": 506,
+        "native|TP": 474,
+        "weak|FP": 82,
+        "weak|TP": 69,
+        "baseline|FP": 28,
+        "native|FP": 6
+      },
+      "paired_gt": {
+        "both": 506,
+        "neither": 656,
+        "gained": 37
+      },
+      "paired_source": {
+        "both|native": 474,
+        "gained|weak": 37,
+        "both|weak": 32
+      },
+      "switch_pair": {
+        "base_no|A_no": 1193,
+        "base_no|A_yes": 5,
+        "base_yes|A_yes": 1
+      },
+      "fp_geometry": {
+        "weak|under_10": 79,
+        "baseline|30_50": 3,
+        "weak|30_50": 3,
+        "baseline|under_10": 25,
+        "native|under_10": 4,
+        "native|30_50": 2
+      },
+      "fp_raw_vs_track": {
+        "weak|under_10|under_10": 79,
+        "weak|30_50|30_50": 3,
+        "native|under_10|under_10": 4,
+        "native|ge_50|30_50": 2
+      },
+      "fp_stage": {
+        "weak|weak_birth": 19,
+        "weak|low": 35,
+        "weak|high": 28,
+        "native|unconfirmed": 1,
+        "native|high": 4,
+        "native|low": 1
+      },
+      "switch_origin": {
+        "weak->weak": 3,
+        "native->weak": 2,
+        "native->native": 1
+      }
+    },
+    "DJI_0255_1": {
+      "paired_gt": {
+        "neither": 171,
+        "gained": 33,
+        "both": 396
+      },
+      "switch_pair": {
+        "base_no|A_no": 586,
+        "base_no|A_yes": 6,
+        "base_yes|A_yes": 7,
+        "base_yes|A_no": 1
+      },
+      "outputs": {
+        "weak|TP": 60,
+        "baseline|TP": 396,
+        "native|TP": 369,
+        "baseline|FP": 5,
+        "weak|FP": 15
+      },
+      "paired_source": {
+        "gained|weak": 33,
+        "both|weak": 27,
+        "both|native": 369
+      },
+      "switch_origin": {
+        "weak->weak": 4,
+        "weak->native": 2,
+        "native->native": 5,
+        "native->weak": 2
+      },
+      "fp_geometry": {
+        "baseline|30_50": 5,
+        "weak|30_50": 12,
+        "weak|10_30": 2,
+        "weak|under_10": 1
+      },
+      "fp_raw_vs_track": {
+        "weak|30_50|30_50": 12,
+        "weak|10_30|10_30": 2,
+        "weak|under_10|under_10": 1
+      },
+      "fp_stage": {
+        "weak|high": 9,
+        "weak|low": 4,
+        "weak|weak_birth": 2
+      }
+    },
+    "DJI_0257_2": {
+      "outputs": {
+        "baseline|TP": 540,
+        "native|TP": 471,
+        "baseline|FP": 180,
+        "native|FP": 143,
+        "weak|FP": 58,
+        "weak|TP": 78
+      },
+      "paired_gt": {
+        "both": 540,
+        "neither": 468,
+        "gained": 9
+      },
+      "paired_source": {
+        "both|native": 471,
+        "gained|weak": 9,
+        "both|weak": 69
+      },
+      "switch_pair": {
+        "base_no|A_no": 997,
+        "base_yes|A_yes": 13,
+        "base_no|A_yes": 4,
+        "base_yes|A_no": 3
+      },
+      "fp_geometry": {
+        "baseline|30_50": 149,
+        "native|30_50": 125,
+        "weak|under_10": 6,
+        "baseline|10_30": 21,
+        "native|10_30": 18,
+        "baseline|ge_50": 10,
+        "weak|10_30": 12,
+        "weak|30_50": 36,
+        "weak|ge_50": 4
+      },
+      "fp_raw_vs_track": {
+        "native|30_50|30_50": 107,
+        "weak|under_10|under_10": 6,
+        "native|ge_50|30_50": 15,
+        "native|10_30|30_50": 3,
+        "native|10_30|10_30": 18,
+        "weak|10_30|10_30": 12,
+        "weak|30_50|30_50": 32,
+        "weak|ge_50|30_50": 3,
+        "weak|ge_50|ge_50": 4,
+        "weak|10_30|30_50": 1
+      },
+      "fp_stage": {
+        "native|high": 124,
+        "weak|weak_birth": 14,
+        "native|unconfirmed": 4,
+        "native|low": 15,
+        "weak|low": 21,
+        "weak|high": 23
+      },
+      "switch_origin": {
+        "native->native": 6,
+        "native->weak": 6,
+        "weak->native": 4,
+        "weak->weak": 1
+      }
+    },
+    "DJI_0277_2": {
+      "outputs": {
+        "baseline|TP": 888,
+        "native|TP": 663,
+        "weak|TP": 240
+      },
+      "paired_gt": {
+        "both": 888,
+        "neither": 81,
+        "gained": 15
+      },
+      "paired_source": {
+        "both|native": 663,
+        "gained|weak": 15,
+        "both|weak": 225
+      },
+      "switch_pair": {
+        "base_no|A_no": 969,
+        "base_yes|A_yes": 7,
+        "base_no|A_yes": 8
+      },
+      "switch_origin": {
+        "native->native": 6,
+        "native->weak": 5,
+        "weak->native": 3,
+        "weak->weak": 1
+      }
+    },
+    "DJI_0283_1": {
+      "outputs": {
+        "baseline|TP": 3191,
+        "baseline|FP": 1179,
+        "native|TP": 2424,
+        "native|FP": 302,
+        "weak|FP": 1603,
+        "weak|TP": 793
+      },
+      "fp_geometry": {
+        "baseline|30_50": 718,
+        "baseline|10_30": 293,
+        "native|30_50": 248,
+        "native|10_30": 54,
+        "weak|10_30": 393,
+        "weak|under_10": 639,
+        "weak|30_50": 571,
+        "baseline|under_10": 168
+      },
+      "fp_raw_vs_track": {
+        "native|30_50|30_50": 242,
+        "native|10_30|10_30": 53,
+        "weak|10_30|10_30": 382,
+        "weak|under_10|under_10": 639,
+        "native|30_50|10_30": 1,
+        "weak|30_50|30_50": 556,
+        "native|ge_50|30_50": 5,
+        "weak|30_50|10_30": 9,
+        "weak|10_30|30_50": 8,
+        "weak|ge_50|30_50": 7,
+        "weak|under_10|10_30": 2,
+        "native|10_30|30_50": 1
+      },
+      "fp_stage": {
+        "native|native_birth": 2,
+        "native|high": 219,
+        "native|unconfirmed": 2,
+        "weak|weak_birth": 85,
+        "weak|high": 726,
+        "weak|low": 792,
+        "native|low": 79
+      },
+      "paired_gt": {
+        "both": 3190,
+        "neither": 2750,
+        "gained": 27,
+        "lost": 1
+      },
+      "paired_source": {
+        "both|native": 2424,
+        "gained|weak": 27,
+        "both|weak": 766
+      },
+      "switch_pair": {
+        "base_no|A_no": 5957,
+        "base_no|A_yes": 8,
+        "base_yes|A_no": 2,
+        "base_yes|A_yes": 1
+      },
+      "switch_origin": {
+        "weak->weak": 7,
+        "weak->native": 1,
+        "native->weak": 1
+      }
+    },
+    "DJI_0303_2": {
+      "paired_gt": {
+        "neither": 1304,
+        "gained": 234,
+        "both": 1010,
+        "lost": 2
+      },
+      "switch_pair": {
+        "base_no|A_no": 2488,
+        "base_no|A_yes": 53,
+        "base_yes|A_no": 7,
+        "base_yes|A_yes": 2
+      },
+      "outputs": {
+        "weak|TP": 1243,
+        "baseline|TP": 1012,
+        "weak|FP": 230,
+        "baseline|FP": 110,
+        "native|TP": 1,
+        "native|FP": 4
+      },
+      "paired_source": {
+        "gained|weak": 234,
+        "both|weak": 1009,
+        "both|native": 1
+      },
+      "fp_geometry": {
+        "weak|30_50": 126,
+        "baseline|30_50": 103,
+        "weak|ge_50": 2,
+        "native|30_50": 1,
+        "weak|under_10": 96,
+        "baseline|under_10": 3,
+        "native|under_10": 3,
+        "baseline|10_30": 4,
+        "weak|10_30": 6
+      },
+      "fp_raw_vs_track": {
+        "weak|30_50|30_50": 114,
+        "weak|ge_50|30_50": 10,
+        "weak|10_30|30_50": 2,
+        "weak|ge_50|ge_50": 2,
+        "native|ge_50|30_50": 1,
+        "weak|under_10|under_10": 96,
+        "native|under_10|under_10": 3,
+        "weak|10_30|10_30": 6
+      },
+      "fp_stage": {
+        "weak|weak_birth": 35,
+        "weak|low": 109,
+        "weak|high": 86,
+        "native|low": 3,
+        "native|unconfirmed": 1
+      },
+      "switch_origin": {
+        "weak->weak": 53,
+        "weak->native": 1,
+        "native->weak": 1
+      }
+    },
+    "DJI_0307_2": {
+      "paired_gt": {
+        "neither": 38,
+        "both": 39
+      },
+      "switch_pair": {
+        "base_no|A_no": 77
+      },
+      "outputs": {
+        "weak|FP": 11,
+        "baseline|TP": 39,
+        "weak|TP": 39
+      },
+      "fp_geometry": {
+        "weak|30_50": 3,
+        "weak|10_30": 8
+      },
+      "fp_raw_vs_track": {
+        "weak|30_50|30_50": 3,
+        "weak|10_30|10_30": 8
+      },
+      "fp_stage": {
+        "weak|weak_birth": 1,
+        "weak|low": 8,
+        "weak|high": 2
+      },
+      "paired_source": {
+        "both|weak": 39
+      },
+      "switch_origin": {}
+    },
+    "DJI_0309_4": {
+      "outputs": {
+        "baseline|TP": 430,
+        "native|TP": 206,
+        "weak|TP": 330,
+        "weak|FP": 214,
+        "baseline|FP": 29,
+        "native|FP": 20
+      },
+      "paired_gt": {
+        "both": 430,
+        "neither": 879,
+        "gained": 106
+      },
+      "paired_source": {
+        "both|native": 206,
+        "gained|weak": 106,
+        "both|weak": 224
+      },
+      "switch_pair": {
+        "base_no|A_no": 1355,
+        "base_yes|A_yes": 11,
+        "base_no|A_yes": 42,
+        "base_yes|A_no": 7
+      },
+      "fp_geometry": {
+        "weak|30_50": 19,
+        "weak|under_10": 190,
+        "baseline|30_50": 22,
+        "native|30_50": 13,
+        "weak|10_30": 4,
+        "weak|ge_50": 1,
+        "baseline|under_10": 7,
+        "native|under_10": 7
+      },
+      "fp_raw_vs_track": {
+        "weak|30_50|30_50": 19,
+        "weak|under_10|under_10": 190,
+        "native|ge_50|30_50": 2,
+        "native|30_50|30_50": 11,
+        "weak|10_30|10_30": 3,
+        "weak|ge_50|ge_50": 1,
+        "weak|30_50|10_30": 1,
+        "native|under_10|under_10": 7
+      },
+      "fp_stage": {
+        "weak|low": 171,
+        "weak|weak_birth": 36,
+        "native|low": 3,
+        "native|high": 13,
+        "weak|high": 7,
+        "native|unconfirmed": 4
+      },
+      "switch_origin": {
+        "weak->native": 6,
+        "native->weak": 8,
+        "weak->weak": 35,
+        "native->native": 4
+      }
+    },
+    "DJI_0325_2": {
+      "outputs": {
+        "baseline|FP": 29,
+        "native|FP": 29
+      },
+      "fp_geometry": {
+        "baseline|under_10": 29,
+        "native|under_10": 29
+      },
+      "fp_raw_vs_track": {
+        "native|under_10|under_10": 29
+      },
+      "fp_stage": {
+        "native|unconfirmed": 2,
+        "native|high": 21,
+        "native|low": 6
+      },
+      "switch_origin": {},
+      "switch_pair": {},
+      "paired_gt": {}
+    },
+    "DJI_0327_3": {
+      "outputs": {
+        "baseline|TP": 8347,
+        "baseline|FP": 1276,
+        "native|TP": 3266,
+        "native|FP": 182,
+        "weak|TP": 7625,
+        "weak|FP": 2532
+      },
+      "fp_geometry": {
+        "baseline|under_10": 61,
+        "baseline|30_50": 1169,
+        "native|under_10": 49,
+        "native|30_50": 133,
+        "weak|30_50": 1983,
+        "weak|ge_50": 67,
+        "weak|under_10": 366,
+        "weak|10_30": 116,
+        "baseline|10_30": 17,
+        "baseline|ge_50": 29
+      },
+      "fp_raw_vs_track": {
+        "native|under_10|under_10": 49,
+        "native|30_50|30_50": 120,
+        "weak|30_50|30_50": 1870,
+        "weak|ge_50|ge_50": 62,
+        "weak|under_10|under_10": 365,
+        "weak|10_30|10_30": 106,
+        "native|ge_50|30_50": 13,
+        "weak|ge_50|30_50": 101,
+        "weak|10_30|30_50": 12,
+        "weak|30_50|10_30": 9,
+        "weak|30_50|ge_50": 5,
+        "weak|under_10|10_30": 1,
+        "weak|10_30|under_10": 1
+      },
+      "fp_stage": {
+        "native|native_birth": 2,
+        "native|high": 97,
+        "weak|weak_birth": 157,
+        "weak|low": 1674,
+        "native|unconfirmed": 2,
+        "weak|high": 701,
+        "native|low": 81
+      },
+      "paired_gt": {
+        "neither": 53259,
+        "both": 8334,
+        "gained": 2557,
+        "lost": 13
+      },
+      "switch_pair": {
+        "base_no|A_no": 63839,
+        "base_no|A_yes": 294,
+        "base_yes|A_no": 24,
+        "base_yes|A_yes": 6
+      },
+      "paired_source": {
+        "both|native": 3266,
+        "gained|weak": 2557,
+        "both|weak": 5068
+      },
+      "switch_origin": {
+        "native->weak": 20,
+        "weak->weak": 277,
+        "weak->native": 3
+      }
+    },
+    "DJI_0339_2": {
+      "outputs": {
+        "baseline|FP": 814,
+        "native|FP": 84,
+        "weak|FP": 1591,
+        "weak|TP": 437,
+        "baseline|TP": 411
+      },
+      "fp_geometry": {
+        "baseline|30_50": 60,
+        "native|30_50": 33,
+        "weak|under_10": 1102,
+        "baseline|under_10": 311,
+        "weak|30_50": 82,
+        "baseline|10_30": 443,
+        "native|10_30": 51,
+        "weak|10_30": 407
+      },
+      "fp_raw_vs_track": {
+        "native|30_50|30_50": 28,
+        "weak|under_10|under_10": 1100,
+        "native|10_30|30_50": 5,
+        "weak|30_50|30_50": 78,
+        "native|10_30|10_30": 49,
+        "native|30_50|10_30": 2,
+        "weak|10_30|10_30": 404,
+        "weak|ge_50|30_50": 4,
+        "weak|under_10|10_30": 3,
+        "weak|10_30|under_10": 2
+      },
+      "fp_stage": {
+        "native|native_birth": 1,
+        "native|high": 56,
+        "weak|weak_birth": 78,
+        "weak|low": 870,
+        "weak|high": 643,
+        "native|low": 26,
+        "native|unconfirmed": 1
+      },
+      "paired_gt": {
+        "neither": 1363,
+        "gained": 26,
+        "both": 411
+      },
+      "switch_pair": {
+        "base_no|A_no": 1796,
+        "base_no|A_yes": 4
+      },
+      "paired_source": {
+        "gained|weak": 26,
+        "both|weak": 411
+      },
+      "switch_origin": {
+        "weak->weak": 4
+      }
+    },
+    "DJI_0345_2": {
+      "paired_gt": {
+        "neither": 2245,
+        "both": 12
+      },
+      "switch_pair": {
+        "base_no|A_no": 2257
+      },
+      "outputs": {
+        "weak|FP": 907,
+        "baseline|FP": 804,
+        "baseline|TP": 12,
+        "weak|TP": 12,
+        "native|FP": 25
+      },
+      "fp_geometry": {
+        "weak|10_30": 411,
+        "weak|under_10": 340,
+        "baseline|10_30": 371,
+        "baseline|30_50": 153,
+        "weak|30_50": 156,
+        "baseline|under_10": 280,
+        "native|under_10": 25
+      },
+      "fp_raw_vs_track": {
+        "weak|10_30|10_30": 403,
+        "weak|under_10|under_10": 340,
+        "weak|30_50|30_50": 147,
+        "weak|30_50|10_30": 8,
+        "weak|10_30|30_50": 9,
+        "native|under_10|under_10": 25
+      },
+      "fp_stage": {
+        "weak|weak_birth": 18,
+        "weak|low": 259,
+        "weak|high": 630,
+        "native|unconfirmed": 1,
+        "native|low": 3,
+        "native|high": 21
+      },
+      "paired_source": {
+        "both|weak": 12
+      },
+      "switch_origin": {}
+    }
+  }
+}
