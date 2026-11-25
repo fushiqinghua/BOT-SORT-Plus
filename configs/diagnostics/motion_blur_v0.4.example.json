@@ -1,0 +1,11 @@
+{
+  "schema": "botsort_diagnostics_settings_v1",
+  "baseline_root": "results/vttiny/yolo11m_rgb_rgbt/rgbt",
+  "features_dir": "D:/tracking/features_rgb_plus",
+  "images_root": "D:/datasets/VT-Tiny-MOT",
+  "gt_root": "D:/datasets/VT-Tiny-MOT_RGB_GT",
+  "output_root": "outputs/diagnostics_v0.4_full30",
+  "runtime_root": null,
+  "sequences": null,
+  "max_review": 120
+}

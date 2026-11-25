@@ -120,12 +120,19 @@ def update_v2(tracker, dets, img, dense):
     # Eligibility for explicit recovery is filtered separately below.
     native_lost = list(tracker.lost_stracks)
     pool = joint_stracks(active, native_lost)
+    diagnostics = getattr(tracker, "diagnostic_recorder", None)
+    if diagnostics is not None:
+        diagnostics.begin(tracker, frame, all_dets, pool, unconfirmed, img)
     STrack.multi_predict(pool)
+    if diagnostics is not None:
+        diagnostics.predicted(pool)
     warp = tracker.cmc.apply(img, all_dets)
     if warp is None or np.shape(warp) != (2, 3) or not np.isfinite(warp).all():
         raise ValueError("GMC returned an invalid transform")
     STrack.multi_gmc(pool, warp)
     STrack.multi_gmc(unconfirmed, warp)
+    if diagnostics is not None:
+        diagnostics.compensated(tracker, pool, unconfirmed, warp)
     needs_identity_history = plus.birth.enabled and plus.birth_identity.enabled
     if plus.recovery.enabled or needs_identity_history:
         history_window = max(plus.recovery.window if plus.recovery.enabled else 0,
@@ -380,4 +387,6 @@ def update_v2(tracker, dets, img, dense):
             if e["event"]=="motion_output" and e["track_id"] in rejected:
                 e["event"]="ir_rejected_projection"
         tracker.last_events.extend(observer.audit)
+    if diagnostics is not None:
+        diagnostics.finish(tracker, output, removed)
     return output

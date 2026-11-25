@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 from collections import Counter
 import csv
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -32,6 +33,10 @@ def prepare(args):
     detector_sha=source["weight_sha256"]; rgb_sha=source["reid_sha256"]
     native=dict(source["trackers"]["botsort_reid"])
     native.update(cfg.native_overrides)
+    if getattr(args,"diagnostics",False):
+        from botsort_plus.diagnostics.recorder import validate_capture_config
+        validate_capture_config(cfg,native,position_policy=args.position_policy,
+                                position_rgb_first=args.position_rgb_first)
     frozen={sequence_name(p):p for p in detection_files(args.baseline_root/"detections")}
     paths=detection_files(args.detections_dir or args.baseline_root/"detections")
     expected=set(source["sequences"])
@@ -86,8 +91,8 @@ def prepare(args):
     return cfg,selected,{
         "schema":"botsort_plus_run_v1", "status":"READY" if not missing else "MISSING_INPUTS",
         "implementation_version":plus_version,
-        "implementation_sha256":{str(p.relative_to(REPO)):sha256(p)
-                                 for p in sorted((REPO/"botsort_plus").glob("*.py"))},
+        "implementation_sha256":{p.relative_to(REPO).as_posix():sha256(p)
+                                 for p in sorted((REPO/"botsort_plus").rglob("*.py"))},
         "name":cfg.name,"config":cfg.to_dict(),"native_config":native,
         "sequences":sequences,"subset":chosen!=expected,
         "detector_sha256":detector_sha,"rgb_encoder_sha256":rgb_sha,
@@ -99,6 +104,10 @@ def prepare(args):
         "evaluation_context":"Historical official test was previously used for checkpoint/gate selection; "
                              "treat new runs here as development experiments, not an unseen test.",
         "causal":True,"backfilled_frames":0,"interpolation":False,
+        "diagnostics":{"enabled":bool(getattr(args,"diagnostics",False)),
+                       "schema":"botsort_motion_diagnostics_v1",
+                       "status":"READY" if getattr(args,"diagnostics",False) else "DISABLED",
+                       "traces":{}},
     }
 
 
@@ -153,7 +162,12 @@ def run(args):
         raise FileExistsError(f"Run {name} already exists in {root}. Use a new output root; no silent resume/overwrite.")
     protocol.update(status="RUNNING",started_utc=time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime()),
                     runtime={"python":sys.version,"numpy":np.__version__,"torch":torch.__version__,
-                             "opencv":cv2.__version__},output_prediction_hashes={})
+                             "opencv":cv2.__version__},output_prediction_hashes={},decoded_image_hashes={})
+    protocol["decoded_image_hash_semantics"]=("SHA256 of ordered UTF-8 JSON lines containing frame, "
+            "shape, dtype and SHA256 of contiguous decoded BGR pixels; sorted keys, compact JSON")
+    if getattr(args,"diagnostics",False):
+        from botsort_plus.diagnostics.recorder import DiagnosticRecorder
+        protocol["diagnostics"]["status"]="RUNNING"
     write_json(protocol_path,protocol)
     tracker_dir.joinpath("data").mkdir(parents=True)
     try:
@@ -177,7 +191,19 @@ def run(args):
             protocol["boxmot_source_hashes"]=tracker.upstream_hashes
             dest=tracker_dir/"data"/(seq+".txt"); temp=dest.with_suffix(".tmp")
             event_stream=None; event_counts=Counter(); rows=0; seconds=0.; wall=time.perf_counter()
+            recorder=None; image_digest=hashlib.sha256()
             try:
+                if getattr(args,"diagnostics",False):
+                    recorder=DiagnosticRecorder(root/"diagnostics"/name/(seq+".jsonl.gz"),
+                            sequence=seq,expected_frames=len(cache["frames"]),metadata={
+                                "detection_fingerprint":protocol["detection_fingerprints"][seq],
+                                "feature_hashes":protocol["feature_hashes"][seq],
+                                "native_config":protocol["native_config"],
+                                "source_protocol_sha256":protocol["source_protocol_sha256"],
+                                "boxmot_source_hashes":tracker.upstream_hashes,
+                                "implementation_sha256":protocol["implementation_sha256"],
+                            })
+                    tracker.diagnostic_recorder=recorder
                 if args.trace:
                     event_path=root/"events"/name/(seq+".jsonl")
                     event_path.parent.mkdir(parents=True,exist_ok=True)
@@ -189,6 +215,10 @@ def run(args):
                         image=cv2.imread(str(image_path))
                         if image is None or image.shape[:2]!=(512,640):
                             raise ValueError(f"Expected original 512x640 RGB image: {image_path}")
+                        pixel_digest=hashlib.sha256(np.ascontiguousarray(image).tobytes()).hexdigest()
+                        image_digest.update((json.dumps({"frame":int(row["frame"]),
+                            "shape":list(image.shape),"dtype":str(image.dtype),"sha256":pixel_digest},
+                            sort_keys=True,separators=(",",":"))+"\n").encode("utf-8"))
                         det=np.asarray(row["detections"],np.float32).reshape(-1,6); det[:,5]=0
                         packets=fc.frame(index)
                         if cfg.raw_ir.enabled:
@@ -217,8 +247,22 @@ def run(args):
                         event_stream.write(json.dumps({"sequence":seq, **event},
                                                       ensure_ascii=False,allow_nan=False)+"\n")
                 temp.replace(dest)
+                protocol["decoded_image_hashes"][seq]=image_digest.hexdigest()
+                if recorder is not None:
+                    manifest=recorder.close()
+                    protocol["diagnostics"]["traces"][seq]={
+                        "path":recorder.path.relative_to(root).as_posix(),
+                        "manifest_path":recorder.manifest_path.relative_to(root).as_posix(),
+                        "manifest_sha256":sha256(recorder.manifest_path),
+                        "data_sha256":manifest["data_sha256"],"records":manifest["records"],
+                        "status":manifest["status"],
+                    }
                 if position is not None:
                     protocol["output_position"]["sequence_reasons"][seq] = dict(position.status)
+            except Exception as error:
+                if recorder is not None and recorder.manifest["status"]!="COMPLETE":
+                    recorder.abort(error)
+                raise
             finally:
                 if event_stream:
                     event_stream.close()
@@ -233,8 +277,12 @@ def run(args):
             write_json(protocol_path,protocol)
             print(f"{name}: {seq}, {timing['frames']} frames, {rows} rows",flush=True)
         protocol["status"]="COMPLETE"
+        if getattr(args,"diagnostics",False):
+            protocol["diagnostics"]["status"]="COMPLETE"
     except Exception:
         protocol.update(status="FAILED",error=traceback.format_exc())
+        if getattr(args,"diagnostics",False):
+            protocol["diagnostics"]["status"]="FAILED"
         raise
     finally:
         write_json(protocol_path,protocol)
@@ -258,6 +306,7 @@ def parser():
     p.add_argument("--ir-registration",type=Path)
     p.add_argument("--preflight",action="store_true")
     p.add_argument("--trace",action="store_true",help="Write association/candidate/recovery/memory JSONL logs")
+    p.add_argument("--diagnostics",action="store_true",help="Read-only per-frame KF/GMC/B telemetry for frozen v2+B; requires SOF")
     return p
 
 

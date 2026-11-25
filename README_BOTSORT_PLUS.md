@@ -1,5 +1,13 @@
 # BoT-SORT-Plus v0.3.0：C2 身份可信度
 
+## v0.4 诊断分支入口
+
+新增四组可运行实验：预测/观测误差、GMC 可靠性、B 恢复后稳定性、图像质量与人工模糊复核。固定 `B_early_moderate`，先检查诊断开关的输入、MOT 输出与原有事件完全一致，再执行离线分析。
+
+**本地运行步骤、配置和证据打包：[诊断实验说明](docs/botsort_plus/diagnostics_v0.4/README.md)。** [实现机制与统计口径](docs/botsort_plus/diagnostics_v0.4/MECHANISM.md) · [软件验证](docs/botsort_plus/diagnostics_v0.4/VALIDATION.md)
+
+以下保留原 v0.3 说明与实验入口。
+
 本版从 `iteration/v0.2-a2` 的 `6d9c258556a143036cebde891c93079a772b9945` 接续实现。在 **YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID + B** 主基座上，将“接受一次几何关联”与“允许这次观测改写身份外观”分开。
 
 [真实数据消融与后续迭代](results/vttiny/iterations/v0.3-c2-identity/README.md) · [B 恢复、红外及 C2 预热的模块设计与复算](docs/botsort_plus/FOLLOWUP_DESIGN.md)
