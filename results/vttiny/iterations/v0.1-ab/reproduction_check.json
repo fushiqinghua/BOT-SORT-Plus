@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "protocol": "official RGB test, 30 sequences, 12590 frames; test-set model and threshold selection",
+  "original_tracking_commit": "3698607beb10898c00484adc8c1dcb67dd180794",
+  "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "comparison": "Fresh TrackEval run on the archived predictions and original official GT bytes; max_abs_difference is across per-sequence and COMBINED_SEQ rows (percent points or integer events).",
+  "full30": {
+    "methods": [
+      "A",
+      "AB",
+      "B",
+      "baseline"
+    ],
+    "sequence_rows_and_pooled_rows": 124,
+    "max_abs_difference": {
+      "HOTA": 7.105427357601002e-15,
+      "DetA": 0.0,
+      "AssA": 1.4210854715202004e-14,
+      "IDF1": 0.0,
+      "MOTA": 0.0,
+      "FP": 0,
+      "FN": 0,
+      "IDSW": 0
+    }
+  },
+  "six_controls": {
+    "methods": [
+      "audit_A",
+      "empty_pool_A",
+      "native_confirmation_A",
+      "shadow_A",
+      "velocity_A",
+      "window_A"
+    ],
+    "sequence_rows_and_pooled_rows": 186,
+    "max_abs_difference": {
+      "HOTA": 7.105427357601002e-15,
+      "DetA": 0.0,
+      "AssA": 1.4210854715202004e-14,
+      "IDF1": 0.0,
+      "MOTA": 0.0,
+      "FP": 0,
+      "FN": 0,
+      "IDSW": 0
+    }
+  },
+  "verified_mot_files": {
+    "full30": 120,
+    "controls": 180,
+    "two_sequence_check": 2
+  },
+  "verified_lossless_event_files": 300
+}

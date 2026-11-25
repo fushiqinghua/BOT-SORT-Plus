@@ -2,7 +2,7 @@
 
 本补丁针对上传的 `BOT-SORT-Plus-baseline.zip`。保留原检测缓存、已完成结果、原训练与评估脚本；新增可独立开关的跟踪扩展和运行入口。
 
-**已实现的是可执行机制和实验通路，尚没有新的 VT-Tiny-MOT HOTA / IDF1 收益结论。** 所有新增阈值都是初始实验设置。软件测试中的图像、向量和 TorchScript 模型是测试夹具，不是训练模型或真实数据集结果。
+补丁交付后，服务器已用冻结输入完成 baseline、A、B、AB 四组正式回放，以及针对 A 的六组控制实验。实现测试使用合成夹具，实跑指标按官方 30 段汇总。默认阈值和测试集选模记录随实验归档。[实验报告](results/vttiny/iterations/v0.1-ab/full30/实验报告.md) · [错因分析](results/vttiny/iterations/v0.1-ab/module_a/错因分析.md) · [独立复算](results/vttiny/iterations/v0.1-ab/reproduction_check.json)
 
 ## 模块
 

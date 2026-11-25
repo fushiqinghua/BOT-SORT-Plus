@@ -12,6 +12,8 @@
 
 ## 用官方真值复算
 
+发布前已使用官方真值复算四个主实验及六个控制组的 310 行逐序列与汇总结果。计数指标逐项相等，百分制指标最大绝对差异低于 0.000000000001 点。[逐项核验记录](reproduction_check.json)
+
 在仓库根目录设定 `VTTINY_GT_FOLDER` 为官方 RGB 跟踪标注目录，子目录格式为 `<序列>/gt/gt.txt`。`TRACKEVAL_ROOT` 指向冻结的 TrackEval 源码。评测器检查每条预测的 SHA-256，再联合汇总 HOTA、DetA、AssA、IDF1、MOTA、FP、FN 和 IDSW。版本和安装方法见[基线说明](../../../../README.md)。
 
 ~~~bash
