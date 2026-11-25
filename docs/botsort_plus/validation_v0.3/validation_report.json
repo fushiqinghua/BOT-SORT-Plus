@@ -1,0 +1,124 @@
+{
+  "schema": "botsort_plus_c2_software_validation_v1",
+  "implementation_version": "0.3.0",
+  "purpose": "SOFTWARE_MECHANISM_VALIDATION_NOT_DATASET_ACCURACY",
+  "date": "2026-11-25",
+  "base_commit": "6d9c258556a143036cebde891c93079a772b9945",
+  "planned_branch": "iteration/v0.3-c2-identity",
+  "suite": {
+    "command": ".venv/bin/python -m unittest discover -s tests/botsort_plus -p test_*.py -v",
+    "run": 289,
+    "passed": 288,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "seconds": 77.329,
+    "skip_reason": "Optional pinned TrackEval integration requires VTTINY_TEST_TRACKEVAL_ROOT; evaluator source unchanged."
+  },
+  "new_tests": {
+    "core": 32,
+    "native_and_config": 13,
+    "audit": 14,
+    "cli": 1,
+    "total": 60,
+    "passed": 60,
+    "skipped": 0
+  },
+  "legacy_differential": {
+    "configs": 27,
+    "frames_per_config": 60,
+    "frames_per_revision": 1620,
+    "prediction_and_event_hashes_equal": true,
+    "isolated_processes": true
+  },
+  "cli": {
+    "configs": [
+      "12_baseline_ref.json",
+      "13_B_ref.json",
+      "27_B_C2_shadow.json",
+      "28_B_C2_memory.json",
+      "29_B_C2_association.json",
+      "30_B_C2.json",
+      "31_C2.json"
+    ],
+    "frames_per_config": 12,
+    "real_pinned_native_tracking": true,
+    "real_sof": true,
+    "fixture_images_and_embeddings": "explicitly synthetic, no GT",
+    "shadow_mot_bytes_equal": true,
+    "identity_audit_status": "PASS",
+    "original_a2_integrity_audit_status": "PASS"
+  },
+  "independent_review": {
+    "status": "PASS",
+    "blockers": 0,
+    "independently_repeated_core_native_audit_tests": 59,
+    "documented_boundaries": [
+      "stage-local competition",
+      "quality factor can strongly attenuate ReID",
+      "no abrupt-change anchor reset"
+    ]
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "torch": "2.8.0+cpu",
+    "torchvision": "0.23.0+cpu",
+    "opencv-python-headless": "4.11.0.86",
+    "boxmot": "16.0.11"
+  },
+  "boxmot_source_hashes": {
+    "trackers/botsort/botsort.py": "d8b69ec680b59e915b079994756c27b4bdf81ecd214a2866b97b31122fcdc93d",
+    "trackers/botsort/botsort_track.py": "bcd42eaa3e9d06716fa71749b8983bf7c16d2a96b5829bb97f5c549e0f0cb0bc",
+    "trackers/basetracker.py": "f5eb9838128d999944c444733b18948ae895c3682977eee1e4eeb07046ca04a1",
+    "motion/kalman_filters/aabb/xywh_kf.py": "a12ea28981ac7044bd1c7a60d3701b54754bc88fbd7770eda3fecd4a02a735a2",
+    "utils/matching.py": "c56c0d03e78dbe10e17761b2e95fd4f9064f1cd864d47ac0e45243a907d42096",
+    "trackers/botsort/botsort_utils.py": "99902964de7c01878e5410ba89b2b1da0821db3db0efb5fa6d0c2693d4af4052"
+  },
+  "unchanged_algorithm_sources_sha256": {
+    "botsort_plus/recovery.py": "6ea44c728d30fb06c660ddd3babd4f4a305e5ab204caedc8130901189d1b42d2",
+    "botsort_plus/candidates.py": "9a48209fdc826704726cd03a7391004928e8233243f66039e284f681b71dc138",
+    "botsort_plus/appearance.py": "babaff13f9c8fd2e95561c021b9849a57677a81f73ca2ab5cb9d13528c5c7af5",
+    "botsort_plus/geometry.py": "5bcda3d12e575ee4ac5f5323dd7cfbe249bfe5b1b03375c353057d28b65a5640",
+    "botsort_plus/assignment.py": "aa45363951ea9b35ff4a5d5c3b9e90eb69b10c5c72d01192b2e70e1001e3c8e2",
+    "botsort_plus/birth_policy.py": "ea49630e144668bad7b79dae5673229c3c8786ea0c0bc1986c2ee1008928d66e",
+    "botsort_plus/birth_identity.py": "54efdded7c349ba0e0c0e33d8aed478df68c5141fd54be3fde5f32408b622009",
+    "botsort_plus/types.py": "b72c8f3366896a6a8889d6bd691e7986a550694c7b7471711355a133fbb001fb"
+  },
+  "implementation_and_new_tests_sha256": {
+    "botsort_plus/__init__.py": "90a66638ff59db59c24bac5e8b396c6d0319db227300a4156a1ee71923afc56c",
+    "botsort_plus/adapter_v2.py": "e25a37bc123655af336a538db67829954ca8d538961ba5c8a45d24669a3f0b3e",
+    "botsort_plus/appearance.py": "babaff13f9c8fd2e95561c021b9849a57677a81f73ca2ab5cb9d13528c5c7af5",
+    "botsort_plus/assignment.py": "aa45363951ea9b35ff4a5d5c3b9e90eb69b10c5c72d01192b2e70e1001e3c8e2",
+    "botsort_plus/birth_identity.py": "54efdded7c349ba0e0c0e33d8aed478df68c5141fd54be3fde5f32408b622009",
+    "botsort_plus/birth_policy.py": "ea49630e144668bad7b79dae5673229c3c8786ea0c0bc1986c2ee1008928d66e",
+    "botsort_plus/candidates.py": "9a48209fdc826704726cd03a7391004928e8233243f66039e284f681b71dc138",
+    "botsort_plus/config.py": "bca3f4a026a6707fbec01d7672e57c2069f345a9af54e48147c302928dc7dce1",
+    "botsort_plus/feature_export.py": "dda56497e7db58729c58fe00b6340e9b2f49caea1e594cccd735a6ae5b1753ab",
+    "botsort_plus/geometry.py": "5bcda3d12e575ee4ac5f5323dd7cfbe249bfe5b1b03375c353057d28b65a5640",
+    "botsort_plus/identity_adapter.py": "d097ea504b3e44432ba7f0caee265dc6fa706badcf02955da755133159697f8e",
+    "botsort_plus/identity_reliability.py": "c44cb108c64372ebb49981973a9ef042b3c31730993ae16193151f5d0a8d07cd",
+    "botsort_plus/io.py": "44cbfe26a152cfac5ad0826b27728ed4be6b970cc865bbb6860e5d064d8dd22b",
+    "botsort_plus/native_adapter.py": "f158b2ddfab9c31af5c2a8b75e6e32dfddb7a7273cad822d765f2b595079e114",
+    "botsort_plus/recovery.py": "6ea44c728d30fb06c660ddd3babd4f4a305e5ab204caedc8130901189d1b42d2",
+    "botsort_plus/types.py": "b72c8f3366896a6a8889d6bd691e7986a550694c7b7471711355a133fbb001fb",
+    "tests/botsort_plus/test_identity_audit.py": "cd75fbeb6c268d62fbb68c7ec5be7ec07a772f2ee50faa01ded3a81d247f097f",
+    "tests/botsort_plus/test_identity_native.py": "3b475a0a8fd0637cce4c826bc3789ff2f517b25008ced0f474f3afac877eaa30",
+    "tests/botsort_plus/test_identity_reliability.py": "3c9ba57302a46cc6a6a9f7d4cc4df462f1af57c7230944a27773aef30f45450e",
+    "tests/botsort_plus/test_identity_runner.py": "22d7ba46e1decb5b4421108bdebe065e7a85e3f33ab8f1eed38b88e00a216925",
+    "tools/audit_botsort_plus_identity.py": "ae908a5b7b2fd9a5a345c0c48e8d425d92317546d9227a2d6dfddb988e61fdb2",
+    "tools/check_botsort_plus_legacy.py": "160932d18dbdf87f3ee83718b4b0cdc14c159d00de7dfa54cd584e12c8448a95",
+    "tools/evaluate_botsort_plus.py": "bd4b03c8ca2218b81b046019c3442f5b439bd153aba2abd153b81ba8eb35755d",
+    "tools/run_botsort_plus.py": "2d12ced58c3ebbd3187d1440b3523426daaa590733d0625a0083b547f0eb94ba"
+  },
+  "dataset_evaluation": {
+    "executed": false,
+    "HOTA": null,
+    "IDF1": null,
+    "AssA": null,
+    "IDSW": null,
+    "end_to_end_FPS": null,
+    "reason": "Original full RGB frames and frozen real ReID feature caches are not available in this checkout; no proxy data substituted."
+  }
+}

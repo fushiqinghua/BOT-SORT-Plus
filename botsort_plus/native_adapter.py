@@ -70,6 +70,8 @@ class BoTSORTPlus(BotSort):
         self.model = CacheOnlyEncoder()
         if self.plus.appearance.enabled and not self.with_reid:
             raise ValueError("C requires with_reid=True")
+        if self.plus.identity.enabled and not self.with_reid:
+            raise ValueError("Identity reliability (C2) requires with_reid=True")
         if self.plus.recovery.enabled and self.plus.recovery.max_age > self.max_time_lost:
             raise ValueError("B max_age exceeds the actual FPS-scaled native buffer; "
                              "extend the native buffer explicitly and run the buffer-only control")
@@ -91,6 +93,9 @@ class BoTSORTPlus(BotSort):
             self.birth_policy = BirthPolicy(self.plus.birth_policy)
             self.birth_identity = BirthIdentityGuard(self.plus.birth_identity, self.plus.geometry)
             self.track_origins = {}
+        if self.plus.identity.enabled:
+            from .identity_reliability import IdentityReliability
+            self.identity_reliability = IdentityReliability(self.plus.identity)
 
     def _features(self, dets, embs, features):
         n = len(dets)
@@ -154,6 +159,7 @@ class BoTSORTPlus(BotSort):
         if updated:
             self.last_events.append({"event":"memory_update", "track_id":int(track.id),
                                      "det_index":int(det_index), "modalities":updated})
+        return updated
 
     def _cost(self, tracks, detections, unconfirmed=False):
         ious = iou_distance(tracks,detections)
@@ -185,6 +191,10 @@ class BoTSORTPlus(BotSort):
         return np.minimum(base,appearance)
 
     def _associate(self, tracks, detections, threshold, stage, activated, refound, unconfirmed=False):
+        if self.plus.identity.enabled:
+            from .identity_adapter import associate
+            return associate(self, tracks, detections, threshold, stage,
+                             activated, refound, unconfirmed)
         costs = self._cost(tracks,detections,unconfirmed=unconfirmed)
         matches, u_tracks, u_detections = linear_assignment(costs, thresh=threshold)
         for i,j in matches:

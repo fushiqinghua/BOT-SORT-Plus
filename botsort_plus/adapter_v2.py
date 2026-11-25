@@ -106,6 +106,9 @@ def update_v2(tracker, dets, img, dense):
     tracker.frame_count += 1
     frame = tracker.frame_count
     plus = tracker.plus
+    if plus.identity.enabled:
+        # Freeze past-only identity evidence before any stage can write memory.
+        tracker.identity_reliability.begin_frame(frame)
     activated, refound, lost, removed = [], [], [], []
     all_dets, high, _, low = tracker._split_detections(dets, dense)
     detections = [tracker._detection(row) for row in high]
@@ -139,11 +142,20 @@ def update_v2(tracker, dets, img, dense):
     low_detections = [STrack(row, max_obs=tracker.max_obs) for row in low]
     second_cost = iou_distance(low_tracks, low_detections)
     matches, unmatched_low_tracks, unmatched_low = linear_assignment(second_cost, thresh=.5)
+    if plus.identity.enabled:
+        from .identity_adapter import pair_decisions, apply_match, seed_identity
+        low_decisions = pair_decisions(tracker, low_tracks, low_detections,
+                                      second_cost, "low", .5)
     for i, j in matches:
         track, detection = low_tracks[int(i)], low_detections[int(j)]
-        track.update(detection, frame)
+        if plus.identity.enabled:
+            apply_match(tracker, track, detection, low_decisions[int(i)][int(j)],
+                        reference_cost=second_cost[i, j], applied_cost=second_cost[i, j],
+                        base_cost=second_cost[i, j])
+        else:
+            track.update(detection, frame)
+            tracker._write_memory(track, int(detection.det_ind))
         activated.append(track)
-        tracker._write_memory(track, int(detection.det_ind))
         tracker.last_events.append({"event": "match", "stage": "low", "track_id": int(track.id),
                                     "det_index": int(detection.det_ind),
                                     "cost": float(second_cost[i, j])})
@@ -198,11 +210,18 @@ def update_v2(tracker, dets, img, dense):
             candidate = tracker.candidate_pool.get(match.candidate_id)
             track = eligible[match.track_id]
             detection = tracker._detection(all_dets[match.det_index], trusted_only=True)
-            track.re_activate(detection, frame, new_id=False)
+            if plus.identity.enabled:
+                recovery_decision = pair_decisions(
+                    tracker, [track], [detection], iou_distance([track], [detection]),
+                    "recovery", 1.)[0][0]
+                apply_match(tracker, track, detection, recovery_decision, reactivate=True,
+                            reference_cost=match.cost, applied_cost=match.cost)
+            else:
+                track.re_activate(detection, frame, new_id=False)
+                tracker._write_memory(track, match.det_index)
             refound.append(track)
             lost = [t for t in lost if t.id != track.id]
             consumed.add(match.det_index)
-            tracker._write_memory(track, match.det_index)
             _consume(tracker, match.candidate_id, "recovered")
             _register_origin(tracker, track, "native")
             tracker.last_events.append({"event": "recovered", **asdict(match)})
@@ -228,7 +247,10 @@ def update_v2(tracker, dets, img, dense):
         track.activate(tracker.kalman_filter, frame)
         activated.append(track)
         consumed.add(index)
-        tracker._write_memory(track, index)
+        if plus.identity.enabled:
+            seed_identity(tracker, track, index)
+        else:
+            tracker._write_memory(track, index)
         _register_origin(tracker, track, "native")
         if candidate is not None:
             _consume(tracker, candidate.candidate_id, "native_birth")
@@ -337,6 +359,8 @@ def update_v2(tracker, dets, img, dense):
     _record_output(tracker, output)
     live = {t.id for t in tracker.active_tracks + tracker.lost_stracks if t.state != TrackState.Removed}
     tracker.memories = {tid: value for tid, value in tracker.memories.items() if tid in live}
+    if plus.identity.enabled:
+        tracker.identity_reliability.retain(live)
     tracker.prediction_history = {tid: value for tid, value in tracker.prediction_history.items() if tid in live}
     tracker.last_events.insert(0, {"event": "frame", "frame": frame, "detections": len(dets),
                                   "active": len(tracker.active_tracks), "lost": len(tracker.lost_stracks),

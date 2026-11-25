@@ -1,39 +1,47 @@
-# BoT-SORT-Plus v0.2：A 的分阶段确认与身份约束
+# BoT-SORT-Plus v0.3.0：C2 身份可信度
 
-本版本接续已完成真实实验的 v0.1：主基线为 YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID。针对 A 的持续误起轨和旧身份竞争，实现可独立开关的 E（存在确认）与 I（新身份准入），保留原 B/C 入口。
+本版从 `iteration/v0.2-a2` 的 `6d9c258556a143036cebde891c93079a772b9945` 接续实现。在 **YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID + B** 主基座上，将“接受一次几何关联”与“允许这次观测改写身份外观”分开。
 
-补丁接入后已完成三段 shadow 验收和 30 段、15 组全量回放。默认 A2B 采用 0.18，另有门槛 0.20 的对照。`docs/botsort_plus/validation/` 与 `validation_v0.2/` 记录补丁交付时的软件测试。实跑结果、逐帧证据和复算记录见[第二轮实验索引](results/vttiny/iterations/v0.2-a2/README.md)。
+新增 C2 包括：
 
-## 主要入口
+1. **关联约束**：读取上一帧的可靠身份锚点，以历史一致性、当前阶段双向竞争间隔和现有 crop quality 控制 ReID 加成。可信度不足时回到该原生阶段的几何代价，保持空间门控和匹配阈值。
+2. **记忆写入门控**：几何续轨继续执行，外观写入另行判断；同时覆盖原生 `smooth_feat/curr_feat/features` 与 B 的 `MemoryBank`。B 恢复当帧隔离写入，后续可靠原生匹配可以继续更新。
 
-| 功能 | 文件 |
+当前仅使用已缓存的 RGB 特征，不需要重训模型或新增 thermal 编码器。新配置关闭 A 和旧 C，并限定 `adapter_mode="v2"`。原 `00`—`26` 配置继续保留；关闭 C2 时走原有分支。C2 shadow 只计算诊断，不改变原生或 B 状态。
+
+## 实现与复核入口
+
+| 内容 | 文件 |
 |---|---|
-| 新存在确认与时间状态 | `botsort_plus/birth_policy.py` |
-| 旧身份竞争的只读检查 | `botsort_plus/birth_identity.py` |
-| 原生交接与出生提交 | `botsort_plus/adapter_v2.py` |
-| 原 B 恢复 | `botsort_plus/recovery.py`（算法文件保持 v0.1 字节） |
-| 运行、评估 | `tools/run_botsort_plus.py`、`tools/evaluate_botsort_plus.py` |
-| 输出和事件一致性审计 | `tools/audit_botsort_plus_a2.py` |
-| 机制与理论复核 | `docs/botsort_plus/A2_DESIGN_AND_REVIEW.md` |
-| 接入和回放步骤 | `docs/botsort_plus/A2_INTEGRATION.md` |
-| 完整消融配置矩阵 | `docs/botsort_plus/A2_CONFIGS.md` |
+| 纯 NumPy 身份证据、因果快照、代价约束 | `botsort_plus/identity_reliability.py` |
+| 原生关联与双记忆写入接入 | `botsort_plus/identity_adapter.py` |
+| high / low / unconfirmed / B / birth 调度 | `botsort_plus/native_adapter.py`、`adapter_v2.py` |
+| 设计公式、代码映射与局限 | [C2_DESIGN_AND_REVIEW.md](docs/botsort_plus/C2_DESIGN_AND_REVIEW.md) |
+| 接入和实际数据实验步骤 | [C2_INTEGRATION.md](docs/botsort_plus/C2_INTEGRATION.md) |
+| 参数和消融矩阵 | [C2_CONFIGS.md](docs/botsort_plus/C2_CONFIGS.md) |
+| 新日志审计和统计 | `tools/audit_botsort_plus_identity.py` |
+| 旧版本差分回放 | `tools/check_botsort_plus_legacy.py` |
+| 实际软件验证记录 | [VALIDATION.md](docs/botsort_plus/validation_v0.3/VALIDATION.md) |
 
-## 版本选择
+## 建议运行顺序
 
-- 原配置 `00`—`11` 保留，默认 `adapter_mode="legacy"`，继续走 v0.1 跟踪路径。
-- 新配置 `12`—`26` 显式选择 `adapter_mode="v2"`。原生 lost 列表枚举、A-only 观察旁路与弱出生提交流程构成单独的 v2 基座。
-- `birth.enabled` 是 A 开关；`birth_policy.mode` 选择 `legacy`、`score_window`、`fixed_window` 或 `two_stage`；`birth_identity.enabled` 是 I 开关。
-- `birth_policy.observe_only=true` 记录判断、不提交 A 轨迹。A shadow 与 baseline_ref 比，AB shadow 与 B_ref 比。
-- 新配置全部关闭 C；C 的接口保留，不需要为了运行 A2 另训 thermal ReID。
+| 配置 | 作用 |
+|---|---|
+| `13_B_ref.json` | 同基座参考 |
+| `27_B_C2_shadow.json` | 观察模式，与 B_ref 逐文件一致 |
+| `28_B_C2_memory.json` | 仅应用记忆写入门控 |
+| `29_B_C2_association.json` | 仅应用关联约束 |
+| `30_B_C2.json` | 完整 C2 + B |
+| `12_baseline_ref.json`、`31_C2.json` | 补充 B/C2 互补性对照 |
 
-## 建议首次运行
-
-先看接入说明并复用上轮已经验证的原图、完整特征缓存和固定 BoxMOT 环境。依次运行 `12_baseline_ref`、`13_B_ref`、`25_A2_shadow`、`26_A2B_shadow`，通过观察模式的逐文件一致性检查后，再运行 `16_A2` 和 `19_A2B`。
+沿用上轮固定环境、原始 RGB 图像、完整真实 ReID 缓存和检测缓存。先预检：
 
 ```bash
-python tools/run_botsort_plus.py --config configs/botsort_plus/19_A2B.json --images-root /path/to/VT-Tiny-MOT --features-dir /path/to/features_rgb_plus --output-dir outputs/botsort_plus_v2 --preflight
+python tools/run_botsort_plus.py --baseline-root /path/to/frozen_rgbt --config configs/botsort_plus/30_B_C2.json --images-root /path/to/VT-Tiny-MOT --features-dir /path/to/features_rgb_plus --output-dir outputs/botsort_plus_c2_full30 --preflight
 ```
 
-预检成功后去掉 `--preflight`，添加 `--trace` 正式回放。始终显式指定新的 `--output-dir`；运行器的旧默认目录为兼容性保留，不会自动覆盖旧结果。
+预检 `READY` 后用 `--trace` 替换 `--preflight`，按表顺序回放。完整 shadow、审计、评估命令见接入文档。运行器拒绝覆盖既有结果，参数修改后应使用新的输出根目录。
 
-实际预测不读取 GT、不会回填确认前输出、不会改变过去 ID，也不会用测试图像或伪造特征补齐缺失输入。HOTA 等指标继续由独立的固定 TrackEval 入口计算。
+**软件测试证明机制按设计执行，不等于 C2 的 HOTA 或 IDF1 已有提升。** 默认参数未作本轮真实性能调优；仍需检查整体及逐序列收益、FP/FN、IDSW、写入覆盖率、冷启动比例和新增耗时。完整研究边界和来源在设计文档中说明。
+
+前版入口：[v0.2 说明](docs/botsort_plus/history/README_v0.2.md) · [A2 真实实验与错因](results/vttiny/iterations/v0.2-a2/README.md)。

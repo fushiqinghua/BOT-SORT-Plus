@@ -12,6 +12,7 @@ import numpy as np
 
 import test_runner as fixture_module
 from botsort_plus.config import PlusConfig
+from botsort_plus import __version__
 from botsort_plus.io import detection_fingerprint, sha256, write_json
 
 
@@ -59,7 +60,7 @@ class A2RunnerTests(unittest.TestCase):
             with prediction.open() as stream:
                 results[cfg.name] = [(int(float(r[0])), int(float(r[1]))) for r in csv.reader(stream)]
             protocol = json.loads((f.output / "protocols" / (cfg.name + ".json")).read_text())
-            self.assertEqual(protocol["implementation_version"], "0.2.0")
+            self.assertEqual(protocol["implementation_version"], __version__)
             self.assertEqual(protocol["implementation_sha256"]["botsort_plus/birth_policy.py"],
                              sha256(repo / "botsort_plus/birth_policy.py"))
             self.assertEqual(protocol["status"], "COMPLETE")

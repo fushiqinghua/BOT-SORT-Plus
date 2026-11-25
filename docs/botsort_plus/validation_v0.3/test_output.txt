@@ -1,0 +1,340 @@
+test_alias_mismatch_duplicate_and_missing_canonical_are_errors (test_a2_audit.A2AuditTests.test_alias_mismatch_duplicate_and_missing_canonical_are_errors) ... ok
+test_all_disabled_baseline_allows_empty_trace (test_a2_audit.A2AuditTests.test_all_disabled_baseline_allows_empty_trace) ... ok
+test_cli_writes_failed_report_exits_two_and_never_overwrites (test_a2_audit.A2AuditTests.test_cli_writes_failed_report_exits_two_and_never_overwrites) ... ok
+test_committed_track_must_appear_in_the_same_frame (test_a2_audit.A2AuditTests.test_committed_track_must_appear_in_the_same_frame) ... ok
+test_compare_names_and_path_traversal_are_rejected (test_a2_audit.A2AuditTests.test_compare_names_and_path_traversal_are_rejected) ... ok
+test_duplicate_mot_identity_same_frame_is_rejected (test_a2_audit.A2AuditTests.test_duplicate_mot_identity_same_frame_is_rejected) ... ok
+test_first_emitted_must_match_actual_first_row (test_a2_audit.A2AuditTests.test_first_emitted_must_match_actual_first_row) ... ok
+test_identical_predictions_do_not_override_different_inputs (test_a2_audit.A2AuditTests.test_identical_predictions_do_not_override_different_inputs) ... ok
+test_incomplete_protocol_fails (test_a2_audit.A2AuditTests.test_incomplete_protocol_fails) ... ok
+test_invalid_sequence_contract_returns_failed_report_instead_of_crashing (test_a2_audit.A2AuditTests.test_invalid_sequence_contract_returns_failed_report_instead_of_crashing) ... ok
+test_lifetime_rows_and_recovery_count_are_checked (test_a2_audit.A2AuditTests.test_lifetime_rows_and_recovery_count_are_checked) ... ok
+test_missing_final_lifetime_is_detected (test_a2_audit.A2AuditTests.test_missing_final_lifetime_is_detected) ... ok
+test_missing_shared_input_field_cannot_pass_as_equal_none (test_a2_audit.A2AuditTests.test_missing_shared_input_field_cannot_pass_as_equal_none) ... ok
+test_missing_trace_is_not_silently_accepted (test_a2_audit.A2AuditTests.test_missing_trace_is_not_silently_accepted) ... ok
+test_prediction_hash_mismatch_fails (test_a2_audit.A2AuditTests.test_prediction_hash_mismatch_fails) ... ok
+test_run_audit_does_not_modify_or_access_ground_truth (test_a2_audit.A2AuditTests.test_run_audit_does_not_modify_or_access_ground_truth) ... ok
+test_shadow_comparison_checks_input_contract_then_exact_bytes (test_a2_audit.A2AuditTests.test_shadow_comparison_checks_input_contract_then_exact_bytes) ... ok
+test_truncated_per_frame_trace_is_detected (test_a2_audit.A2AuditTests.test_truncated_per_frame_trace_is_detected) ... ok
+test_valid_run_counts_canonical_birth_once (test_a2_audit.A2AuditTests.test_valid_run_counts_canonical_birth_once) ... ok
+test_all_fifteen_new_configs_roundtrip_without_silent_defaults (test_a2_config.A2ConfigurationTests.test_all_fifteen_new_configs_roundtrip_without_silent_defaults) ... ok
+test_candidate_capacity_covers_requested_evidence_window (test_a2_config.A2ConfigurationTests.test_candidate_capacity_covers_requested_evidence_window) ... ok
+test_custom_a2_settings_require_v2_adapter (test_a2_config.A2ConfigurationTests.test_custom_a2_settings_require_v2_adapter) ... ok
+test_delay_and_score_controls_change_only_the_named_policy_option (test_a2_config.A2ConfigurationTests.test_delay_and_score_controls_change_only_the_named_policy_option) ... ok
+test_invalid_modes_windows_scores_and_identity_flags_fail (test_a2_config.A2ConfigurationTests.test_invalid_modes_windows_scores_and_identity_flags_fail) ... ok
+test_nonobject_json_is_not_silently_loaded_as_baseline (test_a2_config.A2ConfigurationTests.test_nonobject_json_is_not_silently_loaded_as_baseline) ... ok
+test_reference_configs_do_not_enable_a_or_c (test_a2_config.A2ConfigurationTests.test_reference_configs_do_not_enable_a_or_c) ... ok
+test_shadow_changes_only_observation_flag_relative_to_a2 (test_a2_config.A2ConfigurationTests.test_shadow_changes_only_observation_flag_relative_to_a2) ... ok
+test_twelve_original_configs_still_choose_legacy_adapter (test_a2_config.A2ConfigurationTests.test_twelve_original_configs_still_choose_legacy_adapter) ... ok
+test_two_by_two_ablation_changes_e_and_i_explicitly (test_a2_config.A2ConfigurationTests.test_two_by_two_ablation_changes_e_and_i_explicitly) ... ok
+test_unknown_top_level_or_nested_keys_fail (test_a2_config.A2ConfigurationTests.test_unknown_top_level_or_nested_keys_fail) ... ok
+test_A_evidence_rejection_does_not_remove_B_candidates (test_a2_native.A2NativeTests.test_A_evidence_rejection_does_not_remove_B_candidates) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_a_only_does_not_steal_or_recover_lost_identity_even_after_wait_expires (test_a2_native.A2NativeTests.test_a_only_does_not_steal_or_recover_lost_identity_even_after_wait_expires) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_b_recovers_on_third_weak_observation_before_A_confirmation (test_a2_native.A2NativeTests.test_b_recovers_on_third_weak_observation_before_A_confirmation) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_commit_alias_and_lifetime_do_not_count_candidate_as_public_history (test_a2_native.A2NativeTests.test_commit_alias_and_lifetime_do_not_count_candidate_as_public_history) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_low_support_publishes_only_on_fifth_observation (test_a2_native.A2NativeTests.test_low_support_publishes_only_on_fifth_observation) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_missing_weak_features_do_not_forbid_existence_confirmation (test_a2_native.A2NativeTests.test_missing_weak_features_do_not_forbid_existence_confirmation) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_native_duplicate_preflight_does_not_consume_or_write_identity (test_a2_native.A2NativeTests.test_native_duplicate_preflight_does_not_consume_or_write_identity) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_native_high_birth_preempts_A_verification_without_A_delay (test_a2_native.A2NativeTests.test_native_high_birth_preempts_A_verification_without_A_delay) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_native_removed_list_enumeration_parity_is_restored_in_shadow (test_a2_native.A2NativeTests.test_native_removed_list_enumeration_parity_is_restored_in_shadow) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=4, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=4, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_shadow_matches_B_reference_with_recovery_and_duplicate_candidates (test_a2_native.A2NativeTests.test_shadow_matches_B_reference_with_recovery_and_duplicate_candidates) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_shadow_matches_native_with_duplicate_high_births_and_failed_epochs (test_a2_native.A2NativeTests.test_shadow_matches_native_with_duplicate_high_births_and_failed_epochs) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_shadow_ready_has_no_effect_on_native_or_public_id_counter (test_a2_native.A2NativeTests.test_shadow_ready_has_no_effect_on_native_or_public_id_counter) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_stable_near_floor_detections_do_not_become_existence_evidence (test_a2_native.A2NativeTests.test_stable_near_floor_detections_do_not_become_existence_evidence) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_strict_native_half_score_boundary_survives_A2 (test_a2_native.A2NativeTests.test_strict_native_half_score_boundary_survives_A2) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_real_cli_two_stage_recovery_shadow_and_audit (test_a2_runner.A2RunnerTests.test_real_cli_two_stage_recovery_shadow_and_audit) ... ok
+test_antipodal_ema_does_not_create_zero_memory (test_appearance.AppearanceTests.test_antipodal_ema_does_not_create_zero_memory) ... ok
+test_configuration_validation (test_appearance.AppearanceTests.test_configuration_validation) ... ok
+test_dimension_change_is_not_cross_modal_comparison (test_appearance.AppearanceTests.test_dimension_change_is_not_cross_modal_comparison) ... ok
+test_fixed_fusion_ablation_only_changes_weights (test_appearance.AppearanceTests.test_fixed_fusion_ablation_only_changes_weights) ... ok
+test_historical_quality_also_limits_weight (test_appearance.AppearanceTests.test_historical_quality_also_limits_weight) ... ok
+test_input_cache_is_not_normalized_in_place (test_appearance.AppearanceTests.test_input_cache_is_not_normalized_in_place) ... ok
+test_invalid_packet_does_not_partially_update_memory (test_appearance.AppearanceTests.test_invalid_packet_does_not_partially_update_memory) ... ok
+test_low_quality_observation_does_not_poison_prototype (test_appearance.AppearanceTests.test_low_quality_observation_does_not_poison_prototype) ... ok
+test_missing_thermal_falls_back_to_rgb (test_appearance.AppearanceTests.test_missing_thermal_falls_back_to_rgb) ... ok
+test_quality_shift_changes_match_preference (test_appearance.AppearanceTests.test_quality_shift_changes_match_preference) ... ok
+test_read_before_write_association_is_pure (test_appearance.AppearanceTests.test_read_before_write_association_is_pure) ... ok
+test_rgb_only_quality_control_does_not_require_thermal (test_appearance.AppearanceTests.test_rgb_only_quality_control_does_not_require_thermal) ... ok
+test_scale_is_explicit_and_bad_match_is_not_missing (test_appearance.AppearanceTests.test_scale_is_explicit_and_bad_match_is_not_missing) ... ok
+test_separate_spaces_support_different_dimensions (test_appearance.AppearanceTests.test_separate_spaces_support_different_dimensions) ... ok
+test_zero_quality_even_with_identical_vectors_is_unavailable (test_appearance.AppearanceTests.test_zero_quality_even_with_identical_vectors_is_unavailable) ... ok
+test_zero_vectors_are_missing_not_perfect_similarity (test_appearance.AppearanceTests.test_zero_vectors_are_missing_not_perfect_similarity) ... ok
+test_bad_intensity_and_box_are_not_silently_accepted (test_appearance.QualityTests.test_bad_intensity_and_box_are_not_silently_accepted) ... ok
+test_clipped_crop_penalized (test_appearance.QualityTests.test_clipped_crop_penalized) ... ok
+test_flat_and_outside_images_have_no_appearance_quality (test_appearance.QualityTests.test_flat_and_outside_images_have_no_appearance_quality) ... ok
+test_native_tiny_crop_has_less_information_than_large_crop (test_appearance.QualityTests.test_native_tiny_crop_has_less_information_than_large_crop) ... ok
+test_thermal_uint16_and_normalized_float_are_supported (test_appearance.QualityTests.test_thermal_uint16_and_normalized_float_are_supported) ... ok
+test_bad_past_geometry_does_not_clear_a_near_current_pair (test_birth_identity.BirthIdentityTests.test_bad_past_geometry_does_not_clear_a_near_current_pair) ... ok
+test_config_and_nondecreasing_frame_validation (test_birth_identity.BirthIdentityTests.test_config_and_nondecreasing_frame_validation) ... ok
+test_current_far_geometry_excludes_old_identity (test_birth_identity.BirthIdentityTests.test_current_far_geometry_excludes_old_identity) ... ok
+test_current_observation_is_required_even_without_lost_tracks (test_birth_identity.BirthIdentityTests.test_current_observation_is_required_even_without_lost_tracks) ... ok
+test_disabled_guard_does_not_inspect_or_reserve (test_birth_identity.BirthIdentityTests.test_disabled_guard_does_not_inspect_or_reserve) ... ok
+test_expired_and_currently_observed_views_are_not_lost_candidates (test_birth_identity.BirthIdentityTests.test_expired_and_currently_observed_views_are_not_lost_candidates) ... ok
+test_forget_releases_private_bookkeeping_only (test_birth_identity.BirthIdentityTests.test_forget_releases_private_bookkeeping_only) ... ok
+test_guard_reads_but_does_not_modify_candidate_prediction_or_memory (test_birth_identity.BirthIdentityTests.test_guard_reads_but_does_not_modify_candidate_prediction_or_memory) ... ok
+test_history_overlapping_last_seen_does_not_certify_new_identity (test_birth_identity.BirthIdentityTests.test_history_overlapping_last_seen_does_not_certify_new_identity) ... ok
+test_inherits_earlier_B_start_and_does_not_wait_twice (test_birth_identity.BirthIdentityTests.test_inherits_earlier_B_start_and_does_not_wait_twice) ... ok
+test_invalid_appearance_results_fail_closed (test_birth_identity.BirthIdentityTests.test_invalid_appearance_results_fail_closed) ... ok
+test_invalid_histories_and_futures_fail_without_mutating_clock (test_birth_identity.BirthIdentityTests.test_invalid_histories_and_futures_fail_without_mutating_clock) ... ok
+test_invalid_views_prediction_or_reservation_fail (test_birth_identity.BirthIdentityTests.test_invalid_views_prediction_or_reservation_fail) ... ok
+test_later_clear_observation_does_not_reset_an_expired_clock (test_birth_identity.BirthIdentityTests.test_later_clear_observation_does_not_reset_an_expired_clock) ... ok
+test_misses_and_changed_competitor_do_not_reset_clock (test_birth_identity.BirthIdentityTests.test_misses_and_changed_competitor_do_not_reset_clock) ... ok
+test_missing_current_prediction_is_unknown_not_far (test_birth_identity.BirthIdentityTests.test_missing_current_prediction_is_unknown_not_far) ... ok
+test_missing_historical_prediction_does_not_clear_current_risk (test_birth_identity.BirthIdentityTests.test_missing_historical_prediction_does_not_clear_current_risk) ... ok
+test_near_current_without_appearance_defers (test_birth_identity.BirthIdentityTests.test_near_current_without_appearance_defers) ... ok
+test_no_lost_identity_is_clear_but_not_a_recovery (test_birth_identity.BirthIdentityTests.test_no_lost_identity_is_clear_but_not_a_recovery) ... ok
+test_nonrenewable_budget_rejects_conflict_at_expiry (test_birth_identity.BirthIdentityTests.test_nonrenewable_budget_rejects_conflict_at_expiry) ... ok
+test_old_appearance_contradiction_with_missing_current_stays_unknown (test_birth_identity.BirthIdentityTests.test_old_appearance_contradiction_with_missing_current_stays_unknown) ... ok
+test_one_excluded_old_id_does_not_hide_another_competitor (test_birth_identity.BirthIdentityTests.test_one_excluded_old_id_does_not_hide_another_competitor) ... ok
+test_tiny_boxes_with_low_iou_still_have_identity_risk (test_birth_identity.BirthIdentityTests.test_tiny_boxes_with_low_iou_still_have_identity_risk) ... ok
+test_trusted_current_appearance_contradiction_can_exclude_old_id (test_birth_identity.BirthIdentityTests.test_trusted_current_appearance_contradiction_can_exclude_old_id) ... ok
+test_uncertainty_never_removes_the_absolute_search_cap (test_birth_identity.BirthIdentityTests.test_uncertainty_never_removes_the_absolute_search_cap) ... ok
+test_collection_window_counts_real_gaps (test_birth_policy.BirthPolicyTests.test_collection_window_counts_real_gaps) ... ok
+test_collection_window_drops_old_hits (test_birth_policy.BirthPolicyTests.test_collection_window_drops_old_hits) ... ok
+test_explicit_modes_have_different_confirmation_semantics (test_birth_policy.BirthPolicyTests.test_explicit_modes_have_different_confirmation_semantics) ... ok
+test_failed_epoch_cannot_reuse_past_observations (test_birth_policy.BirthPolicyTests.test_failed_epoch_cannot_reuse_past_observations) ... ok
+test_first_window_spike_cannot_be_reused_as_new_score_support (test_birth_policy.BirthPolicyTests.test_first_window_spike_cannot_be_reused_as_new_score_support) ... ok
+test_five_supported_weak_frames_confirm_on_current_fifth_frame (test_birth_policy.BirthPolicyTests.test_five_supported_weak_frames_confirm_on_current_fifth_frame) ... ok
+test_forget_clears_only_private_state (test_birth_policy.BirthPolicyTests.test_forget_clears_only_private_state) ... ok
+test_future_duplicate_or_unsorted_observations_fail (test_birth_policy.BirthPolicyTests.test_future_duplicate_or_unsorted_observations_fail) ... ok
+test_inconsistent_or_noninteger_observation_metadata_fail (test_birth_policy.BirthPolicyTests.test_inconsistent_or_noninteger_observation_metadata_fail) ... ok
+test_invalid_frame_candidate_and_configuration_fail (test_birth_policy.BirthPolicyTests.test_invalid_frame_candidate_and_configuration_fail) ... ok
+test_legacy_obeys_original_evidence_threshold (test_birth_policy.BirthPolicyTests.test_legacy_obeys_original_evidence_threshold) ... ok
+test_near_floor_stability_does_not_become_existence_support (test_birth_policy.BirthPolicyTests.test_near_floor_stability_does_not_become_existence_support) ... ok
+test_new_modes_do_not_access_geometric_evidence (test_birth_policy.BirthPolicyTests.test_new_modes_do_not_access_geometric_evidence) ... ok
+test_observe_only_preserves_decisions_and_history (test_birth_policy.BirthPolicyTests.test_observe_only_preserves_decisions_and_history) ... ok
+test_old_ready_is_invalidated_by_new_low_scores (test_birth_policy.BirthPolicyTests.test_old_ready_is_invalidated_by_new_low_scores) ... ok
+test_old_ready_requires_fresh_support_and_current_detection (test_birth_policy.BirthPolicyTests.test_old_ready_requires_fresh_support_and_current_detection) ... ok
+test_same_frame_is_idempotent_and_decision_stats_are_not_shared (test_birth_policy.BirthPolicyTests.test_same_frame_is_idempotent_and_decision_stats_are_not_shared) ... ok
+test_shared_pool_and_candidate_are_not_mutated (test_birth_policy.BirthPolicyTests.test_shared_pool_and_candidate_are_not_mutated) ... ok
+test_skipped_frame_and_backward_clock_fail (test_birth_policy.BirthPolicyTests.test_skipped_frame_and_backward_clock_fail) ... ok
+test_success_on_last_allowed_frame_is_accepted (test_birth_policy.BirthPolicyTests.test_success_on_last_allowed_frame_is_accepted) ... ok
+test_verify_deadline_counts_missing_video_frames (test_birth_policy.BirthPolicyTests.test_verify_deadline_counts_missing_video_frames) ... ok
+test_ambiguous_crossing_rejects_hit_and_new_seed (test_candidates.CandidateMechanismTests.test_ambiguous_crossing_rejects_hit_and_new_seed) ... ok
+test_duplicate_detection_cannot_double_evidence (test_candidates.CandidateMechanismTests.test_duplicate_detection_cannot_double_evidence) ... ok
+test_empty_frames_advance_clock_and_no_backfill (test_candidates.CandidateMechanismTests.test_empty_frames_advance_clock_and_no_backfill) ... ok
+test_expired_candidate_gets_fresh_identity_and_capacity_is_bounded (test_candidates.CandidateMechanismTests.test_expired_candidate_gets_fresh_identity_and_capacity_is_bounded) ... ok
+test_fixed_hits_is_real_ablation (test_candidates.CandidateMechanismTests.test_fixed_hits_is_real_ablation) ... ok
+test_gmc_transports_prediction_not_historical_observations (test_candidates.CandidateMechanismTests.test_gmc_transports_prediction_not_historical_observations) ... ok
+test_isolated_false_positive_expires (test_candidates.CandidateMechanismTests.test_isolated_false_positive_expires) ... ok
+test_missing_hit_reduces_evidence_and_requires_current_hit (test_candidates.CandidateMechanismTests.test_missing_hit_reduces_evidence_and_requires_current_hit) ... ok
+test_nonconsecutive_and_invalid_configuration_fail_closed (test_candidates.CandidateMechanismTests.test_nonconsecutive_and_invalid_configuration_fail_closed) ... ok
+test_occupied_track_invalidates_candidate_before_evidence (test_candidates.CandidateMechanismTests.test_occupied_track_invalidates_candidate_before_evidence) ... ok
+test_three_tiny_jitter_hits_confirm_only_now (test_candidates.CandidateMechanismTests.test_three_tiny_jitter_hits_confirm_only_now) ... ok
+test_window_counts_do_not_keep_old_hits_forever (test_candidates.CandidateMechanismTests.test_window_counts_do_not_keep_old_hits_forever) ... ok
+test_claiming_full_test_with_two_sequences_rejected (test_evaluation_contract.EvaluationContractTests.test_claiming_full_test_with_two_sequences_rejected) ... ok
+test_duplicate_output_id_rejected_even_if_hash_matches (test_evaluation_contract.EvaluationContractTests.test_duplicate_output_id_rejected_even_if_hash_matches) ... ok
+test_extra_or_missing_sequence_file_rejected (test_evaluation_contract.EvaluationContractTests.test_extra_or_missing_sequence_file_rejected) ... ok
+test_frame_outside_declared_video_rejected (test_evaluation_contract.EvaluationContractTests.test_frame_outside_declared_video_rejected) ... ok
+test_gt_all_sequences_required_empty_gt_allowed (test_evaluation_contract.EvaluationContractTests.test_gt_all_sequences_required_empty_gt_allowed) ... ok
+test_historical_full_metrics_never_compared_to_subset (test_evaluation_contract.EvaluationContractTests.test_historical_full_metrics_never_compared_to_subset) ... ok
+test_historical_reference_requires_full_matching_protocol_and_context (test_evaluation_contract.EvaluationContractTests.test_historical_reference_requires_full_matching_protocol_and_context) ... ok
+test_incomplete_and_wrong_schema_rejected (test_evaluation_contract.EvaluationContractTests.test_incomplete_and_wrong_schema_rejected) ... ok
+test_missing_reference_has_no_invented_delta (test_evaluation_contract.EvaluationContractTests.test_missing_reference_has_no_invented_delta) ... ok
+test_mixed_feature_or_detector_identity_rejected (test_evaluation_contract.EvaluationContractTests.test_mixed_feature_or_detector_identity_rejected) ... ok
+test_mixed_sequence_scope_rejected (test_evaluation_contract.EvaluationContractTests.test_mixed_sequence_scope_rejected) ... ok
+test_name_mismatch_and_path_traversal_rejected (test_evaluation_contract.EvaluationContractTests.test_name_mismatch_and_path_traversal_rejected) ... ok
+test_rgb_only_and_rgb_thermal_runs_allowed_but_shared_thermal_contract_fixed (test_evaluation_contract.EvaluationContractTests.test_rgb_only_and_rgb_thermal_runs_allowed_but_shared_thermal_contract_fixed) ... ok
+test_same_rgb_weights_different_preprocessing_rejected (test_evaluation_contract.EvaluationContractTests.test_same_rgb_weights_different_preprocessing_rejected) ... ok
+test_same_run_baseline_deltas_use_combined_row (test_evaluation_contract.EvaluationContractTests.test_same_run_baseline_deltas_use_combined_row) ... ok
+test_same_weights_different_detection_content_rejected (test_evaluation_contract.EvaluationContractTests.test_same_weights_different_detection_content_rejected) ... ok
+test_stale_predictions_are_rejected (test_evaluation_contract.EvaluationContractTests.test_stale_predictions_are_rejected) ... ok
+test_trackeval_allows_only_mechanical_line_ending_difference (test_evaluation_contract.EvaluationContractTests.test_trackeval_allows_only_mechanical_line_ending_difference) ... ok
+test_valid_runs_include_empty_prediction_sequence_and_empty_tail (test_evaluation_contract.EvaluationContractTests.test_valid_runs_include_empty_prediction_sequence_and_empty_tail) ... ok
+test_alignment_low_score_coverage_and_checksum (test_feature_export.ExportTests.test_alignment_low_score_coverage_and_checksum) ... ok
+test_empty_sequence_has_aligned_empty_features (test_feature_export.ExportTests.test_empty_sequence_has_aligned_empty_features) ... ok
+test_overwrite_requires_explicit_switch (test_feature_export.ExportTests.test_overwrite_requires_explicit_switch) ... ok
+test_real_but_flat_crop_is_valid_with_zero_quality (test_feature_export.ExportTests.test_real_but_flat_crop_is_valid_with_zero_quality) ... ok
+test_rgb_rounded_degenerate_high_box_fails (test_feature_export.ExportTests.test_rgb_rounded_degenerate_high_box_fails) ... ok
+test_thermal_requires_mapping_and_retains_separate_arrays (test_feature_export.ExportTests.test_thermal_requires_mapping_and_retains_separate_arrays) ... ok
+test_zero_high_score_feature_fails_without_publishing (test_feature_export.ExportTests.test_zero_high_score_feature_fails_without_publishing) ... ok
+test_zero_low_score_output_remains_invalid (test_feature_export.ExportTests.test_zero_low_score_output_remains_invalid) ... ok
+test_alignment_must_be_declared (test_feature_export.SpatialMappingTests.test_alignment_must_be_declared) ... ok
+test_empty_boxes (test_feature_export.SpatialMappingTests.test_empty_boxes) ... ok
+test_four_corner_homography_and_clipping (test_feature_export.SpatialMappingTests.test_four_corner_homography_and_clipping) ... ok
+test_horizon_crossing_and_singular_matrix_rejected (test_feature_export.SpatialMappingTests.test_horizon_crossing_and_singular_matrix_rejected) ... ok
+test_mapped_clipping_retains_quality_penalty (test_feature_export.SpatialMappingTests.test_mapped_clipping_retains_quality_penalty) ... ok
+test_real_torchscript_execution_and_explicit_preprocessing (test_feature_export.ThermalTorchScriptTests.test_real_torchscript_execution_and_explicit_preprocessing) ... ok
+test_all_forbidden_rectangular_and_empty_inputs (test_geometry_assignment.AssignmentCounterexamples.test_all_forbidden_rectangular_and_empty_inputs) ... ok
+test_exact_acceptance_boundary_is_rejected (test_geometry_assignment.AssignmentCounterexamples.test_exact_acceptance_boundary_is_rejected) ... ok
+test_global_assignment_can_preserve_two_nonconflicting_matches (test_geometry_assignment.AssignmentCounterexamples.test_global_assignment_can_preserve_two_nonconflicting_matches) ... ok
+test_invalid_cost_or_margin_rejected (test_geometry_assignment.AssignmentCounterexamples.test_invalid_cost_or_margin_rejected) ... ok
+test_margin_is_measured_before_rival_deletion (test_geometry_assignment.AssignmentCounterexamples.test_margin_is_measured_before_rival_deletion) ... ok
+test_mutual_margin_rejects_row_tie_and_column_tie (test_geometry_assignment.AssignmentCounterexamples.test_mutual_margin_rejects_row_tie_and_column_tie) ... ok
+test_reject_is_optimized_not_post_hoc_filtering (test_geometry_assignment.AssignmentCounterexamples.test_reject_is_optimized_not_post_hoc_filtering) ... ok
+test_covariance_contract_rejects_non_psd_and_nonfinite (test_geometry_assignment.GeometryCounterexamples.test_covariance_contract_rejects_non_psd_and_nonfinite) ... ok
+test_more_uncertainty_cannot_make_an_existing_match_cheaper (test_geometry_assignment.GeometryCounterexamples.test_more_uncertainty_cannot_make_an_existing_match_cheaper) ... ok
+test_rotation_uses_all_box_corners (test_geometry_assignment.GeometryCounterexamples.test_rotation_uses_all_box_corners) ... ok
+test_size_gate_and_pixel_floor_are_explicit (test_geometry_assignment.GeometryCounterexamples.test_size_gate_and_pixel_floor_are_explicit) ... ok
+test_tiny_one_pixel_diagonal_shift_has_low_iou_but_finite_cost (test_geometry_assignment.GeometryCounterexamples.test_tiny_one_pixel_diagonal_shift_has_low_iou_but_finite_cost) ... ok
+test_uncertainty_can_expand_search_but_only_up_to_pixel_cap (test_geometry_assignment.GeometryCounterexamples.test_uncertainty_can_expand_search_but_only_up_to_pixel_cap) ... ok
+test_cli_writes_new_report_and_refuses_overwrite_or_evidence_path (test_identity_audit.IdentityAuditTests.test_cli_writes_new_report_and_refuses_overwrite_or_evidence_path) ... ok
+test_comparison_requires_same_inputs_and_foundation_config (test_identity_audit.IdentityAuditTests.test_comparison_requires_same_inputs_and_foundation_config) ... ok
+test_complete_trace_reports_stage_counts_and_numeric_population (test_identity_audit.IdentityAuditTests.test_complete_trace_reports_stage_counts_and_numeric_population) ... ok
+test_configuration_identity_and_name_mismatches_fail (test_identity_audit.IdentityAuditTests.test_configuration_identity_and_name_mismatches_fail) ... ok
+test_cost_roundoff_does_not_create_false_audit_failure (test_identity_audit.IdentityAuditTests.test_cost_roundoff_does_not_create_false_audit_failure) ... ok
+test_custom_memory_claim_must_have_matching_memory_update (test_identity_audit.IdentityAuditTests.test_custom_memory_claim_must_have_matching_memory_update) ... ok
+test_disabled_reference_has_no_identity_statistics (test_identity_audit.IdentityAuditTests.test_disabled_reference_has_no_identity_statistics) ... ok
+test_low_native_writer_and_recovery_private_write_are_rejected (test_identity_audit.IdentityAuditTests.test_low_native_writer_and_recovery_private_write_are_rejected) ... ok
+test_missing_decisions_associations_or_write_logs_fail (test_identity_audit.IdentityAuditTests.test_missing_decisions_associations_or_write_logs_fail) ... ok
+test_missing_or_empty_trace_is_not_zero_evidence (test_identity_audit.IdentityAuditTests.test_missing_or_empty_trace_is_not_zero_evidence) ... ok
+test_nonfinite_json_is_rejected (test_identity_audit.IdentityAuditTests.test_nonfinite_json_is_rejected) ... ok
+test_shadow_must_preserve_old_writers_even_when_private_gate_rejects (test_identity_audit.IdentityAuditTests.test_shadow_must_preserve_old_writers_even_when_private_gate_rejects) ... ok
+test_unconfirmed_bounds_use_fused_base_not_raw_iou (test_identity_audit.IdentityAuditTests.test_unconfirmed_bounds_use_fused_base_not_raw_iou) ... ok
+test_wrong_runtime_flags_and_missing_numeric_fields_fail (test_identity_audit.IdentityAuditTests.test_wrong_runtime_flags_and_missing_numeric_fields_fail) ... ok
+test_association_only_does_not_apply_memory_gate (test_identity_native.IdentityNativeTests.test_association_only_does_not_apply_memory_gate) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_cache_and_detection_inputs_are_not_normalized_in_place (test_identity_native.IdentityNativeTests.test_cache_and_detection_inputs_are_not_normalized_in_place) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_config_bridge_defaults_and_round_trip (test_identity_native.IdentityNativeTests.test_config_bridge_defaults_and_round_trip) ... ok
+test_config_bridge_rejects_legacy_a_and_old_c_combinations (test_identity_native.IdentityNativeTests.test_config_bridge_rejects_legacy_a_and_old_c_combinations) ... ok
+test_config_bridge_rejects_unknown_section_keys_and_nonobjects (test_identity_native.IdentityNativeTests.test_config_bridge_rejects_unknown_section_keys_and_nonobjects) ... ok
+test_low_matches_preserve_native_no_write_semantics_and_gate_custom_memory (test_identity_native.IdentityNativeTests.test_low_matches_preserve_native_no_write_semantics_and_gate_custom_memory) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_low_quality_birth_has_no_native_seed_and_can_bootstrap_on_good_high (test_identity_native.IdentityNativeTests.test_low_quality_birth_has_no_native_seed_and_can_bootstrap_on_good_high) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_mature_appearance_ties_remove_bonus_in_actual_high_assignment (test_identity_native.IdentityNativeTests.test_mature_appearance_ties_remove_bonus_in_actual_high_assignment) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_memory_gate_keeps_geometric_track_but_freezes_both_appearance_paths (test_identity_native.IdentityNativeTests.test_memory_gate_keeps_geometric_track_but_freezes_both_appearance_paths) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_native_constructor_rejects_identity_without_reid (test_identity_native.IdentityNativeTests.test_native_constructor_rejects_identity_without_reid) ... ok
+test_real_b_recovery_quarantines_memory_then_reliable_native_update_resumes (test_identity_native.IdentityNativeTests.test_real_b_recovery_quarantines_memory_then_reliable_native_update_resumes) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_same_frame_high_commit_cannot_refresh_unconfirmed_read_snapshot (test_identity_native.IdentityNativeTests.test_same_frame_high_commit_cannot_refresh_unconfirmed_read_snapshot) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_shadow_is_exact_reference_for_outputs_and_all_shared_state (test_identity_native.IdentityNativeTests.test_shadow_is_exact_reference_for_outputs_and_all_shared_state) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_defaults_and_disabled_ablation (test_identity_reliability.IdentityConfigTests.test_defaults_and_disabled_ablation) ... ok
+test_strict_flags_numbers_and_ranges (test_identity_reliability.IdentityConfigTests.test_strict_flags_numbers_and_ranges) ... ok
+test_bidirectional_distinct_competitors_support_correct_pair (test_identity_reliability.IdentityReliabilityTests.test_bidirectional_distinct_competitors_support_correct_pair) ... ok
+test_birth_is_provisional_and_warmup_is_reference_fallback (test_identity_reliability.IdentityReliabilityTests.test_birth_is_provisional_and_warmup_is_reference_fallback) ... ok
+test_calibrated_cost_remains_between_reference_and_geometry (test_identity_reliability.IdentityReliabilityTests.test_calibrated_cost_remains_between_reference_and_geometry) ... ok
+test_calibration_limits_and_tolerates_only_roundoff (test_identity_reliability.IdentityReliabilityTests.test_calibration_limits_and_tolerates_only_roundoff) ... ok
+test_cold_seed_requires_unique_strong_geometry (test_identity_reliability.IdentityReliabilityTests.test_cold_seed_requires_unique_strong_geometry) ... ok
+test_current_feature_is_never_its_own_history (test_identity_reliability.IdentityReliabilityTests.test_current_feature_is_never_its_own_history) ... ok
+test_dimensions_and_malformed_embeddings_fail (test_identity_reliability.IdentityReliabilityTests.test_dimensions_and_malformed_embeddings_fail) ... ok
+test_empty_matrices_and_global_detection_indices (test_identity_reliability.IdentityReliabilityTests.test_empty_matrices_and_global_detection_indices) ... ok
+test_features_are_copied_and_anchor_is_read_only (test_identity_reliability.IdentityReliabilityTests.test_features_are_copied_and_anchor_is_read_only) ... ok
+test_frame_snapshot_is_unchanged_by_an_earlier_commit (test_identity_reliability.IdentityReliabilityTests.test_frame_snapshot_is_unchanged_by_an_earlier_commit) ... ok
+test_geometrically_impossible_rival_does_not_create_ambiguity (test_identity_reliability.IdentityReliabilityTests.test_geometrically_impossible_rival_does_not_create_ambiguity) ... ok
+test_gradual_legitimate_change_continues_updating (test_identity_reliability.IdentityReliabilityTests.test_gradual_legitimate_change_continues_updating) ... ok
+test_history_conflict_freezes_without_geometry_rejection (test_identity_reliability.IdentityReliabilityTests.test_history_conflict_freezes_without_geometry_rejection) ... ok
+test_immature_rival_track_stays_unknown (test_identity_reliability.IdentityReliabilityTests.test_immature_rival_track_stays_unknown) ... ok
+test_invalid_matrix_indices_and_stage_are_rejected (test_identity_reliability.IdentityReliabilityTests.test_invalid_matrix_indices_and_stage_are_rejected) ... ok
+test_large_rectangular_1280d_smoke (test_identity_reliability.IdentityReliabilityTests.test_large_rectangular_1280d_smoke) ... ok
+test_low_cannot_seed_or_mature_but_can_update_trusted_identity (test_identity_reliability.IdentityReliabilityTests.test_low_cannot_seed_or_mature_but_can_update_trusted_identity) ... ok
+test_missing_bad_quality_birth_does_not_create_history (test_identity_reliability.IdentityReliabilityTests.test_missing_bad_quality_birth_does_not_create_history) ... ok
+test_missing_low_quality_and_zero_cannot_provide_bonus (test_identity_reliability.IdentityReliabilityTests.test_missing_low_quality_and_zero_cannot_provide_bonus) ... ok
+test_missing_rival_stays_in_competition (test_identity_reliability.IdentityReliabilityTests.test_missing_rival_stays_in_competition) ... ok
+test_one_commit_per_identity_per_frame (test_identity_reliability.IdentityReliabilityTests.test_one_commit_per_identity_per_frame) ... ok
+test_optimized_aggregation_matches_bruteforce_randomized (test_identity_reliability.IdentityReliabilityTests.test_optimized_aggregation_matches_bruteforce_randomized) ... ok
+test_own_outside_geometry_never_gains_or_writes (test_identity_reliability.IdentityReliabilityTests.test_own_outside_geometry_never_gains_or_writes) ... ok
+test_provisional_conflict_cannot_self_certify_reset (test_identity_reliability.IdentityReliabilityTests.test_provisional_conflict_cannot_self_certify_reset) ... ok
+test_recovery_quarantine_independent_of_geometry (test_identity_reliability.IdentityReliabilityTests.test_recovery_quarantine_independent_of_geometry) ... ok
+test_retain_bounds_lifecycle_memory_and_json_is_finite (test_identity_reliability.IdentityReliabilityTests.test_retain_bounds_lifecycle_memory_and_json_is_finite) ... ok
+test_row_tie_and_column_tie_both_freeze (test_identity_reliability.IdentityReliabilityTests.test_row_tie_and_column_tie_both_freeze) ... ok
+test_singleton_has_no_fabricated_infinite_margin (test_identity_reliability.IdentityReliabilityTests.test_singleton_has_no_fabricated_infinite_margin) ... ok
+test_singleton_requires_strong_geometry_for_memory (test_identity_reliability.IdentityReliabilityTests.test_singleton_requires_strong_geometry_for_memory) ... ok
+test_wrong_frame_wrong_identity_and_mutated_packet_rejected (test_identity_reliability.IdentityReliabilityTests.test_wrong_frame_wrong_identity_and_mutated_packet_rejected) ... ok
+test_all_seven_configs_preflight_replay_protocols_and_shadow_audit (test_identity_runner.IdentityRunnerTests.test_all_seven_configs_preflight_replay_protocols_and_shadow_audit) ... ok
+test_c_rejects_all_invalid_thermal_and_missing_provenance (test_io.CacheIOTests.test_c_rejects_all_invalid_thermal_and_missing_provenance) ... ok
+test_c_requires_real_thermal_and_explicit_mapping (test_io.CacheIOTests.test_c_requires_real_thermal_and_explicit_mapping) ... ok
+test_changed_detector_or_class_changes_fingerprint (test_io.CacheIOTests.test_changed_detector_or_class_changes_fingerprint) ... ok
+test_checkpoint_mismatch_rejected (test_io.CacheIOTests.test_checkpoint_mismatch_rejected) ... ok
+test_checksum_tampering_rejected (test_io.CacheIOTests.test_checksum_tampering_rejected) ... ok
+test_declared_embedding_dimension_is_checked (test_io.CacheIOTests.test_declared_embedding_dimension_is_checked) ... ok
+test_detector_row_permutation_rejected (test_io.CacheIOTests.test_detector_row_permutation_rejected) ... ok
+test_frame_packets_follow_exact_offsets_including_empty_frame (test_io.CacheIOTests.test_frame_packets_follow_exact_offsets_including_empty_frame) ... ok
+test_ground_truth_guard_blocks_strings_bytes_and_paths (test_io.CacheIOTests.test_ground_truth_guard_blocks_strings_bytes_and_paths) ... ok
+test_json_and_gzip_share_content_fingerprint (test_io.CacheIOTests.test_json_and_gzip_share_content_fingerprint) ... ok
+test_missing_image_has_no_synthetic_fallback (test_io.CacheIOTests.test_missing_image_has_no_synthetic_fallback) ... ok
+test_nan_feature_and_quality_rejected (test_io.CacheIOTests.test_nan_feature_and_quality_rejected) ... ok
+test_nonunit_or_huge_finite_features_are_rejected (test_io.CacheIOTests.test_nonunit_or_huge_finite_features_are_rejected) ... ok
+test_wrong_offsets_and_frames_rejected (test_io.CacheIOTests.test_wrong_offsets_and_frames_rejected) ... ok
+test_zero_placeholder_marked_valid_rejected (test_io.CacheIOTests.test_zero_placeholder_marked_valid_rejected) ... ok
+test_a_can_birth_without_feature_then_accept_real_rgb (test_native_adapter.NativeAdapterTests.test_a_can_birth_without_feature_then_accept_real_rgb) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_a_enabled_preserves_native_matching_when_no_weak_candidates_exist (test_native_adapter.NativeAdapterTests.test_a_enabled_preserves_native_matching_when_no_weak_candidates_exist) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_a_preserves_strict_native_score_boundary (test_native_adapter.NativeAdapterTests.test_a_preserves_strict_native_score_boundary) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_ab_prioritizes_recovery_and_consumes_detection_once (test_native_adapter.NativeAdapterTests.test_ab_prioritizes_recovery_and_consumes_detection_once) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_all_disabled_matches_native_exactly_every_frame (test_native_adapter.NativeAdapterTests.test_all_disabled_matches_native_exactly_every_frame) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_b_ambiguous_pool_link_cannot_bypass_into_native_high_birth (test_native_adapter.NativeAdapterTests.test_b_ambiguous_pool_link_cannot_bypass_into_native_high_birth) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_b_low_short_track_recovers_same_id (test_native_adapter.NativeAdapterTests.test_b_low_short_track_recovers_same_id) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_b_reservation_defers_native_high_birth_until_verified (test_native_adapter.NativeAdapterTests.test_b_reservation_defers_native_high_birth_until_verified) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_c_changes_real_native_high_association (test_native_adapter.NativeAdapterTests.test_c_changes_real_native_high_association) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_c_low_quality_updates_geometry_but_freezes_both_memories (test_native_adapter.NativeAdapterTests.test_c_low_quality_updates_geometry_but_freezes_both_memories) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_c_unconfirmed_gate_uses_raw_fused_distance_before_cost_scaling (test_native_adapter.NativeAdapterTests.test_c_unconfirmed_gate_uses_raw_fused_distance_before_cost_scaling) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_duplicate_pool_suppression_cannot_bypass_into_native_high_birth (test_native_adapter.NativeAdapterTests.test_duplicate_pool_suppression_cannot_bypass_into_native_high_birth) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_missing_high_rgb_feature_fails_instead_of_using_zero (test_native_adapter.NativeAdapterTests.test_missing_high_rgb_feature_fails_instead_of_using_zero) ... ok
+SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+test_recovery_buffer_must_match_fps_scaled_native_retention (test_native_adapter.NativeAdapterTests.test_recovery_buffer_must_match_fps_scaled_native_retention) ... ok
+test_upstream_source_is_pinned (test_native_adapter.NativeAdapterTests.test_upstream_source_is_pinned) ... SUCCESS  | BotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False
+ok
+test_actual_appearance_resolves_geometric_tie (test_recovery.RecoveryTests.test_actual_appearance_resolves_geometric_tie) ... ok
+test_candidate_cannot_recover_identity_it_previously_coexisted_with (test_recovery.RecoveryTests.test_candidate_cannot_recover_identity_it_previously_coexisted_with) ... ok
+test_competing_old_identities_reject_and_reserve (test_recovery.RecoveryTests.test_competing_old_identities_reject_and_reserve) ... ok
+test_competing_unready_short_track_still_counts_as_ambiguity (test_recovery.RecoveryTests.test_competing_unready_short_track_still_counts_as_ambiguity) ... ok
+test_current_contradiction_cannot_be_averaged_away (test_recovery.RecoveryTests.test_current_contradiction_cannot_be_averaged_away) ... ok
+test_disabled_has_no_side_effect_or_reservation (test_recovery.RecoveryTests.test_disabled_has_no_side_effect_or_reservation) ... ok
+test_distinct_tracks_are_assigned_one_to_one (test_recovery.RecoveryTests.test_distinct_tracks_are_assigned_one_to_one) ... ok
+test_expired_identity_is_never_resurrected (test_recovery.RecoveryTests.test_expired_identity_is_never_resurrected) ... ok
+test_fractional_or_boolean_frame_is_rejected (test_recovery.RecoveryTests.test_fractional_or_boolean_frame_is_rejected) ... ok
+test_future_observation_is_rejected_before_callback (test_recovery.RecoveryTests.test_future_observation_is_rejected_before_callback) ... ok
+test_high_covariance_cannot_authorize_unbounded_jump (test_recovery.RecoveryTests.test_high_covariance_cannot_authorize_unbounded_jump) ... ok
+test_input_ids_and_time_must_be_consistent (test_recovery.RecoveryTests.test_input_ids_and_time_must_be_consistent) ... ok
+test_invalid_config_fails_early (test_recovery.RecoveryTests.test_invalid_config_fails_early) ... ok
+test_missing_appearance_is_not_perfect_similarity (test_recovery.RecoveryTests.test_missing_appearance_is_not_perfect_similarity) ... ok
+test_missing_archived_prediction_cannot_be_synthesized (test_recovery.RecoveryTests.test_missing_archived_prediction_cannot_be_synthesized) ... ok
+test_no_current_hit_no_recovery_or_reservation (test_recovery.RecoveryTests.test_no_current_hit_no_recovery_or_reservation) ... ok
+test_one_hit_is_reserved_not_promoted (test_recovery.RecoveryTests.test_one_hit_is_reserved_not_promoted) ... ok
+test_reservation_expires_and_missing_frame_does_not_renew_it (test_recovery.RecoveryTests.test_reservation_expires_and_missing_frame_does_not_renew_it) ... ok
+test_three_observations_recover_existing_id_current_frame_only (test_recovery.RecoveryTests.test_three_observations_recover_existing_id_current_frame_only) ... ok
+test_complete_baseline_and_ab_with_causal_mot_and_trace (test_runner.RunnerTests.test_complete_baseline_and_ab_with_causal_mot_and_trace) ... ok
+test_existing_run_is_not_overwritten (test_runner.RunnerTests.test_existing_run_is_not_overwritten) ... ok
+test_lower_high_gate_checks_real_rgb_for_new_high_rows (test_runner.RunnerTests.test_lower_high_gate_checks_real_rgb_for_new_high_rows) ... ok
+test_missing_feature_preflight_exits_two (test_runner.RunnerTests.test_missing_feature_preflight_exits_two) ... ok
+test_missing_image_preflight_exits_two (test_runner.RunnerTests.test_missing_image_preflight_exits_two) ... ok
+test_mixed_thermal_encoders_across_sequences_are_rejected (test_runner.RunnerTests.test_mixed_thermal_encoders_across_sequences_are_rejected) ... ok
+test_partially_readable_input_records_failed_never_complete (test_runner.RunnerTests.test_partially_readable_input_records_failed_never_complete) ... ok
+test_same_weights_different_detections_are_not_frozen_baseline (test_runner.RunnerTests.test_same_weights_different_detections_are_not_frozen_baseline) ... ok
+test_stale_checksum_fails_before_complete_manifest (test_runner.RunnerTests.test_stale_checksum_fails_before_complete_manifest) ... ok
+test_synthetic_perfect_and_one_miss_one_fp_through_real_cli (test_trackeval_integration.PinnedTrackEvalIntegrationTests.test_synthetic_perfect_and_one_miss_one_fp_through_real_cli) ... skipped 'Set VTTINY_TEST_TRACKEVAL_ROOT to execute the pinned TrackEval integration'
+
+----------------------------------------------------------------------
+Ran 289 tests in 77.329s
+
+OK (skipped=1)

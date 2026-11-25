@@ -1,0 +1,37 @@
+{
+  "name": "B_C2_association",
+  "adapter_mode": "v2",
+  "birth": {
+    "enabled": false
+  },
+  "recovery": {
+    "enabled": true
+  },
+  "appearance": {
+    "enabled": false
+  },
+  "birth_policy": {
+    "mode": "legacy",
+    "collect_window": 5,
+    "collect_hits": 3,
+    "mean_score": 0.18,
+    "verify_window": 3,
+    "verify_hits": 2,
+    "fixed_window": 8,
+    "fixed_hits": 5,
+    "observe_only": false
+  },
+  "birth_identity": {
+    "enabled": false,
+    "window": 5,
+    "max_age": 30,
+    "wait_frames": 5,
+    "appearance_max_cost": 0.65
+  },
+  "identity": {
+    "enabled": true,
+    "observe_only": false,
+    "association_enabled": true,
+    "memory_enabled": false
+  }
+}

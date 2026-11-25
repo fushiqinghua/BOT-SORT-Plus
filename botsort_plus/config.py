@@ -9,6 +9,7 @@ from .geometry import GeometryConfig
 from .recovery import RecoveryConfig
 from .birth_policy import BirthPolicyConfig
 from .birth_identity import BirthIdentityConfig
+from .identity_reliability import IdentityConfig
 
 
 @dataclass
@@ -24,10 +25,12 @@ class PlusConfig:
     adapter_mode: str = "legacy"
     birth_policy: BirthPolicyConfig = field(default_factory=BirthPolicyConfig)
     birth_identity: BirthIdentityConfig = field(default_factory=BirthIdentityConfig)
+    identity: IdentityConfig = field(default_factory=IdentityConfig)
 
     @property
     def enabled(self):
-        return self.birth.enabled or self.recovery.enabled or self.appearance.enabled
+        return (self.birth.enabled or self.recovery.enabled or self.appearance.enabled
+                or self.identity.enabled)
 
     def to_dict(self):
         return asdict(self)
@@ -42,7 +45,8 @@ class PlusConfig:
         data = dict(data)
         for key, kind in (("birth",BirthConfig), ("recovery",RecoveryConfig),
                           ("appearance",AppearanceConfig), ("geometry",GeometryConfig),
-                          ("birth_policy",BirthPolicyConfig), ("birth_identity",BirthIdentityConfig)):
+                          ("birth_policy",BirthPolicyConfig), ("birth_identity",BirthIdentityConfig),
+                          ("identity",IdentityConfig)):
             if key in data:
                 if not isinstance(data[key], dict):
                     raise ValueError(f"{key} configuration must be an object")
@@ -74,6 +78,11 @@ class PlusConfig:
     def validate_v2(self):
         if self.adapter_mode not in ("legacy", "v2"):
             raise ValueError("adapter_mode must be legacy or v2")
+        if self.identity.enabled:
+            if self.adapter_mode != "v2":
+                raise ValueError("Identity reliability (C2) requires adapter_mode=v2")
+            if self.birth.enabled or self.appearance.enabled:
+                raise ValueError("C2 currently requires A and legacy C disabled; use separate ablations")
         if self.adapter_mode == "legacy" and (
                 self.birth_policy != BirthPolicyConfig() or
                 self.birth_identity != BirthIdentityConfig()):

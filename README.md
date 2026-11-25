@@ -1,4 +1,10 @@
-# BoT-SORT Plus · 第二轮 A2 实验
+# BoT-SORT Plus · C2 身份可信度模块
+
+当前开发版本 **v0.3.0** 在已验证的 B 基座上实现 C2：用历史身份一致性和关联竞争约束外观加成，独立控制原生与 B 记忆的写入。A 继续保留用于复查，本轮新配置关闭 A 与旧 C。**C2 已进行软件机制验证，真实数据收益尚待冻结输入回放。**
+
+[C2 快速入口](README_BOTSORT_PLUS.md) · [设计与代码复核](docs/botsort_plus/C2_DESIGN_AND_REVIEW.md) · [接入和实验命令](docs/botsort_plus/C2_INTEGRATION.md) · [消融配置](docs/botsort_plus/C2_CONFIGS.md) · [软件验证记录](docs/botsort_plus/validation_v0.3/VALIDATION.md)
+
+## 第二轮 A2 实验归档
 
 第一轮的弱起轨让更多微小目标获得轨迹，也把部分背景响应发布为新 ID。第二轮将弱起轨拆为存在确认 E 与身份准入 I，再与短时恢复 B 组合。在相同的 30 段上，A2B_score020 相对本轮 B_ref 净补回 3,949 个目标帧，同时增加 7,337 个误报和 166 次换号。官方测试集参与选模与调参，结果按开发实验解读。
 
