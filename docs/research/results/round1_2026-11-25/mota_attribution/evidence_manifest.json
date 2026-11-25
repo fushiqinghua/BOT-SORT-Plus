@@ -1,0 +1,89 @@
+{
+  "analysis": "M2 NLL with floor R, MOTA error attribution",
+  "date": "2026-11-25",
+  "round_one_results_commit": "e585f662c0769060a58f10abf896ebaa1ae511f1",
+  "runner_source_commit": "850b9940027f788e811ea670a528273f23219b12",
+  "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "interpretation": "retrospective_development_only",
+  "evaluation_sequences": [
+    "DJI_0028_3",
+    "DJI_0030_2",
+    "DJI_0051_2",
+    "DJI_0073_3",
+    "DJI_0109_1",
+    "DJI_0129_2",
+    "DJI_0155_2",
+    "DJI_0159_2",
+    "DJI_0169_3",
+    "DJI_0221_2",
+    "DJI_0237_2",
+    "DJI_0255_1",
+    "DJI_0257_2",
+    "DJI_0277_2",
+    "DJI_0303_2",
+    "DJI_0307_2",
+    "DJI_0309_4",
+    "DJI_0325_2",
+    "DJI_0327_3",
+    "DJI_0339_2",
+    "DJI_0345_2"
+  ],
+  "frames_by_sequence": {
+    "DJI_0028_3": 570,
+    "DJI_0030_2": 590,
+    "DJI_0051_2": 580,
+    "DJI_0073_3": 360,
+    "DJI_0109_1": 90,
+    "DJI_0129_2": 590,
+    "DJI_0155_2": 410,
+    "DJI_0159_2": 250,
+    "DJI_0169_3": 290,
+    "DJI_0221_2": 590,
+    "DJI_0237_2": 410,
+    "DJI_0255_1": 600,
+    "DJI_0257_2": 590,
+    "DJI_0277_2": 366,
+    "DJI_0303_2": 577,
+    "DJI_0307_2": 180,
+    "DJI_0309_4": 603,
+    "DJI_0325_2": 595,
+    "DJI_0327_3": 390,
+    "DJI_0339_2": 600,
+    "DJI_0345_2": 600
+  },
+  "gt_object_frames": 113458,
+  "source_trackeval_details": {
+    "native_iou": {
+      "IDTP": 29973,
+      "IDFP": 11670,
+      "IDFN": 83485
+    },
+    "m2_nll_floor": {
+      "IDTP": 30411,
+      "IDFP": 11866,
+      "IDFN": 83047
+    }
+  },
+  "same_state_scope": "350 selected localization failures on the three sequences with the largest increase in CLEAR errors",
+  "source_product_sha256": {
+    "aligned_detection_geometry.csv": "e0ca249ade2fc2521a332373009ed72ce7eb300dc90fa277a6f5ebada7411b2c",
+    "changes_by_sequence.csv": "aa4a7e2fc1666e9aec2271218e41d6da9d4a41bf71d0607baa9dc10cb98ef50b",
+    "detector_box_trackeval.json": "c3bd879686e12808b43f3d168b00374a99074e6d1f453bd931aefca1875386e4",
+    "localization_attribution.json": "54992fdf665aaf354c6aacf115a6f6a422b22eb50978d69b39e55569f477802f",
+    "same_state_cases.csv": "ff676c44893e0ed6b01f1f5705dfca9dbcfa5e1116996b662d6895ce796a3d8b",
+    "same_state_summary.json": "9d8a192066a7963eb027ced025ff549dd36f1ef09eee2b54a9acbc5ab0a64e98"
+  },
+  "published_files_sha256": {
+    "README.md": "325e2aa942ca08bd1e0735cf8f885156bfb5702cbbbe3b7786f93b677df713b9",
+    "aligned_detection_geometry.csv": "96101debdf979461fd38af35ba32bd41f2fe7a7cfd2b791edf93336078e9ee27",
+    "changes_by_sequence.csv": "0d211cb425acf820ba943c206fd81a677ce3e243ff97493e525df76404feff8a",
+    "detector_box_trackeval.json": "c3bd879686e12808b43f3d168b00374a99074e6d1f453bd931aefca1875386e4",
+    "localization_attribution.json": "54992fdf665aaf354c6aacf115a6f6a422b22eb50978d69b39e55569f477802f",
+    "same_state_cases.csv": "83afca80bd931f9e919df7b50745ca4a0e38a069f9f4713278e42649cad6b655",
+    "same_state_summary.json": "9d8a192066a7963eb027ced025ff549dd36f1ef09eee2b54a9acbc5ab0a64e98"
+  },
+  "diagnostic_scripts_sha256": {
+    "mota_attribution.py": "99e35b20be45332c765872c49db1425276221c0da00436ee5dd41d8a809b7f1a",
+    "mota_same_state.py": "34eb6171d2f084cad65ab4409d8a8be8c28fea17b6485ef5d13134458adde6f3"
+  }
+}

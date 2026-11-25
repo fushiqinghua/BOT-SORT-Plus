@@ -1,0 +1,57 @@
+{
+  "counts": {
+    "native_iou_fp": 7841,
+    "native_iou_fn": 79656,
+    "m2_nll_floor_fp": 8954,
+    "m2_nll_floor_fn": 80135,
+    "lost_gt": 1146,
+    "recovered_gt": 667,
+    "lost_gt_same_detection_fp": 988,
+    "new_fp_previously_tp": 1171,
+    "new_fp_previously_tp_and_gt_lost": 988,
+    "new_fp_same_gt_raw_aligned": 956,
+    "lost_gt_same_detection_absent": 148,
+    "lost_gt_same_detection_assigned_other_gt": 10
+  },
+  "geometry": {
+    "count": 956,
+    "medians": {
+      "raw_iou": 0.6229977892699006,
+      "native_iou": 0.6001128797253851,
+      "floor_iou": 0.45164131700664967,
+      "center_shift_px": 1.8326128967052164,
+      "width_delta_px": 0.18059329912460953,
+      "height_delta_px": 0.13834064855696226
+    },
+    "lt8": 486,
+    "center_restores": 872,
+    "size_restores": 107,
+    "either_restores": 940,
+    "both_restore": 39,
+    "original_gt_lost": 954
+  },
+  "frames": {
+    "DJI_0028_3": 570,
+    "DJI_0030_2": 590,
+    "DJI_0051_2": 580,
+    "DJI_0073_3": 360,
+    "DJI_0109_1": 90,
+    "DJI_0129_2": 590,
+    "DJI_0155_2": 410,
+    "DJI_0159_2": 250,
+    "DJI_0169_3": 290,
+    "DJI_0221_2": 590,
+    "DJI_0237_2": 410,
+    "DJI_0255_1": 600,
+    "DJI_0257_2": 590,
+    "DJI_0277_2": 366,
+    "DJI_0303_2": 577,
+    "DJI_0307_2": 180,
+    "DJI_0309_4": 603,
+    "DJI_0325_2": 595,
+    "DJI_0327_3": 390,
+    "DJI_0339_2": 600,
+    "DJI_0345_2": 600
+  },
+  "mode": "Only output xywh replaced with aligned source detection. Frames, detector indices and track IDs copied from saved trajectories."
+}

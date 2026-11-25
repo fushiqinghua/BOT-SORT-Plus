@@ -1,0 +1,34 @@
+{
+  "DJI_0309_4": {
+    "cases": 138,
+    "restores": 137,
+    "iou_floor_median": 0.4065605590991424,
+    "iou_native_r_median": 0.6461955624099675,
+    "gain_center_floor_median": 0.2722433484837874,
+    "gain_center_native_median": 0.9128886286783717
+  },
+  "DJI_0303_2": {
+    "cases": 125,
+    "restores": 124,
+    "iou_floor_median": 0.43257759552423736,
+    "iou_native_r_median": 0.643238547550873,
+    "gain_center_floor_median": 0.2884659345168421,
+    "gain_center_native_median": 0.90134260913303
+  },
+  "DJI_0257_2": {
+    "cases": 87,
+    "restores": 85,
+    "iou_floor_median": 0.43026350468466606,
+    "iou_native_r_median": 0.6290242087386965,
+    "gain_center_floor_median": 0.3745983545504138,
+    "gain_center_native_median": 0.8542420321363438
+  },
+  "TOTAL": {
+    "cases": 350,
+    "restores": 346,
+    "iou_floor_median": 0.4239265081413477,
+    "iou_native_r_median": 0.6406913627990412,
+    "gain_center_floor_median": 0.2930464490122774,
+    "gain_center_native_median": 0.9026583888837166
+  }
+}
