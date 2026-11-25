@@ -53,7 +53,7 @@ def summarize_runs(run_dirs, output):
             frames = sum(t["frames"] for t in timing)
             row = {"run": root.name, "variant": value["tracker"], "cmc": experiment["cmc"],
                    **{k: value[k] for k in metrics}, "association_fps": frames / seconds if seconds > 0 else None}
-            row.update({"delta_"+k: value[k] - baseline[k] if baseline else None for k in ("HOTA", "AssA", "IDF1", "FP", "FN", "IDSW")})
+            row.update({"delta_"+k: value[k] - baseline[k] if baseline else None for k in ("HOTA", "DetA", "AssA", "IDF1", "MOTA", "FP", "FN", "IDSW")})
             rows.append(row)
     if not rows:
         raise ValueError("No COMBINED_SEQ metrics found")
@@ -62,7 +62,7 @@ def summarize_runs(run_dirs, output):
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
-    columns = ("run", "variant", "cmc", "HOTA", "AssA", "IDF1", "FP", "FN", "IDSW", "delta_HOTA", "delta_IDF1")
+    columns = ("run", "variant", "cmc", "HOTA", "DetA", "AssA", "IDF1", "MOTA", "FP", "FN", "IDSW", "delta_HOTA", "delta_IDF1", "delta_MOTA")
     lines = ["# 实验汇总", "", "同一检测缓存、GT 和序列集合的 TrackEval COMBINED_SEQ。差值基准为第一个 SOF + native_iou 对照；无此对照时不计算差值。", "",
              "|"+"|".join(columns)+"|", "|"+"|".join(["---"]*len(columns))+"|"]
     def format_value(value):

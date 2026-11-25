@@ -1,6 +1,6 @@
 # BoT-SORT 基线 · VT-Tiny-MOT
 
-> 本研究分支实现了 **M2 概率几何关联**及 **M1 / M3 诊断**。首轮已完成 30 段基线复现、9 段噪声校准和 21 段开发评估。以下正文为冻结基线归档。 [实验手册](docs/research/README.md) · [首轮实验结果](docs/research/results/round1_2026-11-25/README.md)
+> 本研究分支继续推进 **M2 关联 / 更新 / 输出分离、M1 稳健运动补偿、M3 RGB 外观恢复**。第二批实现、运行计划和错因导出已就绪，真实数据结果待本地执行。 [第二批运行手册](docs/research/round2/README.md) · [第一批实验结果](docs/research/results/round1_2026-11-25/README.md) · [第一批实验手册](docs/research/README.md)。以下正文为冻结基线归档。
 
 本分支归档多模态跟踪的冻结基线，供后续跟踪模块改进和消融比较使用。主配置为 **YOLO11-M RGB–红外 P3/P4/P5 特征级融合（Mosaic 开启，第 36 轮）+ BoT-SORT + 微调 RGB ReID**。RGB 单模态采用第 26 轮快照作为输入对照。
 

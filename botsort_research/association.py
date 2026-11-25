@@ -125,3 +125,54 @@ def assign_with_dummies(costs, miss_cost, unassigned_cost):
     unmatched_tracks = np.setdiff1d(np.arange(n), matches[:, 0], assume_unique=True)
     unmatched_detections = np.setdiff1d(np.arange(m), matches[:, 1], assume_unique=True)
     return matches, unmatched_tracks, unmatched_detections
+
+
+DEFAULT_NWD = {"normalizer_px": 12.8, "first_threshold": 0.8, "second_threshold": 0.5}
+
+
+def nwd_config(config=None):
+    """NWD is a simple distance control, not a fitted probabilistic model."""
+    config = dict(config or {})
+    if set(config) - set(DEFAULT_NWD):
+        raise ValueError(f"Unknown NWD parameters: {sorted(set(config) - set(DEFAULT_NWD))}")
+    values = {**DEFAULT_NWD, **config}
+    if not np.isfinite(values["normalizer_px"]) or values["normalizer_px"] <= 0:
+        raise ValueError("NWD normalizer_px must be finite and positive")
+    for key in ("first_threshold", "second_threshold"):
+        if not np.isfinite(values[key]) or not 0 < values[key] < 1:
+            raise ValueError(f"NWD {key} must lie strictly between zero and one")
+    return values
+
+
+def nwd_cost(predicted_xywh, measurements, *, normalizer_px=12.8, config=None):
+    """Return 1 - exp(-W2/C) with boxes mapped to (cx,cy,w/2,h/2).
+
+    W2 is Euclidean distance in this four-coordinate representation (the
+    Gaussian box interpretation of Wang et al., arXiv:2110.13389). The physical
+    center/size gates are the same as M2; there is no covariance or chi2 gate.
+    The numeric C is a research starting value and must be selected on the
+    calibration partition, not claimed as calibrated for this dataset.
+    """
+    nwd_config({"normalizer_px": normalizer_px})
+    cfg = stage_config(config)
+    predicted = np.asarray(predicted_xywh, dtype=np.float64).reshape(-1, 4)
+    measured = np.asarray(measurements, dtype=np.float64).reshape(-1, 4)
+    if not np.isfinite(measured).all() or np.any(measured[:, 2:] <= 0):
+        raise ValueError("Detections must be finite with positive sizes")
+    n, m = len(predicted), len(measured)
+    cost = np.full((n, m), np.inf)
+    reasons = np.zeros((n, m), dtype=np.uint8)
+    for i, box in enumerate(predicted):
+        if not np.isfinite(box).all() or np.any(box[2:] <= 0):
+            reasons[i, :] = 8
+            continue
+        delta = measured - box
+        reasons[i, np.linalg.norm(delta[:, :2], axis=1) > cfg["max_center_distance_px"]] |= 2
+        ratios = measured[:, 2:] / box[2:]
+        reasons[i, np.max(np.maximum(ratios, 1.0 / ratios), axis=1) > cfg["max_size_ratio"]] |= 4
+        delta[:, 2:] *= 0.5
+        distance = np.linalg.norm(delta, axis=1)
+        values = -np.expm1(-distance / normalizer_px)
+        valid = reasons[i] == 0
+        cost[i, valid] = values[valid]
+    return cost, reasons

@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 from .io import detection_files, dump_json, image_path, load_detections, load_json, selected_sequences
-from .runner import DEFAULT_CACHE, DEFAULT_CONFIG, ROOT, VARIANTS
+from .runner import DEFAULT_CACHE, DEFAULT_CONFIG, ROOT, VARIANTS, CMC_MODES
 
 
 def _selection(args):
@@ -29,9 +29,16 @@ def _doctor(args):
     files, split, names = _selection(args)
     totals = {"sequences": len(names), "frames": 0, "detections": 0, "empty_detection_frames": 0}
     missing, model_hashes = [], set()
+    features_checked, encoder_hashes, feature_dimensions = {}, set(), set()
     for name in names:
         cache = load_detections(files[name])
         model_hashes.add(cache.get("model_sha256"))
+        if getattr(args, "embeddings_dir", None):
+            from .appearance import load_replay_features
+            _, feature_info = load_replay_features(files[name], cache["frames"], args.embeddings_dir, name)
+            features_checked[name] = feature_info
+            encoder_hashes.add(feature_info["encoder_sha256"])
+            feature_dimensions.add(feature_info["dimension"])
         for frame in cache["frames"]:
             totals["frames"] += 1
             totals["detections"] += len(frame["detections"])
@@ -42,10 +49,15 @@ def _doctor(args):
                     missing.append(str(path))
     if len(model_hashes) != 1 or None in model_hashes:
         raise ValueError("Detection caches must identify one fixed detector checkpoint")
+    if features_checked and (len(encoder_hashes) != 1 or len(feature_dimensions) != 1):
+        raise ValueError("Feature caches must use one fixed encoder and dimension")
     result = {"cache_validation": "PASS", **totals, "detector_sha256": next(iter(model_hashes)),
               "images_checked": bool(args.image_root), "missing_image_count": len(missing),
               "first_missing_images": missing[:5], "runtime_checked": bool(args.check_runtime),
               "interpretation": "retrospective_development_only"}
+    if features_checked:
+        result["feature_validation"] = {"status": "PASS", "sequences": features_checked,
+                                        "encoder_sha256": next(iter(encoder_hashes))}
     if args.check_runtime:
         from .runner import configure_runtime
         configure_runtime(args.runtime_root)
@@ -76,6 +88,7 @@ def main(argv=None):
     p.add_argument("--image-root", type=Path)
     p.add_argument("--check-runtime", action="store_true")
     p.add_argument("--runtime-root", type=Path)
+    p.add_argument("--embeddings-dir", type=Path, help="Also validate exact original high-score feature caches before any replay")
     p.add_argument("--output", type=Path)
 
     p = sub.add_parser("make-split", help="Create a grouped retrospective development split; never a new independent test")
@@ -100,14 +113,18 @@ def main(argv=None):
     p.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     p.add_argument("--noise-model", type=Path)
     p.add_argument("--variants", choices=VARIANTS, nargs="+", default=list(VARIANTS[:3]))
-    p.add_argument("--cmc", choices=("sof", "none"), default="sof")
+    p.add_argument("--cmc", choices=CMC_MODES, default="sof")
     p.add_argument("--trace", action="store_true", help="Write per-stage M2 matches and gate rejection counts")
+    p.add_argument("--output-trace", action="store_true", help="Write exact current detection index and raw/KF/output boxes for every emitted track")
+    p.add_argument("--embeddings-dir", type=Path, help="Matching original high-score RGB feature caches for appearance variants")
+    p.add_argument("--appearance-model", type=Path, help="Offline calibration model from calibrate-appearance")
     p.add_argument("--output", type=Path, required=True)
 
     p = sub.add_parser("compare-baseline", help="Compare native_iou replay against archived no-ReID trajectories")
     p.add_argument("--run-dir", type=Path, required=True)
     p.add_argument("--reference-dir", type=Path, default=ROOT / "results/vttiny/yolo11m_rgb_rgbt/rgbt/trackers/botsort_no_reid/data")
     p.add_argument("--atol", type=float, default=1e-6)
+    p.add_argument("--variant", choices=("native_iou", "native_reid"), default="native_iou")
 
     p = sub.add_parser("evaluate", help="Evaluate completed replay with the pinned TrackEval implementation")
     p.add_argument("--run-dir", type=Path, required=True)
@@ -116,6 +133,30 @@ def main(argv=None):
 
     p = sub.add_parser("summarize", help="Compare evaluated runs only when their caches, GT and sequence sets agree")
     p.add_argument("--runs", type=Path, nargs="+", required=True)
+    p.add_argument("--output", type=Path, required=True)
+
+    p = sub.add_parser("calibrate-appearance", help="Fit global and gap-specific appearance thresholds using calibration sequences only")
+    p.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE)
+    p.add_argument("--split", type=Path, required=True)
+    p.add_argument("--gt-root", type=Path, required=True)
+    p.add_argument("--embeddings-dir", type=Path, required=True)
+    p.add_argument("--max-pairs-per-sequence", type=int, default=20000)
+    p.add_argument("--seed", type=int, default=0)
+    p.add_argument("--max-empirical-far", type=float, default=.005)
+    p.add_argument("--min-same", type=int, default=50)
+    p.add_argument("--min-different", type=int, default=200)
+    p.add_argument("--max-threshold", type=float, default=.8)
+    p.add_argument("--output", type=Path, required=True)
+
+    p = sub.add_parser("detection-coverage", help="Offline one-to-one raw detection coverage; not a HOTA/MOTA bound")
+    cache_options(p)
+    p.add_argument("--gt-root", type=Path, required=True)
+    p.add_argument("--thresholds", nargs="+", type=float, default=[.3, .5, .75])
+    p.add_argument("--output", type=Path, required=True)
+
+    p = sub.add_parser("analyze-run", help="Offline frame-level CLEAR attribution verified against completed TrackEval metrics")
+    p.add_argument("--run-dir", type=Path, required=True)
+    p.add_argument("--gt-root", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
 
     p = sub.add_parser("diagnose-m1", help="Inspect native sparse-flow geometry proxies; images required")
@@ -154,16 +195,35 @@ def main(argv=None):
             result = replay(args.cache_dir, args.image_root, args.output, variants=args.variants,
                             config_path=args.config, noise_path=args.noise_model, split_path=args.split,
                             subset=args.subset, sequences=args.sequences, runtime_root=args.runtime_root,
-                            cmc=args.cmc, trace=args.trace)
+                            cmc=args.cmc, trace=args.trace, output_trace=args.output_trace,
+                            embeddings_dir=args.embeddings_dir, appearance_model_path=args.appearance_model)
         elif args.command == "compare-baseline":
             from .runner import compare_native
-            result = compare_native(args.run_dir, args.reference_dir, atol=args.atol)
+            result = compare_native(args.run_dir, args.reference_dir, atol=args.atol, variant=args.variant)
         elif args.command == "evaluate":
             from .runner import evaluate_run
             result = evaluate_run(args.run_dir, args.gt_root, args.trackeval_root)
         elif args.command == "summarize":
             from .reporting import summarize_runs
             result = summarize_runs(args.runs, args.output)
+        elif args.command == "calibrate-appearance":
+            from .appearance import calibrate_appearance
+            from .calibration import validate_split
+            split = load_json(args.split)
+            validate_split(split, available=detection_files(args.cache_dir))
+            _new_path(args.output)
+            result = calibrate_appearance(args.cache_dir, args.gt_root, args.embeddings_dir, split, args.output,
+                max_pairs_per_sequence=args.max_pairs_per_sequence, seed=args.seed,
+                max_empirical_far=args.max_empirical_far, min_same=args.min_same,
+                min_different=args.min_different, max_threshold=args.max_threshold)
+        elif args.command == "detection-coverage":
+            from .detection_coverage import diagnose_detection_coverage
+            files, split, names = _selection(args)
+            result = diagnose_detection_coverage(args.cache_dir, args.gt_root, args.output,
+                                                 sequences=names, thresholds=args.thresholds)
+        elif args.command == "analyze-run":
+            from .error_analysis import analyze_run
+            result = analyze_run(args.run_dir, args.gt_root, args.output)
         elif args.command == "diagnose-m1":
             from .cmc import diagnose_motion
             files, split, names = _selection(args)

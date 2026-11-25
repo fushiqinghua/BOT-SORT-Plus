@@ -13,12 +13,16 @@ from pathlib import Path
 
 import numpy as np
 
-from .association import assign_with_dummies, gaussian_cost, stage_config
+from .association import assign_with_dummies, gaussian_cost, nwd_config, nwd_cost, stage_config
 from .noise import NoiseModel, correct_with_covariance
 
 
 SUPPORTED_VARIANTS = (
     "native_iou", "m2_nll_baseline_r", "m2_nll_floor", "m2_nll_calibrated",
+    "native_iou_det", "m2_nll_floor_det", "m2_nll_floor_native_update",
+    "m2_nll_floor_native_update_det", "iou_floor_update",
+    "m2_nll_first_native_update", "m2_nll_second_native_update",
+    "iou_relaxed", "nwd_native_update",
 )
 
 # SHA256 of UTF-8 source, normalized newlines, trailing whitespace stripped.
@@ -97,20 +101,21 @@ def build_tracker(variant, tracker_config, m2_config=None, trace_callback=None):
     from boxmot.trackers.botsort.basetrack import TrackState
     from boxmot.trackers.botsort.botsort_track import STrack
     from boxmot.motion.kalman_filters.aabb.xywh_kf import KalmanFilterXYWH
+    from boxmot.utils.matching import iou_distance, linear_assignment
 
     info = verify_runtime()
     kwargs = dict(reid_weights=Path("unused.pt"), device=torch.device("cpu"), half=False, **cfg)
-    if variant == "native_iou":
+    if variant in ("native_iou", "native_iou_det", "iou_relaxed"):
         tracker = BotSort(**kwargs)
         tracker.research_runtime_info = info
+        tracker.research_update_mode = "baseline"
         return tracker
 
     m2_config = dict(m2_config or {})
-    if set(m2_config) - {"noise", "association"}:
-        raise ValueError("M2 config accepts only noise and association sections")
+    if set(m2_config) - {"noise", "association", "nwd"}:
+        raise ValueError("M2 config accepts only noise, association and nwd sections")
     noise_cfg = dict(m2_config.get("noise", {}))
-    requested_mode = {"m2_nll_baseline_r": "baseline", "m2_nll_floor": "floor",
-                      "m2_nll_calibrated": "calibrated"}[variant]
+    requested_mode = {"m2_nll_baseline_r": "baseline", "m2_nll_calibrated": "calibrated"}.get(variant, "floor")
     if requested_mode == "calibrated" and noise_cfg.get("mode") != "calibrated":
         raise ValueError("m2_nll_calibrated requires a fitted noise model with mode='calibrated'")
     noise_cfg["mode"] = requested_mode
@@ -119,7 +124,19 @@ def build_tracker(variant, tracker_config, m2_config=None, trace_callback=None):
     if set(assoc_cfg) - {"first", "second"}:
         raise ValueError("Association config accepts first and second stages only")
     stages = {name: stage_config(assoc_cfg.get(name)) for name in ("first", "second")}
-    adaptive = requested_mode != "baseline"
+    adaptive = variant in ("m2_nll_floor", "m2_nll_floor_det", "m2_nll_calibrated", "iou_floor_update")
+    update_mode = requested_mode if adaptive else "baseline"
+    baseline_noise = NoiseModel(mode="baseline")
+    methods = {"first": "nll", "second": "nll"}
+    if variant == "iou_floor_update":
+        methods = {"first": "iou", "second": "iou"}
+    elif variant == "m2_nll_first_native_update":
+        methods["second"] = "iou"
+    elif variant == "m2_nll_second_native_update":
+        methods["first"] = "iou"
+    elif variant == "nwd_native_update":
+        methods = {"first": "nwd", "second": "nwd"}
+    nwd = nwd_config(m2_config.get("nwd"))
 
     class ExplicitRKalman(KalmanFilterXYWH):
         """One instance per track; R is supplied by the matched-detection context."""
@@ -162,34 +179,60 @@ def build_tracker(variant, tracker_config, m2_config=None, trace_callback=None):
             return [Track(det, max_obs=self.max_obs) for det in dets_first]
 
         def _associate(self, tracks, detections, stage):
-            cost, details = gaussian_cost(
-                [t.mean for t in tracks], [t.covariance for t in tracks],
-                [d.xywh for d in detections], [d.conf for d in detections], noise, stages[stage])
-            matches, u_track, u_det = assign_with_dummies(
-                cost, stages[stage]["miss_cost"], stages[stage]["unassigned_cost"])
+            method = methods[stage]
+            details = None
+            if method == "nll":
+                cost, details = gaussian_cost(
+                    [t.mean for t in tracks], [t.covariance for t in tracks],
+                    [d.xywh for d in detections], [d.conf for d in detections], noise, stages[stage])
+                threshold = stages[stage]["miss_cost"] + stages[stage]["unassigned_cost"]
+                matches, u_track, u_det = assign_with_dummies(
+                    cost, stages[stage]["miss_cost"], stages[stage]["unassigned_cost"])
+                reason = details["gate_reason"]
+            else:
+                if method == "iou":
+                    cost = iou_distance(tracks, detections)
+                    reason = np.zeros(cost.shape, dtype=np.uint8)
+                    threshold = self.match_thresh if stage == "first" else 0.5
+                else:
+                    cost, reason = nwd_cost([t.mean[:4] for t in tracks], [d.xywh for d in detections],
+                                            normalizer_px=nwd["normalizer_px"], config=stages[stage])
+                    threshold = nwd[stage + "_threshold"]
+                # Preserve the native LAP implementation and boundary semantics
+                # for IoU; NWD uses the same cost-limit assignment as its control.
+                matches, u_track, u_det = linear_assignment(cost, thresh=threshold)
+                matches = np.asarray(matches, dtype=int).reshape(-1, 2)
             if adaptive:
                 for i, j in matches:
-                    # Store the exact matrix used for this pair's likelihood.
-                    tracks[i]._m2_selected_R = details["measurement_covariance"][i, j].copy()
+                    # Round1 keeps the exact association R. The IoU/update-only
+                    # control obtains R from this detection without changing IoU.
+                    tracks[i]._m2_selected_R = (details["measurement_covariance"][i, j].copy()
+                        if details is not None else noise.covariance(detections[j].xywh, detections[j].conf, tracks[i].mean[:4]))
             if trace_callback is not None:
-                reason = details["gate_reason"]
+                matched = []
+                for i, j in matches:
+                    track, det = tracks[i], detections[j]
+                    update_r = (noise if adaptive else baseline_noise).covariance(det.xywh, det.conf, track.mean[:4])
+                    matched.append({"track_id": int(track.id), "det_index": int(det.det_ind),
+                                    "cost": float(cost[i, j]),
+                                    "mahalanobis2": float(details["mahalanobis2"][i, j]) if details is not None else None,
+                                    "logdet": float(details["logdet"][i, j]) if details is not None else None,
+                                    "score": float(det.conf), "was_lost": bool(track.state == TrackState.Lost),
+                                    "association_R_diag": np.diag(details["measurement_covariance"][i, j]).tolist() if details is not None else None,
+                                    "update_R_diag": np.diag(update_r).tolist(), "update_mode": update_mode,
+                                    "predicted_xywh": track.mean[:4].tolist(), "measurement_xywh": det.xywh.tolist()})
                 trace_callback({
-                    "frame": int(self.frame_count), "stage": stage,
+                    "frame": int(self.frame_count), "stage": stage, "association_method": method,
                     "tracks": len(tracks), "detections": len(detections),
                     "valid_pairs": int(np.isfinite(cost).sum()),
                     "rejected_chi2": int(((reason & 1) != 0).sum()),
                     "rejected_center": int(((reason & 2) != 0).sum()),
                     "rejected_size": int(((reason & 4) != 0).sum()),
                     "rejected_invalid": int(((reason & 8) != 0).sum()),
-                    "rejected_cost": int((np.isfinite(cost) & (cost >= stages[stage]["miss_cost"]
-                                                                         + stages[stage]["unassigned_cost"])).sum()),
+                    "rejected_cost": int((np.isfinite(cost) & ((cost >= threshold) if method == "nll" else (cost > threshold))).sum()),
                     "unmatched_track_ids": [int(tracks[i].id) for i in u_track],
                     "unmatched_detection_indices": [int(detections[j].det_ind) for j in u_det],
-                    "matches": [{"track_id": int(tracks[i].id), "det_index": int(detections[j].det_ind),
-                                 "cost": float(cost[i, j]), "mahalanobis2": float(details["mahalanobis2"][i, j]),
-                                 "logdet": float(details["logdet"][i, j]),
-                                 "score": float(detections[j].conf),
-                                 "was_lost": bool(tracks[i].state == TrackState.Lost)} for i, j in matches],
+                    "matches": matched,
                 })
             return matches, u_track, u_det
 
@@ -230,4 +273,7 @@ def build_tracker(variant, tracker_config, m2_config=None, trace_callback=None):
     tracker.research_runtime_info = info
     tracker.research_noise = noise.to_dict()
     tracker.research_association = stages
+    tracker.research_association_methods = methods
+    tracker.research_update_mode = update_mode
+    tracker.research_nwd = nwd if variant == "nwd_native_update" else None
     return tracker
