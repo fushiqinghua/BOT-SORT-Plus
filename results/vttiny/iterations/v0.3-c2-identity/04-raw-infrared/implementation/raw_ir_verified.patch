@@ -1,0 +1,1018 @@
+--- a/botsort_plus/adapter_v2.py
++++ b/botsort_plus/adapter_v2.py
+@@ -106,6 +106,8 @@
+     tracker.frame_count += 1
+     frame = tracker.frame_count
+     plus = tracker.plus
++    if plus.raw_ir.enabled and (not hasattr(tracker,"raw_ir_observer") or tracker.raw_ir_observer.frame != frame):
++        raise ValueError("Expected current aligned raw IR frame before tracker update")
+     if plus.identity.enabled:
+         # Freeze past-only identity evidence before any stage can write memory.
+         tracker.identity_reliability.begin_frame(frame)
+@@ -369,4 +371,13 @@
+     if plus.recovery.output_prediction_frames:
+         from .prediction_output import extend
+         output = extend(tracker, output, img.shape, all_dets, live)
++    if plus.raw_ir.enabled:
++        observer=tracker.raw_ir_observer
++        output=observer.check_output(output)
++        observer.finish(output)
++        rejected={e["track_id"] for e in observer.audit if e["event"]=="ir_projection_check" and not e["kept"]}
++        for e in tracker.last_events:
++            if e["event"]=="motion_output" and e["track_id"] in rejected:
++                e["event"]="ir_rejected_projection"
++        tracker.last_events.extend(observer.audit)
+     return output
+--- a/botsort_plus/config.py
++++ b/botsort_plus/config.py
+@@ -13,8 +13,27 @@
+ 
+ 
+ @dataclass
++class RawInfraredConfig:
++    presence: str | None = None
++    native: str | None = None
++    recovery: str | None = None
++    shift: bool = False
++
++    def __post_init__(self):
++        if (self.presence not in (None, "shadow", "guard", "sensitive", "position") or
++                self.native not in (None, "shadow", "rerank") or
++                self.recovery not in (None, "shadow", "rerank", "delay") or type(self.shift) is not bool):
++            raise ValueError("Unknown raw infrared policy")
++
++    @property
++    def enabled(self):
++        return bool(self.presence or self.native or self.recovery)
++
++
++@dataclass
+ class PlusConfig:
+     name: str = "baseline"
++    raw_ir: RawInfraredConfig = field(default_factory=RawInfraredConfig)
+     birth: BirthConfig = field(default_factory=BirthConfig)
+     recovery: RecoveryConfig = field(default_factory=RecoveryConfig)
+     appearance: AppearanceConfig = field(default_factory=AppearanceConfig)
+@@ -46,7 +65,7 @@
+         for key, kind in (("birth",BirthConfig), ("recovery",RecoveryConfig),
+                           ("appearance",AppearanceConfig), ("geometry",GeometryConfig),
+                           ("birth_policy",BirthPolicyConfig), ("birth_identity",BirthIdentityConfig),
+-                          ("identity",IdentityConfig)):
++                          ("identity",IdentityConfig), ("raw_ir",RawInfraredConfig)):
+             if key in data:
+                 if not isinstance(data[key], dict):
+                     raise ValueError(f"{key} configuration must be an object")
+@@ -78,6 +97,12 @@
+         return result
+ 
+     def validate_v2(self):
++        if self.raw_ir.enabled and (self.adapter_mode != "v2" or not self.recovery.enabled):
++            raise ValueError("Raw infrared evidence needs the v2 recovery pipeline")
++        if self.raw_ir.presence and not self.recovery.output_prediction_frames:
++            raise ValueError("Presence checks require a projection output")
++        if self.raw_ir.native and not self.identity.enabled:
++            raise ValueError("Raw-IR native reranking requires the C2 high association path")
+         if self.adapter_mode not in ("legacy", "v2"):
+             raise ValueError("adapter_mode must be legacy or v2")
+         if self.identity.enabled:
+--- a/botsort_plus/identity_adapter.py
++++ b/botsort_plus/identity_adapter.py
+@@ -103,6 +103,8 @@
+     cfg = tracker.plus.identity
+     applied = cfg.association_enabled and not cfg.observe_only
+     costs = proposed if applied else reference
++    if stage=="high" and tracker.plus.raw_ir.native:
++        costs=tracker.raw_ir_observer.native(costs,geometry,tracks,detections,threshold,tracker.proximity_thresh)
+     tracker.last_events.append({
+         "event": "identity_association", "frame": tracker.frame_count, "stage": stage,
+         "pair_count": int(reference.size), "applied": bool(applied),
+--- /dev/null
++++ b/botsort_plus/ir_pixels.py
+@@ -0,0 +1,50 @@
++"""Current-frame IR patches sampled in RGB coordinates. No identity model."""
++import cv2
++import numpy as np
++
++_GRID=np.arange(28,dtype=np.float32)-13.5
++_MX,_MY=np.meshgrid(_GRID,_GRID)
++RING=np.ones((28,28),dtype=bool)
++RING[6:22,6:22]=False
++INVALID={1:'small_roi',2:'edge_roi',3:'registration_uncertain',4:'missing_ir'}
++
++class Extractor:
++    def __init__(self,settings):
++        self.settings=settings
++        self.mat=np.asarray(settings['matrix'],float)
++        self.ext=np.asarray(settings['extent'],float)
++
++    def sample(self,ir,box,translation,shift=False):
++        if ir is None:return None,4
++        box=np.asarray(box,float);size=box[2:4]-box[:2];ctr=box[:2]+size*.5
++        if translation is None:
++            center=self.mat[:,:2]@ctr+self.mat[:,2];size=(np.abs(self.mat[:,:2])@size)*self.ext
++        else:center=ctr+translation
++        w,h=size
++        if min(w,h)<4:return None,1
++        x,y=center
++        band=int(min(w,h)>8)+int(min(w,h)>12)
++        key=f'{min(3,max(0,int(x//160)))}_{min(2,max(0,int(y//171)))}_{band}'
++        count,rate=self.settings['geometry_grid'].get(key,(0,0))
++        if count<self.settings['cell_min_count'] or rate<self.settings['center_inside_min']:return None,3
++        if shift:x+=48 if x<320 else -48
++        width,height=ir.shape[1],ir.shape[0]
++        if x-1.16*w<0 or y-1.16*h<0 or x+1.16*w>=width-1 or y+1.16*h>=height-1:return None,2
++        patch=cv2.remap(ir,(x+_MX*(w/12)).astype(np.float32),(y+_MY*(h/12)).astype(np.float32),cv2.INTER_LINEAR)
++        return patch,0
++
++
++class Stamp:
++    def __init__(self,patch):
++        self.patch=patch
++        self.template=np.ascontiguousarray(patch[6:22,6:22])
++        bg=patch[RING]
++        self.contrast=float(patch[10:18,10:18].mean()-np.median(bg))
++        self.salience=abs(self.contrast)/(4.+.40*float(bg.std()))
++        self.spread=float(self.template.std())
++        self.usable=self.spread>=3.5 and abs(self.contrast)>=4 and self.salience>=.55
++
++    def similarity(self,previous):
++        # Compare one old tile to a small search window of the current tile.
++        # At most a quarter of the original box dimension in either direction.
++        return float(cv2.matchTemplate(self.patch[3:25,3:25],previous.template,cv2.TM_CCOEFF_NORMED).max())
+--- a/botsort_plus/recovery.py
++++ b/botsort_plus/recovery.py
+@@ -234,6 +234,10 @@
+                 if info["reason"] == "plausible":
+                     raw_costs[i, j] = info["cost"]
+ 
++        observer=getattr(self,"raw_ir_observer",None)
++        if observer is not None:
++            raw_costs=observer.recovery(raw_costs,pair_info,views,histories,ids,self.config.max_cost)
++
+         # Reserve unresolved plausible candidates, including those with too few
+         # hits. This prevents the usual high-score birth branch from stealing a
+         # potential old identity before short-trajectory verification finishes.
+--- /dev/null
++++ b/botsort_plus/spatial_presence.py
+@@ -0,0 +1,47 @@
++"""Veto only with positive IR evidence of a displaced response of the same polarity."""
++import cv2
++import numpy as np
++
++_GRID=np.arange(44,dtype=np.float32)-21.5
++_MX,_MY=np.meshgrid(_GRID,_GRID)
++def decide(observer,tid,box,others):
++    stamp,reason=observer.prediction_stamp(box)
++    if stamp is None:return True,reason,None
++    hist=observer.past.get(tid)
++    if not hist or len(hist)<2:return True,'short_history',None
++    (f0,p),(f1,q)=hist
++    if (p is None or q is None or f1-f0!=1 or not 1<=observer.frame-f1<=2 or
++            not (p.usable and q.usable) or p.contrast*q.contrast<=0 or min(p.salience,q.salience)<.8):
++        return True,'weak_history',None
++    xy=np.asarray(box[:2]);extent=np.asarray(box[2:])-xy;center=xy+extent*.5
++    delta=observer.motion[observer.frame-1]
++    if np.isfinite(delta).all():
++        c=center+delta;wh=extent
++    else:
++        mat=observer.extractor.mat;c=mat[:,:2]@center+mat[:,2];wh=(np.abs(mat[:,:2])@extent)*observer.extractor.ext
++    if observer.shift:c=c+np.array([48 if c[0]<320 else -48,0])
++    image=observer.current_image
++    if np.any(c-1.85*wh<0) or np.any(c+1.85*wh>=np.asarray(image.shape[::-1])-1):return True,'edge_roi',None
++    tile=cv2.remap(image,(c[0]+_MX*wh[0]/12).astype(np.float32),(c[1]+_MY*wh[1]/12).astype(np.float32),cv2.INTER_LINEAR).astype(np.float32)
++    ring=np.r_[tile[:4].ravel(),tile[-4:].ravel(),tile[4:-4,:4].ravel(),tile[4:-4,-4:].ravel()]
++    background=float(np.median(ring));noise=max(3.,float(np.median(abs(ring-background))*1.4826))
++    sign=np.sign(q.contrast)
++    strength=sign*(cv2.blur(tile,(7,7))-background)
++    near=(np.abs(_MX)<=5)&(np.abs(_MY)<=5)
++    far=(np.maximum(abs(_MX),abs(_MY))>=9)&(np.maximum(abs(_MX),abs(_MY))<=16)
++    inner=float(strength[near].max());outer=float(strength[far].max())
++    peak_idx=np.argmax(np.where(far,strength,-np.inf));i,j=np.unravel_index(peak_idx,strength.shape)
++    reference=min(abs(p.contrast),abs(q.contrast))
++    if max(inner,outer)<max(8,2*noise):return True,'low_local_contrast',None
++    if inner>=max(.55*reference,2*noise):return True,'support',None
++    if outer<max(8.,2*noise,.60*reference) or outer-inner<max(6.,.45*reference):return True,'inconclusive',None
++    # A nearby measured object can explain the off-centre response.
++    shift=np.array([_MX[i,j]*extent[0]/12,_MY[i,j]*extent[1]/12])
++    peak=center+shift
++    for ob in others:
++        if np.all(ob[:2]-.15*extent<=peak) and np.all(peak<=ob[2:]+.15*extent):
++            return True,'occupied_neighbor',None
++    # An extended hot/cold contour is ambiguous. Require a separated peak.
++    rival=far & (np.maximum(abs(_MX-_MX[i,j]),abs(_MY-_MY[i,j]))>=7)
++    if np.any(rival) and outer-float(strength[rival].max())<max(3.,.6*noise):return True,'diffuse_neighbor',None
++    return False,'displaced_response',{'inner_response':inner,'outer_response':outer,'offset_xy':shift.tolist()}
+--- /dev/null
++++ b/botsort_plus/thermal_observer.py
+@@ -0,0 +1,191 @@
++"""Untrained short-time infrared evidence at fixed detector rows or projected boxes."""
++from collections import defaultdict,deque
++from pathlib import Path
++import hashlib
++import json
++import cv2
++import numpy as np
++
++from .ir_pixels import Extractor,Stamp,INVALID
++
++
++class ThermalObserver:
++    def __init__(self,tiles_dir,seq,detector_fingerprint,policy,settings):
++        self.policy=policy
++        self.settings=settings
++        self.extractor=Extractor(settings)
++        self.shift=bool(policy.get('shift',False))
++        path=Path(tiles_dir)/(seq+'.npz')
++        self.meta=json.loads(path.with_suffix('.json').read_bytes())
++        if (self.meta['detection_fingerprint']!=detector_fingerprint
++                or hashlib.sha256(path.read_bytes()).hexdigest()!=self.meta['tiles_sha256']):
++            raise ValueError('Raw IR tiles and frozen detections disagree')
++        with np.load(path,allow_pickle=False) as z:
++            self.tiles=z['tiles'][int(self.shift)].copy()
++            self.flags=z['flags'][int(self.shift)].copy()
++            self.offsets=z['offsets'];self.motion=z['motion']
++        self.past={};self.frame=0;self.per_frame={};self.audit=[]
++        self.current_image=None
++
++    def begin(self,frame,image_path,num_detections):
++        if frame!=self.frame+1 or self.offsets[frame]-self.offsets[frame-1]!=num_detections:
++            raise ValueError('Misaligned IR frame/detection inputs')
++        if self.meta['file_names'][frame-1]!=Path(image_path).name:
++            raise ValueError('Infrared filename does not match current RGB frame')
++        self.frame=frame;self.audit=[];self.current_image=None;self.pair_cache={}
++        self.ir_path=Path(image_path).parent.parent/'01'/Path(image_path).name
++        self.per_frame={key:v for key,v in self.per_frame.items() if key[0]>=frame-4}
++
++    def detection(self,f,index):
++        key=(int(f),int(index))
++        if not self.frame-4<=f<=self.frame or f<1 or not 0<=index<self.offsets[f]-self.offsets[f-1]:
++            raise ValueError('Invalid causal access to an IR detection tile')
++        if key not in self.per_frame:
++            row=self.offsets[f-1]+index;code=int(self.flags[row])
++            self.per_frame[key]=(None,INVALID[code]) if code else (Stamp(self.tiles[row]),'ok')
++        return self.per_frame[key]
++
++    def prediction_stamp(self,box):
++        if self.current_image is None:
++            data=self.ir_path.read_bytes()
++            if hashlib.sha256(data).hexdigest()!=self.meta['ir_frame_sha256'][self.frame-1]:
++                raise ValueError('Changed IR image after registration/cache validation')
++            self.current_image=cv2.imdecode(np.frombuffer(data,np.uint8),cv2.IMREAD_GRAYSCALE)
++        delta=self.motion[self.frame-1]
++        patch,code=self.extractor.sample(self.current_image,box,delta if np.isfinite(delta).all() else None,self.shift)
++        return (None,INVALID[code]) if code else (Stamp(patch),'ok')
++
++    def compare(self,tid,current,last_seen=None):
++        stamp,why=current
++        if stamp is None:return None,why
++        if not stamp.usable:return None,'low_local_contrast'
++        bank=self.past.get(tid)
++        if not bank or len(bank)<2:return None,'short_history'
++        (t0,old),(t1,recent)=bank[-2:]
++        if (self.frame-t1>8 or t1-t0!=1 or t1>=self.frame or
++                (last_seen is not None and last_seen!=t1)):
++            return None,'history_gap'
++        if old is None or recent is None or not old.usable or not recent.usable:
++            return None,'weak_history'
++        stability=recent.similarity(old)
++        if stability<.55 or old.contrast*recent.contrast<=0:return None,'unstable_history'
++        # Both recent observations must see a similar pattern at one displacement.
++        s0=cv2.matchTemplate(stamp.patch[3:25,3:25],old.template,cv2.TM_CCOEFF_NORMED)
++        s1=cv2.matchTemplate(stamp.patch[3:25,3:25],recent.template,cv2.TM_CCOEFF_NORMED)
++        sim=float(((s0+s1)*.5).max())
++        flip=bool(stamp.contrast*recent.contrast<0 and min(stamp.salience,recent.salience)>=1.)
++        return (sim,flip,stability), 'usable'
++
++    @staticmethod
++    def contradict(evidence,sensitive=False):
++        sim,flip,_=evidence
++        return sim<(.40 if sensitive else .25) or (flip and sim<(.60 if sensitive else .45))
++
++    def check_output(self,measured_and_projected):
++        mode=self.policy.get('presence')
++        if not mode:return measured_and_projected
++        keep=[]
++        for row in measured_and_projected:
++            if row[7]>=0:keep.append(True);continue
++            tid=int(row[4])
++            if mode=='position':
++                from .spatial_presence import decide
++                others=measured_and_projected[measured_and_projected[:,7]>=0,:4]
++                accepted, reason, evidence=decide(self,tid,row[:4],others)
++                self.audit.append(dict(event='ir_projection_check',frame=self.frame,track_id=tid,
++                              status=reason,kept=accepted,similarity=None,spatial_evidence=evidence))
++                keep.append(accepted)
++                continue
++            evidence,reason=self.compare(tid,self.prediction_stamp(row[:4]))
++            rejected=False
++            if evidence is not None:
++                rejected=self.contradict(evidence,mode=='sensitive')
++                reason='contradiction' if rejected else ('support' if evidence[0]>=.55 and not evidence[1] else 'inconclusive')
++            accepted=(mode=='shadow' or not rejected)
++            self.audit.append(dict(event='ir_projection_check',frame=self.frame,track_id=tid,
++                          status=reason,kept=accepted,similarity=evidence[0] if evidence else None))
++            keep.append(accepted)
++        return measured_and_projected[np.asarray(keep,dtype=bool)]
++
++    def finish(self,output):
++        # Only current measured outputs enter history. No generated box feeds back.
++        self.past={tid:hist for tid,hist in self.past.items() if self.frame-hist[-1][0]<=8}
++        for row in output:
++            index=int(row[7]);tid=int(row[4])
++            if index<0:continue
++            stamp,_=self.detection(self.frame,index)
++            hist=self.past.get(tid,[])
++            hist.append((self.frame,stamp));self.past[tid]=hist[-2:]
++
++    def adjust_competition(self,costs,feasible,limit,score,stage,ids,indices,apply):
++        # Only close competitors which the original matcher accepts spatially.
++        if not min(costs.shape,default=0):return costs
++        possible=np.where(feasible,costs,np.inf)
++        groups=[]
++        for axis in (0,1):
++            counts=feasible.sum(axis=axis)
++            for slot in np.flatnonzero(counts>=2):
++                v=possible[:,slot] if axis==0 else possible[slot]
++                near=np.flatnonzero(v<=v.min()+.15)
++                if len(near)>1:groups.append([(int(p),int(slot)) if axis==0 else (int(slot),int(p)) for p in near])
++        if not groups:return costs
++        delta=defaultdict(set);scored={};comparable=0
++        for group in groups:
++            for pair in group:
++                if pair not in scored:scored[pair]=score(*pair)
++            if any(scored[p] is None for p in group):continue
++            comparable+=1
++            order=sorted(group,key=lambda p:scored[p],reverse=True)
++            best,second=order[:2]
++            if scored[best]<.50 or scored[best]-scored[second]<.18:continue
++            delta[best].add(-1)
++            for p in order[1:]:delta[p].add(1)
++        result=costs.copy()
++        for (i,j),directions in delta.items():
++            if len(directions)!=1:continue
++            result[i,j]=np.clip(costs[i,j]+.08*next(iter(directions)),0.,limit-1e-8)
++        changed=np.argwhere(result!=costs)
++        self.audit.append(dict(event='ir_competition',frame=self.frame,stage=stage,groups=len(groups),
++                    comparable_groups=comparable,changed_pairs=len(changed),applied=bool(apply),
++                    changes=[[int(ids[i]),int(indices[j]),float(costs[i,j]),float(result[i,j])] for i,j in changed]))
++        return result if apply else costs
++
++    def native(self,costs,geo,tracks,dets,threshold,prox):
++        mode=self.policy.get('native')
++        if not mode:return costs
++        ids=[int(t.id) for t in tracks];inds=[int(d.det_ind) for d in dets]
++        def score(i,j):
++            cmp,_=self.compare(ids[i],self.detection(self.frame,inds[j]))
++            return cmp[0] if cmp else None
++        return self.adjust_competition(costs,(geo<=prox)&(costs<=threshold),threshold,score,'native_high',ids,inds,mode!='shadow')
++
++    def recovery(self,costs,info,views,histories,cids,limit):
++        mode=self.policy.get('recovery')
++        if not mode:return costs
++        table={}
++        def value(i,j):
++            if (i,j) not in table:
++                view=views[i];hist=histories[j]
++                if self.frame-view.last_seen>8 or len(hist)<2 or hist[-1].frame!=self.frame:
++                    table[i,j]=None
++                else:
++                    dual=[self.compare(int(view.track_id),self.detection(o.frame,o.det_index),view.last_seen)[0] for o in hist[-2:]]
++                    table[i,j]=dual if all(v is not None for v in dual) else None
++            return table[i,j]
++        if mode in ('delay','shadow'):
++            for i,j in np.argwhere(np.isfinite(costs)):
++                item=info[int(i),int(j)]
++                if not item.get('two_hit_evidence'):continue
++                dual=value(int(i),int(j));bad=dual is not None and all(self.contradict(v) for v in dual)
++                self.audit.append(dict(event='ir_early_check',frame=self.frame,track_id=int(views[i].track_id),
++                          candidate_id=int(cids[j]),comparable=dual is not None,would_defer=bool(bad),applied=mode=='delay'))
++                if bad and mode=='delay':item['two_hit_evidence']=False
++        if mode not in ('rerank','shadow'):return costs
++        def score(i,j):
++            dual=value(i,j)
++            return float(np.mean([v[0] for v in dual])) if dual else None
++        ans=self.adjust_competition(costs,np.isfinite(costs),limit,score,'B_recovery',[v.track_id for v in views],cids,mode=='rerank')
++        if mode=='rerank':
++            for i,j in np.argwhere(ans!=costs):
++                info[int(i),int(j)]['ir_original_cost']=float(costs[i,j]);info[int(i),int(j)]['cost']=float(ans[i,j])
++        return ans
+--- a/tools/run_botsort_plus.py
++++ b/tools/run_botsort_plus.py
+@@ -105,6 +105,19 @@
+ def run(args):
+     sys.addaudithook(forbid_ground_truth)
+     cfg,paths,protocol=prepare(args)
++    if cfg.raw_ir.enabled:
++        if args.ir_tiles is None or args.ir_registration is None:
++            raise ValueError("Raw IR requires the matching tile cache and registration settings")
++        from dataclasses import asdict
++        from botsort_plus.thermal_observer import ThermalObserver
++        registration = json.loads(args.ir_registration.read_bytes())
++        ir_meta = {seq: json.loads((args.ir_tiles/(seq+".json")).read_bytes()) for seq in paths}
++        registration_hash = sha256(args.ir_registration)
++        if any(v["registration_sha256"] != registration_hash for v in ir_meta.values()):
++            raise ValueError("IR registration differs from cache")
++        protocol["raw_ir_inputs"] = dict(registration_sha256=registration_hash,
++                cache_root=str(args.ir_tiles.resolve()), descriptor="raw intensity patch, no learned embedding",
++                metadata_sha256={s:sha256(args.ir_tiles/(s+".json")) for s in paths})
+     if args.preflight:
+         print(json.dumps(protocol,ensure_ascii=False,indent=2))
+         return 0 if protocol["status"]=="READY" else 2
+@@ -141,6 +154,10 @@
+             cv2.setRNGSeed(0)
+             tracker=BoTSORTPlus(plus_config=cfg,reid_weights=Path("cache-only.pt"),device=torch.device("cpu"),
+                                half=False,**protocol["native_config"])
++            if cfg.raw_ir.enabled:
++                tracker.raw_ir_observer=ThermalObserver(args.ir_tiles,seq,protocol["detection_fingerprints"][seq],
++                                                       asdict(cfg.raw_ir),registration)
++                tracker.recovery_matcher.raw_ir_observer=tracker.raw_ir_observer
+             protocol["boxmot_source_hashes"]=tracker.upstream_hashes
+             dest=tracker_dir/"data"/(seq+".txt"); temp=dest.with_suffix(".tmp")
+             event_stream=None; event_counts=Counter(); rows=0; seconds=0.; wall=time.perf_counter()
+@@ -158,6 +175,8 @@
+                             raise ValueError(f"Expected original 512x640 RGB image: {image_path}")
+                         det=np.asarray(row["detections"],np.float32).reshape(-1,6); det[:,5]=0
+                         packets=fc.frame(index)
++                        if cfg.raw_ir.enabled:
++                            tracker.raw_ir_observer.begin(row["frame"],image_path,len(det))
+                         t=time.perf_counter(); prediction=tracker.update(det,image,features=packets); seconds+=time.perf_counter()-t
+                         seen=set()
+                         for item in prediction:
+@@ -209,6 +228,8 @@
+     p.add_argument("--output-dir",type=Path,default=REPO/"outputs/botsort_plus_v1")
+     p.add_argument("--runtime-root",type=Path)
+     p.add_argument("--sequences",nargs="+")
++    p.add_argument("--ir-tiles",type=Path)
++    p.add_argument("--ir-registration",type=Path)
+     p.add_argument("--preflight",action="store_true")
+     p.add_argument("--trace",action="store_true",help="Write association/candidate/recovery/memory JSONL logs")
+     return p
+--- /dev/null
++++ b/configs/botsort_plus/ir_assoc_shadow.json
+@@ -0,0 +1,43 @@
++{
++  "name": "ir_assoc_shadow",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate"
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "identity": {
++    "enabled": true,
++    "observe_only": false,
++    "association_enabled": true,
++    "memory_enabled": true,
++    "recent_confirmed_bank": true
++  },
++  "raw_ir": {
++    "native": "shadow",
++    "recovery": "shadow"
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_early_defer.json
+@@ -0,0 +1,42 @@
++{
++  "name": "ir_early_defer",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate"
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "identity": {
++    "enabled": true,
++    "observe_only": false,
++    "association_enabled": true,
++    "memory_enabled": true,
++    "recent_confirmed_bank": true
++  },
++  "raw_ir": {
++    "recovery": "delay"
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_early_defer_shift.json
+@@ -0,0 +1,43 @@
++{
++  "name": "ir_early_defer_shift",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate"
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "identity": {
++    "enabled": true,
++    "observe_only": false,
++    "association_enabled": true,
++    "memory_enabled": true,
++    "recent_confirmed_bank": true
++  },
++  "raw_ir": {
++    "recovery": "delay",
++    "shift": true
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_motion_guard.json
+@@ -0,0 +1,36 @@
++{
++  "name": "ir_motion_guard",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate",
++    "output_prediction_frames": 2
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "raw_ir": {
++    "presence": "guard"
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_motion_sensitive.json
+@@ -0,0 +1,36 @@
++{
++  "name": "ir_motion_sensitive",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate",
++    "output_prediction_frames": 2
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "raw_ir": {
++    "presence": "sensitive"
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_motion_shadow.json
+@@ -0,0 +1,36 @@
++{
++  "name": "ir_motion_shadow",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate",
++    "output_prediction_frames": 2
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "raw_ir": {
++    "presence": "shadow"
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_motion_shift.json
+@@ -0,0 +1,37 @@
++{
++  "name": "ir_motion_shift",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate",
++    "output_prediction_frames": 2
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "raw_ir": {
++    "presence": "guard",
++    "shift": true
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_native_rank.json
+@@ -0,0 +1,42 @@
++{
++  "name": "ir_native_rank",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate"
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "identity": {
++    "enabled": true,
++    "observe_only": false,
++    "association_enabled": true,
++    "memory_enabled": true,
++    "recent_confirmed_bank": true
++  },
++  "raw_ir": {
++    "native": "rerank"
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_native_shift.json
+@@ -0,0 +1,43 @@
++{
++  "name": "ir_native_shift",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate"
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "identity": {
++    "enabled": true,
++    "observe_only": false,
++    "association_enabled": true,
++    "memory_enabled": true,
++    "recent_confirmed_bank": true
++  },
++  "raw_ir": {
++    "native": "rerank",
++    "shift": true
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_position.json
+@@ -0,0 +1,37 @@
++{
++  "name": "ir_position",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate",
++    "output_prediction_frames": 2
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "raw_ir": {
++    "presence": "position",
++    "shift": false
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_position_shift.json
+@@ -0,0 +1,37 @@
++{
++  "name": "ir_position_shift",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate",
++    "output_prediction_frames": 2
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "raw_ir": {
++    "presence": "position",
++    "shift": true
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_recovery_rank.json
+@@ -0,0 +1,42 @@
++{
++  "name": "ir_recovery_rank",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate"
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "identity": {
++    "enabled": true,
++    "observe_only": false,
++    "association_enabled": true,
++    "memory_enabled": true,
++    "recent_confirmed_bank": true
++  },
++  "raw_ir": {
++    "recovery": "rerank"
++  }
++}
+\ No newline at end of file
+--- /dev/null
++++ b/configs/botsort_plus/ir_recovery_shift.json
+@@ -0,0 +1,43 @@
++{
++  "name": "ir_recovery_shift",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate"
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "identity": {
++    "enabled": true,
++    "observe_only": false,
++    "association_enabled": true,
++    "memory_enabled": true,
++    "recent_confirmed_bank": true
++  },
++  "raw_ir": {
++    "recovery": "rerank",
++    "shift": true
++  }
++}
+\ No newline at end of file

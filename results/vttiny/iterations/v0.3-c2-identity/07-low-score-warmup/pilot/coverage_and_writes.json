@@ -1,0 +1,22 @@
+{
+  "gt": 64163,
+  "gained_vs_confirmed": 96,
+  "lost_vs_confirmed": 22,
+  "off_only_vs_old": 240,
+  "previously_lost_restored": 88,
+  "confirmed_only_vs_off": 56,
+  "confirmed_only_retained": 50,
+  "newly_covered_vs_both": 8,
+  "extra_rgb_writes": 1416,
+  "tracks_written": 37,
+  "low_first_qualified": 398,
+  "warmup_poor_geometry": 38,
+  "warmup_ambiguous_geometry": 21,
+  "sequences_written": 1,
+  "sequences_changed_tracks": 1,
+  "sequence_fn_decrease_same_increase": [
+    1,
+    0,
+    0
+  ]
+}

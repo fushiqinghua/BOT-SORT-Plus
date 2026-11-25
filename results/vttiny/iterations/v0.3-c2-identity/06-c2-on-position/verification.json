@@ -1,0 +1,62 @@
+{
+  "runs": [
+    {
+      "name": "final_c2",
+      "sequences": 30,
+      "frames": 12590,
+      "routing": {
+        "rgb": 239,
+        "ir": 102,
+        "unchanged": 659
+      },
+      "unchanged_sequences_vs_final": 12,
+      "identity": {
+        "enabled": true,
+        "observe_only": false,
+        "association_enabled": true,
+        "memory_enabled": true,
+        "min_quality": 0.35,
+        "min_history": 3,
+        "history_max_distance": 0.4,
+        "appearance_margin": 0.1,
+        "geometry_margin": 0.1,
+        "bootstrap_max_iou_cost": 0.3,
+        "write_max_iou_cost": 0.5,
+        "ema": 0.95,
+        "recent_confirmed_bank": false
+      }
+    },
+    {
+      "name": "final_c2_confirmed",
+      "sequences": 30,
+      "frames": 12590,
+      "routing": {
+        "rgb": 235,
+        "ir": 103,
+        "unchanged": 669
+      },
+      "unchanged_sequences_vs_final": 13,
+      "identity": {
+        "enabled": true,
+        "observe_only": false,
+        "association_enabled": true,
+        "memory_enabled": true,
+        "min_quality": 0.35,
+        "min_history": 3,
+        "history_max_distance": 0.4,
+        "appearance_margin": 0.1,
+        "geometry_margin": 0.1,
+        "bootstrap_max_iou_cost": 0.3,
+        "write_max_iou_cost": 0.5,
+        "ema": 0.95,
+        "recent_confirmed_bank": true
+      }
+    }
+  ],
+  "source": "$EXPERIMENT_ROOT/ir_motion_localization_v1/followup/live_source",
+  "reference": "rgb_then_ir",
+  "policy_sha256": "4bf2e7b4806792c7ee0c7e9e817b3bac1c9fdbccc842a5025cb9568bd68f12f5",
+  "source_entry_sha256": "eb19774dda72863e0bd3f76c79e3f4aa80b674be747c50ac12579fafee4d6814",
+  "training": false,
+  "selection": "both preset policies evaluated once on official test"
+}

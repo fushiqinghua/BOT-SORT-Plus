@@ -116,6 +116,18 @@ class A2AuditTests(unittest.TestCase):
         self.assertEqual(result["status"], "PASS", result)
         self.assertEqual(result["trackers"]["baseline_ref"]["totals"]["output_rows"], 2)
 
+    def test_motion_output_does_not_count_as_a_measured_lifetime_frame(self):
+        events = self.events()
+        recovery = next(event for event in events if event["event"] == "recovered")
+        recovery.update(event="motion_output", age=1, det_index=None)
+        events[-1].update(last_emitted=5, output_frames=1, recovery_count=0)
+        protocol, _, _ = self.write_run(events=events)
+        protocol["config"]["recovery"] = {"enabled": True, "output_prediction_frames": 2}
+        self.write_json(self.root / "protocols/A2.json", protocol)
+        result = self.result()
+        self.assertEqual(result["status"], "PASS", result)
+        self.assertEqual(result["trackers"]["A2"]["totals"]["output_rows"], 2)
+
     def test_prediction_hash_mismatch_fails(self):
         _, path, _ = self.write_run()
         path.write_bytes(self.mot.replace(b"10,20", b"11,20"))

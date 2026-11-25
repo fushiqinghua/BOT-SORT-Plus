@@ -1,0 +1,105 @@
+--- a/botsort_plus/identity_reliability.py
++++ b/botsort_plus/identity_reliability.py
+@@ -35,11 +35,14 @@
+     write_max_iou_cost: float = .50
+     ema: float = .95
+     recent_confirmed_bank: bool = False
++    stable_low_warmup: bool = False
+ 
+     def __post_init__(self):
+-        for name in ("enabled", "observe_only", "association_enabled", "memory_enabled", "recent_confirmed_bank"):
++        for name in ("enabled", "observe_only", "association_enabled", "memory_enabled", "recent_confirmed_bank", "stable_low_warmup"):
+             if not isinstance(getattr(self, name), bool):
+                 raise ValueError(f"identity.{name} must be bool")
++        if self.stable_low_warmup and not (self.enabled and self.memory_enabled and self.recent_confirmed_bank and not self.observe_only):
++            raise ValueError("stable_low_warmup requires active recent-confirmed identity memory")
+         if self.enabled and not (self.association_enabled or self.memory_enabled):
+             raise ValueError("Enabled identity module needs at least one intervention")
+         if isinstance(self.min_history, bool) or not isinstance(self.min_history, Integral) or self.min_history < 1:
+--- a/botsort_plus/appearance.py
++++ b/botsort_plus/appearance.py
+@@ -111,6 +111,7 @@
+         self.prototypes: dict[str, np.ndarray] = {}
+         self.qualities: dict[str, float] = {}
+         self.update_counts: dict[str, int] = {}
++        self.last_stable_low_frame: int | None = None
+         self.recent_rgb_observation: tuple[int, np.ndarray] | None = None
+ 
+     def update(self, features: Mapping[str, Feature]) -> list[str]:
+--- a/botsort_plus/native_adapter.py
++++ b/botsort_plus/native_adapter.py
+@@ -150,10 +150,10 @@
+             vector = self._trusted_rgb(index) if self.with_reid else None
+         return STrack(row, vector, max_obs=self.max_obs)
+ 
+-    def _write_memory(self, track, det_index):
++    def _write_memory(self, track, det_index, *, rgb_only=False):
+         memory = self.memories.setdefault(track.id, MemoryBank(self.plus.appearance))
+         packet = self._packets[det_index]
+-        if not self.plus.appearance.enabled:
++        if rgb_only or not self.plus.appearance.enabled:
+             packet = {k:v for k,v in packet.items() if k == "rgb"}
+         updated = memory.update(packet)
+         if updated:
+--- a/botsort_plus/identity_adapter.py
++++ b/botsort_plus/identity_adapter.py
+@@ -44,6 +44,25 @@
+             and 1. - float(vector @ previous[1]) <= .40)
+ 
+ 
++def _low_warmup_status(memory, decision, cfg, reactivate):
++    """Two adjacent accepted, unambiguous low observations of the same track."""
++    previous = memory.last_stable_low_frame
++    memory.last_stable_low_frame = None
++    if reactivate or decision.stage != "low":
++        return "outside_low"
++    if decision.reason != "warmup_requires_high":
++        return decision.reason
++    if decision.quality < max(cfg.min_quality, memory.config.min_update_quality):
++        return "low_quality"
++    if decision.geometry_cost > cfg.bootstrap_max_iou_cost:
++        return "poor_geometry"
++    if decision.competitor_count and (decision.geometry_margin is None
++                                      or decision.geometry_margin < cfg.geometry_margin):
++        return "ambiguous_geometry"
++    memory.last_stable_low_frame = decision.frame
++    return "eligible" if previous == decision.frame - 1 else "first_qualified_frame"
++
++
+ def apply_match(tracker, track, detection, decision, *, reactivate=False,
+                 reference_cost=None, applied_cost=None, base_cost=None):
+     """Apply the accepted track update and route appearance writes according to policy."""
+@@ -52,9 +71,13 @@
+     permit_bank = not gate_applied or decision.allow_write
+     block_write = not permit_bank
+     recent_agrees = False
++    low_status = None
+     if cfg.recent_confirmed_bank and gate_applied:
+         recent_agrees = _recent_rgb_agrees(tracker, track.id, int(detection.det_ind), decision, reactivate)
+         permit_bank = decision.allow_write or (decision.reason == "history_conflict" and recent_agrees)
++        if cfg.stable_low_warmup:
++            low_status = _low_warmup_status(tracker.memories[track.id], decision, cfg, reactivate)
++            permit_bank = permit_bank or low_status == "eligible"
+         block_write = False  # Keep BoT-SORT's native feature updates.
+     native_feature = detection.curr_feat
+     # STrack mutates native smooth_feat/curr_feat/features inside update().
+@@ -70,7 +93,10 @@
+     finally:
+         if block_write:
+             detection.curr_feat = native_feature
+-    updated = [] if not permit_bank else tracker._write_memory(track, int(detection.det_ind))
++    if low_status == "eligible":
++        updated = tracker._write_memory(track, int(detection.det_ind), rgb_only=True)
++    else:
++        updated = [] if not permit_bank else tracker._write_memory(track, int(detection.det_ind))
+     private_write = tracker.identity_reliability.commit(
+         int(track.id), tracker._packets[int(detection.det_ind)], decision, tracker.frame_count)
+     tracker.last_events.append({
+@@ -82,6 +108,7 @@
+         **({"recent_rgb_agrees": recent_agrees, "bank_write_permitted": permit_bank}
+            if cfg.recent_confirmed_bank and gate_applied else {}),
+         "native_feature_written": bool(native_feature is not None and not block_write),
++        **({"low_warmup_status": low_status} if low_status is not None else {}),
+         "custom_modalities_written": updated,
+         "private_anchor_written": bool(private_write),
+         "reference_cost": None if reference_cost is None else float(reference_cost),

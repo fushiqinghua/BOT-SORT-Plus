@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "protocol": "Re-evaluation from archived MOT prediction bytes and original official RGB ground-truth bytes.",
+  "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "metrics": {
+    "pilot": {
+      "sequences": 1,
+      "frames": 390,
+      "prediction_files_sha256_verified": 3,
+      "metric_rows_including_combined": 6,
+      "max_abs_difference": {
+        "HOTA": 0.0,
+        "DetA": 0.0,
+        "AssA": 0.0,
+        "IDF1": 0.0,
+        "MOTA": 0.0,
+        "FP": 0,
+        "FN": 0,
+        "IDSW": 0
+      },
+      "official_rgb_gt_hashes_match": true,
+      "recorded_summary_sha256": "b8b5b85f272aafdec4784e4e4f80c806cd5f34658d4c9dc0046aac517eee916e",
+      "trace_audit_for_stable_low": {
+        "verified_on_original_log": true,
+        "error_count": 0
+      }
+    },
+    "full": {
+      "sequences": 30,
+      "frames": 12590,
+      "prediction_files_sha256_verified": 90,
+      "metric_rows_including_combined": 93,
+      "max_abs_difference": {
+        "HOTA": 0.0,
+        "DetA": 0.0,
+        "AssA": 0.0,
+        "IDF1": 0.0,
+        "MOTA": 0.0,
+        "FP": 0,
+        "FN": 0,
+        "IDSW": 0
+      },
+      "official_rgb_gt_hashes_match": true,
+      "recorded_summary_sha256": "086f3ea19fd4034d884ffdbec06a6bb5b1cc1049f2a5b87bbbeeb6cb096cab40",
+      "trace_audit_for_stable_low": {
+        "verified_on_original_log": true,
+        "error_count": 0
+      }
+    }
+  },
+  "tested_source_snapshot": {
+    "files_compared": 100,
+    "identical_files": 98,
+    "adapted_offline_auditors": [
+      "tools/audit_botsort_plus_a2.py",
+      "tools/audit_botsort_plus_identity.py"
+    ],
+    "tracking_runtime_source_changed": false
+  },
+  "unit_tests": {
+    "collected": 243,
+    "passed": 236,
+    "skipped_native_without_boxmot": 7
+  }
+}

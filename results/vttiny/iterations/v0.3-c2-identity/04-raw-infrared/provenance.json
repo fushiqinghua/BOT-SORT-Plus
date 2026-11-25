@@ -1,0 +1,37 @@
+{
+  "experiment": "$EXPERIMENT_ROOT/ir_raw_evidence_v1",
+  "base": "c2_repair_v1/release/BOT-SORT-Plus",
+  "tracks_in_index": 480,
+  "unique_trajectory_files": 94,
+  "replayed_sequences": 30,
+  "frames": 12590,
+  "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+  "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+  "source_protocol_sha256": "6f0fdff3b198315f8aac72972fcf5117c53b917e84f6c7b5f9814b9012ef2ff2",
+  "input_roots": {
+    "baseline": "$VTTINY_ROOT/integrations/botsort_plus_C2_v0_3_0/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt",
+    "images": "$VTTINY_ROOT/data/raw/VT-Tiny-MOT",
+    "features": "$VTTINY_ROOT/integrations/botsort_plus_v0_1_0/features_rgb"
+  },
+  "paired_infrared": "current paired IR frame; observed RGB detections; no future or test labels",
+  "evaluation_context": "Historical official test was previously used for checkpoint/gate selection; treat new runs here as development experiments, not an unseen test.",
+  "patch_sha256": "78bc96cafeb50848f8515e947c7b615ac1e0d5f31a7c4a1a29dc9cf5c7adcf79",
+  "run_names": [
+    "early_moderate",
+    "early_motion2",
+    "confirmed_early",
+    "ir_assoc_shadow",
+    "ir_early_defer",
+    "ir_early_defer_shift",
+    "ir_motion_guard",
+    "ir_motion_sensitive",
+    "ir_motion_shadow",
+    "ir_motion_shift",
+    "ir_native_rank",
+    "ir_native_shift",
+    "ir_position",
+    "ir_position_shift",
+    "ir_recovery_rank",
+    "ir_recovery_shift"
+  ]
+}

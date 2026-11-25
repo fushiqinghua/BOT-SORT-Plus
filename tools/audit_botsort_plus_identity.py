@@ -121,7 +121,30 @@ def _summary(stats):
     return output
 
 
-def _validate_decision(event, cfg):
+def _validate_low_warmup(event, cfg, previous_frame, min_update_quality):
+    stage, reason = event["stage"], event["reason"]
+    margin = event["geometry_margin"]
+    if stage != "low":
+        expected = "outside_low"
+    elif reason != "warmup_requires_high":
+        expected = reason
+    elif event["quality"] < max(cfg.min_quality, min_update_quality):
+        expected = "low_quality"
+    elif event["geometry_cost"] > cfg.bootstrap_max_iou_cost:
+        expected = "poor_geometry"
+    elif event["competitor_count"] and (margin is None or margin < cfg.geometry_margin):
+        expected = "ambiguous_geometry"
+    else:
+        expected = "eligible" if previous_frame == event["frame"] - 1 else "first_qualified_frame"
+    if event.get("low_warmup_status") != expected:
+        raise ValueError("Low-score warmup trace disagrees with continuity or the write thresholds")
+    if expected == "eligible" and (event["allow_write"] or event["private_anchor_written"]
+                                   or event["custom_modalities_written"] != ["rgb"]):
+        raise ValueError("Low-score warmup must write only the B recovery RGB bank")
+    return expected
+
+
+def _validate_decision(event, cfg, previous_warmup_frame=None, min_update_quality=0.):
     required = {"reliability", "distance", "appearance_margin", "geometry_margin", "base_cost"}
     if required - set(event):
         raise ValueError(f"Identity decision missing fields: {sorted(required - set(event))}")
@@ -155,9 +178,13 @@ def _validate_decision(event, cfg):
         raise ValueError("Private anchor was written despite a rejected decision")
     if allow and (quality < cfg.min_quality or quality <= 0):
         raise ValueError("Write eligibility contradicts configured quality gate")
+    low_warmup = None
     if gate and cfg.recent_confirmed_bank:
         recent = _flag(event, "recent_rgb_agrees")
-        permit = _flag(event, "bank_write_permitted", allow or (event["reason"] == "history_conflict" and recent))
+        if cfg.stable_low_warmup:
+            low_warmup = _validate_low_warmup(event, cfg, previous_warmup_frame, min_update_quality)
+        permit = _flag(event, "bank_write_permitted", allow or low_warmup == "eligible"
+                       or (event["reason"] == "history_conflict" and recent))
         if recent and (stage != "high" or geometry > .50 or
                        (event["geometry_margin"] is not None and event["geometry_margin"] < .10)):
             raise ValueError("Recent RGB confirmation contradicts its association stage or geometry")
@@ -184,6 +211,7 @@ def _validate_decision(event, cfg):
         raise ValueError("C2 increased the reference appearance bonus")
     if applied and r is not None and abs(actual - (base - r * (base - reference))) > 1e-12:
         raise ValueError("Applied cost disagrees with logged C2 calibration")
+    return low_warmup
 
 
 def _validate_seed(event, cfg):
@@ -200,7 +228,7 @@ def _validate_seed(event, cfg):
         raise ValueError("Rejected birth seed reached a gated memory writer")
 
 
-def _sequence(path, sequence, frames, cfg, aggregate):
+def _sequence(path, sequence, frames, cfg, aggregate, min_update_quality=0.):
     result = {"status": "FAIL", "trace_complete": False, "errors": [], "stages": None,
               "association": None, "seeds": None}
     if not path.is_file():
@@ -211,6 +239,7 @@ def _sequence(path, sequence, frames, cfg, aggregate):
     association_pairs = {}
     decisions, matches, seed_keys, birth_keys = Counter(), Counter(), Counter(), Counter()
     writers, claimed_writes = {}, {}
+    low_warmup_frames = {}
     previous_frame = 0
     with path.open(encoding="utf-8-sig") as stream:
         for line, raw in enumerate(stream, 1):
@@ -231,8 +260,12 @@ def _sequence(path, sequence, frames, cfg, aggregate):
                     if not cfg.enabled:
                         raise ValueError("Identity events exist but protocol identity is disabled")
                 if kind == "identity_decision":
-                    _validate_decision(event, cfg)
                     key = _key(event)
+                    track_id = key[1]
+                    warmup = _validate_decision(event, cfg, low_warmup_frames.pop(track_id, None),
+                                                min_update_quality)
+                    if warmup in ("first_qualified_frame", "eligible"):
+                        low_warmup_frames[track_id] = frame
                     decisions[(event["stage"], *key)] += 1
                     if key in claimed_writes:
                         raise ValueError("Duplicate identity write decision")
@@ -344,7 +377,8 @@ def audit_run(run_dir, trackers, compare_pairs=()):
                 _name(sequence)
                 frames = _int(frames, "sequence frames", 1)
                 item = _sequence(root / "events" / name / (sequence + ".jsonl"),
-                                 sequence, frames, cfg.identity, aggregate)
+                                 sequence, frames, cfg.identity, aggregate,
+                                 cfg.appearance.min_update_quality)
                 entry["sequences"][sequence] = item
                 entry["errors"].extend(f"{sequence}: {error}" for error in item["errors"])
             entry["trace_complete"] = not entry["errors"]

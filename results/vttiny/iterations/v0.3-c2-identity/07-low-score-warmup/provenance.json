@@ -1,0 +1,156 @@
+{
+  "verified": true,
+  "frames": 12590,
+  "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+  "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+  "policy_sha256": "4bf2e7b4806792c7ee0c7e9e817b3bac1c9fdbccc842a5025cb9568bd68f12f5",
+  "registration_sha256": "b0269178e85f5d578d775da218702a88dfebde98b2bcb0853f60cb100786f9de",
+  "feature_hashes": {
+    "DJI_0028_3": {
+      "features": "743da684060b51e0b9d712bb388a58acca521cc44104826719edd524cfbae4b5",
+      "metadata": "e28a8fc7870d29b64b875a4b3490c3784c4fe5429e5b9055d5c6955f1a9eeb5d"
+    },
+    "DJI_0030_2": {
+      "features": "7297fda0c3430c3417fe3b503e98335b18745e56078b66f468923b1196284a88",
+      "metadata": "137aa68fc2124fdfa9e5a1f907a77d1be1d35ef2cc5ad3548c5614a5b80c12fb"
+    },
+    "DJI_0032_3": {
+      "features": "aa9ed76a94188b27033f0c3b1d4e385e037084ae4091575a44a0f3b0eca971f8",
+      "metadata": "9b30e37eb0a86cf72410f4d15f6b75aee2e65d5bae8e038bfdb084dd6c449ae9"
+    },
+    "DJI_0049_2": {
+      "features": "c3968a973b8e8b542abd6e77c2bfd3de1f286eb82de8cc963c589427e120486c",
+      "metadata": "e32d19313784f0de57a2da4e0bd55b4e594e4810210d333fdae7c2c31776f069"
+    },
+    "DJI_0051_2": {
+      "features": "bb5679dd696f7707895447c11ea342084d959c21387ef33e767d3922b1a7463c",
+      "metadata": "a7492a7ea80127c0cd69d4983c7abec086237ae74da0598f6bc2c2f9c942d2bc"
+    },
+    "DJI_0061_2": {
+      "features": "47fbfba54a1b6308e1a3f75b90d0076f4e5f765e614a3cb89ad5bfcd12883a43",
+      "metadata": "094e71c1a1820f72f9bc8bed4ebe459ed7f5a4b946c3324648a0e5588a8ae985"
+    },
+    "DJI_0073_3": {
+      "features": "c3754d5c921f20498acc51f101e719d52a0eecf7268f888eaf5d0d457dfbb20e",
+      "metadata": "421926af55ccf832d8197c72f86be84f782cce511c2c2e606a8d6d895148ec7d"
+    },
+    "DJI_0109_1": {
+      "features": "7d4e10c98ebb91a4e2e9a45265ff398d8894198759c0f257574d167bf95ab959",
+      "metadata": "c2447df9e19dc2f20ff7c0247e5b896f342e3958abbeb7504c95ec84df56eb20"
+    },
+    "DJI_0119_2": {
+      "features": "f7acbdfcae7d74d9ccc277cc2b97b696357b4ff94a01b0d7d288469162c982a6",
+      "metadata": "d3a992fdce84d129639bcb655ac0714172d1c479f2cc074322cf914ef7b83b98"
+    },
+    "DJI_0129_2": {
+      "features": "75df021af3b8ad57e29b7c75a824aa5f5db4dfdde7cba265f1f62b70c66dfae3",
+      "metadata": "ad0ce97450bf82ce39bd2b5cdf6de6cbb6e1ab776021811ff94bca0ed3318ee1"
+    },
+    "DJI_0141_2": {
+      "features": "6fe1f2c4b91229fbb33c83c9d4c7e23e8ca24f895af1667771206c07ba7d4c7d",
+      "metadata": "14a8eccdfd620eae139ee2a94e92cc611b40db58f66cfaae4ff40ae8bdc89494"
+    },
+    "DJI_0155_2": {
+      "features": "03d1a782a282496798175ecc1997b9ea4754f0f1bfa724fca29da5ccbdaa9580",
+      "metadata": "35175c05333d8ed68f6477a25453eca234af9fb14e12263d21a87e0a861d3059"
+    },
+    "DJI_0159_2": {
+      "features": "41bdbcfc7de896d7892618686969ea2a6b52789f5b41e76b34c5b16ebe726873",
+      "metadata": "c63d8d7859f56358d38662b49e8ecd886785cde726a36bcc697341f0511ef12f"
+    },
+    "DJI_0169_3": {
+      "features": "1b3a078228bcc2b70a4d02f626a35f6b8b79866545fb00239eaf4365987c2cee",
+      "metadata": "06daa4b1e0a295b439b09bf734fc9a5fd244d7f86f3af73b05cf2d72088103e2"
+    },
+    "DJI_0173_2": {
+      "features": "09e7da05a9ab2bda528a072e91d89098f47cacda1fcf89710df45aa1b55bd6fd",
+      "metadata": "432a539a1c88ac321f25ad1274bf11bcaf6a7d289853b80ee53840d479514dd3"
+    },
+    "DJI_0181_3": {
+      "features": "84a52f289212eb004025bb696bc352c674e989e1eb8f92cd531bca0cd2bc364d",
+      "metadata": "0fe91cba8f3659b6b924159f4bcbeafc72b7743315eac3dc1e618fca2343ba82"
+    },
+    "DJI_0221_2": {
+      "features": "1ad91d8ba36e31d96965c78ed7ab5de13e9d99165983f5a55c405e38112b5366",
+      "metadata": "aa9fa4a7c498ff7eea4f79f5f1d34c65b04d8556b8fa22100dc253b4ae5850df"
+    },
+    "DJI_0225_1": {
+      "features": "363ed542fc3a1aef3fd4b4142fc4be74a6cc5bdd62860bf13600254f2b6affe8",
+      "metadata": "d8c076a0e3635140c0c47b1c4de59d3d75710d69cc1a62cd4ddacd73fe31634b"
+    },
+    "DJI_0237_2": {
+      "features": "3a6e9e52ba9f7be11f77880e752168de3dedc5fc1d3b6d7b1d9fc4e60dce0165",
+      "metadata": "3040d860c469a7772e7dada5f51d7741ec4d8892e484c7525d28c287b17794ab"
+    },
+    "DJI_0255_1": {
+      "features": "af4615dcf28d1e100cabcdbe8be334e6b08bfc0b22bfe05f1356885b6326c2ac",
+      "metadata": "c25b5a8e4bfbc80513b1f65ad80f542b13f1f37a048736495a1b8c77eb7926bb"
+    },
+    "DJI_0257_2": {
+      "features": "ca034fbfd7a163ca42f5d4ab6f1387c458ff32fa2d5fde699edf75e4516e08e2",
+      "metadata": "5b75c99cfbc1d126a0b46b59b4ea00f687a9b8a5235d14ede9645eaeb965f0a4"
+    },
+    "DJI_0277_2": {
+      "features": "39a218a043fb89468d7c0b20c17b21597c2f974bcfc5bb443942adf61f2ceb67",
+      "metadata": "d5d8964bb8ee52707cc05e98c94ce2c757c75897e3d83f199bfaaffecee17e94"
+    },
+    "DJI_0283_1": {
+      "features": "97aa5fad05b7915426cfffee6405f21da155d5335f40e299230b102fdb177b42",
+      "metadata": "01e12ea7b58e944867ab7808e24b4cdeebc5c35dd988b7a683001656a6cb872e"
+    },
+    "DJI_0303_2": {
+      "features": "87cc686e21d3dfff3f5e45c1991137ad2a5af9788cd159ba12ef32b1a4888b3d",
+      "metadata": "30d61f9404b48579a260945596d0ee1c99ccf0304e9d2dfe1d1f12e8f30eaff8"
+    },
+    "DJI_0307_2": {
+      "features": "502e36bc72f181a084a041105d102835c929c5f008c60d3310f75d3b9cf8690a",
+      "metadata": "cf75284d7115ffacda23f1bc174c5cf5efd82f008e07e335412ffa46c5118241"
+    },
+    "DJI_0309_4": {
+      "features": "796ac2f06c99eeb3f878bad0241eb9f26d729b335655fd8a8d04402c25431f21",
+      "metadata": "660426831e44a29daf05feb66a4599ef50138851b5c77f00160e947af46a3bbe"
+    },
+    "DJI_0325_2": {
+      "features": "6defcd12e67c461997d582768a1857ea3613cb032cc4f0283225d43b6df81aaa",
+      "metadata": "095dd9bdc1b2d4b93aab86fbee7d364acd6d516074778281f5aafdb35c7b21b5"
+    },
+    "DJI_0327_3": {
+      "features": "14cf442b2e647d5ca565d66aa1b533d89b35a08a017604f2a41a35cd0ccc657c",
+      "metadata": "2943048ac344c00418a922ed39acc5e51028df48dda322183dab70a502abce94"
+    },
+    "DJI_0339_2": {
+      "features": "e64e137149febb3bc656030bb3afe2f5496c8cacb15872222be9e2d65d6a998d",
+      "metadata": "bca81b542159cf6d0d1331b7d9bf043c415782b5407bfa6ec2e5ba9cbafb4c0b"
+    },
+    "DJI_0345_2": {
+      "features": "e10f487b4d8ea217122313b396f61cc84feecc6bc187d41fb3265fa8403ba1aa",
+      "metadata": "b533edc1d3e02e0cc46c688935d3f6ddcb2240eee42ff085f2fd513e8b53430c"
+    }
+  },
+  "config_sha256": "4c2604fcf749c6160d2632b6199381017381405f3f33a66c379851f4171e7e14",
+  "patch_sha256": "81780665b2ff186223897de06fe626b57d8afe5e5de3e2fa27f1338e60bdc420",
+  "tracking_source": "$EXPERIMENT_ROOT/ir_motion_localization_v1/followup/live_source",
+  "changed_files": {
+    "botsort_plus/appearance.py": {
+      "parent": "027c73c28958d8048e82889d8a81fe981965842968ce0c26034d55ad829c0378",
+      "modified": "86f50239b085af8743259546d65d22c7c0e3618b38466b5fcbbbb9bd8c3b1c77"
+    },
+    "botsort_plus/native_adapter.py": {
+      "parent": "f158b2ddfab9c31af5c2a8b75e6e32dfddb7a7273cad822d765f2b595079e114",
+      "modified": "e4b79593c1c5d789b5a9889e3ff27af04646ba06c5e119e2cfbc738b7ac78be0"
+    },
+    "botsort_plus/identity_adapter.py": {
+      "parent": "db752347d61ac4fa18db4c3ad4e524ff0058bade6f395dec6ccd904cb7af9f1d",
+      "modified": "225aa21986385771128d456b842bed88982c0749f92f1f5d7f4564ed78935cdf"
+    },
+    "botsort_plus/identity_reliability.py": {
+      "parent": "b141c037b64b34b098c130eebddd3394143c0e30da79dd7813f9c364e20d11b5",
+      "modified": "2d47fe559f6f94ce10d51612798893cc1b8fa149bb529d45fa4360f25fbb4bb2"
+    }
+  },
+  "source_files_checked_with_git_apply": true,
+  "old_result_replay_verified": true,
+  "pilot_full_byte_identical": true,
+  "gt_counts_verified_for": 90,
+  "test_development": true
+}

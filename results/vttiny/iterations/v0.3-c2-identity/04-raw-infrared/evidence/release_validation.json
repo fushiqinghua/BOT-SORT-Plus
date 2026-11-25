@@ -1,0 +1,27 @@
+[
+  {
+    "config": "B_early_motion2",
+    "reference": "early_motion2",
+    "identical_sequences": 30
+  },
+  {
+    "config": "B_confirmed_early",
+    "reference": "confirmed_early",
+    "identical_sequences": 30
+  },
+  {
+    "config": "ir_motion_guard",
+    "reference": "ir_motion_guard",
+    "identical_sequences": 30
+  },
+  {
+    "config": "ir_native_rank",
+    "reference": "ir_native_rank",
+    "identical_sequences": 30
+  },
+  {
+    "config": "ir_position",
+    "reference": "ir_position",
+    "identical_sequences": 30
+  }
+]

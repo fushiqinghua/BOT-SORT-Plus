@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "modality_reference": "rgb",
+  "split": "test",
+  "evaluation": "all object classes pooled, native modality coordinates, official test GT unmodified",
+  "aggregation": "TrackEval COMBINED_SEQ, not unweighted averaging of sequence percentages",
+  "results": [
+    {
+      "tracker": "off",
+      "sequence": "DJI_0327_3",
+      "HOTA": 21.825013051729382,
+      "DetA": 10.897046514086858,
+      "AssA": 43.94499303252354,
+      "IDF1": 23.533626099531663,
+      "MOTA": 11.459875629256738,
+      "FP": 1918,
+      "FN": 54871,
+      "IDSW": 21
+    },
+    {
+      "tracker": "off",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 21.825013051729382,
+      "DetA": 10.897046514086858,
+      "AssA": 43.94499303252354,
+      "IDF1": 23.533626099531663,
+      "MOTA": 11.459875629256738,
+      "FP": 1918,
+      "FN": 54871,
+      "IDSW": 21
+    },
+    {
+      "tracker": "both",
+      "sequence": "DJI_0327_3",
+      "HOTA": 21.497607828591256,
+      "DetA": 10.635282044557023,
+      "AssA": 43.691472823234605,
+      "IDF1": 23.048020039439322,
+      "MOTA": 11.388183220859375,
+      "FP": 1781,
+      "FN": 55055,
+      "IDSW": 20
+    },
+    {
+      "tracker": "both",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 21.497607828591256,
+      "DetA": 10.635282044557023,
+      "AssA": 43.691472823234605,
+      "IDF1": 23.048020039439322,
+      "MOTA": 11.388183220859375,
+      "FP": 1781,
+      "FN": 55055,
+      "IDSW": 20
+    },
+    {
+      "tracker": "confirmed_stable_low",
+      "sequence": "DJI_0327_3",
+      "HOTA": 21.69057082869094,
+      "DetA": 10.755246671089475,
+      "AssA": 43.97575582175745,
+      "IDF1": 23.466049628979494,
+      "MOTA": 11.395975873946043,
+      "FP": 1853,
+      "FN": 54981,
+      "IDSW": 17
+    },
+    {
+      "tracker": "confirmed_stable_low",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 21.69057082869094,
+      "DetA": 10.755246671089475,
+      "AssA": 43.97575582175745,
+      "IDF1": 23.466049628979494,
+      "MOTA": 11.395975873946043,
+      "FP": 1853,
+      "FN": 54981,
+      "IDSW": 17
+    }
+  ]
+}

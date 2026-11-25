@@ -1,0 +1,78 @@
+[
+  {
+    "seq": "DJI_0061_2",
+    "gt": 31,
+    "previous_frame": 61,
+    "frame": 62,
+    "IR_previous": 44,
+    "IR_now": 87,
+    "original_previous": 44,
+    "original_now": null,
+    "moved_ids_previous": [
+      87
+    ],
+    "moved_ids_now": [
+      87
+    ],
+    "timeline": [
+      {
+        "frame": 61,
+        "original": 44,
+        "IR": 44,
+        "moved_ids": [
+          87
+        ]
+      },
+      {
+        "frame": 62,
+        "original": null,
+        "IR": 87,
+        "moved_ids": [
+          87
+        ]
+      }
+    ]
+  },
+  {
+    "seq": "DJI_0061_2",
+    "gt": 31,
+    "previous_frame": 62,
+    "frame": 64,
+    "IR_previous": 87,
+    "IR_now": 44,
+    "original_previous": null,
+    "original_now": 44,
+    "moved_ids_previous": [
+      87
+    ],
+    "moved_ids_now": [
+      49
+    ],
+    "timeline": [
+      {
+        "frame": 62,
+        "original": null,
+        "IR": 87,
+        "moved_ids": [
+          87
+        ]
+      },
+      {
+        "frame": 63,
+        "original": null,
+        "IR": null,
+        "moved_ids": [
+          49
+        ]
+      },
+      {
+        "frame": 64,
+        "original": 44,
+        "IR": 44,
+        "moved_ids": [
+          49
+        ]
+      }
+    ]
+  }
+]

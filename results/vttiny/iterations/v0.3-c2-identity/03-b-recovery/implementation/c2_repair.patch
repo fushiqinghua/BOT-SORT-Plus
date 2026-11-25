@@ -1,0 +1,631 @@
+--- a/botsort_plus/adapter_v2.py
++++ b/botsort_plus/adapter_v2.py
+@@ -366,4 +366,7 @@
+                                   "active": len(tracker.active_tracks), "lost": len(tracker.lost_stracks),
+                                   "candidates": len(tracker.candidate_pool.candidates),
+                                   "adapter_mode": "v2"})
++    if plus.recovery.output_prediction_frames:
++        from .prediction_output import extend
++        output = extend(tracker, output, img.shape, all_dets, live)
+     return output
+--- a/botsort_plus/appearance.py
++++ b/botsort_plus/appearance.py
+@@ -111,6 +111,7 @@
+         self.prototypes: dict[str, np.ndarray] = {}
+         self.qualities: dict[str, float] = {}
+         self.update_counts: dict[str, int] = {}
++        self.recent_rgb_observation: tuple[int, np.ndarray] | None = None
+ 
+     def update(self, features: Mapping[str, Feature]) -> list[str]:
+         validated = _validated_features(features)
+--- a/botsort_plus/config.py
++++ b/botsort_plus/config.py
+@@ -55,6 +55,8 @@
+                     raise ValueError(f"Unknown {key} options: {sorted(extra)}")
+                 data[key] = kind(**data[key])
+         result = cls(**data)
++        if result.recovery.output_prediction_frames and result.adapter_mode != "v2":
++            raise ValueError("Online prediction output requires the v2 adapter")
+         result.validate_v2()
+         if not result.name or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-" for c in result.name):
+             raise ValueError("Experiment name must be a plain filename component")
+--- a/botsort_plus/identity_adapter.py
++++ b/botsort_plus/identity_adapter.py
+@@ -9,6 +9,8 @@
+ 
+ import numpy as np
+ 
++from .appearance import MemoryBank
++
+ from boxmot.trackers.botsort.basetrack import TrackState
+ from boxmot.utils.matching import fuse_score, iou_distance, linear_assignment
+ 
+@@ -19,12 +21,41 @@
+         geometry, tracker._packets, stage, threshold)
+ 
+ 
++def _recent_rgb_agrees(tracker, track_id, det_index, decision, reactivate):
++    """Record each accepted match; only adjacent eligible high-score matches can agree."""
++    memory = tracker.memories.get(track_id)
++    if memory is None:
++        memory = tracker.memories[track_id] = MemoryBank(tracker.plus.appearance)
++    previous = memory.recent_rgb_observation
++    memory.recent_rgb_observation = None
++    feature = tracker._packets[det_index].get("rgb")
++    if (reactivate or decision.stage != "high" or decision.geometry_cost > .50
++            or (decision.geometry_margin is not None and decision.geometry_margin < .10)
++            or feature is None or feature.quality < memory.config.min_update_quality):
++        return False
++    vector = np.asarray(feature.vector, dtype=float)
++    norm = np.linalg.norm(vector)
++    if not np.isfinite(norm) or norm < 1e-12:
++        return False
++    vector = vector / norm
++    frame = tracker.frame_count
++    memory.recent_rgb_observation = (frame, vector)
++    return (previous is not None and previous[0] == frame - 1
++            and 1. - float(vector @ previous[1]) <= .40)
++
++
+ def apply_match(tracker, track, detection, decision, *, reactivate=False,
+                 reference_cost=None, applied_cost=None, base_cost=None):
+-    """Keep geometry/lifecycle updates, conditionally permit BOTH existing writers."""
++    """Apply the accepted track update and route appearance writes according to policy."""
+     cfg = tracker.plus.identity
+     gate_applied = cfg.memory_enabled and not cfg.observe_only
+-    block_write = gate_applied and not decision.allow_write
++    permit_bank = not gate_applied or decision.allow_write
++    block_write = not permit_bank
++    recent_agrees = False
++    if cfg.recent_confirmed_bank and gate_applied:
++        recent_agrees = _recent_rgb_agrees(tracker, track.id, int(detection.det_ind), decision, reactivate)
++        permit_bank = decision.allow_write or (decision.reason == "history_conflict" and recent_agrees)
++        block_write = False  # Keep BoT-SORT's native feature updates.
+     native_feature = detection.curr_feat
+     # STrack mutates native smooth_feat/curr_feat/features inside update().
+     # Passing no feature prevents all three writes; restore the detection object
+@@ -39,7 +70,7 @@
+     finally:
+         if block_write:
+             detection.curr_feat = native_feature
+-    updated = [] if block_write else tracker._write_memory(track, int(detection.det_ind))
++    updated = [] if not permit_bank else tracker._write_memory(track, int(detection.det_ind))
+     private_write = tracker.identity_reliability.commit(
+         int(track.id), tracker._packets[int(detection.det_ind)], decision, tracker.frame_count)
+     tracker.last_events.append({
+@@ -48,6 +79,8 @@
+         "association_applied": bool(cfg.association_enabled and not cfg.observe_only
+                                     and decision.stage in ("high", "unconfirmed")),
+         "memory_gate_applied": gate_applied,
++        **({"recent_rgb_agrees": recent_agrees, "bank_write_permitted": permit_bank}
++           if cfg.recent_confirmed_bank and gate_applied else {}),
+         "native_feature_written": bool(native_feature is not None and not block_write),
+         "custom_modalities_written": updated,
+         "private_anchor_written": bool(private_write),
+@@ -98,7 +131,7 @@
+     accepted = tracker.identity_reliability.seed(
+         int(track.id), tracker._packets[det_index], tracker.frame_count)
+     blocked = cfg.memory_enabled and not cfg.observe_only and not accepted
+-    if blocked:
++    if blocked and not cfg.recent_confirmed_bank:
+         # STrack was constructed before activation and already contains a seed.
+         # Do not leave an unqualified native seed while claiming to block memory.
+         track.smooth_feat = None
+--- a/botsort_plus/identity_reliability.py
++++ b/botsort_plus/identity_reliability.py
+@@ -34,9 +34,10 @@
+     bootstrap_max_iou_cost: float = .30
+     write_max_iou_cost: float = .50
+     ema: float = .95
++    recent_confirmed_bank: bool = False
+ 
+     def __post_init__(self):
+-        for name in ("enabled", "observe_only", "association_enabled", "memory_enabled"):
++        for name in ("enabled", "observe_only", "association_enabled", "memory_enabled", "recent_confirmed_bank"):
+             if not isinstance(getattr(self, name), bool):
+                 raise ValueError(f"identity.{name} must be bool")
+         if self.enabled and not (self.association_enabled or self.memory_enabled):
+--- /dev/null
++++ b/botsort_plus/prediction_output.py
+@@ -0,0 +1,57 @@
++"""Report a short online projection of a previously measured, stable track."""
++from collections import deque
++import numpy as np
++
++
++def overlap(box, others):
++    if not len(others):
++        return np.empty(0)
++    others = np.asarray(others, dtype=float).reshape(-1,4)
++    common = np.maximum(0., np.minimum(box[2:], others[:,2:]) - np.maximum(box[:2], others[:,:2]))
++    intersect = np.prod(common, axis=1)
++    union = np.prod(box[2:]-box[:2]) + np.prod(others[:,2:]-others[:,:2], axis=1) - intersect
++    return intersect / np.maximum(union, 1e-8)
++
++
++def extend(tracker, measured, image_shape, detections, live):
++    frame = tracker.frame_count
++    memory = getattr(tracker, 'recent_output_measurements', {})
++    tracker.recent_output_measurements = memory = {k:v for k,v in memory.items() if k in live}
++    occupied = [row[:4] for row in measured]
++    for row in measured:
++        tid = int(row[4])
++        slot = memory.setdefault(tid, deque(maxlen=3))
++        prediction = tracker.prediction_history.get(tid, {}).get(frame)
++        iou = 0. if prediction is None else float(overlap(prediction.box, [detections[int(row[7]),:4]])[0])
++        slot.append((frame,float(row[5]),iou))
++    present = {int(row[4]) for row in measured}
++    proposals = []
++    for t in tracker.lost_stracks:
++        tid = int(t.id)
++        if tid not in live or tid in present or tid not in memory:
++            continue
++        hist = memory[tid]
++        age = frame - hist[-1][0]
++        if (not 1 <= age <= tracker.plus.recovery.output_prediction_frames or len(hist) < 3
++                or t.end_frame != hist[-1][0] or hist[-1][0] - hist[0][0] != 2):
++            continue
++        scores = [x[1] for x in hist]
++        if max(scores) < .55 or np.mean(scores) < .35 or min(hist[1][2],hist[2][2]) < .35:
++            continue
++        pred = tracker.prediction_history.get(tid, {}).get(frame)
++        if pred is None:continue
++        box = np.asarray(pred.box,dtype=float).copy()
++        h,w = image_shape[:2]
++        if not np.isfinite(box).all() or min(box[2:]-box[:2]) <= 0:continue
++        original_area = np.prod(box[2:]-box[:2])
++        box = np.clip(box,[0.,0.,0.,0.],[w,h,w,h])
++        if min(box[2:]-box[:2]) <= 0 or np.prod(box[2:]-box[:2]) < .8 * original_area:continue
++        proposals.append((np.mean(scores) * .8 ** age, tid, box, age))
++    emitted=[]
++    for score,tid,box,age in sorted(proposals,key=lambda x:(-x[0],x[1])):
++        if np.any(overlap(box, occupied) > .40):continue
++        emitted.append([*box,tid,score,0,-1])
++        occupied.append(box)
++        tracker.last_events.append(dict(event='motion_output',track_id=tid,age=age,det_index=None,
++                                        xyxy=box.tolist(),score=float(score)))
++    return np.vstack([measured,emitted]) if emitted else measured
+--- a/botsort_plus/recovery.py
++++ b/botsort_plus/recovery.py
+@@ -20,6 +20,10 @@
+ from .assignment import assign_with_rejection
+ from .geometry import GeometryConfig, geometry_cost
+ from .types import Feature, LostTrackView, Observation
++
++
++# Per-frame maxima for early recovery, ordered as (geometry, appearance).
++EARLY_EVIDENCE_LIMITS = {"strong": (0.30, 0.48), "moderate": (0.42, 0.55)}
+ 
+ 
+ @dataclass(frozen=True)
+@@ -37,6 +41,9 @@
+     appearance_max_cost: float = 0.65
+     require_appearance: bool = False
+     reservation_frames: int = 5
++    output_prediction_frames: int = 0
++
++    early_evidence: str = "off"
+ 
+     def __post_init__(self):
+         for name in ("enabled", "require_appearance"):
+@@ -46,6 +53,12 @@
+             value = getattr(self, name)
+             if isinstance(value, bool) or not isinstance(value, (int, np.integer)) or value < 1:
+                 raise ValueError(f"{name} must be a positive integer")
++        if self.early_evidence not in ("off", *EARLY_EVIDENCE_LIMITS):
++            raise ValueError("recovery.early_evidence must be off, strong or moderate")
++        if type(self.output_prediction_frames) is not int or self.output_prediction_frames not in (0,1,2):
++            raise ValueError("output_prediction_frames must be 0, 1 or 2")
++        if self.output_prediction_frames and not self.enabled:
++            raise ValueError("Online prediction output requires recovery motion history")
+         if self.min_hits > self.window:
+             raise ValueError("min_hits must fit in the trailing window")
+         if self.min_age > self.max_age:
+@@ -178,6 +191,15 @@
+         cost = float(total / weights)
+         info.update(cost=cost, geometry_cost=geom_mean, appearance_cost=app_mean,
+                     appearance_hits=len(appearance), ready=len(history) >= cfg.min_hits)
++        # The two observations must support a single old identity. Compare
++        # each to the pre-recovery memory and its own same-frame prediction.
++        if (cfg.early_evidence != "off" and cfg.min_hits == 3 and len(history) == 2
++                and history[0].frame == frame - 1 and len(appearance) == 2):
++            max_geometry, max_appearance = EARLY_EVIDENCE_LIMITS[cfg.early_evidence]
++            worst_geometry, worst_appearance = max(geom), max(appearance)
++            if worst_geometry <= max_geometry and worst_appearance <= max_appearance:
++                info.update(two_hit_evidence=True, two_hit_max_geometry=worst_geometry,
++                            two_hit_max_appearance=worst_appearance)
+         return {**info, "reason": "plausible" if cost < cfg.max_cost else "cost_reject"}
+ 
+     def match(self, frame: int, lost_views: Iterable[LostTrackView], candidates: Iterable[Any],
+@@ -223,8 +245,16 @@
+ 
+         eligible = raw_costs.copy()
+         for j, history in enumerate(histories):
+-            if len(history) < self.config.min_hits:
++            if len(history) >= self.config.min_hits:
++                continue
++            if self.config.early_evidence == "off":
+                 eligible[:, j] = np.inf
++                continue
++            # Remove uncertified edges from assignment, retaining raw costs
++            # for the rival and reservation checks, including immature rivals.
++            for i in range(len(views)):
++                if not pair_info[i, j].get("two_hit_evidence", False):
++                    eligible[i, j] = np.inf
+         # Include not-yet-confirmed alternatives in ambiguity checks. Otherwise
+         # deleting their columns can manufacture a large best/second-best gap.
+         margin = self.config.ambiguity_margin
+--- a/tools/audit_botsort_plus_identity.py
++++ b/tools/audit_botsort_plus_identity.py
+@@ -155,7 +155,15 @@
+         raise ValueError("Private anchor was written despite a rejected decision")
+     if allow and (quality < cfg.min_quality or quality <= 0):
+         raise ValueError("Write eligibility contradicts configured quality gate")
+-    if gate and not allow and (native or custom):
++    if gate and cfg.recent_confirmed_bank:
++        recent = _flag(event, "recent_rgb_agrees")
++        permit = _flag(event, "bank_write_permitted", allow or (event["reason"] == "history_conflict" and recent))
++        if recent and (stage != "high" or geometry > .50 or
++                       (event["geometry_margin"] is not None and event["geometry_margin"] < .10)):
++            raise ValueError("Recent RGB confirmation contradicts its association stage or geometry")
++        if custom and not permit:
++            raise ValueError("Unconfirmed observation reached the recovery bank")
++    elif gate and not allow and (native or custom):
+         raise ValueError("Rejected identity write reached native/custom memory")
+     if stage == "low" and native:
+         raise ValueError("Low-score stage must never write native features")
+@@ -188,8 +196,8 @@
+     _flag(event, "private_anchor_written", allow)
+     native = _flag(event, "native_feature_present")
+     custom = _modalities(event.get("custom_modalities_written"))
+-    if gate and not allow and (native or custom):
+-        raise ValueError("Rejected birth seed remains in native/custom memory")
++    if gate and not allow and (custom or (native and not cfg.recent_confirmed_bank)):
++        raise ValueError("Rejected birth seed reached a gated memory writer")
+ 
+ 
+ def _sequence(path, sequence, frames, cfg, aggregate):
+--- /dev/null
++++ b/configs/botsort_plus/34_B_recent_confirmed.json
+@@ -0,0 +1,38 @@
++{
++  "name": "B_recent_confirmed",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "identity": {
++    "enabled": true,
++    "observe_only": false,
++    "association_enabled": true,
++    "memory_enabled": true,
++    "recent_confirmed_bank": true
++  }
++}
+--- /dev/null
++++ b/configs/botsort_plus/B_confirmed_early.json
+@@ -0,0 +1,39 @@
++{
++  "name": "B_confirmed_early",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate"
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "identity": {
++    "enabled": true,
++    "observe_only": false,
++    "association_enabled": true,
++    "memory_enabled": true,
++    "recent_confirmed_bank": true
++  }
++}
+--- /dev/null
++++ b/configs/botsort_plus/B_confirmed_early_motion2.json
+@@ -0,0 +1,40 @@
++{
++  "name": "B_confirmed_early_motion2",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate",
++    "output_prediction_frames": 2
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "identity": {
++    "enabled": true,
++    "observe_only": false,
++    "association_enabled": true,
++    "memory_enabled": true,
++    "recent_confirmed_bank": true
++  }
++}
+--- /dev/null
++++ b/configs/botsort_plus/B_confirmed_motion2.json
+@@ -0,0 +1,39 @@
++{
++  "name": "B_confirmed_motion2",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "output_prediction_frames": 2
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  },
++  "identity": {
++    "enabled": true,
++    "observe_only": false,
++    "association_enabled": true,
++    "memory_enabled": true,
++    "recent_confirmed_bank": true
++  }
++}
+--- /dev/null
++++ b/configs/botsort_plus/B_early_moderate.json
+@@ -0,0 +1,32 @@
++{
++  "name": "B_early_moderate",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate"
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  }
++}
+--- /dev/null
++++ b/configs/botsort_plus/B_early_motion2.json
+@@ -0,0 +1,33 @@
++{
++  "name": "B_early_motion2",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "moderate",
++    "output_prediction_frames": 2
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  }
++}
+--- /dev/null
++++ b/configs/botsort_plus/B_early_strong.json
+@@ -0,0 +1,32 @@
++{
++  "name": "B_early_strong",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "early_evidence": "strong"
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  }
++}
+--- /dev/null
++++ b/configs/botsort_plus/B_motion1.json
+@@ -0,0 +1,32 @@
++{
++  "name": "B_motion1",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "output_prediction_frames": 1
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  }
++}
+--- /dev/null
++++ b/configs/botsort_plus/B_motion2.json
+@@ -0,0 +1,32 @@
++{
++  "name": "B_motion2",
++  "adapter_mode": "v2",
++  "birth": {
++    "enabled": false
++  },
++  "recovery": {
++    "enabled": true,
++    "output_prediction_frames": 2
++  },
++  "appearance": {
++    "enabled": false
++  },
++  "birth_policy": {
++    "mode": "legacy",
++    "collect_window": 5,
++    "collect_hits": 3,
++    "mean_score": 0.18,
++    "verify_window": 3,
++    "verify_hits": 2,
++    "fixed_window": 8,
++    "fixed_hits": 5,
++    "observe_only": false
++  },
++  "birth_identity": {
++    "enabled": false,
++    "window": 5,
++    "max_age": 30,
++    "wait_frames": 5,
++    "appearance_max_cost": 0.65
++  }
++}

@@ -1,0 +1,150 @@
+{
+  "motion1": {
+    "reference": "B_ref",
+    "exact_reference_files": 30,
+    "by_age": {
+      "1": {
+        "projections": 562,
+        "hit": 270,
+        "miss": 292,
+        "new_gt_frame": 269,
+        "reassigned_existing_gt": 1
+      }
+    },
+    "flow": {
+      "new_gt_frames": 269,
+      "lost_gt_frames": 0,
+      "new_gt_via_measured": 0,
+      "changed_id_via_measured": 0
+    },
+    "delta": {
+      "FP": 293,
+      "FN": -269,
+      "IDSW": 0
+    }
+  },
+  "motion2": {
+    "reference": "B_ref",
+    "exact_reference_files": 30,
+    "by_age": {
+      "1": {
+        "projections": 562,
+        "hit": 270,
+        "miss": 292,
+        "new_gt_frame": 269,
+        "reassigned_existing_gt": 1
+      },
+      "2": {
+        "projections": 456,
+        "hit": 186,
+        "miss": 270,
+        "new_gt_frame": 185,
+        "reassigned_existing_gt": 1
+      }
+    },
+    "flow": {
+      "new_gt_frames": 454,
+      "lost_gt_frames": 0,
+      "new_gt_via_measured": 0,
+      "changed_id_via_measured": 0
+    },
+    "delta": {
+      "FP": 564,
+      "FN": -454,
+      "IDSW": 2
+    }
+  },
+  "confirmed_motion2": {
+    "reference": "confirmed_write",
+    "exact_reference_files": 30,
+    "by_age": {
+      "1": {
+        "projections": 556,
+        "hit": 266,
+        "miss": 290,
+        "new_gt_frame": 266,
+        "reassigned_existing_gt": 0
+      },
+      "2": {
+        "projections": 451,
+        "hit": 181,
+        "miss": 270,
+        "new_gt_frame": 181,
+        "reassigned_existing_gt": 0
+      }
+    },
+    "flow": {
+      "new_gt_frames": 447,
+      "lost_gt_frames": 0,
+      "new_gt_via_measured": 0,
+      "changed_id_via_measured": 0
+    },
+    "delta": {
+      "FP": 560,
+      "FN": -447,
+      "IDSW": 2
+    }
+  },
+  "early_motion2": {
+    "reference": "early_moderate",
+    "exact_reference_files": 30,
+    "by_age": {
+      "1": {
+        "projections": 562,
+        "hit": 270,
+        "miss": 292,
+        "new_gt_frame": 269,
+        "reassigned_existing_gt": 1
+      },
+      "2": {
+        "projections": 453,
+        "hit": 184,
+        "miss": 269,
+        "new_gt_frame": 183,
+        "reassigned_existing_gt": 1
+      }
+    },
+    "flow": {
+      "new_gt_frames": 452,
+      "lost_gt_frames": 0,
+      "new_gt_via_measured": 0,
+      "changed_id_via_measured": 0
+    },
+    "delta": {
+      "FP": 563,
+      "FN": -452,
+      "IDSW": 2
+    }
+  },
+  "confirmed_early_motion2": {
+    "reference": "confirmed_early",
+    "exact_reference_files": 30,
+    "by_age": {
+      "1": {
+        "projections": 556,
+        "hit": 266,
+        "miss": 290,
+        "new_gt_frame": 266,
+        "reassigned_existing_gt": 0
+      },
+      "2": {
+        "projections": 451,
+        "hit": 181,
+        "miss": 270,
+        "new_gt_frame": 181,
+        "reassigned_existing_gt": 0
+      }
+    },
+    "flow": {
+      "new_gt_frames": 447,
+      "lost_gt_frames": 0,
+      "new_gt_via_measured": 0,
+      "changed_id_via_measured": 0
+    },
+    "delta": {
+      "FP": 560,
+      "FN": -447,
+      "IDSW": 2
+    }
+  }
+}

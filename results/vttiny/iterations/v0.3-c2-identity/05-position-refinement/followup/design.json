@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-11-25T10:44:28Z",
+  "phase": "exploratory, after reading primary official test results",
+  "rule": "Accept the previously sealed RGB movement whenever present. Otherwise take the previously sealed aligned IR movement; use the unchanged row if neither moves.",
+  "negative_control": "same routing with horizontally displaced IR",
+  "thresholds": "identical to locked primary policy, no extra threshold",
+  "hypothesis_origin": "Seven of ten IR threshold rescues had no RGB movement in the primary official-test attribution. Use a full paired evaluation to quantify the incremental benefit and harm.",
+  "baseline_sha256": "4bf2e7b4806792c7ee0c7e9e817b3bac1c9fdbccc842a5025cb9568bd68f12f5",
+  "primary_result_hash": "62255c05adeb3eebef033a73ef625cad767e0b373d2eff22973a5d7146408208"
+}

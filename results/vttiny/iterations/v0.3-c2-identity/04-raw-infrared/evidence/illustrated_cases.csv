@@ -1,0 +1,5 @@
+﻿case,method,sequence,frame,tid,age,baseline_gt,baseline_label,status,similarity,kept,xyxy
+Veto / unmatched,ir_motion_guard,DJI_0061_2,107,118,2,,unmatched,contradiction,0.1592356562614441,False,"[307.21566878542006, 327.5181484287681, 321.52743749026814, 334.7436857073934]"
+Veto / real target,ir_motion_guard,DJI_0061_2,176,10,2,139,new_gt_frame,contradiction,0.29924196004867554,False,"[364.17384802708983, 318.68749407797554, 379.3729789999625, 326.8964027732736]"
+Support / real target,ir_motion_guard,DJI_0028_3,309,47,1,8,new_gt_frame,support,0.97837895154953,True,"[298.1359517292543, 416.2430383779262, 304.2200770855799, 422.91177545125964]"
+Insufficient contrast / unmatched,ir_motion_guard,DJI_0030_2,398,4,1,,unmatched,low_local_contrast,,True,"[492.11075212549423, 209.6616223572816, 500.0712475898427, 218.2023305177358]"

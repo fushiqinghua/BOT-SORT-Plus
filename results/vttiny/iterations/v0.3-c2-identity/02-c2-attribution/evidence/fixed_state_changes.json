@@ -1,0 +1,256 @@
+[
+  {
+    "sequence": "DJI_0028_3",
+    "frame": 191,
+    "event": "fixed_assignment",
+    "stage": "high",
+    "old_count": 5,
+    "new_count": 5,
+    "changed_costs": 2,
+    "discounted": 3,
+    "pairs": 84,
+    "nonempty": 1,
+    "old_only": [
+      [
+        45,
+        0
+      ]
+    ],
+    "new_only": [
+      [
+        12,
+        0
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0061_2",
+    "frame": 40,
+    "event": "fixed_assignment",
+    "stage": "high",
+    "old_count": 28,
+    "new_count": 28,
+    "changed_costs": 1,
+    "discounted": 2,
+    "pairs": 1972,
+    "nonempty": 1,
+    "old_only": [
+      [
+        9,
+        21
+      ]
+    ],
+    "new_only": [
+      [
+        22,
+        21
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0061_2",
+    "frame": 206,
+    "event": "fixed_assignment",
+    "stage": "unconfirmed",
+    "old_count": 1,
+    "new_count": 0,
+    "changed_costs": 1,
+    "discounted": 1,
+    "pairs": 2,
+    "nonempty": 1,
+    "old_only": [
+      [
+        230,
+        38
+      ]
+    ],
+    "new_only": []
+  },
+  {
+    "sequence": "DJI_0155_2",
+    "frame": 341,
+    "event": "fixed_assignment",
+    "stage": "unconfirmed",
+    "old_count": 1,
+    "new_count": 0,
+    "changed_costs": 1,
+    "discounted": 1,
+    "pairs": 1,
+    "nonempty": 1,
+    "old_only": [
+      [
+        7,
+        0
+      ]
+    ],
+    "new_only": []
+  },
+  {
+    "sequence": "DJI_0169_3",
+    "frame": 207,
+    "event": "fixed_assignment",
+    "stage": "high",
+    "old_count": 13,
+    "new_count": 13,
+    "changed_costs": 3,
+    "discounted": 3,
+    "pairs": 357,
+    "nonempty": 1,
+    "old_only": [
+      [
+        9,
+        16
+      ]
+    ],
+    "new_only": [
+      [
+        9,
+        15
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0173_2",
+    "frame": 429,
+    "event": "fixed_assignment",
+    "stage": "high",
+    "old_count": 1,
+    "new_count": 1,
+    "changed_costs": 2,
+    "discounted": 2,
+    "pairs": 5,
+    "nonempty": 1,
+    "old_only": [
+      [
+        40,
+        0
+      ]
+    ],
+    "new_only": [
+      [
+        41,
+        0
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0257_2",
+    "frame": 218,
+    "event": "fixed_assignment",
+    "stage": "high",
+    "old_count": 2,
+    "new_count": 2,
+    "changed_costs": 1,
+    "discounted": 1,
+    "pairs": 9,
+    "nonempty": 1,
+    "old_only": [
+      [
+        11,
+        2
+      ]
+    ],
+    "new_only": [
+      [
+        11,
+        0
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0257_2",
+    "frame": 223,
+    "event": "fixed_assignment",
+    "stage": "high",
+    "old_count": 2,
+    "new_count": 2,
+    "changed_costs": 3,
+    "discounted": 3,
+    "pairs": 9,
+    "nonempty": 1,
+    "old_only": [
+      [
+        11,
+        2
+      ]
+    ],
+    "new_only": [
+      [
+        11,
+        0
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0257_2",
+    "frame": 372,
+    "event": "fixed_assignment",
+    "stage": "high",
+    "old_count": 1,
+    "new_count": 1,
+    "changed_costs": 2,
+    "discounted": 2,
+    "pairs": 3,
+    "nonempty": 1,
+    "old_only": [
+      [
+        11,
+        2
+      ]
+    ],
+    "new_only": [
+      [
+        11,
+        1
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0339_2",
+    "frame": 537,
+    "event": "fixed_assignment",
+    "stage": "high",
+    "old_count": 3,
+    "new_count": 3,
+    "changed_costs": 1,
+    "discounted": 1,
+    "pairs": 12,
+    "nonempty": 1,
+    "old_only": [
+      [
+        1,
+        1
+      ]
+    ],
+    "new_only": [
+      [
+        10,
+        1
+      ]
+    ]
+  },
+  {
+    "sequence": "DJI_0339_2",
+    "frame": 568,
+    "event": "fixed_assignment",
+    "stage": "high",
+    "old_count": 2,
+    "new_count": 2,
+    "changed_costs": 1,
+    "discounted": 1,
+    "pairs": 12,
+    "nonempty": 1,
+    "old_only": [
+      [
+        1,
+        1
+      ]
+    ],
+    "new_only": [
+      [
+        10,
+        1
+      ]
+    ]
+  }
+]

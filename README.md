@@ -1,8 +1,10 @@
 # BoT-SORT Plus · C2 身份可信度模块
 
-当前开发版本 **v0.3.0** 在已验证的 B 基座上实现 C2：用历史身份一致性和关联竞争约束外观加成，独立控制原生与 B 记忆的写入。A 继续保留用于复查，本轮新配置关闭 A 与旧 C。**C2 已进行软件机制验证，真实数据收益尚待冻结输入回放。**
+本分支收录 C2 的全量消融与错因分析、B 的两帧提前恢复和短时运动外推、免训练红外验证、RGB 优先的红外位置补位，以及 C2 的确认记忆和连续低分预热。
 
-[C2 快速入口](README_BOTSORT_PLUS.md) · [设计与代码复核](docs/botsort_plus/C2_DESIGN_AND_REVIEW.md) · [接入和实验命令](docs/botsort_plus/C2_INTEGRATION.md) · [消融配置](docs/botsort_plus/C2_CONFIGS.md) · [软件验证记录](docs/botsort_plus/validation_v0.3/VALIDATION.md)
+在官方 30 段的开发实验中，关闭 C2、采用 B 两帧运动外推和 RGB 优先红外补位的配置取得 HOTA **38.9255**、IDF1 **44.1525**。连续低分预热版 C2 相对它少 10 次换号、少 131 个误报，多 182 个漏检，HOTA 和 IDF1 分别为 38.9011 和 44.1332。
+
+[迭代结果与逐序列证据](results/vttiny/iterations/v0.3-c2-identity/README.md) · [近期模块设计与复算](docs/botsort_plus/FOLLOWUP_DESIGN.md) · [原版 C2 快速入口](README_BOTSORT_PLUS.md) · [原版 C2 设计](docs/botsort_plus/C2_DESIGN_AND_REVIEW.md)
 
 ## 第二轮 A2 实验归档
 

@@ -2,12 +2,14 @@
 
 本版从 `iteration/v0.2-a2` 的 `6d9c258556a143036cebde891c93079a772b9945` 接续实现。在 **YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID + B** 主基座上，将“接受一次几何关联”与“允许这次观测改写身份外观”分开。
 
+[真实数据消融与后续迭代](results/vttiny/iterations/v0.3-c2-identity/README.md) · [B 恢复、红外及 C2 预热的模块设计与复算](docs/botsort_plus/FOLLOWUP_DESIGN.md)
+
 新增 C2 包括：
 
 1. **关联约束**：读取上一帧的可靠身份锚点，以历史一致性、当前阶段双向竞争间隔和现有 crop quality 控制 ReID 加成。可信度不足时回到该原生阶段的几何代价，保持空间门控和匹配阈值。
 2. **记忆写入门控**：几何续轨继续执行，外观写入另行判断；同时覆盖原生 `smooth_feat/curr_feat/features` 与 B 的 `MemoryBank`。B 恢复当帧隔离写入，后续可靠原生匹配可以继续更新。
 
-当前仅使用已缓存的 RGB 特征，不需要重训模型或新增 thermal 编码器。新配置关闭 A 和旧 C，并限定 `adapter_mode="v2"`。原 `00`—`26` 配置继续保留；关闭 C2 时走原有分支。C2 shadow 只计算诊断，不改变原生或 B 状态。
+原版 C2 使用已缓存的 RGB 特征，配置关闭 A 和旧 C，并限定 `adapter_mode="v2"`。C2 shadow 的冻结输入回放与 B 参考在全部 30 段逐字节一致。
 
 ## 实现与复核入口
 
@@ -42,6 +44,6 @@ python tools/run_botsort_plus.py --baseline-root /path/to/frozen_rgbt --config c
 
 预检 `READY` 后用 `--trace` 替换 `--preflight`，按表顺序回放。完整 shadow、审计、评估命令见接入文档。运行器拒绝覆盖既有结果，参数修改后应使用新的输出根目录。
 
-**软件测试证明机制按设计执行，不等于 C2 的 HOTA 或 IDF1 已有提升。** 默认参数未作本轮真实性能调优；仍需检查整体及逐序列收益、FP/FN、IDSW、写入覆盖率、冷启动比例和新增耗时。完整研究边界和来源在设计文档中说明。
+原版完整 C2 加到 B 后，实测 HOTA 从 38.727 降到 38.504，IDF1 从 43.862 降到 43.494。拆分消融定位到 B 恢复库的写入门控。确认记忆和连续低分预热的后续对照见 [完整实验索引](results/vttiny/iterations/v0.3-c2-identity/README.md)。
 
 前版入口：[v0.2 说明](docs/botsort_plus/history/README_v0.2.md) · [A2 真实实验与错因](results/vttiny/iterations/v0.2-a2/README.md)。

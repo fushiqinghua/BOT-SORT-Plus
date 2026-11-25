@@ -1,0 +1,16 @@
+{
+  "server_directory": "$EXPERIMENT_ROOT/ir_motion_localization_v1",
+  "input_reference": "$EXPERIMENT_ROOT/c2_repair_v1/full30",
+  "patch_base": "$EXPERIMENT_ROOT/ir_raw_evidence_v1/source_position",
+  "sequences_in_index": 284,
+  "distinct_trajectory_files": 205,
+  "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+  "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+  "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "training_window_count": 74,
+  "window_plan_sha256": "0a0e5edf47ff2e9e0ad625f295d28aec58a7cb7da1eca2338ade6ed04e735bfe",
+  "locked_policy_sha256": "4bf2e7b4806792c7ee0c7e9e817b3bac1c9fdbccc842a5025cb9568bd68f12f5",
+  "offline_online_sha256_match": 30,
+  "selection": "real official training clips, parent-video separation",
+  "evaluation": "previously used official test for checkpoint and gate selection"
+}

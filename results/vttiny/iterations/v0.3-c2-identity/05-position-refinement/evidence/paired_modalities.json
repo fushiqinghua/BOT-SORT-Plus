@@ -1,0 +1,73 @@
+{
+  "moves": {
+    "neither": 668,
+    "RGB_only": 171,
+    "both": 70,
+    "IR_only": 106
+  },
+  "threshold_rescues": {
+    "RGB_only": 14,
+    "IR_only": 7,
+    "both": 3
+  },
+  "threshold_losses": {
+    "IR_only": 2,
+    "RGB_only": 2
+  },
+  "center_direction_if_IR_moved": {
+    "toward": 53,
+    "away": 36
+  },
+  "IR_step_pixels": {
+    "median": 0.5379457057711052,
+    "p90": 1.6987208256804212,
+    "maximum": 1.7500000000000002
+  },
+  "median_iou_change_if_IR_moved_and_anchored": 0.0,
+  "sequence_counts": {
+    "ir_loc": {
+      "FP": {
+        "better": 7,
+        "worse": 1,
+        "equal": 22
+      },
+      "IDSW": {
+        "better": 0,
+        "worse": 1,
+        "equal": 29
+      },
+      "HOTA": {
+        "better": 12,
+        "worse": 3,
+        "equal": 15
+      },
+      "IDF1": {
+        "better": 6,
+        "worse": 1,
+        "equal": 23
+      }
+    },
+    "rgb_loc": {
+      "FP": {
+        "better": 10,
+        "worse": 2,
+        "equal": 18
+      },
+      "IDSW": {
+        "better": 0,
+        "worse": 1,
+        "equal": 29
+      },
+      "HOTA": {
+        "better": 16,
+        "worse": 4,
+        "equal": 10
+      },
+      "IDF1": {
+        "better": 8,
+        "worse": 3,
+        "equal": 19
+      }
+    }
+  }
+}

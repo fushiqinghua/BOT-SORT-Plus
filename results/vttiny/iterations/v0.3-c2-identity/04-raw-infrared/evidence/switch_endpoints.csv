@@ -1,0 +1,14 @@
+﻿sequence,gt,method_with_switch,previous_frame,frame,old_id,new_id,other_previous,other_current,other_status
+DJI_0061_2,11,confirmed_early,4,5,21,26,21,21,same_id
+DJI_0061_2,12,confirmed_early,6,7,16,21,16,,missing_endpoint
+DJI_0061_2,15,confirmed_early,142,143,171,11,171,,missing_endpoint
+DJI_0061_2,10,confirmed_early,142,149,9,11,9,9,same_id
+DJI_0061_2,15,confirmed_early,145,158,11,9,9,,missing_endpoint
+DJI_0061_2,10,confirmed_early,157,166,11,9,9,9,same_id
+DJI_0061_2,139,confirmed_early,221,222,171,138,171,171,same_id
+DJI_0061_2,145,confirmed_early,229,239,231,24,231,231,same_id
+DJI_0061_2,11,ir_native_rank,7,8,21,26,26,26,same_id
+DJI_0061_2,12,ir_native_rank,6,8,16,21,16,21,different_id
+DJI_0061_2,15,ir_native_rank,142,145,171,9,171,11,different_id
+DJI_0061_2,139,ir_native_rank,222,224,171,138,138,138,same_id
+DJI_0061_2,5,ir_native_rank,234,238,231,24,231,,missing_endpoint

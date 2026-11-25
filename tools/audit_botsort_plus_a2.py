@@ -106,12 +106,13 @@ def _instrumented(protocol):
         for key in ("birth", "recovery", "appearance"))
 
 
-def _audit_events(path, sequence, frame_count, by_id, pairs, instrumented):
+def _audit_events(path, sequence, frame_count, by_id, pairs, instrumented, projection_limit=0):
     errors, commits, firsts, lifetimes = [], {}, {}, {}
     aliases, legacy_births, recovery_events = [], [], []
     counters, rejected, identities, frame_records = Counter(), Counter(), Counter(), Counter()
     high_matches, recovery_counts = Counter(), Counter()
     proposals = set()
+    projections = {}
     timeout_count, last_event_frame = 0, 0
     with Path(path).open(encoding="utf-8-sig") as stream:
         for line_number, raw in enumerate(stream, 1):
@@ -182,6 +183,15 @@ def _audit_events(path, sequence, frame_count, by_id, pairs, instrumented):
                 elif kind == "match" and event.get("stage") in ("high", "unconfirmed"):
                     tid = _integer(event.get("track_id"), "matched track ID", 1)
                     high_matches[tid] += 1
+                elif kind == "motion_output":
+                    tid = _integer(event.get("track_id"), "projected track ID", 1)
+                    age = _integer(event.get("age"), "projection age", 1)
+                    pair = (frame, tid)
+                    if age > projection_limit or event.get("det_index") is not None:
+                        raise ValueError("Motion output exceeds the configured projection or claims a detection")
+                    if pair not in pairs or pair in projections:
+                        raise ValueError("Motion output is missing from MOT or duplicated in the trace")
+                    projections[pair] = age
             except (ValueError, TypeError, KeyError, OverflowError) as error:
                 errors.append(f"event line {line_number}: {error}")
 
@@ -242,8 +252,14 @@ def _audit_events(path, sequence, frame_count, by_id, pairs, instrumented):
         if event.get("track_origin") == "weak_birth" and tid not in commits:
             errors.append(f"track {tid}: weak first_emitted lacks canonical birth_committed")
 
+    for (frame, tid), age in projections.items():
+        support = (frame - age, tid)
+        if support not in pairs or support in projections:
+            errors.append(f"track {tid}: motion output lacks measured support at frame {frame - age}")
+
     for tid, event in lifetimes.items():
-        frames = by_id.get(tid, [])
+        # Lifetimes are recorded on detection-backed output before extrapolation.
+        frames = [frame for frame in by_id.get(tid, []) if (frame, tid) not in projections]
         try:
             count = _integer(event.get("output_frames"), "lifetime output_frames")
             if count != len(frames):
@@ -332,6 +348,10 @@ def audit_tracker(root, name):
             if not isinstance(hashes[seq], str) or not _SHA.fullmatch(hashes[seq]):
                 raise ValueError(f"Invalid prediction SHA-256 for {seq}")
         instrumented = _instrumented(protocol)
+        config = protocol.get("config")
+        recovery = config.get("recovery") if isinstance(config, dict) else None
+        configured_limit = recovery.get("output_prediction_frames", 0) if isinstance(recovery, dict) else 0
+        projection_limit = _integer(configured_limit, "output_prediction_frames")
         for seq, frames in sorted(sequences.items()):
             entry = {"status": "FAIL", "frames": frames, "errors": []}
             result["sequences"][seq] = entry
@@ -346,7 +366,7 @@ def audit_tracker(root, name):
                 trace = root / "events" / name / (seq + ".jsonl")
                 if not trace.is_file():
                     raise ValueError("Missing event JSONL; replay this run with --trace")
-                events = _audit_events(trace, seq, frames, by_id, pairs, instrumented)
+                events = _audit_events(trace, seq, frames, by_id, pairs, instrumented, projection_limit)
                 entry["errors"].extend(events.pop("errors"))
                 entry.update(events)
                 entry["status"] = "PASS" if not entry["errors"] else "FAIL"

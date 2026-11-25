@@ -1,0 +1,1495 @@
+{
+  "fixed_state": {
+    "high": {
+      "stage_frames": 12590,
+      "nonempty": 9798,
+      "cost_changed_frames": 2223,
+      "decision_changed_frames": 9,
+      "old_count": 62525,
+      "new_count": 62525,
+      "old_only": 9,
+      "new_only": 9,
+      "changed_costs": 2691,
+      "discounted": 3281,
+      "pairs": 1894616
+    },
+    "unconfirmed": {
+      "stage_frames": 12590,
+      "nonempty": 941,
+      "cost_changed_frames": 130,
+      "decision_changed_frames": 2,
+      "old_count": 585,
+      "new_count": 583,
+      "old_only": 2,
+      "new_only": 0,
+      "changed_costs": 134,
+      "discounted": 530,
+      "pairs": 2834
+    }
+  },
+  "controls": [
+    {
+      "tracker": "B_ref",
+      "HOTA": 38.726980885101895,
+      "DetA": 25.99623248192813,
+      "AssA": 59.20335820176318,
+      "IDF1": 43.86168376549076,
+      "MOTA": 25.674743564070045,
+      "FP": 15753,
+      "FN": 117482,
+      "IDSW": 381,
+      "delta": {
+        "HOTA": 0.0,
+        "DetA": 0.0,
+        "AssA": 0.0,
+        "IDF1": 0.0,
+        "MOTA": 0.0,
+        "FP": 0,
+        "FN": 0,
+        "IDSW": 0
+      }
+    },
+    {
+      "tracker": "native_only",
+      "HOTA": 38.69080585370317,
+      "DetA": 26.005988326490165,
+      "AssA": 59.075906070157735,
+      "IDF1": 43.82728499837091,
+      "MOTA": 25.671962263311304,
+      "FP": 15752,
+      "FN": 117484,
+      "IDSW": 385,
+      "delta": {
+        "HOTA": -0.03617503139872724,
+        "DetA": 0.009755844562036486,
+        "AssA": -0.12745213160544466,
+        "IDF1": -0.034398767119853346,
+        "MOTA": -0.0027813007587411676,
+        "FP": -1,
+        "FN": 2,
+        "IDSW": 4
+      }
+    },
+    {
+      "tracker": "bank_only",
+      "HOTA": 38.548417223956825,
+      "DetA": 25.773760643910258,
+      "AssA": 59.14002026427102,
+      "IDF1": 43.56094825706364,
+      "MOTA": 25.646930556482655,
+      "FP": 15281,
+      "FN": 118017,
+      "IDSW": 368,
+      "delta": {
+        "HOTA": -0.17856366114506983,
+        "DetA": -0.22247183801787074,
+        "AssA": -0.06333793749215744,
+        "IDF1": -0.3007355084271168,
+        "MOTA": -0.02781300758739036,
+        "FP": -472,
+        "FN": 535,
+        "IDSW": -13
+      }
+    },
+    {
+      "tracker": "release_bank_history",
+      "HOTA": 38.65636285590098,
+      "DetA": 25.97835267037137,
+      "AssA": 59.03461559755674,
+      "IDF1": 43.75097034621953,
+      "MOTA": 25.677524864828783,
+      "FP": 15660,
+      "FN": 117564,
+      "IDSW": 387,
+      "delta": {
+        "HOTA": -0.07061802920091509,
+        "DetA": -0.017879811556760217,
+        "AssA": -0.16874260420644305,
+        "IDF1": -0.11071341927122802,
+        "MOTA": 0.002781300758737615,
+        "FP": -93,
+        "FN": 82,
+        "IDSW": 6
+      }
+    },
+    {
+      "tracker": "release_bank_recovery",
+      "HOTA": 38.479171696925704,
+      "DetA": 25.795974791306442,
+      "AssA": 58.89968853441029,
+      "IDF1": 43.47958028409025,
+      "MOTA": 25.61188616692255,
+      "FP": 15418,
+      "FN": 117931,
+      "IDSW": 380,
+      "delta": {
+        "HOTA": -0.24780918817619124,
+        "DetA": -0.20025769062168663,
+        "AssA": -0.30366966735289225,
+        "IDF1": -0.3821034814005131,
+        "MOTA": -0.06285739714749639,
+        "FP": -335,
+        "FN": 449,
+        "IDSW": -1
+      }
+    },
+    {
+      "tracker": "fixed_state",
+      "HOTA": 38.726980885101895,
+      "DetA": 25.99623248192813,
+      "AssA": 59.20335820176318,
+      "IDF1": 43.86168376549076,
+      "MOTA": 25.674743564070045,
+      "FP": 15753,
+      "FN": 117482,
+      "IDSW": 381,
+      "delta": {
+        "HOTA": 0.0,
+        "DetA": 0.0,
+        "AssA": 0.0,
+        "IDF1": 0.0,
+        "MOTA": 0.0,
+        "FP": 0,
+        "FN": 0,
+        "IDSW": 0
+      }
+    }
+  ],
+  "formal": [
+    {
+      "tracker": "baseline_ref",
+      "HOTA": 37.86084761921485,
+      "DetA": 25.186472853553692,
+      "AssA": 58.365843006546484,
+      "IDF1": 42.45072958120144,
+      "MOTA": 25.759295107135706,
+      "FP": 13397,
+      "FN": 119645,
+      "IDSW": 422,
+      "delta": {
+        "HOTA": -0.8661332658870435,
+        "DetA": -0.8097596283744366,
+        "AssA": -0.8375151952166959,
+        "IDF1": -1.4109541842893165,
+        "MOTA": 0.08455154306566115,
+        "FP": -2356,
+        "FN": 2163,
+        "IDSW": 41
+      }
+    },
+    {
+      "tracker": "B_ref",
+      "HOTA": 38.726980885101895,
+      "DetA": 25.99623248192813,
+      "AssA": 59.20335820176318,
+      "IDF1": 43.86168376549076,
+      "MOTA": 25.674743564070045,
+      "FP": 15753,
+      "FN": 117482,
+      "IDSW": 381,
+      "delta": {
+        "HOTA": 0.0,
+        "DetA": 0.0,
+        "AssA": 0.0,
+        "IDF1": 0.0,
+        "MOTA": 0.0,
+        "FP": 0,
+        "FN": 0,
+        "IDSW": 0
+      }
+    },
+    {
+      "tracker": "B_C2_shadow",
+      "HOTA": 38.726980885101895,
+      "DetA": 25.99623248192813,
+      "AssA": 59.20335820176318,
+      "IDF1": 43.86168376549076,
+      "MOTA": 25.674743564070045,
+      "FP": 15753,
+      "FN": 117482,
+      "IDSW": 381,
+      "delta": {
+        "HOTA": 0.0,
+        "DetA": 0.0,
+        "AssA": 0.0,
+        "IDF1": 0.0,
+        "MOTA": 0.0,
+        "FP": 0,
+        "FN": 0,
+        "IDSW": 0
+      }
+    },
+    {
+      "tracker": "B_C2_memory",
+      "HOTA": 38.494229313189635,
+      "DetA": 25.77036782743245,
+      "AssA": 58.987983172191406,
+      "IDF1": 43.484085014914214,
+      "MOTA": 25.640811694813433,
+      "FP": 15281,
+      "FN": 118023,
+      "IDSW": 373,
+      "delta": {
+        "HOTA": -0.23275157191226015,
+        "DetA": -0.22586465449567683,
+        "AssA": -0.21537502957177423,
+        "IDF1": -0.3775987505765457,
+        "MOTA": -0.0339318692566124,
+        "FP": -472,
+        "FN": 541,
+        "IDSW": -8
+      }
+    },
+    {
+      "tracker": "B_C2_association",
+      "HOTA": 38.730571279995715,
+      "DetA": 25.995605295450325,
+      "AssA": 59.215850592989696,
+      "IDF1": 43.865542307006045,
+      "MOTA": 25.67585608437354,
+      "FP": 15748,
+      "FN": 117486,
+      "IDSW": 380,
+      "delta": {
+        "HOTA": 0.0035903948938198482,
+        "DetA": -0.0006271864778035763,
+        "AssA": 0.01249239122651602,
+        "IDF1": 0.0038585415152851965,
+        "MOTA": 0.0011125203034936249,
+        "FP": -5,
+        "FN": 4,
+        "IDSW": -1
+      }
+    },
+    {
+      "tracker": "B_C2",
+      "HOTA": 38.503648856449125,
+      "DetA": 25.77027007863454,
+      "AssA": 59.01658347441047,
+      "IDF1": 43.49420954665462,
+      "MOTA": 25.641367954965176,
+      "FP": 15281,
+      "FN": 118023,
+      "IDSW": 372,
+      "delta": {
+        "HOTA": -0.22333202865277002,
+        "DetA": -0.22596240329358963,
+        "AssA": -0.18677472735271294,
+        "IDF1": -0.3674742188361364,
+        "MOTA": -0.03337560910486914,
+        "FP": -472,
+        "FN": 541,
+        "IDSW": -9
+      }
+    },
+    {
+      "tracker": "C2",
+      "HOTA": 37.814563984689855,
+      "DetA": 25.17992085617348,
+      "AssA": 58.2429976452145,
+      "IDF1": 42.36566781159935,
+      "MOTA": 25.752619985314734,
+      "FP": 13398,
+      "FN": 119652,
+      "IDSW": 426,
+      "delta": {
+        "HOTA": -0.9124169004120404,
+        "DetA": -0.816311625754647,
+        "AssA": -0.9603605565486788,
+        "IDF1": -1.4960159538914084,
+        "MOTA": 0.07787642124468874,
+        "FP": -2355,
+        "FN": 2170,
+        "IDSW": 45
+      }
+    }
+  ],
+  "control_recoveries": {
+    "release_bank_history": 829,
+    "release_bank_recovery": 689,
+    "native_only": 840,
+    "bank_only": 662,
+    "fixed_state": 840
+  },
+  "high_conflict": {
+    "previous": [
+      {
+        "previous_labeled_track": "current_unmatched",
+        "count": 2814
+      },
+      {
+        "previous_labeled_track": "different",
+        "count": 112
+      },
+      {
+        "previous_labeled_track": "previous_unknown",
+        "count": 48
+      },
+      {
+        "previous_labeled_track": "same",
+        "count": 28058
+      }
+    ],
+    "anchor": [
+      {
+        "last_private_write_gt": "current_unmatched",
+        "count": 2814
+      },
+      {
+        "last_private_write_gt": "different",
+        "count": 1003
+      },
+      {
+        "last_private_write_gt": "previous_unknown",
+        "count": 12603
+      },
+      {
+        "last_private_write_gt": "same",
+        "count": 14612
+      }
+    ]
+  },
+  "shadow_bank_would_block": [
+    {
+      "stage": "high",
+      "previous_labeled_track": "current_unmatched",
+      "count": 3144
+    },
+    {
+      "stage": "high",
+      "previous_labeled_track": "different",
+      "count": 148
+    },
+    {
+      "stage": "high",
+      "previous_labeled_track": "previous_unknown",
+      "count": 50
+    },
+    {
+      "stage": "high",
+      "previous_labeled_track": "same",
+      "count": 29018
+    },
+    {
+      "stage": "low",
+      "previous_labeled_track": "current_unmatched",
+      "count": 2750
+    },
+    {
+      "stage": "low",
+      "previous_labeled_track": "different",
+      "count": 36
+    },
+    {
+      "stage": "low",
+      "previous_labeled_track": "previous_unknown",
+      "count": 23
+    },
+    {
+      "stage": "low",
+      "previous_labeled_track": "same",
+      "count": 4194
+    },
+    {
+      "stage": "recovery",
+      "previous_labeled_track": "current_unmatched",
+      "count": 280
+    },
+    {
+      "stage": "recovery",
+      "previous_labeled_track": "different",
+      "count": 24
+    },
+    {
+      "stage": "recovery",
+      "previous_labeled_track": "previous_unknown",
+      "count": 4
+    },
+    {
+      "stage": "recovery",
+      "previous_labeled_track": "same",
+      "count": 194
+    },
+    {
+      "stage": "unconfirmed",
+      "previous_labeled_track": "current_unmatched",
+      "count": 73
+    },
+    {
+      "stage": "unconfirmed",
+      "previous_labeled_track": "previous_unknown",
+      "count": 207
+    }
+  ],
+  "same_track_gate": [
+    {
+      "gate_allows": false,
+      "previous_labeled_track": "current_unmatched",
+      "count": 6814
+    },
+    {
+      "gate_allows": false,
+      "previous_labeled_track": "different",
+      "count": 170
+    },
+    {
+      "gate_allows": false,
+      "previous_labeled_track": "previous_unknown",
+      "count": 81
+    },
+    {
+      "gate_allows": false,
+      "previous_labeled_track": "same",
+      "count": 35816
+    },
+    {
+      "gate_allows": true,
+      "previous_labeled_track": "current_unmatched",
+      "count": 1937
+    },
+    {
+      "gate_allows": true,
+      "previous_labeled_track": "different",
+      "count": 5
+    },
+    {
+      "gate_allows": true,
+      "previous_labeled_track": "previous_unknown",
+      "count": 10
+    },
+    {
+      "gate_allows": true,
+      "previous_labeled_track": "same",
+      "count": 17569
+    }
+  ],
+  "flow": [
+    {
+      "comparison": "B_C2 vs B_C2_memory",
+      "gained": 0,
+      "lost": 0,
+      "absent_to_absent": 0,
+      "absent_to_FP": 1,
+      "absent_to_TP": 0,
+      "FP_to_absent": 1,
+      "FP_to_FP": 15280,
+      "FP_to_TP": 0,
+      "TP_to_absent": 0,
+      "TP_to_FP": 0,
+      "TP_to_TP": 61749
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "gained": 187,
+      "lost": 728,
+      "absent_to_absent": 0,
+      "absent_to_FP": 186,
+      "absent_to_TP": 168,
+      "FP_to_absent": 659,
+      "FP_to_FP": 15072,
+      "FP_to_TP": 22,
+      "TP_to_absent": 708,
+      "TP_to_FP": 23,
+      "TP_to_TP": 61559
+    },
+    {
+      "comparison": "B_C2_association vs B_ref",
+      "gained": 0,
+      "lost": 4,
+      "absent_to_absent": 0,
+      "absent_to_FP": 4,
+      "absent_to_TP": 3,
+      "FP_to_absent": 10,
+      "FP_to_FP": 15743,
+      "FP_to_TP": 0,
+      "TP_to_absent": 6,
+      "TP_to_FP": 1,
+      "TP_to_TP": 62283
+    },
+    {
+      "comparison": "B_C2_memory vs B_ref",
+      "gained": 187,
+      "lost": 728,
+      "absent_to_absent": 0,
+      "absent_to_FP": 185,
+      "absent_to_TP": 168,
+      "FP_to_absent": 658,
+      "FP_to_FP": 15073,
+      "FP_to_TP": 22,
+      "TP_to_absent": 708,
+      "TP_to_FP": 23,
+      "TP_to_TP": 61559
+    }
+  ],
+  "stage_totals": [
+    {
+      "method": "B_C2",
+      "recovered": 660,
+      "memory_writes": 23766,
+      "matches": 61749,
+      "FP": 15281,
+      "FN": 118023,
+      "IDSW": 372
+    },
+    {
+      "method": "B_C2_association",
+      "recovered": 838,
+      "memory_writes": 63805,
+      "matches": 62286,
+      "FP": 15748,
+      "FN": 117486,
+      "IDSW": 380
+    },
+    {
+      "method": "B_C2_memory",
+      "recovered": 660,
+      "memory_writes": 24126,
+      "matches": 61749,
+      "FP": 15281,
+      "FN": 118023,
+      "IDSW": 373
+    },
+    {
+      "method": "B_C2_shadow",
+      "recovered": 840,
+      "memory_writes": 63806,
+      "matches": 62290,
+      "FP": 15753,
+      "FN": 117482,
+      "IDSW": 381
+    },
+    {
+      "method": "B_ref",
+      "recovered": 840,
+      "memory_writes": 63806,
+      "matches": 62290,
+      "FP": 15753,
+      "FN": 117482,
+      "IDSW": 381
+    }
+  ],
+  "whole_gt": {
+    "B_C2 vs B_C2_memory": {
+      "new": 0,
+      "lost": 0,
+      "more": 0,
+      "less": 0
+    },
+    "B_C2 vs B_ref": {
+      "new": 4,
+      "lost": 1,
+      "more": 29,
+      "less": 90
+    },
+    "B_C2_association vs B_ref": {
+      "new": 0,
+      "lost": 0,
+      "more": 0,
+      "less": 3
+    },
+    "B_C2_memory vs B_ref": {
+      "new": 4,
+      "lost": 1,
+      "more": 29,
+      "less": 90
+    }
+  },
+  "switch_counts": [
+    {
+      "comparison": "B_C2 vs B_C2_memory",
+      "which": "both",
+      "size": 372
+    },
+    {
+      "comparison": "B_C2 vs B_C2_memory",
+      "which": "ref_only",
+      "size": 1
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "which": "both",
+      "size": 307
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "which": "ref_only",
+      "size": 74
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "which": "variant_only",
+      "size": 65
+    },
+    {
+      "comparison": "B_C2_association vs B_ref",
+      "which": "both",
+      "size": 376
+    },
+    {
+      "comparison": "B_C2_association vs B_ref",
+      "which": "ref_only",
+      "size": 5
+    },
+    {
+      "comparison": "B_C2_association vs B_ref",
+      "which": "variant_only",
+      "size": 4
+    },
+    {
+      "comparison": "B_C2_memory vs B_ref",
+      "which": "both",
+      "size": 308
+    },
+    {
+      "comparison": "B_C2_memory vs B_ref",
+      "which": "ref_only",
+      "size": 73
+    },
+    {
+      "comparison": "B_C2_memory vs B_ref",
+      "which": "variant_only",
+      "size": 65
+    }
+  ],
+  "lost_gain_breakdown": {
+    "gain": {
+      "by_stage": {
+        "low": 89,
+        "high": 67,
+        "recovered": 31
+      },
+      "other_row": {
+        "absent": 160,
+        "FP": 22,
+        "different_GT": 5
+      },
+      "follows_nonshared_recovery": 152,
+      "inside10_after_nonshared_recovery": 101,
+      "sequence_counts": {
+        "DJI_0061_2": 108,
+        "DJI_0327_3": 61,
+        "DJI_0073_3": 8,
+        "DJI_0169_3": 6,
+        "DJI_0221_2": 3,
+        "DJI_0257_2": 1
+      }
+    },
+    "loss": {
+      "by_stage": {
+        "low": 468,
+        "recovered": 139,
+        "high": 116,
+        "unconfirmed": 5
+      },
+      "other_row": {
+        "absent": 703,
+        "FP": 20,
+        "different_GT": 5
+      },
+      "follows_nonshared_recovery": 689,
+      "inside10_after_nonshared_recovery": 551,
+      "sequence_counts": {
+        "DJI_0327_3": 435,
+        "DJI_0061_2": 224,
+        "DJI_0141_2": 24,
+        "DJI_0073_3": 23,
+        "DJI_0181_3": 8,
+        "DJI_0221_2": 6,
+        "DJI_0032_3": 3,
+        "DJI_0155_2": 2,
+        "DJI_0169_3": 2,
+        "DJI_0257_2": 1
+      }
+    }
+  },
+  "recovery_counts": [
+    {
+      "side": "ref",
+      "shared": false,
+      "endpoint": "different_gt",
+      "size": 19
+    },
+    {
+      "side": "ref",
+      "shared": false,
+      "endpoint": "same_gt",
+      "size": 95
+    },
+    {
+      "side": "ref",
+      "shared": false,
+      "endpoint": "uncertain",
+      "size": 200
+    },
+    {
+      "side": "ref",
+      "shared": true,
+      "endpoint": "different_gt",
+      "size": 3
+    },
+    {
+      "side": "ref",
+      "shared": true,
+      "endpoint": "same_gt",
+      "size": 198
+    },
+    {
+      "side": "ref",
+      "shared": true,
+      "endpoint": "uncertain",
+      "size": 325
+    },
+    {
+      "side": "variant",
+      "shared": false,
+      "endpoint": "different_gt",
+      "size": 10
+    },
+    {
+      "side": "variant",
+      "shared": false,
+      "endpoint": "same_gt",
+      "size": 31
+    },
+    {
+      "side": "variant",
+      "shared": false,
+      "endpoint": "uncertain",
+      "size": 93
+    },
+    {
+      "side": "variant",
+      "shared": true,
+      "endpoint": "different_gt",
+      "size": 3
+    },
+    {
+      "side": "variant",
+      "shared": true,
+      "endpoint": "same_gt",
+      "size": 199
+    },
+    {
+      "side": "variant",
+      "shared": true,
+      "endpoint": "uncertain",
+      "size": 324
+    }
+  ],
+  "alternative_check": [
+    {
+      "other_check": "ambiguous",
+      "endpoint": "different_gt",
+      "size": 1
+    },
+    {
+      "other_check": "ambiguous",
+      "endpoint": "uncertain",
+      "size": 1
+    },
+    {
+      "other_check": "appearance_contradiction",
+      "endpoint": "different_gt",
+      "size": 10
+    },
+    {
+      "other_check": "appearance_contradiction",
+      "endpoint": "same_gt",
+      "size": 61
+    },
+    {
+      "other_check": "appearance_contradiction",
+      "endpoint": "uncertain",
+      "size": 99
+    },
+    {
+      "other_check": "cost_reject",
+      "endpoint": "uncertain",
+      "size": 5
+    },
+    {
+      "other_check": "geometry_gate",
+      "endpoint": "uncertain",
+      "size": 2
+    },
+    {
+      "other_check": "overlaps_last_observation",
+      "endpoint": "uncertain",
+      "size": 3
+    },
+    {
+      "other_check": "plausible",
+      "endpoint": "uncertain",
+      "size": 6
+    },
+    {
+      "other_check": "unknown/unavailable",
+      "endpoint": "different_gt",
+      "size": 8
+    },
+    {
+      "other_check": "unknown/unavailable",
+      "endpoint": "same_gt",
+      "size": 34
+    },
+    {
+      "other_check": "unknown/unavailable",
+      "endpoint": "uncertain",
+      "size": 84
+    }
+  ],
+  "targets_big_loss": [
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0327_3",
+      "gt": 165,
+      "ref_frames": 95,
+      "var_frames": 48,
+      "lost": 47,
+      "gained": 0,
+      "net": -47
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0327_3",
+      "gt": 80,
+      "ref_frames": 253,
+      "var_frames": 215,
+      "lost": 38,
+      "gained": 0,
+      "net": -38
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0327_3",
+      "gt": 14,
+      "ref_frames": 319,
+      "var_frames": 283,
+      "lost": 36,
+      "gained": 0,
+      "net": -36
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0327_3",
+      "gt": 76,
+      "ref_frames": 103,
+      "var_frames": 70,
+      "lost": 33,
+      "gained": 0,
+      "net": -33
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0327_3",
+      "gt": 92,
+      "ref_frames": 130,
+      "var_frames": 101,
+      "lost": 29,
+      "gained": 0,
+      "net": -29
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0141_2",
+      "gt": 21,
+      "ref_frames": 291,
+      "var_frames": 267,
+      "lost": 24,
+      "gained": 0,
+      "net": -24
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0327_3",
+      "gt": 1,
+      "ref_frames": 70,
+      "var_frames": 51,
+      "lost": 19,
+      "gained": 0,
+      "net": -19
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0327_3",
+      "gt": 208,
+      "ref_frames": 54,
+      "var_frames": 37,
+      "lost": 17,
+      "gained": 0,
+      "net": -17
+    }
+  ],
+  "targets_big_gain": [
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0327_3",
+      "gt": 67,
+      "ref_frames": 54,
+      "var_frames": 99,
+      "lost": 1,
+      "gained": 46,
+      "net": 45
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0073_3",
+      "gt": 43,
+      "ref_frames": 42,
+      "var_frames": 49,
+      "lost": 0,
+      "gained": 7,
+      "net": 7
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "gt": 70,
+      "ref_frames": 30,
+      "var_frames": 35,
+      "lost": 2,
+      "gained": 7,
+      "net": 5
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "gt": 134,
+      "ref_frames": 7,
+      "var_frames": 12,
+      "lost": 0,
+      "gained": 5,
+      "net": 5
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "gt": 51,
+      "ref_frames": 53,
+      "var_frames": 57,
+      "lost": 4,
+      "gained": 8,
+      "net": 4
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "gt": 81,
+      "ref_frames": 0,
+      "var_frames": 4,
+      "lost": 0,
+      "gained": 4,
+      "net": 4
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "gt": 128,
+      "ref_frames": 51,
+      "var_frames": 55,
+      "lost": 3,
+      "gained": 7,
+      "net": 4
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0169_3",
+      "gt": 5,
+      "ref_frames": 50,
+      "var_frames": 54,
+      "lost": 1,
+      "gained": 5,
+      "net": 4
+    }
+  ],
+  "long_runs": [
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 14,
+      "direction": "loss",
+      "start": 301,
+      "end": 325,
+      "length": 25
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 67,
+      "direction": "gain",
+      "start": 133,
+      "end": 157,
+      "length": 25
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 80,
+      "direction": "loss",
+      "start": 206,
+      "end": 230,
+      "length": 25
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 76,
+      "direction": "loss",
+      "start": 227,
+      "end": 248,
+      "length": 22
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 1,
+      "direction": "loss",
+      "start": 354,
+      "end": 372,
+      "length": 19
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 165,
+      "direction": "loss",
+      "start": 170,
+      "end": 184,
+      "length": 15
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 68,
+      "direction": "loss",
+      "start": 68,
+      "end": 81,
+      "length": 14
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 16,
+      "direction": "loss",
+      "start": 250,
+      "end": 262,
+      "length": 13
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 67,
+      "direction": "gain",
+      "start": 97,
+      "end": 109,
+      "length": 13
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 80,
+      "direction": "loss",
+      "start": 247,
+      "end": 259,
+      "length": 13
+    },
+    {
+      "sequence": "DJI_0141_2",
+      "gt": 21,
+      "direction": "loss",
+      "start": 201,
+      "end": 212,
+      "length": 12
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 81,
+      "direction": "loss",
+      "start": 356,
+      "end": 367,
+      "length": 12
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 92,
+      "direction": "loss",
+      "start": 256,
+      "end": 266,
+      "length": 11
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 165,
+      "direction": "loss",
+      "start": 153,
+      "end": 163,
+      "length": 11
+    },
+    {
+      "sequence": "DJI_0061_2",
+      "gt": 138,
+      "direction": "loss",
+      "start": 230,
+      "end": 239,
+      "length": 10
+    },
+    {
+      "sequence": "DJI_0327_3",
+      "gt": 169,
+      "direction": "loss",
+      "start": 164,
+      "end": 173,
+      "length": 10
+    },
+    {
+      "sequence": "DJI_0061_2",
+      "gt": 46,
+      "direction": "loss",
+      "start": 181,
+      "end": 189,
+      "length": 9
+    },
+    {
+      "sequence": "DJI_0061_2",
+      "gt": 47,
+      "direction": "loss",
+      "start": 195,
+      "end": 203,
+      "length": 9
+    }
+  ],
+  "strong_cases": [
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0032_3",
+      "side": "ref",
+      "frame": 265,
+      "di": 11,
+      "tid": 90,
+      "previous_frame": 254,
+      "previous_di": 7,
+      "previous_gt": 42.0,
+      "current_gt": 42.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 94.0,
+      "other_candidate": 352.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0032_3",
+      "side": "ref",
+      "frame": 282,
+      "di": 10,
+      "tid": 90,
+      "previous_frame": 279,
+      "previous_di": 12,
+      "previous_gt": 42.0,
+      "current_gt": 42.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 94.0,
+      "other_candidate": 371.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 76,
+      "di": 41,
+      "tid": 60,
+      "previous_frame": 70,
+      "previous_di": 28,
+      "previous_gt": 101.0,
+      "current_gt": 101.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 60.0,
+      "other_candidate": 417.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 112,
+      "di": 57,
+      "tid": 173,
+      "previous_frame": 108,
+      "previous_di": 52,
+      "previous_gt": 101.0,
+      "current_gt": 101.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 171.0,
+      "other_candidate": 569.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 116,
+      "di": 51,
+      "tid": 95,
+      "previous_frame": 110,
+      "previous_di": 18,
+      "previous_gt": 30.0,
+      "current_gt": 30.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 94.0,
+      "other_candidate": 584.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 122,
+      "di": 65,
+      "tid": 150,
+      "previous_frame": 117,
+      "previous_di": 64,
+      "previous_gt": 112.0,
+      "current_gt": 112.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 148.0,
+      "other_candidate": 604.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 131,
+      "di": 62,
+      "tid": 131,
+      "previous_frame": 123,
+      "previous_di": 59,
+      "previous_gt": 31.0,
+      "current_gt": 31.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 129.0,
+      "other_candidate": 658.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 144,
+      "di": 44,
+      "tid": 41,
+      "previous_frame": 133,
+      "previous_di": 52,
+      "previous_gt": 126.0,
+      "current_gt": 126.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 164.0,
+      "other_candidate": 722.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 177,
+      "di": 39,
+      "tid": 143,
+      "previous_frame": 166,
+      "previous_di": 47,
+      "previous_gt": 66.0,
+      "current_gt": 66.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 140.0,
+      "other_candidate": 876.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 177,
+      "di": 62,
+      "tid": 197,
+      "previous_frame": 172,
+      "previous_di": 43,
+      "previous_gt": 161.0,
+      "current_gt": 161.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 207.0,
+      "other_candidate": 868.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 184,
+      "di": 48,
+      "tid": 202,
+      "previous_frame": 171,
+      "previous_di": 63,
+      "previous_gt": 51.0,
+      "current_gt": 51.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 202.0,
+      "other_candidate": 904.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 202,
+      "di": 43,
+      "tid": 211,
+      "previous_frame": 199,
+      "previous_di": 51,
+      "previous_gt": 32.0,
+      "current_gt": 32.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 212.0,
+      "other_candidate": 993.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 223,
+      "di": 67,
+      "tid": 191,
+      "previous_frame": 210,
+      "previous_di": 55,
+      "previous_gt": 99.0,
+      "current_gt": 99.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 141.0,
+      "other_candidate": 1079.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 223,
+      "di": 43,
+      "tid": 220,
+      "previous_frame": 218,
+      "previous_di": 77,
+      "previous_gt": 142.0,
+      "current_gt": 142.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 223.0,
+      "other_candidate": 1078.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 228,
+      "di": 62,
+      "tid": 218,
+      "previous_frame": 209,
+      "previous_di": 59,
+      "previous_gt": 148.0,
+      "current_gt": 148.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 221.0,
+      "other_candidate": 1097.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0061_2",
+      "side": "ref",
+      "frame": 228,
+      "di": 46,
+      "tid": 189,
+      "previous_frame": 216,
+      "previous_di": 49,
+      "previous_gt": 132.0,
+      "current_gt": 132.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 188.0,
+      "other_candidate": 1099.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0073_3",
+      "side": "ref",
+      "frame": 118,
+      "di": 37,
+      "tid": 17,
+      "previous_frame": 114,
+      "previous_di": 47,
+      "previous_gt": 19.0,
+      "current_gt": 19.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 17.0,
+      "other_candidate": 245.0,
+      "other_check": "appearance_contradiction"
+    },
+    {
+      "comparison": "B_C2 vs B_ref",
+      "sequence": "DJI_0073_3",
+      "side": "ref",
+      "frame": 181,
+      "di": 45,
+      "tid": 18,
+      "previous_frame": 157,
+      "previous_di": 37,
+      "previous_gt": 32.0,
+      "current_gt": 32.0,
+      "endpoint": "same_gt",
+      "shared": false,
+      "other_stage": "not_emitted",
+      "other_gt": "",
+      "other_prior_tid": 18.0,
+      "other_candidate": 337.0,
+      "other_check": "appearance_contradiction"
+    }
+  ]
+}

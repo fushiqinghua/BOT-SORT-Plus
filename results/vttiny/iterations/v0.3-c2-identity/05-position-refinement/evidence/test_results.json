@@ -1,0 +1,1283 @@
+{
+  "results": {
+    "loc_shadow": {
+      "all": {
+        "n": 579,
+        "moved": 0,
+        "before_iou": 0.5214409336456207,
+        "after_iou": 0.5214409336456207,
+        "delta_iou": 0.0,
+        "before_center": 3.2150462280287972,
+        "after_center": 3.2150462280287972,
+        "delta_center": 0.0,
+        "improved": 0,
+        "worsened": 0,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.6304280426147114,
+        "oracle_above50": 465,
+        "iou_ci": [
+          0.0,
+          0.0
+        ],
+        "center_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "edge": {
+        "n": 129,
+        "moved": 0,
+        "before_iou": 0.3528653922216584,
+        "after_iou": 0.3528653922216584,
+        "delta_iou": 0.0,
+        "before_center": 3.727950525494459,
+        "after_center": 3.727950525494459,
+        "delta_center": 0.0,
+        "improved": 0,
+        "worsened": 0,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.5381943559311253,
+        "oracle_above50": 79,
+        "iou_ci": [
+          0.0,
+          0.0
+        ],
+        "center_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "moved": {
+        "n": 0,
+        "iou_ci": null,
+        "center_ci": null
+      },
+      "edge_moved": {
+        "n": 0,
+        "iou_ci": null,
+        "center_ci": null
+      },
+      "age1": {
+        "n": 329,
+        "moved": 0,
+        "before_iou": 0.5495261021439831,
+        "after_iou": 0.5495261021439831,
+        "delta_iou": 0.0,
+        "before_center": 2.694492642712856,
+        "after_center": 2.694492642712856,
+        "delta_center": 0.0,
+        "improved": 0,
+        "worsened": 0,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.6561152033404716,
+        "oracle_above50": 276,
+        "iou_ci": [
+          0.0,
+          0.0
+        ],
+        "center_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "age2": {
+        "n": 250,
+        "moved": 0,
+        "before_iou": 0.48448085190177576,
+        "after_iou": 0.48448085190177576,
+        "delta_iou": 0.0,
+        "before_center": 3.900094746304576,
+        "after_center": 3.900094746304576,
+        "delta_center": 0.0,
+        "improved": 0,
+        "worsened": 0,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.5966237390996113,
+        "oracle_above50": 189,
+        "iou_ci": [
+          0.0,
+          0.0
+        ],
+        "center_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "below_010": {
+        "n": 64,
+        "moved": 0,
+        "before_iou": 0.02383286706716093,
+        "after_iou": 0.02383286706716093,
+        "delta_iou": 0.0,
+        "before_center": 13.129031588467946,
+        "after_center": 13.129031588467946,
+        "delta_center": 0.0,
+        "improved": 0,
+        "worsened": 0,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.07345605089390404,
+        "oracle_above50": 0,
+        "iou_ci": [
+          0.0,
+          0.0
+        ],
+        "center_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "at_least_050": {
+        "n": 386,
+        "moved": 0,
+        "before_iou": 0.6602833199272594,
+        "after_iou": 0.6602833199272594,
+        "delta_iou": 0.0,
+        "before_center": 1.3998656128962172,
+        "after_center": 1.3998656128962172,
+        "delta_center": 0.0,
+        "improved": 0,
+        "worsened": 0,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.7535999417139714,
+        "oracle_above50": 386,
+        "iou_ci": [
+          0.0,
+          0.0
+        ],
+        "center_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "coverage": {
+        "moved": 0,
+        "reference_new_gt": 452,
+        "retained": 452,
+        "additional": 0,
+        "lost_original": 0,
+        "lost_measured": 0,
+        "all_gt_gained": 0,
+        "all_gt_lost": 0,
+        "switches_removed": 0,
+        "switches_added": 0
+      },
+      "sequences_with_moves": 0,
+      "move_reasons": {
+        "peak_at_boundary": 91,
+        "weak_or_inconsistent_contrast": 246,
+        "history": 3,
+        "moved": 176,
+        "lift": 227,
+        "salience": 46,
+        "unreliable_region": 106,
+        "margin": 9,
+        "history_disagrees": 15,
+        "corr": 27,
+        "edge": 14,
+        "small_step": 9,
+        "small_box": 35,
+        "measured_neighbor": 4,
+        "scale_change": 7
+      },
+      "resolved_moving_sequences": 0,
+      "macro_parent_delta_iou": 0.0
+    },
+    "ir_loc": {
+      "all": {
+        "n": 579,
+        "moved": 89,
+        "before_iou": 0.5214409336456207,
+        "after_iou": 0.5238842297384722,
+        "delta_iou": 0.0024432960928514945,
+        "before_center": 3.2150462280287972,
+        "after_center": 3.198788654279217,
+        "delta_center": -0.016257573749580957,
+        "improved": 44,
+        "worsened": 29,
+        "rescued": 10,
+        "lost": 2,
+        "neighbor_took_over": 1,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.6304280426147114,
+        "oracle_above50": 465,
+        "iou_ci": [
+          -5.066591935933825e-05,
+          0.007004837161825205
+        ],
+        "center_ci": [
+          -0.05068039682067572,
+          0.0032882178869938737
+        ]
+      },
+      "edge": {
+        "n": 129,
+        "moved": 22,
+        "before_iou": 0.3528653922216584,
+        "after_iou": 0.36388541245426026,
+        "delta_iou": 0.01102002023260185,
+        "before_center": 3.727950525494459,
+        "after_center": 3.642662243120818,
+        "delta_center": -0.08528828237364111,
+        "improved": 18,
+        "worsened": 4,
+        "rescued": 10,
+        "lost": 0,
+        "neighbor_took_over": 1,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.5381943559311253,
+        "oracle_above50": 79,
+        "iou_ci": [
+          0.004253981150633748,
+          0.02275791463559133
+        ],
+        "center_ci": [
+          -0.1800641756842045,
+          -0.03200910615334897
+        ]
+      },
+      "moved": {
+        "n": 89,
+        "moved": 89,
+        "before_iou": 0.5236376925111296,
+        "after_iou": 0.5395328434972083,
+        "delta_iou": 0.015895150986078823,
+        "before_center": 4.194749440418438,
+        "after_center": 4.088983876362174,
+        "delta_center": -0.10576556405626264,
+        "improved": 44,
+        "worsened": 29,
+        "rescued": 10,
+        "lost": 2,
+        "neighbor_took_over": 1,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.6326831530962683,
+        "oracle_above50": 76,
+        "iou_ci": [
+          -0.00012004824087892243,
+          0.0426197284849506
+        ],
+        "center_ci": [
+          -0.3086407958377883,
+          0.02324411952261412
+        ]
+      },
+      "edge_moved": {
+        "n": 22,
+        "moved": 22,
+        "before_iou": 0.4086360047450588,
+        "after_iou": 0.47325339610895134,
+        "delta_iou": 0.06461739136389266,
+        "before_center": 3.0701880260237133,
+        "after_center": 2.570088552105545,
+        "delta_center": -0.5000994739181683,
+        "improved": 18,
+        "worsened": 4,
+        "rescued": 10,
+        "lost": 0,
+        "neighbor_took_over": 1,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.5844425273002334,
+        "oracle_above50": 18,
+        "iou_ci": [
+          0.036167479278211026,
+          0.10767327937214914
+        ],
+        "center_ci": [
+          -0.8787026956448751,
+          -0.2793325018369965
+        ]
+      },
+      "age1": {
+        "n": 329,
+        "moved": 59,
+        "before_iou": 0.5495261021439831,
+        "after_iou": 0.5517786983482078,
+        "delta_iou": 0.0022525962042248336,
+        "before_center": 2.694492642712856,
+        "after_center": 2.6781093362381174,
+        "delta_center": -0.016383306474738783,
+        "improved": 29,
+        "worsened": 21,
+        "rescued": 7,
+        "lost": 2,
+        "neighbor_took_over": 1,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.6561152033404716,
+        "oracle_above50": 276,
+        "iou_ci": [
+          -0.0009509190575379729,
+          0.008846720143923847
+        ],
+        "center_ci": [
+          -0.06797239836704214,
+          0.00994478887214935
+        ]
+      },
+      "age2": {
+        "n": 250,
+        "moved": 30,
+        "before_iou": 0.48448085190177576,
+        "after_iou": 0.4871751090480599,
+        "delta_iou": 0.0026942571462841808,
+        "before_center": 3.900094746304576,
+        "after_center": 3.884002636821303,
+        "delta_center": -0.016092109483273262,
+        "improved": 15,
+        "worsened": 8,
+        "rescued": 3,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.5966237390996113,
+        "oracle_above50": 189,
+        "iou_ci": [
+          0.0003262516913336743,
+          0.006609080885212614
+        ],
+        "center_ci": [
+          -0.05085541838030282,
+          0.00792492055552011
+        ]
+      },
+      "below_010": {
+        "n": 64,
+        "moved": 9,
+        "before_iou": 0.02383286706716093,
+        "after_iou": 0.02284376587587403,
+        "delta_iou": -0.0009891011912868978,
+        "before_center": 13.129031588467946,
+        "after_center": 13.137283469338119,
+        "delta_center": 0.008251880870171369,
+        "improved": 0,
+        "worsened": 1,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.07345605089390404,
+        "oracle_above50": 0,
+        "iou_ci": [
+          -0.004748432209642232,
+          0.0
+        ],
+        "center_ci": [
+          -0.058551694477256354,
+          0.09896824150104698
+        ]
+      },
+      "at_least_050": {
+        "n": 386,
+        "moved": 58,
+        "before_iou": 0.6602833199272594,
+        "after_iou": 0.6604294036163727,
+        "delta_iou": 0.0001460836891133117,
+        "before_center": 1.3998656128962172,
+        "after_center": 1.4026141435944073,
+        "delta_center": 0.002748530698190052,
+        "improved": 26,
+        "worsened": 24,
+        "rescued": 0,
+        "lost": 2,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.7535999417139714,
+        "oracle_above50": 386,
+        "iou_ci": [
+          -0.0016948374893995743,
+          0.004205825577590819
+        ],
+        "center_ci": [
+          -0.030662795746048833,
+          0.01864138473546824
+        ]
+      },
+      "coverage": {
+        "moved": 176,
+        "reference_new_gt": 452,
+        "retained": 448,
+        "additional": 13,
+        "lost_original": 4,
+        "lost_measured": 0,
+        "all_gt_gained": 13,
+        "all_gt_lost": 4,
+        "switches_removed": 0,
+        "switches_added": 2
+      },
+      "sequences_with_moves": 19,
+      "move_reasons": {
+        "peak_at_boundary": 91,
+        "weak_or_inconsistent_contrast": 246,
+        "history": 3,
+        "moved": 176,
+        "lift": 227,
+        "salience": 46,
+        "unreliable_region": 106,
+        "margin": 9,
+        "history_disagrees": 15,
+        "corr": 27,
+        "edge": 14,
+        "small_step": 9,
+        "small_box": 35,
+        "measured_neighbor": 4,
+        "scale_change": 7
+      },
+      "resolved_moving_sequences": 16,
+      "macro_parent_delta_iou": 0.006204225660131099
+    },
+    "ir_loc_shift": {
+      "all": {
+        "n": 579,
+        "moved": 72,
+        "before_iou": 0.5214409336456207,
+        "after_iou": 0.5170895267078822,
+        "delta_iou": -0.004351406937738407,
+        "before_center": 3.2150462280287972,
+        "after_center": 3.2599185330200546,
+        "delta_center": 0.044872304991256946,
+        "improved": 23,
+        "worsened": 44,
+        "rescued": 0,
+        "lost": 6,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 9,
+        "oracle_mean_iou": 0.6304280426147114,
+        "oracle_above50": 465,
+        "iou_ci": [
+          -0.009305644148696578,
+          -0.0002971434367314385
+        ],
+        "center_ci": [
+          0.0032822931678866693,
+          0.08025141815086222
+        ]
+      },
+      "edge": {
+        "n": 129,
+        "moved": 6,
+        "before_iou": 0.3528653922216584,
+        "after_iou": 0.3525097355612639,
+        "delta_iou": -0.0003556566603944782,
+        "before_center": 3.727950525494459,
+        "after_center": 3.7370771675816257,
+        "delta_center": 0.009126642087166632,
+        "improved": 2,
+        "worsened": 4,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.5381943559311253,
+        "oracle_above50": 79,
+        "iou_ci": [
+          -0.0016528388089198432,
+          0.0011328555034784476
+        ],
+        "center_ci": [
+          -0.0073799503238446175,
+          0.02888318165828683
+        ]
+      },
+      "moved": {
+        "n": 72,
+        "moved": 72,
+        "before_iou": 0.6027935087128046,
+        "after_iou": 0.5678009445884915,
+        "delta_iou": -0.03499256412431303,
+        "before_center": 2.7290531882101887,
+        "after_center": 3.08990130751488,
+        "delta_center": 0.3608481193046913,
+        "improved": 23,
+        "worsened": 44,
+        "rescued": 0,
+        "lost": 6,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 9,
+        "oracle_mean_iou": 0.697681147739771,
+        "oracle_above50": 66,
+        "iou_ci": [
+          -0.06645545027983125,
+          -0.008364370184214502
+        ],
+        "center_ci": [
+          0.09095637322784574,
+          0.551843914590378
+        ]
+      },
+      "edge_moved": {
+        "n": 6,
+        "moved": 6,
+        "before_iou": 0.41190645062119174,
+        "after_iou": 0.40425983242271046,
+        "delta_iou": -0.007646618198481281,
+        "before_center": 3.6086918201998373,
+        "after_center": 3.8049146250739194,
+        "delta_center": 0.1962228048740826,
+        "improved": 2,
+        "worsened": 4,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.5301458960101899,
+        "oracle_above50": 4,
+        "iou_ci": [
+          -0.0267640792145952,
+          0.05484772026735163
+        ],
+        "center_ci": [
+          -0.41315824343766083,
+          0.47803378534439833
+        ]
+      },
+      "age1": {
+        "n": 329,
+        "moved": 46,
+        "before_iou": 0.5495261021439831,
+        "after_iou": 0.5449449896010027,
+        "delta_iou": -0.004581112542980404,
+        "before_center": 2.694492642712856,
+        "after_center": 2.745050881580011,
+        "delta_center": 0.050558238867154756,
+        "improved": 16,
+        "worsened": 28,
+        "rescued": 0,
+        "lost": 3,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 7,
+        "oracle_mean_iou": 0.6561152033404716,
+        "oracle_above50": 276,
+        "iou_ci": [
+          -0.007981644687387277,
+          -0.000269168961696641
+        ],
+        "center_ci": [
+          0.004183477551599325,
+          0.08082512622601216
+        ]
+      },
+      "age2": {
+        "n": 250,
+        "moved": 26,
+        "before_iou": 0.48448085190177576,
+        "after_iou": 0.4804317375405357,
+        "delta_iou": -0.004049114361239941,
+        "before_center": 3.900094746304576,
+        "after_center": 3.9374843623151508,
+        "delta_center": 0.03738961601057543,
+        "improved": 7,
+        "worsened": 16,
+        "rescued": 0,
+        "lost": 3,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 2,
+        "oracle_mean_iou": 0.5966237390996113,
+        "oracle_above50": 189,
+        "iou_ci": [
+          -0.011288223121735363,
+          -0.00017108458149515298
+        ],
+        "center_ci": [
+          -0.0026387920389550363,
+          0.09179358443440448
+        ]
+      },
+      "below_010": {
+        "n": 64,
+        "moved": 4,
+        "before_iou": 0.02383286706716093,
+        "after_iou": 0.02383286706716093,
+        "delta_iou": 0.0,
+        "before_center": 13.129031588467946,
+        "after_center": 13.170596875331398,
+        "delta_center": 0.0415652868634499,
+        "improved": 0,
+        "worsened": 0,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.07345605089390404,
+        "oracle_above50": 0,
+        "iou_ci": [
+          0.0,
+          0.0
+        ],
+        "center_ci": [
+          0.0,
+          0.1246958605903497
+        ]
+      },
+      "at_least_050": {
+        "n": 386,
+        "moved": 62,
+        "before_iou": 0.6602833199272594,
+        "after_iou": 0.6538750688708873,
+        "delta_iou": -0.006408251056372151,
+        "before_center": 1.3998656128962172,
+        "after_center": 1.4572323211900837,
+        "delta_center": 0.057366708293866545,
+        "improved": 21,
+        "worsened": 40,
+        "rescued": 0,
+        "lost": 6,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 9,
+        "oracle_mean_iou": 0.7535999417139714,
+        "oracle_above50": 386,
+        "iou_ci": [
+          -0.013843841261066766,
+          -0.000933991266195991
+        ],
+        "center_ci": [
+          -0.0003361465788982376,
+          0.10288187724566768
+        ]
+      },
+      "coverage": {
+        "moved": 121,
+        "reference_new_gt": 452,
+        "retained": 446,
+        "additional": 3,
+        "lost_original": 6,
+        "lost_measured": 0,
+        "all_gt_gained": 3,
+        "all_gt_lost": 6,
+        "switches_removed": 1,
+        "switches_added": 1
+      },
+      "sequences_with_moves": 13,
+      "move_reasons": {
+        "weak_or_inconsistent_contrast": 468,
+        "unreliable_region": 106,
+        "peak_at_boundary": 72,
+        "history_disagrees": 18,
+        "moved": 121,
+        "lift": 71,
+        "margin": 17,
+        "salience": 81,
+        "corr": 2,
+        "small_box": 35,
+        "scale_change": 7,
+        "measured_neighbor": 2,
+        "small_step": 4,
+        "history": 3,
+        "edge": 8
+      },
+      "resolved_moving_sequences": 11,
+      "macro_parent_delta_iou": -0.002682671917327055
+    },
+    "rgb_loc": {
+      "all": {
+        "n": 579,
+        "moved": 138,
+        "before_iou": 0.5214409336456207,
+        "after_iou": 0.530644095910452,
+        "delta_iou": 0.009203162264831337,
+        "before_center": 3.2150462280287972,
+        "after_center": 3.148796285597371,
+        "delta_center": -0.06624994243142611,
+        "improved": 95,
+        "worsened": 26,
+        "rescued": 17,
+        "lost": 2,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 1,
+        "oracle_mean_iou": 0.6304280426147114,
+        "oracle_above50": 465,
+        "iou_ci": [
+          0.003790728704192123,
+          0.017881418860870395
+        ],
+        "center_ci": [
+          -0.13246997406504774,
+          -0.024903399297769382
+        ]
+      },
+      "edge": {
+        "n": 129,
+        "moved": 36,
+        "before_iou": 0.3528653922216584,
+        "after_iou": 0.3791840602231316,
+        "delta_iou": 0.026318668001473186,
+        "before_center": 3.727950525494459,
+        "after_center": 3.526217430782069,
+        "delta_center": -0.20173309471238998,
+        "improved": 35,
+        "worsened": 1,
+        "rescued": 17,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 1,
+        "oracle_mean_iou": 0.5381943559311253,
+        "oracle_above50": 79,
+        "iou_ci": [
+          0.010553746422542443,
+          0.04725933877645935
+        ],
+        "center_ci": [
+          -0.3714797778549377,
+          -0.07811633215945625
+        ]
+      },
+      "moved": {
+        "n": 138,
+        "moved": 138,
+        "before_iou": 0.5773358369016554,
+        "after_iou": 0.6159491046649694,
+        "delta_iou": 0.038613267763314085,
+        "before_center": 1.837263253464253,
+        "after_center": 1.559301538480226,
+        "delta_center": -0.27796171498402694,
+        "improved": 95,
+        "worsened": 26,
+        "rescued": 17,
+        "lost": 2,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 1,
+        "oracle_mean_iou": 0.7043137823472309,
+        "oracle_above50": 133,
+        "iou_ci": [
+          0.019223899569479907,
+          0.06667548608606638
+        ],
+        "center_ci": [
+          -0.5041231177051214,
+          -0.12877553454968782
+        ]
+      },
+      "edge_moved": {
+        "n": 36,
+        "moved": 36,
+        "before_iou": 0.3952948588936183,
+        "after_iou": 0.48960341923223055,
+        "delta_iou": 0.09430856033861224,
+        "before_center": 2.810872336730723,
+        "after_center": 2.087995414011326,
+        "delta_center": -0.7228769227193975,
+        "improved": 35,
+        "worsened": 1,
+        "rescued": 17,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 1,
+        "oracle_mean_iou": 0.6083826554589815,
+        "oracle_above50": 31,
+        "iou_ci": [
+          0.058406069157030886,
+          0.12393135601051215
+        ],
+        "center_ci": [
+          -1.0632586510989799,
+          -0.41812686862173837
+        ]
+      },
+      "age1": {
+        "n": 329,
+        "moved": 73,
+        "before_iou": 0.5495261021439831,
+        "after_iou": 0.5575697704371176,
+        "delta_iou": 0.008043668293134656,
+        "before_center": 2.694492642712856,
+        "after_center": 2.6473752495097673,
+        "delta_center": -0.047117393203089164,
+        "improved": 46,
+        "worsened": 15,
+        "rescued": 10,
+        "lost": 1,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.6561152033404716,
+        "oracle_above50": 276,
+        "iou_ci": [
+          0.0025474139537715666,
+          0.017512166748900042
+        ],
+        "center_ci": [
+          -0.11657762040189128,
+          -0.008657737728395922
+        ]
+      },
+      "age2": {
+        "n": 250,
+        "moved": 65,
+        "before_iou": 0.48448085190177576,
+        "after_iou": 0.4952099082333599,
+        "delta_iou": 0.01072905633158417,
+        "before_center": 3.900094746304576,
+        "after_center": 3.808666369088658,
+        "delta_center": -0.09142837721591753,
+        "improved": 49,
+        "worsened": 11,
+        "rescued": 7,
+        "lost": 1,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 1,
+        "oracle_mean_iou": 0.5966237390996113,
+        "oracle_above50": 189,
+        "iou_ci": [
+          0.004663983601957362,
+          0.019313533834093483
+        ],
+        "center_ci": [
+          -0.1605851144514387,
+          -0.040483229885567226
+        ]
+      },
+      "below_010": {
+        "n": 64,
+        "moved": 0,
+        "before_iou": 0.02383286706716093,
+        "after_iou": 0.02383286706716093,
+        "delta_iou": 0.0,
+        "before_center": 13.129031588467946,
+        "after_center": 13.129031588467946,
+        "delta_center": 0.0,
+        "improved": 0,
+        "worsened": 0,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.07345605089390404,
+        "oracle_above50": 0,
+        "iou_ci": [
+          0.0,
+          0.0
+        ],
+        "center_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "at_least_050": {
+        "n": 386,
+        "moved": 102,
+        "before_iou": 0.6602833199272594,
+        "after_iou": 0.6652924462981074,
+        "delta_iou": 0.005009126370847936,
+        "before_center": 1.3998656128962172,
+        "after_center": 1.3679092723524415,
+        "delta_center": -0.03195634054377566,
+        "improved": 60,
+        "worsened": 25,
+        "rescued": 0,
+        "lost": 2,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.7535999417139714,
+        "oracle_above50": 386,
+        "iou_ci": [
+          0.0014494737220574973,
+          0.011146171479022093
+        ],
+        "center_ci": [
+          -0.07554201490022289,
+          0.0043855987495131895
+        ]
+      },
+      "coverage": {
+        "moved": 241,
+        "reference_new_gt": 452,
+        "retained": 449,
+        "additional": 23,
+        "lost_original": 3,
+        "lost_measured": 0,
+        "all_gt_gained": 23,
+        "all_gt_lost": 3,
+        "switches_removed": 0,
+        "switches_added": 2
+      },
+      "sequences_with_moves": 23,
+      "move_reasons": {
+        "peak_at_boundary": 84,
+        "corr": 64,
+        "moved": 241,
+        "measured_neighbor": 7,
+        "lift": 226,
+        "history_disagrees": 15,
+        "unreliable_region": 106,
+        "weak_or_inconsistent_contrast": 111,
+        "salience": 64,
+        "edge": 14,
+        "margin": 6,
+        "small_step": 31,
+        "small_box": 35,
+        "scale_change": 7,
+        "history": 4
+      },
+      "resolved_moving_sequences": 20,
+      "macro_parent_delta_iou": 0.01451944053630823
+    },
+    "ir_loc_reverse": {
+      "all": {
+        "n": 579,
+        "moved": 89,
+        "before_iou": 0.5214409336456207,
+        "after_iou": 0.5167274060407354,
+        "delta_iou": -0.004713527604885291,
+        "before_center": 3.2150462280287972,
+        "after_center": 3.259474399555824,
+        "delta_center": 0.04442817152702634,
+        "improved": 21,
+        "worsened": 54,
+        "rescued": 1,
+        "lost": 6,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 9,
+        "oracle_mean_iou": 0.6304280426147114,
+        "oracle_above50": 465,
+        "iou_ci": [
+          -0.008437555681633587,
+          -0.0022279526858930286
+        ],
+        "center_ci": [
+          0.018053597811612032,
+          0.08733804888634081
+        ]
+      },
+      "edge": {
+        "n": 129,
+        "moved": 22,
+        "before_iou": 0.3528653922216584,
+        "after_iou": 0.34259653126186174,
+        "delta_iou": -0.010268860959796686,
+        "before_center": 3.727950525494459,
+        "after_center": 3.8258500291292097,
+        "delta_center": 0.09789950363475014,
+        "improved": 4,
+        "worsened": 18,
+        "rescued": 1,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 2,
+        "oracle_mean_iou": 0.5381943559311253,
+        "oracle_above50": 79,
+        "iou_ci": [
+          -0.01908091540926243,
+          -0.004710244684211289
+        ],
+        "center_ci": [
+          0.04094724569618074,
+          0.19451150930032626
+        ]
+      },
+      "moved": {
+        "n": 89,
+        "moved": 89,
+        "before_iou": 0.5236376925111296,
+        "after_iou": 0.49297328258721285,
+        "delta_iou": -0.030664409923916666,
+        "before_center": 4.194749440418438,
+        "after_center": 4.483782151813361,
+        "delta_center": 0.28903271139492415,
+        "improved": 21,
+        "worsened": 54,
+        "rescued": 1,
+        "lost": 6,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 9,
+        "oracle_mean_iou": 0.6326831530962683,
+        "oracle_above50": 76,
+        "iou_ci": [
+          -0.049665312737616485,
+          -0.01963739387836342
+        ],
+        "center_ci": [
+          0.15391334897502956,
+          0.5163981620578434
+        ]
+      },
+      "edge_moved": {
+        "n": 22,
+        "moved": 22,
+        "before_iou": 0.4086360047450588,
+        "after_iou": 0.348423138208069,
+        "delta_iou": -0.06021286653698966,
+        "before_center": 3.0701880260237133,
+        "after_center": 3.6442351155183847,
+        "delta_center": 0.5740470894946713,
+        "improved": 4,
+        "worsened": 18,
+        "rescued": 1,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 2,
+        "oracle_mean_iou": 0.5844425273002334,
+        "oracle_above50": 18,
+        "iou_ci": [
+          -0.08605656254236174,
+          -0.04464052308527107
+        ],
+        "center_ci": [
+          0.3636896276418782,
+          0.9476303306927781
+        ]
+      },
+      "age1": {
+        "n": 329,
+        "moved": 59,
+        "before_iou": 0.5495261021439831,
+        "after_iou": 0.5438555856352582,
+        "delta_iou": -0.005670516508724836,
+        "before_center": 2.694492642712856,
+        "after_center": 2.749661209909988,
+        "delta_center": 0.05516856719713188,
+        "improved": 16,
+        "worsened": 36,
+        "rescued": 1,
+        "lost": 5,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 7,
+        "oracle_mean_iou": 0.6561152033404716,
+        "oracle_above50": 276,
+        "iou_ci": [
+          -0.011507945423950998,
+          -0.0020990243047162935
+        ],
+        "center_ci": [
+          0.011602492588198725,
+          0.12571985313199463
+        ]
+      },
+      "age2": {
+        "n": 250,
+        "moved": 30,
+        "before_iou": 0.48448085190177576,
+        "after_iou": 0.4810267216943433,
+        "delta_iou": -0.003454130207432449,
+        "before_center": 3.900094746304576,
+        "after_center": 3.9303885571297434,
+        "delta_center": 0.03029381082516746,
+        "improved": 5,
+        "worsened": 18,
+        "rescued": 0,
+        "lost": 1,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 2,
+        "oracle_mean_iou": 0.5966237390996113,
+        "oracle_above50": 189,
+        "iou_ci": [
+          -0.007003612904660483,
+          -0.0011614777618152875
+        ],
+        "center_ci": [
+          0.0034586935073527203,
+          0.07015050692401362
+        ]
+      },
+      "below_010": {
+        "n": 64,
+        "moved": 9,
+        "before_iou": 0.02383286706716093,
+        "after_iou": 0.024618155616342268,
+        "delta_iou": 0.0007852885491813363,
+        "before_center": 13.129031588467946,
+        "after_center": 13.125801779810285,
+        "delta_center": -0.003229808657660621,
+        "improved": 1,
+        "worsened": 0,
+        "rescued": 0,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.07345605089390404,
+        "oracle_above50": 0,
+        "iou_ci": [
+          0.0,
+          0.003769977706673562
+        ],
+        "center_ci": [
+          -0.08132647486797623,
+          0.062385774316500206
+        ]
+      },
+      "at_least_050": {
+        "n": 386,
+        "moved": 58,
+        "before_iou": 0.6602833199272594,
+        "after_iou": 0.6565146466460097,
+        "delta_iou": -0.003768673281249783,
+        "before_center": 1.3998656128962172,
+        "after_center": 1.4343256727391078,
+        "delta_center": 0.03446005984289058,
+        "improved": 16,
+        "worsened": 36,
+        "rescued": 0,
+        "lost": 6,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 7,
+        "oracle_mean_iou": 0.7535999417139714,
+        "oracle_above50": 386,
+        "iou_ci": [
+          -0.007750598700426498,
+          -0.0014698237632141716
+        ],
+        "center_ci": [
+          0.006414571132087351,
+          0.08356019769778725
+        ]
+      },
+      "coverage": {
+        "moved": 176,
+        "reference_new_gt": 452,
+        "retained": 444,
+        "additional": 2,
+        "lost_original": 8,
+        "lost_measured": 0,
+        "all_gt_gained": 2,
+        "all_gt_lost": 8,
+        "switches_removed": 0,
+        "switches_added": 0
+      },
+      "sequences_with_moves": 19,
+      "move_reasons": {
+        "peak_at_boundary": 91,
+        "weak_or_inconsistent_contrast": 246,
+        "history": 3,
+        "moved": 176,
+        "lift": 227,
+        "salience": 46,
+        "unreliable_region": 106,
+        "margin": 9,
+        "history_disagrees": 15,
+        "corr": 27,
+        "edge": 14,
+        "small_step": 9,
+        "small_box": 35,
+        "measured_neighbor": 4,
+        "scale_change": 7
+      },
+      "resolved_moving_sequences": 16,
+      "macro_parent_delta_iou": -0.007413756993188902
+    }
+  },
+  "ir_minus_controls": {
+    "ir_loc_shift": {
+      "n": 579,
+      "mean_ir_minus_control": 0.006794703030589903,
+      "ci": [
+        0.003079934828212491,
+        0.013191563395522467
+      ],
+      "n_both_moved": 20,
+      "mean_if_both": 0.021659605290503807
+    },
+    "ir_loc_reverse": {
+      "n": 579,
+      "mean_ir_minus_control": 0.0071568236977367855,
+      "ci": [
+        0.002632101078047496,
+        0.015321910823108721
+      ],
+      "n_both_moved": 89,
+      "mean_if_both": 0.046559560909995495
+    },
+    "rgb_loc": {
+      "n": 579,
+      "mean_ir_minus_control": -0.0067598661719798425,
+      "ci": [
+        -0.01448005005847972,
+        -0.0006088638816199644
+      ],
+      "n_both_moved": 36,
+      "mean_if_both": -0.01050114781999142
+    }
+  },
+  "anchor_reasons": {
+    "ok": 579,
+    "past_labels_disagree": 6,
+    "past_measurement_unmatched": 390,
+    "target_absent_or_ambiguous": 40
+  },
+  "checked_sequences": 210,
+  "bootstrap": "5000 draws, original video clusters, seed 241125",
+  "GT_sha256": {
+    "DJI_0028_3": "5227e9fb66105ff161944d80143e1e0aec867077f8a8daa271eb2729b9a0ab1c",
+    "DJI_0030_2": "ab2838acc1855700f93dcf0cf50457b8b6b7912444b654fa9def805cb4bd7fd9",
+    "DJI_0032_3": "3ae8afb25434ae76aba059e1c1e5247b9d989a04893810dc9bfde75c38a52b46",
+    "DJI_0049_2": "544fa0931afba5ea350d879996eecbb7886a77929db404f80c65816682ae77dd",
+    "DJI_0051_2": "abe863cad93f9c40a4bdccfb5e7da1c57d95ce7d072c4bfded0d0c537d5b05ab",
+    "DJI_0061_2": "0ce40ba303ff643b36c9164e3b0f5e7253172a41236883e834c7143b2953aee6",
+    "DJI_0073_3": "b60b00d7e6ffb24a7deb7237608fe5d37f819d8b5e17addc321984cd359af5ff",
+    "DJI_0109_1": "014a9d4b558e01900d829c02d796606fd0e56b7e34d1668f5f56747875765d95",
+    "DJI_0119_2": "bc5333e0e308986d374be6ee303bd3a1693c3c473d381469ef7a7f6469bc69ef",
+    "DJI_0129_2": "9f8ba6228889bb9da854db6bd27ea504b3ef35d9d1d3ef4d99e39c0a93441800",
+    "DJI_0141_2": "40752ca09de1a71e460b7ce4bc0c1615839afb0c78131efc0b713bf2be064347",
+    "DJI_0155_2": "74c6d92dd099d75ac0b5c9a609fe9e59172746e8995d6a7c53e2700956141c7d",
+    "DJI_0159_2": "3ffd6d1a95f4027b36243efa0d92989df8c683a6905a516d2fd328eaa5c4e9eb",
+    "DJI_0169_3": "30bb31e54d93496dcba1227e18c16d6528be7f375897a85986dd5b68d586a338",
+    "DJI_0173_2": "f7b78b829cafa8cbe864186dca8daceb143665bfed3580e984167cdfcbf9967d",
+    "DJI_0181_3": "5d87e3184fbe23fb44ebd5478c92e07119fc9278d79f7a8a10eae97c918cc84d",
+    "DJI_0221_2": "09b924a0aba9719a2105d178dc729c461590b39e56b93c64a7e1d644a6763966",
+    "DJI_0225_1": "cbf32a09a7dc7bb69494e03b5952749380b7ab78d30f09bd8eeccd4738d212a4",
+    "DJI_0237_2": "c1880e8b509229ee739c3a25d32a5798b8f5234afef456ff0cd17e591cbea74e",
+    "DJI_0255_1": "0fd683061f577c87c9620b6701db9d9ebf30a8cf0a18c88d84f55e4a3f8d4aa6",
+    "DJI_0257_2": "cdf468bd038dd10e292d4a473460dca483c1b053407bfc93c8ac17333af85c3c",
+    "DJI_0277_2": "e774bb7ffc1d7d1fcef240eccf3d348c59d5b8098d8a52d1cbefd9a606096de5",
+    "DJI_0283_1": "5ff9962377dc4bfae3caea9c80383621d10e5d2b59e59a99c9558539b057abc2",
+    "DJI_0303_2": "52d00ded4251e3eb58dbdaf3c96c88f6bab08fcba341ce9e50954725c4144c73",
+    "DJI_0307_2": "bcf6fc6f3535d9503f1246aaaacea427551257e3e17b4e09816895f13dbf3eae",
+    "DJI_0309_4": "1ce1aa3f4920c6eeb8bcfe9088d007732cbf6d519c037c91890abc9c70d07e2e",
+    "DJI_0325_2": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "DJI_0327_3": "d4ffb8bdb0b8065c2bea3595c4e65f2a095d42690740c75e6989e140c2b1dc23",
+    "DJI_0339_2": "0ff15c4204487ce4816e4f3c0753e6c6aae23a31e01a99fd58df7e151b00d186",
+    "DJI_0345_2": "3dbde9653d16a051187f8b7ef7e464b0b0b2cd4ad162bc66756e9952cee29bad"
+  },
+  "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a"
+}

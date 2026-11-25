@@ -1,0 +1,86 @@
+--- a/botsort_plus/online_position.py
++++ b/botsort_plus/online_position.py
+@@ -6,9 +6,12 @@
+ from .position_localizer import decision,sample
+ 
+ class OnlinePosition:
+-    def __init__(self,policy,registration):
++    def __init__(self,policy,registration,modality="ir"):
+         if registration['model']!='identity' or registration['framewise']:
+             raise ValueError('This position rule was calibrated on the fixed identity mapping')
++        if modality not in ("ir","rgb"):
++            raise ValueError("Unsupported position image modality")
++        self.modality=modality
+         self.profile=policy['profile'];self.gain=policy['gain'];self.registration=registration
+         self.images=deque(maxlen=4)
+         self.history={}
+@@ -22,7 +25,7 @@
+         rgb=Path(rgb_path)
+         if rgb.parent.name!='00':
+             raise ValueError('Expected paired dataset layout with RGB 00 and IR 01')
+-        ir_path=rgb.parent.parent/'01'/rgb.name
++        ir_path=rgb.parent.parent/'01'/rgb.name if self.modality=='ir' else rgb
+         img=cv2.imread(str(ir_path),cv2.IMREAD_GRAYSCALE) if ir_path.is_file() else None
+         if img is not None and img.shape!=(512,640):
+             raise ValueError('Unexpected IR image size')
+@@ -59,3 +62,20 @@
+             history=self.history.setdefault(tid,[])
+             self.history[tid]=history[-1:]+[(frame,box)]
+         return offsets
++
++
++class RgbFirstPosition:
++    def __init__(self,policy,registration):
++        self.rgb=OnlinePosition(policy,registration,"rgb")
++        self.ir=OnlinePosition(policy,registration,"ir")
++        self.status=Counter()
++
++    def update(self,frame,rgb_path,prediction,events):
++        visible=self.rgb.update(frame,rgb_path,prediction,events)
++        thermal=self.ir.update(frame,rgb_path,prediction,events)
++        merged={**thermal,**visible}
++        proposed=sum(e["event"]=="motion_output" for e in events)
++        self.status["rgb"]+=len(visible)
++        self.status["ir"]+=len(merged)-len(visible)
++        self.status["unchanged"]+=proposed-len(merged)
++        return merged
+--- a/tools/run_botsort_plus.py
++++ b/tools/run_botsort_plus.py
+@@ -118,6 +118,8 @@
+         protocol["raw_ir_inputs"] = dict(registration_sha256=registration_hash,
+                 cache_root=str(args.ir_tiles.resolve()), descriptor="raw intensity patch, no learned embedding",
+                 metadata_sha256={s:sha256(args.ir_tiles/(s+".json")) for s in paths})
++    if args.position_rgb_first and args.position_policy is None:
++        raise ValueError("--position-rgb-first needs a locked position policy")
+     position_policy = None
+     if args.position_policy is not None:
+         if args.position_registration is None or not cfg.recovery.output_prediction_frames or cfg.raw_ir.enabled:
+@@ -127,8 +129,9 @@
+         if (sha256(REPO/"botsort_plus/position_localizer.py") != position_policy["localizer_sha256"]
+                 or sha256(args.position_registration) != position_policy["registration_sha256"]):
+             raise ValueError("Position policy, registration and implementation disagree")
+-        from botsort_plus.online_position import OnlinePosition
+-        protocol["output_position"] = {"kind":"causal relative IR translation", "policy_sha256":sha256(args.position_policy),
++        from botsort_plus.online_position import OnlinePosition, RgbFirstPosition
++        position_class = RgbFirstPosition if args.position_rgb_first else OnlinePosition
++        protocol["output_position"] = {"kind":"RGB then IR fallback" if args.position_rgb_first else "causal relative IR translation", "policy_sha256":sha256(args.position_policy),
+                                        "registration_sha256":sha256(args.position_registration), "sequence_reasons":{}}
+     if args.preflight:
+         print(json.dumps(protocol,ensure_ascii=False,indent=2))
+@@ -166,7 +169,7 @@
+             cv2.setRNGSeed(0)
+             tracker=BoTSORTPlus(plus_config=cfg,reid_weights=Path("cache-only.pt"),device=torch.device("cpu"),
+                                half=False,**protocol["native_config"])
+-            position = OnlinePosition(position_policy, registration) if position_policy is not None else None
++            position = position_class(position_policy, registration) if position_policy is not None else None
+             if cfg.raw_ir.enabled:
+                 tracker.raw_ir_observer=ThermalObserver(args.ir_tiles,seq,protocol["detection_fingerprints"][seq],
+                                                        asdict(cfg.raw_ir),registration)
+@@ -248,6 +251,7 @@
+     p.add_argument("--output-dir",type=Path,default=REPO/"outputs/botsort_plus_v1")
+     p.add_argument("--runtime-root",type=Path)
+     p.add_argument("--sequences",nargs="+")
++    p.add_argument("--position-rgb-first",action="store_true")
+     p.add_argument("--position-policy",type=Path)
+     p.add_argument("--position-registration",type=Path)
+     p.add_argument("--ir-tiles",type=Path)

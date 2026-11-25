@@ -1,0 +1,43 @@
+{
+  "summary_sha256": "086f3ea19fd4034d884ffdbec06a6bb5b1cc1049f2a5b87bbbeeb6cb096cab40",
+  "sequences": 30,
+  "frames": 12590,
+  "combined": [
+    {
+      "tracker": "rgb_then_ir",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.92552498748435,
+      "DetA": 26.214908223603217,
+      "AssA": 59.33127333051075,
+      "IDF1": 44.15247764602412,
+      "MOTA": 25.660280800124603,
+      "FP": 16479,
+      "FN": 116785,
+      "IDSW": 378
+    },
+    {
+      "tracker": "final_c2_confirmed",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.862873859132954,
+      "DetA": 26.102787653253895,
+      "AssA": 59.37314689605536,
+      "IDF1": 44.03839311955698,
+      "MOTA": 25.71646307545113,
+      "FP": 16106,
+      "FN": 117062,
+      "IDSW": 373
+    },
+    {
+      "tracker": "confirmed_stable_low",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.901106941056845,
+      "DetA": 26.13826766852928,
+      "AssA": 59.41202145777109,
+      "IDF1": 44.13324321714782,
+      "MOTA": 25.637474133902945,
+      "FP": 16348,
+      "FN": 116967,
+      "IDSW": 368
+    }
+  ]
+}

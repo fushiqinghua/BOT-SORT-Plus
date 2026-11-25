@@ -1,0 +1,407 @@
+{
+  "schema": "botsort_plus_run_v1",
+  "status": "COMPLETE",
+  "implementation_version": "0.3.0",
+  "implementation_sha256": {
+    "botsort_plus/__init__.py": "90a66638ff59db59c24bac5e8b396c6d0319db227300a4156a1ee71923afc56c",
+    "botsort_plus/adapter_v2.py": "e25a37bc123655af336a538db67829954ca8d538961ba5c8a45d24669a3f0b3e",
+    "botsort_plus/appearance.py": "babaff13f9c8fd2e95561c021b9849a57677a81f73ca2ab5cb9d13528c5c7af5",
+    "botsort_plus/assignment.py": "aa45363951ea9b35ff4a5d5c3b9e90eb69b10c5c72d01192b2e70e1001e3c8e2",
+    "botsort_plus/birth_identity.py": "54efdded7c349ba0e0c0e33d8aed478df68c5141fd54be3fde5f32408b622009",
+    "botsort_plus/birth_policy.py": "ea49630e144668bad7b79dae5673229c3c8786ea0c0bc1986c2ee1008928d66e",
+    "botsort_plus/candidates.py": "9a48209fdc826704726cd03a7391004928e8233243f66039e284f681b71dc138",
+    "botsort_plus/config.py": "bca3f4a026a6707fbec01d7672e57c2069f345a9af54e48147c302928dc7dce1",
+    "botsort_plus/feature_export.py": "dda56497e7db58729c58fe00b6340e9b2f49caea1e594cccd735a6ae5b1753ab",
+    "botsort_plus/geometry.py": "5bcda3d12e575ee4ac5f5323dd7cfbe249bfe5b1b03375c353057d28b65a5640",
+    "botsort_plus/identity_adapter.py": "d097ea504b3e44432ba7f0caee265dc6fa706badcf02955da755133159697f8e",
+    "botsort_plus/identity_reliability.py": "c44cb108c64372ebb49981973a9ef042b3c31730993ae16193151f5d0a8d07cd",
+    "botsort_plus/io.py": "44cbfe26a152cfac5ad0826b27728ed4be6b970cc865bbb6860e5d064d8dd22b",
+    "botsort_plus/native_adapter.py": "f158b2ddfab9c31af5c2a8b75e6e32dfddb7a7273cad822d765f2b595079e114",
+    "botsort_plus/recovery.py": "d5a99135ad9e4ba71888fe92503822af10f5efe3cf498a91d9a13f0d0ef3d42b",
+    "botsort_plus/types.py": "b72c8f3366896a6a8889d6bd691e7986a550694c7b7471711355a133fbb001fb"
+  },
+  "name": "early_moderate",
+  "config": {
+    "name": "early_moderate",
+    "birth": {
+      "enabled": false,
+      "window": 5,
+      "min_hits": 3,
+      "max_misses": 2,
+      "decay": 0.8,
+      "score_weight": 0.5,
+      "evidence_threshold": 1.2,
+      "miss_penalty": 0.4,
+      "link_max_cost": 0.85,
+      "ambiguity_margin": 0.08,
+      "duplicate_iou": 0.7,
+      "max_candidates": 256,
+      "max_age": 20,
+      "score_low": 0.1,
+      "score_high": 0.5,
+      "mode": "adaptive",
+      "velocity_alpha": 0.5
+    },
+    "recovery": {
+      "enabled": true,
+      "min_hits": 3,
+      "window": 5,
+      "min_age": 2,
+      "max_age": 30,
+      "max_cost": 0.65,
+      "ambiguity_margin": 0.1,
+      "geometry_weight": 0.65,
+      "appearance_weight": 0.25,
+      "time_weight": 0.1,
+      "appearance_max_cost": 0.65,
+      "require_appearance": false,
+      "reservation_frames": 5
+    },
+    "appearance": {
+      "enabled": false,
+      "weighting": "quality",
+      "min_observation_quality": 0.15,
+      "min_update_quality": 0.35,
+      "ema": 0.9,
+      "weight_rgb": 1.0,
+      "weight_thermal": 1.0,
+      "rgb_distance_scale": 1.0,
+      "thermal_distance_scale": 1.0,
+      "max_distance": 0.6
+    },
+    "geometry": {
+      "pixel_floor": 4.0,
+      "center_gate_scale": 2.0,
+      "max_center_pixels": 48.0,
+      "max_scale_ratio": 2.5,
+      "uncertainty_sigma": 2.0,
+      "tiny_size": 16.0,
+      "size_weight": 0.1
+    },
+    "native_overrides": {},
+    "adapter_mode": "v2",
+    "birth_policy": {
+      "mode": "legacy",
+      "collect_window": 5,
+      "collect_hits": 3,
+      "mean_score": 0.18,
+      "verify_window": 3,
+      "verify_hits": 2,
+      "fixed_window": 8,
+      "fixed_hits": 5,
+      "observe_only": false
+    },
+    "birth_identity": {
+      "enabled": false,
+      "window": 5,
+      "max_age": 30,
+      "wait_frames": 5,
+      "appearance_max_cost": 0.65
+    },
+    "identity": {
+      "enabled": false,
+      "observe_only": false,
+      "association_enabled": true,
+      "memory_enabled": true,
+      "min_quality": 0.35,
+      "min_history": 3,
+      "history_max_distance": 0.4,
+      "appearance_margin": 0.1,
+      "geometry_margin": 0.1,
+      "bootstrap_max_iou_cost": 0.3,
+      "write_max_iou_cost": 0.5,
+      "ema": 0.95
+    }
+  },
+  "native_config": {
+    "det_thresh": 0.5,
+    "track_high_thresh": 0.5,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.6,
+    "match_thresh": 0.8,
+    "track_buffer": 60,
+    "frame_rate": 15,
+    "with_reid": true,
+    "cmc_method": "sof",
+    "proximity_thresh": 0.5,
+    "appearance_thresh": 0.4,
+    "fuse_first_associate": false
+  },
+  "sequences": {
+    "DJI_0028_3": 570,
+    "DJI_0030_2": 590,
+    "DJI_0032_3": 290,
+    "DJI_0049_2": 90,
+    "DJI_0051_2": 580,
+    "DJI_0061_2": 240,
+    "DJI_0073_3": 360,
+    "DJI_0109_1": 90,
+    "DJI_0119_2": 180,
+    "DJI_0129_2": 590,
+    "DJI_0141_2": 410,
+    "DJI_0155_2": 410,
+    "DJI_0159_2": 250,
+    "DJI_0169_3": 290,
+    "DJI_0173_2": 450,
+    "DJI_0181_3": 320,
+    "DJI_0221_2": 590,
+    "DJI_0225_1": 329,
+    "DJI_0237_2": 410,
+    "DJI_0255_1": 600,
+    "DJI_0257_2": 590,
+    "DJI_0277_2": 366,
+    "DJI_0283_1": 450,
+    "DJI_0303_2": 577,
+    "DJI_0307_2": 180,
+    "DJI_0309_4": 603,
+    "DJI_0325_2": 595,
+    "DJI_0327_3": 390,
+    "DJI_0339_2": 600,
+    "DJI_0345_2": 600
+  },
+  "subset": false,
+  "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+  "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+  "source_protocol_sha256": "6f0fdff3b198315f8aac72972fcf5117c53b917e84f6c7b5f9814b9012ef2ff2",
+  "detection_fingerprints": {
+    "DJI_0028_3": "6c5f57bd339b0f625958d2a2917d4b34bd44cecf12c6fada58444fdeca8e71c0",
+    "DJI_0030_2": "39756d8acb1c7040b8a95dc855c9deca19bf420c8f311797ba1382438ba4d699",
+    "DJI_0032_3": "b8c1e0034bbc4edaa969cbf4433de5ab6fe4eb008728952d5b277c4e51fbfdac",
+    "DJI_0049_2": "fc8d1d47c9efd746f15883de3da4225c3a7236e461888e948d5061d08c34e528",
+    "DJI_0051_2": "78e8445abab4efb0ebb2911ae3cb99fbbb3612c4cd2b94c5efe1086ab0688913",
+    "DJI_0061_2": "d488450df7bfa09af24b1a9f122a746a74b286a2228a190ca7002bf99aa9a7dc",
+    "DJI_0073_3": "36f0f5e3c3c8275f5212a68806dec8df44c0fb5ebe835b659763ad4db05b1a41",
+    "DJI_0109_1": "6cd217f020ea8647cbcb9b1e1a156c0e97feff965aeeaa7482aa49a48e359257",
+    "DJI_0119_2": "0df7d7f0681c52e5b436f50999c2be53c3e071a2fbb66ea9c475de938ab17b86",
+    "DJI_0129_2": "f16b542f3b94aacffd5c093a37b2f370c108a77963bb5134d212248573d7e1b2",
+    "DJI_0141_2": "739ea4c98192a563262091ce1aba9ae503c67e09c84b307cf925bed91d305829",
+    "DJI_0155_2": "5603eeb08172b59d95c59a77bc19344b786be5d89123539ad75eb4b5eeed436f",
+    "DJI_0159_2": "38fd494c3b44d98ce2c176a52a0ffc6dd84590804043e779c1698ae28b461b55",
+    "DJI_0169_3": "67974c7cbd6eaee717ad48776eac344ad6d1842143d34fc4e0b6583ba50b93bd",
+    "DJI_0173_2": "569e63396a4f8641af770474bec12b586921b13cf6b636f82a4f99e40af21841",
+    "DJI_0181_3": "142adeaac14df0152dce5792914f73e10e5c8261bfb8637d01b1457d8bf1a05d",
+    "DJI_0221_2": "dfa333329c968d5cabae4ab133b858f2bc1c67c5c79edb4f7778c07c52021b5d",
+    "DJI_0225_1": "5d2e710fcce7508de2b87aeeef9ee9a46b9f6da70077fd8148dbeabf050e3296",
+    "DJI_0237_2": "dddaaf5b4638aa0b618a60b2325c12240d7e10b32bee7acf353327c3b2efa4ea",
+    "DJI_0255_1": "b99210f6cecc3ae939c59d865bdd02b0368b0ebd4e1b0852aed67de068161ab2",
+    "DJI_0257_2": "a855474856b960110488fb7ab556f47c0b654ea0b0f17ee716bee0d8096451ac",
+    "DJI_0277_2": "4eb693359a1b74d9df4f9c93fcc52f77907f1813ed6b5bf1aa7a6e10773f2fc5",
+    "DJI_0283_1": "3a771523b2af3bc29c8a1b7fcf37b29a229a6a88260429d790105239ee087808",
+    "DJI_0303_2": "a9617f25043a54d92678af2c0782d7ef98b947789369294e2ea542f3c6f9f979",
+    "DJI_0307_2": "884e44bc46b794bf8337f4b3456d55ff004770b238bd1d071345c883b8c6e894",
+    "DJI_0309_4": "08826ec6ebfe07d12fdded624b58e9a0eee58df05019745dc86b5728aa1a0fa5",
+    "DJI_0325_2": "4b6e102c3250d5d374f19d4968ff9222e2751a66e3ab69e6bdf072e9f855861f",
+    "DJI_0327_3": "524ad37fb5f831ac58625d7cc3657e2cf400db2296b33dfa019601d5f053b20d",
+    "DJI_0339_2": "01c633c2c4e4a51871fb195594655a4d62f240b249108f93fecfcb161dee3493",
+    "DJI_0345_2": "82d51dcf3bb4702e6cbeab6f7147c17e5125bdc0000e8f0338a44093d7d06545"
+  },
+  "encoder_contracts": {
+    "rgb": {
+      "sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+      "weights_name": "clip_veri.pt",
+      "encoder": "baseline CLIP-ReID ViT-B/16 VeRi, supplied fine-tuned checkpoint",
+      "input_hw": [
+        256,
+        256
+      ],
+      "output_dim": 1280,
+      "precision": "float32",
+      "verified_visual_state_keys": 162,
+      "crop_source": "RGB BGR-to-RGB",
+      "mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "std": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "feature_hashes": {
+    "DJI_0028_3": {
+      "features": "743da684060b51e0b9d712bb388a58acca521cc44104826719edd524cfbae4b5",
+      "metadata": "e28a8fc7870d29b64b875a4b3490c3784c4fe5429e5b9055d5c6955f1a9eeb5d"
+    },
+    "DJI_0030_2": {
+      "features": "7297fda0c3430c3417fe3b503e98335b18745e56078b66f468923b1196284a88",
+      "metadata": "137aa68fc2124fdfa9e5a1f907a77d1be1d35ef2cc5ad3548c5614a5b80c12fb"
+    },
+    "DJI_0032_3": {
+      "features": "aa9ed76a94188b27033f0c3b1d4e385e037084ae4091575a44a0f3b0eca971f8",
+      "metadata": "9b30e37eb0a86cf72410f4d15f6b75aee2e65d5bae8e038bfdb084dd6c449ae9"
+    },
+    "DJI_0049_2": {
+      "features": "c3968a973b8e8b542abd6e77c2bfd3de1f286eb82de8cc963c589427e120486c",
+      "metadata": "e32d19313784f0de57a2da4e0bd55b4e594e4810210d333fdae7c2c31776f069"
+    },
+    "DJI_0051_2": {
+      "features": "bb5679dd696f7707895447c11ea342084d959c21387ef33e767d3922b1a7463c",
+      "metadata": "a7492a7ea80127c0cd69d4983c7abec086237ae74da0598f6bc2c2f9c942d2bc"
+    },
+    "DJI_0061_2": {
+      "features": "47fbfba54a1b6308e1a3f75b90d0076f4e5f765e614a3cb89ad5bfcd12883a43",
+      "metadata": "094e71c1a1820f72f9bc8bed4ebe459ed7f5a4b946c3324648a0e5588a8ae985"
+    },
+    "DJI_0073_3": {
+      "features": "c3754d5c921f20498acc51f101e719d52a0eecf7268f888eaf5d0d457dfbb20e",
+      "metadata": "421926af55ccf832d8197c72f86be84f782cce511c2c2e606a8d6d895148ec7d"
+    },
+    "DJI_0109_1": {
+      "features": "7d4e10c98ebb91a4e2e9a45265ff398d8894198759c0f257574d167bf95ab959",
+      "metadata": "c2447df9e19dc2f20ff7c0247e5b896f342e3958abbeb7504c95ec84df56eb20"
+    },
+    "DJI_0119_2": {
+      "features": "f7acbdfcae7d74d9ccc277cc2b97b696357b4ff94a01b0d7d288469162c982a6",
+      "metadata": "d3a992fdce84d129639bcb655ac0714172d1c479f2cc074322cf914ef7b83b98"
+    },
+    "DJI_0129_2": {
+      "features": "75df021af3b8ad57e29b7c75a824aa5f5db4dfdde7cba265f1f62b70c66dfae3",
+      "metadata": "ad0ce97450bf82ce39bd2b5cdf6de6cbb6e1ab776021811ff94bca0ed3318ee1"
+    },
+    "DJI_0141_2": {
+      "features": "6fe1f2c4b91229fbb33c83c9d4c7e23e8ca24f895af1667771206c07ba7d4c7d",
+      "metadata": "14a8eccdfd620eae139ee2a94e92cc611b40db58f66cfaae4ff40ae8bdc89494"
+    },
+    "DJI_0155_2": {
+      "features": "03d1a782a282496798175ecc1997b9ea4754f0f1bfa724fca29da5ccbdaa9580",
+      "metadata": "35175c05333d8ed68f6477a25453eca234af9fb14e12263d21a87e0a861d3059"
+    },
+    "DJI_0159_2": {
+      "features": "41bdbcfc7de896d7892618686969ea2a6b52789f5b41e76b34c5b16ebe726873",
+      "metadata": "c63d8d7859f56358d38662b49e8ecd886785cde726a36bcc697341f0511ef12f"
+    },
+    "DJI_0169_3": {
+      "features": "1b3a078228bcc2b70a4d02f626a35f6b8b79866545fb00239eaf4365987c2cee",
+      "metadata": "06daa4b1e0a295b439b09bf734fc9a5fd244d7f86f3af73b05cf2d72088103e2"
+    },
+    "DJI_0173_2": {
+      "features": "09e7da05a9ab2bda528a072e91d89098f47cacda1fcf89710df45aa1b55bd6fd",
+      "metadata": "432a539a1c88ac321f25ad1274bf11bcaf6a7d289853b80ee53840d479514dd3"
+    },
+    "DJI_0181_3": {
+      "features": "84a52f289212eb004025bb696bc352c674e989e1eb8f92cd531bca0cd2bc364d",
+      "metadata": "0fe91cba8f3659b6b924159f4bcbeafc72b7743315eac3dc1e618fca2343ba82"
+    },
+    "DJI_0221_2": {
+      "features": "1ad91d8ba36e31d96965c78ed7ab5de13e9d99165983f5a55c405e38112b5366",
+      "metadata": "aa9fa4a7c498ff7eea4f79f5f1d34c65b04d8556b8fa22100dc253b4ae5850df"
+    },
+    "DJI_0225_1": {
+      "features": "363ed542fc3a1aef3fd4b4142fc4be74a6cc5bdd62860bf13600254f2b6affe8",
+      "metadata": "d8c076a0e3635140c0c47b1c4de59d3d75710d69cc1a62cd4ddacd73fe31634b"
+    },
+    "DJI_0237_2": {
+      "features": "3a6e9e52ba9f7be11f77880e752168de3dedc5fc1d3b6d7b1d9fc4e60dce0165",
+      "metadata": "3040d860c469a7772e7dada5f51d7741ec4d8892e484c7525d28c287b17794ab"
+    },
+    "DJI_0255_1": {
+      "features": "af4615dcf28d1e100cabcdbe8be334e6b08bfc0b22bfe05f1356885b6326c2ac",
+      "metadata": "c25b5a8e4bfbc80513b1f65ad80f542b13f1f37a048736495a1b8c77eb7926bb"
+    },
+    "DJI_0257_2": {
+      "features": "ca034fbfd7a163ca42f5d4ab6f1387c458ff32fa2d5fde699edf75e4516e08e2",
+      "metadata": "5b75c99cfbc1d126a0b46b59b4ea00f687a9b8a5235d14ede9645eaeb965f0a4"
+    },
+    "DJI_0277_2": {
+      "features": "39a218a043fb89468d7c0b20c17b21597c2f974bcfc5bb443942adf61f2ceb67",
+      "metadata": "d5d8964bb8ee52707cc05e98c94ce2c757c75897e3d83f199bfaaffecee17e94"
+    },
+    "DJI_0283_1": {
+      "features": "97aa5fad05b7915426cfffee6405f21da155d5335f40e299230b102fdb177b42",
+      "metadata": "01e12ea7b58e944867ab7808e24b4cdeebc5c35dd988b7a683001656a6cb872e"
+    },
+    "DJI_0303_2": {
+      "features": "87cc686e21d3dfff3f5e45c1991137ad2a5af9788cd159ba12ef32b1a4888b3d",
+      "metadata": "30d61f9404b48579a260945596d0ee1c99ccf0304e9d2dfe1d1f12e8f30eaff8"
+    },
+    "DJI_0307_2": {
+      "features": "502e36bc72f181a084a041105d102835c929c5f008c60d3310f75d3b9cf8690a",
+      "metadata": "cf75284d7115ffacda23f1bc174c5cf5efd82f008e07e335412ffa46c5118241"
+    },
+    "DJI_0309_4": {
+      "features": "796ac2f06c99eeb3f878bad0241eb9f26d729b335655fd8a8d04402c25431f21",
+      "metadata": "660426831e44a29daf05feb66a4599ef50138851b5c77f00160e947af46a3bbe"
+    },
+    "DJI_0325_2": {
+      "features": "6defcd12e67c461997d582768a1857ea3613cb032cc4f0283225d43b6df81aaa",
+      "metadata": "095dd9bdc1b2d4b93aab86fbee7d364acd6d516074778281f5aafdb35c7b21b5"
+    },
+    "DJI_0327_3": {
+      "features": "14cf442b2e647d5ca565d66aa1b533d89b35a08a017604f2a41a35cd0ccc657c",
+      "metadata": "2943048ac344c00418a922ed39acc5e51028df48dda322183dab70a502abce94"
+    },
+    "DJI_0339_2": {
+      "features": "e64e137149febb3bc656030bb3afe2f5496c8cacb15872222be9e2d65d6a998d",
+      "metadata": "bca81b542159cf6d0d1331b7d9bf043c415782b5407bfa6ec2e5ba9cbafb4c0b"
+    },
+    "DJI_0345_2": {
+      "features": "e10f487b4d8ea217122313b396f61cc84feecc6bc187d41fb3265fa8403ba1aa",
+      "metadata": "b533edc1d3e02e0cc46c688935d3f6ddcb2240eee42ff085f2fd513e8b53430c"
+    }
+  },
+  "input_roots": {
+    "baseline": "$VTTINY_ROOT/integrations/botsort_plus_C2_v0_3_0/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt",
+    "images": "$VTTINY_ROOT/data/raw/VT-Tiny-MOT",
+    "features": "$VTTINY_ROOT/integrations/botsort_plus_v0_1_0/features_rgb"
+  },
+  "feature_coverage": {
+    "rgb_valid": 113447,
+    "rgb_quality_for_memory": 86334
+  },
+  "missing_count": 0,
+  "missing_examples": [],
+  "evaluation_context": "Historical official test was previously used for checkpoint/gate selection; treat new runs here as development experiments, not an unseen test.",
+  "causal": true,
+  "backfilled_frames": 0,
+  "interpolation": false,
+  "started_utc": "2026-11-25T09:21:20Z",
+  "runtime": {
+    "python": "3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC 11.3.0]",
+    "numpy": "2.4.6",
+    "torch": "2.8.0+cu128",
+    "opencv": "5.0.0"
+  },
+  "output_prediction_hashes": {
+    "DJI_0028_3": "d6bd35f48178970318afb8c37bb143f7c1718015427438720f4dce5eacf444ec",
+    "DJI_0030_2": "da2dc3b9e0dead0b60e08aceb390f79c1621d537883576963e511c4017156f56",
+    "DJI_0032_3": "ccdef5b621c58ce8f968819e43cf3319d0971ae57f55ee67191e1b71faa8a8c9",
+    "DJI_0049_2": "d03207017440231fdb19a27c65e6e3bad2c69532e2bad269c38e42e88cfb67ff",
+    "DJI_0051_2": "4891233fc5d6b951b3c870b54198698356ccbc0cdc5f7416d68fc20cf987a6f6",
+    "DJI_0061_2": "2da088b0f394f683832cfcc129d1fce1e37f0273af5f890b7a05aca7ed9d9ab4",
+    "DJI_0073_3": "c7448d164a2702110a75574e789c9642e12a3f013c374c2df446dbb7fb6ca8a0",
+    "DJI_0109_1": "38ae96b098944cfafc1a2b9fc35b46b4051ee0ff42391770249058b019472993",
+    "DJI_0119_2": "6d10856ef08245e31a0d44433a903f27329d223e507d25eab44568a9ff683ced",
+    "DJI_0129_2": "556787e7dff9215e749c6a7c49e74a6838edff235552afca3862e0b4ec0442bc",
+    "DJI_0141_2": "d787d585e0d256f02676aa6c886cb9d49c4644ecde11461aca799025246502b8",
+    "DJI_0155_2": "6ffe7363682ab36673931ca7f682a910f788edd0ba3cbb517cb711b2a304f012",
+    "DJI_0159_2": "ceab0adcfa8f7bba58b8606c7cfa7ec600fda319d3bbfb4da616d3d76eae9d2e",
+    "DJI_0169_3": "1aaf932833751adbcc1eff13118c961ebd60103240909678e16eac3250e33a74",
+    "DJI_0173_2": "d116e3ac3c738bb46a908fe676e12bdd745415ed9331d4e768d6c0a04c9d78a3",
+    "DJI_0181_3": "ec10639b6561dda3c049b3d83249797ffd9710e8fe02cb37bd8636720c4adc64",
+    "DJI_0221_2": "8abf522b4ae646b811c50e3c1ffd5e17da05727949944f7f8e4fe4431bbdb17e",
+    "DJI_0225_1": "4e75d481a9eac3c2f81b3fdb302fee37a33b7bbd24b6eb87fedf2bc51307a024",
+    "DJI_0237_2": "912f81c608dc258c9d737f45a9b4f4d914f7942b2fab60ac7439290486a6ec89",
+    "DJI_0255_1": "d936465ca37d9dd48408182cdeed74780719e79e80b53ab24ecbfbfd13c22e5f",
+    "DJI_0257_2": "b014f73bf722b50340b18e39a20e467159b4fdfde16d888e8180db763ed76f01",
+    "DJI_0277_2": "d81f00415053cfb5d5641e0ea6a3e9fed986e937386b7df5e48c492e6fd8e580",
+    "DJI_0283_1": "1058233c7dcec58374e710cd2cf774d0237f1ce6d23616cab0a89f40b9102033",
+    "DJI_0303_2": "bfc0deceac3393c81d329e9952f47287ec249451821deec352436dabc36b6c1f",
+    "DJI_0307_2": "a8495a971dfabe97f68796b2b1e19001b7d353943aca30747461ca2d4833cb39",
+    "DJI_0309_4": "d409a5e7140c2f25b97c06ce961e5996e69c95484019af98f3377616f08c0bac",
+    "DJI_0325_2": "f15cb6ea13a8002dad776275cb9b0d5fa0bb001c83844fc9f448ec87d231d142",
+    "DJI_0327_3": "1d11f555aee58c2e88e2ff34201b203c0594e3683e3df4a3b9f92e1b3d65423b",
+    "DJI_0339_2": "2b459accc5c11689dbf9a09cadc040eb4ef553a5677bf81e00fcb82cb14d3d8d",
+    "DJI_0345_2": "3bb009007f62a5129d83062371fbad5658db9bf2063ee2def8ad387c528ea2b4"
+  },
+  "boxmot_source_hashes": {
+    "trackers/botsort/botsort.py": "d8b69ec680b59e915b079994756c27b4bdf81ecd214a2866b97b31122fcdc93d",
+    "trackers/botsort/botsort_track.py": "bcd42eaa3e9d06716fa71749b8983bf7c16d2a96b5829bb97f5c549e0f0cb0bc",
+    "trackers/basetracker.py": "f5eb9838128d999944c444733b18948ae895c3682977eee1e4eeb07046ca04a1",
+    "motion/kalman_filters/aabb/xywh_kf.py": "a12ea28981ac7044bd1c7a60d3701b54754bc88fbd7770eda3fecd4a02a735a2",
+    "utils/matching.py": "c56c0d03e78dbe10e17761b2e95fd4f9064f1cd864d47ac0e45243a907d42096",
+    "trackers/botsort/botsort_utils.py": "99902964de7c01878e5410ba89b2b1da0821db3db0efb5fa6d0c2693d4af4052"
+  }
+}

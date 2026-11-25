@@ -1,0 +1,16 @@
+﻿stage,reason,n
+high,history_conflict,1723
+low,warmup_requires_high,1663
+low,history_conflict,1652
+recovery,recovered_quarantine,125
+unconfirmed,history_conflict,33
+high,competition_unknown,32
+high,outside_geometry,19
+low,appearance_ambiguous,12
+low,low_quality,11
+high,low_quality,6
+low,singleton_geometry_weak,2
+high,warmup_geometry_ambiguous,2
+unconfirmed,low_quality,1
+unconfirmed,warmup_geometry_ambiguous,1
+high,singleton_geometry_weak,1

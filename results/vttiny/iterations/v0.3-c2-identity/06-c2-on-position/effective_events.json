@@ -1,0 +1,14 @@
+{
+  "final_c2": {
+    "cost_entries_changed": 665,
+    "memory_decisions": 77094,
+    "custom_rgb_written": 22761,
+    "recent_confirmation_overrides": 0
+  },
+  "final_c2_confirmed": {
+    "cost_entries_changed": 2835,
+    "memory_decisions": 77648,
+    "custom_rgb_written": 39187,
+    "recent_confirmation_overrides": 16470
+  }
+}

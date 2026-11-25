@@ -1,0 +1,32 @@
+{
+  "original_target_frames": 64163,
+  "n_frames": 390,
+  "verified_official_evaluations": 14,
+  "hashes": {
+    "off": "364d54dd55653959539cd4e397953578c1ee23b029201808bf6c51d334adf0ec",
+    "shadow_path": "364d54dd55653959539cd4e397953578c1ee23b029201808bf6c51d334adf0ec",
+    "assoc": "364d54dd55653959539cd4e397953578c1ee23b029201808bf6c51d334adf0ec",
+    "memory": "714662491dd287616b7ec2059d17c9b8c052f0d5aa18e3296a36665d11b8f462",
+    "both": "714662491dd287616b7ec2059d17c9b8c052f0d5aa18e3296a36665d11b8f462",
+    "allow_seed": "714662491dd287616b7ec2059d17c9b8c052f0d5aa18e3296a36665d11b8f462",
+    "allow_high": "e501674f4f58a2e474ce81d53b5a0f8d3656164c21337b8e740e8e26bb358c10",
+    "allow_low": "0fea1efcb98f7cec0b39ed819471c3236c2623f7c23df2a1b99be59fd5a3a74a",
+    "allow_unconfirmed": "2519182744cc819c2fa1909f8ea3e75d417820e3a4b62d7d1d66e6d0a4fd2a3a",
+    "allow_recovery": "aeaf27260e84c5c145345aa387ad877b5658d702484c4b62d838c9ce16aedf10",
+    "allow_all": "364d54dd55653959539cd4e397953578c1ee23b029201808bf6c51d334adf0ec",
+    "low_warmup": "0699f90adffb6294e9146cfe49f8683085648f2f2358f6517513bbded049d8ae",
+    "low_conflict": "61820f356d539aa8101e10d36b53b54cd7e3a8dee161c2aa98a9fd24027108e8",
+    "low_both_reasons": "0fea1efcb98f7cec0b39ed819471c3236c2623f7c23df2a1b99be59fd5a3a74a"
+  },
+  "gt_sha256": "d4ffb8bdb0b8065c2bea3595c4e65f2a095d42690740c75e6989e140c2b1dc23",
+  "lost": 240,
+  "gained": 56,
+  "affected_gt_lost": 35,
+  "affected_gt_gained": 5,
+  "affected_frames_lost": 183,
+  "affected_frames_gained": 56,
+  "same_state_association": {
+    "cost_changes": 16
+  },
+  "original_frozen_cache_sha256": "7224c85efed5ec504d133705373f25b487885512253d08960097aaa9c008d8fc"
+}

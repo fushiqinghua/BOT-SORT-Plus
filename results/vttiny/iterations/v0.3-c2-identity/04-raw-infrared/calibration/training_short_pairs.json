@@ -1,0 +1,290 @@
+{
+  "description": "training labels only: true identity at t-1 and t; true and nearest other same-category object at t+3; compared within identical group when specified",
+  "sequences": 39,
+  "statistics": {
+    "all": {
+      "query_count": 16897,
+      "results": {
+        "rgb_native": {
+          "evaluable": 9952,
+          "accuracy": 0.9773914790996785,
+          "wins": 9727,
+          "ties": 0
+        },
+        "ir_mapped": {
+          "evaluable": 8095,
+          "accuracy": 0.9713403335392218,
+          "wins": 7863,
+          "ties": 0
+        },
+        "ir_exact_box": {
+          "evaluable": 10836,
+          "accuracy": 0.9706995201181248,
+          "wins": 10518,
+          "ties": 1
+        },
+        "ir_shift48": {
+          "evaluable": 3109,
+          "accuracy": 0.9607590865229978,
+          "wins": 2987,
+          "ties": 0
+        },
+        "common_rgb_ir": {
+          "rgb_native": {
+            "evaluable": 5372,
+            "accuracy": 0.9808265078183172,
+            "wins": 5269,
+            "ties": 0
+          },
+          "ir_mapped": {
+            "evaluable": 5372,
+            "accuracy": 0.9728220402084885,
+            "wins": 5226,
+            "ties": 0
+          }
+        },
+        "common_mapped_oracle": {
+          "ir_mapped": {
+            "evaluable": 7206,
+            "accuracy": 0.972661670829864,
+            "wins": 7009,
+            "ties": 0
+          },
+          "ir_exact_box": {
+            "evaluable": 7206,
+            "accuracy": 0.97571468220927,
+            "wins": 7031,
+            "ties": 0
+          }
+        },
+        "common_mapped_shifted": {
+          "ir_mapped": {
+            "evaluable": 1795,
+            "accuracy": 0.9827298050139276,
+            "wins": 1764,
+            "ties": 0
+          },
+          "ir_shift48": {
+            "evaluable": 1795,
+            "accuracy": 0.9637883008356546,
+            "wins": 1730,
+            "ties": 0
+          }
+        }
+      }
+    },
+    "le8": {
+      "query_count": 7211,
+      "results": {
+        "rgb_native": {
+          "evaluable": 4339,
+          "accuracy": 0.9566720442498271,
+          "wins": 4151,
+          "ties": 0
+        },
+        "ir_mapped": {
+          "evaluable": 2726,
+          "accuracy": 0.9310344827586207,
+          "wins": 2538,
+          "ties": 0
+        },
+        "ir_exact_box": {
+          "evaluable": 4520,
+          "accuracy": 0.942146017699115,
+          "wins": 4258,
+          "ties": 1
+        },
+        "ir_shift48": {
+          "evaluable": 721,
+          "accuracy": 0.9181692094313454,
+          "wins": 662,
+          "ties": 0
+        },
+        "common_rgb_ir": {
+          "rgb_native": {
+            "evaluable": 1832,
+            "accuracy": 0.9530567685589519,
+            "wins": 1746,
+            "ties": 0
+          },
+          "ir_mapped": {
+            "evaluable": 1832,
+            "accuracy": 0.9355895196506551,
+            "wins": 1714,
+            "ties": 0
+          }
+        },
+        "common_mapped_oracle": {
+          "ir_mapped": {
+            "evaluable": 2423,
+            "accuracy": 0.9323153115971936,
+            "wins": 2259,
+            "ties": 0
+          },
+          "ir_exact_box": {
+            "evaluable": 2423,
+            "accuracy": 0.9397441188609162,
+            "wins": 2277,
+            "ties": 0
+          }
+        },
+        "common_mapped_shifted": {
+          "ir_mapped": {
+            "evaluable": 341,
+            "accuracy": 0.9442815249266863,
+            "wins": 322,
+            "ties": 0
+          },
+          "ir_shift48": {
+            "evaluable": 341,
+            "accuracy": 0.8973607038123167,
+            "wins": 306,
+            "ties": 0
+          }
+        }
+      }
+    },
+    "9to12": {
+      "query_count": 5526,
+      "results": {
+        "rgb_native": {
+          "evaluable": 3526,
+          "accuracy": 0.9909245604083948,
+          "wins": 3494,
+          "ties": 0
+        },
+        "ir_mapped": {
+          "evaluable": 3055,
+          "accuracy": 0.9885433715220949,
+          "wins": 3020,
+          "ties": 0
+        },
+        "ir_exact_box": {
+          "evaluable": 3682,
+          "accuracy": 0.9883215643671918,
+          "wins": 3639,
+          "ties": 0
+        },
+        "ir_shift48": {
+          "evaluable": 1382,
+          "accuracy": 0.9623733719247467,
+          "wins": 1330,
+          "ties": 0
+        },
+        "common_rgb_ir": {
+          "rgb_native": {
+            "evaluable": 2154,
+            "accuracy": 0.9935004642525533,
+            "wins": 2140,
+            "ties": 0
+          },
+          "ir_mapped": {
+            "evaluable": 2154,
+            "accuracy": 0.989786443825441,
+            "wins": 2132,
+            "ties": 0
+          }
+        },
+        "common_mapped_oracle": {
+          "ir_mapped": {
+            "evaluable": 2656,
+            "accuracy": 0.9905873493975904,
+            "wins": 2631,
+            "ties": 0
+          },
+          "ir_exact_box": {
+            "evaluable": 2656,
+            "accuracy": 0.9920933734939759,
+            "wins": 2635,
+            "ties": 0
+          }
+        },
+        "common_mapped_shifted": {
+          "ir_mapped": {
+            "evaluable": 830,
+            "accuracy": 0.9867469879518073,
+            "wins": 819,
+            "ties": 0
+          },
+          "ir_shift48": {
+            "evaluable": 830,
+            "accuracy": 0.9698795180722891,
+            "wins": 805,
+            "ties": 0
+          }
+        }
+      }
+    },
+    "gt12": {
+      "query_count": 4160,
+      "results": {
+        "rgb_native": {
+          "evaluable": 2087,
+          "accuracy": 0.9976042165788213,
+          "wins": 2082,
+          "ties": 0
+        },
+        "ir_mapped": {
+          "evaluable": 2314,
+          "accuracy": 0.9961106309420916,
+          "wins": 2305,
+          "ties": 0
+        },
+        "ir_exact_box": {
+          "evaluable": 2634,
+          "accuracy": 0.9950645406226272,
+          "wins": 2621,
+          "ties": 0
+        },
+        "ir_shift48": {
+          "evaluable": 1006,
+          "accuracy": 0.989065606361829,
+          "wins": 995,
+          "ties": 0
+        },
+        "common_rgb_ir": {
+          "rgb_native": {
+            "evaluable": 1386,
+            "accuracy": 0.9978354978354979,
+            "wins": 1383,
+            "ties": 0
+          },
+          "ir_mapped": {
+            "evaluable": 1386,
+            "accuracy": 0.9956709956709957,
+            "wins": 1380,
+            "ties": 0
+          }
+        },
+        "common_mapped_oracle": {
+          "ir_mapped": {
+            "evaluable": 2127,
+            "accuracy": 0.996238834038552,
+            "wins": 2119,
+            "ties": 0
+          },
+          "ir_exact_box": {
+            "evaluable": 2127,
+            "accuracy": 0.996238834038552,
+            "wins": 2119,
+            "ties": 0
+          }
+        },
+        "common_mapped_shifted": {
+          "ir_mapped": {
+            "evaluable": 624,
+            "accuracy": 0.9983974358974359,
+            "wins": 623,
+            "ties": 0
+          },
+          "ir_shift48": {
+            "evaluable": 624,
+            "accuracy": 0.9919871794871795,
+            "wins": 619,
+            "ties": 0
+          }
+        }
+      }
+    }
+  }
+}

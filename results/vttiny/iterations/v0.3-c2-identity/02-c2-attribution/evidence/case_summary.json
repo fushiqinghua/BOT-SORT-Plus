@@ -1,0 +1,43 @@
+{
+  "counts": {
+    "high_history_conflict": 31032,
+    "same_gt_previous_frame_valid": 27470,
+    "adjacent_within_040": 15775,
+    "adjacent_within_020": 3295,
+    "anchor_age_over_30": 17977,
+    "history_below_3": 17087,
+    "last_write_same_gt": 14347
+  },
+  "quantiles_q10_q50_q90": {
+    "adjacent_distance": [
+      0.184790234,
+      0.37213256,
+      0.561542896
+    ],
+    "anchor_distance": [
+      0.5133685342765205,
+      0.7749823342975326,
+      0.9707027679202367
+    ],
+    "anchor_age": [
+      5.0,
+      51.0,
+      182.0
+    ]
+  },
+  "switch_endpoints": {
+    "B_ref": {
+      "same_id": 31,
+      "different_ids": 5,
+      "previous_only": 26,
+      "neither": 8,
+      "current_only": 4
+    },
+    "B_C2": {
+      "previous_only": 14,
+      "different_ids": 10,
+      "same_id": 37,
+      "current_only": 4
+    }
+  }
+}

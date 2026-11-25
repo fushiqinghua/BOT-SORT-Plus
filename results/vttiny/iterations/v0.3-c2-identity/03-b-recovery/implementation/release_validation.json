@@ -1,0 +1,56 @@
+[
+  {
+    "trial": "B_ref",
+    "release_name": "B_ref",
+    "identical_prediction_files": 30,
+    "config": "configs/botsort_plus/13_B_ref.json"
+  },
+  {
+    "trial": "B_C2",
+    "release_name": "B_C2",
+    "identical_prediction_files": 30,
+    "config": "configs/botsort_plus/30_B_C2.json"
+  },
+  {
+    "trial": "confirmed_write",
+    "release_name": "B_recent_confirmed",
+    "identical_prediction_files": 30,
+    "config": "configs/botsort_plus/34_B_recent_confirmed.json"
+  },
+  {
+    "trial": "early_moderate",
+    "release_name": "B_early_moderate",
+    "identical_prediction_files": 30,
+    "config": "configs/botsort_plus/B_early_moderate.json"
+  },
+  {
+    "trial": "motion2",
+    "release_name": "B_motion2",
+    "identical_prediction_files": 30,
+    "config": "configs/botsort_plus/B_motion2.json"
+  },
+  {
+    "trial": "confirmed_motion2",
+    "release_name": "B_confirmed_motion2",
+    "identical_prediction_files": 30,
+    "config": "configs/botsort_plus/B_confirmed_motion2.json"
+  },
+  {
+    "trial": "confirmed_early",
+    "release_name": "B_confirmed_early",
+    "identical_prediction_files": 30,
+    "config": "configs/botsort_plus/B_confirmed_early.json"
+  },
+  {
+    "trial": "early_motion2",
+    "release_name": "B_early_motion2",
+    "identical_prediction_files": 30,
+    "config": "configs/botsort_plus/B_early_motion2.json"
+  },
+  {
+    "trial": "confirmed_early_motion2",
+    "release_name": "B_confirmed_early_motion2",
+    "identical_prediction_files": 30,
+    "config": "configs/botsort_plus/B_confirmed_early_motion2.json"
+  }
+]

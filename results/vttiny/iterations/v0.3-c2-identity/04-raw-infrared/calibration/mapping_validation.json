@@ -1,0 +1,86 @@
+{
+  "train_sequences": 85,
+  "frame_pairs": 34111,
+  "all_clean_pairs": 363461,
+  "pure_sequences_with_pairs": 73,
+  "fit_sample_count": 36262,
+  "crossfit_pairs": 339181,
+  "test_parent_groups_excluded": [
+    "DJI_0028",
+    "DJI_0030",
+    "DJI_0032",
+    "DJI_0051",
+    "DJI_0257",
+    "DJI_0277",
+    "DJI_0307",
+    "DJI_0309"
+  ],
+  "cv_macro_mean_iou": {
+    "identity": 0.4411350134206651,
+    "translation": 0.43478304631529974,
+    "affine": 0.42153541421836427,
+    "affine_extent": 0.42202638342487014
+  },
+  "grouped_fivefold_pooled": {
+    "identity": {
+      "n": 339181,
+      "mean_iou": 0.5324105449176306,
+      "median_iou": 0.5508885298864694,
+      "iou50": 0.5565288149984816,
+      "median_center_px": 2.8284271247461903,
+      "p90_center_px": 7.826237921249264
+    },
+    "translation": {
+      "n": 339181,
+      "mean_iou": 0.5058368852045567,
+      "median_iou": 0.5305466237908004,
+      "iou50": 0.5381875753653654,
+      "median_center_px": 2.692582403567252,
+      "p90_center_px": 7.280109889280518
+    },
+    "affine": {
+      "n": 339181,
+      "mean_iou": 0.49477171175222573,
+      "median_iou": 0.513491693865781,
+      "iou50": 0.5219484581978354,
+      "median_center_px": 2.828439781099565,
+      "p90_center_px": 6.944084186990149
+    },
+    "affine_extent": {
+      "n": 339181,
+      "mean_iou": 0.4951949312983145,
+      "median_iou": 0.5140561414482967,
+      "iou50": 0.5229950970130992,
+      "median_center_px": 2.828439781099565,
+      "p90_center_px": 6.944084186990149
+    }
+  },
+  "selected": {
+    "model": "identity",
+    "matrix": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "extent": [
+      1.0,
+      1.0
+    ],
+    "frame_wh": [
+      640,
+      512
+    ],
+    "cv_p90_center_px": 7.826237921249264
+  },
+  "source_sha256": {
+    "00": "5a6696f6cf038301d76d921f7566a1624f5c116f634848a92c2317468f657fad",
+    "01": "39f19472ad2dddd5b4cbf1aebb35450ccf412841b9661d4904ffbe08eccce125"
+  }
+}

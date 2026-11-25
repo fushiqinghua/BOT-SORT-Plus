@@ -1,0 +1,240 @@
+--- /dev/null
++++ b/botsort_plus/position_localizer.py
+@@ -0,0 +1,106 @@
++"""Estimate translations from two past measured patches and one current frame."""
++import cv2
++import numpy as np
++
++# Specified before reading target labels. Offsets are in fractions of the current box.
++PROFILES={
++    'permissive':dict(corr=.50,lift=.018,margin=.012,agree=3.5,history=.25,salience=.40),
++    'balanced':dict(corr=.62,lift=.035,margin=.025,agree=2.5,history=.40,salience=.65),
++    'strict':dict(corr=.72,lift=.055,margin=.045,agree=2.0,history=.55,salience=.85)
++}
++GAINS=(.5,.85)
++MAX_NORM=3.5
++MAX_SHORT_FRACTION=.38
++
++def center(box):
++    return box[:2]+box[2:]*.5
++
++def ious(box, others):
++    others=np.asarray(others,dtype=float).reshape(-1,4)
++    inter=np.maximum(0,np.minimum(box[:2]+box[2:],others[:,:2]+others[:,2:])-np.maximum(box[:2],others[:,:2])).prod(axis=1)
++    return inter/np.maximum(1e-12,np.prod(box[2:])+others[:,2:].prod(axis=1)-inter)
++
++def roi(image, box, radius, shift):
++    wh=box[2:]
++    c=center(box)+shift
++    edges=(10+radius)*wh/16
++    if np.any(c-edges<0) or np.any(c+edges>=np.array(image.shape[::-1])-1):
++        return None
++    q=np.arange(-10-radius,11+radius,dtype=np.float32)
++    x,y=np.meshgrid((c[0]+q*wh[0]/16).astype(np.float32),(c[1]+q*wh[1]/16).astype(np.float32))
++    return cv2.remap(image,x,y,cv2.INTER_LINEAR).astype(np.float32)
++
++def quality(t):
++    core=t[6:15,6:15]
++    ring=np.r_[t[:3].ravel(),t[-3:].ravel(),t[3:-3,:3].ravel(),t[3:-3,-3:].ravel()]
++    contrast=float(np.mean(core)-np.median(ring))
++    noise=3.+.5*float(np.std(ring))
++    return contrast,abs(contrast)/noise
++
++def sample(images,prior,box,shifted,registration):
++    wh=box[2:]
++    if min(wh)<4 or any(min(b[2:])<4 for b in prior):
++        return dict(reason='small_box')
++    if any(np.max(abs(np.log(wh/b[2:])))>.5 for b in prior):
++        return dict(reason='scale_change')
++    c=center(box)
++    band=int(min(wh)>8)+int(min(wh)>12)
++    cell=f'{int(np.clip(c[0]//160,0,3))}_{int(np.clip(c[1]//171,0,2))}_{band}'
++    count,hit=registration['geometry_grid'].get(cell,(0,0))
++    if count<registration['cell_min_count'] or hit<registration['center_inside_min']:
++        return dict(reason='unreliable_region')
++    shift=np.array([(48 if c[0]<320 else -48) if shifted else 0,0])
++    old=[roi(im,b,0,shift) for im,b in zip(images[:2],prior)]
++    current=roi(images[2],box,7,shift)
++    if current is None or any(t is None for t in old):
++        return dict(reason='edge')
++    qa,qb=map(quality,old)
++    if min(float(t.std()) for t in old)<3 or min(abs(qa[0]),abs(qb[0]))<2 or qa[0]*qb[0]<=0:
++        return dict(reason='weak_or_inconsistent_contrast')
++    history=float(cv2.matchTemplate(old[0],old[1],cv2.TM_CCOEFF_NORMED)[0,0])
++    maps=[cv2.matchTemplate(current,t,cv2.TM_CCOEFF_NORMED) for t in old]
++    if not all(np.isfinite(m).all() for m in maps):
++        return dict(reason='invalid_texture')
++    surface=.5*(maps[0]+maps[1])
++    y,x=np.unravel_index(np.argmax(surface),surface.shape)
++    if x in (0,14) or y in (0,14):
++        return dict(reason='peak_at_boundary')
++    nearby=np.ones(surface.shape,bool)
++    nearby[max(0,y-2):y+3,max(0,x-2):x+3]=False
++    peak=float(surface[y,x])
++    def subpixel(a,b,c):
++        curv=2*b-a-c
++        return float(np.clip((c-a)/(2*curv),-.5,.5)) if curv>1e-6 else 0.
++    dx=x-7+subpixel(surface[y,x-1],peak,surface[y,x+1])
++    dy=y-7+subpixel(surface[y-1,x],peak,surface[y+1,x])
++    peaks=[np.asarray(np.unravel_index(np.argmax(m),m.shape)) for m in maps]
++    return dict(reason='candidate',dx=float(dx*wh[0]/16),dy=float(dy*wh[1]/16),
++          corr=min(float(m[y,x]) for m in maps),lift=peak-float(surface[7,7]),margin=peak-float(surface[nearby].max()),
++          agree=float(np.linalg.norm(peaks[0]-peaks[1])),history=history,salience=min(qa[1],qb[1]))
++
++def decision(item,raw,profile,gain):
++    if raw['reason']!='candidate':
++        return (0.,0.),raw['reason']
++    limits=PROFILES[profile]
++    for key in ('history','salience','corr','lift','margin'):
++        if raw[key]<limits[key]:
++            return (0.,0.),key
++    if raw['agree']>limits['agree']:
++        return (0.,0.),'history_disagrees'
++    box=np.asarray(item['box'],float)
++    step=np.array([raw['dx'],raw['dy']],float)
++    length=float(np.linalg.norm(step))
++    if length<.45:
++        return (0.,0.),'small_step'
++    cap=min(MAX_NORM,MAX_SHORT_FRACTION*min(box[2:]))
++    step*=min(1.,cap/length)*gain
++    other=np.asarray(item['others'],float).reshape(-1,4)
++    moved=box.copy();moved[:2]+=step
++    if len(other):
++        a=ious(box,other);b=ious(moved,other)
++        oldc=center(box);newc=center(moved)
++        before=((oldc>=other[:,:2])&(oldc<=other[:,:2]+other[:,2:])).all(axis=1)
++        after=((newc>=other[:,:2])&(newc<=other[:,:2]+other[:,2:])).all(axis=1)
++        if np.any((b>.22)&(b>a+.04)) or np.any(after&~before):
++            return (0.,0.),'measured_neighbor'
++    return tuple(map(float,step)),'moved'
+--- /dev/null
++++ b/botsort_plus/online_position.py
+@@ -0,0 +1,61 @@
++"""Frame-local infrared output adjustment; measured coordinates and tracker state are untouched."""
++from collections import Counter,deque
++from pathlib import Path
++import cv2
++import numpy as np
++from .position_localizer import decision,sample
++
++class OnlinePosition:
++    def __init__(self,policy,registration):
++        if registration['model']!='identity' or registration['framewise']:
++            raise ValueError('This position rule was calibrated on the fixed identity mapping')
++        self.profile=policy['profile'];self.gain=policy['gain'];self.registration=registration
++        self.images=deque(maxlen=4)
++        self.history={}
++        self.previous=0
++        self.status=Counter()
++
++    def update(self,frame,rgb_path,prediction,events):
++        if frame!=self.previous+1:
++            raise ValueError('Localization requires contiguous sequence frames')
++        self.previous=frame
++        rgb=Path(rgb_path)
++        if rgb.parent.name!='00':
++            raise ValueError('Expected paired dataset layout with RGB 00 and IR 01')
++        ir_path=rgb.parent.parent/'01'/rgb.name
++        img=cv2.imread(str(ir_path),cv2.IMREAD_GRAYSCALE) if ir_path.is_file() else None
++        if img is not None and img.shape!=(512,640):
++            raise ValueError('Unexpected IR image size')
++        self.images.append((frame,img))
++        available=dict(self.images)
++        boxes={}
++        measured={}
++        for row in prediction:
++            x,y,x2,y2,tid,_,_,det=map(float,row)
++            b=np.asarray([x,y,x2-x,y2-y])
++            boxes[int(tid)]=b
++            if det>=0:measured[int(tid)]=b
++        ages={int(e['track_id']):int(e['age']) for e in events if e['event']=='motion_output'}
++        if set(ages)!=boxes.keys()-measured.keys():
++            raise ValueError('Projected/observed output classification differs')
++        offsets={}
++        for tid,age in ages.items():
++            h=self.history.get(tid,[])
++            if len(h)!=2 or h[0][0]!=frame-age-1 or h[1][0]!=frame-age:
++                self.status['nonconsecutive_history']+=1
++                continue
++            stamps=[available.get(f) for f in (h[0][0],h[1][0],frame)]
++            if any(im is None for im in stamps):
++                self.status['missing_ir']+=1
++                continue
++            box=boxes[tid]
++            others=[b for b in measured.values() if np.all(b[:2]-4<=box[:2]+box[2:]) and np.all(b[:2]+b[2:]+4>=box[:2])]
++            raw=sample(stamps,[h[0][1],h[1][1]],box,False,self.registration)
++            step,reason=decision(dict(box=box,others=others),raw,self.profile,self.gain)
++            self.status[reason]+=1
++            if reason=='moved':offsets[tid]=step
++        self.history={tid:hist for tid,hist in self.history.items() if hist[-1][0]>=frame-3}
++        for tid,box in measured.items():
++            history=self.history.setdefault(tid,[])
++            self.history[tid]=history[-1:]+[(frame,box)]
++        return offsets
+--- a/tools/run_botsort_plus.py
++++ b/tools/run_botsort_plus.py
+@@ -118,6 +118,18 @@
+         protocol["raw_ir_inputs"] = dict(registration_sha256=registration_hash,
+                 cache_root=str(args.ir_tiles.resolve()), descriptor="raw intensity patch, no learned embedding",
+                 metadata_sha256={s:sha256(args.ir_tiles/(s+".json")) for s in paths})
++    position_policy = None
++    if args.position_policy is not None:
++        if args.position_registration is None or not cfg.recovery.output_prediction_frames or cfg.raw_ir.enabled:
++            raise ValueError("Position refinement requires a registration file and the original motion-output policy")
++        position_policy = json.loads(args.position_policy.read_bytes())
++        registration = json.loads(args.position_registration.read_bytes())
++        if (sha256(REPO/"botsort_plus/position_localizer.py") != position_policy["localizer_sha256"]
++                or sha256(args.position_registration) != position_policy["registration_sha256"]):
++            raise ValueError("Position policy, registration and implementation disagree")
++        from botsort_plus.online_position import OnlinePosition
++        protocol["output_position"] = {"kind":"causal relative IR translation", "policy_sha256":sha256(args.position_policy),
++                                       "registration_sha256":sha256(args.position_registration), "sequence_reasons":{}}
+     if args.preflight:
+         print(json.dumps(protocol,ensure_ascii=False,indent=2))
+         return 0 if protocol["status"]=="READY" else 2
+@@ -154,6 +166,7 @@
+             cv2.setRNGSeed(0)
+             tracker=BoTSORTPlus(plus_config=cfg,reid_weights=Path("cache-only.pt"),device=torch.device("cpu"),
+                                half=False,**protocol["native_config"])
++            position = OnlinePosition(position_policy, registration) if position_policy is not None else None
+             if cfg.raw_ir.enabled:
+                 tracker.raw_ir_observer=ThermalObserver(args.ir_tiles,seq,protocol["detection_fingerprints"][seq],
+                                                        asdict(cfg.raw_ir),registration)
+@@ -178,13 +191,18 @@
+                         if cfg.raw_ir.enabled:
+                             tracker.raw_ir_observer.begin(row["frame"],image_path,len(det))
+                         t=time.perf_counter(); prediction=tracker.update(det,image,features=packets); seconds+=time.perf_counter()-t
++                        translation = position.update(row["frame"],image_path,prediction,tracker.last_events) if position else {}
+                         seen=set()
+                         for item in prediction:
+                             x1,y1,x2,y2,tid,score,cls,det_idx=map(float,item)
+                             if not np.isfinite(item).all() or tid!=int(tid) or tid<=0 or tid in seen or cls!=0 or x2<=x1 or y2<=y1:
+                                 raise RuntimeError("Invalid/duplicate MOT output")
+                             seen.add(tid)
+-                            writer.writerow([row["frame"],int(tid),x1,y1,x2-x1,y2-y1,score,-1,-1,-1]); rows+=1
++                            w,h=x2-x1,y2-y1
++                            if int(tid) in translation:
++                                dx,dy=translation[int(tid)]
++                                x1,y1=x1+dx,y1+dy
++                            writer.writerow([row["frame"],int(tid),x1,y1,w,h,score,-1,-1,-1]); rows+=1
+                         for event in tracker.last_events:
+                             event_counts[event["event"]]+=1
+                             if event_stream:
+@@ -196,6 +214,8 @@
+                         event_stream.write(json.dumps({"sequence":seq, **event},
+                                                       ensure_ascii=False,allow_nan=False)+"\n")
+                 temp.replace(dest)
++                if position is not None:
++                    protocol["output_position"]["sequence_reasons"][seq] = dict(position.status)
+             finally:
+                 if event_stream:
+                     event_stream.close()
+@@ -228,6 +248,8 @@
+     p.add_argument("--output-dir",type=Path,default=REPO/"outputs/botsort_plus_v1")
+     p.add_argument("--runtime-root",type=Path)
+     p.add_argument("--sequences",nargs="+")
++    p.add_argument("--position-policy",type=Path)
++    p.add_argument("--position-registration",type=Path)
+     p.add_argument("--ir-tiles",type=Path)
+     p.add_argument("--ir-registration",type=Path)
+     p.add_argument("--preflight",action="store_true")

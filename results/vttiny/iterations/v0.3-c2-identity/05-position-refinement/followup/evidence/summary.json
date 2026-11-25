@@ -1,0 +1,434 @@
+{
+  "geometry": {
+    "fit_rgb_then_ir": {
+      "routing": {
+        "unchanged": 1366,
+        "rgb": 282,
+        "ir": 176
+      },
+      "all": {
+        "n": 1262,
+        "moved": 318,
+        "before_iou": 0.638722363413659,
+        "after_iou": 0.6448601375124283,
+        "delta_iou": 0.006137774098769281,
+        "before_center": 1.889877168706529,
+        "after_center": 1.8758925259455665,
+        "delta_center": -0.013984642760962724,
+        "improved": 203,
+        "worsened": 107,
+        "rescued": 17,
+        "lost": 15,
+        "neighbor_took_over": 0,
+        "neighbor_released": 1,
+        "toward_neighbor": 2,
+        "oracle_mean_iou": 0.7734452531789362,
+        "oracle_above50": 1183
+      },
+      "edge": {
+        "n": 170,
+        "moved": 53,
+        "before_iou": 0.3746588996854618,
+        "after_iou": 0.38695979385663937,
+        "delta_iou": 0.012300894171177568,
+        "before_center": 3.734290154267662,
+        "after_center": 3.7002935931250094,
+        "delta_center": -0.03399656114265277,
+        "improved": 38,
+        "worsened": 14,
+        "rescued": 17,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 1,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.5818897575281723,
+        "oracle_above50": 128
+      },
+      "increment": {
+        "n": 1262,
+        "delta_vs_rgb": 0.0024741771877851227,
+        "ci": [
+          9.898445312498598e-05,
+          0.004732932825069666
+        ],
+        "center_vs_rgb": -0.002230536497337294,
+        "rescued": 8,
+        "lost": 6,
+        "used": 119
+      },
+      "edge_increment": {
+        "n": 170,
+        "delta_vs_rgb": 0.004410403329625854,
+        "ci": [
+          -0.0011534867272048558,
+          0.008857685163185672
+        ],
+        "center_vs_rgb": -0.00436897215509156,
+        "rescued": 8,
+        "lost": 0,
+        "used": 22
+      }
+    },
+    "check_rgb_then_ir": {
+      "routing": {
+        "rgb": 73,
+        "unchanged": 375,
+        "ir": 35
+      },
+      "all": {
+        "n": 335,
+        "moved": 77,
+        "before_iou": 0.6010922473610529,
+        "after_iou": 0.6122625291683748,
+        "delta_iou": 0.011170281807321826,
+        "before_center": 1.9271154894036642,
+        "after_center": 1.8453587558607674,
+        "delta_center": -0.0817567335428972,
+        "improved": 58,
+        "worsened": 15,
+        "rescued": 11,
+        "lost": 1,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.7498102409987973,
+        "oracle_above50": 302
+      },
+      "edge": {
+        "n": 60,
+        "moved": 21,
+        "before_iou": 0.3569962264838831,
+        "after_iou": 0.3892646226182756,
+        "delta_iou": 0.03226839613439249,
+        "before_center": 3.4624177623186907,
+        "after_center": 3.203903523901049,
+        "delta_center": -0.2585142384176411,
+        "improved": 18,
+        "worsened": 2,
+        "rescued": 11,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.555852917455717,
+        "oracle_above50": 38
+      },
+      "increment": {
+        "n": 335,
+        "delta_vs_rgb": 0.002148286784027771,
+        "ci": [
+          -0.0014159816121211036,
+          0.006966717044241315
+        ],
+        "center_vs_rgb": -0.021498438832623066,
+        "rescued": 4,
+        "lost": 1,
+        "used": 23
+      },
+      "edge_increment": {
+        "n": 60,
+        "delta_vs_rgb": 0.010912385641067269,
+        "ci": [
+          0.001165941748137705,
+          0.030504617930029135
+        ],
+        "center_vs_rgb": -0.08684129673300606,
+        "rescued": 4,
+        "lost": 0,
+        "used": 5
+      }
+    },
+    "fit_rgb_then_shift": {
+      "routing": {
+        "unchanged": 1387,
+        "shift": 155,
+        "rgb": 282
+      },
+      "all": {
+        "n": 1262,
+        "moved": 325,
+        "before_iou": 0.638722363413659,
+        "after_iou": 0.630916332045999,
+        "delta_iou": -0.007806031367659999,
+        "before_center": 1.889877168706529,
+        "after_center": 1.929840935495463,
+        "delta_center": 0.03996376678893393,
+        "improved": 132,
+        "worsened": 189,
+        "rescued": 9,
+        "lost": 39,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 3,
+        "oracle_mean_iou": 0.7734452531789362,
+        "oracle_above50": 1183
+      },
+      "edge": {
+        "n": 170,
+        "moved": 38,
+        "before_iou": 0.3746588996854618,
+        "after_iou": 0.3789724897559786,
+        "delta_iou": 0.004313590070516751,
+        "before_center": 3.734290154267662,
+        "after_center": 3.732703281263287,
+        "delta_center": -0.00158687300437498,
+        "improved": 23,
+        "worsened": 14,
+        "rescued": 9,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.5818897575281723,
+        "oracle_above50": 128
+      },
+      "increment": {
+        "n": 1262,
+        "delta_vs_rgb": -0.01146962827864416,
+        "ci": [
+          -0.02021821725235004,
+          -0.004920941765825827
+        ],
+        "center_vs_rgb": 0.051717873052559364,
+        "rescued": 0,
+        "lost": 30,
+        "used": 126
+      },
+      "edge_increment": {
+        "n": 170,
+        "delta_vs_rgb": -0.0035769007710349647,
+        "ci": [
+          -0.007066549976007107,
+          -0.0011451476764975342
+        ],
+        "center_vs_rgb": 0.028040715983186238,
+        "rescued": 0,
+        "lost": 0,
+        "used": 7
+      }
+    },
+    "check_rgb_then_shift": {
+      "routing": {
+        "rgb": 73,
+        "unchanged": 387,
+        "shift": 23
+      },
+      "all": {
+        "n": 335,
+        "moved": 72,
+        "before_iou": 0.6010922473610529,
+        "after_iou": 0.6058151079790418,
+        "delta_iou": 0.004722860617988939,
+        "before_center": 1.9271154894036642,
+        "after_center": 1.8896977801712258,
+        "delta_center": -0.03741770923243866,
+        "improved": 45,
+        "worsened": 23,
+        "rescued": 7,
+        "lost": 3,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.7498102409987973,
+        "oracle_above50": 302
+      },
+      "edge": {
+        "n": 60,
+        "moved": 16,
+        "before_iou": 0.3569962264838831,
+        "after_iou": 0.37835223697720827,
+        "delta_iou": 0.021356010493325226,
+        "before_center": 3.4624177623186907,
+        "after_center": 3.2907448206340555,
+        "delta_center": -0.17167294168463504,
+        "improved": 13,
+        "worsened": 2,
+        "rescued": 7,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 0,
+        "oracle_mean_iou": 0.555852917455717,
+        "oracle_above50": 38
+      },
+      "increment": {
+        "n": 335,
+        "delta_vs_rgb": -0.0042991344053051155,
+        "ci": [
+          -0.010009504370917825,
+          -0.0011570678930661715
+        ],
+        "center_vs_rgb": 0.02284058547783548,
+        "rescued": 0,
+        "lost": 3,
+        "used": 18
+      },
+      "edge_increment": {
+        "n": 60,
+        "delta_vs_rgb": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "center_vs_rgb": 0.0,
+        "rescued": 0,
+        "lost": 0,
+        "used": 0
+      }
+    },
+    "test_rgb_then_ir": {
+      "routing": {
+        "unchanged": 668,
+        "rgb": 241,
+        "ir": 106
+      },
+      "all": {
+        "n": 579,
+        "moved": 191,
+        "before_iou": 0.5214409336456207,
+        "after_iou": 0.5316819970119484,
+        "delta_iou": 0.010241063366327767,
+        "before_center": 3.2150462280287972,
+        "after_center": 3.142562275805044,
+        "delta_center": -0.07248395222375302,
+        "improved": 115,
+        "worsened": 46,
+        "rescued": 24,
+        "lost": 3,
+        "neighbor_took_over": 1,
+        "neighbor_released": 0,
+        "toward_neighbor": 1,
+        "oracle_mean_iou": 0.6304280426147114,
+        "oracle_above50": 465
+      },
+      "edge": {
+        "n": 129,
+        "moved": 50,
+        "before_iou": 0.3528653922216584,
+        "after_iou": 0.3860826600008472,
+        "delta_iou": 0.03321726777918872,
+        "before_center": 3.727950525494459,
+        "after_center": 3.4727610265076905,
+        "delta_center": -0.2551894989867693,
+        "improved": 45,
+        "worsened": 5,
+        "rescued": 24,
+        "lost": 0,
+        "neighbor_took_over": 1,
+        "neighbor_released": 0,
+        "toward_neighbor": 1,
+        "oracle_mean_iou": 0.5381943559311253,
+        "oracle_above50": 79
+      },
+      "increment": {
+        "n": 579,
+        "delta_vs_rgb": 0.0010379011014964292,
+        "ci": [
+          -0.0007571112243982585,
+          0.0043796236749860246
+        ],
+        "center_vs_rgb": -0.006234009792326918,
+        "rescued": 7,
+        "lost": 1,
+        "used": 53
+      },
+      "edge_increment": {
+        "n": 129,
+        "delta_vs_rgb": 0.006898599777715537,
+        "ci": [
+          0.0010614731475933278,
+          0.017333497093793903
+        ],
+        "center_vs_rgb": -0.05345640427437926,
+        "rescued": 7,
+        "lost": 0,
+        "used": 14
+      }
+    },
+    "test_rgb_then_shift": {
+      "routing": {
+        "unchanged": 684,
+        "rgb": 241,
+        "shift": 90
+      },
+      "all": {
+        "n": 579,
+        "moved": 191,
+        "before_iou": 0.5214409336456207,
+        "after_iou": 0.5279206496098358,
+        "delta_iou": 0.006479715964215097,
+        "before_center": 3.2150462280287972,
+        "after_center": 3.177731498709471,
+        "delta_center": -0.03731472931932624,
+        "improved": 112,
+        "worsened": 57,
+        "rescued": 17,
+        "lost": 5,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 5,
+        "oracle_mean_iou": 0.6304280426147114,
+        "oracle_above50": 465
+      },
+      "edge": {
+        "n": 129,
+        "moved": 39,
+        "before_iou": 0.3528653922216584,
+        "after_iou": 0.37913602056571466,
+        "delta_iou": 0.02627062834405625,
+        "before_center": 3.727950525494459,
+        "after_center": 3.5313965406959835,
+        "delta_center": -0.1965539847984761,
+        "improved": 36,
+        "worsened": 3,
+        "rescued": 17,
+        "lost": 0,
+        "neighbor_took_over": 0,
+        "neighbor_released": 0,
+        "toward_neighbor": 1,
+        "oracle_mean_iou": 0.5381943559311253,
+        "oracle_above50": 79
+      },
+      "increment": {
+        "n": 579,
+        "delta_vs_rgb": -0.002723446300616239,
+        "ci": [
+          -0.006840994302058169,
+          -1.9724529549930913e-05
+        ],
+        "center_vs_rgb": 0.028935213112099872,
+        "rescued": 0,
+        "lost": 3,
+        "used": 53
+      },
+      "edge_increment": {
+        "n": 129,
+        "delta_vs_rgb": -4.803965741693672e-05,
+        "ci": [
+          -0.0009178557942308778,
+          0.00131865227607528
+        ],
+        "center_vs_rgb": 0.005179109913913884,
+        "rescued": 0,
+        "lost": 0,
+        "used": 3
+      }
+    }
+  },
+  "official_changes_vs_rgb": {
+    "rgb_then_ir": {
+      "gained": 9,
+      "lost": 2,
+      "switch_added": 0,
+      "switch_removed": 0
+    },
+    "rgb_then_shift": {
+      "gained": 1,
+      "lost": 4,
+      "switch_added": 0,
+      "switch_removed": 0
+    }
+  },
+  "design_sha256": "b1ccca7f48c8e8433e599a332112ea7784ca52875f30ebdd908044f40a5c198e",
+  "checked_tracker_sequences": 90
+}

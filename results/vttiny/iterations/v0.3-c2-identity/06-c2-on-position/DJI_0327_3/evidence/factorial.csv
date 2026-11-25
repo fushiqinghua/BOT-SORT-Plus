@@ -1,0 +1,6 @@
+﻿method,FP,FN,IDSW,lost,gained,identical_trajectory
+off,1918,54871,21,0,0,True
+shadow_path,1918,54871,21,0,0,True
+assoc,1918,54871,21,0,0,True
+memory,1781,55055,20,240,56,False
+both,1781,55055,20,240,56,False
