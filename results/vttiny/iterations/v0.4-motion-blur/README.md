@@ -63,7 +63,7 @@
 | D4 分层质量和待复核标签 | [观测分层](D4_quality_strata.csv) · [待复核表](D4_manual_review.csv) · [初筛记录](D4_visual_review.md) |
 | 离线解析兼容修正和服务器验证 | [补丁](validation/offline_state_compat.patch) · [12 项测试日志](validation/server_offline_unit_tests.txt) · [单序列轨迹验证](validation/smoke_parity.json) |
 
-公开附件保存原实验包全部 265 份证据，包括逐帧诊断表、轨迹、事件、日志和 D4 样例裁块。原始数据集仍由其作者提供。附件中的机器本地路径前缀改用 `${TRACKING_ROOT}` 和 `${REDETR_ENV}`，所有数值、轨迹和事件原字节保持一致。 [下载实验包](https://github.com/fushiqinghua/BOT-SORT-Plus/releases/download/v0.4-motion-blur-round1/v0.4-motion-blur-round1-evidence.zip) · [归档版本](https://github.com/fushiqinghua/BOT-SORT-Plus/releases/tag/v0.4-motion-blur-round1) · [VT-Tiny-MOT 数据集](https://github.com/xuqingyu26/HGTMT#vt-tiny-mot-dataset)
+公开附件保存原实验包全部 265 份证据，包括逐帧诊断表、轨迹、事件、日志和 D4 样例裁块。原始数据集仍由其作者提供。附件中的机器本地路径前缀改用 `${TRACKING_ROOT}` 和 `${REDETR_ENV}`，所有数值、轨迹和事件原字节保持一致。 [完整实验包](v0.4-motion-blur-round1-evidence.zip) · [VT-Tiny-MOT 数据集](https://github.com/xuqingyu26/HGTMT#vt-tiny-mot-dataset)
 
 - 公开附件 SHA-256 为 `aadca757e247682f68ed936da567523b11ca9f820c196a5b688ef1654260a6be`。校验依据为 [公开文件清单](EVIDENCE_MANIFEST.json)。
 - 原实验包 SHA-256 为 `2a57d959a19b44c98691da6d5139112956c698d2e20ea23289e0b869b1c63bec`。原始协议与运行日志中记录的 SHA-256 对应原服务器字节。 [原始摘要清单](SOURCE_EVIDENCE_MANIFEST.json) · [路径处理记录](ARCHIVE_PROVENANCE.json)
