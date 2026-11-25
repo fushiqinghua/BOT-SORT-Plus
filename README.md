@@ -1,81 +1,127 @@
-# BoT-SORT Plus · C2 身份可信度模块
+# BoT-SORT-Plus · v0.4 运动与模糊诊断
 
-本分支收录 C2 的全量消融与错因分析、B 的两帧提前恢复和短时运动外推、免训练红外验证、RGB 优先的红外位置补位，以及 C2 的确认记忆和连续低分预热。
+面向无人机海上搜救与微小目标多模态跟踪，在 **YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID** 基线上进行模块设计、真实数据消融与错因分析。
 
-在官方 30 段的开发实验中，关闭 C2、采用 B 两帧运动外推和 RGB 优先红外补位的配置取得 HOTA **38.9255**、IDF1 **44.1525**。连续低分预热版 C2 相对它少 10 次换号、少 131 个误报，多 182 个漏检，HOTA 和 IDF1 分别为 38.9011 和 44.1332。
+**当前分支：`diagnostics/v0.4-motion-blur`。当前任务：以已验证有效的 B 为参考，运行四组诊断，确定下一步应优先改进运动预测、相机运动补偿、恢复后续轨，还是模糊相关观测与外观。**
 
-[迭代结果与逐序列证据](results/vttiny/iterations/v0.3-c2-identity/README.md) · [近期模块设计与复算](docs/botsort_plus/FOLLOWUP_DESIGN.md) · [原版 C2 快速入口](README_BOTSORT_PLUS.md) · [原版 C2 设计](docs/botsort_plus/C2_DESIGN_AND_REVIEW.md)
+[完整运行说明](docs/botsort_plus/diagnostics_v0.4/README.md) · [实现机制与统计口径](docs/botsort_plus/diagnostics_v0.4/MECHANISM.md) · [软件验证记录](docs/botsort_plus/diagnostics_v0.4/VALIDATION.md) · [已有真实实验](results/vttiny/iterations/v0.3-c2-identity/README.md)
 
-## 第二轮 A2 实验归档
+## 当前进展与实验基座
 
-第一轮的弱起轨让更多微小目标获得轨迹，也把部分背景响应发布为新 ID。第二轮将弱起轨拆为存在确认 E 与身份准入 I，再与短时恢复 B 组合。在相同的 30 段上，A2B_score020 相对本轮 B_ref 净补回 3,949 个目标帧，同时增加 7,337 个误报和 166 次换号。官方测试集参与选模与调参，结果按开发实验解读。
-
-[两轮实验与复算入口](results/vttiny/iterations/v0.2-a2/README.md) · [15 组全量消融](results/vttiny/iterations/v0.2-a2/全量消融.md) · [三组真值对照与错因分析](results/vttiny/iterations/v0.2-a2/diagnosis/错因分析.md) · [八组逐帧案例](results/vttiny/iterations/v0.2-a2/diagnosis/cases/案例索引.md) · [第一轮 A/B 记录](results/vttiny/iterations/v0.1-ab/README.md)
-
-
-## 冻结基线 · VT-Tiny-MOT
-
-本分支归档多模态跟踪的冻结基线，供后续跟踪模块改进和消融比较使用。主配置为 **YOLO11-M RGB–红外 P3/P4/P5 特征级融合（Mosaic 开启，第 36 轮）+ BoT-SORT + 微调 RGB ReID**。RGB 单模态采用第 26 轮快照作为输入对照。
-
-| 检测和跟踪配置 | HOTA ↑ | IDF1 ↑ | MOTA ↑ | IDSW ↓ |
-|---|---:|---:|---:|---:|
-| RGB + BoT-SORT + 微调 ReID | 35.54 | 37.65 | 21.32 | 303 |
-| RGB–红外 + BoT-SORT，关闭 ReID | 37.81 | 42.36 | 25.75 | 425 |
-| **RGB–红外 + BoT-SORT + 微调 ReID** | **37.86** | **42.45** | **25.76** | **422** |
-
-官方测试集包含 30 段、12,590 组配对帧，按 RGB 坐标汇总七类目标。HOTA、IDF1、MOTA 为 TrackEval 的 COMBINED_SEQ 百分制结果。官方测试集还用于检测器与 ReID 选模、跟踪门限校准和错因分析，所有结果使用这一口径。
-
-## 实验索引
-
-| 内容 | 记录 |
+| 阶段 | 已有工作与本轮安排 |
 |---|---|
-| YOLO11-M RGB 与 RGB–红外 | [8 个跟踪配置的对照表](results/vttiny/yolo11m_rgb_rgbt/comparison.md)、[RGB](results/vttiny/yolo11m_rgb_rgbt/rgb)与 [RGB–红外](results/vttiny/yolo11m_rgb_rgbt/rgbt)的检测缓存、480 份轨迹和逐序列指标 |
-| BoT-SORT 错因分析 | [中文报告](results/vttiny/botsort_error_analysis/BoT-SORT基线错因分析.md)、[案例帧索引](results/vttiny/botsort_error_analysis/case_index.json)、[逐帧明细](results/vttiny/botsort_error_analysis) |
-| YOLO11-S RGB 早期基线 | [七种跟踪器结果](results/vttiny/rgb_yolo11s/baseline_results.md) |
-| RGB ReID 微调 | [微调前后结果](results/vttiny/rgb_reid_finetune/comparison.md)、[下降原因分析](results/vttiny/rgb_reid_diagnosis/diagnosis.md) |
-| 跟踪门限校准 | [四种外观方法](results/vttiny/rgb_reid_calibration/comparison.md)、[BoT-SORT ReID 对照](results/vttiny/rgb_botsort_reid/comparison.md)、各自试验台账 |
-| 检测器训练 | [网络、数据与训练配置](configs/detectors)、[三组 YOLO11-M 训练曲线原始记录](results/vttiny/detector_training_snapshot)。这组训练日志截取于归档时，追踪评测所用轮次以各自 `checkpoint.json` 为准 |
-| M3OT 早期实验 | [历史阶段结果及多机汇总](results/m3ot_history) |
+| 冻结基线 | 已归档 VT-Tiny-MOT 上的 RGB/RGB–T 检测、BoT-SORT 与微调 ReID 对照、轨迹和评估结果 |
+| A / A2 弱观测起轨 | 已完成真实数据消融与错因分析，历史收益和误报代价保留在[实验归档](results/vttiny/iterations/v0.2-a2/README.md)；本轮关闭 |
+| B 短轨迹身份恢复 | 真实数据已验证收益并完成多组消融；本轮固定使用 [B_early_moderate](configs/botsort_plus/B_early_moderate.json) |
+| C2、短时外推及位置修正 | 已有消融、错因分析和逐序列证据，见[迭代索引](results/vttiny/iterations/v0.3-c2-identity/README.md)；本轮关闭以便归因 |
+| v0.4 四组诊断 | 采集、分析、统一入口、人工复核表和证据打包已实现并通过软件验证；真实数据诊断待本地执行后汇总 |
 
-[跟踪器参数](configs/trackers)来自冻结评测协议。ReID 的输入为检测框在 RGB 帧上的裁剪。BoT-SORT 的高分门限为 0.50、低分门限为 0.10、新轨门限为 0.60。15 FPS 下配置为 60 的缓冲经实现缩放后为 30 帧。微调 ReID 的外观距离门限为 0.40，相机运动补偿使用稀疏光流。
+B 利用原生关联后未消费的候选形成短轨迹，对仍在 Lost 池中的旧轨迹进行时序验证和一对一身份恢复。本轮记录原生 KF/GMC 和 B 的实际过程，保持原检测、原 RGB 特征及跟踪决策。
 
-## 用已归档轨迹复算指标
+当前分支从 `iteration/v0.3-c2-identity` 的 `667eb40a6aa624c35fb86eb73656bb334b107a11` 接续。主入口锁定完整有效的 B 配置，关闭 A、旧 C、C2、raw-IR、motion2 和位置修正。历史组合配置的最高分仍可在已有实验中查阅；本轮选择 B 参考是为了分析新增误差来源。
 
-准备官方 VT-Tiny-MOT RGB 标注目录，格式为 `GT/GT_00/test/<序列>/gt/gt.txt`，包含空标注的 DJI_0325_2。所需序列名和长度由冻结协议提供。该步骤仅需 CPU、官方标注及仓库中的预测轨迹。
+## 四组诊断
+
+| 组别 | 实验内容 | 主要证据 |
+|---|---|---|
+| **D1 预测与观测误差** | 对照 KF/GMC 更新前预测、同 GT 检测与更新后状态，分析尺度、失联时间和协方差覆盖 | `track_error.csv`、`detection_audit.csv` |
+| **D2 GMC 可靠性** | 记录实际补偿矩阵、光流质量代理和共同残差，比较同一状态补偿前后误差 | `frame_error.csv` |
+| **D3 B 恢复后稳定性** | 检查恢复端点身份，并分析后续 3、5、10 帧的延续、中断和检测可用性 | `recovery_events.csv`、`recovery_windows.csv`、`recovery_checks.csv` |
+| **D4 观测质量与真实模糊** | 分析原生裁块质量、真实相邻帧 ReID 距离及负样本间隔，导出人工模糊复核样本 | `observation_quality.csv`、`quality_strata.csv`、`manual_review.csv`、无损 PNG |
+
+主入口先运行关闭诊断的 `reference` 和开启诊断的 `observed`，核对输入与源码身份，并要求 **MOT 输出和原有跟踪事件逐字节一致**，通过后才开始离线分析。GT 仅用于独立预检与离线分析。
+
+## 快速开始
+
+所有命令从仓库根目录执行。继续使用已经跑通 B 消融的 Python 环境，以及同一份检测、真实 RGB ReID 缓存和原始 RGB 图像。
+
+### 1. 获取当前分支
 
 ```bash
-python -m pip install -r requirements-eval.txt
-git clone https://github.com/JonathonLuiten/TrackEval.git external/TrackEval
-git -C external/TrackEval checkout 12c8791b303e0a0b50f753af204249e622d0281a
-python tools/verify_baseline.py --gt-folder /path/to/GT/GT_00/test --output outputs/recomputed_metrics
+git fetch origin refs/heads/diagnostics/v0.4-motion-blur:refs/remotes/origin/diagnostics/v0.4-motion-blur
+git switch --track origin/diagnostics/v0.4-motion-blur
 ```
 
-`verify_baseline.py` 会逐项比对两套检测输入下全部 496 行记录和八项指标。使用外部 TrackEval 路径时可设置 `TRACKEVAL_ROOT`。原实验的 TrackEval 源文件指纹见 [provenance/trackeval.json](provenance/trackeval.json)。
-
-## 从检测缓存复算错因
-
-仓库内两组检测缓存均为按序列压缩的 JSON，保留框坐标、类别、置信度、帧号及检测权重指纹。帧路径相对于官方数据目录。报告可在 CPU 上用冻结轨迹与官方标注复算。
+如果已经有本地同名分支：
 
 ```bash
-export VTTINY_BASELINE_RESULTS="$PWD/results/vttiny/yolo11m_rgb_rgbt"
-export VTTINY_GT_FOLDER=/path/to/GT/GT_00/test
-export VTTINY_DIAGNOSIS_OUTPUT="$PWD/outputs/error_analysis"
-python tools/diagnose_vttiny_botsort_m.py --out "$VTTINY_DIAGNOSIS_OUTPUT"
-
-# 可选。用有权访问的官方图像在本机重绘案例
-export VTTINY_FRAME_ROOT=/path/to/VT-Tiny-MOT
-python tools/inspect_vttiny_botsort_cases.py
+git switch diagnostics/v0.4-motion-blur
+git pull --ff-only origin diagnostics/v0.4-motion-blur
 ```
 
-数据入口见 [VT-Tiny-MOT 官方仓库](https://github.com/xuqingyu26/HGTMT)。仓库提供预测框、轨迹、评测指标、错因明细和案例帧索引。原始数据、原画面可视化、权重、外观嵌入及 YOLOMM 框架保存在原实验环境。原权重和输入缓存可通过所附 SHA-256 验证。归档中的路径为相对路径或环境变量占位符。检测框和轨迹数值沿用原实验。
+### 2. 填写本地路径
 
-## 在原实验环境回放基线
+复制 [configs/diagnostics/motion_blur_v0.4.example.json](configs/diagnostics/motion_blur_v0.4.example.json) 为同目录的 `motion_blur_v0.4.local.json`，填写路径。该本地配置文件已被 Git 忽略。
 
-`tools/evaluate_vttiny_m_pair.py` 是两套检测与八种跟踪配置的原实验入口。部署路径及依赖如下。
+| 字段 | 内容 |
+|---|---|
+| `baseline_root` | 含 `protocol.json` 和 `detections/` 的冻结检测目录；默认指向仓库现有 RGB–T 基线 |
+| `features_dir` | B 实验使用的真实 RGB ReID 缓存，逐序列 `.npz` 及配套 `.json` |
+| `images_root` | 能解析缓存图像路径的原始 RGB 图像根目录 |
+| `gt_root` | 官方 RGB GT 根目录，布局为 `<gt_root>/<sequence>/gt/gt.txt` |
+| `output_root` | 本次实验的新输出目录，例如 `outputs/diagnostics_v0.4_full30` |
+| `sequences` | 全量用 `null`；小规模检查可通过命令行选择序列 |
+| `runtime_root` | 普通已安装环境用 `null`；外置运行时沿用旧配置 |
 
-- `VTTINY_ROOT` 指向含 `data/processed_v1` 和 `outputs` 的 VT-Tiny-MOT 实验根目录。完整运行依赖已准备的配对清单、早期校准协议、两组冻结检测权重及微调 ReID 权重。
-- `TRACKING_RUNTIME_ROOT` 指向含 `tracking_runtime` 与 `tracking_extensions` 的实验运行目录。原环境为 Python 3.11、PyTorch 2.8.0+cu128、torchvision 0.23.0+cu128、OpenCV 5.0.0.93、BoxMOT 16.0.11。其余跟踪器依赖和补丁记录见 [provenance](provenance)。
-- `VTTINY_DETECTOR_FRAMEWORK` 指向有 `YOLOMM` 及融合模块的 Ultralytics 实验框架。两组推理使用的 GPU 可由 `VTTINY_RGB_GPU`、`VTTINY_RGBT_GPU` 指定。
-- 使用专用实验输出副本运行 `python tools/evaluate_vttiny_m_pair.py`，以保留已有成果。原始运行入口保存在结果目录的 `source/` 中，用于追溯；`tools/` 中的入口支持环境变量配置。
+相对路径以仓库根目录为基准。Windows 路径建议写成 `D:/datasets/...`；配置支持 UTF-8/BOM。输入布局、完整示例和环境要求见[详细说明](docs/botsort_plus/diagnostics_v0.4/README.md)。
 
-上游代码与许可见 [BoxMOT](https://github.com/mikel-brostrom/boxmot)、[TrackEval](https://github.com/JonathonLuiten/TrackEval) 和 [DeepSORT](https://github.com/nwojke/deep_sort)。实验归档中的第三方片段和兼容性补丁沿用其各自的上游许可。
+### 3. 预检、单序列检查、全量实验
+
+预检：
+
+```bash
+python -X utf8 tools/run_botsort_diagnostics.py preflight --settings configs/diagnostics/motion_blur_v0.4.local.json
+```
+
+先在一个已有序列上走完回放、诊断和打包流程：
+
+```bash
+python -X utf8 tools/run_botsort_diagnostics.py run --settings configs/diagnostics/motion_blur_v0.4.local.json --sequences DJI_0030_2 --output-root outputs/diagnostics_v0.4_smoke
+```
+
+通过后，保持本地配置 `sequences=null`，运行全量：
+
+```bash
+python -X utf8 tools/run_botsort_diagnostics.py run --settings configs/diagnostics/motion_blur_v0.4.local.json
+```
+
+成功时 `experiment.json` 的自动阶段为 `COMPLETE`，`verification.json` 为 `PASS`。已有输出目录会被拒绝覆盖。诊断包含两次回放、状态日志和图像扫描，可先用单序列估计本机时间及磁盘需求。
+
+## 读取结果与回传证据
+
+默认结果根目录为 `outputs/diagnostics_v0.4_full30`。
+
+| 相对路径 | 用途 |
+|---|---|
+| `verification.json` | 检查诊断开关的一致性与日志完整性 |
+| `analysis/REPORT.md`、`analysis/summary.json` | D1–D3 的中文汇总、样本数与统计口径 |
+| `analysis/*.csv` | 检测、轨迹、GMC 和 B 恢复事件明细 |
+| `blur/summary.json`、`blur/quality_strata.csv` | D4 质量与外观统计 |
+| `blur/manual_review.csv`、`blur/contact_sheets/*.png` | 真实模糊人工复核表及无损样本图 |
+| `reference/`、`observed/` | 两次回放协议、预测、事件及逐帧诊断清单 |
+| `logs/` | 回放控制台日志 |
+
+全量成功后自动生成 `outputs/diagnostics_v0.4_full30_evidence.zip`。默认包含报告、CSV、PNG、协议、MOT、事件与日志，省略较大的逐帧诊断压缩流。先回传该证据包即可进行下一步错因判断。
+
+**D4 的真实运动模糊仍需人工确认。** 自动阶段完成时状态为 `PENDING_MANUAL_REVIEW`；按说明填写标签后，可向新目录重做 D4，并重新打包。人工标签导入、失败恢复、单独重分析和 `--include-traces` 用法见[完整运行说明](docs/botsort_plus/diagnostics_v0.4/README.md)。
+
+## 验证状态与结果解释
+
+最终新增 **34 项诊断测试全部通过**；既有回归 **289 项通过、1 项可选 TrackEval 集成跳过**。测试使用明确标注的合成软件数据和真实、源码锁定的 BoxMOT/SOF，覆盖只读等价性、因果身份锚点、窗口删失、缺失特征、输入来源、GT ID=0 和完整 CLI。具体执行批次、跳过原因与源码哈希见[软件验证](docs/botsort_plus/diagnostics_v0.4/VALIDATION.md)及[机器可读记录](docs/botsort_plus/diagnostics_v0.4/validation_report.json)。
+
+诊断配对标签用于错因分析；HOTA、IDF1、MOTA 继续使用原有 TrackEval 口径。GMC 内点和图像清晰度是质量代理，需结合人工复核和具体事件解释；缺 GT、身份歧义与视频尾部截断保留为未知。诊断开启的计时含采集开销，不能作为算法 FPS 结果。
+
+历史官方测试集参与过选模、门限校准和错因分析，因此既有指标和本轮分析按开发实验解读。真实数据诊断结论需等待本地执行，当前软件测试不代表新模块的性能收益。
+
+## 历史实验与复现入口
+
+| 内容 | 入口 |
+|---|---|
+| B、C2、运动外推、红外与位置修正 | [v0.3 真实数据迭代索引](results/vttiny/iterations/v0.3-c2-identity/README.md)、[模块设计与复算](docs/botsort_plus/FOLLOWUP_DESIGN.md) |
+| A / A2 消融及错因 | [v0.1 A/B](results/vttiny/iterations/v0.1-ab/README.md)、[v0.2 A2](results/vttiny/iterations/v0.2-a2/README.md) |
+| 冻结检测与跟踪基线 | [RGB / RGB–T 跟踪对照](results/vttiny/yolo11m_rgb_rgbt/comparison.md)、[原始 BoT-SORT 错因](results/vttiny/botsort_error_analysis/BoT-SORT基线错因分析.md) |
+| RGB ReID 微调 | [微调前后结果](results/vttiny/rgb_reid_finetune/comparison.md)、[门限校准](results/vttiny/rgb_reid_calibration/comparison.md) |
+| C2 实现与历史运行配置 | [模块文档入口](README_BOTSORT_PLUS.md)、[原版设计](docs/botsort_plus/C2_DESIGN_AND_REVIEW.md) |
+| 历史基线复算、环境与完整首页 | [v0.3 首页归档](docs/botsort_plus/history/README_v0.3_snapshot.md) |
+
+原始图像、官方 GT、权重和真实外观特征需从已有实验环境提供。冻结检测、轨迹、指标及来源记录可在仓库查阅。数据与上游实现：[VT-Tiny-MOT](https://github.com/xuqingyu26/HGTMT)、[BoxMOT](https://github.com/mikel-brostrom/boxmot)、[TrackEval](https://github.com/JonathonLuiten/TrackEval)、[DeepSORT](https://github.com/nwojke/deep_sort)。第三方代码与补丁沿用各自上游许可。

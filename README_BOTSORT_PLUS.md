@@ -1,12 +1,16 @@
-# BoT-SORT-Plus v0.3.0：C2 身份可信度
+# BoT-SORT-Plus：当前诊断与模块文档入口
 
-## v0.4 诊断分支入口
+## 当前 v0.4：运动与模糊诊断
 
 新增四组可运行实验：预测/观测误差、GMC 可靠性、B 恢复后稳定性、图像质量与人工模糊复核。固定 `B_early_moderate`，先检查诊断开关的输入、MOT 输出与原有事件完全一致，再执行离线分析。
 
 **本地运行步骤、配置和证据打包：[诊断实验说明](docs/botsort_plus/diagnostics_v0.4/README.md)。** [实现机制与统计口径](docs/botsort_plus/diagnostics_v0.4/MECHANISM.md) · [软件验证](docs/botsort_plus/diagnostics_v0.4/VALIDATION.md)
 
-以下保留原 v0.3 说明与实验入口。
+[仓库首页与当前进展](README.md) · [本地路径配置示例](configs/diagnostics/motion_blur_v0.4.example.json)
+
+## 历史 v0.3：C2 身份可信度
+
+以下保留原 C2 的设计与复现实验入口；当前四组诊断使用上方 v0.4 的固定 B 配置。
 
 本版从 `iteration/v0.2-a2` 的 `6d9c258556a143036cebde891c93079a772b9945` 接续实现。在 **YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID + B** 主基座上，将“接受一次几何关联”与“允许这次观测改写身份外观”分开。
 
@@ -19,7 +23,7 @@
 
 原版 C2 使用已缓存的 RGB 特征，配置关闭 A 和旧 C，并限定 `adapter_mode="v2"`。C2 shadow 的冻结输入回放与 B 参考在全部 30 段逐字节一致。
 
-## 实现与复核入口
+## C2 实现与复核入口
 
 | 内容 | 文件 |
 |---|---|
@@ -33,7 +37,7 @@
 | 旧版本差分回放 | `tools/check_botsort_plus_legacy.py` |
 | 实际软件验证记录 | [VALIDATION.md](docs/botsort_plus/validation_v0.3/VALIDATION.md) |
 
-## 建议运行顺序
+## 历史 C2 运行顺序
 
 | 配置 | 作用 |
 |---|---|

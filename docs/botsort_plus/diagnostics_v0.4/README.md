@@ -20,13 +20,13 @@
 在现有仓库中执行：
 
 ```bash
-git fetch origin
+git fetch origin refs/heads/diagnostics/v0.4-motion-blur:refs/remotes/origin/diagnostics/v0.4-motion-blur
 git switch --track origin/diagnostics/v0.4-motion-blur
 ```
 
 继续使用之前已经跑通 B 消融的 Python 环境。主入口不会安装、升级或替换 BoxMOT；原有上游源码哈希检查继续生效。诊断还核对原生 SOF 与 BaseCMC 源码，避免在未知实现上记录含义不同的量。已有环境中的 NumPy、SciPy、OpenCV、PyTorch 和 BoxMOT 即可，不需要新的模型或权重下载。
 
-如果已有本地同名分支，使用 `git switch diagnostics/v0.4-motion-blur`。未提交的本地修改请先按平时工作方式保存，再切换分支。
+如果已有本地同名分支，先执行 `git switch diagnostics/v0.4-motion-blur`，再用 `git pull --ff-only origin diagnostics/v0.4-motion-blur` 同步更新。未提交的本地修改请先按平时工作方式保存，再切换分支。
 
 ## 3. 只需填写一个配置文件
 
