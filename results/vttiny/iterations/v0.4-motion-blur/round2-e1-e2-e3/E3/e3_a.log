@@ -1,0 +1,36 @@
+DJI_0028_3 {'IDSW': 28, 'TP': 4079, 'FP': 530, 'FN': 982} {'unconfirmed_identity_or_annotation': 212, 'same_target_localization_below_threshold': 194, 'persistent_no_gt_support': 7, 'displaced_or_unconfirmed_after_known_identity': 38, 'different_gt_nearby_after_known_identity': 79}
+DJI_0030_2 {'IDSW': 0, 'TP': 1555, 'FP': 1280, 'FN': 3041} {'persistent_no_gt_support': 332, 'unconfirmed_identity_or_annotation': 750, 'same_target_localization_below_threshold': 198}
+DJI_0032_3 {'IDSW': 9, 'TP': 2876, 'FP': 179, 'FN': 1812} {'same_target_localization_below_threshold': 53, 'possible_tail_after_last_annotation': 5, 'persistent_no_gt_support': 53, 'unconfirmed_identity_or_annotation': 61, 'displaced_or_unconfirmed_after_known_identity': 6, 'different_gt_nearby_after_known_identity': 1}
+DJI_0049_2 {'IDSW': 0, 'TP': 88, 'FP': 50, 'FN': 484} {'unconfirmed_identity_or_annotation': 50}
+DJI_0051_2 {'IDSW': 5, 'TP': 798, 'FP': 0, 'FN': 322} {}
+DJI_0061_2 {'IDSW': 178, 'TP': 8325, 'FP': 2301, 'FN': 17253} {'unconfirmed_identity_or_annotation': 420, 'competition_or_duplicate': 49, 'same_target_localization_below_threshold': 1240, 'possible_tail_after_last_annotation': 31, 'different_gt_nearby_after_known_identity': 534, 'displaced_or_unconfirmed_after_known_identity': 27}
+DJI_0073_3 {'IDSW': 20, 'TP': 11711, 'FP': 1270, 'FN': 7479} {'unconfirmed_identity_or_annotation': 163, 'same_target_localization_below_threshold': 521, 'different_gt_nearby_after_known_identity': 50, 'competition_or_duplicate': 46, 'persistent_no_gt_support': 374, 'possible_tail_after_last_annotation': 64, 'displaced_or_unconfirmed_after_known_identity': 52}
+DJI_0109_1 {'IDSW': 15, 'TP': 70, 'FP': 0, 'FN': 20} {}
+DJI_0119_2 {'TP': 167, 'FP': 0, 'FN': 193, 'IDSW': 0} {}
+DJI_0129_2 {'TP': 550, 'FP': 7, 'FN': 40, 'IDSW': 0} {'same_target_localization_below_threshold': 7}
+DJI_0141_2 {'IDSW': 11, 'TP': 6670, 'FP': 1539, 'FN': 10476} {'persistent_no_gt_support': 348, 'possible_tail_after_last_annotation': 2, 'same_target_localization_below_threshold': 582, 'unconfirmed_identity_or_annotation': 597, 'competition_or_duplicate': 10}
+DJI_0155_2 {'IDSW': 2, 'TP': 71, 'FP': 12, 'FN': 289} {'persistent_no_gt_support': 8, 'same_target_localization_below_threshold': 3, 'no_official_gt_at_frame': 1}
+DJI_0159_2 {'TP': 52, 'FP': 2, 'FN': 198, 'IDSW': 0} {'same_target_localization_below_threshold': 2}
+DJI_0169_3 {'IDSW': 11, 'TP': 2537, 'FP': 1511, 'FN': 2905} {'unconfirmed_identity_or_annotation': 526, 'persistent_no_gt_support': 554, 'same_target_localization_below_threshold': 418, 'competition_or_duplicate': 6, 'possible_tail_after_last_annotation': 4, 'displaced_or_unconfirmed_after_known_identity': 3}
+DJI_0173_2 {'IDSW': 24, 'TP': 192, 'FP': 150, 'FN': 258} {'unconfirmed_identity_or_annotation': 30, 'same_target_localization_below_threshold': 120}
+DJI_0181_3 {'IDSW': 4, 'TP': 3768, 'FP': 1127, 'FN': 4102} {'possible_tail_after_last_annotation': 134, 'persistent_no_gt_support': 286, 'same_target_localization_below_threshold': 256, 'different_gt_nearby_after_known_identity': 26, 'unconfirmed_identity_or_annotation': 403, 'displaced_or_unconfirmed_after_known_identity': 22}
+DJI_0221_2 {'TP': 153, 'FP': 110, 'FN': 544, 'IDSW': 2} {'same_target_localization_below_threshold': 110}
+DJI_0225_1 {'IDSW': 5, 'TP': 1837, 'FP': 165, 'FN': 1845} {'same_target_localization_below_threshold': 38, 'possible_tail_after_last_annotation': 1, 'persistent_no_gt_support': 100, 'unconfirmed_identity_or_annotation': 22, 'competition_or_duplicate': 4}
+DJI_0237_2 {'IDSW': 0, 'TP': 517, 'FP': 31, 'FN': 682} {'same_target_localization_below_threshold': 4, 'persistent_no_gt_support': 27}
+DJI_0255_1 {'TP': 397, 'FP': 5, 'FN': 203, 'IDSW': 7} {'same_target_localization_below_threshold': 5}
+DJI_0257_2 {'IDSW': 10, 'TP': 541, 'FP': 156, 'FN': 476} {'same_target_localization_below_threshold': 133, 'unconfirmed_identity_or_annotation': 23}
+DJI_0277_2 {'IDSW': 4, 'TP': 908, 'FP': 0, 'FN': 76} {}
+DJI_0283_1 {'IDSW': 2, 'TP': 3199, 'FP': 1367, 'FN': 2769} {'unconfirmed_identity_or_annotation': 503, 'same_target_localization_below_threshold': 620, 'displaced_or_unconfirmed_after_known_identity': 107, 'persistent_no_gt_support': 137}
+DJI_0303_2 {'TP': 1158, 'FP': 133, 'FN': 1392, 'IDSW': 9} {'different_gt_nearby_after_known_identity': 27, 'same_target_localization_below_threshold': 103, 'persistent_no_gt_support': 3}
+DJI_0307_2 {'TP': 39, 'FP': 0, 'FN': 38, 'IDSW': 0} {}
+DJI_0309_4 {'IDSW': 7, 'TP': 571, 'FP': 30, 'FN': 844} {'same_target_localization_below_threshold': 28, 'persistent_no_gt_support': 2}
+Traceback (most recent call last):
+  File "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E3/audit_native_fp.py", line 473, in <module>
+    main()
+  File "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E3/audit_native_fp.py", line 409, in main
+    assert all(count[k] == prior[seq][k] for k in EXPECTED), (seq, count, prior[seq])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E3/audit_native_fp.py", line 409, in <genexpr>
+    assert all(count[k] == prior[seq][k] for k in EXPECTED), (seq, count, prior[seq])
+               ~~~~~^^^
+KeyError: 'IDSW'

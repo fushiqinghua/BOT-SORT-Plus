@@ -1,0 +1,111 @@
+{
+  "schema": "botsort_v04_followup_plan_v1",
+  "source_commit": "b84d0b43267bb9f36f5ded485dde43b8f2f3ab71",
+  "branch": "diagnostics/v0.4-motion-blur",
+  "scope": "development",
+  "reference": {
+    "tracker": "B_early_moderate",
+    "sequences": 30,
+    "frames": 12590,
+    "metrics": {
+      "HOTA": 38.845,
+      "IDF1": 44.0596,
+      "MOTA": 25.6942,
+      "FP": 15943,
+      "FN": 117264,
+      "IDSW": 374
+    },
+    "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a"
+  },
+  "tasks": [
+    {
+      "id": "P0",
+      "status": "ready_existing_entry",
+      "depends_on": [],
+      "goal": "验证历史 B、真实状态日志与输入"
+    },
+    {
+      "id": "E1-A",
+      "status": "starter_script_ready_unexecuted_on_real_data",
+      "depends_on": [
+        "P0"
+      ],
+      "goal": "冻结 Lost 队列",
+      "command": "python -X utf8 tools/prepare_v04_lost_cohort.py --run-root <round1-root> --output <new-output>/E1_cohort",
+      "outputs": [
+        "lost_cohort.csv",
+        "cohort_summary.json"
+      ]
+    },
+    {
+      "id": "E1-B",
+      "status": "implementation_pending",
+      "depends_on": [
+        "E1-A"
+      ],
+      "goal": "实际失败环节与 shadow 等价性"
+    },
+    {
+      "id": "E1-C",
+      "status": "implementation_pending",
+      "depends_on": [
+        "E1-B"
+      ],
+      "goal": "固定状态 P0/P1/P2 预测与分配对照"
+    },
+    {
+      "id": "E2",
+      "status": "implementation_pending",
+      "depends_on": [
+        "P0"
+      ],
+      "goal": "固定191行仅变坐标"
+    },
+    {
+      "id": "E3-A",
+      "status": "implementation_pending",
+      "depends_on": [
+        "P0"
+      ],
+      "goal": "全量原生FP逐行归因"
+    },
+    {
+      "id": "E3-B",
+      "status": "manual_review_pending",
+      "depends_on": [
+        "E3-A"
+      ],
+      "goal": "复核长期无GT支持及真实静止目标"
+    },
+    {
+      "id": "E3-C",
+      "status": "implementation_pending",
+      "depends_on": [
+        "E3-B"
+      ],
+      "goal": "因果可用特征可分性"
+    },
+    {
+      "id": "decision",
+      "status": "pending",
+      "depends_on": [
+        "E1-C",
+        "E2",
+        "E3-C"
+      ],
+      "goal": "决定后续模块；BLOCKED任务允许以明确理由结束"
+    }
+  ],
+  "limits": {
+    "E2_variants": 1,
+    "E1_prediction_hypotheses": [
+      "native",
+      "gmc_last_observation",
+      "gmc_decay_velocity"
+    ],
+    "decay_rho": 0.8,
+    "max_displacement_px": 48,
+    "low_score_rule_search": false,
+    "train_new_model": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "botsort_diagnostics_settings_v1",
+  "baseline_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt",
+  "features_dir": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_1_0/features_rgb",
+  "images_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/data/raw/VT-Tiny-MOT",
+  "gt_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/data/official_gt/GT/GT_00/test",
+  "output_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1",
+  "runtime_root": "${TRACKING_ROOT}/M3OT_MOT_Baseline_v0_1",
+  "sequences": null,
+  "max_review": 120
+}

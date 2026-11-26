@@ -1,0 +1,58 @@
+{
+  "status": "COMPLETE_EXECUTABLE_STAGES",
+  "plan_commit": "c3e142e6c11df0f2a7e8a84bede8556c7dabec1e",
+  "tasks": [
+    {
+      "id": "P0",
+      "status": "PASS",
+      "evidence": "P0/verification.json"
+    },
+    {
+      "id": "E1-A",
+      "status": "PASS",
+      "evidence": "E1/cohort/cohort_summary.json"
+    },
+    {
+      "id": "E1-B",
+      "status": "PASS",
+      "evidence": "E1/audit_analysis/E1_failure_report.md"
+    },
+    {
+      "id": "E1-C",
+      "status": "PASS",
+      "decision": "STOP",
+      "evidence": "E1/compare_analysis/E1_decision.md"
+    },
+    {
+      "id": "E2",
+      "status": "PASS",
+      "decision": "STOP",
+      "evidence": "E2/E2_report.md"
+    },
+    {
+      "id": "E3-A",
+      "status": "PASS",
+      "evidence": "E3/A/E3_A_evaluation_audit.json"
+    },
+    {
+      "id": "E3-B",
+      "status": "INCONCLUSIVE",
+      "limitation": "Independent human labels pending; 22 cards and separate model-assisted observations ready",
+      "evidence": "E3/B/E3_manual_review.csv"
+    },
+    {
+      "id": "E3-C",
+      "status": "INCONCLUSIVE",
+      "limitation": "Original-video grouped proxy holdout completed; confirmed background-versus-real-object analysis depends on E3-B",
+      "evidence": "E3/C/E3_C_signal_protocol.json"
+    }
+  ],
+  "decision": {
+    "reference": "B_early_moderate",
+    "new_tracker_module": false,
+    "E1": "STOP",
+    "E2": "STOP",
+    "E3": "INCONCLUSIVE",
+    "training_started": false
+  }
+}

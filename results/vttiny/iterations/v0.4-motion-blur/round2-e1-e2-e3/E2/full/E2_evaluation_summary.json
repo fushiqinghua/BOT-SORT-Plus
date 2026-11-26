@@ -1,0 +1,174 @@
+{
+  "status": "COMPLETE",
+  "smoke": false,
+  "reproduced_historical_B_and_raw": true,
+  "clear": {
+    "by_lineage": {
+      "all": {
+        "rows": 191,
+        "raw_tp": 72,
+        "kf_tp": 73,
+        "fp_to_tp": 2,
+        "tp_to_fp": 1,
+        "tp_gt_changed": 0
+      },
+      "fp_competing_assignment": {
+        "rows": 1,
+        "raw_tp": 0,
+        "kf_tp": 0,
+        "fp_to_tp": 0,
+        "tp_to_fp": 0,
+        "tp_gt_changed": 0
+      },
+      "fp_displaced_or_different_gt": {
+        "rows": 18,
+        "raw_tp": 0,
+        "kf_tp": 0,
+        "fp_to_tp": 0,
+        "tp_to_fp": 0,
+        "tp_gt_changed": 0
+      },
+      "fp_localization_same_anchor": {
+        "rows": 44,
+        "raw_tp": 0,
+        "kf_tp": 2,
+        "fp_to_tp": 2,
+        "tp_to_fp": 0,
+        "tp_gt_changed": 0
+      },
+      "fp_persistent_background": {
+        "rows": 45,
+        "raw_tp": 0,
+        "kf_tp": 0,
+        "fp_to_tp": 0,
+        "tp_to_fp": 0,
+        "tp_gt_changed": 0
+      },
+      "fp_unconfirmed_no_overlap": {
+        "rows": 3,
+        "raw_tp": 0,
+        "kf_tp": 0,
+        "fp_to_tp": 0,
+        "tp_to_fp": 0,
+        "tp_gt_changed": 0
+      },
+      "fp_weak_unconfirmed_overlap": {
+        "rows": 8,
+        "raw_tp": 0,
+        "kf_tp": 0,
+        "fp_to_tp": 0,
+        "tp_to_fp": 0,
+        "tp_gt_changed": 0
+      },
+      "tp_different_from_recent_clear_gt": {
+        "rows": 2,
+        "raw_tp": 2,
+        "kf_tp": 2,
+        "fp_to_tp": 0,
+        "tp_to_fp": 0,
+        "tp_gt_changed": 0
+      },
+      "tp_same_gt_longer_history_only": {
+        "rows": 9,
+        "raw_tp": 9,
+        "kf_tp": 9,
+        "fp_to_tp": 0,
+        "tp_to_fp": 0,
+        "tp_gt_changed": 0
+      },
+      "tp_same_id_double_witness": {
+        "rows": 61,
+        "raw_tp": 61,
+        "kf_tp": 60,
+        "fp_to_tp": 0,
+        "tp_to_fp": 1,
+        "tp_gt_changed": 0
+      }
+    },
+    "native_CLEAR_changes_B_to_raw": 0,
+    "native_CLEAR_changes_raw_to_KF": 0,
+    "target": {
+      "sequence": "DJI_0303_2",
+      "frame": 58,
+      "track_id": 2,
+      "det_index": 5,
+      "prior_gt": "1",
+      "lineage_category": "fp_localization_same_anchor",
+      "raw_clear_gt": null,
+      "kf_clear_gt": 1,
+      "raw_best_gt_iou": 0.4735095495321624,
+      "kf_best_gt_iou": 0.5292975780788268,
+      "raw_iou_prior_gt": 0.4735095495321624,
+      "kf_iou_prior_gt": 0.5292975780788268,
+      "raw_TP": false,
+      "kf_TP": true
+    }
+  },
+  "fixed_windows": {
+    "B_early_moderate": {
+      "windows": 287,
+      "original_failure_same_id": 0,
+      "stable": {
+        "3": 152,
+        "5": 122,
+        "10": 77
+      }
+    },
+    "B_postlow_output_v1": {
+      "windows": 287,
+      "original_failure_same_id": 49,
+      "stable": {
+        "3": 164,
+        "5": 124,
+        "10": 78
+      }
+    },
+    "E2_kf": {
+      "windows": 287,
+      "original_failure_same_id": 50,
+      "stable": {
+        "3": 164,
+        "5": 124,
+        "10": 78
+      }
+    }
+  },
+  "combined": {
+    "B_early_moderate": {
+      "tracker": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.84495631557171,
+      "DetA": 26.061806148839445,
+      "AssA": 59.409466872314695,
+      "IDF1": 44.059591903122495,
+      "MOTA": 25.694212669381216,
+      "FP": 15943,
+      "FN": 117264,
+      "IDSW": 374
+    },
+    "B_postlow_output_v1": {
+      "tracker": "B_postlow_output_v1",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.860826878945446,
+      "DetA": 26.084271569289086,
+      "AssA": 59.40986885502074,
+      "IDF1": 44.07423746391449,
+      "MOTA": 25.66695592194558,
+      "FP": 16062,
+      "FN": 117192,
+      "IDSW": 376
+    },
+    "E2_kf": {
+      "tracker": "E2_kf",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.861139194401986,
+      "DetA": 26.084415016071155,
+      "AssA": 59.41051234368655,
+      "IDF1": 44.07423746391449,
+      "MOTA": 25.66806844224907,
+      "FP": 16061,
+      "FN": 117191,
+      "IDSW": 376
+    }
+  }
+}

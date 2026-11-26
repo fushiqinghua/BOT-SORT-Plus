@@ -73,6 +73,8 @@
 
 已归档两组中断的逐帧复核、短时低分续接和紧邻帧门控、只补帧验证，以及背景误报溯源与输出筛选。各轮统一使用冻结 B、官方 30 段和固定 D3 恢复窗口。 [后续核验与证据索引](d3-follow-up/README.md)
 
-## 下一轮执行入口
+## 第二批实验
 
-[Lost 关联机会、固定补框坐标和原生误报审计计划](../../../../docs/botsort_plus/diagnostics_v0.4/NEXT_ROUND.md)。先完成 P0 和 E1-A，再开展具体反事实及审计任务；正式参考保持 B_early_moderate。
+[P0、E1、E2、E3 结果与复现](round2-e1-e2-e3/README.md) 记录了冻结核验、Lost 关联错因和固定状态对照、单帧补框坐标消融，以及原生误报审计。E1 和 E2 判定 STOP。E3 模型辅助核对已完成，正式人工复核仍为待填写。
+
+[历史执行计划](../../../../docs/botsort_plus/diagnostics_v0.4/NEXT_ROUND.md) · [验收状态](round2-e1-e2-e3/task_status.json)

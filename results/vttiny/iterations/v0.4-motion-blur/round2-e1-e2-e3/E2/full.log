@@ -1,0 +1,58 @@
+['${REDETR_ENV}/bin/python', '-B', '-u', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/e2_boxes.py', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/round1/d3_validate_output_only_v1/variant_full', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/P0/verification.json', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/full']
+DJI_0028_3 4 frozen candidates updated
+DJI_0030_2 7 frozen candidates updated
+DJI_0032_3 2 frozen candidates updated
+DJI_0049_2 1 frozen candidates updated
+DJI_0051_2 3 frozen candidates updated
+DJI_0061_2 21 frozen candidates updated
+DJI_0073_3 21 frozen candidates updated
+DJI_0109_1 0 frozen candidates updated
+DJI_0119_2 0 frozen candidates updated
+DJI_0129_2 0 frozen candidates updated
+DJI_0141_2 24 frozen candidates updated
+DJI_0155_2 1 frozen candidates updated
+DJI_0159_2 0 frozen candidates updated
+DJI_0169_3 5 frozen candidates updated
+DJI_0173_2 0 frozen candidates updated
+DJI_0181_3 15 frozen candidates updated
+DJI_0221_2 1 frozen candidates updated
+DJI_0225_1 3 frozen candidates updated
+DJI_0237_2 1 frozen candidates updated
+DJI_0255_1 0 frozen candidates updated
+DJI_0257_2 0 frozen candidates updated
+DJI_0277_2 1 frozen candidates updated
+DJI_0283_1 5 frozen candidates updated
+DJI_0303_2 2 frozen candidates updated
+DJI_0307_2 0 frozen candidates updated
+DJI_0309_4 5 frozen candidates updated
+DJI_0325_2 0 frozen candidates updated
+DJI_0327_3 55 frozen candidates updated
+DJI_0339_2 10 frozen candidates updated
+DJI_0345_2 4 frozen candidates updated
+['${REDETR_ENV}/bin/python', '-B', '-u', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/e2_evaluate.py', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/full', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/data/official_gt/GT/GT_00/test', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/external/TrackEval', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/round1/d3_output_only_comparison_v1/full/trackeval']
+
+CLEAR Config:
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Identity Config:
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Evaluating 3 tracker(s) on 30 sequence(s) for 1 class(es) on VTTinyObjects dataset using the following metrics: HOTA, CLEAR, Identity, Count
+
+
+Evaluating B_early_moderate
+
+
+Evaluating B_postlow_output_v1
+
+
+Evaluating E2_kf
+
+{"status": "COMPLETE", "output_dir": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/full/trackeval", "scope": "full_official_test_development", "reference": "comparable"}
+
+CLEAR Config:
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+E2_EVALUATION_COMPLETE ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/full

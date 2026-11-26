@@ -1,0 +1,132 @@
+{
+  "status": "COMPLETE",
+  "scope": "offline diagnostic cohort, not official FP/FN or recovered matches",
+  "run_root": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1",
+  "tracker": "B_early_moderate",
+  "input_hashes": {
+    "detection_audit.csv": "0abf8fb8291854c530f25950131fd5742f6c5990d920a8364c84b11f0bda7ff1",
+    "frame_error.csv": "2197baae5711022c15b99f4542778055fdfe2a694a5673deda70c3ca2812ccd4",
+    "recovery_checks.csv": "793ddcb86e51af02fbd7ffa0623f772572d99f11ab33476b7b99dc37fb13c7b7",
+    "recovery_events.csv": "ef6b67b8c3b21dd99126a6545bf90567dabb678ddb36fddb3134c2f2c58044de",
+    "recovery_windows.csv": "91822fa975dcd178a99e154d038ee5854662d3dcb7f71c7f72f6077a7bdf0439",
+    "track_error.csv": "6aea133b46e0fda328ef2acb9015dbf73e5732357d7ce13287979b30a8c18861"
+  },
+  "all": {
+    "track_frames": 7792,
+    "gt_frames": 7472,
+    "gt_tracks": 278,
+    "lost_episodes": 1010,
+    "sequences": 25
+  },
+  "missing_with_usable_detection": {
+    "track_frames": 1416,
+    "gt_frames": 1340,
+    "gt_tracks": 208,
+    "lost_episodes": 609,
+    "sequences": 25
+  },
+  "groups": {
+    "ambiguous_output": {
+      "track_frames": 13,
+      "gt_frames": 13,
+      "gt_tracks": 12,
+      "lost_episodes": 13,
+      "sequences": 2
+    },
+    "different_id": {
+      "track_frames": 1130,
+      "gt_frames": 993,
+      "gt_tracks": 64,
+      "lost_episodes": 124,
+      "sequences": 16
+    },
+    "missing_with_ambiguous_detection": {
+      "track_frames": 38,
+      "gt_frames": 38,
+      "gt_tracks": 29,
+      "lost_episodes": 31,
+      "sequences": 11
+    },
+    "missing_without_usable_detection": {
+      "track_frames": 4525,
+      "gt_frames": 4449,
+      "gt_tracks": 247,
+      "lost_episodes": 640,
+      "sequences": 25
+    },
+    "other_track_consumed_high": {
+      "track_frames": 172,
+      "gt_frames": 142,
+      "gt_tracks": 31,
+      "lost_episodes": 63,
+      "sequences": 14
+    },
+    "other_track_consumed_low": {
+      "track_frames": 2,
+      "gt_frames": 2,
+      "gt_tracks": 2,
+      "lost_episodes": 2,
+      "sequences": 1
+    },
+    "same_id_correct": {
+      "track_frames": 628,
+      "gt_frames": 628,
+      "gt_tracks": 192,
+      "lost_episodes": 628,
+      "sequences": 25
+    },
+    "same_track_consumed_high": {
+      "track_frames": 5,
+      "gt_frames": 5,
+      "gt_tracks": 3,
+      "lost_episodes": 5,
+      "sequences": 3
+    },
+    "same_track_consumed_low": {
+      "track_frames": 1,
+      "gt_frames": 1,
+      "gt_tracks": 1,
+      "lost_episodes": 1,
+      "sequences": 1
+    },
+    "unconsumed_high": {
+      "track_frames": 129,
+      "gt_frames": 103,
+      "gt_tracks": 32,
+      "lost_episodes": 72,
+      "sequences": 17
+    },
+    "unconsumed_low": {
+      "track_frames": 1098,
+      "gt_frames": 1078,
+      "gt_tracks": 196,
+      "lost_episodes": 553,
+      "sequences": 24
+    },
+    "usable_without_unique_detection": {
+      "track_frames": 9,
+      "gt_frames": 9,
+      "gt_tracks": 8,
+      "lost_episodes": 8,
+      "sequences": 2
+    },
+    "wrong_identity": {
+      "track_frames": 42,
+      "gt_frames": 42,
+      "gt_tracks": 35,
+      "lost_episodes": 42,
+      "sequences": 4
+    }
+  },
+  "boundary_counts": {
+    "lost_unknown_or_unannotated": 14752,
+    "lost_gap_outside_2_30": 450,
+    "lost_gap31": 450,
+    "state_4": 449
+  },
+  "notes": [
+    "Groups share GT frames; do not sum their deduplicated counts.",
+    "The paired detection is a conservative diagnostic association, not all possible overlapping candidates.",
+    "No counterfactual prediction or assignment was executed."
+  ]
+}

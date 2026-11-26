@@ -1,0 +1,6 @@
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E1/yolo_settings/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+[32m[1mSUCCESS [0m | [32m[1mBotSort: det_thresh=0.5, max_age=30, max_obs=50, min_hits=3, iou_threshold=0.3, per_class=False, asso_func=iou, track_high_thresh=0.5, track_low_thresh=0.1, new_track_thresh=0.6, track_buffer=60, match_thresh=0.8, proximity_thresh=0.5, appearance_thresh=0.4, cmc_method=sof, frame_rate=15, fuse_first_associate=False, with_reid=False[0m
+B_early_moderate: DJI_0030_2, 590 frames, 2835 rows
+E1_SHADOW_BYTE_PARITY pilot 1

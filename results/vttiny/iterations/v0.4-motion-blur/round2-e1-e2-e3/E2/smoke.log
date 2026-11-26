@@ -1,0 +1,56 @@
+['${REDETR_ENV}/bin/python', '-B', '-u', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/e2_boxes.py', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/round1/d3_validate_output_only_v1/variant_full', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/P0/verification.json', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/smoke', '--smoke']
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/yolo_settings/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+DJI_0303_2 2 frozen candidates updated
+DJI_0327_3 55 frozen candidates updated
+DJI_0339_2 10 frozen candidates updated
+DJI_0141_2 24 frozen candidates updated
+['${REDETR_ENV}/bin/python', '-B', '-u', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/e2_evaluate.py', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/smoke', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/data/official_gt/GT/GT_00/test', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/external/TrackEval', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/round1/d3_output_only_comparison_v1/full/trackeval']
+
+CLEAR Config:
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Identity Config:
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Evaluating 3 tracker(s) on 4 sequence(s) for 1 class(es) on VTTinyObjects dataset using the following metrics: HOTA, CLEAR, Identity, Count
+
+
+Evaluating B_early_moderate
+
+
+Evaluating B_postlow_output_v1
+
+
+Evaluating E2_kf
+
+{"status": "COMPLETE", "output_dir": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/smoke/trackeval", "scope": "subset", "reference": "comparable"}
+
+CLEAR Config:
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+Traceback (most recent call last):
+  File "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/e2_evaluate.py", line 246, in <module>
+    main()
+  File "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/e2_evaluate.py", line 237, in main
+    clear = truth_audit(args, selected, metrics, boxes)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/e2_evaluate.py", line 135, in truth_audit
+    iou = [float(box_iou_matrix([box], [{"xyxy": anchors_here[0]}])[0, 0])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/e2_evaluate.py", line 135, in <listcomp>
+    iou = [float(box_iou_matrix([box], [{"xyxy": anchors_here[0]}])[0, 0])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6/botsort_plus/diagnostics/common.py", line 68, in box_iou_matrix
+    b = np.asarray(truth, dtype=float).reshape(-1, 4)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'dict'
+Traceback (most recent call last):
+  File "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/run_e2.py", line 31, in <module>
+    subprocess.run(command, check=True)
+  File "${REDETR_ENV}/lib/python3.11/subprocess.py", line 569, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['${REDETR_ENV}/bin/python', '-B', '-u', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/e2_evaluate.py', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E2/smoke', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/data/official_gt/GT/GT_00/test', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/external/TrackEval', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections', '${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/round1/d3_output_only_comparison_v1/full/trackeval']' returned non-zero exit status 1.

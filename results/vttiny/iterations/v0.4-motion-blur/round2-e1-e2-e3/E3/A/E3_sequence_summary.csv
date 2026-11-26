@@ -1,0 +1,31 @@
+﻿sequence,original_video,frames,TP,FP,FN,IDSW,zero_marked_gt,fp_categories,persistent_nogt_candidates
+DJI_0028_3,DJI_0028,570,4079,530,982,28,0,"{""different_gt_nearby_after_known_identity"": 79, ""displaced_or_unconfirmed_after_known_identity"": 38, ""persistent_no_gt_support"": 7, ""same_target_localization_below_threshold"": 194, ""unconfirmed_identity_or_annotation"": 212}",2
+DJI_0030_2,DJI_0030,590,1555,1280,3041,0,0,"{""persistent_no_gt_support"": 332, ""same_target_localization_below_threshold"": 198, ""unconfirmed_identity_or_annotation"": 750}",3
+DJI_0032_3,DJI_0032,290,2876,179,1812,9,0,"{""different_gt_nearby_after_known_identity"": 1, ""displaced_or_unconfirmed_after_known_identity"": 6, ""persistent_no_gt_support"": 53, ""possible_tail_after_last_annotation"": 5, ""same_target_localization_below_threshold"": 53, ""unconfirmed_identity_or_annotation"": 61}",3
+DJI_0049_2,DJI_0049,90,88,50,484,0,0,"{""unconfirmed_identity_or_annotation"": 50}",0
+DJI_0051_2,DJI_0051,580,798,0,322,5,0,{},0
+DJI_0061_2,DJI_0061,240,8325,2301,17253,178,0,"{""competition_or_duplicate"": 49, ""different_gt_nearby_after_known_identity"": 534, ""displaced_or_unconfirmed_after_known_identity"": 27, ""possible_tail_after_last_annotation"": 31, ""same_target_localization_below_threshold"": 1240, ""unconfirmed_identity_or_annotation"": 420}",0
+DJI_0073_3,DJI_0073,360,11711,1270,7479,20,0,"{""competition_or_duplicate"": 46, ""different_gt_nearby_after_known_identity"": 50, ""displaced_or_unconfirmed_after_known_identity"": 52, ""persistent_no_gt_support"": 374, ""possible_tail_after_last_annotation"": 64, ""same_target_localization_below_threshold"": 521, ""unconfirmed_identity_or_annotation"": 163}",4
+DJI_0109_1,DJI_0109,90,70,0,20,15,0,{},0
+DJI_0119_2,DJI_0119,180,167,0,193,0,0,{},0
+DJI_0129_2,DJI_0129,590,550,7,40,0,0,"{""same_target_localization_below_threshold"": 7}",0
+DJI_0141_2,DJI_0141,410,6670,1539,10476,11,0,"{""competition_or_duplicate"": 10, ""persistent_no_gt_support"": 348, ""possible_tail_after_last_annotation"": 2, ""same_target_localization_below_threshold"": 582, ""unconfirmed_identity_or_annotation"": 597}",5
+DJI_0155_2,DJI_0155,410,71,12,289,2,0,"{""no_official_gt_at_frame"": 1, ""persistent_no_gt_support"": 8, ""same_target_localization_below_threshold"": 3}",1
+DJI_0159_2,DJI_0159,250,52,2,198,0,0,"{""same_target_localization_below_threshold"": 2}",0
+DJI_0169_3,DJI_0169,290,2537,1511,2905,11,0,"{""competition_or_duplicate"": 6, ""displaced_or_unconfirmed_after_known_identity"": 3, ""persistent_no_gt_support"": 554, ""possible_tail_after_last_annotation"": 4, ""same_target_localization_below_threshold"": 418, ""unconfirmed_identity_or_annotation"": 526}",2
+DJI_0173_2,DJI_0173,450,192,150,258,24,0,"{""same_target_localization_below_threshold"": 120, ""unconfirmed_identity_or_annotation"": 30}",0
+DJI_0181_3,DJI_0181,320,3768,1127,4102,4,0,"{""different_gt_nearby_after_known_identity"": 26, ""displaced_or_unconfirmed_after_known_identity"": 22, ""persistent_no_gt_support"": 286, ""possible_tail_after_last_annotation"": 134, ""same_target_localization_below_threshold"": 256, ""unconfirmed_identity_or_annotation"": 403}",6
+DJI_0221_2,DJI_0221,590,153,110,544,2,0,"{""same_target_localization_below_threshold"": 110}",0
+DJI_0225_1,DJI_0225,329,1837,165,1845,5,0,"{""competition_or_duplicate"": 4, ""persistent_no_gt_support"": 100, ""possible_tail_after_last_annotation"": 1, ""same_target_localization_below_threshold"": 38, ""unconfirmed_identity_or_annotation"": 22}",3
+DJI_0237_2,DJI_0237,410,517,31,682,0,0,"{""persistent_no_gt_support"": 27, ""same_target_localization_below_threshold"": 4}",3
+DJI_0255_1,DJI_0255,600,397,5,203,7,0,"{""same_target_localization_below_threshold"": 5}",0
+DJI_0257_2,DJI_0257,590,541,156,476,10,0,"{""same_target_localization_below_threshold"": 133, ""unconfirmed_identity_or_annotation"": 23}",0
+DJI_0277_2,DJI_0277,366,908,0,76,4,0,{},0
+DJI_0283_1,DJI_0283,450,3199,1367,2769,2,0,"{""displaced_or_unconfirmed_after_known_identity"": 107, ""persistent_no_gt_support"": 137, ""same_target_localization_below_threshold"": 620, ""unconfirmed_identity_or_annotation"": 503}",1
+DJI_0303_2,DJI_0303,577,1158,133,1392,9,0,"{""different_gt_nearby_after_known_identity"": 27, ""persistent_no_gt_support"": 3, ""same_target_localization_below_threshold"": 103}",1
+DJI_0307_2,DJI_0307,180,39,0,38,0,0,{},0
+DJI_0309_4,DJI_0309,603,571,30,844,7,0,"{""persistent_no_gt_support"": 2, ""same_target_localization_below_threshold"": 28}",1
+DJI_0325_2,DJI_0325,595,0,29,0,0,0,"{""no_official_gt_at_frame"": 29}",0
+DJI_0327_3,DJI_0327,390,9256,1906,54907,21,0,"{""competition_or_duplicate"": 29, ""different_gt_nearby_after_known_identity"": 300, ""displaced_or_unconfirmed_after_known_identity"": 8, ""persistent_no_gt_support"": 49, ""possible_tail_after_last_annotation"": 2, ""same_target_localization_below_threshold"": 1443, ""unconfirmed_identity_or_annotation"": 75}",1
+DJI_0339_2,DJI_0339,600,411,1155,1389,0,0,"{""persistent_no_gt_support"": 509, ""same_target_localization_below_threshold"": 27, ""unconfirmed_identity_or_annotation"": 619}",2
+DJI_0345_2,DJI_0345,600,12,898,2245,0,0,"{""persistent_no_gt_support"": 369, ""same_target_localization_below_threshold"": 458, ""unconfirmed_identity_or_annotation"": 71}",3

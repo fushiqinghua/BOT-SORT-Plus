@@ -1,0 +1,22 @@
+{
+  "E3-A": "PASS",
+  "E3-B": "INCONCLUSIVE_PENDING_INDEPENDENT_HUMAN_REVIEW",
+  "E3-C": "INCONCLUSIVE_MANUAL_CONFIRMATION_REQUIRED",
+  "E3_decision": "INCONCLUSIVE",
+  "native_tracker_changed": false,
+  "human_labels": 0,
+  "visual_labels_by_stratum": {
+    "CLEAR_matched_small_near_static": {
+      "object_like": 5,
+      "uncertain": 2
+    },
+    "persistent_no_gt_support": {
+      "background_like": 6,
+      "uncertain": 3,
+      "possible_unlabelled_object": 1
+    },
+    "same_target_near_IoU_boundary": {
+      "object_like": 5
+    }
+  }
+}

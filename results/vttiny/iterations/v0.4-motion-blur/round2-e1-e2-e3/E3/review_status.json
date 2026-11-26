@@ -1,0 +1,24 @@
+{
+  "model_assisted_rgb_review": {
+    "status": "COMPLETE",
+    "reviewed_cases": 22,
+    "labels": {
+      "background_like": 6,
+      "uncertain": 5,
+      "possible_unlabelled_object": 1,
+      "object_like": 10
+    },
+    "evidence": "B/E3_machine_assisted_review.csv"
+  },
+  "independent_human_review": {
+    "status": "PENDING",
+    "scheduled_cases": 22,
+    "completed_labels": 0,
+    "evidence": "B/E3_manual_review.csv"
+  },
+  "original_video_proxy_holdout": {
+    "status": "COMPLETE_PROXY_ONLY",
+    "overall_decision": "INCONCLUSIVE",
+    "evidence": "C/E3_C_signal_protocol.json"
+  }
+}

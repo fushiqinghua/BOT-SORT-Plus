@@ -1,0 +1,15 @@
+{
+  "status": "WAITING_FOR_HUMAN_REVIEW",
+  "samples": 22,
+  "source_videos": 11,
+  "sampling": "Highest FP burden with source diversity, same-video small near-static CLEAR matches and localization controls",
+  "labels": [
+    "confirmed_background",
+    "possible_unlabelled_object",
+    "true_object",
+    "uncertain"
+  ],
+  "a_digest": "7f44da7596a2a0f5a3bcb5659e781b1fad2a0d24694c9622dc2ef9768552dd47",
+  "manual_review_sha256": "b1b60819dafaeba3e441c743988ed597f55d41089bd7efad4827e3de8e42099d",
+  "note": "Sampling is diagnostic. Traces and GT are used for overlay and evidence selection only."
+}

@@ -1,0 +1,33 @@
+{
+  "input": {
+    "40": {
+      "input_image": "test2017/DJI_0339_2/00/00382.jpg",
+      "decoded_bgr_sha256": "e236bde24391c4725e30e929f83a93701eb71efc179e173d49e2d5eb23037366"
+    },
+    "41": {
+      "input_image": "test2017/DJI_0339_2/00/00383.jpg",
+      "decoded_bgr_sha256": "8cddb27d2eb32d06857e643ef42e4b6061471c94dcfdad69819890e220740043"
+    },
+    "42": {
+      "input_image": "test2017/DJI_0339_2/00/00384.jpg",
+      "decoded_bgr_sha256": "a0cba1a41c4f0245774938c088e90b917d3376b912a71c142a2db2b3a3231548"
+    }
+  },
+  "outputs_sha256": {
+    "0040_context_annotated.png": "a893cac5e9f930f62830734f2736c99c028a637be6bb15abbbf8f13610b9776b",
+    "0040_context_native.png": "8e7ae931ce93a1e8a2ede9dad34563d2a49ce7014436585612731705ea39d556",
+    "0040_crop_native.png": "b84190333222651c5029f055ac5267b051776b34938607ebd2227b290713832c",
+    "0041_context_annotated.png": "9e9c777ebb776a94426d3af6737225481f593266bf54c1b98b68fe7782bbb8ba",
+    "0041_context_native.png": "34ec66f8639a2b685105eafefe9f899596796238c4dd2fabc785d5d0554b0969",
+    "0041_crop_native.png": "03f2d543a923e1cf9bcbe8462fac2b6504e267c0377dc6be72b2534937d22355",
+    "0042_context_annotated.png": "cc785f302cc050fae04fedc38ac57958530fe56ef63dbb0e9eb7f907b79c0b64",
+    "0042_context_native.png": "dc06ebd93639ed0eac50783152bc9f412b93bf927887e44c84f0b45c4bc6cd65",
+    "0042_crop_native.png": "550aca4df9cc257fc85fb90af5da9b2d1efe1c3cb05a17ccc224cbc058b6e9ac",
+    "review.png": "01868ec2200bf98846f929cfe576a193fb68aec394f5fd75a6d38d01bff8a371"
+  },
+  "frame_roles": {
+    "40": "adjacent_same_track",
+    "41": "center",
+    "42": "adjacent_same_track"
+  }
+}

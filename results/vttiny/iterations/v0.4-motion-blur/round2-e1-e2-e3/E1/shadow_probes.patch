@@ -1,0 +1,110 @@
+diff --git a/botsort_plus/adapter_v2.py b/botsort_plus/adapter_v2.py
+index 2797115..64daae7 100644
+--- a/botsort_plus/adapter_v2.py
++++ b/botsort_plus/adapter_v2.py
+@@ -105,6 +105,9 @@ def _projected_lost(tracker, activated, refound, lost):
+ def update_v2(tracker, dets, img, dense):
+     tracker.frame_count += 1
+     frame = tracker.frame_count
++    e1_shadow = getattr(tracker, "e1_shadow", None)
++    if e1_shadow is not None:
++        e1_shadow.begin(tracker, frame)
+     plus = tracker.plus
+     if plus.raw_ir.enabled and (not hasattr(tracker,"raw_ir_observer") or tracker.raw_ir_observer.frame != frame):
+         raise ValueError("Expected current aligned raw IR frame before tracker update")
+@@ -212,7 +215,11 @@ def update_v2(tracker, dets, img, dense):
+                     if t.state == TrackState.Lost and frame - t.end_frame <= tracker.max_time_lost}
+         views = [LostTrackView(t.id, t.end_frame, tracker.prediction_history.get(t.id, {}),
+                                tracker.memories.get(t.id)) for t in eligible.values()]
++        if e1_shadow is not None:
++            e1_shadow.before_b(tracker.recovery_matcher, views, current_candidates)
+         decision = tracker.recovery_matcher.match(frame, views, current_candidates, app_cost)
++        if e1_shadow is not None:
++            e1_shadow.after_b(decision)
+         reserved = decision.reserved_candidate_ids
+         tracker.last_events.extend({"event": "recovery_check", **item} for item in decision.diagnostics)
+         for match in decision.matches:
+diff --git a/botsort_plus/candidates.py b/botsort_plus/candidates.py
+index cd024f8..28cd10e 100644
+--- a/botsort_plus/candidates.py
++++ b/botsort_plus/candidates.py
+@@ -295,6 +295,8 @@ class CandidatePool:
+                 continue
+             current.append(self._new(observation))
+ 
++        if getattr(self, "e1_shadow", None) is not None:
++            self.e1_shadow.candidate(observations, retained, old, costs, pairs)
+         # Highest evidence first, then recent observation and deterministic ID.
+         # Bounded memory also protects long sequences containing stable clutter.
+         if len(self.candidates) > self.config.max_candidates:
+diff --git a/botsort_plus/native_adapter.py b/botsort_plus/native_adapter.py
+index 319ff55..26de2b0 100644
+--- a/botsort_plus/native_adapter.py
++++ b/botsort_plus/native_adapter.py
+@@ -197,6 +197,8 @@ class BoTSORTPlus(BotSort):
+                              activated, refound, unconfirmed)
+         costs = self._cost(tracks,detections,unconfirmed=unconfirmed)
+         matches, u_tracks, u_detections = linear_assignment(costs, thresh=threshold)
++        if stage == "high" and getattr(self, "e1_shadow", None) is not None:
++            self.e1_shadow.native(self, tracks, detections, threshold, costs, matches)
+         for i,j in matches:
+             track, det = tracks[int(i)],detections[int(j)]
+             detail = (appearance_details(self.memories.get(track.id),self._packets[int(det.det_ind)],
+diff --git a/botsort_plus/recovery.py b/botsort_plus/recovery.py
+index 5afea3d..30dd080 100644
+--- a/botsort_plus/recovery.py
++++ b/botsort_plus/recovery.py
+@@ -271,6 +271,8 @@ class RecoveryMatcher:
+                         np.any(col_rivals <= value + margin)):
+                     eligible[i, j] = np.inf
+                     pair_info[i, j]["reason"] = "ambiguous"
++        if getattr(self, "e1_shadow", None) is not None:
++            self.e1_shadow.b_cost(raw_costs, eligible)
+         pairs, _, _ = assign_with_rejection(eligible, self.config.max_cost, margin=0)
+         for i, j in pairs:
+             info = pair_info[i, j]
+diff --git a/tools/run_botsort_plus.py b/tools/run_botsort_plus.py
+index b2ea718..09196c5 100644
+--- a/tools/run_botsort_plus.py
++++ b/tools/run_botsort_plus.py
+@@ -154,6 +154,7 @@ def run(args):
+     import cv2
+     import torch
+     from botsort_plus.native_adapter import BoTSORTPlus
++    from botsort_plus.diagnostics.association_shadow import ShadowRecorder
+     cv2.setNumThreads(1); torch.set_num_threads(1)
+     root=args.output_dir; name=cfg.name
+     protocol_path=root/"protocols"/(name+".json")
+@@ -183,6 +184,8 @@ def run(args):
+             cv2.setRNGSeed(0)
+             tracker=BoTSORTPlus(plus_config=cfg,reid_weights=Path("cache-only.pt"),device=torch.device("cpu"),
+                                half=False,**protocol["native_config"])
++            shadow = ShadowRecorder(root/"shadow"/name/(seq+".jsonl.gz"), seq, len(cache["frames"]))
++            tracker.e1_shadow = tracker.candidate_pool.e1_shadow = tracker.recovery_matcher.e1_shadow = shadow
+             position = position_class(position_policy, registration) if position_policy is not None else None
+             if cfg.raw_ir.enabled:
+                 tracker.raw_ir_observer=ThermalObserver(args.ir_tiles,seq,protocol["detection_fingerprints"][seq],
+@@ -224,6 +227,7 @@ def run(args):
+                         if cfg.raw_ir.enabled:
+                             tracker.raw_ir_observer.begin(row["frame"],image_path,len(det))
+                         t=time.perf_counter(); prediction=tracker.update(det,image,features=packets); seconds+=time.perf_counter()-t
++                        shadow.finish()
+                         translation = position.update(row["frame"],image_path,prediction,tracker.last_events) if position else {}
+                         seen=set()
+                         for item in prediction:
+@@ -247,6 +251,7 @@ def run(args):
+                         event_stream.write(json.dumps({"sequence":seq, **event},
+                                                       ensure_ascii=False,allow_nan=False)+"\n")
+                 temp.replace(dest)
++                shadow.close()
+                 protocol["decoded_image_hashes"][seq]=image_digest.hexdigest()
+                 if recorder is not None:
+                     manifest=recorder.close()
+@@ -260,6 +265,7 @@ def run(args):
+                 if position is not None:
+                     protocol["output_position"]["sequence_reasons"][seq] = dict(position.status)
+             except Exception as error:
++                shadow.abort()
+                 if recorder is not None and recorder.manifest["status"]!="COMPLETE":
+                     recorder.abort(error)
+                 raise

@@ -1,0 +1,86 @@
+{
+  "by_lineage": {
+    "all": {
+      "rows": 91,
+      "raw_tp": 48,
+      "kf_tp": 49,
+      "fp_to_tp": 1,
+      "tp_to_fp": 0,
+      "tp_gt_changed": 0
+    },
+    "fp_displaced_or_different_gt": {
+      "rows": 1,
+      "raw_tp": 0,
+      "kf_tp": 0,
+      "fp_to_tp": 0,
+      "tp_to_fp": 0,
+      "tp_gt_changed": 0
+    },
+    "fp_localization_same_anchor": {
+      "rows": 23,
+      "raw_tp": 0,
+      "kf_tp": 1,
+      "fp_to_tp": 1,
+      "tp_to_fp": 0,
+      "tp_gt_changed": 0
+    },
+    "fp_persistent_background": {
+      "rows": 17,
+      "raw_tp": 0,
+      "kf_tp": 0,
+      "fp_to_tp": 0,
+      "tp_to_fp": 0,
+      "tp_gt_changed": 0
+    },
+    "fp_unconfirmed_no_overlap": {
+      "rows": 2,
+      "raw_tp": 0,
+      "kf_tp": 0,
+      "fp_to_tp": 0,
+      "tp_to_fp": 0,
+      "tp_gt_changed": 0
+    },
+    "tp_different_from_recent_clear_gt": {
+      "rows": 1,
+      "raw_tp": 1,
+      "kf_tp": 1,
+      "fp_to_tp": 0,
+      "tp_to_fp": 0,
+      "tp_gt_changed": 0
+    },
+    "tp_same_gt_longer_history_only": {
+      "rows": 5,
+      "raw_tp": 5,
+      "kf_tp": 5,
+      "fp_to_tp": 0,
+      "tp_to_fp": 0,
+      "tp_gt_changed": 0
+    },
+    "tp_same_id_double_witness": {
+      "rows": 42,
+      "raw_tp": 42,
+      "kf_tp": 42,
+      "fp_to_tp": 0,
+      "tp_to_fp": 0,
+      "tp_gt_changed": 0
+    }
+  },
+  "native_CLEAR_changes_B_to_raw": 0,
+  "native_CLEAR_changes_raw_to_KF": 0,
+  "target": {
+    "sequence": "DJI_0303_2",
+    "frame": 58,
+    "track_id": 2,
+    "det_index": 5,
+    "prior_gt": "1",
+    "lineage_category": "fp_localization_same_anchor",
+    "raw_clear_gt": null,
+    "kf_clear_gt": 1,
+    "raw_best_gt_iou": 0.4735095495321624,
+    "kf_best_gt_iou": 0.5292975780788268,
+    "raw_iou_prior_gt": 0.4735095495321624,
+    "kf_iou_prior_gt": 0.5292975780788268,
+    "raw_TP": false,
+    "kf_TP": true
+  }
+}

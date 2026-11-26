@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "pilot": true,
+  "native_mot_events_byte_exact": true,
+  "all_original_recovery_checks_byte_exact": true,
+  "frozen_protocol_sha256": "5be88ef93661106132e7f332a73ac56e7eb213441876ccf986c11f85246a52c2",
+  "replay_protocol_sha256": "18b01c31aacf16788b1b78de074522462b03d7c8c1f47726e6a0998073b68a8e",
+  "sequences": {
+    "DJI_0030_2": {
+      "mot_sha256": "da2dc3b9e0dead0b60e08aceb390f79c1621d537883576963e511c4017156f56",
+      "event_sha256": "68a0e5368965963a2a83ab993927269471bfc0c49d6dc4a2769d61208a90e556",
+      "shadow_sha256": "6895abb10b36207858dded78ac75fc07e06bd215025e1871df9f184daa67dd57",
+      "frames": 590
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "status": "COMPLETE",
+  "sequences": 30,
+  "positions": 7792,
+  "assignment_deltas": 1351,
+  "metrics": {
+    "P0": {
+      "center_MED": 2.611301113522429,
+      "center_MEAN": 11.03693513605399,
+      "available": "all",
+      "current_geometry_pass": 3352,
+      "current_geometry_denominator": 3894,
+      "native_high_pass": 537,
+      "native_high_denominator": 1629,
+      "B_raw_pass": 978,
+      "B_raw_denominator": 1516
+    },
+    "P1": {
+      "center_MED": 5.799659038775701,
+      "center_MEAN": 15.119035492122178,
+      "available": 7792,
+      "current_geometry_pass": 3173,
+      "current_geometry_denominator": 3894,
+      "native_high_pass": 360,
+      "native_high_denominator": 1629,
+      "B_raw_pass": 880,
+      "B_raw_denominator": 1516
+    },
+    "P2": {
+      "center_MED": 3.9599809928507366,
+      "center_MEAN": 13.095500110714903,
+      "available": 7792,
+      "current_geometry_pass": 3297,
+      "current_geometry_denominator": 3894,
+      "native_high_pass": 447,
+      "native_high_denominator": 1629,
+      "B_raw_pass": 950,
+      "B_raw_denominator": 1516
+    }
+  }
+}

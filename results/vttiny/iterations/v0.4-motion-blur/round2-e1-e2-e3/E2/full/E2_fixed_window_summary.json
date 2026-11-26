@@ -1,0 +1,36 @@
+{
+  "input_sha256": {
+    "recovery_windows.csv": "91822fa975dcd178a99e154d038ee5854662d3dcb7f71c7f72f6077a7bdf0439",
+    "recovery_events.csv": "ef6b67b8c3b21dd99126a6545bf90567dabb678ddb36fddb3134c2f2c58044de",
+    "D3_complete_first_failure_candidates.csv": "266be73e95119706e42f9af76f84802234452fa6b616a58f48cd6402e1f38b84"
+  },
+  "trackers": {
+    "B_early_moderate": {
+      "windows": 287,
+      "original_failure_same_id": 0,
+      "stable": {
+        "3": 152,
+        "5": 122,
+        "10": 77
+      }
+    },
+    "B_postlow_output_v1": {
+      "windows": 287,
+      "original_failure_same_id": 49,
+      "stable": {
+        "3": 164,
+        "5": 124,
+        "10": 78
+      }
+    },
+    "E2_kf": {
+      "windows": 287,
+      "original_failure_same_id": 50,
+      "stable": {
+        "3": 164,
+        "5": 124,
+        "10": 78
+      }
+    }
+  }
+}

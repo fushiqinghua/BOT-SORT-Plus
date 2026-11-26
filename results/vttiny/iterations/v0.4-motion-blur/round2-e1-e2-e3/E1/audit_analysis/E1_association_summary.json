@@ -1,0 +1,414 @@
+{
+  "status": "COMPLETE",
+  "phase": "audit",
+  "cohort_rows": 7792,
+  "P0_full_stage_recomputed": true,
+  "groups": [
+    {
+      "cohort": "ambiguous_output",
+      "native": "lost_no_native_low_eligibility",
+      "B": "outside_original_B_eligible_pool",
+      "rows": 2
+    },
+    {
+      "cohort": "ambiguous_output",
+      "native": "native_high_accepted",
+      "B": "not_residual_consumed_high",
+      "rows": 1
+    },
+    {
+      "cohort": "ambiguous_output",
+      "native": "native_high_cost_above_gate",
+      "B": "not_residual_consumed_high",
+      "rows": 1
+    },
+    {
+      "cohort": "ambiguous_output",
+      "native": "native_high_other_track_owns_detection",
+      "B": "not_residual_consumed_high",
+      "rows": 3
+    },
+    {
+      "cohort": "ambiguous_output",
+      "native": "no_unique_GT_candidate",
+      "B": "no_unique_GT_candidate",
+      "rows": 6
+    },
+    {
+      "cohort": "different_id",
+      "native": "lost_no_native_low_eligibility",
+      "B": "ambiguous",
+      "rows": 2
+    },
+    {
+      "cohort": "different_id",
+      "native": "lost_no_native_low_eligibility",
+      "B": "appearance_contradiction",
+      "rows": 5
+    },
+    {
+      "cohort": "different_id",
+      "native": "lost_no_native_low_eligibility",
+      "B": "candidate_seed_deferred:competing_links",
+      "rows": 2
+    },
+    {
+      "cohort": "different_id",
+      "native": "lost_no_native_low_eligibility",
+      "B": "cost_reject",
+      "rows": 5
+    },
+    {
+      "cohort": "different_id",
+      "native": "lost_no_native_low_eligibility",
+      "B": "geometry_gate",
+      "rows": 2
+    },
+    {
+      "cohort": "different_id",
+      "native": "lost_no_native_low_eligibility",
+      "B": "insufficient_B_history",
+      "rows": 3
+    },
+    {
+      "cohort": "different_id",
+      "native": "lost_no_native_low_eligibility",
+      "B": "not_residual_consumed_low",
+      "rows": 111
+    },
+    {
+      "cohort": "different_id",
+      "native": "lost_no_native_low_eligibility",
+      "B": "overlaps_last_observation",
+      "rows": 2
+    },
+    {
+      "cohort": "different_id",
+      "native": "native_high_cost_above_gate",
+      "B": "cost_reject",
+      "rows": 4
+    },
+    {
+      "cohort": "different_id",
+      "native": "native_high_cost_above_gate",
+      "B": "geometry_gate",
+      "rows": 4
+    },
+    {
+      "cohort": "different_id",
+      "native": "native_high_cost_above_gate",
+      "B": "not_residual_consumed_high",
+      "rows": 691
+    },
+    {
+      "cohort": "different_id",
+      "native": "native_high_cost_above_gate",
+      "B": "not_residual_consumed_unconfirmed",
+      "rows": 58
+    },
+    {
+      "cohort": "different_id",
+      "native": "native_high_other_track_owns_detection",
+      "B": "not_residual_consumed_high",
+      "rows": 209
+    },
+    {
+      "cohort": "different_id",
+      "native": "no_unique_GT_candidate",
+      "B": "no_unique_GT_candidate",
+      "rows": 29
+    },
+    {
+      "cohort": "different_id",
+      "native": "unknown_no_native_high_row_or_column",
+      "B": "not_in_original_residual",
+      "rows": 3
+    },
+    {
+      "cohort": "missing_with_ambiguous_detection",
+      "native": "no_unique_GT_candidate",
+      "B": "no_unique_GT_candidate",
+      "rows": 28
+    },
+    {
+      "cohort": "missing_with_ambiguous_detection",
+      "native": "unknown_no_native_high_row_or_column",
+      "B": "not_in_original_residual",
+      "rows": 10
+    },
+    {
+      "cohort": "missing_without_usable_detection",
+      "native": "no_unique_GT_candidate",
+      "B": "no_unique_GT_candidate",
+      "rows": 3792
+    },
+    {
+      "cohort": "missing_without_usable_detection",
+      "native": "unknown_no_native_high_row_or_column",
+      "B": "not_in_original_residual",
+      "rows": 733
+    },
+    {
+      "cohort": "other_track_consumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "ambiguous",
+      "rows": 2
+    },
+    {
+      "cohort": "other_track_consumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "appearance_contradiction",
+      "rows": 17
+    },
+    {
+      "cohort": "other_track_consumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "cost_reject",
+      "rows": 38
+    },
+    {
+      "cohort": "other_track_consumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "geometry_gate",
+      "rows": 90
+    },
+    {
+      "cohort": "other_track_consumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "not_residual_consumed_high",
+      "rows": 21
+    },
+    {
+      "cohort": "other_track_consumed_high",
+      "native": "native_high_other_track_owns_detection",
+      "B": "not_residual_consumed_high",
+      "rows": 4
+    },
+    {
+      "cohort": "other_track_consumed_low",
+      "native": "lost_no_native_low_eligibility",
+      "B": "not_residual_consumed_low",
+      "rows": 2
+    },
+    {
+      "cohort": "same_id_correct",
+      "native": "lost_no_native_low_eligibility",
+      "B": "accepted",
+      "rows": 268
+    },
+    {
+      "cohort": "same_id_correct",
+      "native": "lost_no_native_low_eligibility",
+      "B": "candidate_seed_deferred:competing_links",
+      "rows": 2
+    },
+    {
+      "cohort": "same_id_correct",
+      "native": "lost_no_native_low_eligibility",
+      "B": "outside_original_B_eligible_pool",
+      "rows": 2
+    },
+    {
+      "cohort": "same_id_correct",
+      "native": "native_high_accepted",
+      "B": "not_residual_consumed_high",
+      "rows": 309
+    },
+    {
+      "cohort": "same_id_correct",
+      "native": "native_high_cost_above_gate",
+      "B": "accepted",
+      "rows": 30
+    },
+    {
+      "cohort": "same_id_correct",
+      "native": "no_unique_GT_candidate",
+      "B": "no_unique_GT_candidate",
+      "rows": 13
+    },
+    {
+      "cohort": "same_id_correct",
+      "native": "unknown_no_native_high_row_or_column",
+      "B": "not_in_original_residual",
+      "rows": 4
+    },
+    {
+      "cohort": "same_track_consumed_high",
+      "native": "native_high_accepted",
+      "B": "not_residual_consumed_high",
+      "rows": 2
+    },
+    {
+      "cohort": "same_track_consumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "accepted",
+      "rows": 3
+    },
+    {
+      "cohort": "same_track_consumed_low",
+      "native": "lost_no_native_low_eligibility",
+      "B": "accepted",
+      "rows": 1
+    },
+    {
+      "cohort": "unconsumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "ambiguous",
+      "rows": 12
+    },
+    {
+      "cohort": "unconsumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "appearance_contradiction",
+      "rows": 11
+    },
+    {
+      "cohort": "unconsumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "candidate_seed_deferred:competing_links",
+      "rows": 6
+    },
+    {
+      "cohort": "unconsumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "cost_reject",
+      "rows": 19
+    },
+    {
+      "cohort": "unconsumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "geometry_gate",
+      "rows": 30
+    },
+    {
+      "cohort": "unconsumed_high",
+      "native": "native_high_cost_above_gate",
+      "B": "insufficient_B_history",
+      "rows": 51
+    },
+    {
+      "cohort": "unconsumed_low",
+      "native": "lost_no_native_low_eligibility",
+      "B": "ambiguous",
+      "rows": 10
+    },
+    {
+      "cohort": "unconsumed_low",
+      "native": "lost_no_native_low_eligibility",
+      "B": "appearance_contradiction",
+      "rows": 155
+    },
+    {
+      "cohort": "unconsumed_low",
+      "native": "lost_no_native_low_eligibility",
+      "B": "candidate_observation_suppressed:occupied_track",
+      "rows": 1
+    },
+    {
+      "cohort": "unconsumed_low",
+      "native": "lost_no_native_low_eligibility",
+      "B": "candidate_seed_deferred:competing_links",
+      "rows": 178
+    },
+    {
+      "cohort": "unconsumed_low",
+      "native": "lost_no_native_low_eligibility",
+      "B": "cost_reject",
+      "rows": 35
+    },
+    {
+      "cohort": "unconsumed_low",
+      "native": "lost_no_native_low_eligibility",
+      "B": "geometry_gate",
+      "rows": 87
+    },
+    {
+      "cohort": "unconsumed_low",
+      "native": "lost_no_native_low_eligibility",
+      "B": "insufficient_B_history",
+      "rows": 596
+    },
+    {
+      "cohort": "unconsumed_low",
+      "native": "lost_no_native_low_eligibility",
+      "B": "outside_original_B_eligible_pool",
+      "rows": 2
+    },
+    {
+      "cohort": "unconsumed_low",
+      "native": "lost_no_native_low_eligibility",
+      "B": "overlaps_last_observation",
+      "rows": 34
+    },
+    {
+      "cohort": "usable_without_unique_detection",
+      "native": "no_unique_GT_candidate",
+      "B": "no_unique_GT_candidate",
+      "rows": 9
+    },
+    {
+      "cohort": "wrong_identity",
+      "native": "lost_no_native_low_eligibility",
+      "B": "candidate_seed_deferred:competing_links",
+      "rows": 3
+    },
+    {
+      "cohort": "wrong_identity",
+      "native": "lost_no_native_low_eligibility",
+      "B": "not_residual_consumed_low",
+      "rows": 3
+    },
+    {
+      "cohort": "wrong_identity",
+      "native": "native_high_cost_above_gate",
+      "B": "not_residual_consumed_high",
+      "rows": 2
+    },
+    {
+      "cohort": "wrong_identity",
+      "native": "native_high_cost_above_gate",
+      "B": "outside_original_B_eligible_pool",
+      "rows": 2
+    },
+    {
+      "cohort": "wrong_identity",
+      "native": "native_high_other_track_owns_detection",
+      "B": "not_residual_consumed_high",
+      "rows": 9
+    },
+    {
+      "cohort": "wrong_identity",
+      "native": "no_unique_GT_candidate",
+      "B": "no_unique_GT_candidate",
+      "rows": 21
+    },
+    {
+      "cohort": "wrong_identity",
+      "native": "unknown_no_native_high_row_or_column",
+      "B": "not_in_original_residual",
+      "rows": 2
+    }
+  ],
+  "unconsumed_low_B_reasons": {
+    "insufficient_B_history": 596,
+    "geometry_gate": 87,
+    "appearance_contradiction": 155,
+    "overlaps_last_observation": 34,
+    "cost_reject": 35,
+    "candidate_seed_deferred:competing_links": 178,
+    "candidate_observation_suppressed:occupied_track": 1,
+    "outside_original_B_eligible_pool": 2,
+    "ambiguous": 10
+  },
+  "unconsumed_high_native_reasons": {
+    "native_high_cost_above_gate": 129
+  },
+  "unconsumed_high_B_reasons": {
+    "insufficient_B_history": 51,
+    "candidate_seed_deferred:competing_links": 6,
+    "cost_reject": 19,
+    "appearance_contradiction": 11,
+    "geometry_gate": 30,
+    "ambiguous": 12
+  }
+}

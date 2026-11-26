@@ -1,0 +1,15 @@
+
+CLEAR Config:
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Identity Config:
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Evaluating 1 tracker(s) on 30 sequence(s) for 1 class(es) on VTTinyObjects dataset using the following metrics: HOTA, CLEAR, Identity, Count
+
+
+Evaluating B_early_moderate
+
+{"status": "COMPLETE", "output_dir": "${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/P0/trackeval", "scope": "full_official_test_development", "reference": "comparable"}

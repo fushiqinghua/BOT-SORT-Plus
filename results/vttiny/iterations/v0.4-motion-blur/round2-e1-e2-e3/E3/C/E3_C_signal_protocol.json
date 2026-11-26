@@ -1,0 +1,40 @@
+{
+  "status": "INCONCLUSIVE_MANUAL_CONFIRMATION_REQUIRED",
+  "operating_point_proxy_only": "Direction plus 90th percentile of real-object score selected on other original videos. No hyperparameter search.",
+  "features_sha256": "5c8f1143a8afc0d87c5bc068ca73412c2e71bd3aba5aa4d648b24816f1b0ca19",
+  "feature_schema": [
+    "detection_score",
+    "output_score",
+    "output_short_side",
+    "past15_observations",
+    "past15_score_median",
+    "past15_high_observations",
+    "past15_recoveries",
+    "frames_since_previous_measured",
+    "gmc_speed_diag_per_frame",
+    "rgb_quality",
+    "rgb_cosine_to_previous_real_feature"
+  ],
+  "cohorts": {
+    "all_confirmed_CLEAR_vs_no_GT_proxy": {
+      "source_videos": 29,
+      "confirmed_CLEAR_rows": 62508,
+      "persistent_no_GT_proxy_rows": 3158,
+      "candidate_source_videos": 16
+    },
+    "small_near_static_matched_niche": {
+      "source_videos": 29,
+      "confirmed_CLEAR_rows": 30761,
+      "persistent_no_GT_proxy_rows": 2027,
+      "candidate_source_videos": 14
+    }
+  },
+  "small_static_definition": "Both classes have native output short side <=12 px and current compensated displacement <=.12 prior-box diagonals per elapsed frame.",
+  "candidate_interpretation": "Offline lifetime non-overlap is a diagnostic proxy, not visual confirmation of background.",
+  "manual_label_count": 0,
+  "aggregation": "Each track's finite rows for a feature have total weight 1, macro AUC across original-video folds with two classes.",
+  "output_sha256": {
+    "E3_signal_analysis.csv": "a64210acda95e26d6e609f3e2a40977d5f8b38dfed251169ce92795096f40597",
+    "E3_signal_heldout_folds.csv": "69984ea9c265483debd2821e2245c5918f36613325ac91ae18cbc3632d81b38e"
+  }
+}

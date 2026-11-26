@@ -1,0 +1,36 @@
+COMMAND ${REDETR_ENV}/bin/python -B -X utf8 -u ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6/tools/run_botsort_diagnostics.py verify --settings ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/P0/motion_blur_v0.4.local.json
+COMMAND ${REDETR_ENV}/bin/python -B -X utf8 -u ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6/tools/run_botsort_diagnostics.py preflight --settings ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/P0/motion_blur_v0.4.local.json
+PIXELS 1 of 30 DJI_0028_3
+PIXELS 2 of 30 DJI_0030_2
+PIXELS 3 of 30 DJI_0032_3
+PIXELS 4 of 30 DJI_0049_2
+PIXELS 5 of 30 DJI_0051_2
+PIXELS 6 of 30 DJI_0061_2
+PIXELS 7 of 30 DJI_0073_3
+PIXELS 8 of 30 DJI_0109_1
+PIXELS 9 of 30 DJI_0119_2
+PIXELS 10 of 30 DJI_0129_2
+PIXELS 11 of 30 DJI_0141_2
+PIXELS 12 of 30 DJI_0155_2
+PIXELS 13 of 30 DJI_0159_2
+PIXELS 14 of 30 DJI_0169_3
+PIXELS 15 of 30 DJI_0173_2
+PIXELS 16 of 30 DJI_0181_3
+PIXELS 17 of 30 DJI_0221_2
+PIXELS 18 of 30 DJI_0225_1
+PIXELS 19 of 30 DJI_0237_2
+PIXELS 20 of 30 DJI_0255_1
+PIXELS 21 of 30 DJI_0257_2
+PIXELS 22 of 30 DJI_0277_2
+PIXELS 23 of 30 DJI_0283_1
+PIXELS 24 of 30 DJI_0303_2
+PIXELS 25 of 30 DJI_0307_2
+PIXELS 26 of 30 DJI_0309_4
+PIXELS 27 of 30 DJI_0325_2
+PIXELS 28 of 30 DJI_0327_3
+PIXELS 29 of 30 DJI_0339_2
+PIXELS 30 of 30 DJI_0345_2
+COMMAND ${REDETR_ENV}/bin/python -B -X utf8 -u ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6/tools/evaluate_botsort_plus.py --run-dir ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1/observed --trackers B_early_moderate --gt-root ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/data/official_gt/GT/GT_00/test --trackeval-root ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/external/TrackEval --reference-tracker B_early_moderate --output-dir ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/P0/trackeval
+P0_PASS {"tracker": "B_early_moderate", "sequence": "COMBINED_SEQ", "HOTA": 38.84495631557171, "DetA": 26.061806148839445, "AssA": 59.409466872314695, "IDF1": 44.059591903122495, "MOTA": 25.694212669381216, "FP": 15943, "FN": 117264, "IDSW": 374}
+COMMAND ${REDETR_ENV}/bin/python -B -X utf8 -u ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus-followup-c3e142e6/tools/prepare_v04_lost_cohort.py --run-root ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/outputs/diagnostics_v0.4_full30_round1 --output ${TRACKING_ROOT}/VT_Tiny_MOT_Baseline_v1/integrations/botsort_plus_v0_4_motion_blur/v04_followup_round2/E1/cohort
+E1_A_COMPLETE {"track_frames": 1416, "gt_frames": 1340, "gt_tracks": 208, "lost_episodes": 609, "sequences": 25}
