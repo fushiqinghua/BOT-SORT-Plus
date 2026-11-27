@@ -1,0 +1,1190 @@
+{
+  "all_cases": {
+    "cases": 184,
+    "model_reviewed": 114,
+    "model_pending": 0,
+    "no_native_assignment": 70,
+    "model_identity": {
+      "SUPPORTED": 71,
+      "AMBIGUOUS": 42,
+      "DIFFERENT": 1
+    },
+    "model_localization": {
+      "PARTIAL": 59,
+      "INSUFFICIENT": 37,
+      "ADEQUATE": 16,
+      "NOT_APPLICABLE": 2
+    },
+    "official_geometric_misses": 49,
+    "reviewed_geometric_misses": 49,
+    "supported_and_adequate": 16,
+    "miss_supported_and_adequate": 6,
+    "miss_supported_and_adequate_ids": [
+      "TCO_T1_016",
+      "TCO_T1_119",
+      "TCO_T1_152",
+      "TCO_FOCUS_DJI_0061_2_02",
+      "TCO_FOCUS_DJI_0061_2_07",
+      "TCO_FOCUS_DJI_0327_3_09"
+    ]
+  },
+  "by_scope": {
+    "focus": {
+      "cases": 24,
+      "model_reviewed": 24,
+      "model_pending": 0,
+      "no_native_assignment": 0,
+      "model_identity": {
+        "SUPPORTED": 20,
+        "AMBIGUOUS": 4
+      },
+      "model_localization": {
+        "PARTIAL": 18,
+        "ADEQUATE": 3,
+        "INSUFFICIENT": 3
+      },
+      "official_geometric_misses": 24,
+      "reviewed_geometric_misses": 24,
+      "supported_and_adequate": 3,
+      "miss_supported_and_adequate": 3,
+      "miss_supported_and_adequate_ids": [
+        "TCO_FOCUS_DJI_0061_2_02",
+        "TCO_FOCUS_DJI_0061_2_07",
+        "TCO_FOCUS_DJI_0327_3_09"
+      ]
+    },
+    "original": {
+      "cases": 160,
+      "model_reviewed": 90,
+      "model_pending": 0,
+      "no_native_assignment": 70,
+      "model_identity": {
+        "SUPPORTED": 51,
+        "AMBIGUOUS": 38,
+        "DIFFERENT": 1
+      },
+      "model_localization": {
+        "PARTIAL": 41,
+        "INSUFFICIENT": 34,
+        "ADEQUATE": 13,
+        "NOT_APPLICABLE": 2
+      },
+      "official_geometric_misses": 25,
+      "reviewed_geometric_misses": 25,
+      "supported_and_adequate": 13,
+      "miss_supported_and_adequate": 3,
+      "miss_supported_and_adequate_ids": [
+        "TCO_T1_016",
+        "TCO_T1_119",
+        "TCO_T1_152"
+      ]
+    }
+  },
+  "by_sequence": {
+    "DJI_0028_3": {
+      "cases": 12,
+      "model_reviewed": 10,
+      "model_pending": 0,
+      "no_native_assignment": 2,
+      "model_identity": {
+        "SUPPORTED": 7,
+        "AMBIGUOUS": 3
+      },
+      "model_localization": {
+        "PARTIAL": 8,
+        "INSUFFICIENT": 2
+      },
+      "official_geometric_misses": 3,
+      "reviewed_geometric_misses": 3,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0030_2": {
+      "cases": 5,
+      "model_reviewed": 4,
+      "model_pending": 0,
+      "no_native_assignment": 1,
+      "model_identity": {
+        "SUPPORTED": 4
+      },
+      "model_localization": {
+        "PARTIAL": 4
+      },
+      "official_geometric_misses": 2,
+      "reviewed_geometric_misses": 2,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0032_3": {
+      "cases": 13,
+      "model_reviewed": 8,
+      "model_pending": 0,
+      "no_native_assignment": 5,
+      "model_identity": {
+        "SUPPORTED": 7,
+        "AMBIGUOUS": 1
+      },
+      "model_localization": {
+        "PARTIAL": 3,
+        "INSUFFICIENT": 1,
+        "ADEQUATE": 4
+      },
+      "official_geometric_misses": 1,
+      "reviewed_geometric_misses": 1,
+      "supported_and_adequate": 4,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0049_2": {
+      "cases": 2,
+      "model_reviewed": 2,
+      "model_pending": 0,
+      "no_native_assignment": 0,
+      "model_identity": {
+        "AMBIGUOUS": 1,
+        "SUPPORTED": 1
+      },
+      "model_localization": {
+        "INSUFFICIENT": 1,
+        "PARTIAL": 1
+      },
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0051_2": {
+      "cases": 3,
+      "model_reviewed": 0,
+      "model_pending": 0,
+      "no_native_assignment": 3,
+      "model_identity": {},
+      "model_localization": {},
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0061_2": {
+      "cases": 22,
+      "model_reviewed": 19,
+      "model_pending": 0,
+      "no_native_assignment": 3,
+      "model_identity": {
+        "SUPPORTED": 11,
+        "DIFFERENT": 1,
+        "AMBIGUOUS": 7
+      },
+      "model_localization": {
+        "ADEQUATE": 3,
+        "NOT_APPLICABLE": 2,
+        "PARTIAL": 9,
+        "INSUFFICIENT": 5
+      },
+      "official_geometric_misses": 15,
+      "reviewed_geometric_misses": 15,
+      "supported_and_adequate": 3,
+      "miss_supported_and_adequate": 3,
+      "miss_supported_and_adequate_ids": [
+        "TCO_T1_016",
+        "TCO_FOCUS_DJI_0061_2_02",
+        "TCO_FOCUS_DJI_0061_2_07"
+      ]
+    },
+    "DJI_0073_3": {
+      "cases": 7,
+      "model_reviewed": 5,
+      "model_pending": 0,
+      "no_native_assignment": 2,
+      "model_identity": {
+        "SUPPORTED": 3,
+        "AMBIGUOUS": 2
+      },
+      "model_localization": {
+        "INSUFFICIENT": 3,
+        "PARTIAL": 2
+      },
+      "official_geometric_misses": 1,
+      "reviewed_geometric_misses": 1,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0109_1": {
+      "cases": 3,
+      "model_reviewed": 1,
+      "model_pending": 0,
+      "no_native_assignment": 2,
+      "model_identity": {
+        "SUPPORTED": 1
+      },
+      "model_localization": {
+        "PARTIAL": 1
+      },
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0119_2": {
+      "cases": 2,
+      "model_reviewed": 2,
+      "model_pending": 0,
+      "no_native_assignment": 0,
+      "model_identity": {
+        "SUPPORTED": 2
+      },
+      "model_localization": {
+        "PARTIAL": 2
+      },
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0129_2": {
+      "cases": 4,
+      "model_reviewed": 3,
+      "model_pending": 0,
+      "no_native_assignment": 1,
+      "model_identity": {
+        "AMBIGUOUS": 3
+      },
+      "model_localization": {
+        "INSUFFICIENT": 3
+      },
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0141_2": {
+      "cases": 3,
+      "model_reviewed": 2,
+      "model_pending": 0,
+      "no_native_assignment": 1,
+      "model_identity": {
+        "SUPPORTED": 2
+      },
+      "model_localization": {
+        "ADEQUATE": 1,
+        "PARTIAL": 1
+      },
+      "official_geometric_misses": 1,
+      "reviewed_geometric_misses": 1,
+      "supported_and_adequate": 1,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0155_2": {
+      "cases": 2,
+      "model_reviewed": 0,
+      "model_pending": 0,
+      "no_native_assignment": 2,
+      "model_identity": {},
+      "model_localization": {},
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0159_2": {
+      "cases": 4,
+      "model_reviewed": 1,
+      "model_pending": 0,
+      "no_native_assignment": 3,
+      "model_identity": {
+        "AMBIGUOUS": 1
+      },
+      "model_localization": {
+        "INSUFFICIENT": 1
+      },
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0169_3": {
+      "cases": 13,
+      "model_reviewed": 7,
+      "model_pending": 0,
+      "no_native_assignment": 6,
+      "model_identity": {
+        "AMBIGUOUS": 2,
+        "SUPPORTED": 5
+      },
+      "model_localization": {
+        "INSUFFICIENT": 2,
+        "ADEQUATE": 1,
+        "PARTIAL": 4
+      },
+      "official_geometric_misses": 3,
+      "reviewed_geometric_misses": 3,
+      "supported_and_adequate": 1,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0173_2": {
+      "cases": 2,
+      "model_reviewed": 0,
+      "model_pending": 0,
+      "no_native_assignment": 2,
+      "model_identity": {},
+      "model_localization": {},
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0181_3": {
+      "cases": 4,
+      "model_reviewed": 2,
+      "model_pending": 0,
+      "no_native_assignment": 2,
+      "model_identity": {
+        "AMBIGUOUS": 1,
+        "SUPPORTED": 1
+      },
+      "model_localization": {
+        "PARTIAL": 2
+      },
+      "official_geometric_misses": 1,
+      "reviewed_geometric_misses": 1,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0221_2": {
+      "cases": 3,
+      "model_reviewed": 1,
+      "model_pending": 0,
+      "no_native_assignment": 2,
+      "model_identity": {
+        "AMBIGUOUS": 1
+      },
+      "model_localization": {
+        "INSUFFICIENT": 1
+      },
+      "official_geometric_misses": 1,
+      "reviewed_geometric_misses": 1,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0225_1": {
+      "cases": 6,
+      "model_reviewed": 5,
+      "model_pending": 0,
+      "no_native_assignment": 1,
+      "model_identity": {
+        "SUPPORTED": 3,
+        "AMBIGUOUS": 2
+      },
+      "model_localization": {
+        "ADEQUATE": 3,
+        "INSUFFICIENT": 2
+      },
+      "official_geometric_misses": 1,
+      "reviewed_geometric_misses": 1,
+      "supported_and_adequate": 3,
+      "miss_supported_and_adequate": 1,
+      "miss_supported_and_adequate_ids": [
+        "TCO_T1_119"
+      ]
+    },
+    "DJI_0237_2": {
+      "cases": 7,
+      "model_reviewed": 1,
+      "model_pending": 0,
+      "no_native_assignment": 6,
+      "model_identity": {
+        "SUPPORTED": 1
+      },
+      "model_localization": {
+        "PARTIAL": 1
+      },
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0255_1": {
+      "cases": 3,
+      "model_reviewed": 1,
+      "model_pending": 0,
+      "no_native_assignment": 2,
+      "model_identity": {
+        "AMBIGUOUS": 1
+      },
+      "model_localization": {
+        "INSUFFICIENT": 1
+      },
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0257_2": {
+      "cases": 4,
+      "model_reviewed": 3,
+      "model_pending": 0,
+      "no_native_assignment": 1,
+      "model_identity": {
+        "SUPPORTED": 3
+      },
+      "model_localization": {
+        "ADEQUATE": 3
+      },
+      "official_geometric_misses": 1,
+      "reviewed_geometric_misses": 1,
+      "supported_and_adequate": 3,
+      "miss_supported_and_adequate": 1,
+      "miss_supported_and_adequate_ids": [
+        "TCO_T1_152"
+      ]
+    },
+    "DJI_0277_2": {
+      "cases": 6,
+      "model_reviewed": 3,
+      "model_pending": 0,
+      "no_native_assignment": 3,
+      "model_identity": {
+        "AMBIGUOUS": 2,
+        "SUPPORTED": 1
+      },
+      "model_localization": {
+        "INSUFFICIENT": 2,
+        "PARTIAL": 1
+      },
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0283_1": {
+      "cases": 10,
+      "model_reviewed": 5,
+      "model_pending": 0,
+      "no_native_assignment": 5,
+      "model_identity": {
+        "AMBIGUOUS": 2,
+        "SUPPORTED": 3
+      },
+      "model_localization": {
+        "INSUFFICIENT": 2,
+        "PARTIAL": 3
+      },
+      "official_geometric_misses": 1,
+      "reviewed_geometric_misses": 1,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0303_2": {
+      "cases": 6,
+      "model_reviewed": 4,
+      "model_pending": 0,
+      "no_native_assignment": 2,
+      "model_identity": {
+        "SUPPORTED": 1,
+        "AMBIGUOUS": 3
+      },
+      "model_localization": {
+        "PARTIAL": 2,
+        "INSUFFICIENT": 2
+      },
+      "official_geometric_misses": 1,
+      "reviewed_geometric_misses": 1,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0307_2": {
+      "cases": 1,
+      "model_reviewed": 1,
+      "model_pending": 0,
+      "no_native_assignment": 0,
+      "model_identity": {
+        "AMBIGUOUS": 1
+      },
+      "model_localization": {
+        "PARTIAL": 1
+      },
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0309_4": {
+      "cases": 10,
+      "model_reviewed": 3,
+      "model_pending": 0,
+      "no_native_assignment": 7,
+      "model_identity": {
+        "SUPPORTED": 2,
+        "AMBIGUOUS": 1
+      },
+      "model_localization": {
+        "PARTIAL": 2,
+        "INSUFFICIENT": 1
+      },
+      "official_geometric_misses": 2,
+      "reviewed_geometric_misses": 2,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0325_2": {
+      "cases": 2,
+      "model_reviewed": 1,
+      "model_pending": 0,
+      "no_native_assignment": 1,
+      "model_identity": {
+        "AMBIGUOUS": 1
+      },
+      "model_localization": {
+        "INSUFFICIENT": 1
+      },
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    },
+    "DJI_0327_3": {
+      "cases": 20,
+      "model_reviewed": 16,
+      "model_pending": 0,
+      "no_native_assignment": 4,
+      "model_identity": {
+        "AMBIGUOUS": 4,
+        "SUPPORTED": 12
+      },
+      "model_localization": {
+        "INSUFFICIENT": 4,
+        "PARTIAL": 11,
+        "ADEQUATE": 1
+      },
+      "official_geometric_misses": 15,
+      "reviewed_geometric_misses": 15,
+      "supported_and_adequate": 1,
+      "miss_supported_and_adequate": 1,
+      "miss_supported_and_adequate_ids": [
+        "TCO_FOCUS_DJI_0327_3_09"
+      ]
+    },
+    "DJI_0345_2": {
+      "cases": 5,
+      "model_reviewed": 4,
+      "model_pending": 0,
+      "no_native_assignment": 1,
+      "model_identity": {
+        "AMBIGUOUS": 3,
+        "SUPPORTED": 1
+      },
+      "model_localization": {
+        "INSUFFICIENT": 3,
+        "PARTIAL": 1
+      },
+      "official_geometric_misses": 0,
+      "reviewed_geometric_misses": 0,
+      "supported_and_adequate": 0,
+      "miss_supported_and_adequate": 0,
+      "miss_supported_and_adequate_ids": []
+    }
+  },
+  "by_scope_and_sequence": {
+    "focus": {
+      "DJI_0061_2": {
+        "cases": 12,
+        "model_reviewed": 12,
+        "model_pending": 0,
+        "no_native_assignment": 0,
+        "model_identity": {
+          "SUPPORTED": 9,
+          "AMBIGUOUS": 3
+        },
+        "model_localization": {
+          "PARTIAL": 8,
+          "ADEQUATE": 2,
+          "INSUFFICIENT": 2
+        },
+        "official_geometric_misses": 12,
+        "reviewed_geometric_misses": 12,
+        "supported_and_adequate": 2,
+        "miss_supported_and_adequate": 2,
+        "miss_supported_and_adequate_ids": [
+          "TCO_FOCUS_DJI_0061_2_02",
+          "TCO_FOCUS_DJI_0061_2_07"
+        ]
+      },
+      "DJI_0327_3": {
+        "cases": 12,
+        "model_reviewed": 12,
+        "model_pending": 0,
+        "no_native_assignment": 0,
+        "model_identity": {
+          "SUPPORTED": 11,
+          "AMBIGUOUS": 1
+        },
+        "model_localization": {
+          "PARTIAL": 10,
+          "INSUFFICIENT": 1,
+          "ADEQUATE": 1
+        },
+        "official_geometric_misses": 12,
+        "reviewed_geometric_misses": 12,
+        "supported_and_adequate": 1,
+        "miss_supported_and_adequate": 1,
+        "miss_supported_and_adequate_ids": [
+          "TCO_FOCUS_DJI_0327_3_09"
+        ]
+      }
+    },
+    "original": {
+      "DJI_0028_3": {
+        "cases": 12,
+        "model_reviewed": 10,
+        "model_pending": 0,
+        "no_native_assignment": 2,
+        "model_identity": {
+          "SUPPORTED": 7,
+          "AMBIGUOUS": 3
+        },
+        "model_localization": {
+          "PARTIAL": 8,
+          "INSUFFICIENT": 2
+        },
+        "official_geometric_misses": 3,
+        "reviewed_geometric_misses": 3,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0030_2": {
+        "cases": 5,
+        "model_reviewed": 4,
+        "model_pending": 0,
+        "no_native_assignment": 1,
+        "model_identity": {
+          "SUPPORTED": 4
+        },
+        "model_localization": {
+          "PARTIAL": 4
+        },
+        "official_geometric_misses": 2,
+        "reviewed_geometric_misses": 2,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0032_3": {
+        "cases": 13,
+        "model_reviewed": 8,
+        "model_pending": 0,
+        "no_native_assignment": 5,
+        "model_identity": {
+          "SUPPORTED": 7,
+          "AMBIGUOUS": 1
+        },
+        "model_localization": {
+          "PARTIAL": 3,
+          "INSUFFICIENT": 1,
+          "ADEQUATE": 4
+        },
+        "official_geometric_misses": 1,
+        "reviewed_geometric_misses": 1,
+        "supported_and_adequate": 4,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0049_2": {
+        "cases": 2,
+        "model_reviewed": 2,
+        "model_pending": 0,
+        "no_native_assignment": 0,
+        "model_identity": {
+          "AMBIGUOUS": 1,
+          "SUPPORTED": 1
+        },
+        "model_localization": {
+          "INSUFFICIENT": 1,
+          "PARTIAL": 1
+        },
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0051_2": {
+        "cases": 3,
+        "model_reviewed": 0,
+        "model_pending": 0,
+        "no_native_assignment": 3,
+        "model_identity": {},
+        "model_localization": {},
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0061_2": {
+        "cases": 10,
+        "model_reviewed": 7,
+        "model_pending": 0,
+        "no_native_assignment": 3,
+        "model_identity": {
+          "SUPPORTED": 2,
+          "DIFFERENT": 1,
+          "AMBIGUOUS": 4
+        },
+        "model_localization": {
+          "ADEQUATE": 1,
+          "NOT_APPLICABLE": 2,
+          "PARTIAL": 1,
+          "INSUFFICIENT": 3
+        },
+        "official_geometric_misses": 3,
+        "reviewed_geometric_misses": 3,
+        "supported_and_adequate": 1,
+        "miss_supported_and_adequate": 1,
+        "miss_supported_and_adequate_ids": [
+          "TCO_T1_016"
+        ]
+      },
+      "DJI_0073_3": {
+        "cases": 7,
+        "model_reviewed": 5,
+        "model_pending": 0,
+        "no_native_assignment": 2,
+        "model_identity": {
+          "SUPPORTED": 3,
+          "AMBIGUOUS": 2
+        },
+        "model_localization": {
+          "INSUFFICIENT": 3,
+          "PARTIAL": 2
+        },
+        "official_geometric_misses": 1,
+        "reviewed_geometric_misses": 1,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0109_1": {
+        "cases": 3,
+        "model_reviewed": 1,
+        "model_pending": 0,
+        "no_native_assignment": 2,
+        "model_identity": {
+          "SUPPORTED": 1
+        },
+        "model_localization": {
+          "PARTIAL": 1
+        },
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0119_2": {
+        "cases": 2,
+        "model_reviewed": 2,
+        "model_pending": 0,
+        "no_native_assignment": 0,
+        "model_identity": {
+          "SUPPORTED": 2
+        },
+        "model_localization": {
+          "PARTIAL": 2
+        },
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0129_2": {
+        "cases": 4,
+        "model_reviewed": 3,
+        "model_pending": 0,
+        "no_native_assignment": 1,
+        "model_identity": {
+          "AMBIGUOUS": 3
+        },
+        "model_localization": {
+          "INSUFFICIENT": 3
+        },
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0141_2": {
+        "cases": 3,
+        "model_reviewed": 2,
+        "model_pending": 0,
+        "no_native_assignment": 1,
+        "model_identity": {
+          "SUPPORTED": 2
+        },
+        "model_localization": {
+          "ADEQUATE": 1,
+          "PARTIAL": 1
+        },
+        "official_geometric_misses": 1,
+        "reviewed_geometric_misses": 1,
+        "supported_and_adequate": 1,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0155_2": {
+        "cases": 2,
+        "model_reviewed": 0,
+        "model_pending": 0,
+        "no_native_assignment": 2,
+        "model_identity": {},
+        "model_localization": {},
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0159_2": {
+        "cases": 4,
+        "model_reviewed": 1,
+        "model_pending": 0,
+        "no_native_assignment": 3,
+        "model_identity": {
+          "AMBIGUOUS": 1
+        },
+        "model_localization": {
+          "INSUFFICIENT": 1
+        },
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0169_3": {
+        "cases": 13,
+        "model_reviewed": 7,
+        "model_pending": 0,
+        "no_native_assignment": 6,
+        "model_identity": {
+          "AMBIGUOUS": 2,
+          "SUPPORTED": 5
+        },
+        "model_localization": {
+          "INSUFFICIENT": 2,
+          "ADEQUATE": 1,
+          "PARTIAL": 4
+        },
+        "official_geometric_misses": 3,
+        "reviewed_geometric_misses": 3,
+        "supported_and_adequate": 1,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0173_2": {
+        "cases": 2,
+        "model_reviewed": 0,
+        "model_pending": 0,
+        "no_native_assignment": 2,
+        "model_identity": {},
+        "model_localization": {},
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0181_3": {
+        "cases": 4,
+        "model_reviewed": 2,
+        "model_pending": 0,
+        "no_native_assignment": 2,
+        "model_identity": {
+          "AMBIGUOUS": 1,
+          "SUPPORTED": 1
+        },
+        "model_localization": {
+          "PARTIAL": 2
+        },
+        "official_geometric_misses": 1,
+        "reviewed_geometric_misses": 1,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0221_2": {
+        "cases": 3,
+        "model_reviewed": 1,
+        "model_pending": 0,
+        "no_native_assignment": 2,
+        "model_identity": {
+          "AMBIGUOUS": 1
+        },
+        "model_localization": {
+          "INSUFFICIENT": 1
+        },
+        "official_geometric_misses": 1,
+        "reviewed_geometric_misses": 1,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0225_1": {
+        "cases": 6,
+        "model_reviewed": 5,
+        "model_pending": 0,
+        "no_native_assignment": 1,
+        "model_identity": {
+          "SUPPORTED": 3,
+          "AMBIGUOUS": 2
+        },
+        "model_localization": {
+          "ADEQUATE": 3,
+          "INSUFFICIENT": 2
+        },
+        "official_geometric_misses": 1,
+        "reviewed_geometric_misses": 1,
+        "supported_and_adequate": 3,
+        "miss_supported_and_adequate": 1,
+        "miss_supported_and_adequate_ids": [
+          "TCO_T1_119"
+        ]
+      },
+      "DJI_0237_2": {
+        "cases": 7,
+        "model_reviewed": 1,
+        "model_pending": 0,
+        "no_native_assignment": 6,
+        "model_identity": {
+          "SUPPORTED": 1
+        },
+        "model_localization": {
+          "PARTIAL": 1
+        },
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0255_1": {
+        "cases": 3,
+        "model_reviewed": 1,
+        "model_pending": 0,
+        "no_native_assignment": 2,
+        "model_identity": {
+          "AMBIGUOUS": 1
+        },
+        "model_localization": {
+          "INSUFFICIENT": 1
+        },
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0257_2": {
+        "cases": 4,
+        "model_reviewed": 3,
+        "model_pending": 0,
+        "no_native_assignment": 1,
+        "model_identity": {
+          "SUPPORTED": 3
+        },
+        "model_localization": {
+          "ADEQUATE": 3
+        },
+        "official_geometric_misses": 1,
+        "reviewed_geometric_misses": 1,
+        "supported_and_adequate": 3,
+        "miss_supported_and_adequate": 1,
+        "miss_supported_and_adequate_ids": [
+          "TCO_T1_152"
+        ]
+      },
+      "DJI_0277_2": {
+        "cases": 6,
+        "model_reviewed": 3,
+        "model_pending": 0,
+        "no_native_assignment": 3,
+        "model_identity": {
+          "AMBIGUOUS": 2,
+          "SUPPORTED": 1
+        },
+        "model_localization": {
+          "INSUFFICIENT": 2,
+          "PARTIAL": 1
+        },
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0283_1": {
+        "cases": 10,
+        "model_reviewed": 5,
+        "model_pending": 0,
+        "no_native_assignment": 5,
+        "model_identity": {
+          "AMBIGUOUS": 2,
+          "SUPPORTED": 3
+        },
+        "model_localization": {
+          "INSUFFICIENT": 2,
+          "PARTIAL": 3
+        },
+        "official_geometric_misses": 1,
+        "reviewed_geometric_misses": 1,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0303_2": {
+        "cases": 6,
+        "model_reviewed": 4,
+        "model_pending": 0,
+        "no_native_assignment": 2,
+        "model_identity": {
+          "SUPPORTED": 1,
+          "AMBIGUOUS": 3
+        },
+        "model_localization": {
+          "PARTIAL": 2,
+          "INSUFFICIENT": 2
+        },
+        "official_geometric_misses": 1,
+        "reviewed_geometric_misses": 1,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0307_2": {
+        "cases": 1,
+        "model_reviewed": 1,
+        "model_pending": 0,
+        "no_native_assignment": 0,
+        "model_identity": {
+          "AMBIGUOUS": 1
+        },
+        "model_localization": {
+          "PARTIAL": 1
+        },
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0309_4": {
+        "cases": 10,
+        "model_reviewed": 3,
+        "model_pending": 0,
+        "no_native_assignment": 7,
+        "model_identity": {
+          "SUPPORTED": 2,
+          "AMBIGUOUS": 1
+        },
+        "model_localization": {
+          "PARTIAL": 2,
+          "INSUFFICIENT": 1
+        },
+        "official_geometric_misses": 2,
+        "reviewed_geometric_misses": 2,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0325_2": {
+        "cases": 2,
+        "model_reviewed": 1,
+        "model_pending": 0,
+        "no_native_assignment": 1,
+        "model_identity": {
+          "AMBIGUOUS": 1
+        },
+        "model_localization": {
+          "INSUFFICIENT": 1
+        },
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0327_3": {
+        "cases": 8,
+        "model_reviewed": 4,
+        "model_pending": 0,
+        "no_native_assignment": 4,
+        "model_identity": {
+          "AMBIGUOUS": 3,
+          "SUPPORTED": 1
+        },
+        "model_localization": {
+          "INSUFFICIENT": 3,
+          "PARTIAL": 1
+        },
+        "official_geometric_misses": 3,
+        "reviewed_geometric_misses": 3,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      },
+      "DJI_0345_2": {
+        "cases": 5,
+        "model_reviewed": 4,
+        "model_pending": 0,
+        "no_native_assignment": 1,
+        "model_identity": {
+          "AMBIGUOUS": 3,
+          "SUPPORTED": 1
+        },
+        "model_localization": {
+          "INSUFFICIENT": 3,
+          "PARTIAL": 1
+        },
+        "official_geometric_misses": 0,
+        "reviewed_geometric_misses": 0,
+        "supported_and_adequate": 0,
+        "miss_supported_and_adequate": 0,
+        "miss_supported_and_adequate_ids": []
+      }
+    }
+  },
+  "human_status": {
+    "PENDING_HUMAN_REVIEW": 184
+  },
+  "focus_sequence_ids": [
+    "DJI_0327_3",
+    "DJI_0061_2"
+  ],
+  "extrapolated_to_population": false,
+  "training_started": false
+}

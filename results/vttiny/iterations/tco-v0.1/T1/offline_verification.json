@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "sequence_scores_match_historical": 60,
+  "case_rows": 1236,
+  "producer_trackeval_sha": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "matched_gt_hashes": 30,
+  "case_counts": [
+    {
+      "method": "B_early_moderate",
+      "case_status": "identity_unverified_already_covered",
+      "count": 5
+    },
+    {
+      "method": "B_early_moderate",
+      "case_status": "identity_unverified_official_miss",
+      "count": 493
+    },
+    {
+      "method": "B_early_moderate",
+      "case_status": "same_line_already_official_tp",
+      "count": 120
+    },
+    {
+      "method": "evidence_both",
+      "case_status": "identity_unverified_already_covered",
+      "count": 3
+    },
+    {
+      "method": "evidence_both",
+      "case_status": "identity_unverified_official_miss",
+      "count": 493
+    },
+    {
+      "method": "evidence_both",
+      "case_status": "same_line_already_official_tp",
+      "count": 122
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "sequences": [
+    "DJI_0030_2",
+    "DJI_0169_3",
+    "DJI_0109_1",
+    "DJI_0173_2",
+    "DJI_0221_2",
+    "DJI_0028_3"
+  ],
+  "references": {
+    "B": {
+      "method": "B_early_moderate",
+      "files": {
+        "DJI_0030_2": {
+          "MOT": "da2dc3b9e0dead0b60e08aceb390f79c1621d537883576963e511c4017156f56",
+          "events": "68a0e5368965963a2a83ab993927269471bfc0c49d6dc4a2769d61208a90e556",
+          "state_chain": "0bd3b587cf54ed8005b0f53cf7a8b1f9db8757de7f916e0862a8ea9b5d84f962",
+          "runtime_capture": "c6705c0b2ed9654b080e883a9bf1f7eda3594f898eb909da6bf4ae92c5bc4733"
+        },
+        "DJI_0169_3": {
+          "MOT": "1aaf932833751adbcc1eff13118c961ebd60103240909678e16eac3250e33a74",
+          "events": "ff9e4a2c112277817fa84e083f5aee16e7c8f1a2417423f7059721df5ebb481c",
+          "state_chain": "50f9f1190e94834eac8b436dbf958c628ef8b038efc686757088fa9d89a9ecb3",
+          "runtime_capture": "c3da45d37b562e5867d2159332a710798b7d6c944d17a2396b57477399bd98c2"
+        },
+        "DJI_0109_1": {
+          "MOT": "38ae96b098944cfafc1a2b9fc35b46b4051ee0ff42391770249058b019472993",
+          "events": "d0e9d44b404712850a712a6ee8a2632d05f22ab4011486b0bb35d2bf96e9ad12",
+          "state_chain": "4fac772218ee4d36845b370b20593b4e285d02f60b9dd4aeb33fafb7928491ab",
+          "runtime_capture": "f972d24bdedb4d824a0e619ed3765de8c6ec933180d5cfaf6f69f8001524ae01"
+        },
+        "DJI_0173_2": {
+          "MOT": "d116e3ac3c738bb46a908fe676e12bdd745415ed9331d4e768d6c0a04c9d78a3",
+          "events": "e6ade793bfd05f2f04dd900c9b65d7cbda885c3ae5f433150a3984968d4dde47",
+          "state_chain": "45a25c787b39167016da2f306b33583f36358b1c486d0ef6bc85cf8e39a680ca",
+          "runtime_capture": "cb17453808fbd1064872aea9b1f733108b7299f1c58c86d1487168852f3512de"
+        },
+        "DJI_0221_2": {
+          "MOT": "8abf522b4ae646b811c50e3c1ffd5e17da05727949944f7f8e4fe4431bbdb17e",
+          "events": "2b64e5b21652c1d255c3d4aa9c8888a6149481048560192547d759bdcdac65ca",
+          "state_chain": "4da22c9bd17aac1f3cc1266c13c0fdf668efa24f98052192f7cb8c8f0bbd4462",
+          "runtime_capture": "448af2d0b18c47deef4a71a3d032b2b4ccf5fad7c3958a58724430f37a43e0f7"
+        },
+        "DJI_0028_3": {
+          "MOT": "d6bd35f48178970318afb8c37bb143f7c1718015427438720f4dce5eacf444ec",
+          "events": "7b10b5d9b5c8a6a1b5919bb42ca7bd8296b4a57512bc45cc1c5a1a0f1118b672",
+          "state_chain": "902a14c9f76c423bed4b828ee4835dacb7727866986077de47910171e8ce8908",
+          "runtime_capture": "8b347de36bdb7c635f6b2984b9ebef94ee8b7c784bb4caccb2cc4f15457748de"
+        }
+      },
+      "runtime": {
+        "python": "3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC 11.3.0]",
+        "numpy": "2.4.6",
+        "torch": "2.8.0+cu128",
+        "opencv": "5.0.0"
+      }
+    },
+    "BG": {
+      "method": "evidence_both",
+      "files": {
+        "DJI_0030_2": {
+          "MOT": "d1749709af5d44c8c90eab2d2fb897274add25288830874d152acda3602dddf0",
+          "events": "cd0b1432f20dc51bbba8e84897ef61d9812502ac4f2bab8ac61fcc73f7aca404",
+          "state_chain": "1b7dcb46033ea27781eeff889691474f5defc7cb8a7ee43d925b32142858947f",
+          "runtime_capture": "22dff317c2203c404769feeb0aa9568b73bd72f1e3f4db53d87ddf84f490d935"
+        },
+        "DJI_0169_3": {
+          "MOT": "50f7c1b2a1afcfea740102a63bf1e250650ccea6469c1dcc1c1f5f61a670a87d",
+          "events": "db26a9d2f155f338989b5734060935b94e0a97e05a38acdbe72b5a06dbe586d9",
+          "state_chain": "03757332caccaddecac34eef16fdab46db0503a98f7b4da9dc460eb36784dd4f",
+          "runtime_capture": "9f4ddb2a68b7087118f0874b4ba3993e4dd74991d6403a108ba1020d3609e5f4"
+        },
+        "DJI_0109_1": {
+          "MOT": "28a6b4c6636ce672c6351c96b2f09a506a5f9f72447bcf8b7f83e499066510f8",
+          "events": "cc4791af878ceef26647e548061fa32c7c170f5f6fe32124264b34eefdeab175",
+          "state_chain": "d4efe4cd93b6fbf23b61c8e2c62869ccae1fe2c0854e81c6c6f8bf24c58d2586",
+          "runtime_capture": "7e6686547ac7d974c47be78162bdb67f540ef459cb5fe8d04296b340059ebaae"
+        },
+        "DJI_0173_2": {
+          "MOT": "1cede6db1edd7e20230605028dfb6b960d7426a96a6d49accc4e70e5c3fb5f07",
+          "events": "b93cb131a4ac8251c387f73d26b1d45fec8476dfc482c6468dc749406d825acf",
+          "state_chain": "5729161c8c744a347ac74fac679acf9dff0a7dd1f0dc62b751a462552750c291",
+          "runtime_capture": "4301f959bce474c8336278d31de468b570d584dde4a18dcd0865a7d3b119e655"
+        },
+        "DJI_0221_2": {
+          "MOT": "af9548620a1f281b8d2ec23b070bd44cbcb806cca97c40185f6bb71901f16703",
+          "events": "d0a0b24d44eac101710af35601ffac867450bdfbfd7c6b61be10ddb080ec2957",
+          "state_chain": "624bd0851c426cef122929ec13ec6d201fe21abcd3415009789b8cfa0ea0af8d",
+          "runtime_capture": "43e369f88006fc1411a1ceb157a56457a9ec9f6f338939be9ad5446cde26b5d2"
+        },
+        "DJI_0028_3": {
+          "MOT": "5dbe7c0191809ef949ff1b2c76992c0adc2cba269221731404561087e4835900",
+          "events": "d0a62b6464c1df17ee49fca62d2e4c9907a336ac68c54d3e6a213e3fd7fdaf08",
+          "state_chain": "9352c09abded613c0671e1c31ec78e59110720bdbf1fdfcd770d48ef4960ea00",
+          "runtime_capture": "83b1e4e257a2d4159556f818247f5e9da92d945e613f1f4ff3be7dc6adf704f4"
+        }
+      },
+      "runtime": {
+        "python": "3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC 11.3.0]",
+        "numpy": "2.4.6",
+        "torch": "2.8.0+cu128",
+        "opencv": "5.0.0"
+      }
+    }
+  },
+  "collector_sha256": "b4fc303ca01c2e75183df546ff25a765a2a0c0d550190be6c4a63d340ff81f36",
+  "settings_sha256": "bc97d6b83be109c6736ac625374616940a04dfb8af831b9a8ecec8b22a76b35b"
+}

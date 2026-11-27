@@ -1,0 +1,17 @@
+{
+  "original_cases": 160,
+  "focus_supplement_cases": 24,
+  "views_per_case": 2,
+  "blind_sheet_count": 32,
+  "gt_uses": "Offline witness and official CLEAR coverage labels",
+  "corrected_boxes_are": "GT-assisted feasible witnesses from T1, never runtime predictions",
+  "native_history": "Actual accepted detector measurements before current frame",
+  "source_frame_verification": "All decoded current and historical RGB source frames verified against T0 capture SHA-256",
+  "source_sample_sha256": "609a8676e99ce3fad9157f929ca27c4984d8d540bf34b7a2139d112e635b6690",
+  "source_scripts_sha256": {
+    "render_cards.py": "f960d9e67dc25f0f120886820a67d8fdc3dfaa1a4f474ea47a363ec7b2023dbc",
+    "assemble_cases.py": "2d19a9fdbfc220a73406509d5237d645b0d96d30239fb6514ad2426c8ae4f187",
+    "build_review.py": "fa426a183ce980560237024d1049fda27398838d0e2780d28a609b36a4ade256"
+  },
+  "training_started": false
+}

@@ -1,0 +1,22 @@
+{
+  "status": "SAMPLE_DRAWN_NOT_REVIEWED",
+  "episodes": {
+    "path": "${VT_TINY_PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/tco_53faeccb/t01_v1/T1/episodes.jsonl.gz",
+    "sha256": "a3973f939867d29f9189328bb4d1701d857044b6fa7b9c89fc3b61ef4705ff4f"
+  },
+  "seed": 41,
+  "budget": 160,
+  "sample_count": 160,
+  "population": 32857,
+  "all_cells": 579,
+  "sampled_cells": 160,
+  "strata": [
+    "method",
+    "archived_development_source_video",
+    "primary_bucket",
+    "gt_short_side_bin",
+    "bounded_cross_050"
+  ],
+  "draw": "Uniform sample of cells if budget is restrictive, then uniform draw of an evenly allocated count within each selected cell",
+  "human_reviews": 0
+}

@@ -1,0 +1,45 @@
+{
+  "tracker_checkout": "53faeccba267d8988174c18e1a538f759fa6dd07",
+  "historical_t0_source_sha256": {
+    "collector.py": "b4fc303ca01c2e75183df546ff25a765a2a0c0d550190be6c4a63d340ff81f36",
+    "label_t1.py": "2067f59d2e5df33bad012222d063414309b0a20f9d55ed0426efd46cfcb7a8e6",
+    "split_t1.py": "d938c3cc448a60ce324b3ca5834726c987c4186d3ca1c02b1c1ca761388a9ff4",
+    "workflow.py": "30da1f8f9921cb1dfce64bcd2bdbd07988f23dead4bcda7bf80ad3b8fe5c0021"
+  },
+  "historical_card_builder_source_sha256": {
+    "render_cards.py": "f960d9e67dc25f0f120886820a67d8fdc3dfaa1a4f474ea47a363ec7b2023dbc",
+    "assemble_cases.py": "2d19a9fdbfc220a73406509d5237d645b0d96d30239fb6514ad2426c8ae4f187",
+    "build_review.py": "fa426a183ce980560237024d1049fda27398838d0e2780d28a609b36a4ade256"
+  },
+  "local_post_t1_operational_source_sha256": {
+    "assemble_cases.py": "2d19a9fdbfc220a73406509d5237d645b0d96d30239fb6514ad2426c8ae4f187",
+    "build_review.py": "fa426a183ce980560237024d1049fda27398838d0e2780d28a609b36a4ade256",
+    "finalize_review.py": "40cfecfbc2f66133be37cc839781fc9fda9a59b9ee63ea080452cb3e5475c7fa",
+    "render_cards.py": "f960d9e67dc25f0f120886820a67d8fdc3dfaa1a4f474ea47a363ec7b2023dbc",
+    "collector.py": "b4fc303ca01c2e75183df546ff25a765a2a0c0d550190be6c4a63d340ff81f36",
+    "label_t1.py": "c2059fe40a4ac613312d499b559375f4d1d38ef724074468c7d7c7762a52a595",
+    "split_t1.py": "d938c3cc448a60ce324b3ca5834726c987c4186d3ca1c02b1c1ca761388a9ff4",
+    "verify_labels.py": "e81c97f714e9ebcccce68860ffe73550b6bc3699f6eff6141f095d0f08397c6e",
+    "workflow.py": "9d4282b6791f87c0af2c81a51dc1b575edd4e3e059b234c635c12a43d9c15b49"
+  },
+  "publication_sha256": {
+    "assemble_cases.py": "2d19a9fdbfc220a73406509d5237d645b0d96d30239fb6514ad2426c8ae4f187",
+    "build_review.py": "fa426a183ce980560237024d1049fda27398838d0e2780d28a609b36a4ade256",
+    "collector.py": "b4fc303ca01c2e75183df546ff25a765a2a0c0d550190be6c4a63d340ff81f36",
+    "finalize_review.py": "40cfecfbc2f66133be37cc839781fc9fda9a59b9ee63ea080452cb3e5475c7fa",
+    "label_t1.py": "c2059fe40a4ac613312d499b559375f4d1d38ef724074468c7d7c7762a52a595",
+    "render_cards.py": "f960d9e67dc25f0f120886820a67d8fdc3dfaa1a4f474ea47a363ec7b2023dbc",
+    "split_t1.py": "d938c3cc448a60ce324b3ca5834726c987c4186d3ca1c02b1c1ca761388a9ff4",
+    "verify_labels.py": "e81c97f714e9ebcccce68860ffe73550b6bc3699f6eff6141f095d0f08397c6e",
+    "workflow.py": "4c21fada475cf146e57a7983467dafd55ff76aada25462155e11b2fcc2f805db"
+  },
+  "notes": {
+    "workflow.py": "Archive uses the local post-T1 workflow with parameterized paths and cached-GMC and grouping checks. The T0 hash records the earlier replay workflow.",
+    "label_t1.py": "Archive preserves the local post-T1 labeler; the earlier T0 runtime manifest predates final offline labeling.",
+    "verify_labels.py": "Archive preserves the standalone final offline verifier. It was added after the T0 runtime manifest was recorded.",
+    "collector.py": "Byte-identical to the historical T0 collector.",
+    "split_t1.py": "Byte-identical to the T0 snapshot.",
+    "build_review.py,assemble_cases.py,render_cards.py": "Byte-identical to the executed card-builder source hashes.",
+    "finalize_review.py": "Archive preserves the local gallery finalizer; separate from the server card-builder snapshot."
+  }
+}
