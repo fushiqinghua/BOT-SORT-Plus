@@ -1,0 +1,2044 @@
+{
+  "schema": "v04_joint_probe_analysis_v1",
+  "status": "COMPLETE",
+  "tracker": "B_early_moderate_dual_low",
+  "sequences": {
+    "DJI_0028_3": 570,
+    "DJI_0030_2": 590,
+    "DJI_0032_3": 290,
+    "DJI_0049_2": 90,
+    "DJI_0051_2": 580,
+    "DJI_0061_2": 240,
+    "DJI_0073_3": 360,
+    "DJI_0109_1": 90,
+    "DJI_0119_2": 180,
+    "DJI_0129_2": 590,
+    "DJI_0141_2": 410,
+    "DJI_0155_2": 410,
+    "DJI_0159_2": 250,
+    "DJI_0169_3": 290,
+    "DJI_0173_2": 450,
+    "DJI_0181_3": 320,
+    "DJI_0221_2": 590,
+    "DJI_0225_1": 329,
+    "DJI_0237_2": 410,
+    "DJI_0255_1": 600,
+    "DJI_0257_2": 590,
+    "DJI_0277_2": 366,
+    "DJI_0283_1": 450,
+    "DJI_0303_2": 577,
+    "DJI_0307_2": 180,
+    "DJI_0309_4": 603,
+    "DJI_0325_2": 595,
+    "DJI_0327_3": 390,
+    "DJI_0339_2": 600,
+    "DJI_0345_2": 600
+  },
+  "source_protocol_sha256": "7c3fab66024d6b04969369f0c16f36653566bfa34f47a9deec435e2c4c781519",
+  "evaluator": {
+    "root": "${PROJECT_ROOT}/external/TrackEval",
+    "commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+    "manifest_sha256": "76e6608c3027a601f7cd8e724a4c3d967be8b153e811f7648ad2150b1f9a5e82",
+    "verified_source_files": 45,
+    "eol_normalized_matched": false,
+    "source_files": {
+      "trackeval/eval.py": {
+        "raw_sha256": "ff1ad2740c6ee675716fc80c88f774380276c443c47a67d2925785acf5fafb09",
+        "expected_sha256": "ff1ad2740c6ee675716fc80c88f774380276c443c47a67d2925785acf5fafb09",
+        "match": "raw"
+      },
+      "trackeval/__init__.py": {
+        "raw_sha256": "d7896c2d5c0b1374d3833a828dbf785b61fff15ad61f39c0cd2547924d2e2476",
+        "expected_sha256": "d7896c2d5c0b1374d3833a828dbf785b61fff15ad61f39c0cd2547924d2e2476",
+        "match": "raw"
+      },
+      "trackeval/_timing.py": {
+        "raw_sha256": "8bd796826de1bd636d798795696bfe7e9bdc9c91baa4d753cb4283197dfadcd3",
+        "expected_sha256": "8bd796826de1bd636d798795696bfe7e9bdc9c91baa4d753cb4283197dfadcd3",
+        "match": "raw"
+      },
+      "trackeval/plotting.py": {
+        "raw_sha256": "e93e6ae223ebf0030619a3a287f932e3dbdf994a19b9d49f503d00aa9ffdcd54",
+        "expected_sha256": "e93e6ae223ebf0030619a3a287f932e3dbdf994a19b9d49f503d00aa9ffdcd54",
+        "match": "raw"
+      },
+      "trackeval/utils.py": {
+        "raw_sha256": "84f324de538b4364af2e4ec5b83966df0f260fd8adbfd6b20a386bfa9a0e48bb",
+        "expected_sha256": "84f324de538b4364af2e4ec5b83966df0f260fd8adbfd6b20a386bfa9a0e48bb",
+        "match": "raw"
+      },
+      "trackeval/metrics/ideucl.py": {
+        "raw_sha256": "3f4d27d73517e18d16b2897f0ac3995caf872d9ae3f191ea8889d157e64c9e86",
+        "expected_sha256": "3f4d27d73517e18d16b2897f0ac3995caf872d9ae3f191ea8889d157e64c9e86",
+        "match": "raw"
+      },
+      "trackeval/metrics/count.py": {
+        "raw_sha256": "b0d21b9441f618d26819794139c74bf21851ea9b7dad392cd8b81fbe834e27e4",
+        "expected_sha256": "b0d21b9441f618d26819794139c74bf21851ea9b7dad392cd8b81fbe834e27e4",
+        "match": "raw"
+      },
+      "trackeval/metrics/clear.py": {
+        "raw_sha256": "da78468866f61ecf84e197446e630382e0c976ca1f47b70e1dd4904ab7ba598e",
+        "expected_sha256": "da78468866f61ecf84e197446e630382e0c976ca1f47b70e1dd4904ab7ba598e",
+        "match": "raw"
+      },
+      "trackeval/metrics/__init__.py": {
+        "raw_sha256": "b9384aa0de78e18e03ce9ea4036ee32b97babcc3b7be89b62ea9ec7e9d834c7d",
+        "expected_sha256": "b9384aa0de78e18e03ce9ea4036ee32b97babcc3b7be89b62ea9ec7e9d834c7d",
+        "match": "raw"
+      },
+      "trackeval/metrics/identity.py": {
+        "raw_sha256": "9e38466a88fb88581a85a8aac7814ea4f95e2a6a3b95eb2a23481d929f536af2",
+        "expected_sha256": "9e38466a88fb88581a85a8aac7814ea4f95e2a6a3b95eb2a23481d929f536af2",
+        "match": "raw"
+      },
+      "trackeval/metrics/_base_metric.py": {
+        "raw_sha256": "0f7a13d9a7465ff29a70e8f5ab33f884462bf19d941c7935d0a8a634bec736a2",
+        "expected_sha256": "0f7a13d9a7465ff29a70e8f5ab33f884462bf19d941c7935d0a8a634bec736a2",
+        "match": "raw"
+      },
+      "trackeval/metrics/track_map.py": {
+        "raw_sha256": "f20eb791cb39a93ad5689e11cfc55ab16e1ec94814335895caea7dff40729d51",
+        "expected_sha256": "f20eb791cb39a93ad5689e11cfc55ab16e1ec94814335895caea7dff40729d51",
+        "match": "raw"
+      },
+      "trackeval/metrics/hota.py": {
+        "raw_sha256": "9dbd00d2a56eead5632399912591dd7e6ee6238ca5c35f54fca15e1b5f76c68e",
+        "expected_sha256": "9dbd00d2a56eead5632399912591dd7e6ee6238ca5c35f54fca15e1b5f76c68e",
+        "match": "raw"
+      },
+      "trackeval/metrics/vace.py": {
+        "raw_sha256": "90d64fef328a2f832b75f3f1f2d4b60a713d77efb0f167db0a09dd55134565e0",
+        "expected_sha256": "90d64fef328a2f832b75f3f1f2d4b60a713d77efb0f167db0a09dd55134565e0",
+        "match": "raw"
+      },
+      "trackeval/metrics/j_and_f.py": {
+        "raw_sha256": "35301f1a401b561cf893779d255286179994ad62f556e29bb27d9ce2a531cc37",
+        "expected_sha256": "35301f1a401b561cf893779d255286179994ad62f556e29bb27d9ce2a531cc37",
+        "match": "raw"
+      },
+      "trackeval/datasets/kitti_2d_box.py": {
+        "raw_sha256": "fcff48bfe0447ad29caf205597a3a0dff1beeddcf47e417b80f4159ed4c085df",
+        "expected_sha256": "fcff48bfe0447ad29caf205597a3a0dff1beeddcf47e417b80f4159ed4c085df",
+        "match": "raw"
+      },
+      "trackeval/datasets/tao.py": {
+        "raw_sha256": "21f3952c0c669040631b7a98559748a683fda1c567f88209b930c90169f32bf3",
+        "expected_sha256": "21f3952c0c669040631b7a98559748a683fda1c567f88209b930c90169f32bf3",
+        "match": "raw"
+      },
+      "trackeval/datasets/mot_challenge_2d_box.py": {
+        "raw_sha256": "e269f145caf4db54848412cc6b0ce9f0cb45787b28522ebaee4cdaeaae3aef44",
+        "expected_sha256": "e269f145caf4db54848412cc6b0ce9f0cb45787b28522ebaee4cdaeaae3aef44",
+        "match": "raw"
+      },
+      "trackeval/datasets/run_rob_mots.py": {
+        "raw_sha256": "f1a5382fe0dbc60beee9671b35962bec61aa7f7e768cfebad8777f7f47549bf8",
+        "expected_sha256": "f1a5382fe0dbc60beee9671b35962bec61aa7f7e768cfebad8777f7f47549bf8",
+        "match": "raw"
+      },
+      "trackeval/datasets/_base_dataset.py": {
+        "raw_sha256": "f36c60dcb70d209c2145ab9408e2497eb3f7844b30f697cf7f42794205e3bf23",
+        "expected_sha256": "f36c60dcb70d209c2145ab9408e2497eb3f7844b30f697cf7f42794205e3bf23",
+        "match": "raw"
+      },
+      "trackeval/datasets/__init__.py": {
+        "raw_sha256": "ced90762737a42332a8162011f30682762cf4be003ab896509d80abf9effc720",
+        "expected_sha256": "ced90762737a42332a8162011f30682762cf4be003ab896509d80abf9effc720",
+        "match": "raw"
+      },
+      "trackeval/datasets/burst.py": {
+        "raw_sha256": "ca9c41c3a21f8364c8c7dd170510d8fa8bad058edf66de083cfdaf24bdf6d26f",
+        "expected_sha256": "ca9c41c3a21f8364c8c7dd170510d8fa8bad058edf66de083cfdaf24bdf6d26f",
+        "match": "raw"
+      },
+      "trackeval/datasets/head_tracking_challenge.py": {
+        "raw_sha256": "6598fa3414cf2b08929982eb550f59b3d6b21c8d1393e4ef6f93005d2d5c649d",
+        "expected_sha256": "6598fa3414cf2b08929982eb550f59b3d6b21c8d1393e4ef6f93005d2d5c649d",
+        "match": "raw"
+      },
+      "trackeval/datasets/bdd100k.py": {
+        "raw_sha256": "c6ad6dddd25289d9940346e94adfd2ce4660552ecd98d0abb7149764d67eb039",
+        "expected_sha256": "c6ad6dddd25289d9940346e94adfd2ce4660552ecd98d0abb7149764d67eb039",
+        "match": "raw"
+      },
+      "trackeval/datasets/tao_ow.py": {
+        "raw_sha256": "bdb7cd6fe18ba6be2c251c2bbd897dfe91ee552f3e39e49ecf1333beec7c3d77",
+        "expected_sha256": "bdb7cd6fe18ba6be2c251c2bbd897dfe91ee552f3e39e49ecf1333beec7c3d77",
+        "match": "raw"
+      },
+      "trackeval/datasets/rob_mots.py": {
+        "raw_sha256": "1040f2f00f6518eb2c1c3247230fd34354aa6e1bd12cb32b8f93b7ea82e9d718",
+        "expected_sha256": "1040f2f00f6518eb2c1c3247230fd34354aa6e1bd12cb32b8f93b7ea82e9d718",
+        "match": "raw"
+      },
+      "trackeval/datasets/davis.py": {
+        "raw_sha256": "4696f23629cbb7afef3e66ef3de1bf67e696ba26f148daa43ab9852a2fb68a1c",
+        "expected_sha256": "4696f23629cbb7afef3e66ef3de1bf67e696ba26f148daa43ab9852a2fb68a1c",
+        "match": "raw"
+      },
+      "trackeval/datasets/mots_challenge.py": {
+        "raw_sha256": "aabbc2ebc6efbcb0cd06942d360d19f07891e8b598bbb63c050fb27ef0230809",
+        "expected_sha256": "aabbc2ebc6efbcb0cd06942d360d19f07891e8b598bbb63c050fb27ef0230809",
+        "match": "raw"
+      },
+      "trackeval/datasets/rob_mots_classmap.py": {
+        "raw_sha256": "ca38bd6efb322d957335770a156dc534b9affa45d08ceec8ffa6a36a9814d632",
+        "expected_sha256": "ca38bd6efb322d957335770a156dc534b9affa45d08ceec8ffa6a36a9814d632",
+        "match": "raw"
+      },
+      "trackeval/datasets/kitti_mots.py": {
+        "raw_sha256": "f9359f1379bd5af69c875e2bd5f8cc6760dcef8f469c53d74f07b8dd7d9a428d",
+        "expected_sha256": "f9359f1379bd5af69c875e2bd5f8cc6760dcef8f469c53d74f07b8dd7d9a428d",
+        "match": "raw"
+      },
+      "trackeval/datasets/burst_ow.py": {
+        "raw_sha256": "e3ac72cf25cf5024eb81497fbc34068b5675fa768cf54aa03da6b604cbd99f0a",
+        "expected_sha256": "e3ac72cf25cf5024eb81497fbc34068b5675fa768cf54aa03da6b604cbd99f0a",
+        "match": "raw"
+      },
+      "trackeval/datasets/youtube_vis.py": {
+        "raw_sha256": "bd40dbd780e9d21bca31efe6c0e363eb00144d36240b5bb9cae9d80c892bd7f8",
+        "expected_sha256": "bd40dbd780e9d21bca31efe6c0e363eb00144d36240b5bb9cae9d80c892bd7f8",
+        "match": "raw"
+      },
+      "trackeval/datasets/person_path_22.py": {
+        "raw_sha256": "e152a43950c0a1e40c26f80e99e7cf6deb4b96defdefff7bf4df954fe8b094c5",
+        "expected_sha256": "e152a43950c0a1e40c26f80e99e7cf6deb4b96defdefff7bf4df954fe8b094c5",
+        "match": "raw"
+      },
+      "trackeval/datasets/burst_helpers/convert_burst_format_to_tao_format.py": {
+        "raw_sha256": "c4b60ac5730ac74ee8a557acfcc03c2ef999f15b629b0c221d3f3a9c0b48e49e",
+        "expected_sha256": "c4b60ac5730ac74ee8a557acfcc03c2ef999f15b629b0c221d3f3a9c0b48e49e",
+        "match": "raw"
+      },
+      "trackeval/datasets/burst_helpers/__init__.py": {
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "match": "raw"
+      },
+      "trackeval/datasets/burst_helpers/format_converter.py": {
+        "raw_sha256": "ab5d39ee163b7f4a4f257929dfc78d9a5618306436889b04b53c480d2a3609ec",
+        "expected_sha256": "ab5d39ee163b7f4a4f257929dfc78d9a5618306436889b04b53c480d2a3609ec",
+        "match": "raw"
+      },
+      "trackeval/datasets/burst_helpers/burst_ow_base.py": {
+        "raw_sha256": "b79868d1d0723a541e8972666bc12c0da50b3b794fd5ea0b3cccb36eb3060e33",
+        "expected_sha256": "b79868d1d0723a541e8972666bc12c0da50b3b794fd5ea0b3cccb36eb3060e33",
+        "match": "raw"
+      },
+      "trackeval/datasets/burst_helpers/burst_base.py": {
+        "raw_sha256": "d95bdac152a251f74374c7ffb97efebb16e6539e5a0fbbbc3e66cfc75b0b1dc4",
+        "expected_sha256": "d95bdac152a251f74374c7ffb97efebb16e6539e5a0fbbbc3e66cfc75b0b1dc4",
+        "match": "raw"
+      },
+      "trackeval/baselines/non_overlap.py": {
+        "raw_sha256": "0bff32409db552f47bb21b51b434662af913226960767b062cb04392cf7c4b9b",
+        "expected_sha256": "0bff32409db552f47bb21b51b434662af913226960767b062cb04392cf7c4b9b",
+        "match": "raw"
+      },
+      "trackeval/baselines/thresholder.py": {
+        "raw_sha256": "434f3c4f22941a4e216cd403aa7f84e204a5ae7b5a64c0813bbd7288052f151e",
+        "expected_sha256": "434f3c4f22941a4e216cd403aa7f84e204a5ae7b5a64c0813bbd7288052f151e",
+        "match": "raw"
+      },
+      "trackeval/baselines/pascal_colormap.py": {
+        "raw_sha256": "bafc8a735d92bc57ab0787eff88b91c8f0fd7c898f12e5379dc87b9770bfd4cf",
+        "expected_sha256": "bafc8a735d92bc57ab0787eff88b91c8f0fd7c898f12e5379dc87b9770bfd4cf",
+        "match": "raw"
+      },
+      "trackeval/baselines/__init__.py": {
+        "raw_sha256": "0f65685ef9cd7cfd3dd57d52976dd5783ad6e2235912e85e445273ca3347930c",
+        "expected_sha256": "0f65685ef9cd7cfd3dd57d52976dd5783ad6e2235912e85e445273ca3347930c",
+        "match": "raw"
+      },
+      "trackeval/baselines/vizualize.py": {
+        "raw_sha256": "702433aefdd3e83fb54d1d95df5000853399fb0eee5db6ceaadef2dae20c29a3",
+        "expected_sha256": "702433aefdd3e83fb54d1d95df5000853399fb0eee5db6ceaadef2dae20c29a3",
+        "match": "raw"
+      },
+      "trackeval/baselines/baseline_utils.py": {
+        "raw_sha256": "13d655dac54a2e67d483289b52e65ab95d0cc82a9c3a992469194b7f90ebf82a",
+        "expected_sha256": "13d655dac54a2e67d483289b52e65ab95d0cc82a9c3a992469194b7f90ebf82a",
+        "match": "raw"
+      },
+      "trackeval/baselines/stp.py": {
+        "raw_sha256": "ddaeed74f09d67a0927aec4ddcbee8d2bbd18db376b66b2f9046040ec9d35db4",
+        "expected_sha256": "ddaeed74f09d67a0927aec4ddcbee8d2bbd18db376b66b2f9046040ec9d35db4",
+        "match": "raw"
+      }
+    }
+  },
+  "ground_truth": {
+    "root": "${PROJECT_ROOT}/data/official_gt/GT/GT_00/test",
+    "sha256": {
+      "DJI_0028_3": "5227e9fb66105ff161944d80143e1e0aec867077f8a8daa271eb2729b9a0ab1c",
+      "DJI_0030_2": "ab2838acc1855700f93dcf0cf50457b8b6b7912444b654fa9def805cb4bd7fd9",
+      "DJI_0032_3": "3ae8afb25434ae76aba059e1c1e5247b9d989a04893810dc9bfde75c38a52b46",
+      "DJI_0049_2": "544fa0931afba5ea350d879996eecbb7886a77929db404f80c65816682ae77dd",
+      "DJI_0051_2": "abe863cad93f9c40a4bdccfb5e7da1c57d95ce7d072c4bfded0d0c537d5b05ab",
+      "DJI_0061_2": "0ce40ba303ff643b36c9164e3b0f5e7253172a41236883e834c7143b2953aee6",
+      "DJI_0073_3": "b60b00d7e6ffb24a7deb7237608fe5d37f819d8b5e17addc321984cd359af5ff",
+      "DJI_0109_1": "014a9d4b558e01900d829c02d796606fd0e56b7e34d1668f5f56747875765d95",
+      "DJI_0119_2": "bc5333e0e308986d374be6ee303bd3a1693c3c473d381469ef7a7f6469bc69ef",
+      "DJI_0129_2": "9f8ba6228889bb9da854db6bd27ea504b3ef35d9d1d3ef4d99e39c0a93441800",
+      "DJI_0141_2": "40752ca09de1a71e460b7ce4bc0c1615839afb0c78131efc0b713bf2be064347",
+      "DJI_0155_2": "74c6d92dd099d75ac0b5c9a609fe9e59172746e8995d6a7c53e2700956141c7d",
+      "DJI_0159_2": "3ffd6d1a95f4027b36243efa0d92989df8c683a6905a516d2fd328eaa5c4e9eb",
+      "DJI_0169_3": "30bb31e54d93496dcba1227e18c16d6528be7f375897a85986dd5b68d586a338",
+      "DJI_0173_2": "f7b78b829cafa8cbe864186dca8daceb143665bfed3580e984167cdfcbf9967d",
+      "DJI_0181_3": "5d87e3184fbe23fb44ebd5478c92e07119fc9278d79f7a8a10eae97c918cc84d",
+      "DJI_0221_2": "09b924a0aba9719a2105d178dc729c461590b39e56b93c64a7e1d644a6763966",
+      "DJI_0225_1": "cbf32a09a7dc7bb69494e03b5952749380b7ab78d30f09bd8eeccd4738d212a4",
+      "DJI_0237_2": "c1880e8b509229ee739c3a25d32a5798b8f5234afef456ff0cd17e591cbea74e",
+      "DJI_0255_1": "0fd683061f577c87c9620b6701db9d9ebf30a8cf0a18c88d84f55e4a3f8d4aa6",
+      "DJI_0257_2": "cdf468bd038dd10e292d4a473460dca483c1b053407bfc93c8ac17333af85c3c",
+      "DJI_0277_2": "e774bb7ffc1d7d1fcef240eccf3d348c59d5b8098d8a52d1cbefd9a606096de5",
+      "DJI_0283_1": "5ff9962377dc4bfae3caea9c80383621d10e5d2b59e59a99c9558539b057abc2",
+      "DJI_0303_2": "52d00ded4251e3eb58dbdaf3c96c88f6bab08fcba341ce9e50954725c4144c73",
+      "DJI_0307_2": "bcf6fc6f3535d9503f1246aaaacea427551257e3e17b4e09816895f13dbf3eae",
+      "DJI_0309_4": "1ce1aa3f4920c6eeb8bcfe9088d007732cbf6d519c037c91890abc9c70d07e2e",
+      "DJI_0325_2": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "DJI_0327_3": "d4ffb8bdb0b8065c2bea3595c4e65f2a095d42690740c75e6989e140c2b1dc23",
+      "DJI_0339_2": "0ff15c4204487ce4816e4f3c0753e6c6aae23a31e01a99fd58df7e151b00d186",
+      "DJI_0345_2": "3dbde9653d16a051187f8b7ef7e464b0b0b2cd4ad162bc66756e9952cee29bad"
+    },
+    "provenance": "Caller-supplied official RGB GT; original bytes hashed, never modified"
+  },
+  "probe_sources": {
+    "DJI_0028_3": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0028_3.jsonl.gz",
+      "sha256": "a361095d9292efa4dee266528c0cd4de70f1e43b09305bfb9fe63f536aaf4264",
+      "summary_sha256": "5d399c6088e9ada5e0ba68c611e749ae3f5ebd9f31a60eea0f239757ee2ca862",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0030_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0030_2.jsonl.gz",
+      "sha256": "8021817dc601d2c80f08cb1331823c8f7f44c4fea2b5c3dcc53f3035b2f3a20b",
+      "summary_sha256": "bd2da50c3fa85ead398e7a911c017f9d245e0ef6293f7f41b9c45e4d57915e50",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0032_3": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0032_3.jsonl.gz",
+      "sha256": "57a05acd0acfef8692cd4a4b4c9a9fabe5237bea3ec758d54052d13ed97a0b20",
+      "summary_sha256": "9396c2671c64a544ce4badffe232ad07be0fe65145c9cd673f4889fd46075c4b",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0049_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0049_2.jsonl.gz",
+      "sha256": "a0c32739105ce54577eb04598979791015498ff84f7b67498bae209dddd272ce",
+      "summary_sha256": "5f241dad1832cfd20e636b7222120510fe54f96eec2962ef60bb653072310d05",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0051_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0051_2.jsonl.gz",
+      "sha256": "fbb8b5345548884a477975ed0dc3285baaff57d2502d263408ad68e2db9e43b0",
+      "summary_sha256": "2a096ba437496cecee897ed70f2c93a13ee81e902518b396b2a18c67c39f50c2",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0061_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0061_2.jsonl.gz",
+      "sha256": "4c56fbe2a86e5488142ac14b34481cd5f9fbd5d6ccaff497ea0724a2b9bb1a59",
+      "summary_sha256": "161b54633cea53ec234a949a082ddcf4286a9e9bd0c99a9390f9e5de874b85aa",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0073_3": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0073_3.jsonl.gz",
+      "sha256": "a0f33ab77bf0db17d53c44daa08cd208af0d3d80167e777d9ea4f4606c253dcb",
+      "summary_sha256": "f993687adc201570388d35cf0e9e350a697205b1642689553acc8f7d8745665b",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0109_1": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0109_1.jsonl.gz",
+      "sha256": "2f46f355563506db22961702c2f76ae8f9b4c8a3a59a245f560bb5986e910cd5",
+      "summary_sha256": "72b283cd8e51d87b9c05265e3d18451f2532f7b1475829cac2011d7958cb923c",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0119_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0119_2.jsonl.gz",
+      "sha256": "a6788edf44737948539a6bf2c4d9139aa27fafa64279c8d94201bc6589ba2f8d",
+      "summary_sha256": "6e9357efb1bf33b5267bc676ea68fc930099b46c89662ae13e2e64e82d71c7b9",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0129_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0129_2.jsonl.gz",
+      "sha256": "881a148f64fb2808168d3ba301b47128b22b0625b86b5ee114edab7c1e710bd2",
+      "summary_sha256": "bd93ada14956e7fa3034c737ef684b1a568087e7e430c9081ddbc6558ecaf553",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0141_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0141_2.jsonl.gz",
+      "sha256": "8a1b277d3af9e9fa6ea0854e83ef7e3bba5a95761f664d8d5349c5414882ea8c",
+      "summary_sha256": "441d79c058fc1d54230d6b112de6a9ebb25392ea876c19c57701244b197fde32",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0155_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0155_2.jsonl.gz",
+      "sha256": "31d2e36d03619ad508ec3bf062509f7554c5a6c2ae537eb5e3c3292281a96d36",
+      "summary_sha256": "225fffd9964b91209e5754e0c6cd018b40571cdb00820e0a63a8a6586092f8a4",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0159_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0159_2.jsonl.gz",
+      "sha256": "089d7f8a4dd8d13da706011d3a485b52fa3fa0ace7df2d5c84e35c9bc5bdd681",
+      "summary_sha256": "0ec43b122d65c40674a3a365f717401dc1cc640a1c6f3e30cd15699deee5ab91",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0169_3": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0169_3.jsonl.gz",
+      "sha256": "25bb4beb28b02ef1cb29fd60bb84b9ac713c12f7b48c6b3efc50492c715b6ec9",
+      "summary_sha256": "34ec0f469e7258b02c899b0fb090a489da6989d551cedba2efdd4d6e598e1375",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0173_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0173_2.jsonl.gz",
+      "sha256": "1a88ecdbb43d3144f5ba0f5a9e105ec80fac51db75d69bbd98fc27a97a4acb98",
+      "summary_sha256": "372e11005c4e0be1e2926b9f01f27b12c2f7fb107cfb2fb1d53c34f033d450f3",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0181_3": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0181_3.jsonl.gz",
+      "sha256": "63e9435a000bc5989568ad9bb2d696c159dfd6d02c76bd19243920d2d2045690",
+      "summary_sha256": "9d76dd4c25e1f2f69d4d9ae1114aa54aabc968fbe996b0ca711ab933fe2add99",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0221_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0221_2.jsonl.gz",
+      "sha256": "bac41ae0bd53a7cba95bc1dd2d895deabc1f9ee9c8d15aeec40964ced781d54a",
+      "summary_sha256": "05bf0ec1e0c9e3a68db6114434dcafe80d936d7bd9b43473cac3491147ca6bfc",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0225_1": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0225_1.jsonl.gz",
+      "sha256": "215d30b776077f3df131cfaad8c8d573eb794cf882dd35c7124fa1539b6ead7b",
+      "summary_sha256": "0c9e3b71854433c4e60a4c5fdbb0966134c8e74031bcda6b35ebbe2ef62bcaf0",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0237_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0237_2.jsonl.gz",
+      "sha256": "b512cb648e56198d7fb9c67d48b2a0d2db2d0853009156089f95a1986413ccf9",
+      "summary_sha256": "fb6bdc34bd67fed6410ec6f6d91a61fc25cda34ffea93e113df70339b371d988",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0255_1": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0255_1.jsonl.gz",
+      "sha256": "825c4c047e24ba8d4a067c89918ce3091fce04aded91b0d8b96ab53dbe8f6f89",
+      "summary_sha256": "f27d0355c26fd629271e0d07d87e90d1639f6a3120a49163c7cf77c43e07f031",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0257_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0257_2.jsonl.gz",
+      "sha256": "ebc9dc387129f375734e9ef5fa45f193aeb2b25090e8b90402139d57a75b427f",
+      "summary_sha256": "cdfd4a89bf24e85ba636ba025d0d04c5e0a97af5076c9d783ba0df58e3436381",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0277_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0277_2.jsonl.gz",
+      "sha256": "56575f90ec76ae6a59a5e88ec7b5744847be4677d792a7284942458a38219d80",
+      "summary_sha256": "5a386af90d319fb86210082be5f3fc6fcb269879309039c001c9bfed7f95f015",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0283_1": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0283_1.jsonl.gz",
+      "sha256": "23e0f2d3d38981ac177e893cddff50f6e7bba498c0f4af28f81fcfbe2879ef4e",
+      "summary_sha256": "1ea203be338902758610b1c2caa68586f796c518bf05e3788ddf75435e9d5631",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0303_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0303_2.jsonl.gz",
+      "sha256": "afa9c1dc84b4ac4402391ec33188db986fef474735817d42618ed219f8a28193",
+      "summary_sha256": "44539e3563bac1f178eea34d1041e9779e76e3db791aeaec7e0305be8795aa64",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0307_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0307_2.jsonl.gz",
+      "sha256": "f32c18183b5dc8d0420bff3135573fa8c69e931cdec1c721c1915a6f5231c24e",
+      "summary_sha256": "eb6d1ad13b11b87aea3ae5119d3e2906aea72fc6e3832d713ba171e2a1f11e07",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0309_4": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0309_4.jsonl.gz",
+      "sha256": "ec5f61fec745cd76907b74d54e1c583ccdbbdd9fb36d55dff02425f0d1e0a439",
+      "summary_sha256": "8f7916927f50d039f11deea10cb9111c50f89ceb7cf588aac0a069a3183925b6",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0325_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0325_2.jsonl.gz",
+      "sha256": "8ae3492bea2709c985ccc6fa192b7a128fb812527bd985b85dc8f2b257622433",
+      "summary_sha256": "ea9ed08a2d6807df18374f8052c4175cb5051531f0ad2ff5c172fedb44241f7a",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0327_3": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0327_3.jsonl.gz",
+      "sha256": "7ede4f6b4a4f020e0cf666e85288069f2032af734cd12937a1a1f8235bf24bcc",
+      "summary_sha256": "0135cfa1996dd5952d95d2f0d54af80b7d716f9efb188bd19575616cb4cc3e8e",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0339_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0339_2.jsonl.gz",
+      "sha256": "a1b632f33cd5d57d9241b25fe468afdc02951466114d7d2ba1c73ced03c9d262",
+      "summary_sha256": "639d8b264356397f6985c5dc3cc8117982344fd429dc528b79551a0545fa3a86",
+      "bound_to_protocol_hash": true
+    },
+    "DJI_0345_2": {
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/probes/B_early_moderate_dual_low/DJI_0345_2.jsonl.gz",
+      "sha256": "cef41489c8177c0de8d8f023808115b87b6cf1a8ff08471c8b189d6fb10ae2cc",
+      "summary_sha256": "3d1b426d2e85d3d31850559abcfb8e5989d2cb566d18202afa98485beb2ca16f",
+      "bound_to_protocol_hash": true
+    }
+  },
+  "detection_sources": {
+    "DJI_0028_3": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0028_3.json.gz",
+      "sha256": "ae27772729824aed17b36553d07703417f374c150ce10c279f7a36ad46d5a820",
+      "fingerprint": "6c5f57bd339b0f625958d2a2917d4b34bd44cecf12c6fada58444fdeca8e71c0"
+    },
+    "DJI_0030_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0030_2.json.gz",
+      "sha256": "3ba4435271f747c016a737a06c621aeb5c9aaf4bf2d1df208f4bf9822b200879",
+      "fingerprint": "39756d8acb1c7040b8a95dc855c9deca19bf420c8f311797ba1382438ba4d699"
+    },
+    "DJI_0032_3": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0032_3.json.gz",
+      "sha256": "f67f95f89bb542fd00d0cfc50e611eab8651389759dbf9466d29ad5e0f272173",
+      "fingerprint": "b8c1e0034bbc4edaa969cbf4433de5ab6fe4eb008728952d5b277c4e51fbfdac"
+    },
+    "DJI_0049_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0049_2.json.gz",
+      "sha256": "16ea1e634d31e8b799dac701539ba6c476551b7abf31791e508c5356161e1d4e",
+      "fingerprint": "fc8d1d47c9efd746f15883de3da4225c3a7236e461888e948d5061d08c34e528"
+    },
+    "DJI_0051_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0051_2.json.gz",
+      "sha256": "8ac0419bb8d158bf38585967115280e7b07e7c2850976fc1cdfcbc489ad68f0c",
+      "fingerprint": "78e8445abab4efb0ebb2911ae3cb99fbbb3612c4cd2b94c5efe1086ab0688913"
+    },
+    "DJI_0061_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0061_2.json.gz",
+      "sha256": "3040326f436beb7097201cfbc67afc97aa07d0544c1db427da5749adee1c555d",
+      "fingerprint": "d488450df7bfa09af24b1a9f122a746a74b286a2228a190ca7002bf99aa9a7dc"
+    },
+    "DJI_0073_3": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0073_3.json.gz",
+      "sha256": "b194defbbacd1bd1c7ac9c7c81cc3b55645eac0a84d527308edd0800a85d20f9",
+      "fingerprint": "36f0f5e3c3c8275f5212a68806dec8df44c0fb5ebe835b659763ad4db05b1a41"
+    },
+    "DJI_0109_1": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0109_1.json.gz",
+      "sha256": "dda65c6a0d5b58e9abddc592512c4c57bd1c093142d118c7dea30ad2b7b5f775",
+      "fingerprint": "6cd217f020ea8647cbcb9b1e1a156c0e97feff965aeeaa7482aa49a48e359257"
+    },
+    "DJI_0119_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0119_2.json.gz",
+      "sha256": "f736def88bc9e4f81823fdcd690b4302098af3e0e7a3cbaeef458d6fc0ed02ff",
+      "fingerprint": "0df7d7f0681c52e5b436f50999c2be53c3e071a2fbb66ea9c475de938ab17b86"
+    },
+    "DJI_0129_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0129_2.json.gz",
+      "sha256": "ddbc5b18713b38511dfd01104cae5acec3f9135e29dd2390dc2c497149f2cf2d",
+      "fingerprint": "f16b542f3b94aacffd5c093a37b2f370c108a77963bb5134d212248573d7e1b2"
+    },
+    "DJI_0141_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0141_2.json.gz",
+      "sha256": "754ddbd851969fccd9749a80383c760299cc109ef395222844b62ed0c0329d1f",
+      "fingerprint": "739ea4c98192a563262091ce1aba9ae503c67e09c84b307cf925bed91d305829"
+    },
+    "DJI_0155_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0155_2.json.gz",
+      "sha256": "0f44ecb26cdda42e497e20fbe61147e23f52dbf69ec1ce349e63727749a8ceab",
+      "fingerprint": "5603eeb08172b59d95c59a77bc19344b786be5d89123539ad75eb4b5eeed436f"
+    },
+    "DJI_0159_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0159_2.json.gz",
+      "sha256": "9ce535f8294e7501571ae355c80256df816f13db3cb13379ffdbbb3946dd70b3",
+      "fingerprint": "38fd494c3b44d98ce2c176a52a0ffc6dd84590804043e779c1698ae28b461b55"
+    },
+    "DJI_0169_3": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0169_3.json.gz",
+      "sha256": "eb6ebf9db0d142a7162229129cf68c87826d86daadb0638105cecfb1245c729f",
+      "fingerprint": "67974c7cbd6eaee717ad48776eac344ad6d1842143d34fc4e0b6583ba50b93bd"
+    },
+    "DJI_0173_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0173_2.json.gz",
+      "sha256": "5b2eb7857608f97f26de1f35378cb63926a096327f78eb3aff6ff7f59b06a6a9",
+      "fingerprint": "569e63396a4f8641af770474bec12b586921b13cf6b636f82a4f99e40af21841"
+    },
+    "DJI_0181_3": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0181_3.json.gz",
+      "sha256": "7e5e45789f8c734b5ea2087e1885e5b7b76d15113a87e1d55ac417c29822d91b",
+      "fingerprint": "142adeaac14df0152dce5792914f73e10e5c8261bfb8637d01b1457d8bf1a05d"
+    },
+    "DJI_0221_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0221_2.json.gz",
+      "sha256": "e6ea33f7f59f9b17957c0c19d0826aefe6350b4f713d1251a0161103dfb9760a",
+      "fingerprint": "dfa333329c968d5cabae4ab133b858f2bc1c67c5c79edb4f7778c07c52021b5d"
+    },
+    "DJI_0225_1": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0225_1.json.gz",
+      "sha256": "2145035ce00b45ed9c1952cb50c47bc7b88795a703a5494f0a6039d6cebdd566",
+      "fingerprint": "5d2e710fcce7508de2b87aeeef9ee9a46b9f6da70077fd8148dbeabf050e3296"
+    },
+    "DJI_0237_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0237_2.json.gz",
+      "sha256": "4d62c8dd5bdcfdd6e99977455301694db7b0875e66f2c80de3124285e8da246c",
+      "fingerprint": "dddaaf5b4638aa0b618a60b2325c12240d7e10b32bee7acf353327c3b2efa4ea"
+    },
+    "DJI_0255_1": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0255_1.json.gz",
+      "sha256": "7e5ae8f7f04b50698b32f08d681589b11f428f287f7f484ed0c1b7f2073b8309",
+      "fingerprint": "b99210f6cecc3ae939c59d865bdd02b0368b0ebd4e1b0852aed67de068161ab2"
+    },
+    "DJI_0257_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0257_2.json.gz",
+      "sha256": "39ef4d1183f5e400e4a1fa1c4683d63f786db5d4db988d34657c37a0ee0f4726",
+      "fingerprint": "a855474856b960110488fb7ab556f47c0b654ea0b0f17ee716bee0d8096451ac"
+    },
+    "DJI_0277_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0277_2.json.gz",
+      "sha256": "9d7e7dba16b0e71fdf4f3ae6005f3b92f48c76d826a9b0ae7ced3ff5d6480e15",
+      "fingerprint": "4eb693359a1b74d9df4f9c93fcc52f77907f1813ed6b5bf1aa7a6e10773f2fc5"
+    },
+    "DJI_0283_1": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0283_1.json.gz",
+      "sha256": "4cecf50388ed2e163324cb4474b36721e277bcf9f985fcb368988de145e42a05",
+      "fingerprint": "3a771523b2af3bc29c8a1b7fcf37b29a229a6a88260429d790105239ee087808"
+    },
+    "DJI_0303_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0303_2.json.gz",
+      "sha256": "9574ba197dd348af5fb548577503c9035f47c8ab5a78ea792ecd8df3d93e5c8a",
+      "fingerprint": "a9617f25043a54d92678af2c0782d7ef98b947789369294e2ea542f3c6f9f979"
+    },
+    "DJI_0307_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0307_2.json.gz",
+      "sha256": "6d53bf515fa31178e0ea6055deff5aa8bec5739d2b685532882cb78b2b0f7d83",
+      "fingerprint": "884e44bc46b794bf8337f4b3456d55ff004770b238bd1d071345c883b8c6e894"
+    },
+    "DJI_0309_4": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0309_4.json.gz",
+      "sha256": "7d007b3470041276ece35040664865b09b65bc9b9b26da190fcdb624a95c0a7f",
+      "fingerprint": "08826ec6ebfe07d12fdded624b58e9a0eee58df05019745dc86b5728aa1a0fa5"
+    },
+    "DJI_0325_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0325_2.json.gz",
+      "sha256": "3db6793b54e90af09a6cdba4712d4f385be8cdd2fd11aae0a7e4a6de9741c146",
+      "fingerprint": "4b6e102c3250d5d374f19d4968ff9222e2751a66e3ab69e6bdf072e9f855861f"
+    },
+    "DJI_0327_3": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0327_3.json.gz",
+      "sha256": "7224c85efed5ec504d133705373f25b487885512253d08960097aaa9c008d8fc",
+      "fingerprint": "524ad37fb5f831ac58625d7cc3657e2cf400db2296b33dfa019601d5f053b20d"
+    },
+    "DJI_0339_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0339_2.json.gz",
+      "sha256": "0e28043976c6b088ec043ac979cbf8b6e1940ff6430a6f1edf5e2f2d568a6970",
+      "fingerprint": "01c633c2c4e4a51871fb195594655a4d62f240b249108f93fecfcb161dee3493"
+    },
+    "DJI_0345_2": {
+      "status": "VERIFIED",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/BOT-SORT-Plus/results/vttiny/yolo11m_rgb_rgbt/rgbt/detections/DJI_0345_2.json.gz",
+      "sha256": "9376501d9b3d9f0f5aea0915323a03e58bae16e7414bc1a7e936abad0828ba14",
+      "fingerprint": "82d51dcf3bb4702e6cbeab6f7147c17e5125bdc0000e8f0338a44093d7d06545"
+    }
+  },
+  "decision_sources": {
+    "DJI_0028_3": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0028_3.jsonl",
+      "sha256": "5e18867b2fe59b56ed7a92242e9b95506c7e0b0a9e0fc24d13c79a899899c076",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0030_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0030_2.jsonl",
+      "sha256": "a94e41f47f43e0733fe82c1fdb1782972fabb27ff4863483a8c08d693a81f8ed",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 2
+    },
+    "DJI_0032_3": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0032_3.jsonl",
+      "sha256": "a6d5115c7f2fb3529f9b3ebe181b80a9cbecac12e3599840fd8862711f63258b",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0049_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0049_2.jsonl",
+      "sha256": "762ec8a40124ce17fb3e7fa6231970a980ed3a0a6ee47a5a5404c64d552682b8",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0051_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0051_2.jsonl",
+      "sha256": "e2e33cc95e355649d5c8b141b75311ea9977334f022da0b9a6aaecc9049d1601",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0061_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0061_2.jsonl",
+      "sha256": "10c6d6018a4d75e50cf30c3cd3dea4967e59a5f83e23365d17a9b7f13f3be5b4",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0073_3": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0073_3.jsonl",
+      "sha256": "9c1894d252777000a511be28e67ef7d8acefc66a9d1bd4e896da3ef3bf8eb99e",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0109_1": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0109_1.jsonl",
+      "sha256": "1ac8583abe7018fff3b465427ebd16e6e92e0b43c6b7c6f84fd2a825f9d12a1d",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0119_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0119_2.jsonl",
+      "sha256": "fee4462f810f93c1b79713bbb71963549ddbf9fc117be4acb2a8fc5359484c8d",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0129_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0129_2.jsonl",
+      "sha256": "d2d2b998bb6b939a6ebb524beba5e79fcf98911ebab60dc208927b9899e8301d",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0141_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0141_2.jsonl",
+      "sha256": "3f92c5595603a270f68b7c5f25afec3937ecfba5673b879aabf41b527c4f654d",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0155_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0155_2.jsonl",
+      "sha256": "842baa054d14e0a11789e836623fa26ca162b14e58d161b41468c370cb8a3944",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0159_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0159_2.jsonl",
+      "sha256": "b46a39d66c282ae141368de148eb74caead7f334431e9eac5a78b3cea8317561",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0169_3": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0169_3.jsonl",
+      "sha256": "16093f82435f1ab1850dace10971b37cba3455766973e945391ccc742743063a",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0173_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0173_2.jsonl",
+      "sha256": "3d6e586497e6dfa2f79a917bb9620b66f29fc5588c906039e5a2e102f1dee241",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0181_3": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0181_3.jsonl",
+      "sha256": "b7d4e6b85a107d6f2574321a55f60573584a64078b4debc2800fd66d4bd91da2",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0221_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0221_2.jsonl",
+      "sha256": "3159c854952e8995a750c75178294af132a543909869b634dbc7b585a9cb0f73",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0225_1": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0225_1.jsonl",
+      "sha256": "cbbe1f2883ff394658bb9d9adc5c8fac4bc30553136049f80d72ec7dafa16a76",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0237_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0237_2.jsonl",
+      "sha256": "004fb338e2dfe76634337bc575f971a6b8e69d0603030cb04db5333dd00dbbe3",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0255_1": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0255_1.jsonl",
+      "sha256": "be45a16263895eb8f60e256fb4d09582e0f41d9914c32a42387f579e57d9d446",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0257_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0257_2.jsonl",
+      "sha256": "5c10b9ad4b7709811e92bbe201330be286d900bb7f3f30a29ccccbb72908002c",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0277_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0277_2.jsonl",
+      "sha256": "54c519abe1d8a4185427c73f9c346412217e07629123ad44b5f4ca6c79245fb1",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0283_1": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0283_1.jsonl",
+      "sha256": "94ded9df405825555d99a4a298dda93802ae455eccd2594e12bc3a27c4d57007",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0303_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0303_2.jsonl",
+      "sha256": "af8d92c5c49a5a878d5d7e095108144ece53fafbee6aa4bb1e56ce08e3265ac8",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 1
+    },
+    "DJI_0307_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0307_2.jsonl",
+      "sha256": "6fba25a257240fee6b4c1ccc51aca1bb353641e2248ed358e1e85ad2b286e96e",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0309_4": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0309_4.jsonl",
+      "sha256": "73f59adf8806f3f59190897fa64eb2f54295ea98d2d7b748fafb908247267a8c",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0325_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0325_2.jsonl",
+      "sha256": "b099dc1fc55a124d381496103bcc567f8a8a6340df0b56a9edcbbf79e906a713",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0327_3": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0327_3.jsonl",
+      "sha256": "113edb7abcb4a0cf9b44b5c55d9d95761bbf1554b7ea26c9e5b53a392cee9dc9",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0339_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0339_2.jsonl",
+      "sha256": "62fffa9a6d651137c17c3ea5bfb4969354b44ae392e2ef36baf063e4e8dde71d",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    },
+    "DJI_0345_2": {
+      "status": "COMPLETE",
+      "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs/j3_bg/decisions/B_early_moderate_dual_low/DJI_0345_2.jsonl",
+      "sha256": "32405c2abd26401ee86a590c4ec5a7a9a6a55ac3006af4c8de9bc3879cffd2db",
+      "bound_to_protocol_hash": true,
+      "guarded_edges": 0
+    }
+  },
+  "scope": "conditional_shadow_diagnostics_on_development_data;not_closed_loop_gains",
+  "thresholds_trained": false,
+  "label_use": "GT offline only; all probe signals were produced causally",
+  "route_counts": [
+    {
+      "group": "COMBINED",
+      "route": "C_B_assignment",
+      "frames": 12590,
+      "available_frames": 12590,
+      "changed_frames": 4,
+      "selected_only_pairs": 2,
+      "native_only_pairs": 2
+    },
+    {
+      "group": "COMBINED",
+      "route": "C_observation_members",
+      "frames": 12590,
+      "available_frames": 12590,
+      "changed_frames": 125,
+      "selected_only_pairs": 174,
+      "native_only_pairs": 178
+    },
+    {
+      "group": "COMBINED",
+      "route": "N_B_assignment",
+      "frames": 12590,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "COMBINED",
+      "route": "P_B_assignment",
+      "frames": 12590,
+      "available_frames": 12590,
+      "changed_frames": 10,
+      "selected_only_pairs": 6,
+      "native_only_pairs": 4
+    },
+    {
+      "group": "video:DJI_0028",
+      "route": "C_B_assignment",
+      "frames": 570,
+      "available_frames": 570,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0028",
+      "route": "C_observation_members",
+      "frames": 570,
+      "available_frames": 570,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0028",
+      "route": "N_B_assignment",
+      "frames": 570,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0028",
+      "route": "P_B_assignment",
+      "frames": 570,
+      "available_frames": 570,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0030",
+      "route": "C_B_assignment",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0030",
+      "route": "C_observation_members",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 3,
+      "selected_only_pairs": 3,
+      "native_only_pairs": 3
+    },
+    {
+      "group": "video:DJI_0030",
+      "route": "N_B_assignment",
+      "frames": 590,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0030",
+      "route": "P_B_assignment",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 2,
+      "selected_only_pairs": 2,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0032",
+      "route": "C_B_assignment",
+      "frames": 290,
+      "available_frames": 290,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0032",
+      "route": "C_observation_members",
+      "frames": 290,
+      "available_frames": 290,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0032",
+      "route": "N_B_assignment",
+      "frames": 290,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0032",
+      "route": "P_B_assignment",
+      "frames": 290,
+      "available_frames": 290,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0049",
+      "route": "C_B_assignment",
+      "frames": 90,
+      "available_frames": 90,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0049",
+      "route": "C_observation_members",
+      "frames": 90,
+      "available_frames": 90,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0049",
+      "route": "N_B_assignment",
+      "frames": 90,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0049",
+      "route": "P_B_assignment",
+      "frames": 90,
+      "available_frames": 90,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0051",
+      "route": "C_B_assignment",
+      "frames": 580,
+      "available_frames": 580,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0051",
+      "route": "C_observation_members",
+      "frames": 580,
+      "available_frames": 580,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0051",
+      "route": "N_B_assignment",
+      "frames": 580,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0051",
+      "route": "P_B_assignment",
+      "frames": 580,
+      "available_frames": 580,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0061",
+      "route": "C_B_assignment",
+      "frames": 240,
+      "available_frames": 240,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0061",
+      "route": "C_observation_members",
+      "frames": 240,
+      "available_frames": 240,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0061",
+      "route": "N_B_assignment",
+      "frames": 240,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0061",
+      "route": "P_B_assignment",
+      "frames": 240,
+      "available_frames": 240,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0073",
+      "route": "C_B_assignment",
+      "frames": 360,
+      "available_frames": 360,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0073",
+      "route": "C_observation_members",
+      "frames": 360,
+      "available_frames": 360,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0073",
+      "route": "N_B_assignment",
+      "frames": 360,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0073",
+      "route": "P_B_assignment",
+      "frames": 360,
+      "available_frames": 360,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0109",
+      "route": "C_B_assignment",
+      "frames": 90,
+      "available_frames": 90,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0109",
+      "route": "C_observation_members",
+      "frames": 90,
+      "available_frames": 90,
+      "changed_frames": 25,
+      "selected_only_pairs": 38,
+      "native_only_pairs": 39
+    },
+    {
+      "group": "video:DJI_0109",
+      "route": "N_B_assignment",
+      "frames": 90,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0109",
+      "route": "P_B_assignment",
+      "frames": 90,
+      "available_frames": 90,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0119",
+      "route": "C_B_assignment",
+      "frames": 180,
+      "available_frames": 180,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0119",
+      "route": "C_observation_members",
+      "frames": 180,
+      "available_frames": 180,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0119",
+      "route": "N_B_assignment",
+      "frames": 180,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0119",
+      "route": "P_B_assignment",
+      "frames": 180,
+      "available_frames": 180,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0129",
+      "route": "C_B_assignment",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0129",
+      "route": "C_observation_members",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0129",
+      "route": "N_B_assignment",
+      "frames": 590,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0129",
+      "route": "P_B_assignment",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0141",
+      "route": "C_B_assignment",
+      "frames": 410,
+      "available_frames": 410,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0141",
+      "route": "C_observation_members",
+      "frames": 410,
+      "available_frames": 410,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0141",
+      "route": "N_B_assignment",
+      "frames": 410,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0141",
+      "route": "P_B_assignment",
+      "frames": 410,
+      "available_frames": 410,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0155",
+      "route": "C_B_assignment",
+      "frames": 410,
+      "available_frames": 410,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0155",
+      "route": "C_observation_members",
+      "frames": 410,
+      "available_frames": 410,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0155",
+      "route": "N_B_assignment",
+      "frames": 410,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0155",
+      "route": "P_B_assignment",
+      "frames": 410,
+      "available_frames": 410,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0159",
+      "route": "C_B_assignment",
+      "frames": 250,
+      "available_frames": 250,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0159",
+      "route": "C_observation_members",
+      "frames": 250,
+      "available_frames": 250,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0159",
+      "route": "N_B_assignment",
+      "frames": 250,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0159",
+      "route": "P_B_assignment",
+      "frames": 250,
+      "available_frames": 250,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0169",
+      "route": "C_B_assignment",
+      "frames": 290,
+      "available_frames": 290,
+      "changed_frames": 3,
+      "selected_only_pairs": 2,
+      "native_only_pairs": 1
+    },
+    {
+      "group": "video:DJI_0169",
+      "route": "C_observation_members",
+      "frames": 290,
+      "available_frames": 290,
+      "changed_frames": 7,
+      "selected_only_pairs": 6,
+      "native_only_pairs": 5
+    },
+    {
+      "group": "video:DJI_0169",
+      "route": "N_B_assignment",
+      "frames": 290,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0169",
+      "route": "P_B_assignment",
+      "frames": 290,
+      "available_frames": 290,
+      "changed_frames": 2,
+      "selected_only_pairs": 1,
+      "native_only_pairs": 1
+    },
+    {
+      "group": "video:DJI_0173",
+      "route": "C_B_assignment",
+      "frames": 450,
+      "available_frames": 450,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0173",
+      "route": "C_observation_members",
+      "frames": 450,
+      "available_frames": 450,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0173",
+      "route": "N_B_assignment",
+      "frames": 450,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0173",
+      "route": "P_B_assignment",
+      "frames": 450,
+      "available_frames": 450,
+      "changed_frames": 1,
+      "selected_only_pairs": 1,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0181",
+      "route": "C_B_assignment",
+      "frames": 320,
+      "available_frames": 320,
+      "changed_frames": 1,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 1
+    },
+    {
+      "group": "video:DJI_0181",
+      "route": "C_observation_members",
+      "frames": 320,
+      "available_frames": 320,
+      "changed_frames": 27,
+      "selected_only_pairs": 68,
+      "native_only_pairs": 72
+    },
+    {
+      "group": "video:DJI_0181",
+      "route": "N_B_assignment",
+      "frames": 320,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0181",
+      "route": "P_B_assignment",
+      "frames": 320,
+      "available_frames": 320,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0221",
+      "route": "C_B_assignment",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0221",
+      "route": "C_observation_members",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 38,
+      "selected_only_pairs": 38,
+      "native_only_pairs": 34
+    },
+    {
+      "group": "video:DJI_0221",
+      "route": "N_B_assignment",
+      "frames": 590,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0221",
+      "route": "P_B_assignment",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 2,
+      "selected_only_pairs": 2,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0225",
+      "route": "C_B_assignment",
+      "frames": 329,
+      "available_frames": 329,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0225",
+      "route": "C_observation_members",
+      "frames": 329,
+      "available_frames": 329,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0225",
+      "route": "N_B_assignment",
+      "frames": 329,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0225",
+      "route": "P_B_assignment",
+      "frames": 329,
+      "available_frames": 329,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0237",
+      "route": "C_B_assignment",
+      "frames": 410,
+      "available_frames": 410,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0237",
+      "route": "C_observation_members",
+      "frames": 410,
+      "available_frames": 410,
+      "changed_frames": 15,
+      "selected_only_pairs": 14,
+      "native_only_pairs": 15
+    },
+    {
+      "group": "video:DJI_0237",
+      "route": "N_B_assignment",
+      "frames": 410,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0237",
+      "route": "P_B_assignment",
+      "frames": 410,
+      "available_frames": 410,
+      "changed_frames": 2,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 2
+    },
+    {
+      "group": "video:DJI_0255",
+      "route": "C_B_assignment",
+      "frames": 600,
+      "available_frames": 600,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0255",
+      "route": "C_observation_members",
+      "frames": 600,
+      "available_frames": 600,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0255",
+      "route": "N_B_assignment",
+      "frames": 600,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0255",
+      "route": "P_B_assignment",
+      "frames": 600,
+      "available_frames": 600,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0257",
+      "route": "C_B_assignment",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0257",
+      "route": "C_observation_members",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0257",
+      "route": "N_B_assignment",
+      "frames": 590,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0257",
+      "route": "P_B_assignment",
+      "frames": 590,
+      "available_frames": 590,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0277",
+      "route": "C_B_assignment",
+      "frames": 366,
+      "available_frames": 366,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0277",
+      "route": "C_observation_members",
+      "frames": 366,
+      "available_frames": 366,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0277",
+      "route": "N_B_assignment",
+      "frames": 366,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0277",
+      "route": "P_B_assignment",
+      "frames": 366,
+      "available_frames": 366,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0283",
+      "route": "C_B_assignment",
+      "frames": 450,
+      "available_frames": 450,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0283",
+      "route": "C_observation_members",
+      "frames": 450,
+      "available_frames": 450,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0283",
+      "route": "N_B_assignment",
+      "frames": 450,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0283",
+      "route": "P_B_assignment",
+      "frames": 450,
+      "available_frames": 450,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0303",
+      "route": "C_B_assignment",
+      "frames": 577,
+      "available_frames": 577,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0303",
+      "route": "C_observation_members",
+      "frames": 577,
+      "available_frames": 577,
+      "changed_frames": 10,
+      "selected_only_pairs": 7,
+      "native_only_pairs": 10
+    },
+    {
+      "group": "video:DJI_0303",
+      "route": "N_B_assignment",
+      "frames": 577,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0303",
+      "route": "P_B_assignment",
+      "frames": 577,
+      "available_frames": 577,
+      "changed_frames": 1,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 1
+    },
+    {
+      "group": "video:DJI_0307",
+      "route": "C_B_assignment",
+      "frames": 180,
+      "available_frames": 180,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0307",
+      "route": "C_observation_members",
+      "frames": 180,
+      "available_frames": 180,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0307",
+      "route": "N_B_assignment",
+      "frames": 180,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0307",
+      "route": "P_B_assignment",
+      "frames": 180,
+      "available_frames": 180,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0309",
+      "route": "C_B_assignment",
+      "frames": 603,
+      "available_frames": 603,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0309",
+      "route": "C_observation_members",
+      "frames": 603,
+      "available_frames": 603,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0309",
+      "route": "N_B_assignment",
+      "frames": 603,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0309",
+      "route": "P_B_assignment",
+      "frames": 603,
+      "available_frames": 603,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0325",
+      "route": "C_B_assignment",
+      "frames": 595,
+      "available_frames": 595,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0325",
+      "route": "C_observation_members",
+      "frames": 595,
+      "available_frames": 595,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0325",
+      "route": "N_B_assignment",
+      "frames": 595,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0325",
+      "route": "P_B_assignment",
+      "frames": 595,
+      "available_frames": 595,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0327",
+      "route": "C_B_assignment",
+      "frames": 390,
+      "available_frames": 390,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0327",
+      "route": "C_observation_members",
+      "frames": 390,
+      "available_frames": 390,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0327",
+      "route": "N_B_assignment",
+      "frames": 390,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0327",
+      "route": "P_B_assignment",
+      "frames": 390,
+      "available_frames": 390,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0339",
+      "route": "C_B_assignment",
+      "frames": 600,
+      "available_frames": 600,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0339",
+      "route": "C_observation_members",
+      "frames": 600,
+      "available_frames": 600,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0339",
+      "route": "N_B_assignment",
+      "frames": 600,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0339",
+      "route": "P_B_assignment",
+      "frames": 600,
+      "available_frames": 600,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0345",
+      "route": "C_B_assignment",
+      "frames": 600,
+      "available_frames": 600,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0345",
+      "route": "C_observation_members",
+      "frames": 600,
+      "available_frames": 600,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0345",
+      "route": "N_B_assignment",
+      "frames": 600,
+      "available_frames": 0,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    },
+    {
+      "group": "video:DJI_0345",
+      "route": "P_B_assignment",
+      "frames": 600,
+      "available_frames": 600,
+      "changed_frames": 0,
+      "selected_only_pairs": 0,
+      "native_only_pairs": 0
+    }
+  ],
+  "actual_B_outcomes": {
+    "same_GT_identity": 385,
+    "unknown_prior_identity": 218,
+    "FP_localization_or_wrong_identity_unresolved": 269,
+    "different_GT_identity": 38,
+    "FP_anchor_GT_absent": 25,
+    "FP_competition": 2
+  },
+  "raw_detection_status": {
+    "supports_prior_GT": 2143,
+    "supports_different_GT": 71909,
+    "below_CLEAR_IoU_threshold": 125473,
+    "unique_GT_support_prior_identity_unknown": 6193,
+    "unknown_multiple_GT_support": 1608,
+    "unknown_no_valid_GT": 32
+  },
+  "common_identity_score_unknown": 26508,
+  "active_stronger_accepted": 45,
+  "native_high_reconnection_records": 730,
+  "actual_Lost_high_reconnections": 729,
+  "guard_to_B_membership_records": 24,
+  "guarded_edges_in_B_histories": 3,
+  "guarded_edges_with_B_acceptance": 3,
+  "missing_decision_sequences": 0,
+  "gate_decision": "DIAGNOSTIC_REVIEW_REQUIRED;no_threshold_selected",
+  "outputs_sha256": {
+    "accepted_signal_summary.csv": "a7e32e9dc13a6c41a6b58cd39206fc01d8671a39c7e4603e7534ff97c59ce89e",
+    "guard_membership_summary.csv": "fb4e590cf4ed1009f6131171218b134008f4c88ecc9d5b6852e6f2c38f5c9674",
+    "guard_to_B.csv": "c2f20e948c635a33505bb80f5cbbf9bb312df4cf3c31fdf4a7bbf751a31f485d",
+    "identity_competition.csv.gz": "053c8d5b5e65605466e6df64162f907ac8e31ecc92ad89db42a8cae6619635f1",
+    "motion_disagreement.csv.gz": "a2c04312b5f2ff2882c049fe97c087fc529a45dd42690d80b7b66340b2b51244",
+    "native_high_reconnections.csv": "4cf6e3f3c83ef347798272130965af2da030c56f3f6b777d86fbc0e7d2b420fe",
+    "output_indices.csv": "50a089b8a103d72b561139d236c2fdc338cac600b5e9a50166ecfc7c868de576",
+    "parity.csv": "b1472947056b002b5767ab1624524391a0a8ead2095e06e1c3b3230350961711",
+    "recovery_signals.csv.gz": "98d07e95a0c63a54933e7a6701b1ca01dfb54392d0ff410aa605abf697fa8077",
+    "report.md": "db0bb7cd499fbd1457aed14f7ee8438ec3e3450c04357a4b2b011054ac00e72a",
+    "route_changes.csv": "e5836132f1880d6e71d3733efbda89fb3ef17b533580d2a841ab5ea189c7ca64",
+    "route_summary.csv": "1bec1d74bca0fc8252c65c9490757e846196d549c8319b2f0152c66dc86ba688"
+  }
+}

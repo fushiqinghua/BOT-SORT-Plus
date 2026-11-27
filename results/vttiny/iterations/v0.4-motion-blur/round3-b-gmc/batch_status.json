@@ -1,0 +1,44 @@
+{
+  "schema": "v04_joint_batch_v1",
+  "status": "COMPLETE_EXECUTABLE_STAGES",
+  "base_commit": "7d549bc8bbddfefe99fbb8119ea13d40a4b5bd6d",
+  "stages": {
+    "J0": {
+      "status": "PASS"
+    },
+    "J1": {
+      "status": "COMPLETE"
+    },
+    "smoke": {
+      "status": "PASS"
+    },
+    "J2": {
+      "status": "COMPLETE_TRACKING_PENDING_EVALUATION"
+    },
+    "J2_evaluation": {
+      "status": "PASS"
+    },
+    "J3_BG": {
+      "status": "PASS"
+    },
+    "J3_F_summary": {
+      "status": "COMPLETE"
+    },
+    "J3_BG_summary": {
+      "status": "COMPLETE"
+    },
+    "E3_prepare": {
+      "status": "PREPARED"
+    }
+  },
+  "E1": "STOP_P1_P2_REUSE_DIAGNOSTICS",
+  "E2": "STOP_FIXED_191",
+  "E3": "PENDING_HUMAN_REVIEW",
+  "J4": "AWAITING_DIAGNOSTIC_DECISION",
+  "evidence": {
+    "path": "${PROJECT_ROOT}/integrations/botsort_plus_v0_4_motion_blur/round3_joint_e62bb9b8/outputs_evidence.zip",
+    "sha256": "2c0f16ef556a33a36d6a2ae72a972372c237761cfc53b48307f9b554cb769d87",
+    "files": 768,
+    "include_traces": false
+  }
+}

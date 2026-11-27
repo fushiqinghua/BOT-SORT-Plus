@@ -1,0 +1,16 @@
+{
+  "source": "e3_human_review/PREPARE.json",
+  "source_context": "Server preparation after transferring the archived cards into the separate review workspace",
+  "initial_batch_preparation": "e3_review/PREPARE.json",
+  "status": "PREPARED",
+  "samples": 22,
+  "source_videos": 11,
+  "missing_cards": [],
+  "source_sha256": "b1b60819dafaeba3e441c743988ed597f55d41089bd7efad4827e3de8e42099d",
+  "prepared_sha256": "8d53c0a7d4ce28135a31974bbf22e6744f5bfd6c5bbb335bfb8cd9c468724b43",
+  "human_review": {
+    "status": "PENDING_HUMAN_REVIEW",
+    "reviewed": 0,
+    "pending": 22
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "implementation_commit": "e62bb9b8b4a95528b7eaba2538d7d2f80f07d592",
+  "batch_base_commit": "7d549bc8bbddfefe99fbb8119ea13d40a4b5bd6d",
+  "scope": {
+    "dataset": "VT-Tiny-MOT",
+    "split": "test",
+    "sequences": 30,
+    "frames": 12590
+  },
+  "server_bundle": {
+    "sha256": "2c0f16ef556a33a36d6a2ae72a972372c237761cfc53b48307f9b554cb769d87",
+    "files": 768,
+    "include_traces": false
+  },
+  "machine_paths": "Machine-specific absolute paths in text replaced with root placeholders.",
+  "input_output_fingerprints": "Original experiment and audit fingerprints are retained.",
+  "files": {
+    "batch_status.json": {
+      "server_sha256": "77ed400f259199f6cf427b5075729ec349daa483458263310c09d8482929d3f3",
+      "published_sha256": "a5fdc401bc2e360686602a7b40174edbf8d1f5d5df94cffcbe935919f6a9404f"
+    },
+    "j0/manifest.json": {
+      "server_sha256": "7b7edda16646e9ec92f42921d09f096391810b3941d07b01b13afdbe6f59217a",
+      "published_sha256": "8014c94078d598d0303dcb237685df516c324e910143a43fa0506db39ee79276"
+    },
+    "smoke/verification.json": {
+      "server_sha256": "ac662054f2868cbee44ede3bf6bc7a529f93ca92a0ce2f62cfb56eeca6f78525",
+      "published_sha256": "7a8bde7dc4b7050921377bee81e269027e3473f1923ef0a44c6024dde3ddd96d"
+    },
+    "j1/manifest.json": {
+      "server_sha256": "2d6f3e37bf001ba3878de499e0fe828a54e108223822e74b9ddd71d516be5d07",
+      "published_sha256": "2f3a445939789160f10219aa9428d5d00f557bf7ad7e1f87f88e46702c719c33"
+    },
+    "j1/report.md": {
+      "server_sha256": "523db864d6d2274e89915c7e6d52a2a377d8a2b566d7e87c4adb7a82bf4e6db3",
+      "published_sha256": "523db864d6d2274e89915c7e6d52a2a377d8a2b566d7e87c4adb7a82bf4e6db3"
+    },
+    "j1/coverage_overlap.csv": {
+      "server_sha256": "efea6b3ed8c89642fd64588a88718906971e7e4e762f600f36a177e2b4835fc9",
+      "published_sha256": "efea6b3ed8c89642fd64588a88718906971e7e4e762f600f36a177e2b4835fc9"
+    },
+    "j2/manifest.json": {
+      "server_sha256": "d938e255dd6e57556ec047956340a33ca72cd2d75a75ee285a9205f658616cfd",
+      "published_sha256": "d938e255dd6e57556ec047956340a33ca72cd2d75a75ee285a9205f658616cfd"
+    },
+    "j2_evaluation/metrics/summary.json": {
+      "server_sha256": "084ac6d02f5ff46e03350b4505e5da2e5590e1f9db90dcb1eb5acdddf7cb397b",
+      "published_sha256": "084ac6d02f5ff46e03350b4505e5da2e5590e1f9db90dcb1eb5acdddf7cb397b"
+    },
+    "j2_evaluation/metrics/evaluation_audit.json": {
+      "server_sha256": "6c59f938ee2e4c2a23ebf9354305505c1487014fdc4ebcca101103474a63388a",
+      "published_sha256": "1b0e50ef9c81ab76363227f827b0d239f45c351516ee28b15e4c8e1f041a815e"
+    },
+    "j2_evaluation/metrics/comparison.csv": {
+      "server_sha256": "d7ef84bc93ad62ae47aed5cfc54f72771acd6e4c9c7c4a65aee45104d7ec7984",
+      "published_sha256": "d7ef84bc93ad62ae47aed5cfc54f72771acd6e4c9c7c4a65aee45104d7ec7984"
+    },
+    "j3_f_analysis/manifest.json": {
+      "server_sha256": "ae892741018d570f394b3a104ead940f69309e9c0748a43b315f7c98b371ec22",
+      "published_sha256": "aa2d665cdf343bee0fb03770765c54251ae1d648a965b0a2d0167ad850f256c0"
+    },
+    "j3_f_analysis/report.md": {
+      "server_sha256": "a39d3dd830e4729f12155a239189e96930bba593b7091a7f102c53ea6d7b77b2",
+      "published_sha256": "a39d3dd830e4729f12155a239189e96930bba593b7091a7f102c53ea6d7b77b2"
+    },
+    "j3_f_analysis/accepted_signal_summary.csv": {
+      "server_sha256": "5f73893990fda1df4c82613bac42868aec05fd1b6070626471a060aedee7db81",
+      "published_sha256": "5f73893990fda1df4c82613bac42868aec05fd1b6070626471a060aedee7db81"
+    },
+    "j3_bg_analysis/manifest.json": {
+      "server_sha256": "503381da709b0f8d7d39c1a069a139c8eb8873c1a4823a165ab0bf66d2b4a051",
+      "published_sha256": "171e57536a0b0ca626823cc5f4c8fcb27f50470696a5b98fe765a8043a5a8be5"
+    },
+    "j3_bg_analysis/report.md": {
+      "server_sha256": "db0bb7cd499fbd1457aed14f7ee8438ec3e3450c04357a4b2b011054ac00e72a",
+      "published_sha256": "db0bb7cd499fbd1457aed14f7ee8438ec3e3450c04357a4b2b011054ac00e72a"
+    },
+    "j3_bg_analysis/accepted_signal_summary.csv": {
+      "server_sha256": "a7e32e9dc13a6c41a6b58cd39206fc01d8671a39c7e4603e7534ff97c59ce89e",
+      "published_sha256": "a7e32e9dc13a6c41a6b58cd39206fc01d8671a39c7e4603e7534ff97c59ce89e"
+    },
+    "j3_bg_analysis/guard_membership_summary.csv": {
+      "server_sha256": "fb4e590cf4ed1009f6131171218b134008f4c88ecc9d5b6852e6f2c38f5c9674",
+      "published_sha256": "fb4e590cf4ed1009f6131171218b134008f4c88ecc9d5b6852e6f2c38f5c9674"
+    },
+    "j3_bg_analysis/guard_to_B.csv": {
+      "server_sha256": "c2f20e948c635a33505bb80f5cbbf9bb312df4cf3c31fdf4a7bbf751a31f485d",
+      "published_sha256": "c2f20e948c635a33505bb80f5cbbf9bb312df4cf3c31fdf4a7bbf751a31f485d"
+    },
+    "j3_bg/verification.json": {
+      "server_sha256": "a0f0842487a9733dbbe231e46025cfed48bc7649889457ced10387a26ddea7e3",
+      "published_sha256": "a0f0842487a9733dbbe231e46025cfed48bc7649889457ced10387a26ddea7e3"
+    },
+    "e3_review/PREPARE.json": {
+      "server_sha256": "a11f9b241a3944ff45e59d296fe9b4815a83ada33d77407c09bc359256d6bb7d",
+      "published_sha256": "81944be0e5831868fd0bde46966738a9964f6cc03768904dec68f13de956b79a"
+    }
+  },
+  "derived_csv_sha256": "d07cb43a03c18f098c8172a39f98ccabddb5739a40da4314c6131def5680777c",
+  "E3": {
+    "state": "PENDING_HUMAN_REVIEW",
+    "reviewed": 0,
+    "pending": 22,
+    "source_videos": 11,
+    "card_setup": "All 22 archived cards were linked and verified for the separate review workspace."
+  },
+  "J4": "AWAITING_DIAGNOSTIC_DECISION"
+}

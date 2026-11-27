@@ -2,7 +2,9 @@
 
 面向无人机海上搜救与微小目标多模态跟踪，在 **YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID** 基线上进行模块设计、真实数据消融与错因分析。
 
-**当前任务为 round 3：B 与自适应 GMC 的收益交集、关键对照和只读路径诊断。** 本分支新增可运行的 J0–J3 与 E3 人审收尾入口；新增两组为 `B_skip_only` 和 `B_adaptive_no_dual_low`。真实数据结果待本地运行回传，J4 协同策略等待诊断证据后再决定。
+**Round 3 已完成 VT-Tiny-MOT 官方测试集 30 段、12,590 帧的 J0–J3 联合诊断。** 两组新增对照为 `B_skip_only` 和 `B_adaptive_no_dual_low`。E3 已准备 22 例图卡，人工标注待完成。J4 等待复核诊断证据后决定。
+
+[Round 3 真实数据结果、逐序列指标和校验记录](results/vttiny/iterations/v0.4-motion-blur/round3-b-gmc/README.md)
 
 [本批完整执行说明](docs/botsort_plus/diagnostics_v0.4/NEXT_JOINT_ROUND.md) · [统一运行入口](tools/run_v04_joint_batch.py) · [本地配置模板](configs/diagnostics/joint_v0.4_round3.example.json) · [实现代码](experiments/vttiny_gmc/round3_joint/) · [本批软件核验](docs/botsort_plus/diagnostics_v0.4/VALIDATION_ROUND3.md)
 
@@ -40,7 +42,7 @@ python -X utf8 tools/run_v04_joint_batch.py run --settings configs/diagnostics/j
 | v0.4 四组诊断 | 30 段、12,590 帧的自动诊断已归档，轨迹和原有事件逐字节一致。D4 的真实运动模糊仍待同层人工复核。 [首轮实验](results/vttiny/iterations/v0.4-motion-blur/README.md) |
 | E1 / E2 / E3 | E1 停止 P1/P2、保留 E1-A/E1-B 诊断资产；E2 固定 191 条补框实验结案；E3 的 22 例正式人审待完成，未宣判整个背景方向无效 |
 | B＋自适应 GMC | 联合消融、两段错误链、`evidence_both` 与暂存消融已归档；是本批的实证起点 |
-| round 3 J0–J3 | 运行入口、两组对照、收益交集分析及 P/N/C 与身份竞争只读诊断已提供，等待本地真实数据执行 |
+| round 3 J0–J3 | 预检、六段一致性试跑、两组全量对照、官方 TrackEval 和只读路径诊断均已完成。[实验归档](results/vttiny/iterations/v0.4-motion-blur/round3-b-gmc/README.md) |
 
 B 利用原生关联后未消费的候选形成短轨迹，对仍在 Lost 池中的旧轨迹进行时序验证和一对一身份恢复。本批固定 B、检测、RGB 特征与 KF；J2 明确改变相机候选集／`dual_low` 因子，J3 影子记录不改变所属组的正式决策。
 
