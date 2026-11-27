@@ -1,0 +1,452 @@
+{
+  "status": "COMPLETE",
+  "stage": "smoke",
+  "inputs": {
+    "sequences": 2,
+    "frames": 540,
+    "cache_image_and_config_exact": true,
+    "previous_native_and_full_predictions_exact": true,
+    "focus_outputs_equal_smoke": false,
+    "detector": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+    "reid": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1"
+  },
+  "prior_metrics_and_frame_choices_match": true,
+  "joint": {
+    "native": {
+      "HOTA": 19.928376577418632,
+      "DetA": 40.36938306088721,
+      "AssA": 13.795204668740668,
+      "IDF1": 16.386554621848738,
+      "MOTA": 13.703703703703704,
+      "FP": 147,
+      "FN": 275,
+      "IDSW": 44
+    },
+    "skip_only": {
+      "HOTA": 28.551824999976493,
+      "DetA": 44.17308277961971,
+      "AssA": 26.571302922583605,
+      "IDF1": 25.303643724696357,
+      "MOTA": 20.925925925925924,
+      "FP": 155,
+      "FN": 247,
+      "IDSW": 25
+    },
+    "lightglue_only": {
+      "HOTA": 27.53112780823898,
+      "DetA": 41.80346216017268,
+      "AssA": 26.896214355978127,
+      "IDF1": 21.82952182952183,
+      "MOTA": 17.962962962962965,
+      "FP": 147,
+      "FN": 265,
+      "IDSW": 31
+    },
+    "adaptive_gmc": {
+      "HOTA": 28.70827088203225,
+      "DetA": 44.216757685773636,
+      "AssA": 27.070614963802104,
+      "IDF1": 25.303643724696357,
+      "MOTA": 20.925925925925924,
+      "FP": 155,
+      "FN": 247,
+      "IDSW": 25
+    }
+  },
+  "effects": {
+    "skip_alone": {
+      "HOTA": 8.62344842255786,
+      "DetA": 3.803699718732503,
+      "AssA": 12.776098253842937,
+      "IDF1": 8.91708910284762,
+      "MOTA": 7.22222222222222,
+      "FP": 8,
+      "FN": -28,
+      "IDSW": -19
+    },
+    "lightglue_alone": {
+      "HOTA": 7.602751230820349,
+      "DetA": 1.4340790992854693,
+      "AssA": 13.10100968723746,
+      "IDF1": 5.442967207673092,
+      "MOTA": 4.259259259259261,
+      "FP": 0,
+      "FN": -10,
+      "IDSW": -13
+    },
+    "both": {
+      "HOTA": 8.779894304613617,
+      "DetA": 3.8473746248864273,
+      "AssA": 13.275410295061436,
+      "IDF1": 8.91708910284762,
+      "MOTA": 7.22222222222222,
+      "FP": 8,
+      "FN": -28,
+      "IDSW": -19
+    },
+    "add_skip_to_lightglue": {
+      "HOTA": 1.1771430737932675,
+      "DetA": 2.413295525600958,
+      "AssA": 0.17440060782397637,
+      "IDF1": 3.4741218951745267,
+      "MOTA": 2.9629629629629584,
+      "FP": 8,
+      "FN": -18,
+      "IDSW": -6
+    },
+    "add_lightglue_to_skip": {
+      "HOTA": 0.15644588205575616,
+      "DetA": 0.04367490615392455,
+      "AssA": 0.4993120412184986,
+      "IDF1": 0.0,
+      "MOTA": 0.0,
+      "FP": 0,
+      "FN": 0,
+      "IDSW": 0
+    },
+    "interaction": {
+      "HOTA": -7.446305348764593,
+      "DetA": -1.3904041931315447,
+      "AssA": -12.60169764601896,
+      "IDF1": -5.442967207673092,
+      "MOTA": -4.259259259259261,
+      "FP": 0,
+      "FN": 10,
+      "IDSW": 13
+    },
+    "skip_order_average": {
+      "HOTA": 4.900295748175564,
+      "DetA": 3.1084976221667304,
+      "AssA": 6.475249430833457,
+      "IDF1": 6.195605499011073,
+      "MOTA": 5.092592592592589,
+      "FP": 8.0,
+      "FN": -23.0,
+      "IDSW": -12.5
+    },
+    "lightglue_order_average": {
+      "HOTA": 3.8795985564380526,
+      "DetA": 0.7388770027196969,
+      "AssA": 6.800160864227979,
+      "IDF1": 2.721483603836546,
+      "MOTA": 2.1296296296296306,
+      "FP": 0.0,
+      "FN": -5.0,
+      "IDSW": -6.5
+    }
+  },
+  "choices": {
+    "frames": 540,
+    "triggers": 474,
+    "skip_calls": 0,
+    "lightglue_calls": 474,
+    "full_calls": 474,
+    "skip_selected": 87,
+    "lightglue_selected": 26,
+    "full_skip": 77,
+    "full_lightglue": 11,
+    "full_sof": 452,
+    "both_eligible": 25,
+    "both_choose_skip": 15,
+    "both_choose_lightglue": 10,
+    "singleton_skip": 62,
+    "singleton_lightglue": 1,
+    "trigger_no_accepted": 386
+  },
+  "replay_seconds": {
+    "native": 3.1326394247589633,
+    "skip_only": 5.2648190365871415,
+    "lightglue_only": 12.302566792932339,
+    "adaptive_gmc": 12.336251669214107
+  },
+  "focus": {
+    "DJI_0109_1": {
+      "metrics": {
+        "native": {
+          "HOTA": 44.18361618368416,
+          "DetA": 56.11192107656707,
+          "AssA": 34.791880285809604,
+          "IDF1": 63.69426751592356,
+          "MOTA": 60.0,
+          "FP": 0,
+          "FN": 23,
+          "IDSW": 13
+        },
+        "skip_only": {
+          "HOTA": 66.01083891779376,
+          "DetA": 66.01083891779375,
+          "AssA": 66.01083891779376,
+          "IDF1": 92.21556886227546,
+          "MOTA": 85.55555555555556,
+          "FP": 0,
+          "FN": 13,
+          "IDSW": 0
+        },
+        "lightglue_only": {
+          "HOTA": 66.5658317979419,
+          "DetA": 66.56583179794188,
+          "AssA": 66.5658317979419,
+          "IDF1": 92.21556886227546,
+          "MOTA": 85.55555555555556,
+          "FP": 0,
+          "FN": 13,
+          "IDSW": 0
+        },
+        "adaptive_gmc": {
+          "HOTA": 66.5658317979419,
+          "DetA": 66.56583179794188,
+          "AssA": 66.5658317979419,
+          "IDF1": 92.21556886227546,
+          "MOTA": 85.55555555555556,
+          "FP": 0,
+          "FN": 13,
+          "IDSW": 0
+        }
+      },
+      "effects": {
+        "skip_alone": {
+          "HOTA": 21.827222734109604,
+          "DetA": 9.898917841226677,
+          "AssA": 31.218958631984158,
+          "IDF1": 28.521301346351898,
+          "MOTA": 25.555555555555557,
+          "FP": 0,
+          "FN": -10,
+          "IDSW": -13
+        },
+        "lightglue_alone": {
+          "HOTA": 22.38221561425774,
+          "DetA": 10.453910721374811,
+          "AssA": 31.773951512132292,
+          "IDF1": 28.521301346351898,
+          "MOTA": 25.555555555555557,
+          "FP": 0,
+          "FN": -10,
+          "IDSW": -13
+        },
+        "both": {
+          "HOTA": 22.38221561425774,
+          "DetA": 10.453910721374811,
+          "AssA": 31.773951512132292,
+          "IDF1": 28.521301346351898,
+          "MOTA": 25.555555555555557,
+          "FP": 0,
+          "FN": -10,
+          "IDSW": -13
+        },
+        "add_skip_to_lightglue": {
+          "HOTA": 0.0,
+          "DetA": 0.0,
+          "AssA": 0.0,
+          "IDF1": 0.0,
+          "MOTA": 0.0,
+          "FP": 0,
+          "FN": 0,
+          "IDSW": 0
+        },
+        "add_lightglue_to_skip": {
+          "HOTA": 0.5549928801481343,
+          "DetA": 0.5549928801481343,
+          "AssA": 0.5549928801481343,
+          "IDF1": 0.0,
+          "MOTA": 0.0,
+          "FP": 0,
+          "FN": 0,
+          "IDSW": 0
+        },
+        "interaction": {
+          "HOTA": -21.827222734109604,
+          "DetA": -9.898917841226677,
+          "AssA": -31.218958631984158,
+          "IDF1": -28.521301346351898,
+          "MOTA": -25.555555555555557,
+          "FP": 0,
+          "FN": 10,
+          "IDSW": 13
+        },
+        "skip_order_average": {
+          "HOTA": 10.913611367054802,
+          "DetA": 4.949458920613338,
+          "AssA": 15.609479315992079,
+          "IDF1": 14.260650673175949,
+          "MOTA": 12.777777777777779,
+          "FP": 0.0,
+          "FN": -5.0,
+          "IDSW": -6.5
+        },
+        "lightglue_order_average": {
+          "HOTA": 11.468604247202936,
+          "DetA": 5.504451800761473,
+          "AssA": 16.164472196140213,
+          "IDF1": 14.260650673175949,
+          "MOTA": 12.777777777777779,
+          "FP": 0.0,
+          "FN": -5.0,
+          "IDSW": -6.5
+        }
+      },
+      "choices": {
+        "frames": 90,
+        "triggers": 28,
+        "skip_calls": 0,
+        "lightglue_calls": 28,
+        "full_calls": 28,
+        "skip_selected": 26,
+        "lightglue_selected": 26,
+        "full_skip": 16,
+        "full_lightglue": 11,
+        "full_sof": 63,
+        "both_eligible": 25,
+        "both_choose_skip": 15,
+        "both_choose_lightglue": 10,
+        "singleton_skip": 1,
+        "singleton_lightglue": 1,
+        "trigger_no_accepted": 1
+      }
+    },
+    "DJI_0173_2": {
+      "metrics": {
+        "native": {
+          "HOTA": 10.323463163393228,
+          "DetA": 38.22348641890186,
+          "AssA": 2.8186565603348823,
+          "IDF1": 7.044025157232705,
+          "MOTA": 4.444444444444445,
+          "FP": 147,
+          "FN": 252,
+          "IDSW": 31
+        },
+        "skip_only": {
+          "HOTA": 13.263250873640189,
+          "DetA": 41.16485759204325,
+          "AssA": 4.3184127532224785,
+          "IDF1": 11.69305724725944,
+          "MOTA": 8.0,
+          "FP": 155,
+          "FN": 234,
+          "IDSW": 25
+        },
+        "lightglue_only": {
+          "HOTA": 10.323463163393228,
+          "DetA": 38.22348641890186,
+          "AssA": 2.8186565603348823,
+          "IDF1": 7.044025157232705,
+          "MOTA": 4.444444444444445,
+          "FP": 147,
+          "FN": 252,
+          "IDSW": 31
+        },
+        "adaptive_gmc": {
+          "HOTA": 13.263250873640189,
+          "DetA": 41.16485759204325,
+          "AssA": 4.3184127532224785,
+          "IDF1": 11.69305724725944,
+          "MOTA": 8.0,
+          "FP": 155,
+          "FN": 234,
+          "IDSW": 25
+        }
+      },
+      "effects": {
+        "skip_alone": {
+          "HOTA": 2.9397877102469607,
+          "DetA": 2.941371173141391,
+          "AssA": 1.4997561928875962,
+          "IDF1": 4.649032090026735,
+          "MOTA": 3.5555555555555554,
+          "FP": 8,
+          "FN": -18,
+          "IDSW": -6
+        },
+        "lightglue_alone": {
+          "HOTA": 0.0,
+          "DetA": 0.0,
+          "AssA": 0.0,
+          "IDF1": 0.0,
+          "MOTA": 0.0,
+          "FP": 0,
+          "FN": 0,
+          "IDSW": 0
+        },
+        "both": {
+          "HOTA": 2.9397877102469607,
+          "DetA": 2.941371173141391,
+          "AssA": 1.4997561928875962,
+          "IDF1": 4.649032090026735,
+          "MOTA": 3.5555555555555554,
+          "FP": 8,
+          "FN": -18,
+          "IDSW": -6
+        },
+        "add_skip_to_lightglue": {
+          "HOTA": 2.9397877102469607,
+          "DetA": 2.941371173141391,
+          "AssA": 1.4997561928875962,
+          "IDF1": 4.649032090026735,
+          "MOTA": 3.5555555555555554,
+          "FP": 8,
+          "FN": -18,
+          "IDSW": -6
+        },
+        "add_lightglue_to_skip": {
+          "HOTA": 0.0,
+          "DetA": 0.0,
+          "AssA": 0.0,
+          "IDF1": 0.0,
+          "MOTA": 0.0,
+          "FP": 0,
+          "FN": 0,
+          "IDSW": 0
+        },
+        "interaction": {
+          "HOTA": 0.0,
+          "DetA": 0.0,
+          "AssA": 0.0,
+          "IDF1": 0.0,
+          "MOTA": 0.0,
+          "FP": 0,
+          "FN": 0,
+          "IDSW": 0
+        },
+        "skip_order_average": {
+          "HOTA": 2.9397877102469607,
+          "DetA": 2.941371173141391,
+          "AssA": 1.4997561928875962,
+          "IDF1": 4.649032090026735,
+          "MOTA": 3.5555555555555554,
+          "FP": 8.0,
+          "FN": -18.0,
+          "IDSW": -6.0
+        },
+        "lightglue_order_average": {
+          "HOTA": 0.0,
+          "DetA": 0.0,
+          "AssA": 0.0,
+          "IDF1": 0.0,
+          "MOTA": 0.0,
+          "FP": 0.0,
+          "FN": 0.0,
+          "IDSW": 0.0
+        }
+      },
+      "choices": {
+        "frames": 450,
+        "triggers": 446,
+        "skip_calls": 0,
+        "lightglue_calls": 446,
+        "full_calls": 446,
+        "skip_selected": 61,
+        "lightglue_selected": 0,
+        "full_skip": 61,
+        "full_lightglue": 0,
+        "full_sof": 389,
+        "both_eligible": 0,
+        "both_choose_skip": 0,
+        "both_choose_lightglue": 0,
+        "singleton_skip": 61,
+        "singleton_lightglue": 0,
+        "trigger_no_accepted": 385
+      }
+    }
+  }
+}

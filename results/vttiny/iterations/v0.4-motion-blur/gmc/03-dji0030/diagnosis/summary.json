@@ -1,0 +1,56 @@
+{
+  "before_name": "skip_only",
+  "after_name": "adaptive_gmc",
+  "before": {
+    "TP": 1543,
+    "FP": 1166,
+    "FN": 3053,
+    "IDSW": 2
+  },
+  "after": {
+    "TP": 1542,
+    "FP": 1177,
+    "FN": 3054,
+    "IDSW": 1
+  },
+  "gross_in": 13,
+  "gross_out": 2,
+  "delta_fp": 11,
+  "kinds": {
+    "absent->FP": 12,
+    "FP->absent": 2,
+    "TP->FP": 1
+  },
+  "switches": [
+    {
+      "method": "skip_only",
+      "frame": 412,
+      "gt": 2,
+      "previous_frame": 409,
+      "previous_tid": 1,
+      "current_tid": 11,
+      "det": 0,
+      "iou": 0.6154529078098094
+    },
+    {
+      "method": "skip_only",
+      "frame": 412,
+      "gt": 1,
+      "previous_frame": 409,
+      "previous_tid": 2,
+      "current_tid": 12,
+      "det": 1,
+      "iou": 0.6510055265440825
+    },
+    {
+      "method": "adaptive_gmc",
+      "frame": 412,
+      "gt": 1,
+      "previous_frame": 409,
+      "previous_tid": 2,
+      "current_tid": 10,
+      "det": 1,
+      "iou": 0.6510055265440825
+    }
+  ]
+}

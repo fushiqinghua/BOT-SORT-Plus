@@ -1,0 +1,399 @@
+{
+  "stage": "smoke",
+  "parity": {
+    "sequences": 2,
+    "frames": 816,
+    "identical_to_historical_native": [
+      "DJI_0173_2",
+      "DJI_0277_2"
+    ],
+    "same_cache_and_decoded_images": true,
+    "smoke_full_output_identity": false
+  },
+  "metrics": [
+    {
+      "tracker": "native",
+      "HOTA": 46.580870226582206,
+      "DetA": 56.31776615215163,
+      "AssA": 39.716791214164374,
+      "IDF1": 51.74353205849269,
+      "MOTA": 62.83124128312413,
+      "FP": 147,
+      "FN": 348,
+      "IDSW": 38,
+      "delta": {
+        "HOTA": 0.0,
+        "DetA": 0.0,
+        "AssA": 0.0,
+        "IDF1": 0.0,
+        "MOTA": 0.0,
+        "FP": 0,
+        "FN": 0,
+        "IDSW": 0
+      }
+    },
+    {
+      "tracker": "adaptive_gmc",
+      "HOTA": 46.806992383341154,
+      "DetA": 57.15444155771278,
+      "AssA": 39.57717922767913,
+      "IDF1": 52.72929818046788,
+      "MOTA": 63.947001394700145,
+      "FP": 155,
+      "FN": 330,
+      "IDSW": 32,
+      "delta": {
+        "HOTA": 0.2261221567589473,
+        "DetA": 0.8366754055611523,
+        "AssA": -0.1396119864852423,
+        "IDF1": 0.985766121975189,
+        "MOTA": 1.1157601115760158,
+        "FP": 8,
+        "FN": -18,
+        "IDSW": -6
+      }
+    },
+    {
+      "tracker": "oru",
+      "HOTA": 46.57031770276765,
+      "DetA": 56.305667961901904,
+      "AssA": 39.71063372128161,
+      "IDF1": 51.74353205849269,
+      "MOTA": 62.97071129707113,
+      "FP": 146,
+      "FN": 347,
+      "IDSW": 38,
+      "delta": {
+        "HOTA": -0.010552523814553183,
+        "DetA": -0.012098190249723473,
+        "AssA": -0.006157492882763904,
+        "IDF1": 0.0,
+        "MOTA": 0.13947001394699754,
+        "FP": -1,
+        "FN": -1,
+        "IDSW": 0
+      }
+    }
+  ],
+  "focus_metrics": {
+    "DJI_0173_2": [
+      {
+        "tracker": "native",
+        "sequence": "DJI_0173_2",
+        "HOTA": 10.323463163393228,
+        "DetA": 38.22348641890186,
+        "AssA": 2.8186565603348823,
+        "IDF1": 7.044025157232705,
+        "MOTA": 4.444444444444445,
+        "FP": 147,
+        "FN": 252,
+        "IDSW": 31
+      },
+      {
+        "tracker": "adaptive_gmc",
+        "sequence": "DJI_0173_2",
+        "HOTA": 13.263250873640189,
+        "DetA": 41.16485759204325,
+        "AssA": 4.3184127532224785,
+        "IDF1": 11.69305724725944,
+        "MOTA": 8.0,
+        "FP": 155,
+        "FN": 234,
+        "IDSW": 25
+      },
+      {
+        "tracker": "oru",
+        "sequence": "DJI_0173_2",
+        "HOTA": 10.305838433518552,
+        "DetA": 38.218786074387296,
+        "AssA": 2.8095849148273753,
+        "IDF1": 7.044025157232705,
+        "MOTA": 4.888888888888889,
+        "FP": 146,
+        "FN": 251,
+        "IDSW": 31
+      }
+    ],
+    "DJI_0277_2": [
+      {
+        "tracker": "native",
+        "sequence": "DJI_0277_2",
+        "HOTA": 57.135105790247366,
+        "DetA": 67.40848550645025,
+        "AssA": 48.498522122823,
+        "IDF1": 70.72649572649573,
+        "MOTA": 89.53252032520325,
+        "FP": 0,
+        "FN": 96,
+        "IDSW": 7
+      },
+      {
+        "tracker": "adaptive_gmc",
+        "sequence": "DJI_0277_2",
+        "HOTA": 57.135105790247366,
+        "DetA": 67.40848550645025,
+        "AssA": 48.498522122823,
+        "IDF1": 70.72649572649573,
+        "MOTA": 89.53252032520325,
+        "FP": 0,
+        "FN": 96,
+        "IDSW": 7
+      },
+      {
+        "tracker": "oru",
+        "sequence": "DJI_0277_2",
+        "HOTA": 57.12485563491989,
+        "DetA": 67.40035785860073,
+        "AssA": 48.486144946447105,
+        "IDF1": 70.72649572649573,
+        "MOTA": 89.53252032520325,
+        "FP": 0,
+        "FN": 96,
+        "IDSW": 7
+      }
+    ]
+  },
+  "fixed_windows": {
+    "3": {
+      "eligible": 14,
+      "native": 9,
+      "oru": 8,
+      "gained": 0,
+      "lost": 1,
+      "oru_outcomes": {
+        "no_clear_output": 4,
+        "held": 8,
+        "different_id": 2
+      }
+    },
+    "5": {
+      "eligible": 14,
+      "native": 5,
+      "oru": 5,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 7,
+        "different_id": 2,
+        "held": 5
+      }
+    },
+    "10": {
+      "eligible": 14,
+      "native": 5,
+      "oru": 5,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 7,
+        "different_id": 2,
+        "held": 5
+      }
+    }
+  },
+  "own_windows": {
+    "native": {
+      "3": {
+        "no_clear_output": 4,
+        "held": 9,
+        "different_id": 1
+      },
+      "5": {
+        "no_clear_output": 8,
+        "different_id": 1,
+        "held": 5
+      },
+      "10": {
+        "no_clear_output": 8,
+        "different_id": 1,
+        "held": 5
+      }
+    },
+    "oru": {
+      "3": {
+        "no_clear_output": 5,
+        "held": 9,
+        "different_id": 1
+      },
+      "5": {
+        "no_clear_output": 9,
+        "different_id": 1,
+        "held": 5
+      },
+      "10": {
+        "no_clear_output": 9,
+        "different_id": 1,
+        "held": 5
+      }
+    }
+  },
+  "recoveries": {
+    "native": {
+      "total": 30,
+      "categories": {
+        "unresolved": 16,
+        "same_gt": 14
+      },
+      "replayed": 0,
+      "numerical_fallback": 0
+    },
+    "oru": {
+      "total": 30,
+      "categories": {
+        "unresolved": 15,
+        "same_gt": 15
+      },
+      "replayed": 30,
+      "numerical_fallback": 0
+    }
+  },
+  "gmc_total": {
+    "frames": 816,
+    "sof": 754,
+    "trigger": 463,
+    "with_validation": 798,
+    "lg_valid_fit": 3,
+    "identity": 61,
+    "lightglue": 1
+  },
+  "gmc_focus": [
+    {
+      "sequence": "DJI_0173_2",
+      "frames": 450,
+      "sof": 389,
+      "trigger": 446,
+      "with_validation": 446,
+      "lg_valid_fit": 0,
+      "identity": 61
+    },
+    {
+      "sequence": "DJI_0277_2",
+      "frames": 366,
+      "sof": 365,
+      "trigger": 17,
+      "with_validation": 352,
+      "lg_valid_fit": 3,
+      "lightglue": 1
+    }
+  ],
+  "gmc_paired_centers": {
+    "DJI_0173_2": {
+      "n": 34,
+      "improved_1px": 25,
+      "worse_1px": 2,
+      "mean_delta": -3.3031552535924766,
+      "median_delta": -2.5444012166009937
+    },
+    "DJI_0277_2": {
+      "n": 3,
+      "improved_1px": 0,
+      "worse_1px": 0,
+      "mean_delta": -0.7258912533957886,
+      "median_delta": -0.7199489375930614
+    }
+  },
+  "focus_windows": {
+    "DJI_0173_2": {
+      "3": {
+        "eligible": 8,
+        "native": 4,
+        "oru": 3,
+        "gained": 0,
+        "lost": 1,
+        "oru_outcomes": {
+          "no_clear_output": 3,
+          "held": 3,
+          "different_id": 2
+        }
+      },
+      "5": {
+        "eligible": 8,
+        "native": 0,
+        "oru": 0,
+        "gained": 0,
+        "lost": 0,
+        "oru_outcomes": {
+          "no_clear_output": 6,
+          "different_id": 2
+        }
+      },
+      "10": {
+        "eligible": 8,
+        "native": 0,
+        "oru": 0,
+        "gained": 0,
+        "lost": 0,
+        "oru_outcomes": {
+          "no_clear_output": 6,
+          "different_id": 2
+        }
+      }
+    },
+    "DJI_0277_2": {
+      "3": {
+        "eligible": 6,
+        "native": 5,
+        "oru": 5,
+        "gained": 0,
+        "lost": 0,
+        "oru_outcomes": {
+          "no_clear_output": 1,
+          "held": 5
+        }
+      },
+      "5": {
+        "eligible": 6,
+        "native": 5,
+        "oru": 5,
+        "gained": 0,
+        "lost": 0,
+        "oru_outcomes": {
+          "no_clear_output": 1,
+          "held": 5
+        }
+      },
+      "10": {
+        "eligible": 6,
+        "native": 5,
+        "oru": 5,
+        "gained": 0,
+        "lost": 0,
+        "oru_outcomes": {
+          "no_clear_output": 1,
+          "held": 5
+        }
+      }
+    }
+  },
+  "shared_endpoints": {
+    "events": 13,
+    "windows": {
+      "3": {
+        "eligible": 13,
+        "native": 8,
+        "oru": 8,
+        "gained": 0,
+        "lost": 0
+      },
+      "5": {
+        "eligible": 13,
+        "native": 5,
+        "oru": 5,
+        "gained": 0,
+        "lost": 0
+      },
+      "10": {
+        "eligible": 13,
+        "native": 5,
+        "oru": 5,
+        "gained": 0,
+        "lost": 0
+      }
+    }
+  },
+  "replay_seconds": {
+    "native": 3.638766060001217,
+    "adaptive_gmc": 12.979884338448755,
+    "oru": 3.6313558772671968
+  }
+}

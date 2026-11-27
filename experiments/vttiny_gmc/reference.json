@@ -1,0 +1,57 @@
+{
+  "gmc_factorial": {
+    "skip": true,
+    "lightglue": true,
+    "kalman": "original_boxmot",
+    "past_outputs_modified": false,
+    "policy": {
+      "grid": 4,
+      "corners_per_cell": 12,
+      "min_validation": 12,
+      "min_cells": 4,
+      "fb_max": 1.0,
+      "median_trigger": 1.0,
+      "p80_trigger": 2.0,
+      "fit_min_matches": 12,
+      "min_inliers": 10,
+      "min_inlier_fraction": 0.5,
+      "ransac_px": 2.0,
+      "min_gain_px": 0.35,
+      "min_relative_gain": 0.2,
+      "max_p80_regression": 0.25,
+      "scale_min": 0.85,
+      "scale_max": 1.18,
+      "translation_diagonal": 0.25,
+      "max_keypoints": 512,
+      "box_padding": 2,
+      "validation_scale": 0.5
+    },
+    "source_sha256": {
+      "frozen_gmc.py": "75f40b077d2944fb61c08cfe669bc12cd078b1bac8300abe177a7bc76de71315",
+      "gmc_variants.py": "6ef781400d790e5366e22d0a41e123a8c4fc08034f6b919b1cb8999ac0eb1713",
+      "replay_factor.py": "58d8571ecb1eec5f938b2d6207c93ea680f572541c41667025a98501a2abafc5",
+      "settings_factor.py": "59c0663ee0d135818dd3d41dc6986ae58f9b4025669ba44f0c33a5f847e957f2"
+    },
+    "model": {
+      "commit": "5a650c444718caffc2669dc0094cde908f42dd73",
+      "weights": {
+        "superpoint_v1.pth": "52b6708629640ca883673b5d5c097c4ddad37d8048b33f09c8ca0d69db12c40e",
+        "superpoint_lightglue_v0-1_arxiv.pth": "6ff7040d0a497fc6639337946d7538dae07428c18f77a067a0b5a960e7cc551a"
+      },
+      "torch": "2.8.0+cu128",
+      "kornia": "0.7.4",
+      "kornia_rs": "0.1.9",
+      "source_sha256": {
+        "aliked.py": "bf579653b2d1b5b4d0c88cefd87113b4ea8ce1ad094fa07e2db41c9bc47b178e",
+        "superpoint.py": "9842cbe5db75c6398950723df410d0223448cecc0d56baa13cf4de327498f733",
+        "sift.py": "df01ab3252fa6296afaf6a773381f14951600c180ce2ef2c6318668515ce3c0b",
+        "__init__.py": "cf4322abb908f69282198931fb23c09a1ef1101b066d57842402e6436a92eaa3",
+        "disk.py": "90940a3f8b22d9b63c48a559fb664b0e211f0f1d0d290e67e7b340096a9d0826",
+        "dog_hardnet.py": "912694f65277380b7ba9cc633af00a0a0114aa9dfb4a18b98dcbc0ebca4c4b7b",
+        "lightglue.py": "dcb75b9cad1985c5e7a537c512d4318d47fbcc99df75b39a513de60e027c039f",
+        "viz2d.py": "142195bd74971bbfb8de871e731d412b7a505c2a7389ca8f5d0f29af2a3701e7",
+        "utils.py": "82c7336f56853e26bd0a7cf69e1706f32910d9ac53a059e19820e0a8a7ccaa8a"
+      }
+    }
+  }
+}

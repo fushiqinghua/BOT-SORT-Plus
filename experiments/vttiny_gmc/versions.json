@@ -1,0 +1,7 @@
+{
+  "default": "dual_low",
+  "methods": {
+    "dual_low": "完整自适应 GMC＋低分匹配双重确认",
+    "dual_low_center": "主版本＋高分检测中心修正（可选消融）"
+  }
+}

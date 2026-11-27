@@ -2,7 +2,9 @@
 
 面向无人机海上搜救与微小目标多模态跟踪，在 **YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID** 基线上进行模块设计、真实数据消融与错因分析。
 
-**当前分支：`diagnostics/v0.4-motion-blur`。当前任务：以已验证有效的 B 为参考，运行四组诊断，确定下一步应优先改进运动预测、相机运动补偿、恢复后续轨，还是模糊相关观测与外观。**
+**当前跟踪主版本为完整自适应 GMC＋低分匹配双重确认（`dual_low`），使用原版 BoT-SORT 卡尔曼滤波。** 高分检测中心修正（`dual_low_center`）保留为可选消融。下方 D1–D4、P0、E1–E3 保留各自的历史实验基线。
+
+[主版本与三轮全量结果](results/vttiny/iterations/v0.4-motion-blur/gmc/README.md) · [运行与复现](experiments/vttiny_gmc/README.md) · [DJI_0030_2 逐帧分析](results/vttiny/iterations/v0.4-motion-blur/gmc/03-dji0030/实验报告.md)
 
 [完整运行说明](docs/botsort_plus/diagnostics_v0.4/README.md) · [实现机制与统计口径](docs/botsort_plus/diagnostics_v0.4/MECHANISM.md) · [软件验证记录](docs/botsort_plus/diagnostics_v0.4/VALIDATION.md) · [v0.4 首轮真实实验](results/vttiny/iterations/v0.4-motion-blur/README.md) · [v0.3 归档](results/vttiny/iterations/v0.3-c2-identity/README.md)
 
@@ -12,7 +14,7 @@
 |---|---|
 | 冻结基线 | 已归档 VT-Tiny-MOT 上的 RGB/RGB–T 检测、BoT-SORT 与微调 ReID 对照、轨迹和评估结果 |
 | A / A2 弱观测起轨 | 已完成真实数据消融与错因分析，历史收益和误报代价保留在[实验归档](results/vttiny/iterations/v0.2-a2/README.md)；本轮关闭 |
-| B 短轨迹身份恢复 | 真实数据已验证收益并完成多组消融；本轮固定使用 [B_early_moderate](configs/botsort_plus/B_early_moderate.json) |
+| B 短轨迹身份恢复 | 已完成多组消融，早期运动与模糊诊断固定使用 [B_early_moderate](configs/botsort_plus/B_early_moderate.json) |
 | C2、短时外推及位置修正 | 已有消融、错因分析和逐序列证据，见[迭代索引](results/vttiny/iterations/v0.3-c2-identity/README.md)；本轮关闭以便归因 |
 | v0.4 四组诊断 | 30 段、12,590 帧的自动诊断已归档，轨迹和原有事件逐字节一致。D4 的真实运动模糊仍待同层人工复核。 [首轮实验](results/vttiny/iterations/v0.4-motion-blur/README.md) |
 
@@ -117,7 +119,7 @@ python -X utf8 tools/run_botsort_diagnostics.py run --settings configs/diagnosti
 
 诊断配对标签用于错因分析；HOTA、IDF1、MOTA 继续使用原有 TrackEval 口径。GMC 内点和图像清晰度是质量代理，需结合人工复核和具体事件解释；缺 GT、身份歧义与视频尾部截断保留为未知。诊断开启的计时含采集开销，不能作为算法 FPS 结果。
 
-历史官方测试集参与过选模、门限校准和错因分析，因此既有指标和本轮分析按开发实验解读。首轮真实诊断、D3 后续验证及第二批 E1–E3 已归档。正式参考保持 B_early_moderate。
+历史官方测试集参与过选模、门限校准和错因分析。首轮真实诊断、D3 后续验证及第二批 E1–E3 已归档，这批诊断使用的历史参考为 `B_early_moderate`。后续 GMC 的对照从原始 BoT-SORT 起算。
 
 ## 历史实验与复现入口
 

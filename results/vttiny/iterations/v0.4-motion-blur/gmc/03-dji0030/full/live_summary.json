@@ -1,0 +1,108 @@
+{
+  "status": "COMPLETE",
+  "sequences": 30,
+  "frames": 12590,
+  "inputs_verified": true,
+  "controls_match_previous": true,
+  "focus_matches_frozen_warps": true,
+  "joint": {
+    "skip_only": {
+      "tracker": "skip_only",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 37.882511367612615,
+      "DetA": 25.202725556852634,
+      "AssA": 58.39657122875895,
+      "IDF1": 42.48768472906404,
+      "MOTA": 25.797120797454554,
+      "FP": 13397,
+      "FN": 119597,
+      "IDSW": 402
+    },
+    "adaptive_gmc": {
+      "tracker": "adaptive_gmc",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 37.96035705754204,
+      "DetA": 25.203338502043003,
+      "AssA": 58.618690087525295,
+      "IDF1": 42.621113207398224,
+      "MOTA": 25.79211445608882,
+      "FP": 13411,
+      "FN": 119597,
+      "IDSW": 397
+    },
+    "dual_low": {
+      "tracker": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 37.96028823661097,
+      "DetA": 25.203500577506144,
+      "AssA": 58.617979797496176,
+      "IDF1": 42.62279552236449,
+      "MOTA": 25.7976770576063,
+      "FP": 13401,
+      "FN": 119597,
+      "IDSW": 397
+    },
+    "dual_low_center": {
+      "tracker": "dual_low_center",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 37.96294868350059,
+      "DetA": 25.205497994556307,
+      "AssA": 58.61927183043534,
+      "IDF1": 42.62279552236449,
+      "MOTA": 25.798789577909798,
+      "FP": 13400,
+      "FN": 119596,
+      "IDSW": 397
+    }
+  },
+  "target": {
+    "skip_only": {
+      "tracker": "skip_only",
+      "sequence": "DJI_0030_2",
+      "HOTA": 27.097358872604072,
+      "DetA": 20.887299154419715,
+      "AssA": 35.70819843377147,
+      "IDF1": 32.9637234770705,
+      "MOTA": 8.159268929503916,
+      "FP": 1166,
+      "FN": 3053,
+      "IDSW": 2
+    },
+    "adaptive_gmc": {
+      "tracker": "adaptive_gmc",
+      "sequence": "DJI_0030_2",
+      "HOTA": 29.752065155034995,
+      "DetA": 20.886287348793854,
+      "AssA": 43.020129679569216,
+      "IDF1": 37.32057416267943,
+      "MOTA": 7.919930374238468,
+      "FP": 1177,
+      "FN": 3054,
+      "IDSW": 1
+    },
+    "dual_low": {
+      "tracker": "dual_low",
+      "sequence": "DJI_0030_2",
+      "HOTA": 29.741803492964447,
+      "DetA": 20.881933410563683,
+      "AssA": 42.994951126312856,
+      "IDF1": 37.36654804270463,
+      "MOTA": 8.115752828546562,
+      "FP": 1168,
+      "FN": 3054,
+      "IDSW": 1
+    },
+    "dual_low_center": {
+      "tracker": "dual_low_center",
+      "sequence": "DJI_0030_2",
+      "HOTA": 29.751443384988352,
+      "DetA": 20.889459580016098,
+      "AssA": 43.00190531582491,
+      "IDF1": 37.39392280317547,
+      "MOTA": 8.159268929503916,
+      "FP": 1167,
+      "FN": 3053,
+      "IDSW": 1
+    }
+  }
+}

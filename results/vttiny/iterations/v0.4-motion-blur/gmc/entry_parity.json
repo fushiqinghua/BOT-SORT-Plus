@@ -1,0 +1,14 @@
+{
+  "sequence": "DJI_0030_2",
+  "frames": 590,
+  "byte_identical_to_frozen_full_outputs": {
+    "dual_low": {
+      "sha256": "5fa5e1c018028b69eda90fe5324a1f98b0bcdb5f28f0f67ff8a3861c2374df8e",
+      "rows": 2710
+    },
+    "dual_low_center": {
+      "sha256": "3e87a57448a0995ce659bab94822182452761494d5400f80854f5bd107ed568c",
+      "rows": 2710
+    }
+  }
+}

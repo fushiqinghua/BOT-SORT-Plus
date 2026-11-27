@@ -1,0 +1,1004 @@
+{
+  "DJI_0028_3": {
+    "3": {
+      "eligible": 10,
+      "native": 9,
+      "oru": 9,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 9,
+        "no_clear_output": 1
+      }
+    },
+    "5": {
+      "eligible": 10,
+      "native": 7,
+      "oru": 7,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 2,
+        "held": 7,
+        "different_id": 1
+      }
+    },
+    "10": {
+      "eligible": 10,
+      "native": 7,
+      "oru": 7,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 2,
+        "held": 7,
+        "different_id": 1
+      }
+    }
+  },
+  "DJI_0030_2": {
+    "3": {
+      "eligible": 3,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 3
+      }
+    },
+    "5": {
+      "eligible": 3,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 3
+      }
+    },
+    "10": {
+      "eligible": 3,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 3
+      }
+    }
+  },
+  "DJI_0032_3": {
+    "3": {
+      "eligible": 9,
+      "native": 9,
+      "oru": 9,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 9
+      }
+    },
+    "5": {
+      "eligible": 9,
+      "native": 8,
+      "oru": 8,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 8,
+        "no_clear_output": 1
+      }
+    },
+    "10": {
+      "eligible": 9,
+      "native": 6,
+      "oru": 6,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 6,
+        "no_clear_output": 3
+      }
+    }
+  },
+  "DJI_0049_2": {
+    "3": {
+      "eligible": 3,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 3
+      }
+    },
+    "5": {
+      "eligible": 3,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 3
+      }
+    },
+    "10": {
+      "eligible": 3,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 3
+      }
+    }
+  },
+  "DJI_0051_2": {
+    "3": {
+      "eligible": 20,
+      "native": 9,
+      "oru": 9,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 10,
+        "held": 9,
+        "different_id": 1
+      }
+    },
+    "5": {
+      "eligible": 20,
+      "native": 6,
+      "oru": 6,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 13,
+        "held": 6,
+        "different_id": 1
+      }
+    },
+    "10": {
+      "eligible": 20,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 16,
+        "held": 3,
+        "different_id": 1
+      }
+    }
+  },
+  "DJI_0061_2": {
+    "3": {
+      "eligible": 170,
+      "native": 101,
+      "oru": 98,
+      "gained": 0,
+      "lost": 3,
+      "oru_outcomes": {
+        "no_clear_output": 65,
+        "held": 98,
+        "different_id": 4,
+        "ambiguous": 1,
+        "anchor_unresolved": 2
+      }
+    },
+    "5": {
+      "eligible": 166,
+      "native": 91,
+      "oru": 89,
+      "gained": 0,
+      "lost": 2,
+      "oru_outcomes": {
+        "no_clear_output": 70,
+        "held": 89,
+        "different_id": 4,
+        "ambiguous": 1,
+        "anchor_unresolved": 2
+      }
+    },
+    "10": {
+      "eligible": 161,
+      "native": 52,
+      "oru": 52,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 99,
+        "held": 52,
+        "different_id": 5,
+        "ambiguous": 3,
+        "anchor_unresolved": 2
+      }
+    }
+  },
+  "DJI_0073_3": {
+    "3": {
+      "eligible": 21,
+      "native": 16,
+      "oru": 16,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 16,
+        "no_clear_output": 4,
+        "different_id": 1
+      }
+    },
+    "5": {
+      "eligible": 21,
+      "native": 10,
+      "oru": 10,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 10,
+        "no_clear_output": 10,
+        "different_id": 1
+      }
+    },
+    "10": {
+      "eligible": 21,
+      "native": 7,
+      "oru": 7,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 13,
+        "held": 7,
+        "different_id": 1
+      }
+    }
+  },
+  "DJI_0109_1": {
+    "3": {
+      "eligible": 13,
+      "native": 2,
+      "oru": 2,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 2,
+        "different_id": 9,
+        "no_clear_output": 2
+      }
+    },
+    "5": {
+      "eligible": 12,
+      "native": 2,
+      "oru": 2,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 2,
+        "different_id": 8,
+        "no_clear_output": 2
+      }
+    },
+    "10": {
+      "eligible": 10,
+      "native": 1,
+      "oru": 1,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 1,
+        "no_clear_output": 3,
+        "different_id": 6
+      }
+    }
+  },
+  "DJI_0119_2": {
+    "3": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "5": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "10": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    }
+  },
+  "DJI_0129_2": {
+    "3": {
+      "eligible": 8,
+      "native": 8,
+      "oru": 8,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 8
+      }
+    },
+    "5": {
+      "eligible": 8,
+      "native": 8,
+      "oru": 8,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 8
+      }
+    },
+    "10": {
+      "eligible": 8,
+      "native": 5,
+      "oru": 5,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 3,
+        "held": 5
+      }
+    }
+  },
+  "DJI_0141_2": {
+    "3": {
+      "eligible": 12,
+      "native": 12,
+      "oru": 12,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 12
+      }
+    },
+    "5": {
+      "eligible": 12,
+      "native": 10,
+      "oru": 10,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 10,
+        "no_clear_output": 2
+      }
+    },
+    "10": {
+      "eligible": 12,
+      "native": 6,
+      "oru": 6,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 6,
+        "no_clear_output": 6
+      }
+    }
+  },
+  "DJI_0155_2": {
+    "3": {
+      "eligible": 3,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 3
+      }
+    },
+    "5": {
+      "eligible": 3,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 3
+      }
+    },
+    "10": {
+      "eligible": 3,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 3
+      }
+    }
+  },
+  "DJI_0159_2": {
+    "3": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "5": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "10": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    }
+  },
+  "DJI_0169_3": {
+    "3": {
+      "eligible": 3,
+      "native": 2,
+      "oru": 2,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 2,
+        "no_clear_output": 1
+      }
+    },
+    "5": {
+      "eligible": 3,
+      "native": 1,
+      "oru": 1,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 2,
+        "held": 1
+      }
+    },
+    "10": {
+      "eligible": 3,
+      "native": 1,
+      "oru": 1,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 2,
+        "held": 1
+      }
+    }
+  },
+  "DJI_0173_2": {
+    "3": {
+      "eligible": 8,
+      "native": 4,
+      "oru": 3,
+      "gained": 0,
+      "lost": 1,
+      "oru_outcomes": {
+        "no_clear_output": 3,
+        "held": 3,
+        "different_id": 2
+      }
+    },
+    "5": {
+      "eligible": 8,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 6,
+        "different_id": 2
+      }
+    },
+    "10": {
+      "eligible": 8,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 6,
+        "different_id": 2
+      }
+    }
+  },
+  "DJI_0181_3": {
+    "3": {
+      "eligible": 10,
+      "native": 7,
+      "oru": 7,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 3,
+        "held": 7
+      }
+    },
+    "5": {
+      "eligible": 9,
+      "native": 5,
+      "oru": 4,
+      "gained": 0,
+      "lost": 1,
+      "oru_outcomes": {
+        "no_clear_output": 5,
+        "held": 4
+      }
+    },
+    "10": {
+      "eligible": 9,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 6,
+        "held": 3
+      }
+    }
+  },
+  "DJI_0221_2": {
+    "3": {
+      "eligible": 1,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 1
+      }
+    },
+    "5": {
+      "eligible": 1,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 1
+      }
+    },
+    "10": {
+      "eligible": 1,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 1
+      }
+    }
+  },
+  "DJI_0225_1": {
+    "3": {
+      "eligible": 4,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 3,
+        "no_clear_output": 1
+      }
+    },
+    "5": {
+      "eligible": 4,
+      "native": 2,
+      "oru": 2,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 2,
+        "no_clear_output": 2
+      }
+    },
+    "10": {
+      "eligible": 3,
+      "native": 2,
+      "oru": 2,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 2,
+        "no_clear_output": 1
+      }
+    }
+  },
+  "DJI_0237_2": {
+    "3": {
+      "eligible": 4,
+      "native": 2,
+      "oru": 2,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 2,
+        "held": 2
+      }
+    },
+    "5": {
+      "eligible": 4,
+      "native": 1,
+      "oru": 1,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 3,
+        "held": 1
+      }
+    },
+    "10": {
+      "eligible": 3,
+      "native": 1,
+      "oru": 1,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 2,
+        "held": 1
+      }
+    }
+  },
+  "DJI_0255_1": {
+    "3": {
+      "eligible": 3,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 3
+      }
+    },
+    "5": {
+      "eligible": 3,
+      "native": 2,
+      "oru": 2,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 2,
+        "no_clear_output": 1
+      }
+    },
+    "10": {
+      "eligible": 3,
+      "native": 2,
+      "oru": 2,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 2,
+        "no_clear_output": 1
+      }
+    }
+  },
+  "DJI_0257_2": {
+    "3": {
+      "eligible": 3,
+      "native": 2,
+      "oru": 2,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 2,
+        "no_clear_output": 1
+      }
+    },
+    "5": {
+      "eligible": 3,
+      "native": 2,
+      "oru": 2,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 2,
+        "no_clear_output": 1
+      }
+    },
+    "10": {
+      "eligible": 3,
+      "native": 1,
+      "oru": 1,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 1,
+        "no_clear_output": 2
+      }
+    }
+  },
+  "DJI_0277_2": {
+    "3": {
+      "eligible": 6,
+      "native": 5,
+      "oru": 5,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 1,
+        "held": 5
+      }
+    },
+    "5": {
+      "eligible": 6,
+      "native": 5,
+      "oru": 5,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 1,
+        "held": 5
+      }
+    },
+    "10": {
+      "eligible": 6,
+      "native": 5,
+      "oru": 5,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 1,
+        "held": 5
+      }
+    }
+  },
+  "DJI_0283_1": {
+    "3": {
+      "eligible": 2,
+      "native": 1,
+      "oru": 1,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 1,
+        "no_clear_output": 1
+      }
+    },
+    "5": {
+      "eligible": 2,
+      "native": 1,
+      "oru": 1,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 1,
+        "no_clear_output": 1
+      }
+    },
+    "10": {
+      "eligible": 2,
+      "native": 1,
+      "oru": 1,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 1,
+        "no_clear_output": 1
+      }
+    }
+  },
+  "DJI_0303_2": {
+    "3": {
+      "eligible": 20,
+      "native": 10,
+      "oru": 10,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 10,
+        "no_clear_output": 10
+      }
+    },
+    "5": {
+      "eligible": 20,
+      "native": 5,
+      "oru": 5,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 5,
+        "no_clear_output": 14,
+        "different_id": 1
+      }
+    },
+    "10": {
+      "eligible": 20,
+      "native": 3,
+      "oru": 3,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 16,
+        "held": 3,
+        "different_id": 1
+      }
+    }
+  },
+  "DJI_0307_2": {
+    "3": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "5": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "10": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    }
+  },
+  "DJI_0309_4": {
+    "3": {
+      "eligible": 25,
+      "native": 23,
+      "oru": 23,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 23,
+        "no_clear_output": 2
+      }
+    },
+    "5": {
+      "eligible": 25,
+      "native": 14,
+      "oru": 14,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 11,
+        "held": 14
+      }
+    },
+    "10": {
+      "eligible": 25,
+      "native": 9,
+      "oru": 9,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "no_clear_output": 16,
+        "held": 9
+      }
+    }
+  },
+  "DJI_0325_2": {
+    "3": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "5": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "10": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    }
+  },
+  "DJI_0327_3": {
+    "3": {
+      "eligible": 32,
+      "native": 30,
+      "oru": 30,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 30,
+        "no_clear_output": 2
+      }
+    },
+    "5": {
+      "eligible": 31,
+      "native": 26,
+      "oru": 26,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 26,
+        "no_clear_output": 5
+      }
+    },
+    "10": {
+      "eligible": 31,
+      "native": 22,
+      "oru": 22,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {
+        "held": 22,
+        "no_clear_output": 9
+      }
+    }
+  },
+  "DJI_0339_2": {
+    "3": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "5": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "10": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    }
+  },
+  "DJI_0345_2": {
+    "3": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "5": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    },
+    "10": {
+      "eligible": 0,
+      "native": 0,
+      "oru": 0,
+      "gained": 0,
+      "lost": 0,
+      "oru_outcomes": {}
+    }
+  }
+}
