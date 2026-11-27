@@ -1,0 +1,27 @@
+{
+  "schema": "tco_q2_paired_quality_v1",
+  "seed": 41,
+  "base_epochs": 6,
+  "quality_epochs": 6,
+  "batch_size": 64,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "correct_iou_threshold": 0.50,
+  "maximum_correct_damage_fraction": 0.005,
+  "maximum_known_negative_adoption_fraction": 0.01,
+  "threshold_grid": {
+    "support": [0.95, 0.9, 0.8, 0.65, 0.5],
+    "refined_quality": [0.9, 0.8, 0.7, 0.6, 0.5, 0.4],
+    "quality_gain": [0.1, 0.05, 0.03, 0.02, 0.01, 0.005]
+  },
+  "objective": {
+    "correct_iou_threshold": 0.50,
+    "absolute_weight": 0.5,
+    "gain_regression_weight": 1.0,
+    "gain_regression_beta": 0.02,
+    "direction_weight": 0.5,
+    "meaningful_delta": 0.005,
+    "direction_margin": 0.005,
+    "crossing_weight": 4.0
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "status": "PASS",
+  "split_sha256": "7e9e5967e5ec44751c1b31f0ad209d96670097f37e4dee1ca0010c2e2709ef63",
+  "protocol_sha256": "eb27c50160e09a1cedc4a95677dcd0c8673c167876c13614f9af1c7b6e0764fd",
+  "source_cache_sha256": "b69d05eea9c39e09e941d5a890addf0e87c78a2028eacab0accbb9ecb6ba81b1",
+  "frames": 5180,
+  "sequences": {
+    "DJI_0030_9": 590,
+    "DJI_0032_5": 350,
+    "DJI_0277_1": 550,
+    "DJI_0307_1": 250,
+    "DJI_0028_2": 370,
+    "DJI_0028_4": 590,
+    "DJI_0028_5": 590,
+    "DJI_0051_3": 600,
+    "DJI_0257_5": 260,
+    "DJI_0309_1": 432,
+    "DJI_0309_2": 598
+  },
+  "per_sequence_inputs": {
+    "DJI_0030_9": {
+      "detection_sha256": "45670b440bf9f724f80d619ff09553911523156913fbbf70c74334c373724610",
+      "rgb_features_sha256": "2a3d4342a2bf149a018ea765d7d893301fe59c5788d5be777208fc7656fd79de",
+      "rgb_metadata_sha256": "607c71436cf55e927d85a3df11dccadde3420f1fea6ca79e8b6e5258bde1b006"
+    },
+    "DJI_0032_5": {
+      "detection_sha256": "62315c63d105a856cb0895704a6e98680baae4a0a07e175d5367138d3eb52233",
+      "rgb_features_sha256": "3701e4e19e327ea83131c64c6b04f7650032f897e96a83528e9a08f9cc2299e5",
+      "rgb_metadata_sha256": "bf43d4bfc20112ca952e542e271b4263c5ee82b85c664a60939e3b83101b7fff"
+    },
+    "DJI_0277_1": {
+      "detection_sha256": "09ddd1b71cd6cefd669bc03661af433d56a72ddf5b658285432f771ab1149a73",
+      "rgb_features_sha256": "02c93c4100a3eeacb20d4e90937613f6f755e313da21ef6db4068deee0ce22fa",
+      "rgb_metadata_sha256": "2749d3a394ad9974e8fdf94181509d6ecbee0cb417d5971a507f1412df727543"
+    },
+    "DJI_0307_1": {
+      "detection_sha256": "9a632a285e32e0ab605241bee2e2015e74d883dad1dbe96399c1df48625a2b62",
+      "rgb_features_sha256": "6b1583ea0e6aabb706d003e4313ff0635aa65f0ae817341276a75462f953ab41",
+      "rgb_metadata_sha256": "cdbafd87dee6af806de37681d142b109429740fcbedadf238cd1f5d42250b528"
+    },
+    "DJI_0028_2": {
+      "detection_sha256": "db6a08499015ebea465f0912250032786779b85b0b8fea810b6a6dfb9846f539",
+      "rgb_features_sha256": "ba272055e298ee4b9632127e83702c5ca02cf9d623614fbc728776e9ada43f38",
+      "rgb_metadata_sha256": "1cd29e833fc759d4db8a33f5393e14d5e89c8a8783bdfb863ff61d5924cb29b5"
+    },
+    "DJI_0028_4": {
+      "detection_sha256": "0606579862c69aabd73e2a4553fa636a69f75ce32e3522e03d98fb5e455a63a6",
+      "rgb_features_sha256": "6ba6cf9d407deecd567282ad45fa910d0d7e0c88b918d30116fc76e603a234b1",
+      "rgb_metadata_sha256": "e10be8dcffeeb6274b2951e2c2ee7555309cc0384d0520a955ee7cf34c046ebe"
+    },
+    "DJI_0028_5": {
+      "detection_sha256": "da4425d9fc224e6a87faa797fc95e702a3f9de8f1027fb1963739b46b066ca51",
+      "rgb_features_sha256": "14d71707194735350df1e8de6ba8bf2e5fa8e0967e4099905b0ed48442924e1d",
+      "rgb_metadata_sha256": "d77009820725bb8d6ec1a9128163a5546a075f66bffb2da77b4a4e01dc2c1be4"
+    },
+    "DJI_0051_3": {
+      "detection_sha256": "f28530949b2c700a947263ad2fa1e89987b9c4b8de821aa5460aac5b862bd5fc",
+      "rgb_features_sha256": "20f99eaa1359d608de5dcea8ecf6fdb66939765eae71f5711186d8a8323b3116",
+      "rgb_metadata_sha256": "5fb95d1d9cb6459d2f1632b4b9a6fbd6369c557f99e338de2d5623b85d8562d8"
+    },
+    "DJI_0257_5": {
+      "detection_sha256": "e7312a36957f5b3ae4c24cd1d998c93067f81190be1f4f8d2b3a328b59cf947c",
+      "rgb_features_sha256": "d5e16d466c578000646b138938ace1af10ba401dd6f93abcd4fd5e71a9da0a14",
+      "rgb_metadata_sha256": "6b8279632cd866e2f6e55580a87445a2c23dfa04b21cdf9d48ef84916e5022fe"
+    },
+    "DJI_0309_1": {
+      "detection_sha256": "5a12bf1d6c71d432df6ecbaf7f25197ab3872790df500af0ac68e01b9942cc11",
+      "rgb_features_sha256": "700d9375991169e1f8c1fb41865daa12f1fc7147e15fbf98d703ae86890146f5",
+      "rgb_metadata_sha256": "9c42d5346bb34bfae4ff328a269eecbd2fef18d9569a8b6c3b5f7d0ea3b73990"
+    },
+    "DJI_0309_2": {
+      "detection_sha256": "4f8b6a3b2c2d3c10bbcbc37c7c1139d6c9244b7440eebd425e96a53d80b4b0d4",
+      "rgb_features_sha256": "e5fdc0237dc99135ffb615e5e9a28c896246170ca66b3cbc15a01ce1e7ed0dbf",
+      "rgb_metadata_sha256": "bc79d5bb6ed64eeb30d0ac1d6df251fc40f817ab9837da228762aa9e4a6afcbf"
+    }
+  },
+  "scoped_replayed_sequences": [
+    "DJI_0028_2",
+    "DJI_0028_4",
+    "DJI_0028_5",
+    "DJI_0030_9",
+    "DJI_0032_5",
+    "DJI_0051_3",
+    "DJI_0257_5",
+    "DJI_0277_1",
+    "DJI_0307_1",
+    "DJI_0309_1",
+    "DJI_0309_2"
+  ],
+  "labels_in_prediction": false,
+  "scout_ground_truth_loaded": false,
+  "frozen_files_preserved": true,
+  "capture_counts": {
+    "DJI_0030_9": {
+      "frames": 590,
+      "counts": {
+        "assigned_low": 328,
+        "candidate_pairs": 676,
+        "frames": 590,
+        "low_detections": 651,
+        "low_tracks": 332,
+        "observations": 7903
+      },
+      "capture_sha256": "e989bf1c3c1d23db0dd2e3692d0ceb0da79e6b4f3a854914f2d4f7b16098473a"
+    },
+    "DJI_0032_5": {
+      "frames": 350,
+      "counts": {
+        "assigned_low": 302,
+        "candidate_pairs": 1864,
+        "frames": 350,
+        "low_detections": 1154,
+        "low_tracks": 461,
+        "observations": 3418
+      },
+      "capture_sha256": "4edc26e81a862d049dbb129c12921428dee5e2d5b9366fbc921fbb7a83b4bbd2"
+    },
+    "DJI_0277_1": {
+      "frames": 550,
+      "counts": {
+        "assigned_low": 36,
+        "candidate_pairs": 37,
+        "frames": 550,
+        "low_detections": 57,
+        "low_tracks": 40,
+        "observations": 1176
+      },
+      "capture_sha256": "59d979a833bc0c2ce0fbe5c0ee93ec38b7b4f2163bc0f370df76d02fd983b06e"
+    },
+    "DJI_0307_1": {
+      "frames": 250,
+      "counts": {
+        "assigned_low": 86,
+        "candidate_pairs": 123,
+        "frames": 250,
+        "low_detections": 173,
+        "low_tracks": 110,
+        "observations": 362
+      },
+      "capture_sha256": "9c77675c4496fce9ad0d90cfd1ee3f85d043639007bee2fe8bbe915cf2c7113e"
+    },
+    "DJI_0028_2": {
+      "frames": 370,
+      "counts": {
+        "assigned_low": 246,
+        "candidate_pairs": 468,
+        "frames": 370,
+        "low_detections": 445,
+        "low_tracks": 279,
+        "observations": 2786
+      },
+      "capture_sha256": "381c0465cdb3463889157d9e6ae91558c327ebf63bf70cec588787f69ca12105"
+    },
+    "DJI_0028_4": {
+      "frames": 590,
+      "counts": {
+        "assigned_low": 591,
+        "candidate_pairs": 1441,
+        "frames": 590,
+        "low_detections": 824,
+        "low_tracks": 623,
+        "observations": 4558
+      },
+      "capture_sha256": "b5891650921c43b038662b438e83738d5300a686e0c55e38701afef833cac6fb"
+    },
+    "DJI_0028_5": {
+      "frames": 590,
+      "counts": {
+        "assigned_low": 167,
+        "candidate_pairs": 229,
+        "frames": 590,
+        "low_detections": 285,
+        "low_tracks": 181,
+        "observations": 4793
+      },
+      "capture_sha256": "7853592b527a9651077740758481f5b3c52c0ac5492890389b22a31ea938c31f"
+    },
+    "DJI_0051_3": {
+      "frames": 600,
+      "counts": {
+        "assigned_low": 75,
+        "candidate_pairs": 102,
+        "frames": 600,
+        "low_detections": 219,
+        "low_tracks": 125,
+        "observations": 1048
+      },
+      "capture_sha256": "0dab276c638c1d7226e15df3aacdb92e229b68d4e482d230ae02c04caee8b491"
+    },
+    "DJI_0257_5": {
+      "frames": 260,
+      "counts": {
+        "assigned_low": 71,
+        "candidate_pairs": 159,
+        "frames": 260,
+        "low_detections": 226,
+        "low_tracks": 93,
+        "observations": 344
+      },
+      "capture_sha256": "bc3a8b6877d1a96e6b4df25d0a2b4e498a49ae5811b016f8a931e5aee78d7d54"
+    },
+    "DJI_0309_1": {
+      "frames": 432,
+      "counts": {
+        "assigned_low": 73,
+        "candidate_pairs": 168,
+        "frames": 432,
+        "low_detections": 208,
+        "low_tracks": 94,
+        "observations": 465
+      },
+      "capture_sha256": "2425e7c97189a5a8be933421649cf316b0ade63c00140d923d116efc21655006"
+    },
+    "DJI_0309_2": {
+      "frames": 598,
+      "counts": {
+        "assigned_low": 213,
+        "candidate_pairs": 644,
+        "frames": 598,
+        "low_detections": 661,
+        "low_tracks": 271,
+        "observations": 1152
+      },
+      "capture_sha256": "04a6717c01730313ed550e89ecd78b9ffb04651c7abb77cebbb2c60ae1b0ba54"
+    }
+  }
+}

@@ -1,5 +1,7 @@
 # TCO T0/T1 · 只读验证、几何诊断与逐帧复核
 
+后续已完成 T2、六段 T3a 软件核验、Q2 质量监督复验和跌线归因。完整 30 段开启 TCO 的跟踪评估尚未运行。[后续实验结果与复现入口](followup/README.md)
+
 本批在 VT-Tiny-MOT 官方测试集 30 段上使用 `B_early_moderate` 和 `evidence_both` 两个冻结参考。设计基础为 `53faeccba267d8988174c18e1a538f759fa6dd07`。这 30 段沿用历史开发评估口径，曾用于选模和调参。本批训练、校准、训练来源内部留出和 TCO 闭环评估均未执行。
 
 - [复现实验与生成本地图卡](../../../../tools/research/tco_t01/README.md)

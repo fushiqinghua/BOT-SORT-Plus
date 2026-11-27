@@ -1,0 +1,30 @@
+{
+  "arm": "P3",
+  "seed": 41,
+  "epoch": 2,
+  "thresholds": {
+    "support": 0.95,
+    "refined_quality": 0.7,
+    "quality_gain": 0.005
+  },
+  "assigned": {
+    "events": 4707,
+    "positive": 3077,
+    "negative": 107,
+    "unknown": 1523,
+    "originally_correct": 3056,
+    "originally_incorrect_positive": 21,
+    "adopted": 40,
+    "known_negative_adopted": 1,
+    "unknown_adopted": 17,
+    "upward": 1,
+    "downward": 0,
+    "net": 1,
+    "correct_damage_fraction": 0.0,
+    "known_negative_adoption_fraction": 0.009345794392523364,
+    "mean_raw_iou": 0.6966975927352905,
+    "mean_applied_iou": 0.696690559387207
+  },
+  "checkpoint": "checkpoints/P3/seed41.pt",
+  "checkpoint_sha256": "9c4b4f1613751e46788093be15707b3a093ceb150699a98a06bbdf5d80a1f7a8"
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "stage": "paired_gain",
+    "epoch": 1,
+    "fit_loss": 0.04347590824762776,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": true
+  },
+  {
+    "stage": "paired_gain",
+    "epoch": 2,
+    "fit_loss": 0.04230638390146768,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": false
+  },
+  {
+    "stage": "paired_gain",
+    "epoch": 3,
+    "fit_loss": 0.0413196483480115,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": false
+  },
+  {
+    "stage": "paired_gain",
+    "epoch": 4,
+    "fit_loss": 0.040645674168987005,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": false
+  },
+  {
+    "stage": "paired_gain",
+    "epoch": 5,
+    "fit_loss": 0.03972856388225018,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": false
+  },
+  {
+    "stage": "paired_gain",
+    "epoch": 6,
+    "fit_loss": 0.0390545099843101,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": false
+  }
+]

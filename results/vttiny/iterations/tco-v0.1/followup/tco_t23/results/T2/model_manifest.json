@@ -1,0 +1,422 @@
+{
+  "crop_manifest_sha256": "e9ec25e6a354745efd609692f5be5dc741e0bfa028ede6c9bc7f16569514ac94",
+  "policy_sha256": "d46a13ce08a9c5dbc1b2afdcc24013fc87230e1a09727d645ebae3d75192a141",
+  "trainer_sha256": "1b4ed287ef1ec636e611d927566a044756e52fe4922f1132104d2a97f714d72a",
+  "model_source_sha256": "1ca58264757914e33446cd9777b22167db6d392ba09d16f488a5d8d2a1e7ba8b",
+  "torch_version": "2.8.0+cu128",
+  "devices": {
+    "P1": "cpu",
+    "P2": "cuda:0",
+    "P3": "cuda:1"
+  },
+  "execution_mode": "parallel_isolated_arms",
+  "partitions": {
+    "fit": {
+      "events": 23054,
+      "capacity": 23054,
+      "counts": {
+        "all_original_edges": 23195,
+        "positive": 18125,
+        "assigned_positive": 16944,
+        "runtime_ineligible": 141,
+        "unassigned_positive": 1181,
+        "ignore": 4884,
+        "unassigned_ignore": 521,
+        "assigned_ignore": 4363,
+        "reviewed_low_IoU_positive": 28,
+        "negative": 45,
+        "assigned_negative": 38,
+        "unassigned_negative": 7,
+        "reviewed_positive_with_crop_fallback": 0
+      },
+      "arrays": {
+        "geometry": {
+          "dtype": "float32",
+          "shape": [
+            23054,
+            8
+          ]
+        },
+        "raw_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            23054,
+            4
+          ]
+        },
+        "roi_affine": {
+          "dtype": "float32",
+          "shape": [
+            23054,
+            5
+          ]
+        },
+        "valid_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            23054,
+            4
+          ]
+        },
+        "hist_valid": {
+          "dtype": "bool",
+          "shape": [
+            23054,
+            3
+          ]
+        },
+        "hist_dt": {
+          "dtype": "float32",
+          "shape": [
+            23054,
+            3
+          ]
+        },
+        "current": {
+          "dtype": "uint8",
+          "shape": [
+            23054,
+            5,
+            96,
+            96
+          ]
+        },
+        "history": {
+          "dtype": "uint8",
+          "shape": [
+            23054,
+            3,
+            5,
+            64,
+            64
+          ]
+        },
+        "current_repeat": {
+          "dtype": "uint8",
+          "shape": [
+            23054,
+            5,
+            64,
+            64
+          ]
+        },
+        "support_label": {
+          "dtype": "int8",
+          "shape": [
+            23054
+          ]
+        },
+        "gt_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            23054,
+            4
+          ]
+        },
+        "assigned": {
+          "dtype": "bool",
+          "shape": [
+            23054
+          ]
+        },
+        "source_id": {
+          "dtype": "int32",
+          "shape": [
+            23054
+          ]
+        },
+        "track_key": {
+          "dtype": "int64",
+          "shape": [
+            23054
+          ]
+        },
+        "sequence_id": {
+          "dtype": "int32",
+          "shape": [
+            23054
+          ]
+        },
+        "frame": {
+          "dtype": "int32",
+          "shape": [
+            23054
+          ]
+        }
+      },
+      "row_keys_sha256": "6622c75f367f28c1d51ac76d63f3b976e552e898ca3e32f3d11d9df4e99a58cb"
+    },
+    "calibration": {
+      "events": 5083,
+      "capacity": 5083,
+      "counts": {
+        "all_original_edges": 5167,
+        "runtime_ineligible": 84,
+        "positive": 3315,
+        "assigned_positive": 3077,
+        "ignore": 1641,
+        "assigned_ignore": 1523,
+        "unassigned_ignore": 118,
+        "reviewed_low_IoU_positive": 21,
+        "unassigned_positive": 238,
+        "negative": 127,
+        "assigned_negative": 107,
+        "unassigned_negative": 20,
+        "reviewed_positive_with_crop_fallback": 0
+      },
+      "arrays": {
+        "geometry": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            8
+          ]
+        },
+        "raw_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            4
+          ]
+        },
+        "roi_affine": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            5
+          ]
+        },
+        "valid_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            4
+          ]
+        },
+        "hist_valid": {
+          "dtype": "bool",
+          "shape": [
+            5083,
+            3
+          ]
+        },
+        "hist_dt": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            3
+          ]
+        },
+        "current": {
+          "dtype": "uint8",
+          "shape": [
+            5083,
+            5,
+            96,
+            96
+          ]
+        },
+        "history": {
+          "dtype": "uint8",
+          "shape": [
+            5083,
+            3,
+            5,
+            64,
+            64
+          ]
+        },
+        "current_repeat": {
+          "dtype": "uint8",
+          "shape": [
+            5083,
+            5,
+            64,
+            64
+          ]
+        },
+        "support_label": {
+          "dtype": "int8",
+          "shape": [
+            5083
+          ]
+        },
+        "gt_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            4
+          ]
+        },
+        "assigned": {
+          "dtype": "bool",
+          "shape": [
+            5083
+          ]
+        },
+        "source_id": {
+          "dtype": "int32",
+          "shape": [
+            5083
+          ]
+        },
+        "track_key": {
+          "dtype": "int64",
+          "shape": [
+            5083
+          ]
+        },
+        "sequence_id": {
+          "dtype": "int32",
+          "shape": [
+            5083
+          ]
+        },
+        "frame": {
+          "dtype": "int32",
+          "shape": [
+            5083
+          ]
+        }
+      },
+      "row_keys_sha256": "f6526ceb97740a106c624afe294bfe64fa9d26904d33c54ff69cd1b8f9a6be0f"
+    },
+    "holdout": {
+      "events": 4273,
+      "capacity": 4273,
+      "counts": {
+        "all_original_edges": 4298,
+        "positive": 3548,
+        "assigned_positive": 3352,
+        "unassigned_positive": 196,
+        "ignore": 655,
+        "assigned_ignore": 576,
+        "unassigned_ignore": 79,
+        "negative": 70,
+        "unassigned_negative": 39,
+        "assigned_negative": 31,
+        "reviewed_low_IoU_positive": 9,
+        "runtime_ineligible": 25,
+        "reviewed_positive_with_crop_fallback": 0
+      },
+      "arrays": {
+        "geometry": {
+          "dtype": "float32",
+          "shape": [
+            4273,
+            8
+          ]
+        },
+        "raw_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            4273,
+            4
+          ]
+        },
+        "roi_affine": {
+          "dtype": "float32",
+          "shape": [
+            4273,
+            5
+          ]
+        },
+        "valid_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            4273,
+            4
+          ]
+        },
+        "hist_valid": {
+          "dtype": "bool",
+          "shape": [
+            4273,
+            3
+          ]
+        },
+        "hist_dt": {
+          "dtype": "float32",
+          "shape": [
+            4273,
+            3
+          ]
+        },
+        "current": {
+          "dtype": "uint8",
+          "shape": [
+            4273,
+            5,
+            96,
+            96
+          ]
+        },
+        "history": {
+          "dtype": "uint8",
+          "shape": [
+            4273,
+            3,
+            5,
+            64,
+            64
+          ]
+        },
+        "current_repeat": {
+          "dtype": "uint8",
+          "shape": [
+            4273,
+            5,
+            64,
+            64
+          ]
+        },
+        "support_label": {
+          "dtype": "int8",
+          "shape": [
+            4273
+          ]
+        },
+        "gt_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            4273,
+            4
+          ]
+        },
+        "assigned": {
+          "dtype": "bool",
+          "shape": [
+            4273
+          ]
+        },
+        "source_id": {
+          "dtype": "int32",
+          "shape": [
+            4273
+          ]
+        },
+        "track_key": {
+          "dtype": "int64",
+          "shape": [
+            4273
+          ]
+        },
+        "sequence_id": {
+          "dtype": "int32",
+          "shape": [
+            4273
+          ]
+        },
+        "frame": {
+          "dtype": "int32",
+          "shape": [
+            4273
+          ]
+        }
+      },
+      "row_keys_sha256": "dd998a404b6bf68cf307da9005427c08a34132e753da59f94836170d87e28134"
+    }
+  },
+  "protocol_status": "EXPLORATORY_PROXY_GROUPING",
+  "official_test_used_for_t2": false
+}

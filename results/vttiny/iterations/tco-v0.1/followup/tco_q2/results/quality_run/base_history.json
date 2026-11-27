@@ -1,0 +1,38 @@
+[
+  {
+    "stage": "base",
+    "epoch": 1,
+    "fit_loss": 0.34267913663640936,
+    "fit_samples": 18800
+  },
+  {
+    "stage": "base",
+    "epoch": 2,
+    "fit_loss": 0.32828781675785146,
+    "fit_samples": 18800
+  },
+  {
+    "stage": "base",
+    "epoch": 3,
+    "fit_loss": 0.3252822572626966,
+    "fit_samples": 18800
+  },
+  {
+    "stage": "base",
+    "epoch": 4,
+    "fit_loss": 0.32060010595524563,
+    "fit_samples": 18800
+  },
+  {
+    "stage": "base",
+    "epoch": 5,
+    "fit_loss": 0.3172821630061941,
+    "fit_samples": 18800
+  },
+  {
+    "stage": "base",
+    "epoch": 6,
+    "fit_loss": 0.31215376255360056,
+    "fit_samples": 18800
+  }
+]

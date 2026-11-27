@@ -1,0 +1,56 @@
+[
+  {
+    "stage": "absolute_only",
+    "epoch": 1,
+    "fit_loss": 0.005067356801118895,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": true
+  },
+  {
+    "stage": "absolute_only",
+    "epoch": 2,
+    "fit_loss": 0.004918694054870469,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": false
+  },
+  {
+    "stage": "absolute_only",
+    "epoch": 3,
+    "fit_loss": 0.004824241206189003,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": false
+  },
+  {
+    "stage": "absolute_only",
+    "epoch": 4,
+    "fit_loss": 0.004776309338333574,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": false
+  },
+  {
+    "stage": "absolute_only",
+    "epoch": 5,
+    "fit_loss": 0.004677567247341428,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": false
+  },
+  {
+    "stage": "absolute_only",
+    "epoch": 6,
+    "fit_loss": 0.004653123716462276,
+    "fit_samples": 17517,
+    "calibration_net": 0,
+    "calibration_adopted": 0,
+    "selected": false
+  }
+]

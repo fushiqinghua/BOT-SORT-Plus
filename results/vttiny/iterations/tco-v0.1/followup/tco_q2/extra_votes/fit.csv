@@ -1,0 +1,13 @@
+case_id,blind_identity,note
+fit_5d7079cf66,AMBIGUOUS,暗区仅见零散的重复光点且本帧缺少清晰主体轮廓。
+fit_b72cc6f64a,AMBIGUOUS,绿光下浅色斑块贴着边缘亮带且难分辨人体主体。
+fit_c6e0744f1c,SUPPORTED,背景斜暗带上方独立直立浅色轮廓持续可见且相对位置连贯。
+fit_b85370c5f9,SUPPORTED,斜暗带上方同一细长浅色主体在前几帧及当前帧保持可辨。
+fit_43411e24c5,SUPPORTED,浅色路面上的暗色躯干和下方细腿轮廓连续可见。
+fit_5bc5b20420,SUPPORTED,浅路面上倾斜的深色躯干与浅色腿部延续历史轮廓。
+fit_8bb3b23d80,AMBIGUOUS,深绿背景中的窄亮斑缺乏独立躯干轮廓且与路缘亮带相连。
+fit_29516a5d4b,AMBIGUOUS,灰白竖斑在斜向明暗交界模糊且不足以确认主体形状。
+fit_7b177e357c,AMBIGUOUS,框内外多团相似暗斑相邻且难区分目标与拖影。
+fit_826bc38241,AMBIGUOUS,灰雾中的近邻暗斑高度相似且当前框未能分离独立主体。
+fit_c0a3f32001,AMBIGUOUS,连续帧只有多块模糊灰斑且缺乏可识别的身体边界。
+fit_e930a8bb5a,AMBIGUOUS,本帧目标近乎融入灰色背景且历史小斑不足以确认身份。

@@ -1,0 +1,583 @@
+{
+  "schema": "tco_v0.1_crop_corpus",
+  "status": "LOCKED",
+  "protocol_status": "EXPLORATORY_TCO_Q2_TRAIN_TEST_PROXY_OVERLAP",
+  "model_source_sha256": "1ca58264757914e33446cd9777b22167db6d392ba09d16f488a5d8d2a1e7ba8b",
+  "split_sha256": "7e9e5967e5ec44751c1b31f0ad209d96670097f37e4dee1ca0010c2e2709ef63",
+  "dataset_from_official_training_only": true,
+  "old_crop_manifest_sha256": "e9ec25e6a354745efd609692f5be5dc741e0bfa028ede6c9bc7f16569514ac94",
+  "new_labels_sha256": "3fad729af4fba72c1c024a297161e6d6534c0500d6ea14c188cd39d09fd81eeb",
+  "independent_votes_sha256": {
+    "fit.csv": "ff8c6eec0e9fb8528e661babe02b35c763e91b3e1e12a12f242726c038346d79",
+    "holdout.csv": "a1409b5d67a1a2f259049f73c37b74e47cf3ac64e8af1cf8d2c8b56c75a497ec"
+  },
+  "partitions": {
+    "fit": {
+      "events": 23925,
+      "capacity": 23925,
+      "counts": {
+        "all_original_edges": 24068,
+        "positive": 18748,
+        "assigned_positive": 17472,
+        "runtime_ineligible": 143,
+        "unassigned_positive": 1276,
+        "ignore": 5125,
+        "unassigned_ignore": 547,
+        "assigned_ignore": 4578,
+        "reviewed_low_IoU_positive": 32,
+        "negative": 52,
+        "assigned_negative": 45,
+        "unassigned_negative": 7
+      },
+      "arrays": {
+        "assigned": {
+          "dtype": "bool",
+          "shape": [
+            23925
+          ]
+        },
+        "current": {
+          "dtype": "uint8",
+          "shape": [
+            23925,
+            5,
+            96,
+            96
+          ]
+        },
+        "current_repeat": {
+          "dtype": "uint8",
+          "shape": [
+            23925,
+            5,
+            64,
+            64
+          ]
+        },
+        "frame": {
+          "dtype": "int32",
+          "shape": [
+            23925
+          ]
+        },
+        "geometry": {
+          "dtype": "float32",
+          "shape": [
+            23925,
+            8
+          ]
+        },
+        "gt_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            23925,
+            4
+          ]
+        },
+        "hist_dt": {
+          "dtype": "float32",
+          "shape": [
+            23925,
+            3
+          ]
+        },
+        "hist_valid": {
+          "dtype": "bool",
+          "shape": [
+            23925,
+            3
+          ]
+        },
+        "history": {
+          "dtype": "uint8",
+          "shape": [
+            23925,
+            3,
+            5,
+            64,
+            64
+          ]
+        },
+        "raw_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            23925,
+            4
+          ]
+        },
+        "roi_affine": {
+          "dtype": "float32",
+          "shape": [
+            23925,
+            5
+          ]
+        },
+        "sequence_id": {
+          "dtype": "int32",
+          "shape": [
+            23925
+          ]
+        },
+        "source_id": {
+          "dtype": "int32",
+          "shape": [
+            23925
+          ]
+        },
+        "support_label": {
+          "dtype": "int8",
+          "shape": [
+            23925
+          ]
+        },
+        "track_key": {
+          "dtype": "int64",
+          "shape": [
+            23925
+          ]
+        },
+        "valid_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            23925,
+            4
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "events": 5083,
+      "capacity": 5083,
+      "counts": {
+        "all_original_edges": 5167,
+        "runtime_ineligible": 84,
+        "positive": 3315,
+        "assigned_positive": 3077,
+        "ignore": 1641,
+        "assigned_ignore": 1523,
+        "unassigned_ignore": 118,
+        "reviewed_low_IoU_positive": 21,
+        "unassigned_positive": 238,
+        "negative": 127,
+        "assigned_negative": 107,
+        "unassigned_negative": 20,
+        "reviewed_positive_with_crop_fallback": 0
+      },
+      "arrays": {
+        "geometry": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            8
+          ]
+        },
+        "raw_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            4
+          ]
+        },
+        "roi_affine": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            5
+          ]
+        },
+        "valid_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            4
+          ]
+        },
+        "hist_valid": {
+          "dtype": "bool",
+          "shape": [
+            5083,
+            3
+          ]
+        },
+        "hist_dt": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            3
+          ]
+        },
+        "current": {
+          "dtype": "uint8",
+          "shape": [
+            5083,
+            5,
+            96,
+            96
+          ]
+        },
+        "history": {
+          "dtype": "uint8",
+          "shape": [
+            5083,
+            3,
+            5,
+            64,
+            64
+          ]
+        },
+        "current_repeat": {
+          "dtype": "uint8",
+          "shape": [
+            5083,
+            5,
+            64,
+            64
+          ]
+        },
+        "support_label": {
+          "dtype": "int8",
+          "shape": [
+            5083
+          ]
+        },
+        "gt_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            5083,
+            4
+          ]
+        },
+        "assigned": {
+          "dtype": "bool",
+          "shape": [
+            5083
+          ]
+        },
+        "source_id": {
+          "dtype": "int32",
+          "shape": [
+            5083
+          ]
+        },
+        "track_key": {
+          "dtype": "int64",
+          "shape": [
+            5083
+          ]
+        },
+        "sequence_id": {
+          "dtype": "int32",
+          "shape": [
+            5083
+          ]
+        },
+        "frame": {
+          "dtype": "int32",
+          "shape": [
+            5083
+          ]
+        }
+      },
+      "row_keys_sha256": "f6526ceb97740a106c624afe294bfe64fa9d26904d33c54ff69cd1b8f9a6be0f"
+    },
+    "holdout": {
+      "events": 1505,
+      "capacity": 1505,
+      "counts": {
+        "all_original_edges": 1511,
+        "reviewed_low_IoU_positive": 5,
+        "positive": 1274,
+        "assigned_positive": 1214,
+        "ignore": 226,
+        "assigned_ignore": 212,
+        "runtime_ineligible": 6,
+        "negative": 5,
+        "assigned_negative": 4,
+        "unassigned_negative": 1,
+        "unassigned_positive": 60,
+        "unassigned_ignore": 14,
+        "reviewed_positive_with_crop_fallback": 0
+      },
+      "arrays": {
+        "geometry": {
+          "dtype": "float32",
+          "shape": [
+            1505,
+            8
+          ]
+        },
+        "raw_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            1505,
+            4
+          ]
+        },
+        "roi_affine": {
+          "dtype": "float32",
+          "shape": [
+            1505,
+            5
+          ]
+        },
+        "valid_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            1505,
+            4
+          ]
+        },
+        "hist_valid": {
+          "dtype": "bool",
+          "shape": [
+            1505,
+            3
+          ]
+        },
+        "hist_dt": {
+          "dtype": "float32",
+          "shape": [
+            1505,
+            3
+          ]
+        },
+        "current": {
+          "dtype": "uint8",
+          "shape": [
+            1505,
+            5,
+            96,
+            96
+          ]
+        },
+        "history": {
+          "dtype": "uint8",
+          "shape": [
+            1505,
+            3,
+            5,
+            64,
+            64
+          ]
+        },
+        "current_repeat": {
+          "dtype": "uint8",
+          "shape": [
+            1505,
+            5,
+            64,
+            64
+          ]
+        },
+        "support_label": {
+          "dtype": "int8",
+          "shape": [
+            1505
+          ]
+        },
+        "gt_xyxy": {
+          "dtype": "float32",
+          "shape": [
+            1505,
+            4
+          ]
+        },
+        "assigned": {
+          "dtype": "bool",
+          "shape": [
+            1505
+          ]
+        },
+        "source_id": {
+          "dtype": "int32",
+          "shape": [
+            1505
+          ]
+        },
+        "track_key": {
+          "dtype": "int64",
+          "shape": [
+            1505
+          ]
+        },
+        "sequence_id": {
+          "dtype": "int32",
+          "shape": [
+            1505
+          ]
+        },
+        "frame": {
+          "dtype": "int32",
+          "shape": [
+            1505
+          ]
+        }
+      },
+      "row_keys_sha256": "6d4ba6d6af202095ce2ecc7972548cfb2eb927dd4c268eeda1a3d183b01c0dd1"
+    }
+  },
+  "source_ids": {
+    "proxy:DJI_0022": 0,
+    "proxy:DJI_0024": 1,
+    "proxy:DJI_0026": 2,
+    "proxy:DJI_0043": 3,
+    "proxy:DJI_0047": 4,
+    "proxy:DJI_0057": 5,
+    "proxy:DJI_0067": 6,
+    "proxy:DJI_0069": 7,
+    "proxy:DJI_0071": 8,
+    "proxy:DJI_0075": 9,
+    "proxy:DJI_0077": 10,
+    "proxy:DJI_0081": 11,
+    "proxy:DJI_0083": 12,
+    "proxy:DJI_0085": 13,
+    "proxy:DJI_0089": 14,
+    "proxy:DJI_0095": 15,
+    "proxy:DJI_0101": 16,
+    "proxy:DJI_0107": 17,
+    "proxy:DJI_0111": 18,
+    "proxy:DJI_0113": 19,
+    "proxy:DJI_0115": 20,
+    "proxy:DJI_0117": 21,
+    "proxy:DJI_0121": 22,
+    "proxy:DJI_0123": 23,
+    "proxy:DJI_0125": 24,
+    "proxy:DJI_0127": 25,
+    "proxy:DJI_0131": 26,
+    "proxy:DJI_0133": 27,
+    "proxy:DJI_0135": 28,
+    "proxy:DJI_0137": 29,
+    "proxy:DJI_0139": 30,
+    "proxy:DJI_0143": 31,
+    "proxy:DJI_0145": 32,
+    "proxy:DJI_0157": 33,
+    "proxy:DJI_0163": 34,
+    "proxy:DJI_0167": 35,
+    "proxy:DJI_0171": 36,
+    "proxy:DJI_0175": 37,
+    "proxy:DJI_0177": 38,
+    "proxy:DJI_0179": 39,
+    "proxy:DJI_0183": 40,
+    "proxy:DJI_0217": 41,
+    "proxy:DJI_0227": 42,
+    "proxy:DJI_0229": 43,
+    "proxy:DJI_0241": 44,
+    "proxy:DJI_0243": 45,
+    "proxy:DJI_0253": 46,
+    "proxy:DJI_0265": 47,
+    "proxy:DJI_0271": 48,
+    "proxy:DJI_0273": 49,
+    "proxy:DJI_0275": 50,
+    "proxy:DJI_0279": 51,
+    "proxy:DJI_0285": 52,
+    "proxy:DJI_0287": 53,
+    "proxy:DJI_0291": 54,
+    "proxy:DJI_0293": 55,
+    "proxy:DJI_0295": 56,
+    "proxy:DJI_0305": 57,
+    "proxy:DJI_0317": 58,
+    "proxy:DJI_0319": 59,
+    "proxy:DJI_0323": 60,
+    "proxy:DJI_0331": 61,
+    "proxy:DJI_0337": 62,
+    "proxy:DJI_0341": 63,
+    "proxy:DJI_0343": 64,
+    "proxy:DJI_0351": 65,
+    "proxy:DJI_0028": 66,
+    "proxy:DJI_0030": 67,
+    "proxy:DJI_0032": 68,
+    "proxy:DJI_0051": 69,
+    "proxy:DJI_0257": 70,
+    "proxy:DJI_0277": 71,
+    "proxy:DJI_0307": 72,
+    "proxy:DJI_0309": 73
+  },
+  "sequence_ids": {
+    "DJI_0022_1": 0,
+    "DJI_0024_2": 1,
+    "DJI_0026_2": 2,
+    "DJI_0043_2": 3,
+    "DJI_0047_3": 4,
+    "DJI_0057_1": 5,
+    "DJI_0067_2": 6,
+    "DJI_0069_1": 7,
+    "DJI_0071_2": 8,
+    "DJI_0075_3": 9,
+    "DJI_0077_2": 10,
+    "DJI_0081_2": 11,
+    "DJI_0083_2": 12,
+    "DJI_0085_2": 13,
+    "DJI_0089_2": 14,
+    "DJI_0095_3": 15,
+    "DJI_0101_2": 16,
+    "DJI_0107_1": 17,
+    "DJI_0111_2": 18,
+    "DJI_0113_3": 19,
+    "DJI_0115_2": 20,
+    "DJI_0117_2": 21,
+    "DJI_0121_2": 22,
+    "DJI_0123_6": 23,
+    "DJI_0125_1": 24,
+    "DJI_0127_1": 25,
+    "DJI_0131_2": 26,
+    "DJI_0133_2": 27,
+    "DJI_0135_1": 28,
+    "DJI_0137_3": 29,
+    "DJI_0139_2": 30,
+    "DJI_0143_1": 31,
+    "DJI_0145_1": 32,
+    "DJI_0157_2": 33,
+    "DJI_0163_1": 34,
+    "DJI_0167_1": 35,
+    "DJI_0171_2": 36,
+    "DJI_0175_2": 37,
+    "DJI_0177_2": 38,
+    "DJI_0179_2": 39,
+    "DJI_0183_2": 40,
+    "DJI_0217_2": 41,
+    "DJI_0227_1": 42,
+    "DJI_0229_2": 43,
+    "DJI_0241_2": 44,
+    "DJI_0243_2": 45,
+    "DJI_0253_1": 46,
+    "DJI_0253_2": 47,
+    "DJI_0253_3": 48,
+    "DJI_0265_1": 49,
+    "DJI_0271_2": 50,
+    "DJI_0273_1": 51,
+    "DJI_0273_3": 52,
+    "DJI_0275_3": 53,
+    "DJI_0279_2": 54,
+    "DJI_0279_4": 55,
+    "DJI_0285_3": 56,
+    "DJI_0287_1": 57,
+    "DJI_0287_2": 58,
+    "DJI_0291_2": 59,
+    "DJI_0293_1": 60,
+    "DJI_0295_3": 61,
+    "DJI_0305_3": 62,
+    "DJI_0305_7": 63,
+    "DJI_0317_2": 64,
+    "DJI_0319_2": 65,
+    "DJI_0323_2": 66,
+    "DJI_0331_3": 67,
+    "DJI_0337_3": 68,
+    "DJI_0341_2": 69,
+    "DJI_0341_5": 70,
+    "DJI_0343_3": 71,
+    "DJI_0343_5": 72,
+    "DJI_0351_2": 73,
+    "DJI_0028_2": 74,
+    "DJI_0028_4": 75,
+    "DJI_0028_5": 76,
+    "DJI_0030_9": 77,
+    "DJI_0032_5": 78,
+    "DJI_0051_3": 79,
+    "DJI_0257_5": 80,
+    "DJI_0277_1": 81,
+    "DJI_0307_1": 82,
+    "DJI_0309_1": 83,
+    "DJI_0309_2": 84
+  },
+  "old_holdout_role": "diagnosis_only_no_active_head_exposure"
+}

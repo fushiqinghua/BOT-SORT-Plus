@@ -1,0 +1,593 @@
+{
+  "status": "PASS",
+  "source": "old_seed41_training_side_holdout_only",
+  "thresholds": {
+    "support": 0.95,
+    "refined_quality": 0.7,
+    "quality_gain": 0.005
+  },
+  "known_positive_native_pairs_n": 3334,
+  "gt_and_pred_quality_gain_pearson": -0.01958419348651722,
+  "sizable_true_gain_n": 2162,
+  "sizable_true_gain_sign_agreement": 0.5203515263644773,
+  "frames": [
+    {
+      "sequence": "DJI_0083_2",
+      "frame": 328,
+      "track_id": 218,
+      "det_index": 27,
+      "gt_id": 6600577,
+      "artifact_key": {
+        "run_fingerprint": "47ca0c4d7f724b924846d65e8bb0811124a0ee17cb0b9d042937b037c8b2b34a",
+        "method": "B_early_moderate",
+        "sequence": "DJI_0083_2",
+        "frame": 328,
+        "track_id": 218,
+        "det_index": 27,
+        "row": 2037,
+        "history": [
+          [
+            325,
+            18
+          ],
+          [
+            326,
+            21
+          ],
+          [
+            327,
+            24
+          ]
+        ],
+        "gt_id": 6600577,
+        "raw_iou": 0.489257345683782,
+        "feasible_iou": 1.0,
+        "identity_status": "same_gt_clear_output_for_this_exact_low_row",
+        "review_positive_case_id": "hol_7c16555b0d"
+      },
+      "raw_xyxy": [
+        483.9706115722656,
+        27.675209045410156,
+        493.5511169433594,
+        33.487953186035156
+      ],
+      "refined_xyxy": [
+        483.5299987792969,
+        27.71999740600586,
+        493.3666076660156,
+        33.413116455078125
+      ],
+      "gt_xyxy": [
+        483.0,
+        29.0,
+        492.0,
+        35.0
+      ],
+      "kf_predicted_xyxy": [
+        483.0646137788621,
+        27.822989490009782,
+        493.4950407951024,
+        33.7386320008767
+      ],
+      "raw_score": 0.16882409155368805,
+      "roi": {
+        "eligible": true,
+        "output_size": 96,
+        "padding_xy": [
+          0.0,
+          0.0
+        ],
+        "reason": null,
+        "requested_xyxy": [
+          476.7608642578125,
+          18.581581115722656,
+          500.7608642578125,
+          42.581581115722656
+        ],
+        "scale": 4.0,
+        "valid_fraction": 1.0,
+        "valid_xyxy": [
+          476.7608642578125,
+          18.581581115722656,
+          500.7608642578125,
+          42.581581115722656
+        ]
+      },
+      "history": [
+        [
+          325,
+          18
+        ],
+        [
+          326,
+          21
+        ],
+        [
+          327,
+          24
+        ]
+      ],
+      "history_GT_center_offsets": {
+        "325": [
+          -0.01885986328125,
+          0.399932861328125
+        ],
+        "326": [
+          1.4638671875,
+          0.6192779541015625
+        ],
+        "327": [
+          1.4989013671875,
+          -0.3475341796875
+        ]
+      },
+      "gt_need_center_shift": [
+        -1.2608642578125,
+        1.4184188842773438
+      ],
+      "proposal_center_shift": [
+        -0.31256103515625,
+        -0.015024185180664062
+      ],
+      "proposal_wh_change": [
+        0.256103515625,
+        -0.11962509155273438
+      ],
+      "raw_iou": 0.489257345683782,
+      "refined_iou": 0.5147085130930822,
+      "true_gain": 0.0254511674093002,
+      "q_raw": 0.7560887336730957,
+      "q_ref": 0.7551188468933105,
+      "q_gain": -0.0009698867797851562,
+      "support": 0.9961906671524048,
+      "adopted": false,
+      "roi_valid": true,
+      "exact_gt_reachable": true,
+      "feasible_iou": 1.0,
+      "old_q_features": {
+        "raw_ref_sampled_local_cosine": 0.9992337822914124,
+        "raw_ref_sampled_local_relative_l2": 0.04369787126779556,
+        "identical_history_query": true,
+        "cpu_quality_values": [
+          0.7561004757881165,
+          0.7551244497299194
+        ],
+        "cpu_vs_archived_gpu_max_abs_q_error": 1.1742115020751953e-05
+      }
+    },
+    {
+      "sequence": "DJI_0083_2",
+      "frame": 354,
+      "track_id": 218,
+      "det_index": 17,
+      "gt_id": 6600577,
+      "artifact_key": {
+        "run_fingerprint": "47ca0c4d7f724b924846d65e8bb0811124a0ee17cb0b9d042937b037c8b2b34a",
+        "method": "B_early_moderate",
+        "sequence": "DJI_0083_2",
+        "frame": 354,
+        "track_id": 218,
+        "det_index": 17,
+        "row": 2079,
+        "history": [
+          [
+            351,
+            16
+          ],
+          [
+            352,
+            17
+          ],
+          [
+            353,
+            16
+          ]
+        ],
+        "gt_id": 6600577,
+        "raw_iou": 0.49404437187733946,
+        "feasible_iou": 0.947373198963742,
+        "identity_status": "same_gt_clear_output_for_this_exact_low_row",
+        "review_positive_case_id": "hol_8c419e383c"
+      },
+      "raw_xyxy": [
+        462.2333984375,
+        31.351150512695312,
+        470.1719970703125,
+        36.52467346191406
+      ],
+      "refined_xyxy": [
+        461.8365173339844,
+        31.382299423217773,
+        470.0386657714844,
+        36.45976257324219
+      ],
+      "gt_xyxy": [
+        460.0,
+        31.0,
+        468.0,
+        36.0
+      ],
+      "kf_predicted_xyxy": [
+        461.84283951773716,
+        31.404388404030833,
+        470.0136111808364,
+        36.66733162113608
+      ],
+      "raw_score": 0.49791908264160156,
+      "roi": {
+        "eligible": true,
+        "output_size": 96,
+        "padding_xy": [
+          0.0,
+          0.0
+        ],
+        "reason": null,
+        "requested_xyxy": [
+          454.20269775390625,
+          21.937911987304688,
+          478.20269775390625,
+          45.93791198730469
+        ],
+        "scale": 4.0,
+        "valid_fraction": 1.0,
+        "valid_xyxy": [
+          454.20269775390625,
+          21.937911987304688,
+          478.20269775390625,
+          45.93791198730469
+        ]
+      },
+      "history": [
+        [
+          351,
+          16
+        ],
+        [
+          352,
+          17
+        ],
+        [
+          353,
+          16
+        ]
+      ],
+      "history_GT_center_offsets": {
+        "351": [
+          0.6732177734375,
+          0.5566864013671875
+        ],
+        "352": [
+          0.92962646484375,
+          0.5064849853515625
+        ],
+        "353": [
+          1.7677001953125,
+          -0.01190185546875
+        ]
+      },
+      "gt_need_center_shift": [
+        -2.20269775390625,
+        -0.4379119873046875
+      ],
+      "proposal_center_shift": [
+        -0.265106201171875,
+        -0.01688098907470703
+      ],
+      "proposal_wh_change": [
+        0.2635498046875,
+        -0.09605979919433594
+      ],
+      "raw_iou": 0.49404437187733946,
+      "refined_iou": 0.5351344055412913,
+      "true_gain": 0.041090033663951864,
+      "q_raw": 0.7673989534378052,
+      "q_ref": 0.7632445693016052,
+      "q_gain": -0.004154384136199951,
+      "support": 0.996705949306488,
+      "adopted": false,
+      "roi_valid": true,
+      "exact_gt_reachable": false,
+      "feasible_iou": 0.947373198963742,
+      "old_q_features": {
+        "raw_ref_sampled_local_cosine": 0.9990651607513428,
+        "raw_ref_sampled_local_relative_l2": 0.04484762251377106,
+        "identical_history_query": true,
+        "cpu_quality_values": [
+          0.7673959732055664,
+          0.7632356286048889
+        ],
+        "cpu_vs_archived_gpu_max_abs_q_error": 8.940696716308594e-06
+      }
+    },
+    {
+      "sequence": "DJI_0183_2",
+      "frame": 179,
+      "track_id": 72,
+      "det_index": 17,
+      "gt_id": 8001021,
+      "artifact_key": {
+        "run_fingerprint": "c43b779b34b2ab15fb3a0e309f561236ab5024b7881922759205bf0f0e7a60db",
+        "method": "B_early_moderate",
+        "sequence": "DJI_0183_2",
+        "frame": 179,
+        "track_id": 72,
+        "det_index": 17,
+        "row": 2967,
+        "history": [
+          [
+            176,
+            19
+          ],
+          [
+            177,
+            17
+          ],
+          [
+            178,
+            14
+          ]
+        ],
+        "gt_id": 8001021,
+        "raw_iou": 0.5158971175851205,
+        "feasible_iou": 1.0,
+        "identity_status": "known_same_identity_from_raw_iou",
+        "review_positive_case_id": null
+      },
+      "raw_xyxy": [
+        281.03997802734375,
+        28.95928955078125,
+        287.35113525390625,
+        37.90045166015625
+      ],
+      "refined_xyxy": [
+        280.7633361816406,
+        29.013107299804688,
+        287.1681823730469,
+        37.776920318603516
+      ],
+      "gt_xyxy": [
+        282.0,
+        27.0,
+        289.0,
+        37.0
+      ],
+      "kf_predicted_xyxy": [
+        280.98431900133045,
+        28.14662580521643,
+        287.77807947393165,
+        37.971083211715026
+      ],
+      "raw_score": 0.3994181156158447,
+      "roi": {
+        "eligible": true,
+        "output_size": 96,
+        "padding_xy": [
+          0.0,
+          0.0
+        ],
+        "reason": null,
+        "requested_xyxy": [
+          272.195556640625,
+          21.42987060546875,
+          296.195556640625,
+          45.42987060546875
+        ],
+        "scale": 4.0,
+        "valid_fraction": 1.0,
+        "valid_xyxy": [
+          272.195556640625,
+          21.42987060546875,
+          296.195556640625,
+          45.42987060546875
+        ]
+      },
+      "history": [
+        [
+          176,
+          19
+        ],
+        [
+          177,
+          17
+        ],
+        [
+          178,
+          14
+        ]
+      ],
+      "history_GT_center_offsets": {
+        "176": [
+          0.042633056640625,
+          -1.14984130859375
+        ],
+        "177": [
+          1.007537841796875,
+          -0.2933807373046875
+        ],
+        "178": [
+          0.65264892578125,
+          0.1662445068359375
+        ]
+      },
+      "gt_need_center_shift": [
+        1.304443359375,
+        -1.42987060546875
+      ],
+      "proposal_center_shift": [
+        -0.22979736328125,
+        -0.03485679626464844
+      ],
+      "proposal_wh_change": [
+        0.09368896484375,
+        -0.17734909057617188
+      ],
+      "raw_iou": 0.5158971175851205,
+      "refined_iou": 0.4864606083714112,
+      "true_gain": -0.029436509213709272,
+      "q_raw": 0.7461236119270325,
+      "q_ref": 0.7530680298805237,
+      "q_gain": 0.006944417953491211,
+      "support": 0.9964717626571655,
+      "adopted": true,
+      "roi_valid": true,
+      "exact_gt_reachable": true,
+      "feasible_iou": 1.0,
+      "old_q_features": {
+        "raw_ref_sampled_local_cosine": 0.999113142490387,
+        "raw_ref_sampled_local_relative_l2": 0.057776451110839844,
+        "identical_history_query": true,
+        "cpu_quality_values": [
+          0.7461187839508057,
+          0.7530612945556641
+        ],
+        "cpu_vs_archived_gpu_max_abs_q_error": 6.735324859619141e-06
+      }
+    },
+    {
+      "sequence": "DJI_0183_2",
+      "frame": 256,
+      "track_id": 123,
+      "det_index": 19,
+      "gt_id": 8001512,
+      "artifact_key": {
+        "run_fingerprint": "c43b779b34b2ab15fb3a0e309f561236ab5024b7881922759205bf0f0e7a60db",
+        "method": "B_early_moderate",
+        "sequence": "DJI_0183_2",
+        "frame": 256,
+        "track_id": 123,
+        "det_index": 19,
+        "row": 3118,
+        "history": [
+          [
+            253,
+            10
+          ],
+          [
+            254,
+            10
+          ],
+          [
+            255,
+            13
+          ]
+        ],
+        "gt_id": 8001512,
+        "raw_iou": 0.5435080563803587,
+        "feasible_iou": 1.0,
+        "identity_status": "known_same_identity_from_raw_iou",
+        "review_positive_case_id": null
+      },
+      "raw_xyxy": [
+        119.32757568359375,
+        468.73822021484375,
+        125.37155151367188,
+        476.43536376953125
+      ],
+      "refined_xyxy": [
+        118.91110229492188,
+        468.8463439941406,
+        125.02667236328125,
+        476.3868103027344
+      ],
+      "gt_xyxy": [
+        120.0,
+        468.0,
+        127.0,
+        475.0
+      ],
+      "kf_predicted_xyxy": [
+        119.30162811157643,
+        467.474007707782,
+        125.16126886930627,
+        475.1730630669938
+      ],
+      "raw_score": 0.21717695891857147,
+      "roi": {
+        "eligible": true,
+        "output_size": 96,
+        "padding_xy": [
+          0.0,
+          0.0
+        ],
+        "reason": null,
+        "requested_xyxy": [
+          110.34956359863281,
+          460.5867919921875,
+          134.3495635986328,
+          484.5867919921875
+        ],
+        "scale": 4.0,
+        "valid_fraction": 1.0,
+        "valid_xyxy": [
+          110.34956359863281,
+          460.5867919921875,
+          134.3495635986328,
+          484.5867919921875
+        ]
+      },
+      "history": [
+        [
+          253,
+          10
+        ],
+        [
+          254,
+          10
+        ],
+        [
+          255,
+          13
+        ]
+      ],
+      "history_GT_center_offsets": {
+        "253": [
+          -0.4305267333984375,
+          -0.4302978515625
+        ],
+        "254": [
+          -0.56744384765625,
+          -0.231201171875
+        ],
+        "255": [
+          -0.8507537841796875,
+          0.08917236328125
+        ]
+      },
+      "gt_need_center_shift": [
+        1.1504364013671875,
+        -1.0867919921875
+      ],
+      "proposal_center_shift": [
+        -0.38067626953125,
+        0.02978515625
+      ],
+      "proposal_wh_change": [
+        0.07159423828125,
+        -0.15667724609375
+      ],
+      "raw_iou": 0.5435080563803587,
+      "refined_iou": 0.4819496261256726,
+      "true_gain": -0.0615584302546861,
+      "q_raw": 0.7156780362129211,
+      "q_ref": 0.7261463403701782,
+      "q_gain": 0.01046830415725708,
+      "support": 0.9976784586906433,
+      "adopted": true,
+      "roi_valid": true,
+      "exact_gt_reachable": true,
+      "feasible_iou": 1.0,
+      "old_q_features": {
+        "raw_ref_sampled_local_cosine": 0.9944089651107788,
+        "raw_ref_sampled_local_relative_l2": 0.1156301349401474,
+        "identical_history_query": true,
+        "cpu_quality_values": [
+          0.7156859636306763,
+          0.7261441946029663
+        ],
+        "cpu_vs_archived_gpu_max_abs_q_error": 7.927417755126953e-06
+      }
+    }
+  ],
+  "mean_absolute_gt_gain": 0.030449131478001847,
+  "mean_absolute_predicted_gain": 0.001933995109156498
+}

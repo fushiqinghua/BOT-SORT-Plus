@@ -1,0 +1,107 @@
+{
+  "partitions": {
+    "fit": {
+      "sequences": {
+        "DJI_0030_9": 590,
+        "DJI_0032_5": 350,
+        "DJI_0277_1": 550,
+        "DJI_0307_1": 250
+      },
+      "counts": {
+        "all_low_stage_track_frames": 943,
+        "eligible_low_pair_correct_control": 524,
+        "assigned_pairs": 752,
+        "history_eligible": 941,
+        "assigned_history_roi_and_guard_eligible": 750,
+        "known_anchor_present": 690,
+        "assigned_eligible_and_known_anchor": 603,
+        "assigned_eligible_explicit_positive_raw": 524,
+        "assigned_eligible_anchored_raw_below_050": 60,
+        "assigned_eligible_anchored_raw_below_050_other_gt_overlap": 35,
+        "assigned_eligible_anchored_raw_below_050_other_gt_at_least_050": 4,
+        "geometry_only_raw_bias": 32,
+        "geometry_only_gt_exact_reachable": 2,
+        "geometry_only_bounded_cross_050": 31,
+        "geometry_only_bounded_cross_050_anchor_uncovered": 31,
+        "geometry_only_bounded_cross_050_anchor_covered": 0,
+        "geometry_only_bounded_cross_050_other_gt_overlap": 9,
+        "linked_raw_bias": 12,
+        "linked_gt_exact_reachable": 4,
+        "linked_legal_candidate_crosses_050": 12,
+        "linked_legal_candidate_crosses_050_other_gt_overlap": 10,
+        "linked_same_gt_output_before_refine": 12,
+        "ideal_supported_edge_any_track": 547,
+        "ideal_supported_edge_anchor_uncovered": 13,
+        "crossing_by_reference_output_status_FP": 31,
+        "eligible_low_edge_assignment": 11,
+        "identity_or_visibility_unknown": 294,
+        "score_out_of_band": 28,
+        "no_usable_proposal": 50,
+        "low_outside_original_edge": 22,
+        "crossing_by_reference_output_status_same_anchored_GT_TP": 12,
+        "eligible_low_pair_localization": 12,
+        "history_unavailable": 2
+      },
+      "files": {
+        "pairs.runtime.jsonl.gz": "c12cbbff21312a2273e5efb8e240a9303b51fcbd5a750999a2fe59c5207c79c2",
+        "pairs.labels.jsonl.gz": "0ec9b2aacd5029a4f80f7a268251b5a379cc1c639684d25cda3e5352a37db785",
+        "episodes.jsonl.gz": "c5ab06a8008c4c0f783de073118e076375d175897ed328f73242eb0d97b622d7"
+      }
+    },
+    "holdout": {
+      "sequences": {
+        "DJI_0028_2": 370,
+        "DJI_0028_4": 590,
+        "DJI_0028_5": 590,
+        "DJI_0051_3": 600,
+        "DJI_0257_5": 260,
+        "DJI_0309_1": 432,
+        "DJI_0309_2": 598
+      },
+      "counts": {
+        "crossing_by_reference_output_status_same_anchored_GT_TP": 13,
+        "all_low_stage_track_frames": 1666,
+        "eligible_low_pair_localization": 13,
+        "assigned_pairs": 1436,
+        "history_eligible": 1658,
+        "assigned_history_roi_and_guard_eligible": 1430,
+        "known_anchor_present": 1429,
+        "assigned_eligible_and_known_anchor": 1280,
+        "assigned_eligible_explicit_positive_raw": 1209,
+        "assigned_eligible_anchored_raw_below_050": 71,
+        "assigned_eligible_anchored_raw_below_050_other_gt_overlap": 32,
+        "assigned_eligible_anchored_raw_below_050_other_gt_at_least_050": 4,
+        "geometry_only_raw_bias": 47,
+        "geometry_only_gt_exact_reachable": 2,
+        "geometry_only_bounded_cross_050": 45,
+        "geometry_only_bounded_cross_050_anchor_uncovered": 45,
+        "geometry_only_bounded_cross_050_anchor_covered": 0,
+        "geometry_only_bounded_cross_050_other_gt_overlap": 13,
+        "linked_raw_bias": 13,
+        "linked_gt_exact_reachable": 3,
+        "linked_legal_candidate_crosses_050": 13,
+        "linked_legal_candidate_crosses_050_other_gt_overlap": 7,
+        "linked_same_gt_output_before_refine": 13,
+        "ideal_supported_edge_any_track": 1226,
+        "ideal_supported_edge_anchor_uncovered": 7,
+        "eligible_low_pair_correct_control": 1209,
+        "identity_or_visibility_unknown": 269,
+        "crossing_by_reference_output_status_FP": 45,
+        "history_unavailable": 8,
+        "low_outside_original_edge": 46,
+        "no_usable_proposal": 65,
+        "score_out_of_band": 52,
+        "eligible_low_edge_assignment": 4
+      },
+      "files": {
+        "pairs.runtime.jsonl.gz": "962ab9d05cb54e04e47701437b9134711de6870aae2b3d3cbb802c9b66d9f07f",
+        "pairs.labels.jsonl.gz": "57c5a824394d46723c337f4ddbda2c651f7e3c660742662f87737e1cd9ecc763",
+        "episodes.jsonl.gz": "774b03cfa1d4b394102e0e8fee5afc1ea62669e3d461b97dc3bcf338d8c29a65"
+      }
+    }
+  },
+  "capture_protocol_sha256": "eb27c50160e09a1cedc4a95677dcd0c8673c167876c13614f9af1c7b6e0764fd",
+  "split_sha256": "7e9e5967e5ec44751c1b31f0ad209d96670097f37e4dee1ca0010c2e2709ef63",
+  "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "development_gt_read": false
+}

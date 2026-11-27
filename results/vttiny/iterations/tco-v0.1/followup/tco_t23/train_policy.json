@@ -1,0 +1,28 @@
+{
+  "schema": "tco_v0.1_t2_training_policy",
+  "pilot_seed": 41,
+  "confirmation_seeds": [42, 43],
+  "optimizer": "AdamW",
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "batch_size": 64,
+  "max_epochs": 20,
+  "max_steps": 20000,
+  "early_stopping_min_epochs": 2,
+  "early_stopping_patience_epochs": 4,
+  "fit_sampler": "Deterministic shuffled round robin of exact track keys over known labels. Every known fit edge once per epoch unless maximum optimization steps is reached. Same sample order per seed across arms.",
+  "calibration_population": "All eligible, actually assigned native low-stage candidates of calibration source groups. Unknowns reported separately and excluded from correctness claims.",
+  "correct_iou_threshold": 0.5,
+  "maximum_correct_damage_fraction": 0.005,
+  "correct_damage_denominator": "Assigned, identity-confirmed positive candidates with original IoU at least 0.50",
+  "maximum_known_negative_adoption_fraction": 0.01,
+  "known_negative_adoption_denominator": "Assigned, identity-confirmed negative candidates",
+  "threshold_grid": {
+    "support": [0.95, 0.9, 0.8, 0.65, 0.5],
+    "refined_quality": [0.9, 0.8, 0.7, 0.6, 0.5, 0.4],
+    "quality_gain": [0.1, 0.05, 0.03, 0.02, 0.01, 0.005]
+  },
+  "selection": "Among policies within both budgets, maximize upward minus downward IoU 0.50 crossings, then minimize damage, minimize negative adoption, maximize mean applied positive IoU, minimize adoption count; grid order resolves threshold ties and earlier epoch resolves checkpoint ties. Require positive calibration net and nonempty budget denominators or disable correction. Preserve earliest checkpoint for diagnostics if every epoch selects fallback.",
+  "holdout_gate": "Assigned P3 net must be positive and higher than P1 and P2, with mean positive applied IoU above raw and both damage/adoption budgets still met. Positive net in at least two source groups and positive net after deleting the strongest group are required. Report ranking and hard-positive denominators. Only if seed 41 clears this gate, fit the prereregistered seeds 42 and 43. Require at least two seeds including 41 to clear the same gate and a strict positive aggregate P3 net margin relative to each control. Use seed 41 for subsequent locked replay; do not choose among seeds on test data.",
+  "data_use": "Fit weights on fit only, jointly select checkpoint and three thresholds on calibration only, evaluate each frozen recipe on holdout. Official development test pool is not loaded by training. All result fractions describe the selected training-side cohort and retain its split provenance."
+}

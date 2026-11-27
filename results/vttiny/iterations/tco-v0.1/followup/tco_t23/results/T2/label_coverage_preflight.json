@@ -1,0 +1,32 @@
+{
+  "fit": {
+    "events": 23054,
+    "known_positive": 18125,
+    "known_negative": 45,
+    "unknown": 4884,
+    "below_050_positive_all": 28,
+    "below_050_positive_assigned": 28,
+    "negative_assigned": 38,
+    "source_groups": 41
+  },
+  "calibration": {
+    "events": 5083,
+    "known_positive": 3315,
+    "known_negative": 127,
+    "unknown": 1641,
+    "below_050_positive_all": 21,
+    "below_050_positive_assigned": 21,
+    "negative_assigned": 107,
+    "source_groups": 10
+  },
+  "holdout": {
+    "events": 4273,
+    "known_positive": 3548,
+    "known_negative": 70,
+    "unknown": 655,
+    "below_050_positive_all": 9,
+    "below_050_positive_assigned": 9,
+    "negative_assigned": 31,
+    "source_groups": 10
+  }
+}

@@ -1,0 +1,438 @@
+{
+  "status": "STOP_Q2_ACCEPTANCE_FAILED",
+  "split": "holdout",
+  "source_ids": [
+    66,
+    69,
+    70,
+    73
+  ],
+  "gate": {
+    "passes": false,
+    "checks": {
+      "positive_net": false,
+      "beats_absolute_only": false,
+      "preserves_damage_budgets": true,
+      "improves_mean_iou": false,
+      "matches_or_improves_absolute_mean_iou": true,
+      "net_positive_groups": false,
+      "net_positive_without_strongest": false
+    }
+  },
+  "metrics": {
+    "absolute_only": {
+      "assigned": {
+        "events": 1430,
+        "positive": 1214,
+        "negative": 4,
+        "unknown": 212,
+        "originally_correct": 1209,
+        "originally_incorrect_positive": 5,
+        "adopted": 0,
+        "known_negative_adopted": 0,
+        "unknown_adopted": 0,
+        "upward": 0,
+        "downward": 0,
+        "net": 0,
+        "correct_damage_fraction": 0.0,
+        "known_negative_adoption_fraction": 0.0,
+        "mean_raw_iou": 0.7758573889732361,
+        "mean_applied_iou": 0.7758573889732361,
+        "mean_normalized_center_error_raw": 0.10104156285524368,
+        "mean_normalized_center_error_applied": 0.10104156285524368
+      },
+      "all_eligible_edges": {
+        "events": 1505,
+        "positive": 1274,
+        "negative": 5,
+        "unknown": 226,
+        "originally_correct": 1269,
+        "originally_incorrect_positive": 5,
+        "adopted": 0,
+        "known_negative_adopted": 0,
+        "unknown_adopted": 0,
+        "upward": 0,
+        "downward": 0,
+        "net": 0,
+        "correct_damage_fraction": 0.0,
+        "known_negative_adoption_fraction": 0.0,
+        "mean_raw_iou": 0.7728831768035889,
+        "mean_applied_iou": 0.7728831768035889
+      },
+      "assigned_groups": {
+        "66": {
+          "events": 1000,
+          "positive": 881,
+          "negative": 2,
+          "unknown": 117,
+          "originally_correct": 878,
+          "originally_incorrect_positive": 3,
+          "adopted": 0,
+          "known_negative_adopted": 0,
+          "unknown_adopted": 0,
+          "upward": 0,
+          "downward": 0,
+          "net": 0,
+          "correct_damage_fraction": 0.0,
+          "known_negative_adoption_fraction": 0.0,
+          "mean_raw_iou": 0.793725848197937,
+          "mean_applied_iou": 0.793725848197937
+        },
+        "69": {
+          "events": 74,
+          "positive": 73,
+          "negative": 0,
+          "unknown": 1,
+          "originally_correct": 73,
+          "originally_incorrect_positive": 0,
+          "adopted": 0,
+          "known_negative_adopted": 0,
+          "unknown_adopted": 0,
+          "upward": 0,
+          "downward": 0,
+          "net": 0,
+          "correct_damage_fraction": 0.0,
+          "known_negative_adoption_fraction": null,
+          "mean_raw_iou": 0.7678821682929993,
+          "mean_applied_iou": 0.7678821682929993
+        },
+        "70": {
+          "events": 71,
+          "positive": 54,
+          "negative": 0,
+          "unknown": 17,
+          "originally_correct": 54,
+          "originally_incorrect_positive": 0,
+          "adopted": 0,
+          "known_negative_adopted": 0,
+          "unknown_adopted": 0,
+          "upward": 0,
+          "downward": 0,
+          "net": 0,
+          "correct_damage_fraction": 0.0,
+          "known_negative_adoption_fraction": null,
+          "mean_raw_iou": 0.7731704711914062,
+          "mean_applied_iou": 0.7731704711914062
+        },
+        "73": {
+          "events": 285,
+          "positive": 206,
+          "negative": 2,
+          "unknown": 77,
+          "originally_correct": 204,
+          "originally_incorrect_positive": 2,
+          "adopted": 0,
+          "known_negative_adopted": 0,
+          "unknown_adopted": 0,
+          "upward": 0,
+          "downward": 0,
+          "net": 0,
+          "correct_damage_fraction": 0.0,
+          "known_negative_adoption_fraction": 0.0,
+          "mean_raw_iou": 0.702970027923584,
+          "mean_applied_iou": 0.702970027923584
+        }
+      },
+      "assigned_support_reliability": {
+        "known": 1218,
+        "brier": 0.0032804571092128754,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "count": 1218,
+            "mean_score": 0.9993628859519958,
+            "fraction_positive": 0.9967159277504105
+          }
+        ],
+        "expected_calibration_error": 0.0026469582015853366
+      },
+      "quality_pairs": {
+        "known_positive_legal": 1214,
+        "meaningful_gain_events": 1126,
+        "sign_correct": 601,
+        "mean_absolute_gain_error": 0.03972310200333595,
+        "legal_upward": 4,
+        "legal_downward": 9,
+        "upward_adopted": 0,
+        "downward_adopted": 0,
+        "accepted_positive_gain": 0,
+        "accepted_negative_gain": 0
+      }
+    },
+    "paired_gain": {
+      "assigned": {
+        "events": 1430,
+        "positive": 1214,
+        "negative": 4,
+        "unknown": 212,
+        "originally_correct": 1209,
+        "originally_incorrect_positive": 5,
+        "adopted": 0,
+        "known_negative_adopted": 0,
+        "unknown_adopted": 0,
+        "upward": 0,
+        "downward": 0,
+        "net": 0,
+        "correct_damage_fraction": 0.0,
+        "known_negative_adoption_fraction": 0.0,
+        "mean_raw_iou": 0.7758573889732361,
+        "mean_applied_iou": 0.7758573889732361,
+        "mean_normalized_center_error_raw": 0.10104156285524368,
+        "mean_normalized_center_error_applied": 0.10104156285524368
+      },
+      "all_eligible_edges": {
+        "events": 1505,
+        "positive": 1274,
+        "negative": 5,
+        "unknown": 226,
+        "originally_correct": 1269,
+        "originally_incorrect_positive": 5,
+        "adopted": 0,
+        "known_negative_adopted": 0,
+        "unknown_adopted": 0,
+        "upward": 0,
+        "downward": 0,
+        "net": 0,
+        "correct_damage_fraction": 0.0,
+        "known_negative_adoption_fraction": 0.0,
+        "mean_raw_iou": 0.7728831768035889,
+        "mean_applied_iou": 0.7728831768035889
+      },
+      "assigned_groups": {
+        "66": {
+          "events": 1000,
+          "positive": 881,
+          "negative": 2,
+          "unknown": 117,
+          "originally_correct": 878,
+          "originally_incorrect_positive": 3,
+          "adopted": 0,
+          "known_negative_adopted": 0,
+          "unknown_adopted": 0,
+          "upward": 0,
+          "downward": 0,
+          "net": 0,
+          "correct_damage_fraction": 0.0,
+          "known_negative_adoption_fraction": 0.0,
+          "mean_raw_iou": 0.793725848197937,
+          "mean_applied_iou": 0.793725848197937
+        },
+        "69": {
+          "events": 74,
+          "positive": 73,
+          "negative": 0,
+          "unknown": 1,
+          "originally_correct": 73,
+          "originally_incorrect_positive": 0,
+          "adopted": 0,
+          "known_negative_adopted": 0,
+          "unknown_adopted": 0,
+          "upward": 0,
+          "downward": 0,
+          "net": 0,
+          "correct_damage_fraction": 0.0,
+          "known_negative_adoption_fraction": null,
+          "mean_raw_iou": 0.7678821682929993,
+          "mean_applied_iou": 0.7678821682929993
+        },
+        "70": {
+          "events": 71,
+          "positive": 54,
+          "negative": 0,
+          "unknown": 17,
+          "originally_correct": 54,
+          "originally_incorrect_positive": 0,
+          "adopted": 0,
+          "known_negative_adopted": 0,
+          "unknown_adopted": 0,
+          "upward": 0,
+          "downward": 0,
+          "net": 0,
+          "correct_damage_fraction": 0.0,
+          "known_negative_adoption_fraction": null,
+          "mean_raw_iou": 0.7731704711914062,
+          "mean_applied_iou": 0.7731704711914062
+        },
+        "73": {
+          "events": 285,
+          "positive": 206,
+          "negative": 2,
+          "unknown": 77,
+          "originally_correct": 204,
+          "originally_incorrect_positive": 2,
+          "adopted": 0,
+          "known_negative_adopted": 0,
+          "unknown_adopted": 0,
+          "upward": 0,
+          "downward": 0,
+          "net": 0,
+          "correct_damage_fraction": 0.0,
+          "known_negative_adoption_fraction": 0.0,
+          "mean_raw_iou": 0.702970027923584,
+          "mean_applied_iou": 0.702970027923584
+        }
+      },
+      "assigned_support_reliability": {
+        "known": 1218,
+        "brier": 0.0032804571092128754,
+        "bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "count": 0,
+            "mean_score": null,
+            "fraction_positive": null
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "count": 1218,
+            "mean_score": 0.9993628859519958,
+            "fraction_positive": 0.9967159277504105
+          }
+        ],
+        "expected_calibration_error": 0.0026469582015853366
+      },
+      "quality_pairs": {
+        "known_positive_legal": 1214,
+        "meaningful_gain_events": 1126,
+        "sign_correct": 582,
+        "mean_absolute_gain_error": 0.04047035425901413,
+        "legal_upward": 4,
+        "legal_downward": 9,
+        "upward_adopted": 0,
+        "downward_adopted": 0,
+        "accepted_positive_gain": 0,
+        "accepted_negative_gain": 0
+      }
+    }
+  },
+  "calibration_lock_sha256": "cd66c4235e7364edebde69f188bc97d2eacaef15042151ac8c3727b958ec695a",
+  "acceptance_used_for_fitting_or_tuning": false,
+  "same_proposal_and_support": true,
+  "label_counts": {
+    "-1": 226,
+    "0": 5,
+    "1": 1274
+  }
+}

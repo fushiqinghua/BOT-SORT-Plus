@@ -1,0 +1,23 @@
+{
+  "seed": 41,
+  "per_partition_budget": 63,
+  "partitions": {
+    "fit": {
+      "reviewable": 227,
+      "shown": 63,
+      "groups": 25
+    },
+    "calibration": {
+      "reviewable": 88,
+      "shown": 63,
+      "groups": 4
+    },
+    "holdout": {
+      "reviewable": 35,
+      "shown": 35,
+      "groups": 7
+    }
+  },
+  "labels_sha256": "97d1631b65da685311aaaa25c238a99c7e666d474f90e9311fcf0910aed3b5f2",
+  "index_sha256": "fbe0a54a0953866ecfcdd94b6c142aead232a9f174c3712a62801cb038d83a22"
+}

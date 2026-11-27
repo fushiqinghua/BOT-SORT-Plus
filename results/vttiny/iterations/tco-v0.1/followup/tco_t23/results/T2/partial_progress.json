@@ -1,0 +1,28 @@
+{
+  "gates": {
+    "41": {
+      "passes": false,
+      "conditions": {
+        "positive_net": false,
+        "beats_geometry": false,
+        "beats_current_rgb": true,
+        "preserves_budget": true,
+        "improves_mean_iou": false,
+        "improves_multiple_sources": false,
+        "survives_removing_strongest_source": false
+      },
+      "group_net": {
+        "5": 0,
+        "8": 0,
+        "12": 0,
+        "14": 0,
+        "40": -2,
+        "45": 0,
+        "49": 0,
+        "51": 0,
+        "54": 0,
+        "56": 0
+      }
+    }
+  }
+}
