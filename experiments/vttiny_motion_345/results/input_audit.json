@@ -1,0 +1,44 @@
+{
+  "sequences": 30,
+  "frames": 12590,
+  "history_native_exact": 30,
+  "pilot_full_exact": {
+    "native": 3,
+    "affine_forward": 3,
+    "homography_forward": 3,
+    "homography_bidir": 3,
+    "bam_iou": 3,
+    "bam_overlap": 3,
+    "bam_bottom": 3,
+    "q_constant": 3,
+    "q_motion": 3
+  },
+  "matching_geometry_sequences": 30,
+  "shared_protocol_fields": [
+    "feature_hashes",
+    "decoded_image_hashes",
+    "detection_fingerprints",
+    "sequences",
+    "encoder_contracts",
+    "native_config",
+    "boxmot_source_hashes",
+    "detector_sha256",
+    "rgb_encoder_sha256",
+    "source_protocol_sha256"
+  ],
+  "policy_sha256": "6819cad0bc89487bcd68b68b02855cf8fc4ee207d537e73ec991f5b0f983e33d",
+  "protocol_sha256": {
+    "native": "2db48fd800057c1c408dbc6617bca72e7d34d818a0d3a8197f08a64e729b8a1c",
+    "affine_forward": "27b1b0a9603b722d0f7d0c11e13d6d69a09ab2b2c1ef5870714bdc769e14e66c",
+    "homography_forward": "91752c7e6d3451abf059d4496ab5e2805fe166dd51aa0c4bf756dfef3d74a6f9",
+    "homography_bidir": "c272db35931bef7f8fdae4d51d0521fb17a002eaa76b97dd0af313f85b772db2",
+    "bam_iou": "612b06b5bcd8ad9e785773e8c4b303059a6e70cdd936910ae16139bc9902f5aa",
+    "bam_overlap": "15d12953e7d5b0e9f5c893b47731e22e37d2d56030e6d3a8a8dd88aca978e4d5",
+    "bam_bottom": "2ad2fd70b743d6957f934eb0915d790f0172dfd7f4e53de41f21295821e6d681",
+    "q_constant": "9abdf14cd2f0f7cd6832125b567dc4fd3560fbf2bf76b39b9fa2c03da22d761e",
+    "q_motion": "33aa349a217b446ad0a77fc388e0c96df930455a851832746f4f468681bc4078"
+  },
+  "reference_protocol_sha256": "7c18c28f2272c6fcf497bc6234c867a3472e0acbab23b73804d9744f315d2819",
+  "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+  "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1"
+}

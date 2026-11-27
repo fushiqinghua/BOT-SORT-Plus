@@ -1,0 +1,197 @@
+{
+  "gt": 101,
+  "event": 119,
+  "interventions": [
+    {
+      "frame": 108,
+      "tid": 120,
+      "det": 52,
+      "score": 0.3668822944164276
+    }
+  ],
+  "prior_output_parity": true,
+  "counts": {
+    "FP": 1821,
+    "FN": 17489,
+    "IDSW": 138,
+    "TP": 8089
+  },
+  "frames": [
+    {
+      "frame": 108,
+      "old_r_track": 120,
+      "native_id": 191,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 52
+    },
+    {
+      "frame": 109,
+      "old_r_track": 120,
+      "native_id": null,
+      "low_id": null,
+      "probe_id": null,
+      "probe_det": null
+    },
+    {
+      "frame": 110,
+      "old_r_track": 120,
+      "native_id": null,
+      "low_id": null,
+      "probe_id": null,
+      "probe_det": null
+    },
+    {
+      "frame": 111,
+      "old_r_track": 120,
+      "native_id": null,
+      "low_id": null,
+      "probe_id": null,
+      "probe_det": null
+    },
+    {
+      "frame": 112,
+      "old_r_track": 120,
+      "native_id": null,
+      "low_id": null,
+      "probe_id": null,
+      "probe_det": null
+    },
+    {
+      "frame": 113,
+      "old_r_track": 120,
+      "native_id": null,
+      "low_id": null,
+      "probe_id": null,
+      "probe_det": null
+    },
+    {
+      "frame": 114,
+      "old_r_track": 120,
+      "native_id": null,
+      "low_id": null,
+      "probe_id": null,
+      "probe_det": null
+    },
+    {
+      "frame": 115,
+      "old_r_track": 120,
+      "native_id": null,
+      "low_id": null,
+      "probe_id": null,
+      "probe_det": null
+    },
+    {
+      "frame": 116,
+      "old_r_track": 120,
+      "native_id": null,
+      "low_id": null,
+      "probe_id": null,
+      "probe_det": null
+    },
+    {
+      "frame": 117,
+      "old_r_track": 120,
+      "native_id": null,
+      "low_id": null,
+      "probe_id": null,
+      "probe_det": null
+    },
+    {
+      "frame": 118,
+      "old_r_track": 120,
+      "native_id": null,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 26
+    },
+    {
+      "frame": 119,
+      "old_r_track": 120,
+      "native_id": 198,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 22
+    },
+    {
+      "frame": 120,
+      "old_r_track": 120,
+      "native_id": 198,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 30
+    },
+    {
+      "frame": 121,
+      "old_r_track": 120,
+      "native_id": 198,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 25
+    },
+    {
+      "frame": 122,
+      "old_r_track": 120,
+      "native_id": 198,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 20
+    },
+    {
+      "frame": 123,
+      "old_r_track": 120,
+      "native_id": 198,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 9
+    },
+    {
+      "frame": 124,
+      "old_r_track": 120,
+      "native_id": 198,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 12
+    },
+    {
+      "frame": 125,
+      "old_r_track": 120,
+      "native_id": 198,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 17
+    },
+    {
+      "frame": 126,
+      "old_r_track": 120,
+      "native_id": 198,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 13
+    },
+    {
+      "frame": 127,
+      "old_r_track": 120,
+      "native_id": 198,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 13
+    },
+    {
+      "frame": 128,
+      "old_r_track": 120,
+      "native_id": 198,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 14
+    },
+    {
+      "frame": 129,
+      "old_r_track": 120,
+      "native_id": 198,
+      "low_id": 120,
+      "probe_id": 120,
+      "probe_det": 32
+    }
+  ]
+}

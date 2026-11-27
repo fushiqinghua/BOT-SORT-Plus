@@ -9,3 +9,9 @@ results/vttiny/iterations/**/*.csv -text whitespace=cr-at-eol
 results/vttiny/iterations/**/object_summary.txt -text whitespace=cr-at-eol
 results/vttiny/iterations/**/source_snapshot/** -whitespace
 results/vttiny/iterations/**/logs/*.log -whitespace
+experiments/vttiny_motion_345/results/**/*.csv -text whitespace=cr-at-eol
+experiments/vttiny_evidence_overlap/results/**/*.csv -text whitespace=cr-at-eol
+experiments/vttiny_overlap_forensics/results/**/*.csv -text whitespace=cr-at-eol
+experiments/vttiny_neural_qr/results/**/*.csv -text whitespace=cr-at-eol
+experiments/vttiny_r_forensics/results/**/*.csv -text whitespace=cr-at-eol
+experiments/vttiny_r_0061/results/**/*.csv -text whitespace=cr-at-eol

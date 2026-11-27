@@ -1,0 +1,13 @@
+{
+  "native_switches_removed": 44,
+  "native_switches_added": 26,
+  "fixed_switches_removed": 52,
+  "fixed_switches_added": 40,
+  "same_removed_switch_frame_gt": 20,
+  "standalone_removals_already_absent_in_fix": 21,
+  "same_added_switch_frame_gt": 15,
+  "fixed_misses_recovered": 202,
+  "combined_new_misses": 181,
+  "fewer_FP_on_frames": 128,
+  "extra_FP_on_frames": 199
+}

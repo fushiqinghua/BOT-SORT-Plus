@@ -1,0 +1,50 @@
+{
+  "sequences": 30,
+  "frames": 12590,
+  "full_replays": 4,
+  "replayed_frames_all_methods": 50360,
+  "historical_MOT_files_exact": {
+    "native": 30,
+    "bam_overlap": 30,
+    "evidence_both": 30
+  },
+  "common_input_fields": [
+    "sequences",
+    "native_config",
+    "detector_sha256",
+    "rgb_encoder_sha256",
+    "source_protocol_sha256",
+    "detection_fingerprints",
+    "feature_hashes",
+    "decoded_image_hashes",
+    "encoder_contracts",
+    "boxmot_source_hashes"
+  ],
+  "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+  "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+  "fixed_combo_camera_exact_frames": 12590,
+  "fix_combo_MOT_files_exact": 17,
+  "weighted_updates": 4386,
+  "accepted_low_combo": 14274,
+  "weighted_frames": 1314,
+  "base_policy": {
+    "variant": "evidence_both",
+    "source_sha256": "fa7505278bddb463ff41b1caaea3786351fa8c331ee157f0959f5f5fe85d72b3",
+    "gap_window": 5,
+    "margin": 0.1
+  },
+  "protocol_sha256": {
+    "native": "25928a455bfa31b03da8dd6ab89a975fe049d2f93f8f3ee84a4fb1d6688cbd82",
+    "bam_overlap": "de42b49fbfac220ad5488fdd92f860b9412d3824829d135790ebd8151343efdd",
+    "evidence_both": "11f78db14d40407cd8d302bd4239c9f4e539f7d007675aae56d398d4196af8db",
+    "evidence_both_bam_overlap": "114b7d0f37f68e90b1b2a18806f38018654ce9b8b88c764651d8036c840d68df"
+  },
+  "official_rows": 124,
+  "controls_with_full_historical_metrics_exact": [
+    "native",
+    "bam_overlap",
+    "evidence_both"
+  ],
+  "switch_and_error_counts_checked": 120,
+  "status": "PASS"
+}

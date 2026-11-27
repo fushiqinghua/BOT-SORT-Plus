@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "stage": "full",
+  "methods": [
+    "native",
+    "learned_r",
+    "low_r"
+  ],
+  "sequence_count": 30,
+  "frames": 12590,
+  "lost": 656,
+  "gained": 465,
+  "net_fn": 191,
+  "both_hit": 59471,
+  "both_missed": 119180,
+  "native_fp": 13397,
+  "native_fn": 119645,
+  "native_idsw": 422,
+  "native_tp": 60127,
+  "learned_r_fp": 13261,
+  "learned_r_fn": 119836,
+  "learned_r_idsw": 423,
+  "learned_r_tp": 59936,
+  "low_r_fp": 13300,
+  "low_r_fn": 119633,
+  "low_r_idsw": 401,
+  "low_r_tp": 60139,
+  "low_r_lost": 258,
+  "low_r_gained": 270,
+  "lost_low_r_hit": 480,
+  "gained_low_r_hit": 209,
+  "historical_audit_sha256": "357b6624f562fe60a9ade76e21b4172c3df169c06a48662d272da7093c6d8c13",
+  "source_protocol_sha256": {
+    "native": "52263be407575018caf44c8099f43473ebb2141ee60e6999ee38f90b5497f5a2",
+    "learned_r": "78c74589cb340226815d48ccf169d561b6b6dcd4a1b1fc517d5e130dd1d9cc2b",
+    "low_r": "590f66ad46af6035b565f549247517d9eb5f03701602c95495501f9c3955c9ae"
+  }
+}

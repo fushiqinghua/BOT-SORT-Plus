@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "sequences": 30,
+  "frames": 12590,
+  "unchanged_inputs": [
+    "sequences",
+    "subset",
+    "detection_fingerprints",
+    "feature_hashes",
+    "decoded_image_hashes",
+    "source_protocol_sha256",
+    "detector_sha256",
+    "rgb_encoder_sha256",
+    "encoder_contracts",
+    "native_config",
+    "boxmot_source_hashes"
+  ],
+  "pilot_matches_full": [
+    "native",
+    "learned_r",
+    "low_r",
+    "high_r"
+  ],
+  "evaluator_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "old_summary": "0077984a1f8ef17c3b5a62f0588e81af89e1eb0f35c096914a485969004da4a6",
+  "new_summary": "6fe138c7e1340537933b50f8b081a40a0f65c180d0051b3b8f6bb041dd0bcbec",
+  "r_policy_sha256": "8680b2b55c9aebf4de6d73cbf93f14413c558cafe81de54d1c69866e1cfec020"
+}

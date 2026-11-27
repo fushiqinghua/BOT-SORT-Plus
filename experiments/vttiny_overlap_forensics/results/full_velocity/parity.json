@@ -1,0 +1,8 @@
+{
+  "full_sequences": 30,
+  "exact_camera_sequences": 30,
+  "exact_focus_predictions": 3,
+  "controlled_metrics_rows": 124,
+  "mode": "full_velocity",
+  "protocol_sha256": "3e137c93689ecf26c0bd2605a3c481b43a8626212c9434e8ea83bc9145ac0b68"
+}

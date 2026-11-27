@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "counts": {
+    "native": {
+      "FP": 1871,
+      "FN": 17526,
+      "IDSW": 158,
+      "TP": 8052
+    },
+    "low_r": {
+      "FP": 1821,
+      "FN": 17489,
+      "IDSW": 138,
+      "TP": 8089
+    }
+  },
+  "classification": {
+    "native": {
+      "same_frame_switch": 108,
+      "retained_across_endpoints": 24,
+      "other_misses_current": 19,
+      "other_transition_in_interval": 2,
+      "other_misses_previous_anchor": 5
+    },
+    "low_r": {
+      "same_frame_switch": 108,
+      "retained_across_endpoints": 13,
+      "other_transition_in_interval": 9,
+      "other_misses_current": 5,
+      "other_misses_previous_anchor": 3
+    }
+  },
+  "near_pairs": {
+    "1": 9,
+    "3": 12,
+    "5": 14,
+    "10": 14
+  },
+  "frames": 240
+}

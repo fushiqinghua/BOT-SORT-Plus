@@ -1,0 +1,153 @@
+{
+  "bootstrap": {
+    "unit": "held-out parent video with qualifying low-score observations",
+    "replicates": 2000,
+    "seed": 20261127,
+    "one_class_draws_redrawn": 0,
+    "interval": "paired percentile bootstrap, two-sided 95%, prediction weights fixed"
+  },
+  "sample_count": 7880,
+  "positive_count": 1916,
+  "parents": [
+    "DJI_0022",
+    "DJI_0026",
+    "DJI_0043",
+    "DJI_0071",
+    "DJI_0085",
+    "DJI_0111",
+    "DJI_0113",
+    "DJI_0117",
+    "DJI_0167",
+    "DJI_0177",
+    "DJI_0183",
+    "DJI_0229",
+    "DJI_0243",
+    "DJI_0265",
+    "DJI_0271",
+    "DJI_0279",
+    "DJI_0287",
+    "DJI_0291",
+    "DJI_0305",
+    "DJI_0343"
+  ],
+  "parent_counts": {
+    "DJI_0022": 406,
+    "DJI_0026": 37,
+    "DJI_0043": 4779,
+    "DJI_0071": 171,
+    "DJI_0085": 354,
+    "DJI_0111": 18,
+    "DJI_0113": 34,
+    "DJI_0117": 81,
+    "DJI_0167": 439,
+    "DJI_0177": 44,
+    "DJI_0183": 616,
+    "DJI_0229": 16,
+    "DJI_0243": 41,
+    "DJI_0265": 117,
+    "DJI_0271": 90,
+    "DJI_0279": 26,
+    "DJI_0287": 103,
+    "DJI_0291": 185,
+    "DJI_0305": 280,
+    "DJI_0343": 43
+  },
+  "positive_prevalence": {
+    "value": 0.2431472081218274,
+    "ci95": [
+      0.1494695420793126,
+      0.26685341247403743
+    ]
+  },
+  "pooled_methods": {
+    "full": {
+      "auc": {
+        "value": 0.6596074358468137,
+        "ci95": [
+          0.5478098565178996,
+          0.7008686132510565
+        ]
+      },
+      "ap": {
+        "value": 0.3181937570342651,
+        "ci95": [
+          0.17166926619630782,
+          0.4020175299268301
+        ]
+      }
+    },
+    "no_image": {
+      "auc": {
+        "value": 0.650533594748729,
+        "ci95": [
+          0.5531312532673498,
+          0.6925481853591431
+        ]
+      },
+      "ap": {
+        "value": 0.32303123077757856,
+        "ci95": [
+          0.17817566472916996,
+          0.40273461106425656
+        ]
+      }
+    },
+    "score": {
+      "auc": {
+        "value": 0.6327483866315499,
+        "ci95": [
+          0.5469366680736962,
+          0.6855190532799218
+        ]
+      },
+      "ap": {
+        "value": 0.3081043381083965,
+        "ci95": [
+          0.17277281343574794,
+          0.38796285480590403
+        ]
+      }
+    }
+  },
+  "paired_contrasts": {
+    "full_minus_no_image": {
+      "auc": {
+        "difference": 0.009073841098084734,
+        "ci95": [
+          -0.022697330450233928,
+          0.019087799831048392
+        ]
+      },
+      "ap": {
+        "difference": -0.004837473743313447,
+        "ci95": [
+          -0.03090169431324468,
+          0.007309735887227637
+        ]
+      }
+    },
+    "full_minus_score": {
+      "auc": {
+        "difference": 0.02685904921526383,
+        "ci95": [
+          -0.02396965641745986,
+          0.039941102017579694
+        ]
+      },
+      "ap": {
+        "difference": 0.01008941892586862,
+        "ci95": [
+          -0.023520121849215116,
+          0.02023689163412881
+        ]
+      }
+    }
+  },
+  "model_sha256": "8680b2b55c9aebf4de6d73cbf93f14413c558cafe81de54d1c69866e1cfec020",
+  "input_audit_sha256": "a2fa0fe46dbc697e251988808f58f4d45408bda94142872cfdf9b0565c517763",
+  "frozen_discrimination_sha256": "c15b4c042a842baf1f76ae2d34213ee372f4244ff8cea76af92d429ee0c5a1da",
+  "target": "center error divided by measured short side above fit-low 75th percentile",
+  "training_cutoff": 0.24013318234874012,
+  "score": "predicted center standard deviation divided by measured short side",
+  "scope": "observation-pooled held-out training-source parents, uncertainty conditional on frozen training and weights"
+}

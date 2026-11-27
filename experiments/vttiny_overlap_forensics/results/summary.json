@@ -1,0 +1,90 @@
+[
+  {
+    "sequence": "DJI_0028_3",
+    "fixed": {
+      "FP": 531,
+      "FN": 982,
+      "IDSW": 25
+    },
+    "combo": {
+      "FP": 557,
+      "FN": 979,
+      "IDSW": 25
+    },
+    "transitions": {
+      "FP->absent": 6,
+      "absent->FP": 32
+    },
+    "causes": {
+      "new|B|raw_det_below_half": 31,
+      "new|B|raw_det_passes_but_output_below_half": 1,
+      "removed|B|no_raw_gt_overlap": 2,
+      "removed|B|raw_det_below_half": 1,
+      "removed|native|raw_det_below_half": 3
+    },
+    "new_misses": 0,
+    "restored": 3
+  },
+  {
+    "sequence": "DJI_0061_2",
+    "fixed": {
+      "FP": 2301,
+      "FN": 17253,
+      "IDSW": 178
+    },
+    "combo": {
+      "FP": 2318,
+      "FN": 17233,
+      "IDSW": 175
+    },
+    "transitions": {
+      "TP->FP": 53,
+      "absent->FP": 116,
+      "FP->TP": 55,
+      "FP->absent": 97
+    },
+    "causes": {
+      "new|B|no_raw_gt_overlap": 3,
+      "new|B|raw_det_below_half": 90,
+      "new|B|raw_det_passes_but_output_below_half": 21,
+      "new|native|official_assignment_conflict": 3,
+      "new|native|raw_det_below_half": 28,
+      "new|native|raw_det_passes_but_output_below_half": 24,
+      "removed|B|raw_det_below_half": 74,
+      "removed|B|raw_det_passes_but_output_below_half": 5,
+      "removed|native|official_assignment_conflict": 1,
+      "removed|native|raw_det_below_half": 64,
+      "removed|native|raw_det_passes_but_output_below_half": 8
+    },
+    "new_misses": 135,
+    "restored": 155
+  },
+  {
+    "sequence": "DJI_0169_3",
+    "fixed": {
+      "FP": 1504,
+      "FN": 2906,
+      "IDSW": 11
+    },
+    "combo": {
+      "FP": 1521,
+      "FN": 2903,
+      "IDSW": 10
+    },
+    "transitions": {
+      "FP->absent": 9,
+      "TP->FP": 2,
+      "FP->TP": 3,
+      "absent->FP": 27
+    },
+    "causes": {
+      "new|B|raw_det_below_half": 3,
+      "new|native|raw_det_below_half": 25,
+      "new|native|raw_det_passes_but_output_below_half": 1,
+      "removed|B|raw_det_below_half": 6,
+      "removed|native|raw_det_below_half": 6
+    },
+    "new_misses": 3,
+    "restored": 6
+  }
+]

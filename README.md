@@ -1,6 +1,8 @@
-# BoT-SORT-Plus · v0.4 B–GMC 联合诊断
+# BoT-SORT-Plus · GMC 与卡尔曼滤波研究
 
 面向无人机海上搜救与微小目标多模态跟踪，在 **YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID** 基线上进行模块设计、真实数据消融与错因分析。
+
+本研究分支归档 ③ 双向投影匹配、④ 遮挡时的低分观测更新、⑤ 运动相关过程噪声 Q，以及后续的 Q/R 网络和逐帧归因。[研究汇总、全量指标与复现入口](results/vttiny/iterations/motion-345/README.md)
 
 **Round 3 已完成 VT-Tiny-MOT 官方测试集 30 段、12,590 帧的 J0–J3 联合诊断。** 两组新增对照为 `B_skip_only` 和 `B_adaptive_no_dual_low`。E3 已准备 22 例图卡，人工标注待完成。J4 等待复核诊断证据后决定。
 
