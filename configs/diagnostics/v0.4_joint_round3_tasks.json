@@ -1,0 +1,94 @@
+{
+  "schema": "v04_joint_batch_tasks_v1",
+  "base_commit": "7d549bc8bbddfefe99fbb8119ea13d40a4b5bd6d",
+  "branch": "diagnostics/v0.4-motion-blur",
+  "entrypoint": "tools/run_v04_joint_batch.py",
+  "runbook": "docs/botsort_plus/diagnostics_v0.4/NEXT_JOINT_ROUND.md",
+  "scope": "Implementation and software validation complete; local real-data execution required",
+  "tasks": [
+    {
+      "id": "J0",
+      "command": "preflight",
+      "implementation": "READY",
+      "local_execution": "NOT_RUN",
+      "acceptance": "Frozen inputs and references agree; pinned BoxMOT and TrackEval source verified; original-video grouping explicit"
+    },
+    {
+      "id": "J1",
+      "command": "analyze",
+      "implementation": "READY",
+      "local_execution": "NOT_RUN",
+      "acceptance": "Official CLEAR frame counts agree; GT coverage overlap, identity events and censored followups recorded; missing logs remain unknown"
+    },
+    {
+      "id": "J2-S",
+      "command": "run-controls",
+      "tracker": "B_skip_only",
+      "camera_candidates": ["native_SOF", "identity"],
+      "dual_low": false,
+      "implementation": "READY",
+      "local_execution": "NOT_RUN"
+    },
+    {
+      "id": "J2-F",
+      "command": "run-controls",
+      "tracker": "B_adaptive_no_dual_low",
+      "camera_candidates": ["native_SOF", "identity", "LightGlue"],
+      "dual_low": false,
+      "implementation": "READY",
+      "local_execution": "NOT_RUN",
+      "probe": "Full P/N/C and identity-competition diagnostics collected in this run"
+    },
+    {
+      "id": "J3-BG",
+      "command": "probe",
+      "tracker": "B_early_moderate_dual_low",
+      "implementation": "READY",
+      "local_execution": "NOT_RUN",
+      "acceptance": "Formal MOT matches historical BG; P/C diagnostic replay remains read-only; pure N counterfactual explicitly unavailable with dual_low"
+    },
+    {
+      "id": "E3-closure",
+      "commands": ["e3-prepare", "e3-check", "e3-report"],
+      "implementation": "READY",
+      "human_execution": "PENDING_22_LABELS",
+      "acceptance": "Identity-preserving human review with reviewer and reason; uncertain is allowed; no propagation beyond reviewed scope"
+    },
+    {
+      "id": "J4",
+      "implementation": "AWAITING_DIAGNOSTIC_DECISION",
+      "local_execution": "NOT_SCHEDULED",
+      "entry_conditions": [
+        "Observer equivalence passed",
+        "Repeatable mechanism evidence with online-available signals",
+        "Correct recoveries distinguishable from harmful recoveries",
+        "Support beyond the main design videos",
+        "One primary change selected before closed-loop evaluation"
+      ],
+      "maximum_new_candidates": 1,
+      "maximum_essential_ablations": 1
+    }
+  ],
+  "retained_decisions": {
+    "E1_AB": "COMPLETE_REUSE_DIAGNOSTIC_ASSETS",
+    "E1_C": "STOP_P1_P2",
+    "E2": "STOP_FIXED_191_COORDINATE_ROUTE",
+    "E3": "INCONCLUSIVE_PENDING_HUMAN_REVIEW"
+  },
+  "budget": {
+    "new_full_controls": 2,
+    "full_BG_observer_replay": 1,
+    "smoke_sequences": ["DJI_0030_2", "DJI_0169_3", "DJI_0109_1", "DJI_0173_2", "DJI_0221_2", "DJI_0028_3"],
+    "smoke_arm_replays": 7,
+    "historical_full_tracking_reused": true,
+    "training": false,
+    "threshold_grid_search": false
+  },
+  "interpretation": {
+    "GT_use": "Separate offline labeling and evaluation only",
+    "P_N_C": "Conditional effects; not three additive gains or full alternate trackers",
+    "aggregation": "TrackEval COMBINED_SEQ, with per-original-video diagnostics",
+    "data_role": "Previously used official test sequences are development data",
+    "timing": "Cached-feature/warp replay and observer timing are not end-to-end deployment FPS"
+  }
+}

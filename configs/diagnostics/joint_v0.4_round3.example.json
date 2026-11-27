@@ -1,0 +1,24 @@
+{
+  "schema": "v04_joint_batch_v1",
+  "baseline_root": "results/vttiny/yolo11m_rgb_rgbt/rgbt",
+  "features_dir": "SET_ME/real_rgb_feature_cache",
+  "images_root": "SET_ME/original_rgb_images",
+  "gt_root": "SET_ME/official_rgb_gt",
+  "trackeval_root": "external/TrackEval",
+  "runtime_root": null,
+  "python_user_base": null,
+  "vendor_dir": "integrations/native_botsort_gmc_oru_v1/vendor",
+  "cuda_visible_devices": null,
+  "gmc_mode": "live",
+  "output_root": "outputs/v0.4_joint_round3",
+  "sequences": null,
+  "smoke_manifest": null,
+  "grouping_file": "results/vttiny/iterations/v0.4-motion-blur/round2-e1-e2-e3/E3/A/E3_sequence_summary.csv",
+  "references": {
+    "native": {"run_dir": "integrations/b_gmc_joint_r1/full", "tracker": "native"},
+    "B": {"run_dir": "integrations/b_gmc_joint_r1/full", "tracker": "B_early_moderate"},
+    "G": {"run_dir": "integrations/b_gmc_joint_r1/full", "tracker": "dual_low"},
+    "BG": {"run_dir": "integrations/b_gmc_joint_r1/full", "tracker": "B_early_moderate_dual_low"}
+  },
+  "warp_sources": {}
+}

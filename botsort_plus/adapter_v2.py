@@ -120,6 +120,12 @@ def update_v2(tracker, dets, img, dense):
     # Eligibility for explicit recovery is filtered separately below.
     native_lost = list(tracker.lost_stracks)
     pool = joint_stracks(active, native_lost)
+    # Optional round-3 observer. It owns private copies and has no authority
+    # over formal associations, identities or output. The default path is off.
+    joint_probe = getattr(tracker, "joint_probe", None)
+    if joint_probe is not None:
+        joint_probe.point("begin", tracker, pool=pool, unconfirmed=unconfirmed,
+                          high_detections=detections, low_rows=low, all_dets=all_dets)
     diagnostics = getattr(tracker, "diagnostic_recorder", None)
     if diagnostics is not None:
         diagnostics.begin(tracker, frame, all_dets, pool, unconfirmed, img)
@@ -131,6 +137,9 @@ def update_v2(tracker, dets, img, dense):
         raise ValueError("GMC returned an invalid transform")
     STrack.multi_gmc(pool, warp)
     STrack.multi_gmc(unconfirmed, warp)
+    if joint_probe is not None:
+        joint_probe.point("compensated", tracker, pool=pool, unconfirmed=unconfirmed,
+                          warp=warp, native_warp=tracker.joint_native_warp)
     if diagnostics is not None:
         diagnostics.compensated(tracker, pool, unconfirmed, warp)
     needs_identity_history = plus.birth.enabled and plus.birth_identity.enabled
@@ -150,6 +159,9 @@ def update_v2(tracker, dets, img, dense):
     low_tracks = [pool[i] for i in unmatched_pool if pool[i].state == TrackState.Tracked]
     low_detections = [STrack(row, max_obs=tracker.max_obs) for row in low]
     second_cost = iou_distance(low_tracks, low_detections)
+    # Same hook as the archived B+GMC joint adapter; absent in ordinary B runs.
+    if hasattr(tracker, "guard_low_cost"):
+        tracker.guard_low_cost(second_cost, low_tracks, low)
     matches, unmatched_low_tracks, unmatched_low = linear_assignment(second_cost, thresh=.5)
     if plus.identity.enabled:
         from .identity_adapter import pair_decisions, apply_match, seed_identity
@@ -191,8 +203,13 @@ def update_v2(tracker, dets, img, dense):
         before = set(tracker.candidate_pool.candidates)
         occupied = [t.xyxy.copy() for t in joint_stracks(activated, refound)]
         occupied += [all_dets[int(t.det_ind), :4].copy() for t in joint_stracks(activated, refound)]
+        if joint_probe is not None:
+            joint_probe.point("candidates_before", tracker, observations=observations,
+                              occupied=occupied, warp=warp)
         current_candidates = tracker.candidate_pool.update(
             frame, observations, warp=warp, occupied_boxes=occupied)
+        if joint_probe is not None:
+            joint_probe.point("candidates_after", tracker, current_candidates=current_candidates)
         tracker.last_events.extend(dict(e) for e in tracker.candidate_pool.events)
         _forget(tracker, before - set(tracker.candidate_pool.candidates))
         # Candidate observation alone has NO authority over native births in
@@ -212,7 +229,12 @@ def update_v2(tracker, dets, img, dense):
                     if t.state == TrackState.Lost and frame - t.end_frame <= tracker.max_time_lost}
         views = [LostTrackView(t.id, t.end_frame, tracker.prediction_history.get(t.id, {}),
                                tracker.memories.get(t.id)) for t in eligible.values()]
+        if joint_probe is not None:
+            joint_probe.point("recovery_before", tracker, views=views,
+                              current_candidates=current_candidates, app_cost=app_cost)
         decision = tracker.recovery_matcher.match(frame, views, current_candidates, app_cost)
+        if joint_probe is not None:
+            joint_probe.point("recovery_after", tracker, decision=decision)
         reserved = decision.reserved_candidate_ids
         tracker.last_events.extend({"event": "recovery_check", **item} for item in decision.diagnostics)
         for match in decision.matches:
@@ -389,4 +411,6 @@ def update_v2(tracker, dets, img, dense):
         tracker.last_events.extend(observer.audit)
     if diagnostics is not None:
         diagnostics.finish(tracker, output, removed)
+    if joint_probe is not None:
+        joint_probe.point("end", tracker, output=output)
     return output
