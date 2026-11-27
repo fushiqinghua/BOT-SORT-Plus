@@ -1,0 +1,10 @@
+{
+  "DJI_0030_2":[
+    {"name":"f409_SOF_track4", "track_camera":{"frame":409,"tid":4,"use":"native"}, "trace":true},
+    {"name":"f409_adaptive_track4", "drop":[409], "track_camera":{"frame":409,"tid":4,"use":"full"}, "trace":true}
+  ],
+  "DJI_0169_3":[
+    {"name":"f174_SOF_track12", "track_camera":{"frame":174,"tid":12,"use":"native"}},
+    {"name":"f174_adaptive_track12", "drop":[174], "track_camera":{"frame":174,"tid":12,"use":"full"}}
+  ]
+}

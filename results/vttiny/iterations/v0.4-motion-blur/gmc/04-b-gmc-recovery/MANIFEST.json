@@ -1,0 +1,394 @@
+{
+  "schema": "b_gmc_recovery_archive_v1",
+  "base_commit": "0a7121ebb2e1dc6b37c1a53b6aaa423169d7a3e9",
+  "files": {
+    "experiments/vttiny_gmc/b_gmc_recovery/.gitattributes": {
+      "size": 30,
+      "sha256": "ffa8612a3cb0df22be30c06ae39f4acdfb5a643323a3eb8297ce1554f812ceec"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/common.py": {
+      "size": 724,
+      "sha256": "f84358854222523ac374c290485e4e8913d22a9dc534fdd97e84919b929d1d4f"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/driver.py": {
+      "size": 1299,
+      "sha256": "9bac5472438d2b2618034bc890dcbd4523e62281e5b3a67708b2933e35eb537d"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/full_live.py": {
+      "size": 3467,
+      "sha256": "29061808cd0224c8c1f42059763bec19e36bd67dc1104cd40292cccc637344d9"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/initial.py": {
+      "size": 913,
+      "sha256": "ee26b91b598e3b16842a0b75b03dad1872021d00aa8d47068631f941dc39cff6"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/local_tables.py": {
+      "size": 3117,
+      "sha256": "5bc8bb48e10d4a918d94b28df8ea44fa7a0ce71440e92bae75399d9b31b97a72"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/lost_camera_margin.py": {
+      "size": 2251,
+      "sha256": "fa7505278bddb463ff41b1caaea3786351fa8c331ee157f0959f5f5fe85d72b3"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/panels.py": {
+      "size": 4023,
+      "sha256": "9519ced464b85c3c46e68af56d5ed264e73b7789af8c0b79d6f436d78c7b76d4"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/plan_cause.json": {
+      "size": 8307,
+      "sha256": "710cd4295bf69ff7bed8e5916eefecf0f03e34b93b1e832434ce5891f2c76c51"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/plan_evidence.json": {
+      "size": 376,
+      "sha256": "ba2efe85f327826028caec20d72c77db07530d4d80f043a72bfd60814e8055a6"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/plan_path.json": {
+      "size": 451,
+      "sha256": "d9e0137c743cbfa7c0b1e7d564602c9cc34b9ed34d9dc335965cb3ad18852263"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/plan_trial.json": {
+      "size": 305,
+      "sha256": "2d836bd8185c1d3fa1bc944c46b21514b887b216401c97f4156dd338c442825b"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/replay.py": {
+      "size": 8398,
+      "sha256": "e7a7b5f8a6ea25f96246a1fd766a84f3e057cc274e8095ce8289ceeb6000fb06"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/score.py": {
+      "size": 1828,
+      "sha256": "d251352b69d14d97ace2e1e418a96253d7b4d61d7435b54798673782f31e320e"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/forensics/trial_live.py": {
+      "size": 6114,
+      "sha256": "4ab34dcdf4c0b4eb411325bb788981ea99d4f1da8c07536491baa3d97735ae4a"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/joint/adapter_v2.py": {
+      "size": 21860,
+      "sha256": "0d770564bc825801a66d0a8c63a72096dead5fb28722f7c1a53478ec2f48b541"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/joint/B_reference.json": {
+      "size": 2965,
+      "sha256": "cd42271217e06da6ec0ac5c2d6bd2bb6caefde8dfb9bc215d557c3e7e0cb4093"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/joint/live_arm.py": {
+      "size": 5087,
+      "sha256": "20d5b6e4ae38928eb3da3b38bfca62a5c9df478c32a923ddcc98ee6128674833"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/joint/run.py": {
+      "size": 3429,
+      "sha256": "a7502f53f4249804b496233685c5af01fadd2fcc840e51e640470f0e09e2e4cd"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/joint/summarize.py": {
+      "size": 3831,
+      "sha256": "0e030202c5dbe7346780789c15591dc5baaadfc69f11f7a904e6e696e2568603"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/pending/audit.py": {
+      "size": 5891,
+      "sha256": "5928bb61448967a4478479b74550bb6ce6f58e0b40c1020ae92c42b633b471d2"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/pending/case_timeline.py": {
+      "size": 5228,
+      "sha256": "98b5e7c651d8294e51690a8650e951ebc96db85a64026905ffe01bf09667c1c1"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/pending/driver.py": {
+      "size": 7832,
+      "sha256": "59b73b703e3110fb6123adce827047fe86782e66d8d98d1021cf4f4a59cb2643"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/pending/pending.py": {
+      "size": 8814,
+      "sha256": "a86e9e9e6d31561ff1db13429c332b40152f36a1855baa51834f11d77af348e7"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/pending/pending_refined.py": {
+      "size": 8673,
+      "sha256": "af50259bf77062dd94acb93d5928a455adcdb52ae66da64fca9755a5c78cd94f"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/pending/plan_focus.json": {
+      "size": 50,
+      "sha256": "c2bca727028e790720b7466f4e760bd5faddba096272a4fbae9a2019376b6674"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/pending/plan_focus2.json": {
+      "size": 49,
+      "sha256": "fea40f30f0aebba521567582b07a60796f21ba66c7bec5ea48cea8872b147ef6"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/pending/plan_full.json": {
+      "size": 68,
+      "sha256": "2bb8e82595b7873ea1ee12241d583a3782d092d55dfdf14d3737d30f2c8bb408"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/pending/plot_focus.py": {
+      "size": 1915,
+      "sha256": "b743ab051d77a80c9a6e692e532be02d7c6faea0b057640f6fca6279a8f1c6eb"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/pending/release_context.py": {
+      "size": 4939,
+      "sha256": "76932936934cba46cdd6502a6a0de4662b8297e2abcb82f4aca2d47080bd71ee"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/pending/verify_tables.py": {
+      "size": 3306,
+      "sha256": "4edf0862e0ef6a632b04529c7ef54a3e2d13c70ebfe38340971d59d8b3f5a3d7"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/README.md": {
+      "size": 4205,
+      "sha256": "2b6a4736e6fd1bac7ab27bb3b18fb8bbf541f8b9790de8b148bd6f54bfd83c8a"
+    },
+    "experiments/vttiny_gmc/b_gmc_recovery/verify_archive.py": {
+      "size": 3510,
+      "sha256": "150dbbe720087fb498e614c267d58423ff775daff4bf89432e116c97d40d4c2a"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0030_2/cause_replays.json": {
+      "size": 5462,
+      "sha256": "e2920b74f3e8df42d6e9edd3ddc62dacfc266da40243ee04c255bca3683e25ee"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0030_2/evidence/evidence_both_affected.csv": {
+      "size": 1577,
+      "sha256": "3c60c3d893c00257a45b8829d37fc7490448cb61b7f9ac9f0da1ddcb4786422e"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0030_2/evidence_replays.json": {
+      "size": 1192,
+      "sha256": "233faa98859f0d84928b5844a8c1d3c4d1e4410502a806ef6c288dc31be426a2"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0030_2/FP_event_ledger.csv": {
+      "size": 9970,
+      "sha256": "0788a1df09ca4aeb8fe8c5e893fa17276642c69ed37d2ed56c55fa91daa13760"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0030_2/official_GT_by_frame.csv": {
+      "size": 149426,
+      "sha256": "204763f9549384c37dfcf62be93220c59893d0e7d1879f07e9008e64944ecc79"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0030_2/trial_replays.json": {
+      "size": 990,
+      "sha256": "0ec9a5616a846fdfdfd62056fe4df1f021365e0a8fef6154284dc7eb7667124c"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0030_2/with_B/changed_fp.csv": {
+      "size": 20212,
+      "sha256": "117a4e4c96c00c4b0cf895c8bf9fdf2a124cc164acc13138fde2ce6a850fa981"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0030_2/with_B/detection_pairs.csv": {
+      "size": 983711,
+      "sha256": "836790f5e6987d237409fa3404098eb99d84214ff0bda709533b14438aaaa2fb"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0030_2/with_B/frames.csv": {
+      "size": 17264,
+      "sha256": "fb30e2064189212ff95943e4bc5382d9cdbeeecb79fd1723d5f005fc98139287"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0030_2/with_B/switches.csv": {
+      "size": 130,
+      "sha256": "fbf920f38815302091034b449c7c89e53e81c768d767c023bb2850a043bcde10"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0169_3/cause_replays.json": {
+      "size": 2840,
+      "sha256": "41d98f1da335a22b542f8ffa3782bf3f7e86481500d8e225788d7ace2b071cbf"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0169_3/evidence/evidence_both_affected.csv": {
+      "size": 1023,
+      "sha256": "c45afab4ae562d889995d00ecae01cefa8a7d08634e817f43423a8f7ec7316dd"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0169_3/evidence_replays.json": {
+      "size": 576,
+      "sha256": "4d21eb15817e09f207cfbfb5d8b28be601f788af3beb0175ed7c94161eb90a9a"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0169_3/FP_event_ledger.csv": {
+      "size": 5376,
+      "sha256": "1e56fa6bcc5f1d8645579f81efb52df824dc91026f578e38deae415805ec9814"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0169_3/official_GT_by_frame.csv": {
+      "size": 208663,
+      "sha256": "24a1b2ecb88b0b4b417d0d010d02ae9c2e473f038060f771c497b32331db6e81"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0169_3/trial_replays.json": {
+      "size": 799,
+      "sha256": "667265b574fbccc7c86f08f4ed553b0c8133a7955c33d6983e1bad2c11ad9abf"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0169_3/with_B/changed_fp.csv": {
+      "size": 11037,
+      "sha256": "5e169e8f213885015f8e10e2d2b8640f53a55661893b79b14ab37ff55ec74198"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0169_3/with_B/detection_pairs.csv": {
+      "size": 1383345,
+      "sha256": "6e0a6ac88906309b103fc13d685b5073087faca74b1ac965b4baa6836508b404"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0169_3/with_B/frames.csv": {
+      "size": 9112,
+      "sha256": "648f861c443705c4960158de230c9371d6ff328bd15e4eb0561f0648f37722a5"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/DJI_0169_3/with_B/switches.csv": {
+      "size": 1460,
+      "sha256": "c0617c2c6e28a943ce5efb83138c8eed68aa61d0e33230c15eec81d429b56dec"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/full/comparison.csv": {
+      "size": 1480,
+      "sha256": "e70fd6e4002db250d66e3ed9e410ed220c98a32aafdf1e2aed93380f62fa1c97"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/full/evaluation_audit.json": {
+      "size": 217190,
+      "sha256": "0df61c1c1aa053d35c4167e9b9d2f90da278974b70333c9c31a9e70f856fea96"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/full/parity.json": {
+      "size": 350,
+      "sha256": "fbe0e466306825c301d45c2542a0bd14fdaf0d5282910fd3fcd22d1ec63711e2"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/full/per_sequence_deltas.csv": {
+      "size": 53446,
+      "sha256": "73a5fadb5ea0ab6927dcc9c8744952f87e86a86589ddf2a5a168ef6972976cf4"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/full/summary.json": {
+      "size": 54809,
+      "sha256": "379af6d8eb73c39df104ace05cfe75c46ba871c9565daf200a8fe336e2dc1de7"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/interventions.csv": {
+      "size": 14037,
+      "sha256": "e4b029a1763bdc38e2a6c74c1b4344282411a9e80adc2d4b859dcf13c50f9fcf"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/forensics/逐帧归因与修正实验.md": {
+      "size": 11664,
+      "sha256": "5550119f3cc349a6fe1bf8e3031b83cac77599e87807bd7783e0af45deb050d1"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/joint/full/metrics/comparison.csv": {
+      "size": 991,
+      "sha256": "41aa5005064b77e16c989de3002653af868b03a2703b0f0bea2afb383ba22503"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/joint/full/metrics/evaluation_audit.json": {
+      "size": 150251,
+      "sha256": "f50ec1c0a662c8d124ef61ef0bbe0e72a03bae7c16b835d15a36a0ea1ee833ac"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/joint/full/metrics/summary.json": {
+      "size": 36681,
+      "sha256": "aa5e5d2dccaadbddf370b3886934809b908b1ce619b73190e8e8635cce726f3d"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/joint/joint_result.json": {
+      "size": 1440,
+      "sha256": "bcbe77c13fd436c4bc73c75e7bcaca4e116c584278a2deaff600fb869bb43844"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/joint/sequence_deltas.csv": {
+      "size": 6307,
+      "sha256": "410d2b6e4f27679121b2e98eb216dc3c96868f2d6d4f0e68e1e9c25eb0ca9fd1"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/joint/实验报告.md": {
+      "size": 2864,
+      "sha256": "b2cc7a1db4b9156ec9860be2e54ab43659659f6e32627964aefb90c145cb2db5"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/30段_总体指标与接回去向.csv": {
+      "size": 1236,
+      "sha256": "ed67fcb1d49a93b469b63f66727b7a9dd1168d1142f6eb1a3e3068b35cf5beb1"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/30段_逐序列对照.csv": {
+      "size": 19567,
+      "sha256": "1023377cd7a65d3e0d747639a0dabc8b60e2f743c387ed9995d3d57e25242e97"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/DJI_0030_2_GT4_检测与原ID逐帧核验.csv": {
+      "size": 10537,
+      "sha256": "b9010e4bf2426a5ef21f7031585a2805c3bc88f6fcd969b9ef76962502445a0e"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/DJI_0030_2_GT4_检测证据.png": {
+      "size": 70559,
+      "sha256": "9c4e593c44537346837bbfb6a46774587a90e6dcc2537db103e134b867cd2990"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/DJI_0030_2_历史67个误报逐项复核.csv": {
+      "size": 3094,
+      "sha256": "570606aa275a2c065c928298ea7bd5f1d412142406926887d969f422374289c7"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus/focus_diffs/pending_temporal/changed_fp.csv": {
+      "size": 12739,
+      "sha256": "e37ca5fdaa0ba81cdc614b8c55d086cd6c52566c5679e961352f4353745f97f8"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus/focus_events.json": {
+      "size": 19739,
+      "sha256": "fba771e679843955acac655c38fdcbc61b0f510a202dd03cf20d014624203eb9"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus/GT4_ID7_frames.csv": {
+      "size": 20559,
+      "sha256": "8beef07738216833be1ca6d1ef57af0f0b184abeb10f6e4d6205280176d1e61b"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus/parity.json": {
+      "size": 463,
+      "sha256": "5b4a701f5aebcf54db912bf4f82d359b656c4e98197b7bc118699c858c250f3b"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus/release_outcomes.csv": {
+      "size": 233,
+      "sha256": "330a47c648d8a879e8399766b552d043b92d40f36fd00c1b0faec5b9c35a527c"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus/target.json": {
+      "size": 452,
+      "sha256": "7ef76222a0cf224271bf8a73fcc39e34337eed90d15a3739b76092f2e5e40af7"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus2/focus_diffs/pending_guarded/detection_pairs.csv": {
+      "size": 965380,
+      "sha256": "17f1dfc01d3300a3d14ab11a8cdf40cb72677afddfecf578ede10e8963c1692d"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus2/focus_diffs/pending_guarded/frames.csv": {
+      "size": 17199,
+      "sha256": "1e943c30532ae82051ddafdf9237455b1ca02325f67de6816264a27dbb13cd50"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus2/focus_diffs/pending_guarded/summary.json": {
+      "size": 318,
+      "sha256": "f941d73ca3fd9d71a47bc4d6e4c229284454d78d3ac773d583abec0eac12f40b"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus2/focus_events.json": {
+      "size": 27182,
+      "sha256": "50c32eda9267dea10f99e6d5ab7cbca99504b26117736d9557480e589b9b4814"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus2/GT4_ID7_frames.csv": {
+      "size": 20339,
+      "sha256": "2c6137cd6ef4105a573636ed1d6c70b00dc27d512310373f3801e38d51c568c9"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus2/parity.json": {
+      "size": 462,
+      "sha256": "5e970f8b37adaf81397b02a33a7cb80aac79e6b37cbe74d93536f05ab87fd794"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus2/release_outcomes.csv": {
+      "size": 239,
+      "sha256": "1b6076dc1a6d8ce4a3c40a480cba08663ebdf5102a1b50acb5d3cbbad0032be5"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/focus2/target.json": {
+      "size": 450,
+      "sha256": "66151da175840b86b341c0ba313e23e4789d973153aab4e5c2a8cc29101f613c"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/full/audit_summary.json": {
+      "size": 164,
+      "sha256": "7b54adf2b10ffeaaa6d8d4cac0635fc40babdc4ed4b2758f0508f79eead0870d"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/full/GT4_ID7_frames.csv": {
+      "size": 27539,
+      "sha256": "1190e3dccabf5a665548ef6e3c74fd07151f66104f2a11ce01a56c384435937d"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/full/guarded_release_context.csv": {
+      "size": 1132,
+      "sha256": "9f26285e5b1aa179b398d322bb4b01a166c115d4baf9a352d9b07fb31dfb963b"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/full/guarded_release_context.json": {
+      "size": 286,
+      "sha256": "445a97ffe19d53372dcf93e1ecac493a0fc71685a58babdd4199069be7696b4f"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/full/metrics/comparison.csv": {
+      "size": 1015,
+      "sha256": "5d65a45c47d9bd29a904271320970d4accf9aa383f48ba91d4739c217abac23b"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/full/metrics/evaluation_audit.json": {
+      "size": 154658,
+      "sha256": "62026d1ed9a41c8da55c2721fd3c859a71ec7183570800e46c4ec782fc503ea7"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/full/metrics/summary.json": {
+      "size": 36858,
+      "sha256": "b9467684a14fc8b2f44646cd24003bb5082be9d36da8a1ca0ecf58e477ab0285"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/full/parity.json": {
+      "size": 629,
+      "sha256": "cb698353cc656104324f6a6ca1c1b5035ec3c0f305f1e8511515b182ecdb1786"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/full/pending_by_sequence.csv": {
+      "size": 3683,
+      "sha256": "5526d7869c6803227af951d4337c1b9f5dadd3083d14d1b971a30c9da2d02a34"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/full/release_outcomes.csv": {
+      "size": 931,
+      "sha256": "d8ee8de5a8b7e14720154f205427cb82cbfff1b2bc0e6c6903b64f2804482d00"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/pending/原ID暂存与接回实验.md": {
+      "size": 10696,
+      "sha256": "ed13299aff6c104c468c9df6953ff3f2c693a9dc80cead205a56ebd6d6fafc3f"
+    },
+    "results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/README.md": {
+      "size": 4773,
+      "sha256": "3387bb3ed0da9a635552c1b94d98c57cad4bc16193a168281106f4bac262783e"
+    }
+  }
+}

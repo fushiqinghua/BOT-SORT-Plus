@@ -2,9 +2,11 @@
 
 面向无人机海上搜救与微小目标多模态跟踪，在 **YOLO11-M RGB–T + BoT-SORT + 微调 RGB ReID** 基线上进行模块设计、真实数据消融与错因分析。
 
-**当前跟踪主版本为完整自适应 GMC＋低分匹配双重确认（`dual_low`），使用原版 BoT-SORT 卡尔曼滤波。** 高分检测中心修正（`dual_low_center`）保留为可选消融。下方 D1–D4、P0、E1–E3 保留各自的历史实验基线。
+**单 GMC 主方案为完整自适应 GMC＋低分匹配双重确认（`dual_low`），使用原版 BoT-SORT 卡尔曼滤波。** 加入 B 的组合实验以长间隔重连修正 `evidence_both` 为参考，原 ID 暂存 `pending_guarded` 作为消融。高分检测中心修正（`dual_low_center`）保留为可选消融。下方 D1–D4、P0、E1–E3 使用各自的历史实验基线。
 
 [主版本与三轮全量结果](results/vttiny/iterations/v0.4-motion-blur/gmc/README.md) · [运行与复现](experiments/vttiny_gmc/README.md) · [DJI_0030_2 逐帧分析](results/vttiny/iterations/v0.4-motion-blur/gmc/03-dji0030/实验报告.md)
+
+[B 与 GMC 联合消融、两段错因和原 ID 接回](results/vttiny/iterations/v0.4-motion-blur/gmc/04-b-gmc-recovery/README.md)
 
 [完整运行说明](docs/botsort_plus/diagnostics_v0.4/README.md) · [实现机制与统计口径](docs/botsort_plus/diagnostics_v0.4/MECHANISM.md) · [软件验证记录](docs/botsort_plus/diagnostics_v0.4/VALIDATION.md) · [v0.4 首轮真实实验](results/vttiny/iterations/v0.4-motion-blur/README.md) · [v0.3 归档](results/vttiny/iterations/v0.3-c2-identity/README.md)
 

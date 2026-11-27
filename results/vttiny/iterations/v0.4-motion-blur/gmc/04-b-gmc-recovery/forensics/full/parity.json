@@ -1,0 +1,21 @@
+{
+  "sequences": 30,
+  "frames": 12590,
+  "controls": [
+    "native",
+    "dual_low",
+    "B_early_moderate",
+    "B_early_moderate_dual_low"
+  ],
+  "cached_inputs_verified": true,
+  "focus_mot_byte_parity": {
+    "margin_both": [
+      "DJI_0030_2",
+      "DJI_0169_3"
+    ],
+    "evidence_both": [
+      "DJI_0030_2",
+      "DJI_0169_3"
+    ]
+  }
+}

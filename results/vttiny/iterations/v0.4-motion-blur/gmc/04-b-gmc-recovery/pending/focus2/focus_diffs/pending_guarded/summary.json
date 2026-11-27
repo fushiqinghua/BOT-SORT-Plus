@@ -1,0 +1,21 @@
+{
+  "before_name": "evidence_both",
+  "after_name": "pending_guarded",
+  "before": {
+    "TP": 1557,
+    "FP": 1280,
+    "FN": 3039,
+    "IDSW": 0
+  },
+  "after": {
+    "TP": 1558,
+    "FP": 1280,
+    "FN": 3038,
+    "IDSW": 0
+  },
+  "gross_in": 0,
+  "gross_out": 0,
+  "delta_fp": 0,
+  "kinds": {},
+  "switches": []
+}

@@ -1,0 +1,4 @@
+{
+ "DJI_0030_2":[{"name":"evidence_both","margin":"evidence","trace":true},{"name":"margin_trace","margin":"both","trace":true},{"name":"drop409_trace","drop":[409],"trace":true},{"name":"veto427_trace","veto":[[427,4]],"trace":true}],
+ "DJI_0169_3":[{"name":"evidence_both","margin":"evidence","trace":true},{"name":"veto174_trace","high_veto":[[174,12,14]],"trace":true}]
+}

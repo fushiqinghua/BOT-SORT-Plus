@@ -1,0 +1,2 @@
+﻿method,seq,frame,tid,event,cid,det,age,waiting,reason,score,deferred,last_seen,prior_gt,current_gt,outcome,next5_frames_same_prior
+pending_guarded,DJI_0030_2,416,7,release,154,2,25,12,temporal,0.2626318037509918,404,391,4,4,same_gt,1

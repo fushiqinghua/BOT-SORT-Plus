@@ -1,0 +1,15 @@
+{
+  "releases": 5,
+  "outcomes": {
+    "same_gt": 3,
+    "FP": 2
+  },
+  "recovered_with_reference_absent": 3,
+  "recovered_with_reference_present": 0,
+  "changed_prediction_sequences": [
+    "DJI_0030_2",
+    "DJI_0169_3",
+    "DJI_0221_2"
+  ],
+  "unchanged_prediction_sequences": 27
+}

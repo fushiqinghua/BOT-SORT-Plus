@@ -1,0 +1,61 @@
+{
+  "metrics": [
+    {
+      "tracker": "native",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 37.86084761921485,
+      "DetA": 25.186472853553692,
+      "AssA": 58.365843006546484,
+      "IDF1": 42.45072958120144,
+      "MOTA": 25.759295107135706,
+      "FP": 13397,
+      "FN": 119645,
+      "IDSW": 422
+    },
+    {
+      "tracker": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.84495631557171,
+      "DetA": 26.061806148839445,
+      "AssA": 59.409466872314695,
+      "IDF1": 44.059591903122495,
+      "MOTA": 25.694212669381216,
+      "FP": 15943,
+      "FN": 117264,
+      "IDSW": 374
+    },
+    {
+      "tracker": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 37.96028823661097,
+      "DetA": 25.203500577506144,
+      "AssA": 58.617979797496176,
+      "IDF1": 42.62279552236449,
+      "MOTA": 25.7976770576063,
+      "FP": 13401,
+      "FN": 119597,
+      "IDSW": 397
+    },
+    {
+      "tracker": "B_early_moderate_dual_low",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.86541869218374,
+      "DetA": 26.076123130137997,
+      "AssA": 59.445345923776536,
+      "IDF1": 44.06212867742397,
+      "MOTA": 25.666399661793825,
+      "FP": 16048,
+      "FN": 117225,
+      "IDSW": 358
+    }
+  ],
+  "actions": {
+    "lightglue_frames": 52,
+    "center_outputs": 0,
+    "center_frames": 0,
+    "blocked_native_edges": 3
+  },
+  "B_reference_parity": 30,
+  "sequences": 30,
+  "frames": 12590
+}

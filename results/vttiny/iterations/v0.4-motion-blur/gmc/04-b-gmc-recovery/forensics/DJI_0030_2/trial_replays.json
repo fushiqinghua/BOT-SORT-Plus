@@ -1,0 +1,56 @@
+{
+  "changed": [
+    94,
+    122,
+    138,
+    142,
+    147,
+    163,
+    175,
+    177,
+    178,
+    179,
+    185,
+    192,
+    194,
+    195,
+    197,
+    206,
+    211,
+    398,
+    408,
+    409,
+    473,
+    474,
+    476,
+    482,
+    505,
+    517
+  ],
+  "runs": [
+    {
+      "name": "margin_B",
+      "hash": "0d68457e29946abf2486d433adeee778a520f0d90ffff580b07987f8214587d5",
+      "recovered": 23,
+      "masked_edges": 2,
+      "recovery_pair_rejections": 9,
+      "high_pair_rejections": 0
+    },
+    {
+      "name": "margin_high",
+      "hash": "59d4d41caeecc80e4477b63816ed9c6b2ed9561275a86a898c7e3bf3da79ffb3",
+      "recovered": 24,
+      "masked_edges": 2,
+      "recovery_pair_rejections": 0,
+      "high_pair_rejections": 0
+    },
+    {
+      "name": "margin_both",
+      "hash": "0d68457e29946abf2486d433adeee778a520f0d90ffff580b07987f8214587d5",
+      "recovered": 23,
+      "masked_edges": 2,
+      "recovery_pair_rejections": 9,
+      "high_pair_rejections": 0
+    }
+  ]
+}

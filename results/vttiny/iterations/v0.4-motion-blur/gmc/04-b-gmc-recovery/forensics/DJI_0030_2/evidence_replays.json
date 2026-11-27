@@ -1,0 +1,63 @@
+{
+  "changed": [
+    94,
+    122,
+    138,
+    142,
+    147,
+    163,
+    175,
+    177,
+    178,
+    179,
+    185,
+    192,
+    194,
+    195,
+    197,
+    206,
+    211,
+    398,
+    408,
+    409,
+    473,
+    474,
+    476,
+    482,
+    505,
+    517
+  ],
+  "runs": [
+    {
+      "name": "evidence_both",
+      "hash": "d1749709af5d44c8c90eab2d2fb897274add25288830874d152acda3602dddf0",
+      "recovered": 17,
+      "masked_edges": 1,
+      "recovery_pair_rejections": 18,
+      "high_pair_rejections": 0,
+      "unsupported_rejections": 18
+    },
+    {
+      "name": "margin_trace",
+      "hash": "0d68457e29946abf2486d433adeee778a520f0d90ffff580b07987f8214587d5",
+      "recovered": 23,
+      "masked_edges": 2,
+      "recovery_pair_rejections": 9,
+      "high_pair_rejections": 0,
+      "unsupported_rejections": 0
+    },
+    {
+      "name": "drop409_trace",
+      "hash": "dc61cac60cb3dcebff86658fde59c5be862a16a42df905497da89cd4ae31dc33",
+      "recovered": 19,
+      "masked_edges": 1
+    },
+    {
+      "name": "veto427_trace",
+      "hash": "c8090012aa8ead4cd621d1ee877e8f90efaadbf437d3926de6c468ffa909b4cb",
+      "recovered": 24,
+      "masked_edges": 2,
+      "vetoed": 1
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "evidence_both": {
+    "late_GT4_with_ID7": [],
+    "old_67": {
+      "absent": 67
+    },
+    "FP": 1280,
+    "FN": 3039,
+    "IDSW": 0
+  },
+  "pending_shadow": {
+    "late_GT4_with_ID7": [],
+    "old_67": {
+      "absent": 67
+    },
+    "FP": 1280,
+    "FN": 3039,
+    "IDSW": 0
+  },
+  "pending_guarded": {
+    "late_GT4_with_ID7": [
+      416
+    ],
+    "old_67": {
+      "absent": 67
+    },
+    "FP": 1280,
+    "FN": 3038,
+    "IDSW": 0
+  }
+}

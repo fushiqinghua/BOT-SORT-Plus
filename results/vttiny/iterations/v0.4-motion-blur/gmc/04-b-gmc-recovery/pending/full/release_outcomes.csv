@@ -1,0 +1,9 @@
+﻿method,seq,frame,tid,event,cid,det,age,waiting,reason,score,deferred,last_seen,prior_gt,current_gt,outcome,next5_frames_same_prior
+pending_guarded,DJI_0030_2,416,7,release,154,2,25,12,temporal,0.2626318037509918,404,391,4,4,same_gt,1
+pending_guarded,DJI_0169_3,114,7,release,149,11,20,6,strong,0.5832696557044983,108,94,6,,FP,0
+pending_guarded,DJI_0169_3,207,6,release,321,18,26,17,strong,0.25770339369773865,190,181,6,,FP,0
+pending_guarded,DJI_0221_2,282,4,release,71,0,13,5,strong,0.5056030750274658,277,269,1,1,same_gt,1
+pending_guarded,DJI_0221_2,317,4,release,78,0,35,27,strong,0.5349318981170654,290,282,1,1,same_gt,3
+pending_strict,DJI_0221_2,282,4,release,71,0,13,5,strong,0.5056030750274658,277,269,1,1,same_gt,1
+pending_temporal,DJI_0030_2,446,4,release,156,3,38,19,temporal,0.2634703814983368,427,408,,,FP,0
+pending_temporal,DJI_0221_2,282,4,release,71,0,13,5,strong,0.5056030750274658,277,269,1,1,same_gt,1

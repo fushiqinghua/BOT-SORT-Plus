@@ -1,0 +1,13 @@
+{
+  "pending_guarded": {
+    "same_gt": 3,
+    "FP": 2
+  },
+  "pending_strict": {
+    "same_gt": 1
+  },
+  "pending_temporal": {
+    "FP": 1,
+    "same_gt": 1
+  }
+}

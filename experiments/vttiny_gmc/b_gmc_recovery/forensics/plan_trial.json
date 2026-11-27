@@ -1,0 +1,12 @@
+{
+  "DJI_0030_2": [
+    {"name":"margin_B", "margin":"B"},
+    {"name":"margin_high", "margin":"high"},
+    {"name":"margin_both", "margin":"both"}
+  ],
+  "DJI_0169_3": [
+    {"name":"margin_B", "margin":"B"},
+    {"name":"margin_high", "margin":"high"},
+    {"name":"margin_both", "margin":"both"}
+  ]
+}

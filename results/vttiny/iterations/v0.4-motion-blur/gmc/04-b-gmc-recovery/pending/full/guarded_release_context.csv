@@ -1,0 +1,6 @@
+﻿seq,frame,tid,prior_gt,current_gt,outcome,det,score,high_score,rgb_support,rgb_distance,stable_low,across_gap,association_cost,nearest_gt,nearest_gt_IoU,prior_gt_IoU,reference_prior_gt_owner_at_release,reference_prior_gt_matched_in_10,guarded_prior_gt_owner_at_release,guarded_prior_gt_matched_in_10,guarded_original_id_correct_in_10,guarded_original_id_FP_in_10
+DJI_0030_2,416,7,4,4,same_gt,2,0.2626318037509918,False,False,,True,True,0.5456276520498873,4,0.550536892777215,0.550536892777215,,0,7,1,1,0
+DJI_0169_3,114,7,6,,FP,11,0.5832696557044983,True,True,0.385162441767016,False,True,0.28967590965736467,6,0.2645887642409198,0.2645887642409198,6,9,6,10,0,7
+DJI_0169_3,207,6,6,,FP,18,0.25770339369773865,False,True,0.5222829834948868,False,True,0.4123885997646481,6,0.4842541826533326,0.4842541826533326,,0,,2,2,4
+DJI_0221_2,282,4,1,1,same_gt,0,0.5056030750274658,True,True,0.41181675517951927,False,False,0.525036368591117,1,0.5494439101178994,0.5494439101178994,,0,4,1,1,0
+DJI_0221_2,317,4,1,1,same_gt,0,0.5349318981170654,True,False,,False,False,0.17862579013502203,1,0.5920988604468183,0.5920988604468183,,0,4,4,4,0

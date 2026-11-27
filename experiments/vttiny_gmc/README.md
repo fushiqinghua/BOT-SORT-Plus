@@ -1,4 +1,6 @@
-# 运行主版本与复现三轮消融
+# 运行单 GMC 主版本与复现实验
+
+[B 与 GMC 的联合消融、重连修正和原 ID 暂存复现](b_gmc_recovery/README.md)
 
 主版本的运行入口默认选用 `dual_low`。指定 `--method dual_low_center` 可启用高分检测中心修正。运行一个方法会在输出目录写入标准 MOT 轨迹、跟踪协议和逐序列动作统计。方法选择见 [versions.json](versions.json)，网络版本、权重、源码校验值及 GMC 参数见 [reference.json](reference.json)。[完整实验结果](../../results/vttiny/iterations/v0.4-motion-blur/gmc/README.md)
 
