@@ -1,0 +1,27 @@
+{
+  "trackeval": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "ground_truth": {
+    "1_rgb_val_1-08": {
+      "frames": 600,
+      "source_relative_path": "data/raw/M3OT/1/rgb/val/1-08/gt/gt.txt",
+      "raw_gt_sha256": "f2b720615f0bf3f864cbf52ab4dd27f4b46f90fa845aa33818deccf97be2934d",
+      "evaluated_gt_sha256": "5b3858951379a0df75df026e039922fbe21ba0e544032878d7d6bbbf972ad9bc",
+      "vehicle_rows": 5738,
+      "ignored_rows": 0
+    },
+    "2_rgb_val_2-08": {
+      "frames": 600,
+      "source_relative_path": "data/raw/M3OT/2/rgb/val/2-08/gt/gt.txt",
+      "raw_gt_sha256": "7d655fcb193334744a139f42cd9ae2789988ea5b4485cda305de9c7e8c69824a",
+      "evaluated_gt_sha256": "c42ea70743fa91d231abfe8e431d79b883ea1e35edc89a14d4c0f89c849b5dc4",
+      "vehicle_rows": 8043,
+      "ignored_rows": 0
+    }
+  },
+  "strong_detector_sha256": "ce90644b2264462b91a89705a5ef0291bd9aadaf739554b00a6e700016c5553e",
+  "rgb_encoder_sha256": "71f6f2723be4d563f1df201133daa53f57bee2a67266486559d5ce453a60f805",
+  "scored_configs": 188,
+  "distinct_trajectory_pairs": 137,
+  "scored_rows": 564,
+  "assessment": "M3OT RGB Val, transfer development"
+}

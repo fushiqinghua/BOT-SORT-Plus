@@ -1,0 +1,18 @@
+{
+  "source_ref": "db20871a58c9fb7e6b499da21241322428034f13",
+  "model": "ce90644b2264462b91a89705a5ef0291bd9aadaf739554b00a6e700016c5553e",
+  "sequences": {
+    "1_rgb_val_1-08": 600,
+    "2_rgb_val_2-08": 600
+  },
+  "cache": {
+    "1_rgb_val_1-08": {
+      "gzip_sha256": "1b441d78b41640e48e57318160d92bff1d0c55b130266e59c8e24f68fe91e2f0",
+      "json_sha256": "6eb476a92486d585591d6dae859d9e1cd82a0a358b98d1c0ed8322e7c3532afa"
+    },
+    "2_rgb_val_2-08": {
+      "gzip_sha256": "c56d475e9efb39d649855226c89fe68a1f99e254d68772663900f9b7f5b3b8f0",
+      "json_sha256": "94b8faae3c9adeb15b5f57a3ad5439ddc85c8e5f842d902a30f8058626141f49"
+    }
+  }
+}

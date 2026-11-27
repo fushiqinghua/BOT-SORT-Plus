@@ -1,0 +1,3 @@
+sequence,frames,frames_with_detections,frames_with_s0,detections,native_high,native_low,s0,high_threshold_gap,reid_export_policy_eligible,native_eligible_reid_policy_uncovered,s0_reid_export_policy_eligible,first_frame,last_frame,missing_frame_ids_inside_span,s0_score_min,s0_score_max,input_sha256
+1_rgb_val_1-08,600,600,378,9226,5755,2316,1155,0,8071,0,0,1,600,0,0.05003013089299202,0.09996180981397629,6eb476a92486d585591d6dae859d9e1cd82a0a358b98d1c0ed8322e7c3532afa
+2_rgb_val_2-08,600,600,472,11212,6567,3331,1314,0,9898,0,0,1,600,0,0.05004749447107315,0.09995824843645096,94b8faae3c9adeb15b5f57a3ad5439ddc85c8e5f842d902a30f8058626141f49

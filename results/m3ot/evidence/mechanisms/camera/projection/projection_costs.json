@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "measurements": {
+    "1_rgb_val_1-08": {
+      "calls": 564,
+      "pairs": 83328,
+      "changed_gt_1e6": 4532,
+      "changed_gt_001": 6,
+      "rows_with_overlap": 4317,
+      "row_best_detection_changed": 0,
+      "max_cost_delta": 0.015574807835867233,
+      "selected_models": {
+        "selected_native": 271,
+        "registration": 600,
+        "selected_affine": 309,
+        "projected_pairs": 83328,
+        "selected_homography": 20
+      },
+      "geometry_sha256": "a6500c8e982cc8c483ed2f214ff57b1702581aa761f6e629fe41b97bd3db76fa"
+    },
+    "2_rgb_val_2-08": {
+      "calls": 735,
+      "pairs": 83042,
+      "changed_gt_1e6": 5154,
+      "changed_gt_001": 0,
+      "rows_with_overlap": 4836,
+      "row_best_detection_changed": 0,
+      "max_cost_delta": 0.0033555248803379123,
+      "selected_models": {
+        "selected_native": 205,
+        "registration": 600,
+        "selected_homography": 15,
+        "projected_pairs": 83042,
+        "selected_affine": 380
+      },
+      "geometry_sha256": "ff7c4d599f4d4c2243d02ad1eab43cb0cb6d08ff73687e8a7748e2ac2c8e760d"
+    }
+  },
+  "totals": {
+    "calls": 1299,
+    "pairs": 166370,
+    "changed_gt_1e6": 9686,
+    "changed_gt_001": 6,
+    "rows_with_overlap": 9153,
+    "row_best_detection_changed": 0
+  },
+  "maximum_cost_delta": 0.015574807835867233,
+  "forward_and_bidir_matrices_equal": true,
+  "all_three_projections_mot_byte_equal": true
+}

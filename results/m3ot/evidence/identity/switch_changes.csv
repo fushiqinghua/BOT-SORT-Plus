@@ -1,0 +1,9 @@
+﻿arm,reference,sequence,shared,removed,added
+native_c2,native,1_rgb_val_1-08,11,3,10
+native_c2,native,2_rgb_val_2-08,27,4,9
+b_c2,B_early_moderate,1_rgb_val_1-08,7,3,9
+b_c2,B_early_moderate,2_rgb_val_2-08,13,8,15
+native_bam,native,1_rgb_val_1-08,11,3,2
+native_bam,native,2_rgb_val_2-08,29,2,1
+b_bam,B_early_moderate,1_rgb_val_1-08,5,5,0
+b_bam,B_early_moderate,2_rgb_val_2-08,19,2,0

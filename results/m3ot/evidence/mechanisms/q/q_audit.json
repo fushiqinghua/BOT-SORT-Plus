@@ -1,0 +1,179 @@
+{
+  "status": "PASS",
+  "trackeval": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "seqs": [
+    "1_rgb_val_1-08",
+    "2_rgb_val_2-08"
+  ],
+  "ellipse_mahalanobis_d2_cutoff": 5.991465,
+  "common_11_30": {
+    "vt_frozen": {
+      "native": {
+        "policy": "vt_frozen",
+        "cohort": "common",
+        "seq": "COMBINED_SEQ",
+        "method": "native",
+        "band": "11-30",
+        "n": 524,
+        "episodes": 37,
+        "covered": 370,
+        "coverage": 0.7061068702290076,
+        "median_area_px2": 1213.1742858963703,
+        "mean_nll": 7.496794553522046,
+        "median_error_px": 16.35480746655616
+      },
+      "q_constant": {
+        "policy": "vt_frozen",
+        "cohort": "common",
+        "seq": "COMBINED_SEQ",
+        "method": "q_constant",
+        "band": "11-30",
+        "n": 524,
+        "episodes": 37,
+        "covered": 524,
+        "coverage": 1.0,
+        "median_area_px2": 602103.1120079495,
+        "mean_nll": 10.316875426373233,
+        "median_error_px": 16.35480746655616
+      },
+      "q_motion": {
+        "policy": "vt_frozen",
+        "cohort": "common",
+        "seq": "COMBINED_SEQ",
+        "method": "q_motion",
+        "band": "11-30",
+        "n": 524,
+        "episodes": 37,
+        "covered": 504,
+        "coverage": 0.9618320610687023,
+        "median_area_px2": 48039.1580268799,
+        "mean_nll": 8.245521748107096,
+        "median_error_px": 16.35480746655616
+      }
+    },
+    "m3ot_fitted": {
+      "native": {
+        "policy": "m3ot_fitted",
+        "cohort": "common",
+        "seq": "COMBINED_SEQ",
+        "method": "native",
+        "band": "11-30",
+        "n": 564,
+        "episodes": 39,
+        "covered": 398,
+        "coverage": 0.7056737588652482,
+        "median_area_px2": 1191.8261855924397,
+        "mean_nll": 7.374264549551765,
+        "median_error_px": 16.52196997593783
+      },
+      "q_constant": {
+        "policy": "m3ot_fitted",
+        "cohort": "common",
+        "seq": "COMBINED_SEQ",
+        "method": "q_constant",
+        "band": "11-30",
+        "n": 564,
+        "episodes": 39,
+        "covered": 417,
+        "coverage": 0.7393617021276596,
+        "median_area_px2": 1385.4422101228256,
+        "mean_nll": 7.2077282370809455,
+        "median_error_px": 16.52196997593783
+      },
+      "q_motion": {
+        "policy": "m3ot_fitted",
+        "cohort": "common",
+        "seq": "COMBINED_SEQ",
+        "method": "q_motion",
+        "band": "11-30",
+        "n": 564,
+        "episodes": 39,
+        "covered": 438,
+        "coverage": 0.776595744680851,
+        "median_area_px2": 1843.872314858408,
+        "mean_nll": 6.991800820995934,
+        "median_error_px": 16.52196997593783
+      }
+    }
+  },
+  "trace_provenance": {
+    "vt_frozen/1_rgb_val_1-08/native": {
+      "trace_sha256": "1bc559f32da6d985318ca4d6cd701556da007b0d782e7bd5a46c533706a9be32",
+      "track_sha256": "218f589b8b6a58a04d5b6941284c73d3510441b99a925a441b89d19d9ec01a12",
+      "lost": 2174,
+      "recovered": 42
+    },
+    "vt_frozen/1_rgb_val_1-08/q_constant": {
+      "trace_sha256": "8de7c262cb903b6b505de241fda330d5c7a8a1623f6d395a4af672b7a074808c",
+      "track_sha256": "1efcfa9e1abb3a8b7910c324d83d549851d757f3b63e721c700b4c04390aabc2",
+      "lost": 2181,
+      "recovered": 41
+    },
+    "vt_frozen/1_rgb_val_1-08/q_motion": {
+      "trace_sha256": "caab50883487782bd41a43c705c3efe5e7d157d4460d48106412224d04414c3a",
+      "track_sha256": "459f22f3e62b73722aa45f3985ccc2ba77d6b23ccbdbb8088a8976b539beeca3",
+      "lost": 2126,
+      "recovered": 42
+    },
+    "vt_frozen/2_rgb_val_2-08/native": {
+      "trace_sha256": "6b556097965506af8e8704584befa1d12195e19b123166064c635509ccd34a86",
+      "track_sha256": "8183ac88552d3dd60c4a5dab93c7fb2fb65e053d1e872cb807787fa28db49085",
+      "lost": 2306,
+      "recovered": 38
+    },
+    "vt_frozen/2_rgb_val_2-08/q_constant": {
+      "trace_sha256": "593b1a1287f88ba915d72ddfa72c44e79cbb70fee8322cc26ee05445ea19d0a1",
+      "track_sha256": "4e54bf37cc47db5027884938885fa88ba88fed414f71d81a532b9d7e3efb1512",
+      "lost": 2342,
+      "recovered": 38
+    },
+    "vt_frozen/2_rgb_val_2-08/q_motion": {
+      "trace_sha256": "7f4fabf0d097cad1cc347ede266567c973dc497ca2e427e887bcef189f48eb72",
+      "track_sha256": "4cc1a305cef6e5652964c18bbbcc64f2285dac85e52fee012e37dce86217ac93",
+      "lost": 2313,
+      "recovered": 39
+    },
+    "m3ot_fitted/1_rgb_val_1-08/native": {
+      "trace_sha256": "fb500a3c2ca9bd0dba0ca5008879a340a1c245d927657580b706ed2f8e5dd840",
+      "track_sha256": "218f589b8b6a58a04d5b6941284c73d3510441b99a925a441b89d19d9ec01a12",
+      "lost": 2174,
+      "recovered": 42
+    },
+    "m3ot_fitted/1_rgb_val_1-08/q_constant": {
+      "trace_sha256": "e8f01555b95e6ba54d29eb58c99095eb3f007ddffc87d8362a2183b02be9cdf4",
+      "track_sha256": "0c0d778e61166ad48ba74ac3b0e7ec2c6ee11ded908b1c4303c62b29eb2a7fb7",
+      "lost": 2180,
+      "recovered": 41
+    },
+    "m3ot_fitted/1_rgb_val_1-08/q_motion": {
+      "trace_sha256": "e6ecd3cdc922fc88596bac503fb3d5e80320d98e515a24fb507fd1fadf9cdb54",
+      "track_sha256": "11c71436572cdb4a288aa2f67b183b66b361470a7b69503a0dfb03fd3df13a28",
+      "lost": 2183,
+      "recovered": 41
+    },
+    "m3ot_fitted/2_rgb_val_2-08/native": {
+      "trace_sha256": "c64c7710b581e41a9b1e492d150c513d959c1c0bf27043aec2e047c8aad09063",
+      "track_sha256": "8183ac88552d3dd60c4a5dab93c7fb2fb65e053d1e872cb807787fa28db49085",
+      "lost": 2306,
+      "recovered": 38
+    },
+    "m3ot_fitted/2_rgb_val_2-08/q_constant": {
+      "trace_sha256": "85b344f85bfb87988f69aa78db29d874f50e7f4e27f8d1a1233d845a7694084b",
+      "track_sha256": "500ca3952bd3fd69be022b56b8e719ccfd91c2396bbe61206224ca87c7a92940",
+      "lost": 2306,
+      "recovered": 38
+    },
+    "m3ot_fitted/2_rgb_val_2-08/q_motion": {
+      "trace_sha256": "9756fe016a2a3af7f047b7b36d2349076fcefc8008f7b7166176e99bbf16dfc7",
+      "track_sha256": "c60542afd6c44be5530515725df8b09b146585a128136a5967da313ab38054bd",
+      "lost": 2306,
+      "recovered": 38
+    }
+  },
+  "common_key": [
+    "anchor_frame",
+    "anchor_detection",
+    "gt_id",
+    "frame"
+  ]
+}

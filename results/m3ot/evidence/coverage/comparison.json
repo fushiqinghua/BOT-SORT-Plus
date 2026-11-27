@@ -1,0 +1,223 @@
+{
+  "same_m3ot_gt": true,
+  "same_m3ot_size_distribution": true,
+  "different_m3ot_detector_and_cache": true,
+  "scopes": {
+    "vt_tiny_historical": {
+      "pooled": {
+        "frames": 12590,
+        "cached_detection_rows": 133386,
+        "usable_detection_rows": 113447,
+        "high_detection_rows": 67172,
+        "low_detection_rows": 46275,
+        "birth_detection_rows": 58173,
+        "gt_target_frames": 179772,
+        "cached_match": 76560,
+        "cached_candidate": 77106,
+        "usable_match": 72766,
+        "usable_candidate": 73308,
+        "high_match": 56119,
+        "high_candidate": 56598,
+        "low_match": 17956,
+        "low_candidate": 18068,
+        "birth_match": 51140,
+        "birth_candidate": 51602,
+        "low_only_candidate": 16710,
+        "competing_usable_candidate": 542,
+        "no_usable_candidate": 106464,
+        "gt_trajectories": 870,
+        "usable_new_matches_over_high_only": 16647,
+        "cached_match_recall": 0.4258727721780923,
+        "cached_candidate_recall": 0.42890995260663506,
+        "usable_match_recall": 0.40476826202078187,
+        "usable_candidate_recall": 0.4077831920432548,
+        "high_match_recall": 0.3121676345593307,
+        "high_candidate_recall": 0.31483212068620253,
+        "low_match_recall": 0.09988207284782948,
+        "low_candidate_recall": 0.10050508421778698,
+        "birth_match_recall": 0.28447144160380927,
+        "birth_candidate_recall": 0.28704136350488396,
+        "low_only_candidate_fraction": 0.09295107135705227
+      },
+      "bins": {
+        "<8": {
+          "gt_target_frames": 86974,
+          "cached_match": 15857,
+          "usable_match": 14503,
+          "high_match": 7907
+        },
+        "8–<16": {
+          "gt_target_frames": 62234,
+          "cached_match": 36576,
+          "usable_match": 34493,
+          "high_match": 25501
+        },
+        "16–<32": {
+          "gt_target_frames": 27540,
+          "cached_match": 21599,
+          "usable_match": 21257,
+          "high_match": 20253
+        },
+        "32+": {
+          "gt_target_frames": 3024,
+          "cached_match": 2528,
+          "usable_match": 2513,
+          "high_match": 2458
+        }
+      },
+      "internal_usable_gaps": {
+        "0.3–1": 850,
+        "1–3": 355,
+        "≤0.3": 3450,
+        ">3": 89
+      },
+      "internal_usable_gaps_over_one_second": 444,
+      "target_frames_in_internal_usable_gaps_over_one_second": 16142,
+      "per_1000_gt_frames_over_one_second": 2.469795073760096
+    },
+    "m3ot_lower": {
+      "pooled": {
+        "frames": 1200,
+        "cached_detection_rows": 72457,
+        "usable_detection_rows": 48724,
+        "high_detection_rows": 9147,
+        "low_detection_rows": 39577,
+        "birth_detection_rows": 6098,
+        "gt_target_frames": 13781,
+        "cached_match": 11731,
+        "cached_candidate": 11731,
+        "usable_match": 11242,
+        "usable_candidate": 11242,
+        "high_match": 5990,
+        "high_candidate": 5991,
+        "low_match": 7582,
+        "low_candidate": 7583,
+        "birth_match": 4366,
+        "birth_candidate": 4366,
+        "low_only_candidate": 5251,
+        "competing_usable_candidate": 0,
+        "no_usable_candidate": 2539,
+        "gt_trajectories": 78,
+        "usable_new_matches_over_high_only": 5252,
+        "cached_match_recall": 0.8512444670198099,
+        "cached_candidate_recall": 0.8512444670198099,
+        "usable_match_recall": 0.8157608301284377,
+        "usable_candidate_recall": 0.8157608301284377,
+        "high_match_recall": 0.43465641100065305,
+        "high_candidate_recall": 0.43472897467527755,
+        "low_match_recall": 0.55017778100283,
+        "low_candidate_recall": 0.5502503446774545,
+        "birth_match_recall": 0.31681300341049273,
+        "birth_candidate_recall": 0.31681300341049273,
+        "low_only_candidate_fraction": 0.38103185545316015
+      },
+      "bins": {
+        "<8": {
+          "gt_target_frames": 160,
+          "cached_match": 6,
+          "usable_match": 5,
+          "high_match": 3
+        },
+        "8–<16": {
+          "gt_target_frames": 10274,
+          "cached_match": 8769,
+          "usable_match": 8410,
+          "high_match": 4354
+        },
+        "16–<32": {
+          "gt_target_frames": 3347,
+          "cached_match": 2956,
+          "usable_match": 2827,
+          "high_match": 1633
+        },
+        "32+": {
+          "gt_target_frames": 0,
+          "cached_match": 0,
+          "usable_match": 0,
+          "high_match": 0
+        }
+      },
+      "internal_usable_gaps": {
+        "1–3": 22,
+        "≤0.3": 617,
+        ">3": 1,
+        "0.3–1": 108
+      },
+      "internal_usable_gaps_over_one_second": 23,
+      "target_frames_in_internal_usable_gaps_over_one_second": 389,
+      "per_1000_gt_frames_over_one_second": 1.6689645163631086
+    },
+    "m3ot_higher": {
+      "pooled": {
+        "frames": 1200,
+        "cached_detection_rows": 20438,
+        "usable_detection_rows": 17969,
+        "high_detection_rows": 12322,
+        "low_detection_rows": 5647,
+        "birth_detection_rows": 11016,
+        "gt_target_frames": 13781,
+        "cached_match": 12355,
+        "cached_candidate": 12355,
+        "usable_match": 12122,
+        "usable_candidate": 12123,
+        "high_match": 10253,
+        "high_candidate": 10254,
+        "low_match": 2385,
+        "low_candidate": 2385,
+        "birth_match": 9445,
+        "birth_candidate": 9446,
+        "low_only_candidate": 1869,
+        "competing_usable_candidate": 1,
+        "no_usable_candidate": 1658,
+        "gt_trajectories": 78,
+        "usable_new_matches_over_high_only": 1869,
+        "cached_match_recall": 0.8965241999854873,
+        "cached_candidate_recall": 0.8965241999854873,
+        "usable_match_recall": 0.8796168637979828,
+        "usable_candidate_recall": 0.8796894274726073,
+        "high_match_recall": 0.743995355924824,
+        "high_candidate_recall": 0.7440679195994485,
+        "low_match_recall": 0.17306436397939193,
+        "low_candidate_recall": 0.17306436397939193,
+        "birth_match_recall": 0.6853639068282418,
+        "birth_candidate_recall": 0.6854364705028663,
+        "low_only_candidate_fraction": 0.1356215078731587
+      },
+      "bins": {
+        "<8": {
+          "gt_target_frames": 160,
+          "cached_match": 5,
+          "usable_match": 4,
+          "high_match": 4
+        },
+        "8–<16": {
+          "gt_target_frames": 10274,
+          "cached_match": 9352,
+          "usable_match": 9171,
+          "high_match": 7604
+        },
+        "16–<32": {
+          "gt_target_frames": 3347,
+          "cached_match": 2998,
+          "usable_match": 2947,
+          "high_match": 2645
+        },
+        "32+": {
+          "gt_target_frames": 0,
+          "cached_match": 0,
+          "usable_match": 0,
+          "high_match": 0
+        }
+      },
+      "internal_usable_gaps": {
+        "1–3": 16,
+        "≤0.3": 269,
+        ">3": 1,
+        "0.3–1": 59
+      },
+      "internal_usable_gaps_over_one_second": 17,
+      "target_frames_in_internal_usable_gaps_over_one_second": 288,
+      "per_1000_gt_frames_over_one_second": 1.2335824686162107
+    }
+  }
+}

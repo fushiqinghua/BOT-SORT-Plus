@@ -1,0 +1,11 @@
+﻿sequence,subset,pairs,n_expected,ties,fraction
+1_rgb_train_1-05,all,94,50,0,0.5319148936170213
+1_rgb_train_1-05,both_low,0,0,0,
+1_rgb_train_1-07,all,15,0,0,0.0
+1_rgb_train_1-07,both_low,0,0,0,
+2_rgb_train_2-05,all,74,31,0,0.4189189189189189
+2_rgb_train_2-05,both_low,0,0,0,
+2_rgb_train_2-07,all,34,19,0,0.5588235294117647
+2_rgb_train_2-07,both_low,0,0,0,
+COMBINED_SEQ,all,217,100,0,0.4608294930875576
+COMBINED_SEQ,both_low,0,0,0,

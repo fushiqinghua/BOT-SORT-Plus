@@ -1,0 +1,82 @@
+{
+  "status": "COMPLETE",
+  "arm": "tco_q2_paired_gmc",
+  "mode": "q2_paired",
+  "reference": "evidence_both",
+  "frozen": {
+    "detector_sha256": "ce90644b2264462b91a89705a5ef0291bd9aadaf739554b00a6e700016c5553e",
+    "rgb_encoder_sha256": "71f6f2723be4d563f1df201133daa53f57bee2a67266486559d5ce453a60f805",
+    "detection_fingerprints": {
+      "1_rgb_val_1-08": "809012903ea83f91ee0210447dfa61d6f81d566fe1fe6fb27fb448e767562ed1",
+      "2_rgb_val_2-08": "8085e9025184634386d0203d6e2cbab1b2f0a1ae004b5d1f2f6d9a4117df9f93"
+    },
+    "decoded_image_hashes": {
+      "1_rgb_val_1-08": "9a16ca03edd0f6694b33bd9910e66069abc9df7d2beb40609a93b5a0b549ef41",
+      "2_rgb_val_2-08": "b335e1092f13bc1f1041d7417eb5587756fc4ee6f3abc3310467064a62250b22"
+    },
+    "native_config": {
+      "det_thresh": 0.5,
+      "track_high_thresh": 0.5,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.6,
+      "match_thresh": 0.8,
+      "track_buffer": 90,
+      "frame_rate": 10,
+      "with_reid": true,
+      "cmc_method": "sof",
+      "proximity_thresh": 0.5,
+      "appearance_thresh": 0.4,
+      "fuse_first_associate": false
+    },
+    "feature_hashes": {
+      "1_rgb_val_1-08": {
+        "features": "3e2703d459e15f1028b8248265a098b96eecbfd6cb62d0079f390fe3ea87794c",
+        "metadata": "73273313350074325ecc4a967528110b996e9475f5776604c76a9a90441645aa"
+      },
+      "2_rgb_val_2-08": {
+        "features": "c80edb76dfa286074d6c6ddc187fae72771e8b3d67b7c2d84c646e6b19857808",
+        "metadata": "c028bf208022a58b3ca2a7063ea5c70563a67e7c7073477ca2f8e8bfbdb96ea5"
+      }
+    },
+    "boxmot_source_hashes": {
+      "trackers/botsort/botsort.py": "d8b69ec680b59e915b079994756c27b4bdf81ecd214a2866b97b31122fcdc93d",
+      "trackers/botsort/botsort_track.py": "bcd42eaa3e9d06716fa71749b8983bf7c16d2a96b5829bb97f5c549e0f0cb0bc",
+      "trackers/basetracker.py": "f5eb9838128d999944c444733b18948ae895c3682977eee1e4eeb07046ca04a1",
+      "motion/kalman_filters/aabb/xywh_kf.py": "a12ea28981ac7044bd1c7a60d3701b54754bc88fbd7770eda3fecd4a02a735a2",
+      "utils/matching.py": "c56c0d03e78dbe10e17761b2e95fd4f9064f1cd864d47ac0e45243a907d42096",
+      "trackers/botsort/botsort_utils.py": "99902964de7c01878e5410ba89b2b1da0821db3db0efb5fa6d0c2693d4af4052"
+    },
+    "sequences": {
+      "1_rgb_val_1-08": 600,
+      "2_rgb_val_2-08": 600
+    },
+    "source_protocol_sha256": "94407ee410c424053b458e69ed199d7f306610faf17fce6e38858ec34d052f35"
+  },
+  "evaluation": {
+    "1_rgb_val_1-08": {
+      "track_sha256": "4a24a7413bf66dc942e5bf0b4975fc61d3c3c2c1bac1a65dbbdfc8a65ffc5d28",
+      "reference_equal": true,
+      "reference_events_equal": true,
+      "counts": {
+        "low_accepted": 459,
+        "evaluated": 456,
+        "registered_fallback": 456,
+        "history_fewer_than_two": 3
+      },
+      "frames": 600
+    },
+    "2_rgb_val_2-08": {
+      "track_sha256": "381d5c9ea134e879f6c638023b58e08f5c4a84e93431539f2071d8869e54adcb",
+      "reference_equal": true,
+      "reference_events_equal": true,
+      "counts": {
+        "low_accepted": 994,
+        "evaluated": 992,
+        "registered_fallback": 992,
+        "history_fewer_than_two": 2
+      },
+      "frames": 600
+    }
+  },
+  "source_sha256": "373038a06cfed68279066ec091dfe7c3abb504f0f76edecbf969719d34a303a5"
+}

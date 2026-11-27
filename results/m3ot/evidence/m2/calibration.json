@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "noise": {
+    "mode": "calibrated",
+    "floor_std": [
+      0.0,
+      0.5645972063787986,
+      0.6549180975493537,
+      0.7993418864834492
+    ],
+    "size_scale": [
+      0.039286221650006045,
+      0.036340298137931215,
+      0.04984993982225089,
+      0.04776615863274994
+    ],
+    "score_scale": [
+      1.3680027483209167,
+      1.7897541960700012,
+      1.0778291388309487,
+      1.6610077878297143
+    ],
+    "min_variance": 1e-06
+  },
+  "provenance": {
+    "purpose": "offline_calibration_only_no_gt_during_tracking",
+    "interpretation": "train_only_fit_then_m3ot_val_transfer",
+    "calibration_sequences": [
+      "1_rgb_train_1-01",
+      "1_rgb_train_1-04",
+      "2_rgb_train_2-02",
+      "2_rgb_train_2-05"
+    ],
+    "evaluation_sequences": [
+      "1_rgb_val_1-08",
+      "2_rgb_val_2-08"
+    ],
+    "detector_model_sha256": [
+      "ce90644b2264462b91a89705a5ef0291bd9aadaf739554b00a6e700016c5553e"
+    ],
+    "inputs": {
+      "1_rgb_train_1-01": {
+        "detections_sha256": "a582506436681314cc9db304a2cbbc1047c689eea32c4c8723aadea5f7270d75",
+        "gt_sha256": "961d9314637b7ea8b9b4eeda5edd8b55e84482ad9d24acd5ad7577d062423caa"
+      },
+      "1_rgb_train_1-04": {
+        "detections_sha256": "87325966c3ed528c9c3f06a8d586c30e43fd4ac00f021ebd5602d4ae54ad083e",
+        "gt_sha256": "21a70837e8dee5b052860a5f0db5d9caf3f8d2188833ebc2977d0dc5afe19a07"
+      },
+      "2_rgb_train_2-02": {
+        "detections_sha256": "2fd7421d3cc69c1c6495241f43b5c3b9d63f8930d85af16236483c33b0e12c5d",
+        "gt_sha256": "5627d3dae43df1d7081452fdbe7cab73e1930c8ccbf1c56a3905f91471776afe"
+      },
+      "2_rgb_train_2-05": {
+        "detections_sha256": "2fb267655ec8cffcff10cac066a7d3991c1f44749429e5fe61d391b6712bb7ec",
+        "gt_sha256": "98a19217d8be1250b07d964262d5666645306885c9931d9b9911c81203df65d2"
+      }
+    },
+    "seed": 0,
+    "max_pairs_per_sequence": 20000,
+    "pair_selection": {
+      "center_gate": 1.5,
+      "size_ratio_gate": 4.0,
+      "ambiguity_margin": 0.2,
+      "min_score_strictly_above": 0.1,
+      "iou_gate": null
+    },
+    "fit": "Nonnegative least squares of squared residuals on [1, detection_size^2, (1-score)^2], separately for cx,cy,w,h; uniform reservoir cap per sequence."
+  },
+  "diagnostics": {
+    "samples": 23061,
+    "axis_order": [
+      "cx",
+      "cy",
+      "w",
+      "h"
+    ],
+    "design_rank": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "design_condition_number": [
+      3.255014410578455,
+      4.127197158328518,
+      3.255014410578455,
+      4.127197158328518
+    ],
+    "residual_mean": [
+      -0.046083772907510916,
+      -0.03555043439160859,
+      -0.24848577858925386,
+      0.008590399140543327
+    ],
+    "residual_median": [
+      -0.030808105468736358,
+      -0.024723815917965908,
+      -0.22100830078125,
+      -0.020478515625001137
+    ],
+    "residual_rmse": [
+      0.5767709616167686,
+      0.9879884591092377,
+      0.9493902726198892,
+      1.2711670344728565
+    ],
+    "standardized_residual_rms": [
+      0.9228943921079075,
+      0.9975714317388924,
+      0.9902136068029909,
+      0.9975444648613003
+    ],
+    "in_sample_detection_residual_4d_coverage_at_9_4877": 0.9313993322058888,
+    "warnings": [
+      "Fit uses squared residuals, including annotation error and systematic detector bias; it is not a causal decomposition of camera and detector noise.",
+      "Geometric matching and ambiguity exclusion truncate the residual population; coverage is in-sample and conditional on selected pairs.",
+      "Adjacent frames are correlated. Pair count is not an independent-sample count; use recording-level evaluation.",
+      "Zero-mean diagonal Gaussian measurement error remains a modeling assumption, not a validated distribution."
+    ],
+    "sequences": {
+      "1_rgb_train_1-01": {
+        "detections": 14966,
+        "ground_truth": 12496,
+        "below_tracking_score": 948,
+        "candidate_pairs": 18743,
+        "assigned_pairs": 12489,
+        "ambiguous_pairs": 91,
+        "accepted_pairs": 12398,
+        "frames": 1365,
+        "retained_pairs": 12398
+      },
+      "1_rgb_train_1-04": {
+        "detections": 3985,
+        "ground_truth": 2977,
+        "below_tracking_score": 305,
+        "candidate_pairs": 4374,
+        "assigned_pairs": 2977,
+        "ambiguous_pairs": 12,
+        "accepted_pairs": 2965,
+        "frames": 300,
+        "retained_pairs": 2965
+      },
+      "2_rgb_train_2-02": {
+        "detections": 4364,
+        "ground_truth": 3381,
+        "below_tracking_score": 483,
+        "candidate_pairs": 4261,
+        "assigned_pairs": 3241,
+        "ambiguous_pairs": 95,
+        "accepted_pairs": 3146,
+        "frames": 700,
+        "retained_pairs": 3146
+      },
+      "2_rgb_train_2-05": {
+        "detections": 6446,
+        "ground_truth": 4736,
+        "below_tracking_score": 591,
+        "candidate_pairs": 8071,
+        "assigned_pairs": 4730,
+        "ambiguous_pairs": 178,
+        "accepted_pairs": 4552,
+        "frames": 300,
+        "retained_pairs": 4552
+      }
+    },
+    "accepted_pair_strata": {
+      "16to32/high_gt0.5": 7529,
+      "16to32/low_0.1to0.5": 4,
+      "8to16/high_gt0.5": 14513,
+      "8to16/low_0.1to0.5": 391,
+      "lt8/high_gt0.5": 315,
+      "lt8/low_0.1to0.5": 309
+    },
+    "retained_pair_strata": {
+      "16to32/high_gt0.5": 7529,
+      "16to32/low_0.1to0.5": 4,
+      "8to16/high_gt0.5": 14513,
+      "8to16/low_0.1to0.5": 391,
+      "lt8/high_gt0.5": 315,
+      "lt8/low_0.1to0.5": 309
+    }
+  }
+}

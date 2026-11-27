@@ -1,0 +1,65 @@
+[
+  {
+    "branch": "baseline",
+    "description": "原始 BoT-SORT 与检测输入",
+    "chapter": "by-branch/baseline/README.md",
+    "count": 2,
+    "source_commit": "70f28b112ba34014b851152fbeedf007dd7cbb52"
+  },
+  {
+    "branch": "iteration/v0.1-ab",
+    "description": "A 起轨、B 恢复与 RGB 质量记忆",
+    "chapter": "by-branch/ab/README.md",
+    "count": 15,
+    "source_commit": "0054121f4bab1c0f9b68f547fda3f17330f7100e"
+  },
+  {
+    "branch": "iteration/v0.2-a2",
+    "description": "A2 弱起轨确认 E 与旧 ID 竞争 I",
+    "chapter": "by-branch/a2/README.md",
+    "count": 15,
+    "source_commit": "6d9c258556a143036cebde891c93079a772b9945"
+  },
+  {
+    "branch": "iteration/v0.3-c2-identity",
+    "description": "B、C2 身份记忆和 RGB／红外位置",
+    "chapter": "by-branch/identity/README.md",
+    "count": 49,
+    "source_commit": "667eb40a6aa624c35fb86eb73656bb334b107a11"
+  },
+  {
+    "branch": "diagnostics/v0.4-motion-blur",
+    "description": "① GMC、② ORU、长间隔恢复与低分干预",
+    "chapter": "by-branch/motion-blur/README.md",
+    "count": 34,
+    "source_commit": "0a4b2273ebeac28134f937ff6c48749d4cde0901"
+  },
+  {
+    "branch": "research/m2-association-m1-m3-diagnostics",
+    "description": "M1、M2、M3 与 M3OT 追加组合",
+    "chapter": "by-branch/m2/README.md",
+    "count": 40,
+    "source_commit": "ec7b8220f758cf6e4e7a42d675701fbcedf559ef"
+  },
+  {
+    "branch": "research/vttiny-gmc-kf-345",
+    "description": "③ 投影、④ 降权、⑤ Q、学习 R 与组合",
+    "chapter": "by-branch/gmc-kf-345/README.md",
+    "count": 29,
+    "source_commit": "235fe4097066b5023cc84ca8cd6edd5757fd658c"
+  },
+  {
+    "branch": "research/vttiny-track-conditioned-observation",
+    "description": "TCO 量测修正和回退诊断",
+    "chapter": "by-branch/tco/README.md",
+    "count": 4,
+    "source_commit": "176f2a81613c34d16a860765ea7be0845116b534"
+  },
+  {
+    "branch": "research/vttiny-weak-evidence",
+    "description": "W 弱证据 S0 库存",
+    "chapter": "by-branch/weak-evidence/README.md",
+    "count": 0,
+    "source_commit": "db20871a58c9fb7e6b499da21241322428034f13"
+  }
+]

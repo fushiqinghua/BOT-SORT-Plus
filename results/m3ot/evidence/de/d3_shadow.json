@@ -1,0 +1,62 @@
+{
+  "status": "COMPLETE",
+  "arm": "d3_shadow",
+  "reference": "B_early_moderate",
+  "sequences": {
+    "1_rgb_val_1-08": {
+      "frames": 600,
+      "sha256": "1837c820d398baa6f8e94d1d2dcbb8d261a2329ecc8ffc2b5c8c27058b6a020c",
+      "bytes_equal_to_control": true,
+      "events": {
+        "frame": 600,
+        "candidate_seed": 582,
+        "memory_update": 6097,
+        "candidate_removed": 581,
+        "native_birth": 92,
+        "first_emitted": 61,
+        "match_high": 5445,
+        "candidate_hit": 991,
+        "candidate_miss": 1243,
+        "candidate_seed_deferred": 439,
+        "match_unconfirmed": 56,
+        "match_low": 458,
+        "recovery_check": 6709,
+        "recovered": 50,
+        "candidate_observation_suppressed": 100,
+        "suppressed_native_birth": 38,
+        "track_lifetime": 92
+      },
+      "prediction": "trackers/d3_shadow/data/1_rgb_val_1-08.txt",
+      "event_sha256": "c5eb5c3d5302fde82bc42f01d2698bfc8ee579eaefe28f11c1194b1bd7137890"
+    },
+    "2_rgb_val_2-08": {
+      "frames": 600,
+      "sha256": "33c8c696a029d3651f6b392669060bf81147b2b5be3e39cb71534214fed09efb",
+      "bytes_equal_to_control": true,
+      "events": {
+        "frame": 600,
+        "candidate_seed": 672,
+        "memory_update": 7439,
+        "candidate_removed": 672,
+        "native_birth": 87,
+        "first_emitted": 58,
+        "match_high": 6231,
+        "candidate_hit": 1428,
+        "candidate_miss": 1404,
+        "match_unconfirmed": 54,
+        "match_low": 991,
+        "candidate_seed_deferred": 432,
+        "recovery_check": 7886,
+        "recovered": 80,
+        "candidate_observation_suppressed": 90,
+        "suppressed_native_birth": 31,
+        "track_lifetime": 87
+      },
+      "prediction": "trackers/d3_shadow/data/2_rgb_val_2-08.txt",
+      "event_sha256": "b6187843f615e7903e77468b08e538350b5b83f8bc73318d6fc746e870656c1c"
+    }
+  },
+  "detector_sha256": "ce90644b2264462b91a89705a5ef0291bd9aadaf739554b00a6e700016c5553e",
+  "rgb_encoder_sha256": "71f6f2723be4d563f1df201133daa53f57bee2a67266486559d5ce453a60f805",
+  "protocol_sha256": "175b9eeb87aa42ca23673acc4f5381466e14db2c358a55f364da134f044847a1"
+}

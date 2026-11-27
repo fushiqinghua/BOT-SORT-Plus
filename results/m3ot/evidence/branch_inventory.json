@@ -1,0 +1,56 @@
+{
+  "audited_branches": [
+    {
+      "branch": "baseline",
+      "commit": "70f28b112ba34014b851152fbeedf007dd7cbb52"
+    },
+    {
+      "branch": "diagnostics/v0.4-motion-blur",
+      "commit": "0a4b2273ebeac28134f937ff6c48749d4cde0901"
+    },
+    {
+      "branch": "iteration/v0.1-ab",
+      "commit": "0054121f4bab1c0f9b68f547fda3f17330f7100e"
+    },
+    {
+      "branch": "iteration/v0.2-a2",
+      "commit": "6d9c258556a143036cebde891c93079a772b9945"
+    },
+    {
+      "branch": "iteration/v0.3-c2-identity",
+      "commit": "667eb40a6aa624c35fb86eb73656bb334b107a11"
+    },
+    {
+      "branch": "research/m2-association-m1-m3-diagnostics",
+      "commit": "ec7b8220f758cf6e4e7a42d675701fbcedf559ef"
+    },
+    {
+      "branch": "research/vttiny-gmc-kf-345",
+      "commit": "235fe4097066b5023cc84ca8cd6edd5757fd658c"
+    },
+    {
+      "branch": "research/vttiny-track-conditioned-observation",
+      "commit": "176f2a81613c34d16a860765ea7be0845116b534"
+    },
+    {
+      "branch": "research/vttiny-weak-evidence",
+      "commit": "db20871a58c9fb7e6b499da21241322428034f13"
+    }
+  ],
+  "dataset": "M3OT RGB Val",
+  "sequence_lengths": {
+    "1_rgb_val_1-08": 600,
+    "2_rgb_val_2-08": 600
+  },
+  "primary_input": "Same verified strong RGB–T and RGB ReID cache as batches one and two",
+  "assessment": "development validation; checkpoints previously selected on Val",
+  "statuses": [
+    "previous_m3ot_score",
+    "replayed",
+    "training_or_calibration_needed",
+    "offline_diagnostic",
+    "design_only",
+    "unavailable_dependency"
+  ],
+  "script_replay_scope": "Portable previously executed tracking configurations. Event-specific oracle interventions may be described via original evidence; they are not applied to unrelated M3OT frames."
+}

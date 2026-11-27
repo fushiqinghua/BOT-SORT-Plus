@@ -1,0 +1,46 @@
+{
+  "schema": "wem_s0_cache_inventory_v1",
+  "tool_version": "0.1.0",
+  "status": "INVENTORY_ONLY_NOT_W_OPPORTUNITY",
+  "sequences": 2,
+  "totals": {
+    "frames": 1200,
+    "frames_with_detections": 1200,
+    "frames_with_s0": 850,
+    "detections": 20438,
+    "native_high": 12322,
+    "native_low": 5647,
+    "s0": 2469,
+    "high_threshold_gap": 0,
+    "reid_export_policy_eligible": 17969,
+    "native_eligible_reid_policy_uncovered": 0,
+    "s0_reid_export_policy_eligible": 0
+  },
+  "score_thresholds": {
+    "low": 0.1,
+    "high": 0.5
+  },
+  "score_partition": {
+    "native_high": "float64(float32(score)) > high",
+    "native_low": "low < float64(float32(score)) < high",
+    "S0": "not high and not low and float64(float32(score)) <= low",
+    "high_threshold_gap": "float64(float32(score)) == high"
+  },
+  "reid_export_policy": {
+    "comparison": "float32(score) > float32(0.1)",
+    "threshold_float32": 0.10000000149011612,
+    "actual_feature_files_read": false,
+    "interpretation": "score-policy coverage only; actual feature validity is unknown"
+  },
+  "frame_gaps": [],
+  "gt_read": false,
+  "tracker_executed": false,
+  "w_online_enabled": false,
+  "limitations": [
+    "No tracker state, B ownership/reservations, GMC, identity, GT or images were read.",
+    "S0 inventory size is not W eligibility, recoverable FN, or expected metric gain.",
+    "RGB flags reproduce an exporter score policy only, not actual feature validity.",
+    "Only existing postprocessed cache rows are audited; no S1 or pre-NMS S2 is exported.",
+    "No detector weights, cache-to-model consistency, mother-video split or real-data parity is verified."
+  ]
+}

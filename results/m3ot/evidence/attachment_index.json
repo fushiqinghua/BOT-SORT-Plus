@@ -1,0 +1,356 @@
+[
+  {
+    "path": "evidence/coverage/comparison.json",
+    "source": "m3ot_first_batch/coverage/results/comparison.json",
+    "source_sha256": "e4434eac0fddabf1177b32b90296f275a075f27c6b6df1105d41c25dfd381b9c",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/coverage/detector_interaction.csv",
+    "source": "m3ot_first_batch/results/detector_interaction.csv",
+    "source_sha256": "e695fe9cc7aec20c559da134aee2f4f7f48aaf38cd52224babc27a8a0a01e836",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/coverage/gap_summary.csv",
+    "source": "m3ot_first_batch/results/gap_summary.csv",
+    "source_sha256": "0a0f122f1c62ee9c99995bead5e7e1aa5dcc0cf150bfabb17d974bdf714dff40",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/coverage/input_manifest.json",
+    "source": "m3ot_first_batch/inputs/manifest.json",
+    "source_sha256": "4d7546c7b00b6eed84e1bfc459a995ad195dc029a0e59ddd93b1eae9f7b04f05",
+    "server_root_normalized": true
+  },
+  {
+    "path": "evidence/de/e2_receipt.json",
+    "source": "m3ot_branch_replay/rules/results/receipts/e2_shadow.json",
+    "source_sha256": "a2acb2848cd1c8a0ca279ec087ff4447282257112e5e47c4712a68fe5f33e6e5",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/de/e2_kf.json",
+    "source": "m3ot_branch_replay/rules/results/receipts/E2_kf.json",
+    "source_sha256": "75a6fe0988cbf7086d5c334bbe551dd2e513bc3593d7b057675c91aa34c295b5",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/de/d3_shadow.json",
+    "source": "m3ot_branch_replay/rules/results/receipts/d3_shadow.json",
+    "source_sha256": "ce0b419f25d2376701974be49834e311469f956ff9d16af434b61cc0eef41a04",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_proposal_diagnostics.csv",
+    "source": "m3ot_branch_replay/learned/results/tco_proposal_diagnostics.csv",
+    "source_sha256": "493adcd11e5cd93dd9f80d99dd72cede8f7e3697d4963bfdba192ed56bf4899a",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/identity/c2_triggers.csv",
+    "source": "m3ot_second_batch/results/c2_triggers.csv",
+    "source_sha256": "52dc2c2fac774dd1b7496bed5876e64e7f145dae0fcd01fb42e1d2316537d98d",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/identity/switch_changes.csv",
+    "source": "m3ot_second_batch/results/switch_changes.csv",
+    "source_sha256": "96440abb5f1f001349c713faaa28179d352a752158fc684751b347d72ceea775",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/identity/birth_and_ir_events.json",
+    "source": "m3ot_branch_replay/birth/results/event_manifest.json",
+    "source_sha256": "b357014e73b1bf84c2d243d64a898bfe0d27d3e4f50b80d1257d06f8d8b7b96f",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/bam/triggers.csv",
+    "source": "m3ot_second_batch/results/bam_triggers.csv",
+    "source_sha256": "72a2823046e8e1d014dd812742b056274edefbff8789d051659f3525cea5c465",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/bam/combination.json",
+    "source": "m3ot_branch_replay/combination_receipt.json",
+    "source_sha256": "4128c13803f0ede54fc4abe859dfb3008f89f292a83f0780f5a8d87ea7198698",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/qr/fit_receipt.json",
+    "source": "m3ot_branch_replay/learned/results/fit_m3ot/results/fit_receipt.json",
+    "source_sha256": "959cec42b7adac59a33d379be50ce3f720bf8f896b09158a7782a30f6242fa38",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/qr/q_holdout.csv",
+    "source": "m3ot_branch_replay/learned/results/fit_m3ot/results/q_holdout.csv",
+    "source_sha256": "8475f430f013154740bdce0b262bac3bd8af6b7b6deb2fb9f39a5f7e2db11f28",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/qr/r_low_bias.csv",
+    "source": "m3ot_branch_replay/learned/results/fit_m3ot/results/r_low_bias.csv",
+    "source_sha256": "61e0802c12b2472a974696c9d9cadfa9ae23d1fa2b2264db47327e57f463668b",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/m2/calibration.json",
+    "source": "m3ot_branch_replay/rules/results/research_assets/m2_noise.json",
+    "source_sha256": "5c39407a1e865a9db72fcd3792a502424a85adec710a26bb11bfc6ac6adfe429",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/m2/decision_counts.csv",
+    "source": "m3ot_m2_aux/results/decision_counts.csv",
+    "source_sha256": "31969a00420064ce48f4c9eaac1107e8aaf0ca9e64f903a4687e590628446008",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/m2/added_switch_same_state.csv",
+    "source": "m3ot_m2_aux/decision_trace/results/added_switch_same_state.csv",
+    "source_sha256": "fda4b7429760e47d1b5f832f7147c49364ad74287feab591fc45c9e00b7d7cca",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/m2/added_low_fp_same_state.csv",
+    "source": "m3ot_m2_aux/decision_trace/results/added_low_fp_same_state.csv",
+    "source_sha256": "0958c53b08f2babe5a81b62367e47bc594b4e7b8eaf5023278c453ffaf27d0d0",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/m2/identity_delta.csv",
+    "source": "m3ot_m2_aux/forensics/results/identity_delta.csv",
+    "source_sha256": "ece0143d1f709ed1e5b72fda613a6b0fc7bef4b5dddd54fd70f64323ec274884",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/m2/same_state_summary.json",
+    "source": "m3ot_m2_aux/decision_trace/results/same_state_summary.json",
+    "source_sha256": "e5b1eff1d13977c4752ec5dec7915c87f07d4cde8b211d5f1b5f39862ed07f95",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/m2/low_update_interaction.csv",
+    "source": "m3ot_low_update_stack/results/interaction.csv",
+    "source_sha256": "7d15e52cd2f863c67e630b693f509191c8bfb9f8bbf8208c34541d22160f1f57",
+    "server_root_normalized": false
+  },
+  {
+    "path": "repro/score.py",
+    "source": "m3ot_branch_replay/score.py",
+    "source_sha256": "668db6b7ab066746be72edf8f1ea61441676601a78fe267d5273861e5763f98c",
+    "server_root_normalized": false
+  },
+  {
+    "path": "repro/batch1_evaluator/evaluate.py",
+    "source": "m3ot_first_batch/evaluate.py",
+    "source_sha256": "ebb00a5e2651f5e047a85d90d6b40d4d27643a6c42c8d8cb59f877fc21c7c226",
+    "server_root_normalized": false
+  },
+  {
+    "path": "repro/m3ot_low_update_stack/low_update/run.py",
+    "source": "m3ot_low_update_stack/low_update/run.py",
+    "source_sha256": "c84ff6b6f5297546a2753c165376ef8db5cb792cecd714b0b22ce344f26e57be",
+    "server_root_normalized": false
+  },
+  {
+    "path": "repro/m3ot_low_update_stack/low_update/low_updates.py",
+    "source": "m3ot_low_update_stack/low_update/low_updates.py",
+    "source_sha256": "781e6cef3ba8892c70997b4e9f2b692068afdbbcfde5092388e65b8bd2af3323",
+    "server_root_normalized": false
+  },
+  {
+    "path": "repro/m3ot_low_update_stack/m2/replay.py",
+    "source": "m3ot_low_update_stack/m2/replay.py",
+    "source_sha256": "faa96997a10890ed9a6ec66d70f0232b938a4b7f49e1208b6d46fb98a1411da3",
+    "server_root_normalized": false
+  },
+  {
+    "path": "repro/m3ot_low_update_stack/m2/m2_association.py",
+    "source": "m3ot_low_update_stack/m2/m2_association.py",
+    "source_sha256": "b1d3c46af1f4d0a727c8057c7111ab560e1e0eaf2cbb859b7d094d37b30d7b53",
+    "server_root_normalized": false
+  },
+  {
+    "path": "repro/m3ot_m2_aux/aux/aux_association.py",
+    "source": "m3ot_m2_aux/aux/aux_association.py",
+    "source_sha256": "0960e16e7c8045c244fd0e3dd5c01b3ad6e6a7f5837708f485811e617457e31d",
+    "server_root_normalized": false
+  },
+  {
+    "path": "repro/m3ot_m2_aux/aux/replay_aux.py",
+    "source": "m3ot_m2_aux/aux/replay_aux.py",
+    "source_sha256": "c40c0640a8e17b799b692c0585ad160141d9c8d5311a9401694703421c45c826",
+    "server_root_normalized": false
+  },
+  {
+    "path": "repro/m3ot_m2_aux/decision_trace/replay_trace.py",
+    "source": "m3ot_m2_aux/decision_trace/replay_trace.py",
+    "source_sha256": "1d39d55347ee6c36e649f52cad492adfbe69d6b35ec42f0251e2623fb3a44603",
+    "server_root_normalized": false
+  },
+  {
+    "path": "repro/m3ot_m2_low_only/replay/replay_low_nll.py",
+    "source": "m3ot_m2_low_only/replay/replay_low_nll.py",
+    "source_sha256": "0e1cffa3b46ff5d491dddc442d4a3a07d768f1a4998a1e71ed76b2a4ef6dedad",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/wem/summary.json",
+    "source": "m3ot_branch_replay/wem/results/summary.json",
+    "source_sha256": "09b77881f6b5d7ae07245e0106dab670de61922e90b5668302cab905fbd5f646",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/wem/per_sequence.csv",
+    "source": "m3ot_branch_replay/wem/results/per_sequence.csv",
+    "source_sha256": "f0a33ded0302b49ff0a01db9b745ce83f1722f32cd670f55673bfa315b974a46",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/wem/input_verification.json",
+    "source": "m3ot_branch_replay/wem/results/input_verification.json",
+    "source_sha256": "57d7e12242f0506ae65e5690c1bd659a73ea354d96a12ef1ca97d17478bd9284",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_off_b.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_off_b.json",
+    "source_sha256": "d9fa45f628b75c160941985aacc94020e458232d69912d7d99d507ac04e52e8c",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_off_gmc.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_off_gmc.json",
+    "source_sha256": "fc4253bcbe0bf1e906982b7e3a550f50c756ba9d117d6b00339a7c05b85d9013",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_p1_b.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_p1_b.json",
+    "source_sha256": "63d456889e9622adf359ee4c030f41c485b3c62ed1515f444b320440f99b4824",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_p1_gmc.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_p1_gmc.json",
+    "source_sha256": "9257fe140428dcb46d8e2481232ae505ab94739493608d10840333e99d53b9ee",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_p2_b.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_p2_b.json",
+    "source_sha256": "cca31c0a981e91d5d0faef9e7f1f8d1a68caaa63031bf0141d490437fec337fc",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_p2_gmc.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_p2_gmc.json",
+    "source_sha256": "617e7c12875d96bdda04c3482cc7e33795c6d8ada6db21077064ea6c8364b893",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_p3_b.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_p3_b.json",
+    "source_sha256": "1d078c0f1941bfd3b9633d80ef7b8a12c67d7d4cb153de2978cffe6c5f7965a3",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_p3_gmc.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_p3_gmc.json",
+    "source_sha256": "3e71a54b60036e41f5dab9b42201db6d29d3de12f689c31d529811be21513344",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_q2_absolute_b.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_q2_absolute_b.json",
+    "source_sha256": "4cff85820c401e45baf53382f28189a6b15715118db3d4f675ad298fdbe24760",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_q2_absolute_gmc.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_q2_absolute_gmc.json",
+    "source_sha256": "004562fd6c3d30da7be0e73796b8f6c4b748d0b4fec7a28300426257609b77ac",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_q2_paired_b.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_q2_paired_b.json",
+    "source_sha256": "0bbc1307958a52d17168d076e777058f944d9468467fa761dd1477949c27380a",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/tco/tco_q2_paired_gmc.json",
+    "source": "m3ot_branch_replay/learned/results/tco_receipts/tco_q2_paired_gmc.json",
+    "source_sha256": "2e27cb3746bcf9c4050473ad88ff1e82cf7e555d05e7d9e2a0fa197d5aa93f46",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/mechanisms/camera/native/measurement.json",
+    "source": "m3ot_branch_replay/mechanism_audit/camera/native/measurement.json",
+    "source_sha256": "cd5c6d62020552249d25ac6fb3867ad169f197a35b45ca3cb99bd776c993845f",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/mechanisms/camera/dual_low/measurement.json",
+    "source": "m3ot_branch_replay/mechanism_audit/camera/dual_low/measurement.json",
+    "source_sha256": "9f7e87a4efd3cecd69739c700a9dd2177f3f5d116db613aa8fdced5f02c9cadb",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/mechanisms/camera/hardware.json",
+    "source": "m3ot_branch_replay/mechanism_audit/camera/hardware.json",
+    "source_sha256": "5a6d9da8dd9e4bb3e87c0512b4f55f15c552406972723fb9eb2625cfd0664763",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/mechanisms/camera/projection/projection_costs.json",
+    "source": "m3ot_branch_replay/mechanism_audit/camera/projection/projection_costs.json",
+    "source_sha256": "597fbc52ce8524ff4e421dc5fe89fd4536dd5b6185dbdb30e9392e9b67e7a9cf",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/mechanisms/oru/results/summary.json",
+    "source": "m3ot_branch_replay/mechanism_audit/oru/results/summary.json",
+    "source_sha256": "aa51742dd516d34e0e93fdf0f23b204ead9385f12df459f2375884e6f5df5b50",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/mechanisms/oru/results/paired_windows.csv",
+    "source": "m3ot_branch_replay/mechanism_audit/oru/results/paired_windows.csv",
+    "source_sha256": "1a25ece6b2fa99ee4b19f694f9486e2dc09cf10e9cea24bf8575daefc8a926a5",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/mechanisms/bam/results/crowded_low_bias_strata.csv",
+    "source": "m3ot_branch_replay/mechanism_audit/bam/results/crowded_low_bias_strata.csv",
+    "source_sha256": "e7a10f7f7aa605c012776cd764ec8908e351e537269aaa809d0c4538ba90e9b1",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/mechanisms/bam/results/bottom_order_train_check.csv",
+    "source": "m3ot_branch_replay/mechanism_audit/bam/results/bottom_order_train_check.csv",
+    "source_sha256": "7488c689c4719bd4c491ac1c58b2280852425e1deae719add331be74d16c22b5",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/mechanisms/q/q_gap_coverage.csv",
+    "source": "m3ot_branch_replay/mechanism_audit/q/q_gap_coverage.csv",
+    "source_sha256": "9cd6dd55363aaeb357575d6defe9941ae209c6dfa8ecb55c6668f7faf1dba232",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/mechanisms/q/q_recovery_followup.csv",
+    "source": "m3ot_branch_replay/mechanism_audit/q/q_recovery_followup.csv",
+    "source_sha256": "287d0f7f1dbdf1063dfa5a960077ee2fc61cfb94c6119acb90b40f1cd8444226",
+    "server_root_normalized": false
+  },
+  {
+    "path": "evidence/mechanisms/q/q_audit.json",
+    "source": "m3ot_branch_replay/mechanism_audit/q/q_audit.json",
+    "source_sha256": "5ddd411dcca5c67679a66faf3781857c07818d6f7bd9b7fd93e0a0f47305e723",
+    "server_root_normalized": false
+  }
+]

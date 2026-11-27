@@ -1,0 +1,140 @@
+{
+  "status": "COMPLETE",
+  "policies": {
+    "simple_q_policy.json": "11564cfba6caa2cfc95e2375689285902a9b16ea25862dd826a3ba194855ce44",
+    "q_policy.json": "0c057eaa1875353dce191f406e73295f2a3c21d67a856165469752e9de26b24c",
+    "r_policy.json": "c8ad43b25fc5fbc5301a825d7572929109305dae886efaeb80b1711b8576203f"
+  },
+  "groups": {
+    "fit": [
+      "01",
+      "02",
+      "04",
+      "06",
+      "09"
+    ],
+    "check": [
+      "05",
+      "07"
+    ]
+  },
+  "val_gt_used": false,
+  "test_gt_used": false,
+  "train_export_sha256": "42183ac73e13c113d8f8fa527252ed853bb2413dc4d1b49d71eb992081d66dcc",
+  "by_sequence": {
+    "1_rgb_train_1-01": {
+      "split": "fit",
+      "group": "01",
+      "r_samples": 12430,
+      "simple_q_windows": 720,
+      "neural_q_windows": 740,
+      "gt_sha256": "a3298d91bdb16076371a5e80edb9039b9d27f2d95e9d4d05836e7d34b73badef"
+    },
+    "1_rgb_train_1-02": {
+      "split": "fit",
+      "group": "02",
+      "r_samples": 2983,
+      "simple_q_windows": 721,
+      "neural_q_windows": 749,
+      "gt_sha256": "4197f745090610baed9e954f9a42d5bdce69113d6b9c1d944713fdb0c002bc1c"
+    },
+    "1_rgb_train_1-04": {
+      "split": "fit",
+      "group": "04",
+      "r_samples": 2973,
+      "simple_q_windows": 736,
+      "neural_q_windows": 737,
+      "gt_sha256": "3d0c0df49cde14a229d5e7d974e9a76a9f933acc1244e5eabdb3ad0d5b17d9b6"
+    },
+    "1_rgb_train_1-05": {
+      "split": "check",
+      "group": "05",
+      "r_samples": 4387,
+      "simple_q_windows": 719,
+      "neural_q_windows": 717,
+      "gt_sha256": "2bbd5b1f11bd9edbb707ce50e8ada4be3d5f7341024647b8d91e70246fd04c5f"
+    },
+    "1_rgb_train_1-06": {
+      "split": "fit",
+      "group": "06",
+      "r_samples": 4817,
+      "simple_q_windows": 736,
+      "neural_q_windows": 722,
+      "gt_sha256": "a94059f247f910fc1bd890955f0be4b105d419f056842ba5fe33162c9e3a574a"
+    },
+    "1_rgb_train_1-07": {
+      "split": "check",
+      "group": "07",
+      "r_samples": 4652,
+      "simple_q_windows": 741,
+      "neural_q_windows": 756,
+      "gt_sha256": "040e66c6e9dc6a96bb33a74842d7d9ce433d340b97c35a5a7430aaa35c636154"
+    },
+    "1_rgb_train_1-09": {
+      "split": "fit",
+      "group": "09",
+      "r_samples": 21286,
+      "simple_q_windows": 758,
+      "neural_q_windows": 759,
+      "gt_sha256": "64385be7427a72444f472441eef8e9eff0da7d8a8a4dc86836130f46febb2824"
+    },
+    "2_rgb_train_2-01": {
+      "split": "fit",
+      "group": "01",
+      "r_samples": 13171,
+      "simple_q_windows": 743,
+      "neural_q_windows": 728,
+      "gt_sha256": "feed138c9a274b52a02de2e164f7ff3959221195aa28772569d4fb8b05400666"
+    },
+    "2_rgb_train_2-02": {
+      "split": "fit",
+      "group": "02",
+      "r_samples": 3122,
+      "simple_q_windows": 749,
+      "neural_q_windows": 757,
+      "gt_sha256": "b98b4097b489ff5d93764eab321f54564ef0d85f783c1ee7e03b7970c6a8876f"
+    },
+    "2_rgb_train_2-04": {
+      "split": "fit",
+      "group": "04",
+      "r_samples": 3093,
+      "simple_q_windows": 748,
+      "neural_q_windows": 744,
+      "gt_sha256": "5ca437c278d7b085883a845cb3172264f2a5b41361ff7435e2b9db8890422d6b"
+    },
+    "2_rgb_train_2-05": {
+      "split": "check",
+      "group": "05",
+      "r_samples": 4602,
+      "simple_q_windows": 732,
+      "neural_q_windows": 737,
+      "gt_sha256": "2849d7241f6946ccd06f906fd301f7051b2fd01335a8b83feae7917e0139544b"
+    },
+    "2_rgb_train_2-06": {
+      "split": "fit",
+      "group": "06",
+      "r_samples": 4927,
+      "simple_q_windows": 719,
+      "neural_q_windows": 719,
+      "gt_sha256": "f719512d55fcb701a1d39c6db7eb1bea9d1ec11b685bc075c7cd6cfde5560558"
+    },
+    "2_rgb_train_2-07": {
+      "split": "check",
+      "group": "07",
+      "r_samples": 3781,
+      "simple_q_windows": 755,
+      "neural_q_windows": 738,
+      "gt_sha256": "edae7a373197baf3fe3883df27827599fd1dfc4740248372b86cc0972eda9d9d"
+    },
+    "2_rgb_train_2-09": {
+      "split": "fit",
+      "group": "09",
+      "r_samples": 23153,
+      "simple_q_windows": 758,
+      "neural_q_windows": 754,
+      "gt_sha256": "b83f2af263d49a5beab1ea484a643ba39ae77eea892cb55ef0a99f9cc3f63e2b"
+    }
+  },
+  "r_registration": "Paired same-size RGB–IR grid used by frozen M3OT detector; no annotation-derived thermal alignment.",
+  "association_targets": "Mutual best IoU >= .30, both runner-up margins >= .15; score > .10."
+}

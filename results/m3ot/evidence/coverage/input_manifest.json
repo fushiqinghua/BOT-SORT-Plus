@@ -1,0 +1,196 @@
+{
+  "status": "VERIFIED",
+  "split": "original M3OT RGB Val",
+  "same_images_and_detector_parameters": true,
+  "sequences": {
+    "1_rgb_val_1-08": 600,
+    "2_rgb_val_2-08": 600
+  },
+  "arms": {
+    "lower": {
+      "status": "verified",
+      "arm": "lower",
+      "checkpoint": {
+        "path": "M3OT_ROOT/formal_detection_v1/runs/rgbt/weights/epoch0.pt",
+        "sha256": "a646e8a3f36a5d9e285ce34462af57f4cf510cfcb72f1d496c38f5f2d3dc816c",
+        "epoch_metadata": 0,
+        "epoch_train_log": 1,
+        "training_validation": {
+          "metrics/precision(B)": 0.54341,
+          "metrics/recall(B)": 0.56099,
+          "metrics/mAP50(B)": 0.51216,
+          "metrics/mAP50-95(B)": 0.18747
+        },
+        "metric_scope": "Ultralytics checkpoint val snapshots, not a held-out test score"
+      },
+      "protocol_sha256": "c97c4bf30a26958a6c69fdc7530bda0dddc5c498babb34dd0ba01360ffb2c427",
+      "sequence_assets": {
+        "1_rgb_val_1-08": {
+          "detection_path": "M3OT_ROOT/m3ot_first_batch_v1/inputs/lower/detections/1_rgb_val_1-08.json.gz",
+          "frames": 600,
+          "detections": 31192,
+          "detection_sha256": "5ddbef0801752debff44600cf2f9420c8a9943d99788792106aa299aae0fe6b4",
+          "detection_fingerprint": "9eb9a293c40200c23a5a588d0db646fce7dd9bfba5950dd96875f15eee3c5f8a",
+          "detection_elapsed_seconds": 15.531192002003081,
+          "feature_path": "M3OT_ROOT/m3ot_first_batch_v1/inputs/lower/features/1_rgb_val_1-08.npz",
+          "feature_sha256": "d3802b0f69dda1a7b2420b82e5004683c857292ea6e92cc7a5a1fd5a61ada8fa",
+          "feature_metadata_sha256": "d7a173879bb9d0d74b1eb0af4d1d6b18d913314d5a5ae282f012bd79e1931994",
+          "feature_counts": {
+            "detections": 31192,
+            "eligible_score_gt_0_1": 21141,
+            "high_score_gt_0_5": 4696,
+            "rgb_valid": 21141,
+            "rgb_zero_outputs": 0
+          }
+        },
+        "2_rgb_val_2-08": {
+          "detection_path": "M3OT_ROOT/m3ot_first_batch_v1/inputs/lower/detections/2_rgb_val_2-08.json.gz",
+          "frames": 600,
+          "detections": 41265,
+          "detection_sha256": "15d70f74e1b9bfa793648eab796a749a7490f4d4eacbc739948fdb8bbce72375",
+          "detection_fingerprint": "bf71cc6739d5492d329fd295dca33d53c0b5cbc4160144f982b18283696bdd42",
+          "detection_elapsed_seconds": 15.215785945067182,
+          "feature_path": "M3OT_ROOT/m3ot_first_batch_v1/inputs/lower/features/2_rgb_val_2-08.npz",
+          "feature_sha256": "4590a39fd034833ba9837e397bc1b7b49cc03eca8b39bc1178a101b0e134c0ff",
+          "feature_metadata_sha256": "cc39b83596cd5d0ebcb6c2585532092a7512916db5a612a6513377072daae4c8",
+          "feature_counts": {
+            "detections": 41265,
+            "eligible_score_gt_0_1": 27583,
+            "high_score_gt_0_5": 4451,
+            "rgb_valid": 27583,
+            "rgb_zero_outputs": 0
+          }
+        }
+      },
+      "rgb_encoder": {
+        "sha256": "71f6f2723be4d563f1df201133daa53f57bee2a67266486559d5ce453a60f805",
+        "weights_name": "clip_veri.pt",
+        "encoder": "M3OT historical CLIP-ReID ViT-B/16 pretrained on VeRi",
+        "input_hw": [
+          256,
+          256
+        ],
+        "output_dim": 1280,
+        "precision": "float32",
+        "verified_visual_state_keys": 162,
+        "crop_source": "RGB BGR-to-RGB",
+        "mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "std": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "config": {
+        "imgsz": 640,
+        "conf": 0.05,
+        "iou": 0.7,
+        "max_det": 300,
+        "half": false,
+        "batch": 16
+      },
+      "inference_without_gt": true,
+      "torch_version": "2.8.0+cu128",
+      "opencv_version": "5.0.0"
+    },
+    "higher": {
+      "status": "verified",
+      "arm": "higher",
+      "checkpoint": {
+        "path": "M3OT_ROOT/formal_detection_v1/runs/rgbt/weights/best.pt",
+        "sha256": "ce90644b2264462b91a89705a5ef0291bd9aadaf739554b00a6e700016c5553e",
+        "epoch_metadata": -1,
+        "epoch_train_log": 10,
+        "training_validation": {
+          "metrics/precision(B)": 0.77752,
+          "metrics/recall(B)": 0.80408,
+          "metrics/mAP50(B)": 0.79987,
+          "metrics/mAP50-95(B)": 0.40433
+        },
+        "metric_scope": "Ultralytics checkpoint val snapshots, not a held-out test score"
+      },
+      "protocol_sha256": "94407ee410c424053b458e69ed199d7f306610faf17fce6e38858ec34d052f35",
+      "sequence_assets": {
+        "1_rgb_val_1-08": {
+          "detection_path": "M3OT_ROOT/m3ot_first_batch_v1/inputs/higher/detections/1_rgb_val_1-08.json.gz",
+          "frames": 600,
+          "detections": 9226,
+          "detection_sha256": "1b441d78b41640e48e57318160d92bff1d0c55b130266e59c8e24f68fe91e2f0",
+          "detection_fingerprint": "809012903ea83f91ee0210447dfa61d6f81d566fe1fe6fb27fb448e767562ed1",
+          "detection_elapsed_seconds": 15.482613388099708,
+          "feature_path": "M3OT_ROOT/m3ot_first_batch_v1/inputs/higher/features/1_rgb_val_1-08.npz",
+          "feature_sha256": "3e2703d459e15f1028b8248265a098b96eecbfd6cb62d0079f390fe3ea87794c",
+          "feature_metadata_sha256": "73273313350074325ecc4a967528110b996e9475f5776604c76a9a90441645aa",
+          "feature_counts": {
+            "detections": 9226,
+            "eligible_score_gt_0_1": 8071,
+            "high_score_gt_0_5": 5755,
+            "rgb_valid": 8071,
+            "rgb_zero_outputs": 0
+          }
+        },
+        "2_rgb_val_2-08": {
+          "detection_path": "M3OT_ROOT/m3ot_first_batch_v1/inputs/higher/detections/2_rgb_val_2-08.json.gz",
+          "frames": 600,
+          "detections": 11212,
+          "detection_sha256": "c56d475e9efb39d649855226c89fe68a1f99e254d68772663900f9b7f5b3b8f0",
+          "detection_fingerprint": "8085e9025184634386d0203d6e2cbab1b2f0a1ae004b5d1f2f6d9a4117df9f93",
+          "detection_elapsed_seconds": 14.760760357952677,
+          "feature_path": "M3OT_ROOT/m3ot_first_batch_v1/inputs/higher/features/2_rgb_val_2-08.npz",
+          "feature_sha256": "c80edb76dfa286074d6c6ddc187fae72771e8b3d67b7c2d84c646e6b19857808",
+          "feature_metadata_sha256": "c028bf208022a58b3ca2a7063ea5c70563a67e7c7073477ca2f8e8bfbdb96ea5",
+          "feature_counts": {
+            "detections": 11212,
+            "eligible_score_gt_0_1": 9898,
+            "high_score_gt_0_5": 6567,
+            "rgb_valid": 9898,
+            "rgb_zero_outputs": 0
+          }
+        }
+      },
+      "rgb_encoder": {
+        "sha256": "71f6f2723be4d563f1df201133daa53f57bee2a67266486559d5ce453a60f805",
+        "weights_name": "clip_veri.pt",
+        "encoder": "M3OT historical CLIP-ReID ViT-B/16 pretrained on VeRi",
+        "input_hw": [
+          256,
+          256
+        ],
+        "output_dim": 1280,
+        "precision": "float32",
+        "verified_visual_state_keys": 162,
+        "crop_source": "RGB BGR-to-RGB",
+        "mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "std": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "config": {
+        "imgsz": 640,
+        "conf": 0.05,
+        "iou": 0.7,
+        "max_det": 300,
+        "half": false,
+        "batch": 16
+      },
+      "inference_without_gt": true,
+      "torch_version": "2.8.0+cu128",
+      "opencv_version": "5.0.0"
+    }
+  },
+  "source_sha256": {
+    "builder": "0e0e0d668c664df4ecd57bcf21a92c96eb50d19f8a9e30d2609e328f964d15f3",
+    "rgb_feature_export": "dda56497e7db58729c58fe00b6340e9b2f49caea1e594cccd735a6ae5b1753ab",
+    "i/o_contract": "44cbfe26a152cfac5ad0826b27728ed4be6b970cc865bbb6860e5d064d8dd22b"
+  }
+}

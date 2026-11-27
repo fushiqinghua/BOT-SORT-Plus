@@ -1,0 +1,13 @@
+detector,source_branch,module,arm,sequence,HOTA,DetA,AssA,IDF1,MOTA,TP,FP,FN,IDSW
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p2_b,COMBINED_SEQ,57.67103682875481,53.44251648420544,62.49137840751276,79.60814642949214,65.72092010739425,11230,2142,2551,31
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p2_b,1_rgb_val_1-08,56.74309527026962,52.26956371999832,61.67870060394176,79.07412135137434,64.22098292087836,4854,1159,884,10
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p2_b,2_rgb_val_2-08,58.12765187437993,54.452665882614816,62.28886263128531,80.01558239189715,66.79099838368768,6376,983,1667,21
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p2_gmc,COMBINED_SEQ,57.669466379385966,53.439942705335554,62.482209072320025,79.53750414257834,65.59030549307016,11223,2153,2558,31
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p2_gmc,1_rgb_val_1-08,56.77405893974704,52.275212143463015,61.744531451508955,79.04364843018804,64.13384454513768,4852,1163,886,9
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p2_gmc,2_rgb_val_2-08,58.10295351244829,54.44229570390943,62.236938857295364,79.91430797195534,66.62936715156036,6371,990,1672,22
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p3_b,COMBINED_SEQ,57.67148702705743,53.44298147480687,62.491640392399795,79.60814642949214,65.72092010739425,11230,2142,2551,31
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p3_b,1_rgb_val_1-08,56.74375555528026,52.270054351126575,61.67958835307714,79.07412135137434,64.22098292087836,4854,1159,884,10
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p3_b,2_rgb_val_2-08,58.12826700172092,54.453066806340686,62.28967901281543,80.01558239189715,66.79099838368768,6376,983,1667,21
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p3_gmc,COMBINED_SEQ,57.66991956045692,53.44040745558466,62.48247695199157,79.53750414257834,65.59030549307016,11223,2153,2558,31
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p3_gmc,1_rgb_val_1-08,56.774715145930664,52.27570285809584,61.745408527847815,79.04364843018804,64.13384454513768,4852,1163,886,9
+higher,research/vttiny-track-conditioned-observation,tco_VTTiny_frozen_exploratory,tco_p3_gmc,2_rgb_val_2-08,58.1035747046152,54.44269584440018,62.237773164129806,79.91430797195534,66.62936715156036,6371,990,1672,22

@@ -1,0 +1,8 @@
+{
+  "gpu_index": "0",
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "cpu_threads": 1,
+  "serial_native_then_dual_low": true,
+  "source_sha256": "da504e4c058703f23c6130969f5e71e4e5bc6f2340af1bcb35c3946075487386",
+  "scope": "One serial repeat of the entire two-sequence cache replay. No detector or ReID timing."
+}

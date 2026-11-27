@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "arm": "dual_low",
+  "sequences": [
+    {
+      "sequence": "1_rgb_val_1-08",
+      "frames": 600,
+      "update_seconds": 4.316748078563251,
+      "wall_seconds": 8.037969765951857,
+      "model_frames": 37
+    },
+    {
+      "sequence": "2_rgb_val_2-08",
+      "frames": 600,
+      "update_seconds": 4.611423124326393,
+      "wall_seconds": 8.336769744055346,
+      "model_frames": 84
+    }
+  ],
+  "original_trajectory_byte_equal": true,
+  "measurement_scope": "Single serial cache replay; update includes association and online GMC."
+}

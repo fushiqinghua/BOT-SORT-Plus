@@ -1,0 +1,332 @@
+{
+  "scope": "M3OT RGB Val with archived strong frozen detector and RGB ReID",
+  "scoring_run": "7280433ecb6163c9",
+  "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "verification": {
+    "1_rgb_val_1-08": {
+      "frozen_detection_cache_sha256": "1b441d78b41640e48e57318160d92bff1d0c55b130266e59c8e24f68fe91e2f0",
+      "native": {
+        "prediction_sha256": "218f589b8b6a58a04d5b6941284c73d3510441b99a925a441b89d19d9ec01a12",
+        "trace_sha256": "80db7bcd538e7498efecc6b314aa60bd1c193ee654df4970d1cc0e767fc8ee82",
+        "n": 42,
+        "same_gt": 25
+      },
+      "oru": {
+        "prediction_sha256": "75ae1cfb955c1e237b6ac6021fbfd0b517552e849377fd6507968b5d448a5db1",
+        "trace_sha256": "00ed2c17a091035ab32bebb6a37e41a7723720453bd91cffdaaeaf8721c55b12",
+        "n": 42,
+        "same_gt": 25
+      },
+      "shared_events": 25
+    },
+    "2_rgb_val_2-08": {
+      "frozen_detection_cache_sha256": "c56d475e9efb39d649855226c89fe68a1f99e254d68772663900f9b7f5b3b8f0",
+      "native": {
+        "prediction_sha256": "8183ac88552d3dd60c4a5dab93c7fb2fb65e053d1e872cb807787fa28db49085",
+        "trace_sha256": "5f4d7f00eceecc43fc924ba87864a01546a216491af1396a1856f27352044a9f",
+        "n": 38,
+        "same_gt": 21
+      },
+      "oru": {
+        "prediction_sha256": "31713df8b5e7c7939c2486dc3c10538cfbf8c21a53a96e8ffb53ac46a8f9e1da",
+        "trace_sha256": "1b057ccaeb0b8d5ed303f629129d333c81017cdeaefbf7f17b1d4ec47893d988",
+        "n": 37,
+        "same_gt": 21
+      },
+      "shared_events": 21
+    }
+  },
+  "pairing": "Same CLEAR GT and original detector row at both reacquisition endpoints in both arms; uninterrupted GT through horizon",
+  "sustained_definition": "All frames through the inclusive horizon preserve the same predicted ID and CLEAR GT",
+  "results": {
+    "1_rgb_val_1-08": {
+      "shared_windows": {
+        "3": {
+          "eligible": 25,
+          "native_held": 21,
+          "oru_held": 21,
+          "gained": 0,
+          "lost": 0,
+          "outcomes": {
+            "native": {
+              "held": 21,
+              "no_clear_output": 4
+            },
+            "oru": {
+              "held": 21,
+              "no_clear_output": 4
+            }
+          }
+        },
+        "5": {
+          "eligible": 24,
+          "native_held": 21,
+          "oru_held": 21,
+          "gained": 0,
+          "lost": 0,
+          "outcomes": {
+            "native": {
+              "held": 21,
+              "no_clear_output": 3
+            },
+            "oru": {
+              "held": 21,
+              "no_clear_output": 3
+            }
+          }
+        },
+        "10": {
+          "eligible": 21,
+          "native_held": 17,
+          "oru_held": 17,
+          "gained": 0,
+          "lost": 0,
+          "outcomes": {
+            "native": {
+              "no_clear_output": 4,
+              "held": 17
+            },
+            "oru": {
+              "no_clear_output": 4,
+              "held": 17
+            }
+          }
+        }
+      },
+      "recovery_status": {
+        "native": {
+          "unresolved": 17,
+          "same_gt": 25
+        },
+        "oru": {
+          "unresolved": 17,
+          "same_gt": 25
+        }
+      },
+      "own_windows": {
+        "native": {
+          "3": {
+            "held": 21,
+            "no_clear_output": 4
+          },
+          "5": {
+            "held": 21,
+            "no_clear_output": 3
+          },
+          "10": {
+            "no_clear_output": 4,
+            "held": 17
+          }
+        },
+        "oru": {
+          "3": {
+            "held": 21,
+            "no_clear_output": 4
+          },
+          "5": {
+            "held": 21,
+            "no_clear_output": 3
+          },
+          "10": {
+            "no_clear_output": 4,
+            "held": 17
+          }
+        }
+      }
+    },
+    "2_rgb_val_2-08": {
+      "shared_windows": {
+        "3": {
+          "eligible": 19,
+          "native_held": 17,
+          "oru_held": 17,
+          "gained": 0,
+          "lost": 0,
+          "outcomes": {
+            "native": {
+              "held": 17,
+              "no_clear_output": 2
+            },
+            "oru": {
+              "held": 17,
+              "no_clear_output": 2
+            }
+          }
+        },
+        "5": {
+          "eligible": 19,
+          "native_held": 16,
+          "oru_held": 16,
+          "gained": 0,
+          "lost": 0,
+          "outcomes": {
+            "native": {
+              "held": 16,
+              "no_clear_output": 3
+            },
+            "oru": {
+              "held": 16,
+              "no_clear_output": 3
+            }
+          }
+        },
+        "10": {
+          "eligible": 18,
+          "native_held": 13,
+          "oru_held": 13,
+          "gained": 0,
+          "lost": 0,
+          "outcomes": {
+            "native": {
+              "no_clear_output": 5,
+              "held": 13
+            },
+            "oru": {
+              "no_clear_output": 5,
+              "held": 13
+            }
+          }
+        }
+      },
+      "recovery_status": {
+        "native": {
+          "unresolved": 16,
+          "same_gt": 21,
+          "different_gt": 1
+        },
+        "oru": {
+          "unresolved": 15,
+          "same_gt": 21,
+          "different_gt": 1
+        }
+      },
+      "own_windows": {
+        "native": {
+          "3": {
+            "held": 17,
+            "no_clear_output": 2
+          },
+          "5": {
+            "held": 16,
+            "no_clear_output": 3
+          },
+          "10": {
+            "no_clear_output": 5,
+            "held": 13
+          }
+        },
+        "oru": {
+          "3": {
+            "held": 17,
+            "no_clear_output": 2
+          },
+          "5": {
+            "held": 16,
+            "no_clear_output": 3
+          },
+          "10": {
+            "no_clear_output": 5,
+            "held": 13
+          }
+        }
+      }
+    },
+    "COMBINED_SEQ": {
+      "shared_windows": {
+        "3": {
+          "eligible": 44,
+          "native_held": 38,
+          "oru_held": 38,
+          "gained": 0,
+          "lost": 0,
+          "outcomes": {
+            "native": {
+              "held": 38,
+              "no_clear_output": 6
+            },
+            "oru": {
+              "held": 38,
+              "no_clear_output": 6
+            }
+          }
+        },
+        "5": {
+          "eligible": 43,
+          "native_held": 37,
+          "oru_held": 37,
+          "gained": 0,
+          "lost": 0,
+          "outcomes": {
+            "native": {
+              "held": 37,
+              "no_clear_output": 6
+            },
+            "oru": {
+              "held": 37,
+              "no_clear_output": 6
+            }
+          }
+        },
+        "10": {
+          "eligible": 39,
+          "native_held": 30,
+          "oru_held": 30,
+          "gained": 0,
+          "lost": 0,
+          "outcomes": {
+            "native": {
+              "no_clear_output": 9,
+              "held": 30
+            },
+            "oru": {
+              "no_clear_output": 9,
+              "held": 30
+            }
+          }
+        }
+      },
+      "recovery_status": {
+        "native": {
+          "unresolved": 33,
+          "same_gt": 46,
+          "different_gt": 1
+        },
+        "oru": {
+          "unresolved": 32,
+          "same_gt": 46,
+          "different_gt": 1
+        }
+      },
+      "own_windows": {
+        "native": {
+          "3": {
+            "held": 38,
+            "no_clear_output": 6
+          },
+          "5": {
+            "held": 37,
+            "no_clear_output": 6
+          },
+          "10": {
+            "no_clear_output": 9,
+            "held": 30
+          }
+        },
+        "oru": {
+          "3": {
+            "held": 38,
+            "no_clear_output": 6
+          },
+          "5": {
+            "held": 37,
+            "no_clear_output": 6
+          },
+          "10": {
+            "no_clear_output": 9,
+            "held": 30
+          }
+        }
+      }
+    }
+  }
+}

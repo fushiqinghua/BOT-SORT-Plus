@@ -1,0 +1,1967 @@
+{
+  "status": "PASS",
+  "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "gt": {
+    "1_rgb_val_1-08": {
+      "frames": 600,
+      "source_relative_path": "data/raw/M3OT/1/rgb/val/1-08/gt/gt.txt",
+      "raw_gt_sha256": "f2b720615f0bf3f864cbf52ab4dd27f4b46f90fa845aa33818deccf97be2934d",
+      "evaluated_gt_sha256": "5b3858951379a0df75df026e039922fbe21ba0e544032878d7d6bbbf972ad9bc",
+      "vehicle_rows": 5738,
+      "ignored_rows": 0
+    },
+    "2_rgb_val_2-08": {
+      "frames": 600,
+      "source_relative_path": "data/raw/M3OT/2/rgb/val/2-08/gt/gt.txt",
+      "raw_gt_sha256": "7d655fcb193334744a139f42cd9ae2789988ea5b4485cda305de9c7e8c69824a",
+      "evaluated_gt_sha256": "c42ea70743fa91d231abfe8e431d79b883ea1e35edc89a14d4c0f89c849b5dc4",
+      "vehicle_rows": 8043,
+      "ignored_rows": 0
+    }
+  },
+  "prediction_hashes": {
+    "lower": {
+      "native": {
+        "1_rgb_val_1-08": {
+          "sha256": "5a574f81143fab047d303f48ae6b43f1efa29aa333e2ee49e3d6cd08ef3ce9eb",
+          "rows": 5293
+        },
+        "2_rgb_val_2-08": {
+          "sha256": "50931411c0423bff20ffc611cd635a7fb9e19309a3f27ea6bca57f8dfd4b2897",
+          "rows": 5204
+        }
+      },
+      "B_early_moderate": {
+        "1_rgb_val_1-08": {
+          "sha256": "54f9962385312ede14c016c4d21caef7dd14bd31aa6e1f9e33f40ad1ce9a6174",
+          "rows": 5504
+        },
+        "2_rgb_val_2-08": {
+          "sha256": "119cccb647ac7c3e85d6f5cd33f531d7d7860dd6375c1577fb91379528ffa51f",
+          "rows": 5816
+        }
+      },
+      "dual_low": {
+        "1_rgb_val_1-08": {
+          "sha256": "778663f72cbc35729a8a03c1c0fedbb6a7003d016982ed55239781fbc23dd825",
+          "rows": 5419
+        },
+        "2_rgb_val_2-08": {
+          "sha256": "6512d12a7dc74436e6db26754ae3937c678e13bae30d97c0236c43556f463a38",
+          "rows": 5240
+        }
+      },
+      "evidence_both": {
+        "1_rgb_val_1-08": {
+          "sha256": "72305663709393aa5f8112d5103ae7473962d10efe93783d29443deb4833ddb1",
+          "rows": 5540
+        },
+        "2_rgb_val_2-08": {
+          "sha256": "1a3a2995c543c60b0b28718ca6254344e161657d595d09a69711fdcbe53a4d38",
+          "rows": 5721
+        }
+      }
+    },
+    "higher": {
+      "native": {
+        "1_rgb_val_1-08": {
+          "sha256": "218f589b8b6a58a04d5b6941284c73d3510441b99a925a441b89d19d9ec01a12",
+          "rows": 5920
+        },
+        "2_rgb_val_2-08": {
+          "sha256": "8183ac88552d3dd60c4a5dab93c7fb2fb65e053d1e872cb807787fa28db49085",
+          "rows": 6972
+        }
+      },
+      "B_early_moderate": {
+        "1_rgb_val_1-08": {
+          "sha256": "1837c820d398baa6f8e94d1d2dcbb8d261a2329ecc8ffc2b5c8c27058b6a020c",
+          "rows": 6013
+        },
+        "2_rgb_val_2-08": {
+          "sha256": "33c8c696a029d3651f6b392669060bf81147b2b5be3e39cb71534214fed09efb",
+          "rows": 7359
+        }
+      },
+      "dual_low": {
+        "1_rgb_val_1-08": {
+          "sha256": "92e98004670757dd7dae45255294b085bf6cfa0e43bd34decbbf5a4d2b42bf5a",
+          "rows": 5922
+        },
+        "2_rgb_val_2-08": {
+          "sha256": "9d5d7257dd463eab32e562eb0ad7501486aa71bb4b7ee16aa4d4755b12913d4e",
+          "rows": 6975
+        }
+      },
+      "evidence_both": {
+        "1_rgb_val_1-08": {
+          "sha256": "4a24a7413bf66dc942e5bf0b4975fc61d3c3c2c1bac1a65dbbdfc8a65ffc5d28",
+          "rows": 6015
+        },
+        "2_rgb_val_2-08": {
+          "sha256": "381d5c9ea134e879f6c638023b58e08f5c4a84e93431539f2071d8869e54adcb",
+          "rows": 7361
+        }
+      }
+    }
+  },
+  "metrics": [
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 40.471333293135324,
+      "DetA": 31.629412973556864,
+      "AssA": 51.90229717981947,
+      "IDF1": 55.643187381017135,
+      "MOTA": 18.99616591146741,
+      "TP": 3203,
+      "FP": 2090,
+      "FN": 2535,
+      "IDSW": 23
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 37.538335349085706,
+      "DetA": 27.785585283174935,
+      "AssA": 50.89736212218251,
+      "IDF1": 53.295085679776555,
+      "MOTA": 24.82904388909611,
+      "TP": 3613,
+      "FP": 1591,
+      "FN": 4430,
+      "IDSW": 25
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.89562076020893,
+      "DetA": 29.477810382228125,
+      "AssA": 51.47571286189877,
+      "IDF1": 54.36197380344344,
+      "MOTA": 22.4004063565779,
+      "TP": 6816,
+      "FP": 3681,
+      "FN": 6965,
+      "IDSW": 48
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 40.59226261092459,
+      "DetA": 30.536582419443164,
+      "AssA": 54.059876451701975,
+      "IDF1": 55.39939512542252,
+      "MOTA": 14.482398048100384,
+      "TP": 3180,
+      "FP": 2324,
+      "FN": 2558,
+      "IDSW": 25
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 38.89462712481711,
+      "DetA": 30.168827897303004,
+      "AssA": 50.392307749199574,
+      "IDF1": 54.01544122952594,
+      "MOTA": 25.003108292925525,
+      "TP": 3924,
+      "FP": 1892,
+      "FN": 4119,
+      "IDSW": 21
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 39.686645470681555,
+      "DetA": 30.328866744744907,
+      "AssA": 52.10682389444974,
+      "IDF1": 54.63527349507987,
+      "MOTA": 20.622596328278064,
+      "TP": 7104,
+      "FP": 4216,
+      "FN": 6677,
+      "IDSW": 46
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 40.723451521638026,
+      "DetA": 31.375706165160423,
+      "AssA": 52.96278487615885,
+      "IDF1": 55.71390158644797,
+      "MOTA": 17.13140467061694,
+      "TP": 3214,
+      "FP": 2205,
+      "FN": 2524,
+      "IDSW": 26
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 37.44689656309298,
+      "DetA": 27.6296910116002,
+      "AssA": 50.934955034674246,
+      "IDF1": 53.00007528419785,
+      "MOTA": 24.12035310207634,
+      "TP": 3603,
+      "FP": 1637,
+      "FN": 4440,
+      "IDSW": 26
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.974439033714106,
+      "DetA": 29.28711804538424,
+      "AssA": 52.013648559012836,
+      "IDF1": 54.23895253682488,
+      "MOTA": 21.210362092736375,
+      "TP": 6817,
+      "FP": 3842,
+      "FN": 6964,
+      "IDSW": 52
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 39.89997777216397,
+      "DetA": 29.609737830154355,
+      "AssA": 53.86456438915601,
+      "IDF1": 53.67973044866111,
+      "MOTA": 11.781108400139422,
+      "TP": 3120,
+      "FP": 2420,
+      "FN": 2618,
+      "IDSW": 24
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 39.04801927993127,
+      "DetA": 30.37456568575841,
+      "AssA": 50.44470652542984,
+      "IDF1": 54.15576867189771,
+      "MOTA": 25.786398110157897,
+      "TP": 3908,
+      "FP": 1813,
+      "FN": 4135,
+      "IDSW": 21
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 39.46011522888282,
+      "DetA": 30.027135990389386,
+      "AssA": 52.032465862954766,
+      "IDF1": 53.94137848414663,
+      "MOTA": 19.95501052173282,
+      "TP": 7028,
+      "FP": 4233,
+      "FN": 6753,
+      "IDSW": 45
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 55.857986231322144,
+      "DetA": 51.42541334174315,
+      "AssA": 60.75673663974516,
+      "IDF1": 78.34963115457197,
+      "MOTA": 63.68072499128616,
+      "TP": 4794,
+      "FP": 1126,
+      "FN": 944,
+      "IDSW": 14
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 55.942145969321224,
+      "DetA": 52.30802444454514,
+      "AssA": 60.055496770519525,
+      "IDF1": 76.33699633699634,
+      "MOTA": 63.521074226035054,
+      "TP": 6056,
+      "FP": 916,
+      "FN": 1987,
+      "IDSW": 31
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 56.04926456301902,
+      "DetA": 51.84782322752511,
+      "AssA": 60.84162212109133,
+      "IDF1": 77.21666104300229,
+      "MOTA": 63.58754807343444,
+      "TP": 10850,
+      "FP": 2042,
+      "FN": 2931,
+      "IDSW": 45
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 56.7423083675314,
+      "DetA": 52.26890045259027,
+      "AssA": 61.67778186866495,
+      "IDF1": 79.07412135137434,
+      "MOTA": 64.22098292087836,
+      "TP": 4854,
+      "FP": 1159,
+      "FN": 884,
+      "IDSW": 10
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 58.1263317088791,
+      "DetA": 54.45172329613358,
+      "AssA": 62.28702801143869,
+      "IDF1": 80.01558239189715,
+      "MOTA": 66.79099838368768,
+      "TP": 6376,
+      "FP": 983,
+      "FN": 1667,
+      "IDSW": 21
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 57.6698576985227,
+      "DetA": 53.441679941852684,
+      "AssA": 62.48959121788188,
+      "IDF1": 79.60814642949214,
+      "MOTA": 65.72092010739425,
+      "TP": 11230,
+      "FP": 2142,
+      "FN": 2551,
+      "IDSW": 31
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 55.880961346755065,
+      "DetA": 51.43530531920214,
+      "AssA": 60.80092395413965,
+      "IDF1": 78.28473413379074,
+      "MOTA": 63.59358661554548,
+      "TP": 4792,
+      "FP": 1130,
+      "FN": 946,
+      "IDSW": 13
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 55.89562797405531,
+      "DetA": 52.28816116941891,
+      "AssA": 59.96937518064919,
+      "IDF1": 76.20189106405647,
+      "MOTA": 63.37187616560984,
+      "TP": 6052,
+      "FP": 923,
+      "FN": 1991,
+      "IDSW": 32
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 56.032373004712156,
+      "DetA": 51.84158293077598,
+      "AssA": 60.805404814430766,
+      "IDF1": 77.11222730339605,
+      "MOTA": 63.46418982657281,
+      "TP": 10844,
+      "FP": 2053,
+      "FN": 2937,
+      "IDSW": 45
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 56.773870666040104,
+      "DetA": 52.27503971410946,
+      "AssA": 61.74439016337496,
+      "IDF1": 79.04364843018804,
+      "MOTA": 64.13384454513768,
+      "TP": 4852,
+      "FP": 1163,
+      "FN": 886,
+      "IDSW": 9
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 58.101900258426895,
+      "DetA": 54.44141200977559,
+      "AssA": 62.23577878672977,
+      "IDF1": 79.91430797195534,
+      "MOTA": 66.62936715156036,
+      "TP": 6371,
+      "FP": 990,
+      "FN": 1672,
+      "IDSW": 22
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 57.668607282889674,
+      "DetA": 53.43935757187538,
+      "AssA": 62.48086703319831,
+      "IDF1": 79.53750414257834,
+      "MOTA": 65.59030549307016,
+      "TP": 11223,
+      "FP": 2153,
+      "FN": 2558,
+      "IDSW": 31
+    }
+  ],
+  "paired_deltas": [
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 0.0,
+      "DetA": 0.0,
+      "AssA": 0.0,
+      "IDF1": 0.0,
+      "MOTA": 0.0,
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "IDSW": 0
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 0.0,
+      "DetA": 0.0,
+      "AssA": 0.0,
+      "IDF1": 0.0,
+      "MOTA": 0.0,
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "IDSW": 0
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 0.0,
+      "DetA": 0.0,
+      "AssA": 0.0,
+      "IDF1": 0.0,
+      "MOTA": 0.0,
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "IDSW": 0
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 0.12092931778926896,
+      "DetA": -1.0928305541137,
+      "AssA": 2.157579271882504,
+      "IDF1": -0.24379225559461304,
+      "MOTA": -4.513767863367027,
+      "TP": -23,
+      "FP": 234,
+      "FN": 23,
+      "IDSW": 2
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 1.3562917757314068,
+      "DetA": 2.3832426141280685,
+      "AssA": -0.5050543729829329,
+      "IDF1": 0.7203555497493852,
+      "MOTA": 0.17406440382941568,
+      "TP": 311,
+      "FP": 301,
+      "FN": -311,
+      "IDSW": -4
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 0.7910247104726267,
+      "DetA": 0.8510563625167826,
+      "AssA": 0.6311110325509688,
+      "IDF1": 0.2732996916364314,
+      "MOTA": -1.777810028299836,
+      "TP": 288,
+      "FP": 535,
+      "FN": -288,
+      "IDSW": -2
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 0.2521182285027024,
+      "DetA": -0.25370680839644066,
+      "AssA": 1.0604876963393792,
+      "IDF1": 0.07071420543083207,
+      "MOTA": -1.86476124085047,
+      "TP": 11,
+      "FP": 115,
+      "FN": -11,
+      "IDSW": 3
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": -0.09143878599272881,
+      "DetA": -0.15589427157473423,
+      "AssA": 0.03759291249173913,
+      "IDF1": -0.2950103955787071,
+      "MOTA": -0.7086907870197692,
+      "TP": -10,
+      "FP": 46,
+      "FN": 10,
+      "IDSW": 1
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 0.07881827350517767,
+      "DetA": -0.19069233684388465,
+      "AssA": 0.5379356971140652,
+      "IDF1": -0.12302126661855795,
+      "MOTA": -1.190044263841525,
+      "TP": 1,
+      "FP": 161,
+      "FN": -1,
+      "IDSW": 4
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": -0.5713555209713519,
+      "DetA": -2.019675143402509,
+      "AssA": 1.962267209336538,
+      "IDF1": -1.9634569323560243,
+      "MOTA": -7.21505751132799,
+      "TP": -83,
+      "FP": 330,
+      "FN": 83,
+      "IDSW": 1
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 1.5096839308455614,
+      "DetA": 2.5889804025834735,
+      "AssA": -0.4526555967526704,
+      "IDF1": 0.8606829921211556,
+      "MOTA": 0.957354221061788,
+      "TP": 295,
+      "FP": 222,
+      "FN": -295,
+      "IDSW": -4
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 0.5644944686738924,
+      "DetA": 0.5493256081612614,
+      "AssA": 0.5567530010559949,
+      "IDF1": -0.42059531929680816,
+      "MOTA": -2.4453958348450797,
+      "TP": 212,
+      "FP": 552,
+      "FN": -212,
+      "IDSW": -3
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 0.0,
+      "DetA": 0.0,
+      "AssA": 0.0,
+      "IDF1": 0.0,
+      "MOTA": 0.0,
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "IDSW": 0
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 0.0,
+      "DetA": 0.0,
+      "AssA": 0.0,
+      "IDF1": 0.0,
+      "MOTA": 0.0,
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "IDSW": 0
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 0.0,
+      "DetA": 0.0,
+      "AssA": 0.0,
+      "IDF1": 0.0,
+      "MOTA": 0.0,
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "IDSW": 0
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 0.8843221362092564,
+      "DetA": 0.8434871108471214,
+      "AssA": 0.9210452289197946,
+      "IDF1": 0.7244901968023783,
+      "MOTA": 0.5402579295921939,
+      "TP": 60,
+      "FP": 33,
+      "FN": -60,
+      "IDSW": -4
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 2.1841857395578756,
+      "DetA": 2.1436988515884394,
+      "AssA": 2.2315312409191677,
+      "IDF1": 3.678586054900819,
+      "MOTA": 3.269924157652625,
+      "TP": 320,
+      "FP": 67,
+      "FN": -320,
+      "IDSW": -10
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 1.6205931355036753,
+      "DetA": 1.593856714327572,
+      "AssA": 1.647969096790547,
+      "IDF1": 2.3914853864898475,
+      "MOTA": 2.133372033959809,
+      "TP": 380,
+      "FP": 100,
+      "FN": -380,
+      "IDSW": -14
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 0.022975115432920745,
+      "DetA": 0.009891977458991619,
+      "AssA": 0.04418731439449175,
+      "IDF1": -0.06489702078123116,
+      "MOTA": -0.08713837574067895,
+      "TP": -2,
+      "FP": 4,
+      "FN": 2,
+      "IDSW": -1
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": -0.0465179952659156,
+      "DetA": -0.019863275126226654,
+      "AssA": -0.0861215898703378,
+      "IDF1": -0.1351052729398674,
+      "MOTA": -0.14919806042521344,
+      "TP": -4,
+      "FP": 7,
+      "FN": 4,
+      "IDSW": 1
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": -0.016891558306866727,
+      "DetA": -0.0062402967491337336,
+      "AssA": -0.03621730666056777,
+      "IDF1": -0.10443373960623603,
+      "MOTA": -0.12335824686162766,
+      "TP": -6,
+      "FP": 11,
+      "FN": 6,
+      "IDSW": 0
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 0.9158844347179596,
+      "DetA": 0.8496263723663091,
+      "AssA": 0.9876535236298025,
+      "IDF1": 0.6940172756160763,
+      "MOTA": 0.4531195538515149,
+      "TP": 58,
+      "FP": 37,
+      "FN": -58,
+      "IDSW": -5
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 2.1597542891056705,
+      "DetA": 2.13338756523045,
+      "AssA": 2.180282016210242,
+      "IDF1": 3.5773116349590026,
+      "MOTA": 3.108292925525305,
+      "TP": 315,
+      "FP": 74,
+      "FN": -315,
+      "IDSW": -9
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 1.6193427198706516,
+      "DetA": 1.591534344350265,
+      "AssA": 1.6392449121069745,
+      "IDF1": 2.3208430995760523,
+      "MOTA": 2.0027574196357207,
+      "TP": 373,
+      "FP": 111,
+      "FN": -373,
+      "IDSW": -14
+    }
+  ],
+  "detector_interaction": [
+    {
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 0.7633928184199874,
+      "DetA": 1.9363176649608214,
+      "AssA": -1.2365340429627096,
+      "IDF1": 0.9682824523969913,
+      "MOTA": 5.054025792959221,
+      "TP": 83,
+      "FP": -201,
+      "FN": -83,
+      "IDSW": -6
+    },
+    {
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 0.8278939638264688,
+      "DetA": -0.23954376253962906,
+      "AssA": 2.7365856139021005,
+      "IDF1": 2.958230505151434,
+      "MOTA": 3.095859753823209,
+      "TP": 9,
+      "FP": -234,
+      "FN": -9,
+      "IDSW": -6
+    },
+    {
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 0.8295684250310487,
+      "DetA": 0.7428003518107893,
+      "AssA": 1.0168580642395781,
+      "IDF1": 2.118185694853416,
+      "MOTA": 3.9111820622596447,
+      "TP": 92,
+      "FP": -435,
+      "FN": -92,
+      "IDSW": -12
+    },
+    {
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": -0.22914311306978163,
+      "DetA": 0.2635987858554323,
+      "AssA": -1.0163003819448875,
+      "IDF1": -0.13561122621206323,
+      "MOTA": 1.777622865109791,
+      "TP": -13,
+      "FP": -111,
+      "FN": 13,
+      "IDSW": -4
+    },
+    {
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 0.04492079072681321,
+      "DetA": 0.13603099644850758,
+      "AssA": -0.12371450236207693,
+      "IDF1": 0.15990512263883971,
+      "MOTA": 0.5594927265945557,
+      "TP": 6,
+      "FP": -39,
+      "FN": -6,
+      "IDSW": 0
+    },
+    {
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": -0.0957098318120444,
+      "DetA": 0.1844520400947509,
+      "AssA": -0.574153003774633,
+      "IDF1": 0.018587527012321914,
+      "MOTA": 1.0666860169798973,
+      "TP": -7,
+      "FP": -150,
+      "FN": 7,
+      "IDSW": -4
+    },
+    {
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "HOTA": 1.4872399556893114,
+      "DetA": 2.869301515768818,
+      "AssA": -0.9746136857067356,
+      "IDF1": 2.6574742079721005,
+      "MOTA": 7.6681770651795045,
+      "TP": 141,
+      "FP": -293,
+      "FN": -141,
+      "IDSW": -6
+    },
+    {
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "HOTA": 0.6500703582601091,
+      "DetA": -0.4555928373530236,
+      "AssA": 2.6329376129629125,
+      "IDF1": 2.716628642837847,
+      "MOTA": 2.150938704463517,
+      "TP": 20,
+      "FP": -148,
+      "FN": -20,
+      "IDSW": -5
+    },
+    {
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 1.0548482511967592,
+      "DetA": 1.0422087361890036,
+      "AssA": 1.0824919110509796,
+      "IDF1": 2.7414384188728604,
+      "MOTA": 4.4481532544808005,
+      "TP": 161,
+      "FP": -441,
+      "FN": -161,
+      "IDSW": -11
+    }
+  ],
+  "clear_gap_summary": [
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "0",
+      "pairs": 4714,
+      "id_switches": 4,
+      "same_id_rate": 0.9991514637250742
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "1-3",
+      "pairs": 73,
+      "id_switches": 2,
+      "same_id_rate": 0.9726027397260274
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "11-30",
+      "pairs": 8,
+      "id_switches": 2,
+      "same_id_rate": 0.75
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "4-10",
+      "pairs": 20,
+      "id_switches": 2,
+      "same_id_rate": 0.9
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "0",
+      "pairs": 6220,
+      "id_switches": 11,
+      "same_id_rate": 0.9982315112540193
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "1-3",
+      "pairs": 72,
+      "id_switches": 3,
+      "same_id_rate": 0.9583333333333334
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "11-30",
+      "pairs": 7,
+      "id_switches": 3,
+      "same_id_rate": 0.5714285714285714
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "31+",
+      "pairs": 3,
+      "id_switches": 3,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "4-10",
+      "pairs": 35,
+      "id_switches": 1,
+      "same_id_rate": 0.9714285714285714
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "0",
+      "pairs": 10934,
+      "id_switches": 15,
+      "same_id_rate": 0.9986281324309493
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "1-3",
+      "pairs": 145,
+      "id_switches": 5,
+      "same_id_rate": 0.9655172413793104
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "11-30",
+      "pairs": 15,
+      "id_switches": 5,
+      "same_id_rate": 0.6666666666666666
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "31+",
+      "pairs": 3,
+      "id_switches": 3,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "higher",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "4-10",
+      "pairs": 55,
+      "id_switches": 3,
+      "same_id_rate": 0.9454545454545454
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "0",
+      "pairs": 4659,
+      "id_switches": 4,
+      "same_id_rate": 0.9991414466623739
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "1-3",
+      "pairs": 61,
+      "id_switches": 1,
+      "same_id_rate": 0.9836065573770492
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "11-30",
+      "pairs": 12,
+      "id_switches": 6,
+      "same_id_rate": 0.5
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "31+",
+      "pairs": 1,
+      "id_switches": 1,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "4-10",
+      "pairs": 20,
+      "id_switches": 1,
+      "same_id_rate": 0.95
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "0",
+      "pairs": 5943,
+      "id_switches": 11,
+      "same_id_rate": 0.9981490829547367
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "1-3",
+      "pairs": 38,
+      "id_switches": 3,
+      "same_id_rate": 0.9210526315789473
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "11-30",
+      "pairs": 18,
+      "id_switches": 12,
+      "same_id_rate": 0.3333333333333333
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "31+",
+      "pairs": 5,
+      "id_switches": 5,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "4-10",
+      "pairs": 9,
+      "id_switches": 1,
+      "same_id_rate": 0.8888888888888888
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "0",
+      "pairs": 10602,
+      "id_switches": 15,
+      "same_id_rate": 0.9985851726089418
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "1-3",
+      "pairs": 99,
+      "id_switches": 4,
+      "same_id_rate": 0.9595959595959596
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "11-30",
+      "pairs": 30,
+      "id_switches": 18,
+      "same_id_rate": 0.4
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "31+",
+      "pairs": 6,
+      "id_switches": 6,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "higher",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "4-10",
+      "pairs": 29,
+      "id_switches": 2,
+      "same_id_rate": 0.9310344827586207
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "0",
+      "pairs": 4710,
+      "id_switches": 3,
+      "same_id_rate": 0.9993630573248408
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "1-3",
+      "pairs": 75,
+      "id_switches": 2,
+      "same_id_rate": 0.9733333333333334
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "11-30",
+      "pairs": 8,
+      "id_switches": 2,
+      "same_id_rate": 0.75
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "4-10",
+      "pairs": 20,
+      "id_switches": 2,
+      "same_id_rate": 0.9
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "0",
+      "pairs": 6213,
+      "id_switches": 11,
+      "same_id_rate": 0.998229518751006
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "1-3",
+      "pairs": 74,
+      "id_switches": 4,
+      "same_id_rate": 0.9459459459459459
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "11-30",
+      "pairs": 7,
+      "id_switches": 3,
+      "same_id_rate": 0.5714285714285714
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "31+",
+      "pairs": 3,
+      "id_switches": 3,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "4-10",
+      "pairs": 35,
+      "id_switches": 1,
+      "same_id_rate": 0.9714285714285714
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "0",
+      "pairs": 10923,
+      "id_switches": 14,
+      "same_id_rate": 0.9987183008331044
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "1-3",
+      "pairs": 149,
+      "id_switches": 6,
+      "same_id_rate": 0.959731543624161
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "11-30",
+      "pairs": 15,
+      "id_switches": 5,
+      "same_id_rate": 0.6666666666666666
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "31+",
+      "pairs": 3,
+      "id_switches": 3,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "higher",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "4-10",
+      "pairs": 55,
+      "id_switches": 3,
+      "same_id_rate": 0.9454545454545454
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "0",
+      "pairs": 4663,
+      "id_switches": 5,
+      "same_id_rate": 0.9989277289298735
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "1-3",
+      "pairs": 59,
+      "id_switches": 1,
+      "same_id_rate": 0.9830508474576272
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "11-30",
+      "pairs": 12,
+      "id_switches": 6,
+      "same_id_rate": 0.5
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "31+",
+      "pairs": 1,
+      "id_switches": 1,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "4-10",
+      "pairs": 20,
+      "id_switches": 1,
+      "same_id_rate": 0.95
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "0",
+      "pairs": 5949,
+      "id_switches": 11,
+      "same_id_rate": 0.998150949739452
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "1-3",
+      "pairs": 36,
+      "id_switches": 2,
+      "same_id_rate": 0.9444444444444444
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "11-30",
+      "pairs": 18,
+      "id_switches": 12,
+      "same_id_rate": 0.3333333333333333
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "31+",
+      "pairs": 5,
+      "id_switches": 5,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "4-10",
+      "pairs": 9,
+      "id_switches": 1,
+      "same_id_rate": 0.8888888888888888
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "0",
+      "pairs": 10612,
+      "id_switches": 16,
+      "same_id_rate": 0.9984922728986053
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "1-3",
+      "pairs": 95,
+      "id_switches": 3,
+      "same_id_rate": 0.968421052631579
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "11-30",
+      "pairs": 30,
+      "id_switches": 18,
+      "same_id_rate": 0.4
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "31+",
+      "pairs": 6,
+      "id_switches": 6,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "higher",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "4-10",
+      "pairs": 29,
+      "id_switches": 2,
+      "same_id_rate": 0.9310344827586207
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "0",
+      "pairs": 3002,
+      "id_switches": 12,
+      "same_id_rate": 0.9960026648900733
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "1-3",
+      "pairs": 98,
+      "id_switches": 5,
+      "same_id_rate": 0.9489795918367347
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "11-30",
+      "pairs": 8,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "31+",
+      "pairs": 3,
+      "id_switches": 2,
+      "same_id_rate": 0.3333333333333333
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "4-10",
+      "pairs": 34,
+      "id_switches": 6,
+      "same_id_rate": 0.8235294117647058
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "0",
+      "pairs": 3778,
+      "id_switches": 19,
+      "same_id_rate": 0.9949708840656432
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "1-3",
+      "pairs": 62,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "11-30",
+      "pairs": 10,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "31+",
+      "pairs": 5,
+      "id_switches": 2,
+      "same_id_rate": 0.6
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "4-10",
+      "pairs": 33,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "0",
+      "pairs": 6780,
+      "id_switches": 31,
+      "same_id_rate": 0.9954277286135693
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "1-3",
+      "pairs": 160,
+      "id_switches": 5,
+      "same_id_rate": 0.96875
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "11-30",
+      "pairs": 18,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "31+",
+      "pairs": 8,
+      "id_switches": 4,
+      "same_id_rate": 0.5
+    },
+    {
+      "detector": "lower",
+      "arm": "B_early_moderate",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "4-10",
+      "pairs": 67,
+      "id_switches": 6,
+      "same_id_rate": 0.9104477611940298
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "0",
+      "pairs": 3049,
+      "id_switches": 15,
+      "same_id_rate": 0.9950803542144966
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "1-3",
+      "pairs": 95,
+      "id_switches": 6,
+      "same_id_rate": 0.9368421052631579
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "11-30",
+      "pairs": 6,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "31+",
+      "pairs": 4,
+      "id_switches": 3,
+      "same_id_rate": 0.25
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "4-10",
+      "pairs": 24,
+      "id_switches": 2,
+      "same_id_rate": 0.9166666666666666
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "0",
+      "pairs": 3492,
+      "id_switches": 19,
+      "same_id_rate": 0.9945589919816724
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "1-3",
+      "pairs": 57,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "11-30",
+      "pairs": 4,
+      "id_switches": 2,
+      "same_id_rate": 0.5
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "31+",
+      "pairs": 3,
+      "id_switches": 3,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "4-10",
+      "pairs": 10,
+      "id_switches": 2,
+      "same_id_rate": 0.8
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "0",
+      "pairs": 6541,
+      "id_switches": 34,
+      "same_id_rate": 0.9948020180400551
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "1-3",
+      "pairs": 152,
+      "id_switches": 6,
+      "same_id_rate": 0.9605263157894737
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "11-30",
+      "pairs": 10,
+      "id_switches": 2,
+      "same_id_rate": 0.8
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "31+",
+      "pairs": 7,
+      "id_switches": 6,
+      "same_id_rate": 0.14285714285714285
+    },
+    {
+      "detector": "lower",
+      "arm": "dual_low",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "4-10",
+      "pairs": 34,
+      "id_switches": 4,
+      "same_id_rate": 0.8823529411764706
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "0",
+      "pairs": 2950,
+      "id_switches": 12,
+      "same_id_rate": 0.9959322033898305
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "1-3",
+      "pairs": 93,
+      "id_switches": 4,
+      "same_id_rate": 0.956989247311828
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "11-30",
+      "pairs": 7,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "31+",
+      "pairs": 4,
+      "id_switches": 3,
+      "same_id_rate": 0.25
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "4-10",
+      "pairs": 31,
+      "id_switches": 5,
+      "same_id_rate": 0.8387096774193549
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "0",
+      "pairs": 3755,
+      "id_switches": 19,
+      "same_id_rate": 0.9949400798934753
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "1-3",
+      "pairs": 66,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "11-30",
+      "pairs": 11,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "31+",
+      "pairs": 4,
+      "id_switches": 2,
+      "same_id_rate": 0.5
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "4-10",
+      "pairs": 36,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "0",
+      "pairs": 6705,
+      "id_switches": 31,
+      "same_id_rate": 0.9953765846383296
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "1-3",
+      "pairs": 159,
+      "id_switches": 4,
+      "same_id_rate": 0.9748427672955975
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "11-30",
+      "pairs": 18,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "31+",
+      "pairs": 8,
+      "id_switches": 5,
+      "same_id_rate": 0.375
+    },
+    {
+      "detector": "lower",
+      "arm": "evidence_both",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "4-10",
+      "pairs": 67,
+      "id_switches": 5,
+      "same_id_rate": 0.9253731343283582
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "0",
+      "pairs": 3037,
+      "id_switches": 12,
+      "same_id_rate": 0.9960487323016134
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "1-3",
+      "pairs": 97,
+      "id_switches": 5,
+      "same_id_rate": 0.9484536082474226
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "11-30",
+      "pairs": 6,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "31+",
+      "pairs": 4,
+      "id_switches": 4,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "1_rgb_val_1-08",
+      "gap_group": "4-10",
+      "pairs": 23,
+      "id_switches": 2,
+      "same_id_rate": 0.9130434782608695
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "0",
+      "pairs": 3502,
+      "id_switches": 17,
+      "same_id_rate": 0.9951456310679612
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "1-3",
+      "pairs": 56,
+      "id_switches": 0,
+      "same_id_rate": 1.0
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "11-30",
+      "pairs": 5,
+      "id_switches": 3,
+      "same_id_rate": 0.4
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "31+",
+      "pairs": 2,
+      "id_switches": 2,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "2_rgb_val_2-08",
+      "gap_group": "4-10",
+      "pairs": 11,
+      "id_switches": 3,
+      "same_id_rate": 0.7272727272727273
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "0",
+      "pairs": 6539,
+      "id_switches": 29,
+      "same_id_rate": 0.9955650711117908
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "1-3",
+      "pairs": 153,
+      "id_switches": 5,
+      "same_id_rate": 0.9673202614379085
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "11-30",
+      "pairs": 11,
+      "id_switches": 3,
+      "same_id_rate": 0.7272727272727273
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "31+",
+      "pairs": 6,
+      "id_switches": 6,
+      "same_id_rate": 0.0
+    },
+    {
+      "detector": "lower",
+      "arm": "native",
+      "sequence": "COMBINED_SEQ",
+      "gap_group": "4-10",
+      "pairs": 34,
+      "id_switches": 5,
+      "same_id_rate": 0.8529411764705882
+    }
+  ]
+}

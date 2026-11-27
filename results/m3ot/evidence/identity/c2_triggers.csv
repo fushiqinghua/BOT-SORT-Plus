@@ -1,0 +1,7 @@
+﻿arm,sequence,association_calls,candidate_pairs_examined,candidate_costs_changed,frames_with_changed_cost,accepted_with_changed_cost,memory_gate_checks,memory_gate_denied,private_anchor_writes,identity_seed_private_written,custom_rgb_writes,native_low_matches,stable_low_warmup_eligible,stable_low_rgb_writes,b_recovered
+native_c2,1_rgb_val_1-08,1200,103087,3606,579,3378,5922,686,4714,108,5236,393,15,15,0
+native_c2,2_rgb_val_2-08,1200,116505,4167,595,3901,6987,752,5753,116,6235,739,32,32,0
+native_c2,COMBINED_SEQ,2400,219592,7773,1174,7279,12909,1438,10467,224,11471,1132,47,47,0
+b_c2,1_rgb_val_1-08,1200,101121,3645,579,3398,6009,707,4753,93,5302,455,17,17,42
+b_c2,2_rgb_val_2-08,1200,119374,4316,595,3963,7435,925,6032,85,6510,1038,40,40,94
+b_c2,COMBINED_SEQ,2400,220495,7961,1174,7361,13444,1632,10785,178,11812,1493,57,57,136
