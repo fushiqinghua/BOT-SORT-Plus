@@ -1,0 +1,29 @@
+{
+  "schema": "wem_v0.1_settings",
+  "base_commit": "176f2a81613c34d16a860765ea7be0845116b534",
+  "output_root": "runs/wem_v0.1",
+  "protocol_file": "configs/research/wem_v0.1_protocol.json",
+  "thresholds": {
+    "low": 0.1,
+    "high": 0.5
+  },
+  "paths": {
+    "detections_dir": null,
+    "baseline_root": null,
+    "features_dir": null,
+    "images_root": null,
+    "gt_root": null,
+    "trackeval_root": null,
+    "source_group_manifest": null
+  },
+  "references": {
+    "B": {
+      "tracker": "B_early_moderate",
+      "run_dir": null
+    },
+    "BG": {
+      "tracker": "evidence_both",
+      "run_dir": null
+    }
+  }
+}

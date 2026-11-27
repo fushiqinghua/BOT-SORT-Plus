@@ -1,0 +1,194 @@
+{
+  "schema": "wem_v0.1_protocol",
+  "version": "0.1.0",
+  "created_date": "2026-11-27",
+  "repository": "fushiqinghua/BOT-SORT-Plus",
+  "branch": "research/vttiny-weak-evidence",
+  "base_commit": "176f2a81613c34d16a860765ea7be0845116b534",
+  "state": "DESIGN_AND_R1A_TOOLING_ONLY",
+  "scope": "轨迹引导的弱检测证据挖掘；首批先执行 S0 库存审计，在线 W 尚未实现",
+  "implementation": {
+    "preparation_cli": "tools/manage_wem_batch.py",
+    "s0_audit_cli": "tools/audit_wem_s0.py",
+    "r1b_state_capture": "NOT_IMPLEMENTED",
+    "r2_frozen_state_evaluation": "NOT_IMPLEMENTED",
+    "r3_identity_calibration": "NOT_IMPLEMENTED",
+    "w_online_tracker": "NOT_IMPLEMENTED"
+  },
+  "references": {
+    "B": {
+      "tracker": "B_early_moderate",
+      "source_config": "configs/botsort_plus/B_early_moderate.json",
+      "source_config_git_blob": "fcedb6a738acd9aabc9113271e8da5bde2565731",
+      "camera": "native",
+      "dual_low": false,
+      "evidence_both": false
+    },
+    "BG": {
+      "tracker": "evidence_both",
+      "variant_source": "experiments/vttiny_gmc/round3_joint/common.py",
+      "camera": "adaptive_gmc",
+      "dual_low": true,
+      "evidence_both": true,
+      "interpretation": "联合参考，不能解释为仅添加 GMC"
+    },
+    "optional_camera_control": {
+      "tracker": "B_early_moderate_dual_low",
+      "camera": "adaptive_gmc",
+      "dual_low": true,
+      "evidence_both": false
+    }
+  },
+  "native_split": {
+    "runtime": "BoxMOT 16.0.11",
+    "input_dtype": "float32",
+    "split_dtype": "float64_after_hstack_int_index",
+    "low": 0.1,
+    "high": 0.5,
+    "low_rule": "score > low && score < high",
+    "high_rule": "score > high",
+    "s0_rule": "!low_mask && !high_mask && score <= low",
+    "high_boundary": "excluded_from_S0_report_separately"
+  },
+  "sources": {
+    "S0": "existing_native_cache_rows",
+    "S1": "lower_export_post_nms_future_only",
+    "S2": "pre_nms_suppressed_future_only"
+  },
+  "constraints": {
+    "preserve_native_detection_array": true,
+    "preserve_native_detection_row_order": true,
+    "preserve_gmc_input": true,
+    "preserve_detector_weights": true,
+    "preserve_q_r": true,
+    "create_new_ids": false,
+    "gt_in_online_inference": false,
+    "future_frames_in_online_inference": false,
+    "feed_weak_features_to_native_or_b_memory": false,
+    "rewrite_past_outputs": false,
+    "native_and_b_and_birth_priority": true,
+    "single_update_per_track_per_frame": true,
+    "s1_enabled": false,
+    "s2_enabled": false,
+    "w_enabled": false
+  },
+  "w_design_defaults": {
+    "frame_start_confirmed_active_only": true,
+    "history_min_observations": 2,
+    "history_max_observations": 3,
+    "history_window_frames": 5,
+    "candidate_group_budget": 5,
+    "candidate_budget_diagnostic": [
+      1,
+      5,
+      10
+    ],
+    "weak_updates_per_episode": 1,
+    "regular_distinct_frames_for_budget_reset": 2,
+    "anchor_state_and_clock_isolated": true,
+    "anchor_reset_uses_preupdate_reference": true,
+    "invalid_anchor_disables_w": true,
+    "invalid_anchor_rebuild_min_regular_frames": 2,
+    "geometry": "same_formal_KF_native_low_feasibility_and_existing_gmc_guard; private_anchor_additional_veto",
+    "w_insertion": "after_B_and_native_birth_before_finalization",
+    "source_priority": [
+      "S0",
+      "S1_if_supported",
+      "S2_if_supported"
+    ],
+    "acceptance_threshold": null,
+    "row_margin": null,
+    "identity_margin": null,
+    "false_acceptance_budget": null,
+    "enabled_calibration_lock": null,
+    "warning": "研究起始设置；学习门槛未锁定时不得开启 W"
+  },
+  "stages": [
+    {
+      "id": "P0",
+      "status": "READY_LOCAL_PREPARATION",
+      "needs": [],
+      "goal": "设置本地路径并保存计划快照，不等于 R0 科研验收"
+    },
+    {
+      "id": "R1a",
+      "status": "READY_LOCAL_TOOL",
+      "needs": [
+        "P0"
+      ],
+      "goal": "S0 库存、原生精确掩码、来源指纹；不判断 W 可恢复性"
+    },
+    {
+      "id": "R0",
+      "status": "PLANNED_NOT_IMPLEMENTED_FOR_W",
+      "needs": [
+        "P0"
+      ],
+      "goal": "冻结输入、复现参考、W 新采样关闭/开启/强制拒绝等价性"
+    },
+    {
+      "id": "R1b",
+      "status": "PLANNED_NOT_IMPLEMENTED",
+      "needs": [
+        "R0",
+        "R1a"
+      ],
+      "goal": "帧首资格、当前 ownership、可信历史与离线 GT 身份机会"
+    },
+    {
+      "id": "R2",
+      "status": "PLANNED_NOT_IMPLEMENTED",
+      "needs": [
+        "R1b"
+      ],
+      "goal": "冻结先验下 raw/KF prior/posterior 与受约束候选可达机会"
+    },
+    {
+      "id": "R3",
+      "status": "PLANNED_NOT_IMPLEMENTED",
+      "needs": [
+        "R1b",
+        "R2"
+      ],
+      "goal": "同身份/邻轨/背景/未知分离及独立校准留出"
+    },
+    {
+      "id": "R4",
+      "status": "CONDITIONAL_NOT_IMPLEMENTED",
+      "needs": [
+        "R3"
+      ],
+      "goal": "通过机制与校准验收后才开展完整闭环"
+    }
+  ],
+  "r4_controls": [
+    "reference_B",
+    "reference_evidence_both",
+    "lower_native_low_same_high_birth",
+    "same_sidecar_pool_plain_low_association",
+    "full_W",
+    "Coast-only_no_current_weak_query_no_measurement_update",
+    "W-coast_with_weak_admission_no_measurement_update"
+  ],
+  "evidence_rules": {
+    "r1a_counts_are_recovery_opportunities": false,
+    "r2_oracle_is_hota_upper_bound": false,
+    "unknown_labels_are_background": false,
+    "same_nms_family_implies_same_object": false,
+    "topk_truncation_implies_uniqueness": false,
+    "zero_errors_on_few_correlated_examples_proves_low_error_rate": false,
+    "w_equals_w_coast_disproves_all_weak_evidence": false,
+    "prepare_or_unit_tests_are_real_data_pass": false,
+    "official_test_30_role": "development_evaluation_repeatedly_used",
+    "mother_video_separation": "must_be_verified; proxy grouping limitation must be disclosed",
+    "human_review": "model_assisted_labels_remain_distinct_from_human_confirmed",
+    "no_usable_or_out_of_band_old_T1_bucket": "not_reusable_as_W_truth"
+  },
+  "review_outputs": [
+    "manifest.json",
+    "summary.json",
+    "per_sequence.csv",
+    "s0_candidates.jsonl"
+  ],
+  "next_local_implementation": "docs/botsort_plus/wem_v0.1/IMPLEMENTATION_TASKS.md"
+}

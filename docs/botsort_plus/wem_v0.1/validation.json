@@ -1,0 +1,19 @@
+{
+  "schema": "wem_v0.1_release_validation",
+  "base_commit": "176f2a81613c34d16a860765ea7be0845116b534",
+  "unit_tests": {
+    "passed": 26,
+    "preparation": 13,
+    "s0_inventory": 13
+  },
+  "cli_smoke": "PASSED_SYNTHETIC_ONLY",
+  "powershell_execution": "NOT_RUN_COMMAND_GENERATION_TESTED",
+  "relative_links_checked": 49,
+  "relative_links_missing": 0,
+  "utf8_replacement_characters": 0,
+  "json_parse": "PASS",
+  "real_dataset_runs": "NOT_RUN",
+  "w_online": "NOT_IMPLEMENTED",
+  "files_before_validation_json": 19,
+  "research_acceptance": "NOT_EVALUATED"
+}

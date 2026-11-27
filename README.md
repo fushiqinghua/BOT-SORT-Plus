@@ -1,69 +1,95 @@
-# BoT-SORT-Plus · 轨迹条件化时序观测增强研究
+# BoT-SORT-Plus · 轨迹引导的弱检测证据挖掘
 
-本分支为毕业设计目标跟踪章节准备 **TCO（Track-Conditioned Observation）模块设计与下一批实验协议**，接续 `research/vttiny-gmc-kf-345` 的 `235fe4097066b5023cc84ca8cd6edd5757fd658c`，完整保留此前 B、GMC、③④⑤及神经 Q/R 的实现和结果。
+本分支 **research/vttiny-weak-evidence** 为毕业设计目标跟踪章节准备 W 模块及下一批实验，从 research/vttiny-track-conditioned-observation 的 **176f2a81613c34d16a860765ea7be0845116b534** 建立，继承 B、GMC、TCO/Q2 及先前实验归档。
 
-**当前状态**　T0 只读采样通过六段与全量 30 段的逐字节一致性核验。T1 完成官方开发集的离线几何诊断和逐帧模型辅助复核。拟合、校准、独立人工复核和闭环评估仍待进行。
+**当前交付：完整设计、分阶段实验计划、本地交接，以及可直接运行的准备检查和 R1a S0 检测缓存库存审计。在线 W、状态感知 R1b、R2–R4 尚未实现或运行。没有新增真实数据指标。**
 
 ## 从这里开始
 
-| 文档 | 内容 |
-|---|---|
-| [T0/T1 实验与复核归档](results/vttiny/iterations/tco-v0.1/README.md) | 6 段与 30 段只读校验、离线几何统计、原抽样与补样、图卡索引 |
-| [T0/T1 复现入口](tools/research/tco_t01/README.md) | 冻结输入、采样回放、独立标记、图卡生成和状态核对 |
-| [模块完整设计](docs/botsort_plus/tco_v0.1/MODULE_DESIGN.md) | 小型空间编码器、历史条件、支持／质量／定位输出、损失、原生低分阶段接入 |
-| [实验协议与逐阶段任务](docs/botsort_plus/tco_v0.1/EXPERIMENT_PLAN.md) | T0–T4、最小对照、机会量核验、继续与停止条件、回传清单 |
-| [本地开始与 Codex 交接](docs/botsort_plus/tco_v0.1/LOCAL_RUNBOOK.md) | 本轮可运行命令、需要准备的资产、首个本地实现任务 |
-| [数据与实现接口](docs/botsort_plus/tco_v0.1/DATA_CONTRACT.md) | 精确检测索引、历史和标签隔离、坐标、可达性、私有状态与产物 |
-| [证据与文献](docs/botsort_plus/tco_v0.1/EVIDENCE_AND_REFERENCES.md) | 为什么选择此方向，以及与 A、C2、旧位置修正、Q/R 的区别 |
-| [设计复核记录](docs/botsort_plus/tco_v0.1/DESIGN_REVIEW.md) | 本次检查了什么、准备工具的软件验证与尚未验证的内容 |
+| 入口 | 内容 |
+| --- | --- |
+| [本地运行手册](docs/botsort_plus/wem_v0.1/LOCAL_RUNBOOK.md) | 拉取、填路径、检查、运行首批审计、回传结果 |
+| [W 完整设计](docs/botsort_plus/wem_v0.1/MODULE_DESIGN.md) | 候选来源、历史、身份竞争、可信锚与 B/GMC 衔接 |
+| [分批实验安排](docs/botsort_plus/wem_v0.1/EXPERIMENT_PLAN.md) | R0、R1a/R1b、R2、R3、R4 的输入、对照、验收与停止条件 |
+| [后续本地实现任务](docs/botsort_plus/wem_v0.1/IMPLEMENTATION_TASKS.md) | 给本地 Codex 的逐任务交接，标明尚需实现的采样器和机制 |
+| [数据合同](docs/botsort_plus/wem_v0.1/DATA_CONTRACT.md) | 原始行号、S0 掩码、状态快照、标签与所有权 |
+| [结果回传模板](docs/botsort_plus/wem_v0.1/RESULTS_TEMPLATE.md) | 必交产物、结果解释和继续/停止结论 |
+| [历史证据与文献](docs/botsort_plus/wem_v0.1/EVIDENCE_AND_REFERENCES.md) | TCO/Q2 结果、相关工作和可验证增量 |
+| [本次软件核验](docs/botsort_plus/wem_v0.1/VALIDATION.md) | 新工具测试、适用范围和未验证内容 |
 
-机器可读材料：[本地设置模板](configs/research/tco_v0.1.example.json) · [设计协议](configs/research/tco_v0.1_protocol.json) · [任务台账模板](configs/research/tco_v0.1_tasks.json)。
+机器配置：[本地模板](configs/research/wem_v0.1.example.json) · [研究协议](configs/research/wem_v0.1_protocol.json)。
 
-## 本轮研究重点
+## 先运行这一批
 
-TCO 学习“这条已确认轨迹在当前局部图像中的目标支持与位置”，为原生低分观测提供有条件的细化。首版使用 RGB，先在固定候选上验证图像与历史信息，再测试闭环影响。
+在仓库根目录执行。首次创建本地分支：
 
-| 阶段 | 目标 | 当前实现状态 |
-|---|---|---|
-| T0 | 复现 B 与 `evidence_both`，核验只读记录和输入来源 | 六段与全量 30 段均已通过只读等价性核验 |
-| T1 | 量化首版能触及的定位／身份错误，建立母视频隔离的数据集 | 官方开发集的离线标记及模型辅助复核已归档，人工复核与训练来源划分待完成 |
-| T2 | 比较原框、几何对照、当前 RGB、历史条件 RGB | 待实现，先 seed 41 |
-| T3a | 原生低分匹配后，仅细化本帧已接受的测量 | 待实现，T2 有证据才推进 |
-| T3b | 原低分可行边内，在分配前做逐边细化 | 条件阶段，保留原保护和一对一约束 |
-| T4 | 成功后单独研究 IR、扩边或新观测 | 需独立版本与消融 |
-
-高分匹配、起轨规则、原低分分数区间及 B 身份恢复职责在首版协议中冻结。阈值外检测和无框重检测属于后置扩展；旧 D3 的 188/210 次缺少可用观测，不能全部记为首版的可改进样本。
-
-参考别名 `BG` 在本批指 **`evidence_both`**：其中包含完整自适应 GMC、`dual_low` 和长间隔证据规则，因此不能把它与 B 的差值解读为单独 GMC 因子的贡献。需要纯因子比较时，另加已归档的 `B_early_moderate_dual_low`。
-
-## 当前可执行的准备步骤
-
-在仓库根目录执行，以下命令可用于 Bash 或 PowerShell：
-
-```bash
+~~~bash
 git fetch origin
-git switch --track origin/research/vttiny-track-conditioned-observation
-python -X utf8 tools/manage_tco_batch.py init --output-config configs/research/tco_v0.1.local.json
-```
+git switch --track origin/research/vttiny-weak-evidence
+python -X utf8 tools/manage_wem_batch.py init --output configs/research/wem_v0.1.local.json
+~~~
 
-若已在该本地分支，使用 `git switch research/vttiny-track-conditioned-observation` 与 `git pull --ff-only origin research/vttiny-track-conditioned-observation`。
+已存在本地分支时，使用 git switch research/vttiny-weak-evidence，再 git pull --ff-only origin research/vttiny-weak-evidence。
 
-填写新本地配置中的资产路径后：
+先填写本地配置中的 paths.detections_dir，使其指向已有逐序列检测 JSON 的目录；核对 thresholds.low/high 与真实参考运行一致。其余资产可以随后补齐。
 
-```bash
-python -X utf8 tools/manage_tco_batch.py check --settings configs/research/tco_v0.1.local.json
-python -X utf8 tools/manage_tco_batch.py prepare --settings configs/research/tco_v0.1.local.json
-python -X utf8 tools/manage_tco_batch.py status --settings configs/research/tco_v0.1.local.json
-```
+~~~bash
+python -X utf8 tools/manage_wem_batch.py check --settings configs/research/wem_v0.1.local.json --strict
+python -X utf8 tools/manage_wem_batch.py prepare --settings configs/research/wem_v0.1.local.json
+python -X utf8 tools/manage_wem_batch.py status --settings configs/research/wem_v0.1.local.json
+~~~
 
-`prepare` 只创建独立批次目录、复制小型协议与任务清单，结果为 **`PREPARED_NOT_RUN`**。它不训练模型、不运行跟踪、不认证 T0 已通过。缺少资产时返回 3 并列出缺项；不会用合成样本冒充真实实验。完整路径映射和本地实施顺序见[运行说明](docs/botsort_plus/tco_v0.1/LOCAL_RUNBOOK.md)。
+prepare 会打印采用实际路径的审计命令；请执行该命令。其形式为：
+
+~~~bash
+python -X utf8 tools/audit_wem_s0.py --detections-dir "<实际检测缓存目录>" --output-dir "runs/wem_v0.1/r1a_s0" --low-thresh 0.1 --high-thresh 0.5
+~~~
+
+上面的尖括号必须替换。若修改 output_root，采用 prepare 打印的实际输出路径。
+
+首批仅需 CPU 和 Python 标准库，不读取 GT，不运行检测器、ReID 或跟踪器，不改变原缓存。重复审计请指定新输出目录。
+
+## 这一批能得到什么
+
+审计生成 manifest.json、summary.json、per_sequence.csv、s0_candidates.jsonl，统计：
+
+- 当前缓存中确实存在的 S0 弱候选；
+- 原生高低分集合和阈值边界行；
+- 各序列候选分布与输入摘要；
+- 按现有 ReID 导出策略，哪些行通常没有特征覆盖。
+
+结果状态为 **INVENTORY_ONLY_NOT_W_OPPORTUNITY**。它不判断轨迹当时是否合格、不判断身份、不等于可补回 FN 的数量。下一步需按[实现任务](docs/botsort_plus/wem_v0.1/IMPLEMENTATION_TASKS.md)接入状态只读采样和离线标记。
+
+## 阶段状态
+
+| 阶段 | 当前状态 |
+| --- | --- |
+| P0：路径配置与计划快照 | 工具可运行；不是 R0 科研验收 |
+| R1a：S0 缓存库存 | 工具可运行；真实数据结果待本地执行 |
+| R0：参考复现与 W 新采样等价性 | 已安排，尚需实现 W 采样后执行 |
+| R1b：轨迹资格、所有权、身份机会 | 已安排，尚需实现 |
+| R2：冻结状态 raw/prior/posterior 比较 | 已安排，尚需实现 |
+| R3：身份/背景区分与校准留出 | 已安排，尚需实现 |
+| R4：W 闭环及组合消融 | 条件阶段；前置证据通过后推进 |
+
+W 首版只帮助帧首已确认活跃旧身份，使用一个当前真实弱框与过去常规观测验证，不新建 ID，不将弱外观写入长期模板，保留原生/B/起轨优先权。S1 更低导出阈值和 S2 NMS 抑制候选分开研究，默认关闭。
+
+闭环安排中保留 **Coast-only → W-coast → 完整 W** 三组，分别区分预测延续、当前弱证据准入和坐标量测更新的贡献。
+
+## 最新历史结论
+
+TCO T2 已完成：P2、P3 的留出净修复分别为 −3、−2。Q2 两组校准后实际采用均为 0。归档包含质量增量误判和冻结质量头归因。当前没有开启 TCO 后的完整 30 段跟踪指标。此前 TCO 的旧 README 状态以[最新 followup 归档](results/vttiny/iterations/tco-v0.1/followup/README.md)为准。
+
+参考 B 为 B_early_moderate。这里的 BG 是 evidence_both，包含自适应 GMC、dual_low 及证据规则，不能当作纯 GMC 单因子。需要相机因素归因时另列 B_early_moderate_dual_low。
 
 ## 历史实证入口
 
-- [第三轮 B＋GMC：七组 30 段结果与 J0–J3](results/vttiny/iterations/v0.4-motion-blur/round3-b-gmc/README.md)
-- [③④⑤及后续神经 Q/R](results/vttiny/iterations/motion-345/README.md)
-- [C2、B、原始 IR 与位置修正](results/vttiny/iterations/v0.3-c2-identity/README.md)
-- [D1–D4 运动与观测诊断](results/vttiny/iterations/v0.4-motion-blur/README.md)
-- [E1–E3 第二轮归档](results/vttiny/iterations/v0.4-motion-blur/round2-e1-e2-e3/README.md)
+- [TCO T2/T3a、Q2 及误差归因](results/vttiny/iterations/tco-v0.1/followup/README.md)
+- [TCO T0/T1 与独立图像复核](results/vttiny/iterations/tco-v0.1/README.md)
+- [第三轮 B+GMC 七组完整结果](results/vttiny/iterations/v0.4-motion-blur/round3-b-gmc/README.md)
+- [③④⑤与神经 Q/R](results/vttiny/iterations/motion-345/README.md)
+- [B/C2 与前期改进](results/vttiny/iterations/v0.3-c2-identity/README.md)
+- [W 结果回传目录](results/vttiny/iterations/wem-v0.1/README.md)
 
-历史 30 段已多次用于开发和选模。本批沿用该事实标签，并为新头单独建立按原视频划分的拟合、校准与内部留出集合。E3 的 22 例正式人审作为独立短支线继续收尾。
+官方 30 段已经多轮用于开发与选择，后续仍按开发评估集描述。新门槛按训练侧来源分组校准；母视频映射无法核验时保留限制。初始化、准备工具和单元测试通过，都不表示真实实验已通过。
+
