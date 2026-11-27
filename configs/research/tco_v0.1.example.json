@@ -1,0 +1,31 @@
+{
+  "schema": "tco_v0.1_settings",
+  "protocol_file": "configs/research/tco_v0.1_protocol.json",
+  "tasks_file": "configs/research/tco_v0.1_tasks.json",
+  "output_root": "outputs/tco_v0.1_pilot",
+  "paths": {
+    "baseline_root": null,
+    "features_dir": null,
+    "images_root": null,
+    "gt_root": null,
+    "trackeval_root": null,
+    "train_images_root": null,
+    "train_gt_root": null,
+    "split_manifest": null
+  },
+  "references": {
+    "B": {"run_dir": null, "tracker": "B_early_moderate"},
+    "BG": {"run_dir": null, "tracker": "evidence_both"}
+  },
+  "constraints": {
+    "rgb_only": true,
+    "existing_detections_only": true,
+    "create_new_ids": false,
+    "modify_high_score": false,
+    "allow_below_threshold": false,
+    "allow_future_frames": false,
+    "gt_in_prediction": false,
+    "allow_ir": false,
+    "preserve_original_low_score_band": true
+  }
+}

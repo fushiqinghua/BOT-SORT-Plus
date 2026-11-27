@@ -1,0 +1,20 @@
+{
+  "schema": "tco_v0.1_tasks",
+  "base_commit": "235fe4097066b5023cc84ca8cd6edd5757fd658c",
+  "status": "PLANNED",
+  "tasks": [
+    {"id": "T0", "title": "冻结双参考、接口与只读等价性", "state": "PLANNED", "depends_on": [], "implementation": "EXISTING_REFERENCE_RUNNERS_PLUS_NEW_INSTRUMENTATION_REQUIRED", "outputs": ["reference_manifest.json", "input_manifest.json", "runtime_manifest.json", "T0_parity.json"], "gate": "精确复现B与evidence_both；记录开启/关闭的原MOT与原事件逐字节一致；无GT进入预测"},
+    {"id": "T1", "title": "真实候选队列、训练划分与可达性分流", "state": "PLANNED", "depends_on": ["T0"], "implementation": "NOT_IMPLEMENTED", "outputs": ["split_manifest.json", "episodes.jsonl.gz", "pairs.runtime.jsonl.gz", "pairs.labels.jsonl.gz", "reachability.csv", "T1_DECISION.md"], "gate": "按母视频隔离；识别首版约束内真实错误和好观测控制；未知不当背景；训练前量化机会量与上限"},
+    {"id": "T2", "title": "RGB当前图像与历史条件小头的离线验证", "state": "PLANNED", "depends_on": ["T1"], "implementation": "NOT_IMPLEMENTED", "outputs": ["crop_manifest.json", "checkpoints", "calibration.json", "offline_metrics.json", "T2_DECISION.md"], "gate": "先seed41；比较P0_raw、P1_geometry、P2_current_rgb=current_repeat、P3_history_rgb=causal_history；P2/P3同样本/架构/预算；出现局部信号后以固定P3模型做shuffled_history诊断；阈值仅calibration选择"},
+    {"id": "T3a", "title": "固定当前帧低分配对的闭环观测细化", "state": "PLANNED", "depends_on": ["T2"], "implementation": "NOT_IMPLEMENTED", "outputs": ["TCO_runtime_parity.json", "trackers", "metrics", "changed_events.csv", "followup_5_10.csv", "T3a_DECISION.md"], "gate": "先源码与禁用/记录等价性；运行自身状态得原配对后修框；验证B及evidence_both两参考上的真实净收益"},
+    {"id": "T3b", "title": "原可行边内、低分关联前的候选框细化", "state": "PLANNED", "depends_on": ["T3a"], "implementation": "CONDITIONAL_NOT_IMPLEMENTED", "outputs": ["feasible_edges.jsonl.gz", "guard_allowed_mask_audit.json", "assignment_deltas.csv", "metrics", "T3b_DECISION.md"], "gate": "T1证明存在可达的竞争错误且T3a有支持；保持原guard、原门限和det_index一对一，不增加不可行边"},
+    {"id": "T4", "title": "成功后的单因素扩展与第三模块确认", "state": "PLANNED", "depends_on": ["T3a"], "implementation": "CONDITIONAL_NEW_PROTOCOL_REQUIRED", "outputs": ["extension_protocol.json", "seed_confirmation.csv", "ablation_summary.md", "thesis_claims.md"], "gate": "有稳定RGB闭环收益后才选择一项：IR、受控扩边或新观测；独立协议与消融，不同时叠加；复核41/42/43"},
+    {"id": "E3_CLOSE", "title": "已有22例人审收尾（独立短支线）", "state": "PLANNED", "depends_on": [], "implementation": "EXISTING_REVIEW_HELPER", "outputs": ["E3_manual_review.csv", "e3_report"], "gate": "按原图与上下文填写正式人审；unknown/pending保留；22例只作机制核验，不作为训练集规模依据"}
+  ],
+  "alternative_route": {
+    "name": "competition_conditioned_identity_representation",
+    "state": "RESERVED_NOT_IMPLEMENTED",
+    "trigger": "T1显示正确候选存在但身份排序错误具有跨视频机会，或观测细化经受控pilot无效",
+    "requires_new_design": true
+  }
+}

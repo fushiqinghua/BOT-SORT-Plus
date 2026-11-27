@@ -1,0 +1,29 @@
+{
+  "schema": "tco_v0.1_delivery_validation",
+  "date": "2026-11-27",
+  "base_commit": "235fe4097066b5023cc84ca8cd6edd5757fd658c",
+  "python_version": "3.12.14",
+  "design_contract_review": "CONSISTENT_WITH_EXPLICIT_PENDING_IMPLEMENTATION",
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -p test_tco_batch_protocol.py -v",
+    "count": 7,
+    "passed": 7,
+    "failed": 0,
+    "scope": "Preparation utility with temporary synthetic metadata, no tracker evaluation"
+  },
+  "actual_template_cli_checks": {
+    "help_exit": 0,
+    "init_exit": 0,
+    "missing_assets_check_exit": 3,
+    "missing_assets_strict_check_exit": 2,
+    "missing_assets_prepare_exit": 3,
+    "not_prepared_status_exit": 3,
+    "experimental_output_directory_created": false
+  },
+  "tco_network_implemented": false,
+  "tco_training_run": false,
+  "tco_online_adapter_implemented": false,
+  "real_dataset_evaluation_run": false,
+  "verified_tracking_gain": null,
+  "next_task": "Implement I0-I1, reproduce both references and export true runtime cohorts with separate offline labels"
+}

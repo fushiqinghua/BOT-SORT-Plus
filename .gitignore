@@ -13,3 +13,4 @@ __pycache__/
 /external/
 /outputs/
 /configs/diagnostics/*.local.json
+/configs/research/*.local.json

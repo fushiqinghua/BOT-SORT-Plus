@@ -1,0 +1,167 @@
+{
+  "schema": "tco_v0.1_protocol",
+  "design_version": "0.1.0",
+  "date": "2026-11-27",
+  "status": "DESIGN_READY_IMPLEMENTATION_PENDING",
+  "module": "TCO: Track-Conditioned Observation",
+  "branch": "research/vttiny-track-conditioned-observation",
+  "base_commit": "235fe4097066b5023cc84ca8cd6edd5757fd658c",
+  "evidence_commit": "0a4b2273ebeac28134f937ff6c48749d4cde0901",
+  "protocol_role": "Prospective design defaults, not fitted or validated hyperparameters",
+  "constraints": {
+    "rgb_only": true,
+    "existing_detections_only": true,
+    "create_new_ids": false,
+    "modify_high_score": false,
+    "allow_below_threshold": false,
+    "allow_future_frames": false,
+    "gt_in_prediction": false,
+    "allow_ir": false,
+    "preserve_original_low_score_band": true
+  },
+  "references": {
+    "B": {
+      "tracker": "B_early_moderate",
+      "camera": "native_sof",
+      "dual_low": false,
+      "long_gap_evidence": false,
+      "archived_combined": {"HOTA": 38.8449563, "IDF1": 44.0595919, "MOTA": 25.6942127, "FP": 15943, "FN": 117264, "IDSW": 374}
+    },
+    "BG": {
+      "tracker": "evidence_both",
+      "camera": "adaptive_gmc",
+      "dual_low": true,
+      "long_gap_evidence": true,
+      "role_note": "Engineering reference with long-gap evidence gates; not a pure GMC factorial contrast to B",
+      "archived_combined": {"HOTA": 38.8596419, "IDF1": 44.0827864, "MOTA": 25.7220257, "FP": 15945, "FN": 117234, "IDSW": 352}
+    },
+    "pure_bg_factorial_optional": "B_early_moderate_dual_low"
+  },
+  "eligibility": {
+    "track_state": "Tracked after the high-score stage, unmatched at that stage",
+    "confirmed_only": true,
+    "detection_source": "Original low-score detections with exact original frame and det_index",
+    "low_score_band_source": "Actual pinned baseline masks; expected 0.10 < score < 0.50, verify exact boundary at T0",
+    "preserve_original_guard_allowed_mask": true,
+    "lost_tracks": false,
+    "unconfirmed_tracks": false,
+    "predicted_boxes_as_measurements": false,
+    "pair_budget": "All original geometrically feasible low-stage edges; if resource cap is needed freeze it before training and report truncation",
+    "failed_support_action": "Fallback to original edge/measurement; no default veto"
+  },
+  "history": {
+    "max_observations": 3,
+    "min_observations": 2,
+    "max_age_frames": 12,
+    "latest_allowed_frame": "t-1",
+    "source": "Raw boxes of actual accepted detections, no prediction outputs, no GT-cleaned runtime history"
+  },
+  "model": {
+    "name": "tco_small_conv_v1",
+    "implementation_status": "NOT_IMPLEMENTED",
+    "trainable_rgb_encoder": true,
+    "input_channels": ["R", "G", "B", "valid_pixel_mask", "proposal_mask"],
+    "current_crop": {"size": 96, "context_factor": 2.5, "min_extent_pixels": 24, "max_extent_pixels": 128, "resize": "letterbox"},
+    "history_crop": {"size": 64, "context_factor": 1.5, "min_extent_pixels": 12, "max_extent_pixels": 128, "resize": "letterbox"},
+    "oversize_crop_action": "fallback_original",
+    "encoder": [
+      {"in_channels": 5, "out_channels": 32, "kernel": 3, "stride": 2},
+      {"in_channels": 32, "out_channels": 64, "kernel": 3, "stride": 2},
+      {"in_channels": 64, "out_channels": 64, "kernel": 3, "stride": 1},
+      {"in_channels": 64, "out_channels": 64, "kernel": 3, "stride": 1}
+    ],
+    "normalization": "GroupNorm, 8 groups",
+    "activation": "SiLU",
+    "padding": 1,
+    "history_conditioning": "Masked target and context pooling, age encoding, history attention, current spatial correlation",
+    "pixel_normalization": "RGB/255 mapped to [-1,1]; fixed, no test-video statistics",
+    "minimum_valid_roi_fraction": 0.5,
+    "geometry_dimensions": 8,
+    "history_token_dimensions": {"pooled_target": 64, "pooled_context": 64, "age_encoding": 8, "input": 136, "projected": 64},
+    "attention": {"heads": 1, "dimension": 64},
+    "spatial_fusion_input_channels": 133,
+    "spatial_fusion_coordinates": ["x relative to proposal center divided by raw width", "y relative to proposal center divided by raw height"],
+    "support_and_box_head_input_dimensions": 200,
+    "shared_quality_head_input_dimensions": 644,
+    "heads": ["same_target_support", "shared_quality_raw_and_refined", "bbox_residual"],
+    "head_output_activations": {"support": "sigmoid", "quality": "sigmoid", "box": "linear then bounded tanh residual parameterization"},
+    "box_residual": {"center_fraction": 0.25, "center_cap_pixels": 3.0, "scale_min": 0.8, "scale_max": 1.25},
+    "loss_weights": {"support_bce": 1.0, "normalized_box_smooth_l1": 2.0, "giou": 1.0, "quality_smooth_l1_each": 0.5},
+    "quality_target": "Identity-conditioned localization quality: same-identity positive uses IoU with the historical GT identity, confirmed negative uses zero; refined target and quality-sampling coordinates detached; unknown labels masked",
+    "thresholds": {"support": null, "refined_quality": null, "quality_gain": null},
+    "threshold_status": "MUST_FIT_ON_CALIBRATION_AND_FREEZE_BEFORE_EVALUATION"
+  },
+  "offline_arms": {
+    "P0_raw": {"trained": false, "role": "Original measurements"},
+    "P1_geometry": {"trained": true, "inputs": "Same scalar geometry/score/time information; no pixels", "role": "Information control, not a capacity-matched image model"},
+    "P2_current_rgb": {"trained": true, "history_pixel_mode": "current_repeat", "architecture": "Same as P3", "history_slots": "Repeat one crop from the current raw proposal using history ROI specification; preserve actual history-slot validity and age metadata; identical augmentation across repeated slots"},
+    "P3_history_rgb": {"trained": true, "history_pixel_mode": "causal_history", "architecture": "tco_small_conv_v1"},
+    "shuffled_history": {"trained": false, "when": "After P2/P3 show a local signal", "role": "Fixed P3-model diagnostic with other-track historical pixels, no future frames; not a fifth training arm"}
+  },
+  "reachability_diagnostics": {
+    "exact_gt_reachability": "Check whether true GT center and scale lie in the fixed residual domain",
+    "gt_guided_feasible_correction": "Clamped residuals or finite grid search are diagnostic reference results, not proven maximum-IoU upper bounds",
+    "ideal_selection_bound": "Offline GT selection/localization over explicitly fixed candidate support, ignoring image identifiability",
+    "human_visibility_review": "Separate sampled diagnostic with sampling probabilities and full cohort denominator"
+  },
+  "training": {
+    "status": "NOT_IMPLEMENTED_NOT_RUN",
+    "split_unit": "original_video",
+    "split_names": ["fit", "calibration", "holdout"],
+    "exclude_original_videos_shared_with_official_test": true,
+    "proposed_fit_calibration_holdout_ratio": [0.70, 0.15, 0.15],
+    "split_status": "MUST_MATERIALIZE_AND_AUDIT_AT_T1",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "batch_size": 64,
+    "max_epochs": 20,
+    "max_steps": 20000,
+    "stop_at_first_budget_limit": true,
+    "early_stopping_patience_epochs": 4,
+    "early_stopping_min_epochs": 2,
+    "early_stopping_split": "calibration",
+    "checkpoint_selection": "Net correct-box gain within a pre-registered damage budget for originally correct observations; exact budget and denominator must be frozen at T1 before first training",
+    "box_bounds_tunable_during_calibration": false,
+    "pilot_seed": 41,
+    "confirmation_seeds": [41, 42, 43],
+    "unknown_is_negative": false,
+    "ground_truth_used_to_select_online_candidates": false
+  },
+  "integration_modes": {
+    "fixed_pair_refine": {
+      "stage": "T3a",
+      "status": "NOT_IMPLEMENTED",
+      "association": "Run the reference low-stage assignment on this run's own current state, then refine accepted low measurements only",
+      "applied_fields": ["cx", "cy", "w", "h"],
+      "preserve_fields": ["score", "class", "det_index", "original_RGB_ReID_feature"],
+      "future_assignments_frozen_to_reference": false
+    },
+    "low_stage_pair_refine": {
+      "stage": "T3b",
+      "status": "CONDITIONAL_NOT_IMPLEMENTED",
+      "association": "Pair-specific boxes on original feasible and guard-allowed edges, original one-to-one solver and threshold",
+      "allow_original_infeasible_edges": false,
+      "allow_guard_bypass": false,
+      "score_fusion_or_negative_veto": false
+    }
+  },
+  "evaluation": {
+    "official_30_role": "development_evaluation",
+    "modality": "RGB",
+    "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+    "aggregation": "COMBINED_SEQ, all seven classes pooled",
+    "metrics": ["HOTA", "DetA", "AssA", "IDF1", "MOTA", "FP", "FN", "IDSW"],
+    "followup_windows": [5, 10],
+    "resampling_unit": "original_video",
+    "bootstrap_repetitions": 2000,
+    "bootstrap_metrics": "Recombine metric sufficient statistics or rerun evaluation; never average sequence HOTA percentages",
+    "missing_gt_or_identity": "unknown, with explicit denominator",
+    "latency": "True online crop, network and tracker overhead; cached replay is not end-to-end FPS",
+    "test_tuned_thresholds": false
+  },
+  "extension_requires_new_protocol_version": ["thermal_input", "original_infeasible_low_edges", "below_threshold_detection_admission", "new_local_detections", "strong_negative_veto", "high_score_state_changes", "lost_recovery_changes"],
+  "runnable_in_this_commit": ["manage_tco_batch.py init", "manage_tco_batch.py check", "manage_tco_batch.py prepare", "manage_tco_batch.py status"],
+  "not_implemented_in_this_commit": ["TCO cohort exporter", "TCO dataset and crop cache", "TCO neural network", "TCO trainer", "TCO calibration", "TCO tracker adapter", "TCO experiment runner"],
+  "new_real_dataset_results": false
+}
