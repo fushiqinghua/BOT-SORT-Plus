@@ -1,0 +1,10 @@
+{
+  "schema": "wem_r31_settings",
+  "scope": "full",
+  "paths": {
+    "features_dir": null,
+    "labels_dir": null,
+    "split_file": null,
+    "output_dir": "runs/wem_r3_1/full"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "wem_r31_software_validation_v1",
+  "date": "2026-11-28",
+  "base_commit": "b734690e7af42f67be49eb3eec603a2b3d9a3683",
+  "command": "python -m unittest discover -s tests -p 'test_wem_r31*.py' -v",
+  "result": "PASS",
+  "tests": {
+    "engine": 20,
+    "batch": 14,
+    "total": 34
+  },
+  "historical_function_parity": {
+    "synthetic_frames": 80,
+    "methods": [
+      "W0",
+      "W_old"
+    ],
+    "status": "PASS"
+  },
+  "cli_fixture": {
+    "status": "PASS",
+    "scope": "synthetic smoke",
+    "partitions": 3,
+    "sequences": 3,
+    "input_edges": 15,
+    "decisions": 75,
+    "entrypoint": "batch.main(init/check/run)",
+    "output_manifest_hashes": "PASS"
+  },
+  "full_real_cache_replay": "NOT_RUN",
+  "real_data_scientific_acceptance": "NOT_EVALUATED",
+  "online_w_implementation": "NOT_ENABLED",
+  "native_tracker_changed": false,
+  "real_windows_execution": "NOT_RUN",
+  "independent_review": "completed; mechanism, label isolation, provenance, output semantics",
+  "repository_parent_commit": "6b7da02db7a5f93c12162822ef5861ff69fb6e22",
+  "preserved_concurrent_update": "R4 exploratory results and code, 6b7da02"
+}
