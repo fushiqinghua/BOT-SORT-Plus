@@ -1,29 +1,13 @@
-# W R3.1 四组离线对照结果
+# W R3.1 离线对照结果
 
-**本批 R3.1 真实数据状态：NOT_RUN。** 本目录为 W0–W3 四组实验及 W_old 历史参照预留归档入口。代码测试和构造数据验证不能作为本目录的真实实验结果。
+**完整运行已归档。** `research/vttiny-weak-evidence` 上的 W0、W1、W2、W3 和 W_old 使用同一份原 R3 冻结评分与标签，覆盖 74 段、28,931 帧。W0 和 W_old 的六项历史结果核验通过。785 个实际采用过的未知候选组待人工复核。本轮暂缓新的 R4。
 
-本批在现有 `research/vttiny-weak-evidence` 分支中，复用原 R3 的冻结特征评分与离线标签，比较几何、历史运动、外观软排序和相对竞争。固定参数及实际命令见：
-
-- [实验计划](../../../docs/botsort_plus/wem_r3_1/EXPERIMENT_PLAN.md)
-- [本地运行手册](../../../docs/botsort_plus/wem_r3_1/LOCAL_RUNBOOK.md)
-- [结果回传模板](../../../docs/botsort_plus/wem_r3_1/RESULTS_TEMPLATE.md)
-- [原 R3 冻结结果](../wem_v0.1/r3/README.md)
-- [已完成的 R4 探索性闭环](../wem_v0.1/r4/README.md)
-
-R4 已归档余弦 0.75 探索点的八组回放，本批 W_old 重算原 R3 的余弦 0.85 对照。R3.1 新增 W0–W3 固定状态消融，研究外观使用方式，不重复执行旧 R4 八组。
-
-## 归档内容
-
-运行后在本目录下建立独立子目录，保存：
-
-| 文件 | 内容 |
+| 归档 | 内容 |
 | --- | --- |
-| `manifest.json`、`summary.json` | 来源、配置、执行范围与整体摘要 |
-| `comparison.csv` | 各分区 W0、W1、W2、W3、W_old 的固定方法结果 |
-| `per_sequence.csv`、`per_source.csv` | 逐序列和来源组结果 |
-| `method_deltas.csv` | 逐项新增机制带来的变化 |
-| `review_queue.csv` | 实际采用未知等需复核案例及关联方法 |
-| `decisions.jsonl.gz` | 逐候选评分、拒绝和指派明细；体积较大时保留原件与摘要说明 |
-| 本次结果说明 | 按模板记录事实、未知项与研究决定 |
+| [完整运行](full_20261128/README.md) | 五组方法、分区计数和结论 |
+| [逐序列](full_20261128/per_sequence.csv) · [逐来源组](full_20261128/per_source.csv) | 各序列和来源组的覆盖及采用 |
+| [错配分析](full_20261128/错配分析.md) | 已知错配、误拒和改选案例 |
+| [待人工复核队列](full_20261128/review_queue.csv) | 785 个未知候选及其采用方法和人工状态 |
+| [复现记录](full_20261128/复现记录.md) | 冻结输入、源码、输出摘要和重跑命令 |
 
-本批不覆盖原 R3 的 `REJECT_ALL_FALLBACK`，不自动选出线上启用点，不包含在线 W 更新或新的 HOTA／IDF1。旧 holdout 已用于分析，本批按开发诊断解释。未知候选与人工确认标签继续分开记录。
+W_old 复现 R3 的余弦 0.85 工作点。此前采用余弦 0.75 的 R4 探索性闭环继续作为单独历史结果。原 R3 `REJECT_ALL_FALLBACK` 保持生效。[实验协议](../../../docs/botsort_plus/wem_r3_1/EXPERIMENT_PLAN.md) · [R3 结果](../wem_v0.1/r3/README.md) · [此前 R4](../wem_v0.1/r4/README.md)

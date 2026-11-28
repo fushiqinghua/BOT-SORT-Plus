@@ -2,7 +2,7 @@
 
 本分支 **research/vttiny-weak-evidence** 为毕业设计目标跟踪章节准备 W 模块及下一批实验，从 research/vttiny-track-conditioned-observation 的 **176f2a81613c34d16a860765ea7be0845116b534** 建立，继承 B、GMC、TCO/Q2 及先前实验归档。
 
-**当前批次：R3.1 的 W0–W3 四组缓存对照已实现，真实数据结果待本地执行。** 本批复用 R3 已有特征和离线标签，不需要重新运行检测器或 ReID，不启用在线 W。另重算 W_old 作为历史对照。[当前运行手册](docs/botsort_plus/wem_r3_1/LOCAL_RUNBOOK.md) · [实验协议](docs/botsort_plus/wem_r3_1/EXPERIMENT_PLAN.md)
+**当前批次已完成 R3.1 的 W0–W3 与 W_old 五组全量离线对照。785 个未知候选组待人工复核。本轮暂缓新的 R4。** [R3.1 结果与复现](results/vttiny/wem_r3_1/full_20261128/README.md) 本批复用 R3 已有特征和离线标签，不需要重新运行检测器或 ReID，不启用在线 W。另重算 W_old 作为历史对照。[当前运行手册](docs/botsort_plus/wem_r3_1/LOCAL_RUNBOOK.md) · [实验协议](docs/botsort_plus/wem_r3_1/EXPERIMENT_PLAN.md)
 
 历史 R3 已完成训练侧冻结校准和 **113 例模型辅助图卡复核，人工确认 0/113**。18 个工作点未达到原准入条件，冻结策略继续为 `REJECT_ALL_FALLBACK`。[历史 R3 结果](results/vttiny/wem_v0.1/r3/README.md)
 
@@ -111,7 +111,7 @@ python -X utf8 tools/audit_wem_s0.py --detections-dir "<实际检测缓存目录
 | R1b：轨迹资格、所有权、身份机会 | 已用于 R3 训练侧候选和真值离线核验 |
 | R2：冻结状态 raw/prior/posterior 比较 | 前期离线实验为 R3 提供动机 |
 | R3：身份/背景区分与校准留出 | [已完成](results/vttiny/wem_v0.1/r3/README.md)，113 例人工复核待完成 |
-| R3.1：W0–W3 与 W_old 缓存对照 | 工具与固定协议已就绪，真实数据 NOT_RUN |
+| R3.1：W0–W3 与 W_old 缓存对照 | [74 段离线结果已归档](results/vttiny/wem_r3_1/full_20261128/README.md)，785 例待人工复核 |
 | R4：W 探索性闭环及组合消融 | [八组全量结果已归档](results/vttiny/wem_v0.1/r4/README.md)，默认策略仍关闭；本次 R3.1 不运行新闭环 |
 
 W 首版只帮助帧首已确认活跃旧身份，使用一个当前真实弱框与过去常规观测验证，不新建 ID，不将弱外观写入长期模板，保留原生/B/起轨优先权。S1 更低导出阈值和 S2 NMS 抑制候选分开研究，默认关闭。

@@ -1,0 +1,40 @@
+{
+  "executed_commit": "fb2a428b6eb417b375ced42f23b9f8b3a0f74e23",
+  "historical_r3_archive_commit": "b734690e7af42f67be49eb3eec603a2b3d9a3683",
+  "original_run_manifest_sha256": "2b114409741eb5dad0675fc10066620fd6ee148d0c3e2da328f9cacf8766d9ca",
+  "original_settings_sha256": "555000bf251a87ec95a0ad6541f275648890a72d2883dd315e05ac2477237479",
+  "original_output_sha256": {
+    "comparison.csv": "1cc2e3f7d26d2629510ff226a67c5ff71388c2a855da3f49dd96477be316e904",
+    "decisions.jsonl.gz": "768bf80043493ad326f04fc8dd2af1f3f7b999a8d3ee733030dad291ee16907e",
+    "method_deltas.csv": "6b01e55b3dc140e60d4b39c07bfdd95df5f2a7f37cb554ff97bad0b942fe3bdf",
+    "per_sequence.csv": "64acc85743a55077dac4fee35a7490f849255818a907d2349abaf914b94a9feb",
+    "per_source.csv": "02d1d9c245b2e62f2ed87c86a2f41761eb5f5b27cdfc48556d8880549ed0e5dd",
+    "protocol.json": "9c0d7ae5cbc3de814d38e6ad4fd3da0055854c2252d4320971a4cd119dd2d8da",
+    "review_queue.csv": "0ec75e0ecc460162d2545354729c17e85d96c00dacd6cc3a7edc4039164705cd",
+    "summary.json": "38127d9f0b260cda7990ef24e2da47d6e8ead6c464fdf69e2eb9e8b811b04d54"
+  },
+  "public_sha256": {
+    "check.json": "19397d55ee90f2ee80430f4f1bf3357274fcad449f34a76a3a309229dbe5832a",
+    "comparison.csv": "1cc2e3f7d26d2629510ff226a67c5ff71388c2a855da3f49dd96477be316e904",
+    "github_source.json": "47a21b27a33a0918e1fdc55cc6dc39d84905f2e8be1a7a686f2785d85a2d2c4c",
+    "manifest.json": "2b114409741eb5dad0675fc10066620fd6ee148d0c3e2da328f9cacf8766d9ca",
+    "method_deltas.csv": "6b01e55b3dc140e60d4b39c07bfdd95df5f2a7f37cb554ff97bad0b942fe3bdf",
+    "per_sequence.csv": "64acc85743a55077dac4fee35a7490f849255818a907d2349abaf914b94a9feb",
+    "per_source.csv": "02d1d9c245b2e62f2ed87c86a2f41761eb5f5b27cdfc48556d8880549ed0e5dd",
+    "protocol.json": "9c0d7ae5cbc3de814d38e6ad4fd3da0055854c2252d4320971a4cd119dd2d8da",
+    "summary.json": "38127d9f0b260cda7990ef24e2da47d6e8ead6c464fdf69e2eb9e8b811b04d54",
+    "review_queue.csv": "88efbdefd80b7f645ad7856aeeb11765c5b5973bd2fa224c075b747dfdd56b1e",
+    "decision_cases.csv": "0adfa837b581e137de4bb687de13be0138d274b47fdbcb9a1f391ad6fff718da"
+  },
+  "withheld_originals": [
+    "decisions.jsonl.gz",
+    "wem_r3_1.local.json"
+  ],
+  "display_scope": {
+    "review_queue.csv": "all 785 pending rows; removed raw_box_xyxy only",
+    "decision_cases.csv": "all five methods for seven example track-frames; removed raw boxes and true identity keys"
+  },
+  "historical_control_status": "PASS",
+  "review_queue_state": "785 pending",
+  "new_r4_run": false
+}

@@ -1,0 +1,13 @@
+﻿partition,comparison,interpretation,same_eligible_edges,added_eligible_edges,removed_eligible_edges,unchanged_selected_edges,added_selected_edges,removed_selected_edges,selected_edge_delta,changed_track_frames,added_useful_target_frames,lost_useful_target_frames,useful_target_frame_delta,added_same_identity,removed_same_identity,added_other_identity,removed_other_identity,added_confirmed_background,removed_confirmed_background,added_unknown,removed_unknown,added_ignored,removed_ignored
+fit,W0_to_W1,component_comparison,False,0,61,1287,1,62,-61,62,0,0,0,1,1,0,0,0,0,0,61,0,0
+fit,W1_to_W2,component_comparison,True,0,0,1288,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+fit,W2_to_W3,component_comparison,False,0,146,1232,6,56,-50,56,1,42,-41,5,46,0,0,0,0,1,10,0,0
+fit,W_old_to_W2,historical_compound_reference,False,1325,0,59,1229,0,1229,1229,820,0,820,822,0,0,0,0,0,407,0,0,0
+calibration,W0_to_W1,component_comparison,False,0,13,403,0,13,-13,13,0,0,0,0,0,0,0,0,0,0,13,0,0
+calibration,W1_to_W2,component_comparison,True,0,0,403,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+calibration,W2_to_W3,component_comparison,False,0,20,393,1,10,-9,10,0,5,-5,0,5,0,0,0,0,1,5,0,0
+calibration,W_old_to_W2,historical_compound_reference,False,412,0,2,401,0,401,401,205,0,205,207,0,1,0,0,0,193,0,0,0
+holdout,W0_to_W1,component_comparison,False,0,10,299,0,9,-9,9,0,0,0,0,0,0,0,0,0,0,9,0,0
+holdout,W1_to_W2,component_comparison,True,0,0,299,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+holdout,W2_to_W3,component_comparison,False,0,22,292,2,7,-5,7,1,2,-1,2,3,0,0,0,0,0,4,0,0
+holdout,W_old_to_W2,historical_compound_reference,False,310,0,6,293,0,293,293,210,0,210,210,0,0,0,0,0,83,0,0,0

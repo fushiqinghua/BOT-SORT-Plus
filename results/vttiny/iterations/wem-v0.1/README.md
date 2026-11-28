@@ -1,6 +1,6 @@
 # W v0.1 结果归档
 
-**当前归档：R3 冻结准入与 R4 探索性闭环已完成；新增 R3.1 四组关联对照工具已就绪，真实数据待执行。**
+**R3.1 的 74 段离线对照已完成。785 个未知候选组待人工复核，新 R4 暂缓。** [本次结果](../../wem_r3_1/full_20261128/README.md)
 
 [当前 R3.1 实验安排](../../../../docs/botsort_plus/wem_r3_1/EXPERIMENT_PLAN.md) · [运行手册](../../../../docs/botsort_plus/wem_r3_1/LOCAL_RUNBOOK.md) · [新结果入口](../../wem_r3_1/README.md)
 

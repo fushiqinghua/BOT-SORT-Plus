@@ -1,0 +1,23 @@
+{
+  "status": "INPUTS_VERIFIED_NOT_RUN",
+  "scope": "full",
+  "reference": "B_early_moderate",
+  "sequence_count": 74,
+  "raw_feature_edges": 2198,
+  "partitions": {
+    "fit": {
+      "sequences": 51,
+      "raw_feature_edges": 1445
+    },
+    "calibration": {
+      "sequences": 11,
+      "raw_feature_edges": 427
+    },
+    "holdout": {
+      "sequences": 12,
+      "raw_feature_edges": 326
+    }
+  },
+  "enabled_online": false,
+  "protocol_sha256": "9c0d7ae5cbc3de814d38e6ad4fd3da0055854c2252d4320971a4cd119dd2d8da"
+}

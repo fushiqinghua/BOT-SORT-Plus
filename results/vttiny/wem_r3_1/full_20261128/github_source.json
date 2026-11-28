@@ -1,0 +1,21 @@
+{
+  "commit": "fb2a428b6eb417b375ced42f23b9f8b3a0f74e23",
+  "files": {
+    "tools/research/wem_r31/__init__.py": "ace9c70da1730eaa6b07a218bd7f590ffdd6e497",
+    "tools/research/wem_r31/batch.py": "de0422175c9b6b799d87e4cec0dcd51fc80ba989",
+    "tools/research/wem_r31/engine.py": "0e229fb2a77136239c7a8eddf00bbe32779821d4",
+    "tools/research/wem_r31/inputs.py": "40ebf60c219a69dc7ef8d67ef66940d366f24584",
+    "tools/research/wem_r31/protocol.py": "c1b8e6cfbc3d25d7b1317bbfaa72a6b9b4228431",
+    "tools/research/wem_r31/reporting.py": "8adccb674414ea5866e3c46b3fe9bda67e8a3f6b",
+    "tools/run_wem_r31_ablation.py": "ca5d79366d7d9593e1b46a5a1f546e7e877d965f",
+    "configs/research/wem_r3_1.example.json": "f565158433617c3907e293bf6ab66ea3b6822707",
+    "configs/research/wem_r3_1_protocol.json": "809a99aaa1411bf7396090f5a5ea46d34d0d02a6",
+    "results/vttiny/wem_v0.1/r3/calibration/fixed_diagnostics.csv": "bbbbae0b206b8cc46b721b8592a78cb1e52000da",
+    "tests/test_wem_r31_batch.py": "ac57c1ca20a74902a9a78c5f3d007d82a1ae6975",
+    "tests/test_wem_r31_engine.py": "a4f2ca34faa1ac42b8c7c2454d2bd1a66ed4e51d",
+    "tools/research/vttiny_wem_r3/admission.py": "aa5c4075e4662ebf33c2bbf007024c34528e622f",
+    "docs/botsort_plus/wem_r3_1/EXPERIMENT_PLAN.md": "27d7b85cb0b7ecc0927ecb8b2b3bafa53bb60ead",
+    "docs/botsort_plus/wem_r3_1/LOCAL_RUNBOOK.md": "f42319213b8d210bfb515a0738dc002f53081682",
+    "docs/botsort_plus/wem_r3_1/RESULTS_TEMPLATE.md": "56e8896b0df364d8711f6c5b345a3c0c80cf26c6"
+  }
+}
