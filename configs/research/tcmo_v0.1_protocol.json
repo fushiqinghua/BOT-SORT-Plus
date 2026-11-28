@@ -1,0 +1,248 @@
+{
+  "schema": "tcmo_v01_design_protocol_v1",
+  "status": "DESIGN_READY_NOT_IMPLEMENTED_NOT_RUN",
+  "branch": "research/vttiny-multimodal-observation",
+  "base_commit": "f90501853b07bcca5d10e99cd17f6dc9db42bfb4",
+  "foundation": {
+    "role": "BG",
+    "method": "evidence_both",
+    "weak_policy": "W0",
+    "reference": "BG_W0",
+    "reference_archive": "results/vttiny/wem_r4_2/full_20261128",
+    "metrics": {
+      "HOTA": 39.03393195982692,
+      "IDF1": 44.23716853741956,
+      "MOTA": 25.68419998664976,
+      "FP": 16523,
+      "FN": 116724,
+      "IDSW": 352
+    }
+  },
+  "dataset": {
+    "name": "VT-Tiny-MOT",
+    "split": "official test (previously inspected development evaluation)",
+    "coordinate_reference": "RGB GT_00",
+    "classes": "same pooled object class as frozen evaluation",
+    "sequences": {
+      "DJI_0028_3": 570,
+      "DJI_0030_2": 590,
+      "DJI_0032_3": 290,
+      "DJI_0049_2": 90,
+      "DJI_0051_2": 580,
+      "DJI_0061_2": 240,
+      "DJI_0073_3": 360,
+      "DJI_0109_1": 90,
+      "DJI_0119_2": 180,
+      "DJI_0129_2": 590,
+      "DJI_0141_2": 410,
+      "DJI_0155_2": 410,
+      "DJI_0159_2": 250,
+      "DJI_0169_3": 290,
+      "DJI_0173_2": 450,
+      "DJI_0181_3": 320,
+      "DJI_0221_2": 590,
+      "DJI_0225_1": 329,
+      "DJI_0237_2": 410,
+      "DJI_0255_1": 600,
+      "DJI_0257_2": 590,
+      "DJI_0277_2": 366,
+      "DJI_0283_1": 450,
+      "DJI_0303_2": 577,
+      "DJI_0307_2": 180,
+      "DJI_0309_4": 603,
+      "DJI_0325_2": 595,
+      "DJI_0327_3": 390,
+      "DJI_0339_2": 600,
+      "DJI_0345_2": 600
+    },
+    "frames": 12590,
+    "gt_instances": 179772,
+    "trackeval_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+    "boxmot": "16.0.11",
+    "training_split": "reuse verified 74-sequence source-proxy-group split if recoverable; verify paired GT coverage and no known mother-video overlap; otherwise freeze replacement before inspection; 51/11/12 only if exact verified"
+  },
+  "primary_input_identity": {
+    "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+    "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+    "source_protocol_sha256": "6f0fdff3b198315f8aac72972fcf5117c53b917e84f6c7b5f9814b9012ef2ff2"
+  },
+  "historical_code_blobs": {
+    "botsort_plus/adapter_v2.py": "6818f98fb9b02b32c33e89e603e68a0f06928f79",
+    "experiments/vttiny_gmc/round3_joint/worker.py": "1611bb7f5527cd7ca9fd539b9535ab763325a416",
+    "tools/research/vttiny_wem_r3/observer/capture.py": "0c912f7e37eae7ce10042b6985582c00ff43d659",
+    "tools/research/vttiny_wem_r3/score_features.py": "426b951e86cfdab2f43ac4f937aef08c63e1ddbc",
+    "tools/research/vttiny_wem_r4/online.py": "6918f8f35d9e702d3874aed19efc98348ef8bd88",
+    "tools/research/wem_r31/engine.py": "0e229fb2a77136239c7a8eddf00bbe32779821d4",
+    "tools/research/wem_r41/online.py": "3a998ecd6177e562827c4d2999d7669b7f3bd531",
+    "tools/research/wem_r41/assets.py": "5402e4935bbcdf0c2524834606393c16e19c29a3"
+  },
+  "auxiliary_assets": {
+    "rgb_weights": null,
+    "ir_weights": null,
+    "source_split_receipts_required": true,
+    "independent_sensor_inputs": true,
+    "native_sensor_coordinates": true,
+    "export_all_rows": true,
+    "same_frozen_aux_cache_for_all_arms": true,
+    "gt_in_prediction": false
+  },
+  "design_defaults": {
+    "status": "proposed fixed starting point; not fitted or validated; finalize training-side receipts before full dev replay",
+    "aux_export_score_floor": 0.05,
+    "calibration": "per-modality fit-only monotone confidence calibration from valid nonignored one-to-one native-coordinate detection labels; save support and calibration diagnostics",
+    "aux_calibrated_quality_floor": 0.25,
+    "geometry_proxy_iou_floor": 0.5,
+    "anchor_proxy_iou_floor": 0.5,
+    "gmc_backup_proxy_iou_floor": 0.5,
+    "top_groups_per_track": 5,
+    "near_owner_iou": 0.9,
+    "association_cost": "0.5*(1-proxy_iou)+0.5*(1-q)",
+    "unmatched_cost": 0.5,
+    "accept_cost": "strictly less than dummy cost, ties reject",
+    "baseline_center_noise": "native projected center measurement-noise block, identical policy for V/T, no learned covariance in R1",
+    "mapping": "A0 coarse declared T->V; identity only if images are already coarse-registered in identical pixel coordinates",
+    "ir_shift_control_px": [
+      48,
+      0
+    ],
+    "shift_control": "translate mapped IR candidate center and box in RGB pixel space; keep source row, q, score and cache, recheck visibility and all gates; log lost candidates; never label it aligned IR",
+    "weak_episode_budget": 1,
+    "history_rearm": "existing W0 anchor ready+previous regular observation+unspent; TCMO never refreshes regular history",
+    "birth": false,
+    "long_lost": false,
+    "write_appearance": false
+  },
+  "r0": {
+    "status": "NOT_RUN",
+    "required": [
+      "asset_inventory",
+      "aux_cache_and_calibration",
+      "off_parity",
+      "frozen_risk_snapshot_after_W0",
+      "all_FN_and_eligible_conditional_opportunities",
+      "native_IR_vs_mapped_RGB_geometry",
+      "ownership_and_assignment_diagnostics"
+    ],
+    "oracle_labels_offline_only": true
+  },
+  "r1": {
+    "status": "NOT_RUN",
+    "full_modes": [
+      {
+        "id": "M0",
+        "description": "frozen BG_R+W0, TCMO off",
+        "sources": []
+      },
+      {
+        "id": "M1",
+        "description": "M0 + RGB-only auxiliary center measurement",
+        "sources": [
+          "V"
+        ]
+      },
+      {
+        "id": "M2",
+        "description": "M0 + IR-only auxiliary center measurement, A0",
+        "sources": [
+          "T"
+        ]
+      },
+      {
+        "id": "M3",
+        "description": "M0 + V/T complementary observation, A0, one measurement",
+        "sources": [
+          "V",
+          "T"
+        ]
+      },
+      {
+        "id": "C1",
+        "description": "same auxiliary candidates added to primary detector rows before normal tracking, deterministic dedup preserving primary rows; frozen primary parameters; regenerate RGB features for new rows only",
+        "sources": [
+          "V",
+          "T"
+        ]
+      },
+      {
+        "id": "C2",
+        "description": "M3 with shifted mapped IR candidates",
+        "sources": [
+          "V",
+          "T"
+        ],
+        "ir_shift_px": [
+          48,
+          0
+        ]
+      }
+    ],
+    "reference_mode": "reuse verified original M0 or rerun; new hook must pass full off parity",
+    "new_scientific_arms": 5,
+    "performance_gate": false,
+    "require_full_30": true,
+    "smoke": [
+      "DJI_0030_2",
+      "DJI_0061_2",
+      "DJI_0327_3",
+      "DJI_0339_2"
+    ],
+    "historical_strong_control": "BG_lower_low (no TCMO, W off, low=.05; different W state policy; explicitly historical)",
+    "mandatory_comparisons": [
+      [
+        "M1",
+        "M0"
+      ],
+      [
+        "M2",
+        "M0"
+      ],
+      [
+        "M3",
+        "M0"
+      ],
+      [
+        "M3",
+        "M1"
+      ],
+      [
+        "M3",
+        "M2"
+      ],
+      [
+        "M3",
+        "C1"
+      ],
+      [
+        "M3",
+        "C2"
+      ]
+    ]
+  },
+  "r2": {
+    "status": "PLANNED_NOT_IN_R1",
+    "modes": [
+      "M3",
+      "M4: A1/A2 residual correction with fixed noise",
+      "M5: M4 + calibrated total mapped center noise",
+      "M6: M5 output only/no formal state feedback"
+    ],
+    "trigger": "R1 direct gains or R0/R1 evidence that native IR detection exists but mapping prevents useful coverage; otherwise stop, do not optimize on inspected dev set"
+  },
+  "constraints": {
+    "no_gt_in_prediction": true,
+    "no_future_frames": true,
+    "main_detector_frozen": true,
+    "main_rgb_reid_frozen": true,
+    "no_double_kf_update": true,
+    "no_fake_primary_row": true,
+    "no_w_or_tcmo_rearm_from_aux": true,
+    "no_modify_existing_branches": true,
+    "diagnostic_timing_not_fps": true,
+    "scientific_result_may_be_negative": true
+  },
+  "outputs": {
+    "local": "runs/tcmo_v0.1",
+    "public": "results/vttiny/tcmo_v0.1/<actual_date>",
+    "status": "NOT_RUN"
+  }
+}
