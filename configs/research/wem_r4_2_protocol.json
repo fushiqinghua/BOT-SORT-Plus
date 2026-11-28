@@ -1,0 +1,29 @@
+{
+  "schema": "wem_r42_protocol_v1",
+  "source_commit": "3a6e6c4d01d3d3ee04f1a9c952e25a4790f04e77",
+  "reference_method": "evidence_both",
+  "frames_per_arm": 12590,
+  "full_modes": ["off", "W0", "lower_low", "W0_relaxed_anchor", "W0_emit_only"],
+  "new_full_arms": ["BG_lower_low", "BG_W0_relaxed_anchor", "BG_W0_emit_only"],
+  "parameters": {
+    "native_low_default": 0.1,
+    "native_low_control": 0.05,
+    "weak_score_range": [0.05, 0.1],
+    "native_iou_floor": 0.5,
+    "anchor_iou_floor": 0.5,
+    "near_owner_iou": 0.9,
+    "top_geometry_groups": 5
+  },
+  "interventions": {
+    "lower_low": "Only native track_low_thresh 0.10 -> 0.05; W disabled; original frozen cached camera stream retained",
+    "W0_relaxed_anchor": "Remove anchor.ready plus anchor/formal-prediction and weak-box/anchor IoU guards; retain anchor presence, previous-frame ordinary observation, unspent episode, native geometry, ownership, one-to-one, finalizer and memory protections",
+    "W0_emit_only": "Reuse W0 decisions and private measurement-backed output; publish after native update finalization; canonical tracker state/events remain off-identical"
+  },
+  "state_chain_output_basis": {
+    "W0_emit_only": "canonical native output before weak publication; emitted output separately audited",
+    "others": "actual published output"
+  },
+  "controls": {"ground_truth_in_prediction": false, "parameter_search": false, "scientific_acceptance_gate": false},
+  "dataset_usage": "official test split already used for development",
+  "timing_usage": "diagnostic cached replay only; not deployment FPS; reused reference timings are not matched runtime measurements"
+}

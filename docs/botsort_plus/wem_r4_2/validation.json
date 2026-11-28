@@ -1,0 +1,53 @@
+{
+  "schema": "wem_r42_software_validation_v1",
+  "date": "2026-11-28",
+  "timezone": "Asia/Shanghai",
+  "base_commit": "3a6e6c4d01d3d3ee04f1a9c952e25a4790f04e77",
+  "branch": "research/vttiny-weak-evidence",
+  "software_status": "PASS",
+  "real_dataset_status": "NOT_RUN",
+  "test_command": "python -B -m unittest discover -s tests -p 'test_wem_r4*.py' -q",
+  "tests": {
+    "total_passed": 91,
+    "r42_passed": 43,
+    "r41_regression_passed": 48,
+    "r42_by_file": {
+      "tests/test_wem_r42_batch.py": 12,
+      "tests/test_wem_r42_hooks.py": 2,
+      "tests/test_wem_r42_online.py": 14,
+      "tests/test_wem_r42_reporting.py": 15
+    }
+  },
+  "scope": "Synthetic states, fixture artifacts and actual adapter/worker source hooks with runtime doubles; not a GPU or real-dataset run.",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux"
+  },
+  "checks": {
+    "python_syntax": "PASS",
+    "json_parse": "PASS",
+    "cli_help": "PASS",
+    "theory_implementation_review": "PASS"
+  },
+  "not_run": [
+    "real 30-sequence R4.2 experiment",
+    "user Windows/CUDA runtime",
+    "local R4.1 full-reference reuse",
+    "deployment latency/FPS"
+  ],
+  "source_sha256": {
+    "tools/run_wem_r42.py": "0e6394c44c808af917b2a7c0ab49a1aca1c21a235f200fe18f71a808b4d9ea47",
+    "tools/research/wem_r42/__init__.py": "4a199a4ae036ea16b91860eda89b8954817458dd61d44c99350d812a75b50dbf",
+    "tools/research/wem_r42/assets.py": "b94479e6c12069da831a2288bc417873c203222872cb7f72d60857dc83da34c4",
+    "tools/research/wem_r42/batch.py": "1bdea25c34da23a885a61d312ee6b098b9e9b4c4cbc76af0c36e8d1031bf76a7",
+    "tools/research/wem_r42/offline.py": "27ddb9a3ba9b996b5cf9c0f2390e74ff13c07a79e24711518450401c10b4fc4a",
+    "tools/research/wem_r42/online.py": "54fc84d0126d1aab74cd26a7a98206a1fcf3f3a8d4db776ac6dbf4689f14e61f",
+    "tools/research/wem_r42/reporting.py": "cddcde27cc8fbdfd3e9a07c907e55e552a50ea4fbc70c674f565b86ddf1b6069",
+    "tests/test_wem_r42_batch.py": "a2f131588342e843005ac340d2f327e8bc29679ca32ae96c0d4171b9408b35c7",
+    "tests/test_wem_r42_hooks.py": "bbba94bb6ed84581bcb37be041532b8b1153948c28bf12b94281bea717d9d717",
+    "tests/test_wem_r42_online.py": "f5ff1d35d3a8d7f620f4c62c6824af0f7d9bd6439c6bb5265a86ba0c6cee535e",
+    "tests/test_wem_r42_reporting.py": "d7a86bfd956e174b5aafc5ed3044e3853025f8dc573f5fc559455cd335985d74",
+    "configs/research/wem_r4_2.example.json": "064d5bbe06a16cb88440e127a579e202325ce215f20de540867b33de6f298276",
+    "configs/research/wem_r4_2_protocol.json": "ea27c705ab30bb24be4b18ed5b69f3b4a0edadd5da26598aae7442094e3d25aa"
+  }
+}

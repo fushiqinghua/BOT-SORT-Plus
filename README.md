@@ -1,14 +1,16 @@
-# BoT-SORT-Plus · 弱检测证据挖掘与完整闭环评测
+# BoT-SORT-Plus · W0 弱观测续接与定型实验
 
 本分支 **research/vttiny-weak-evidence** 为毕业设计目标跟踪章节准备 W 模块及下一批实验，从 research/vttiny-track-conditioned-observation 的 **176f2a81613c34d16a860765ea7be0845116b534** 建立，继承 B、GMC、TCO/Q2 及先前实验归档。
 
-**W R4.1 已完成 B 和 BG 的十组闭环评测，每组覆盖官方 30 段。W0–W2 的轨迹一致，W3 相对 W2 多出 57 个误报和 27 个漏检。** [当前运行手册](docs/botsort_plus/wem_r4_1/LOCAL_RUNBOOK.md) · [实验设计](docs/botsort_plus/wem_r4_1/EXPERIMENT_PLAN.md) · [结果入口](results/vttiny/wem_r4_1/README.md)
+**当前批次为 W R4.2：以 W0 为定型主体，默认复用两个完整参考，只新增三组完整 30 段实验。代码、执行入口和判读方案已就绪；本批真实数据状态为 NOT_RUN。** [当前运行手册](docs/botsort_plus/wem_r4_2/LOCAL_RUNBOOK.md) · [实验设计](docs/botsort_plus/wem_r4_2/EXPERIMENT_PLAN.md) · [软件核验](docs/botsort_plus/wem_r4_2/VALIDATION.md) · [结果入口](results/vttiny/wem_r4_2/README.md)
+
+R4.1 已完成 B 和 BG 的十组闭环评测。W0 相对两参考的 HOTA 分别 +0.1724、+0.1743 个百分点，FN 分别 −508、−510，伴随 FP +554、+578 和 MOTA 小幅下降。W1/W2 与 W0 轨迹一致，W3 相对 W2 多出 57 FP、27 FN。本轮收敛公共的受约束弱续接机制，不继续搜索运动或外观评分。[R4.1 完整结果](results/vttiny/wem_r4_1/full_20261128/README.md)
 
 R3.1 已完成 W0–W3 与 W_old 五组冻结离线对照。785 个未知候选组仍可随后定向复核；这不构成本批完整闭环的前置条件。[R3.1 结果与复现](results/vttiny/wem_r3_1/full_20261128/README.md)
 
 历史 R3 已完成训练侧冻结校准和 **113 例模型辅助图卡复核，人工确认 0/113**。18 个工作点未达到原准入条件，冻结策略继续为 `REJECT_ALL_FALLBACK`。[历史 R3 结果](results/vttiny/wem_v0.1/r3/README.md)
 
-**已归档 W R4 探索性闭环的八组全量评测。完整 W 少漏 59 帧，同时增加约 145 个误报，换号持平。R3 的默认拒绝全部策略继续有效。** [R4 结果与复现](results/vttiny/wem_v0.1/r4/README.md)
+已归档旧 W R4 探索性闭环的八组全量评测。其严格外观门完整 W 少漏 59 帧，同时增加约 145 个误报，换号持平；当时的默认拒绝全部结论按历史记录保留。旧 B_plain 与当前 B_W0 的全套 TrackEval 明细一致；旧 lower_low 的 HOTA/IDF1 更高而误报、换号代价更大，这一对照继续保留。[R4 结果与复现](results/vttiny/wem_v0.1/r4/README.md)
 
 R4.1 固定策略沿用 R3.1 的 W0–W3 定义；旧 R4 的 0.75 外观门结果单独保留。当前实验采用真实状态演化，最终以完整 TrackEval 指标及逐帧归因判断继续、修改或停止；不按旧 R3 reject-all、人工复核状态或指标正负阻断运行。
 
@@ -16,10 +18,12 @@ R4.1 固定策略沿用 R3.1 的 W0–W3 定义；旧 R4 的 0.75 外观门结�
 
 | 入口 | 内容 |
 | --- | --- |
-| [当前 R4.1 运行手册](docs/botsort_plus/wem_r4_1/LOCAL_RUNBOOK.md) | 本机配置、完整闭环、自动评测、续跑及回传 |
-| [当前 R4.1 实验设计](docs/botsort_plus/wem_r4_1/EXPERIMENT_PLAN.md) | B/BG × off、W0、W1、W2、W3；完整 30 段 |
-| [当前 R4.1 回传模板](docs/botsort_plus/wem_r4_1/RESULTS_TEMPLATE.md) | 完整指标、组件增量、组合增量与错误传播 |
-| [当前 R4.1 软件核验](docs/botsort_plus/wem_r4_1/VALIDATION.md) | 接入、资产、闭环机制和汇总测试；区分真实评测 |
+| [当前 R4.2 运行手册](docs/botsort_plus/wem_r4_2/LOCAL_RUNBOOK.md) | 继承上一轮本地配置、复用参考、全量执行和回传 |
+| [当前 R4.2 实验设计](docs/botsort_plus/wem_r4_2/EXPERIMENT_PLAN.md) | BG 下低阈值、锚点支持与正式状态反馈三项验证 |
+| [当前 R4.2 回传模板](docs/botsort_plus/wem_r4_2/RESULTS_TEMPLATE.md) | 固定五组、四个对比方向及实际干预证据 |
+| [当前 R4.2 软件核验](docs/botsort_plus/wem_r4_2/VALIDATION.md) | 合成状态、真实源码接入、来源复用和报告检查 |
+| [已完成 R4.1 运行手册](docs/botsort_plus/wem_r4_1/LOCAL_RUNBOOK.md) | 原十组完整闭环的复现入口 |
+| [已完成 R4.1 结果](results/vttiny/wem_r4_1/full_20261128/README.md) | 完整指标、组件增量、组合增量与逐帧归因 |
 | [已完成 R3.1 运行手册](docs/botsort_plus/wem_r3_1/LOCAL_RUNBOOK.md) | 复用冻结缓存的历史离线比较 |
 | [已完成 R3.1 实验安排](docs/botsort_plus/wem_r3_1/EXPERIMENT_PLAN.md) | 固定关联机制与条件覆盖诊断 |
 | [前期本地运行手册](docs/botsort_plus/wem_v0.1/LOCAL_RUNBOOK.md) | 拉取、填路径、检查、运行首批审计、回传结果 |
@@ -31,9 +35,33 @@ R4.1 固定策略沿用 R3.1 的 W0–W3 定义；旧 R4 的 0.75 外观门结�
 | [历史证据与文献](docs/botsort_plus/wem_v0.1/EVIDENCE_AND_REFERENCES.md) | TCO/Q2 结果、相关工作和可验证增量 |
 | [本次软件核验](docs/botsort_plus/wem_v0.1/VALIDATION.md) | 新工具测试、适用范围和未验证内容 |
 
-当前批次配置：[R4.1 本地模板](configs/research/wem_r4_1.example.json) · [R4.1 固定协议](configs/research/wem_r4_1_protocol.json)。此前 R3.1 与 wem_v0.1 的配置、结果和设计继续保留。
+当前批次配置：[R4.2 本地模板](configs/research/wem_r4_2.example.json) · [R4.2 固定协议](configs/research/wem_r4_2_protocol.json)。此前 R4.1、R3.1 与 wem_v0.1 的配置、结果和设计继续保留。
 
-## 当前批次：R4.1 十组完整闭环
+## 当前批次：R4.2 三组新增全量实验
+
+使用上一轮成功运行 R4.1 的环境，在仓库根目录执行：
+
+~~~bash
+python -X utf8 tools/run_wem_r42.py init --from-r41-settings configs/research/wem_r4_1.local.json --settings configs/research/wem_r4_2.local.json
+python -X utf8 tools/run_wem_r42.py check --settings configs/research/wem_r4_2.local.json
+python -X utf8 tools/run_wem_r42.py full --settings configs/research/wem_r4_2.local.json
+~~~
+
+默认从旧配置的 `paths.output_root/full` 读取完整原始运行目录，验证后复制 BG_off/BG_W0 到新批次。公开 CSV 结果归档不能替代完整本地运行目录。若其已搬迁，初始化时加 `--r41-batch <原full目录>`；如果完整旧目录不可用，可在初始化时显式加 `--reference-mode rerun`，重新运行五组。新输出默认写入 `runs/wem_r4_2`。
+
+| 组别 | 执行方式 | 目的 |
+| --- | --- | --- |
+| BG_off | 默认复用 R4.1 | 已有 BG 参考 |
+| BG_W0 | 默认复用 R4.1 | 冻结的受约束弱观测续接 |
+| BG_lower_low | 新跑全部 30 段 | 原生低阈值改为 0.05，W 关闭 |
+| BG_W0_relaxed_anchor | 新跑全部 30 段 | 去掉三项锚点支持条件，保留上一帧常规观测及其余保护 |
+| BG_W0_emit_only | 新跑全部 30 段 | 发布私有测量预演的弱框，但不反馈正式轨迹状态 |
+
+`full` 自动完成三段 × 五策略技术 smoke、固定五组完整预测（默认仅三组新跟踪）、TrackEval、CLEAR 归因和报告。emit_only 在原生更新及清理结束后才发布弱输出，正式状态链及原生事件必须与 BG_off 相同；真实发布输出另行审计。指标下降、零变化或零提交不会被当作软件失败。
+
+首先读取 `runs/wem_r4_2/full/report/REPORT.md`。本批用于完成 W0 的机制解释与代价对照，不增加阈值搜索，不把复用参考视为新的独立重复，也不将诊断耗时用作部署 FPS。
+
+## 已完成批次：R4.1 十组完整闭环
 
 在已成功运行旧 R4 的环境中，从仓库根目录执行：
 

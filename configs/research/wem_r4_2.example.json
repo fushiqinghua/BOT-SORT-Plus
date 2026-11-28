@@ -1,0 +1,8 @@
+{
+  "schema": "wem_r42_settings",
+  "r41_settings": "configs/research/wem_r4_1.local.json",
+  "r41_batch": "runs/wem_r4_1/full",
+  "reference_mode": "reuse",
+  "output_root": "runs/wem_r4_2",
+  "runtime": {}
+}
