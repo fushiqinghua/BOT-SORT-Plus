@@ -1,0 +1,18 @@
+{
+  "stage": "pilot",
+  "role": "exploratory_r4_user_override_r3_stop",
+  "r3_decision": "reject_all",
+  "prior_gate_failed": true,
+  "steps": [
+    "DJI_0030_2",
+    "DJI_0061_2",
+    "DJI_0327_3"
+  ],
+  "frozen_diagnostic_point": {
+    "method": "history_competition",
+    "cosine_floor": 0.75,
+    "margin": 0.05
+  },
+  "inspected_ground_truth_for_selection": false,
+  "scope": "official 30-sequence development benchmark"
+}

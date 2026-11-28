@@ -1,0 +1,565 @@
+{
+  "status": "PASS",
+  "scope": [
+    "DJI_0030_2",
+    "DJI_0061_2",
+    "DJI_0327_3"
+  ],
+  "r3_lock": "2cc752bd7d7f450d70d828b630d81892351f36d691267962441ee8ae87556719",
+  "arms": {
+    "B_off": {
+      "variant": "off",
+      "method": "B_early_moderate",
+      "totals": {
+        "frames": 1220,
+        "B_recovered": 422
+      },
+      "per_sequence": {
+        "DJI_0030_2": {
+          "mot": "da2dc3b9e0dead0b60e08aceb390f79c1621d537883576963e511c4017156f56",
+          "native_events": "68a0e5368965963a2a83ab993927269471bfc0c49d6dc4a2769d61208a90e556",
+          "states": "aaf2a485f6217b448d50e607e7d3f3a0b831011b608619da853ea22b1290abac",
+          "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counts": {
+            "frames": 590,
+            "B_recovered": 18
+          },
+          "association_and_gmc_seconds": 1.9653402462136,
+          "replay_wall_seconds": 2.845774144050665
+        },
+        "DJI_0061_2": {
+          "mot": "2da088b0f394f683832cfcc129d1fce1e37f0273af5f890b7a05aca7ed9d9ab4",
+          "native_events": "9a0b1db6147d23093ab31fc856e8468aca8e0198fa0a0761d1d42e40947f6a76",
+          "states": "7a385e1e1e2d229a0f636e7db6b2eb25e9f6100566385ab9462600491dddd7e6",
+          "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counts": {
+            "frames": 240,
+            "B_recovered": 221
+          },
+          "association_and_gmc_seconds": 20.322963574435562,
+          "replay_wall_seconds": 21.366417425102554
+        },
+        "DJI_0327_3": {
+          "mot": "1d11f555aee58c2e88e2ff34201b203c0594e3683e3df4a3b9f92e1b3d65423b",
+          "native_events": "0aae647b297ba5eed1de26e663f79d39ec5de4bb6aa71d3a96ca9bd1381d6f0d",
+          "states": "1b648e0802c17f8cc989884793b472a0d0101d0933b2cf02084b026492745e9c",
+          "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counts": {
+            "frames": 390,
+            "B_recovered": 183
+          },
+          "association_and_gmc_seconds": 12.698240433470346,
+          "replay_wall_seconds": 13.737631164956838
+        }
+      },
+      "per_frame_ms_cached": 28.67749529026189,
+      "replay_frames_per_second": 32.14771274553121
+    },
+    "BG_off": {
+      "variant": "off",
+      "method": "evidence_both",
+      "totals": {
+        "frames": 1220,
+        "B_recovered": 421
+      },
+      "per_sequence": {
+        "DJI_0030_2": {
+          "mot": "d1749709af5d44c8c90eab2d2fb897274add25288830874d152acda3602dddf0",
+          "native_events": "cd0b1432f20dc51bbba8e84897ef61d9812502ac4f2bab8ac61fcc73f7aca404",
+          "states": "b17426b05dc91e6e2325b430fef14dec3ced3949fbe2d7dfc9733954e7992624",
+          "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counts": {
+            "frames": 590,
+            "B_recovered": 17
+          },
+          "association_and_gmc_seconds": 1.9517864824738353,
+          "replay_wall_seconds": 2.835223241010681
+        },
+        "DJI_0061_2": {
+          "mot": "2da088b0f394f683832cfcc129d1fce1e37f0273af5f890b7a05aca7ed9d9ab4",
+          "native_events": "9a0b1db6147d23093ab31fc856e8468aca8e0198fa0a0761d1d42e40947f6a76",
+          "states": "7a385e1e1e2d229a0f636e7db6b2eb25e9f6100566385ab9462600491dddd7e6",
+          "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counts": {
+            "frames": 240,
+            "B_recovered": 221
+          },
+          "association_and_gmc_seconds": 19.92865870683454,
+          "replay_wall_seconds": 20.974503859994
+        },
+        "DJI_0327_3": {
+          "mot": "1d11f555aee58c2e88e2ff34201b203c0594e3683e3df4a3b9f92e1b3d65423b",
+          "native_events": "0aae647b297ba5eed1de26e663f79d39ec5de4bb6aa71d3a96ca9bd1381d6f0d",
+          "states": "1b648e0802c17f8cc989884793b472a0d0101d0933b2cf02084b026492745e9c",
+          "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counts": {
+            "frames": 390,
+            "B_recovered": 183
+          },
+          "association_and_gmc_seconds": 12.564527444192208,
+          "replay_wall_seconds": 13.605535796959884
+        }
+      },
+      "per_frame_ms_cached": 28.23358412582015,
+      "replay_frames_per_second": 32.607013969862265
+    },
+    "B_lower_low": {
+      "variant": "lower_low",
+      "method": "B_early_moderate",
+      "totals": {
+        "frames": 1220,
+        "B_recovered": 466
+      },
+      "per_sequence": {
+        "DJI_0030_2": {
+          "mot": "2005f1f2e8ec3eacfc8a027d6e268e349027c78f5ba23597bbf3a8f612feccea",
+          "native_events": "6f5c827c68db77dc310ac156eef432dcb9094a367c35e2896b643bf51ca59ae3",
+          "states": "f94fa0ebaf3ac3a7b3ea16646f2c71c6bbe0bcad9e0e7a4857fe068621860b52",
+          "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counts": {
+            "frames": 590,
+            "B_recovered": 27
+          },
+          "association_and_gmc_seconds": 2.1143936903681606,
+          "replay_wall_seconds": 2.9967172000324354
+        },
+        "DJI_0061_2": {
+          "mot": "a5ebcfc7d1697df3a0615dcb11be3f0a986c8bd7aa64983034ae3939fdf5444a",
+          "native_events": "5e575790e8c93886c8ad27a5f6f11aeafabaae7cf8b9a9967822d0fbf889ea13",
+          "states": "730f9e36f1bd5d198def53ea07365fb6f5cc4156e9cac1e9a7273b54ef7b81ff",
+          "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counts": {
+            "frames": 240,
+            "B_recovered": 259
+          },
+          "association_and_gmc_seconds": 25.420635211165063,
+          "replay_wall_seconds": 26.578706790111028
+        },
+        "DJI_0327_3": {
+          "mot": "2135af830a7f1535eeaa9efffc17c357cf8b64278b10fffcb2213035ecc23d9d",
+          "native_events": "2c422b5503ec33a719ac56316b0e354eb15c6d4b4d0495d360104493fcd45e41",
+          "states": "20a9889106dcc1dde8ac3d9ab923e4f6f7136df034203a14c2cc3b0a35eae5f1",
+          "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counts": {
+            "frames": 390,
+            "B_recovered": 180
+          },
+          "association_and_gmc_seconds": 16.230670255725272,
+          "replay_wall_seconds": 17.312536639976315
+        }
+      },
+      "per_frame_ms_cached": 35.87352389939221,
+      "replay_frames_per_second": 26.019472453154624
+    },
+    "B_plain": {
+      "variant": "plain",
+      "method": "B_early_moderate",
+      "totals": {
+        "anchor_ineligible": 382,
+        "committed": 329,
+        "eligible_s0_edges": 345,
+        "empty_detector_frames": 0,
+        "frames": 1220,
+        "geometry_reject": 7790,
+        "proposed": 329,
+        "B_recovered": 366,
+        "anchor_box_reject": 3,
+        "anchor_diverged": 4
+      },
+      "per_sequence": {
+        "DJI_0030_2": {
+          "mot": "e36acaf4ffe1d4c82e25b60437156269ddd64f5f838fc7b7a751bb52251d054b",
+          "native_events": "f4f466aa25f89048f962496d828b816bb6d6cd7f9ee47ee0f8a6c35c74d571bb",
+          "states": "6a2491d8c21d6ded306e1031335e03cc0c83d6c455ccd63691b0fefd9a21045b",
+          "weak_events": "f0aecc4e873bbc02a51f86b4cb5434fdc4fd54073f652647099ad707c3ba9fc7",
+          "counts": {
+            "anchor_ineligible": 16,
+            "committed": 10,
+            "eligible_s0_edges": 15,
+            "empty_detector_frames": 0,
+            "frames": 590,
+            "geometry_reject": 14,
+            "proposed": 10,
+            "B_recovered": 14
+          },
+          "association_and_gmc_seconds": 2.4534173489082605,
+          "replay_wall_seconds": 3.336447178036906
+        },
+        "DJI_0061_2": {
+          "mot": "8f2935ad2a2987cdad5f0d6df0ad61efc5746d0c4a9cee76ae4587ff3f3369c8",
+          "native_events": "c513b23da02cc233688fb8abd297d987e533c845bc5fcb1ff5db3aee40ac4d05",
+          "states": "31652aa59e99c2a0a9bd9d9276c3a05fe515911dbb78e640dbf9010d6826b738",
+          "weak_events": "01acf9cb44f6beaf2f0671004e035d713bf8396198650b695dd941c39d16881d",
+          "counts": {
+            "anchor_box_reject": 3,
+            "anchor_diverged": 4,
+            "anchor_ineligible": 218,
+            "committed": 151,
+            "eligible_s0_edges": 154,
+            "empty_detector_frames": 0,
+            "frames": 240,
+            "geometry_reject": 5935,
+            "proposed": 151,
+            "B_recovered": 216
+          },
+          "association_and_gmc_seconds": 23.25170175009407,
+          "replay_wall_seconds": 24.294717864948325
+        },
+        "DJI_0327_3": {
+          "mot": "43dbdcef33616e97cf9c19e292f1ae2b7f773ec02a4c94427cf22a151cc0fe97",
+          "native_events": "ef85c2849acfa13254f613a7ab158b5b3d6717de7f229990e6ea4f07f2e978c5",
+          "states": "c1ff13df5b75305816c16e93f9e3154746d62d36b576c59a26d5a54b33877b0b",
+          "weak_events": "89b17fab7b9da5369e92f57caf211dc36e82bd2519577881620dd558b76d30eb",
+          "counts": {
+            "anchor_ineligible": 148,
+            "committed": 168,
+            "eligible_s0_edges": 176,
+            "empty_detector_frames": 0,
+            "frames": 390,
+            "geometry_reject": 1841,
+            "proposed": 168,
+            "B_recovered": 136
+          },
+          "association_and_gmc_seconds": 14.758260522037745,
+          "replay_wall_seconds": 15.782568371971138
+        }
+      },
+      "per_frame_ms_cached": 33.1667046074099,
+      "replay_frames_per_second": 28.101706626772174
+    },
+    "B_coast": {
+      "variant": "coast",
+      "method": "B_early_moderate",
+      "totals": {
+        "anchor_ineligible": 681,
+        "committed": 788,
+        "empty_detector_frames": 0,
+        "frames": 1220,
+        "proposed": 788,
+        "B_recovered": 333,
+        "anchor_diverged": 4,
+        "forecast_overlap": 75
+      },
+      "per_sequence": {
+        "DJI_0030_2": {
+          "mot": "92d4d4273226e21e1faec39ac6a97b164a865cae84e5a75080a7d0a916b24774",
+          "native_events": "a8f526e8eb9aba0ab6318eaef591e31cda637bc0d5b219c88693e1fae3266107",
+          "states": "1817540b01035deb544ed07e49daf0e68959ee6060de91bf9da145502eefae17",
+          "weak_events": "1861d1a3f4868ac31fee6b74881cc9b526faa5a1024b502281fa4035e6131b62",
+          "counts": {
+            "anchor_ineligible": 22,
+            "committed": 21,
+            "empty_detector_frames": 0,
+            "frames": 590,
+            "proposed": 21,
+            "B_recovered": 13
+          },
+          "association_and_gmc_seconds": 2.469463221146725,
+          "replay_wall_seconds": 3.352170402999036
+        },
+        "DJI_0061_2": {
+          "mot": "4ad6f918b43a3680a2c492b05d57e5fe8226b6e6a87915bd911693c6096b35bd",
+          "native_events": "093de25dfc431c003735df9a6aa271df277213be0d9c6827581c4dfddaf4b2ed",
+          "states": "9c3e0573d73649dc7c1ec017836a6b45ffb2105f8107c28c5a42e597b453d6a4",
+          "weak_events": "2761e2c0517d952e1271ebe8d04453707e0abf5ac35f516b0f36a068adf2dc7e",
+          "counts": {
+            "anchor_diverged": 4,
+            "anchor_ineligible": 463,
+            "committed": 541,
+            "empty_detector_frames": 0,
+            "forecast_overlap": 67,
+            "frames": 240,
+            "proposed": 541,
+            "B_recovered": 186
+          },
+          "association_and_gmc_seconds": 23.658894872642122,
+          "replay_wall_seconds": 24.682167529012077
+        },
+        "DJI_0327_3": {
+          "mot": "16e465d0539067bf8ea736bf8dd83a29c06d4ab6af93db6160d9b5ede28150c4",
+          "native_events": "3fb0349d848f587224de3d9b255bae4e3476a087836eb61b8edce70a6ff13543",
+          "states": "7fdca2685e10a2f7e7485f50f823d0cf08248a6e97b06ba50a64ab3d2d505c29",
+          "weak_events": "fec05a744f02b554db71995f96f3ada8467217d94add33b8132612f6aa5e8dd1",
+          "counts": {
+            "anchor_ineligible": 196,
+            "committed": 226,
+            "empty_detector_frames": 0,
+            "forecast_overlap": 8,
+            "frames": 390,
+            "proposed": 226,
+            "B_recovered": 134
+          },
+          "association_and_gmc_seconds": 14.860922661609948,
+          "replay_wall_seconds": 15.887569101061672
+        }
+      },
+      "per_frame_ms_cached": 33.59777111098262,
+      "replay_frames_per_second": 27.77657170216565
+    },
+    "B_w_coast": {
+      "variant": "w_coast",
+      "method": "B_early_moderate",
+      "totals": {
+        "anchor_ineligible": 161,
+        "committed": 28,
+        "competition_or_quality_reject": 312,
+        "eligible_s0_edges": 340,
+        "empty_detector_frames": 0,
+        "frames": 1220,
+        "geometry_reject": 7614,
+        "proposed": 28,
+        "rgb_crops": 340,
+        "scored_edges": 340,
+        "B_recovered": 414,
+        "anchor_box_reject": 5,
+        "anchor_diverged": 4
+      },
+      "per_sequence": {
+        "DJI_0030_2": {
+          "mot": "60c8eb87d226730c5c75474e4f6ac07cd75d4e848f7fb82cbdc4b7ff6f4d5438",
+          "native_events": "ec5b0d8ce7321ef87c3f4d28d093db40dd0fa241ff367e2072cec2c1793e157c",
+          "states": "0e8d053f03d9a5db9f5c1bf63d511f9194cde2995403b7d78a32c4556541cead",
+          "weak_events": "c404bfe1ea2ce8b2bdaf639e07fb3058349ab520a595f447e5328f74fd882f42",
+          "counts": {
+            "anchor_ineligible": 14,
+            "committed": 6,
+            "competition_or_quality_reject": 9,
+            "eligible_s0_edges": 15,
+            "empty_detector_frames": 0,
+            "frames": 590,
+            "geometry_reject": 14,
+            "proposed": 6,
+            "rgb_crops": 15,
+            "scored_edges": 15,
+            "B_recovered": 16
+          },
+          "association_and_gmc_seconds": 2.6509649355430156,
+          "replay_wall_seconds": 3.5339623109903187
+        },
+        "DJI_0061_2": {
+          "mot": "a72f108ca37031a5532a4144f901066b1bcaf48eee763c1bc74d363741489950",
+          "native_events": "adab8ab31edddc8a2ee8842d6925fc2b4071d66a6d49e01da66bfebb3aa27e61",
+          "states": "fe0b4c7c54055dacf2f59662e9f334f73f5b48e5d3b1b20633c0f8240e0b7fd6",
+          "weak_events": "e4a9175a57fa46f9cb34d408740cf5071aa06dad32527c2b16bb5158c0da2ea7",
+          "counts": {
+            "anchor_box_reject": 5,
+            "anchor_diverged": 4,
+            "anchor_ineligible": 94,
+            "committed": 1,
+            "competition_or_quality_reject": 147,
+            "eligible_s0_edges": 148,
+            "empty_detector_frames": 0,
+            "frames": 240,
+            "geometry_reject": 5804,
+            "proposed": 1,
+            "rgb_crops": 148,
+            "scored_edges": 148,
+            "B_recovered": 221
+          },
+          "association_and_gmc_seconds": 23.881533722626045,
+          "replay_wall_seconds": 24.899089731974527
+        },
+        "DJI_0327_3": {
+          "mot": "31c3306aac3c1aa2ddca868c65ae7a5402053022e026184cc45872deac40b80c",
+          "native_events": "996e7fe12e9b6ca6a5b8bdf6d13305b7b767c8f705489605730acb2496942cf1",
+          "states": "38d451bf26e2424e4ce97d763cb5bf75d7f50dbe7d46fd5ab71b00562a65b2b3",
+          "weak_events": "6319f95f8e9868debafcf9f3d56c6ae7cb15f9319877c2bc755625d8f1860e62",
+          "counts": {
+            "anchor_ineligible": 53,
+            "committed": 21,
+            "competition_or_quality_reject": 156,
+            "eligible_s0_edges": 177,
+            "empty_detector_frames": 0,
+            "frames": 390,
+            "geometry_reject": 1796,
+            "proposed": 21,
+            "rgb_crops": 177,
+            "scored_edges": 177,
+            "B_recovered": 177
+          },
+          "association_and_gmc_seconds": 15.917228267411701,
+          "replay_wall_seconds": 16.965082754963078
+        }
+      },
+      "per_frame_ms_cached": 34.79485813572194,
+      "replay_frames_per_second": 26.873350753953964
+    },
+    "B_w_full": {
+      "variant": "w_full",
+      "method": "B_early_moderate",
+      "totals": {
+        "anchor_ineligible": 161,
+        "committed": 28,
+        "competition_or_quality_reject": 310,
+        "eligible_s0_edges": 338,
+        "empty_detector_frames": 0,
+        "frames": 1220,
+        "geometry_reject": 7607,
+        "proposed": 28,
+        "rgb_crops": 338,
+        "scored_edges": 338,
+        "B_recovered": 413,
+        "anchor_box_reject": 5,
+        "anchor_diverged": 4
+      },
+      "per_sequence": {
+        "DJI_0030_2": {
+          "mot": "12655de313d7a981de2f0d2fe20335f66708bd71a46e51c29e13fb7475e0b907",
+          "native_events": "05a1ea290913ec8114004fe6c75aeb3af80235435bc4a1db94742e68ed1f5538",
+          "states": "aedfef0d0a9402180f066671cc61ff537691dd9fff49485688503d9091fbe7b0",
+          "weak_events": "482aa9c9b79705b43dc6dd1b84a7c3a53431359c538e873013edda9d33d5532f",
+          "counts": {
+            "anchor_ineligible": 14,
+            "committed": 6,
+            "competition_or_quality_reject": 9,
+            "eligible_s0_edges": 15,
+            "empty_detector_frames": 0,
+            "frames": 590,
+            "geometry_reject": 14,
+            "proposed": 6,
+            "rgb_crops": 15,
+            "scored_edges": 15,
+            "B_recovered": 16
+          },
+          "association_and_gmc_seconds": 2.701827570446767,
+          "replay_wall_seconds": 3.5835839400533587
+        },
+        "DJI_0061_2": {
+          "mot": "4743f540e3f04620c85ec928c8f960079ca4748b742983a5b90e3f3b703c93cf",
+          "native_events": "2afd05db3627b7ee4fa76d32ece20b2799e2bc73a5dbb849c36594f2de6aa3e7",
+          "states": "543bd2a9f1bb84032d463a2b1fa39d7a60c22e577697c84d72d87ca21ea58244",
+          "weak_events": "fee55cd29da8ef90c7695fe7c9ab57082bb0d5d001965e5bb984fd474411cac3",
+          "counts": {
+            "anchor_box_reject": 5,
+            "anchor_diverged": 4,
+            "anchor_ineligible": 94,
+            "committed": 1,
+            "competition_or_quality_reject": 147,
+            "eligible_s0_edges": 148,
+            "empty_detector_frames": 0,
+            "frames": 240,
+            "geometry_reject": 5804,
+            "proposed": 1,
+            "rgb_crops": 148,
+            "scored_edges": 148,
+            "B_recovered": 221
+          },
+          "association_and_gmc_seconds": 24.214780201320536,
+          "replay_wall_seconds": 25.24270616506692
+        },
+        "DJI_0327_3": {
+          "mot": "5a9f161c21594d44be2763ab74c5c53681cd933df41c7e44eb6ae350cf79202e",
+          "native_events": "bc12b1444bf6ea89aa32f2f1ca487842600e15390a4d5177453b9172885be7f0",
+          "states": "fbf5677c5a18dfe24b6d602ff1655e0b5fe41ed0e009d926fc27ede6377a1037",
+          "weak_events": "11011a78f5ddc2a2278efec63523cb0a78996b3dfd6b004916dd120141bbb7ff",
+          "counts": {
+            "anchor_ineligible": 53,
+            "committed": 21,
+            "competition_or_quality_reject": 154,
+            "eligible_s0_edges": 175,
+            "empty_detector_frames": 0,
+            "frames": 390,
+            "geometry_reject": 1789,
+            "proposed": 21,
+            "rgb_crops": 175,
+            "scored_edges": 175,
+            "B_recovered": 176
+          },
+          "association_and_gmc_seconds": 16.10863820533268,
+          "replay_wall_seconds": 17.15922888892237
+        }
+      },
+      "per_frame_ms_cached": 35.26659506319671,
+      "replay_frames_per_second": 26.530090921841047
+    },
+    "BG_w_full": {
+      "variant": "w_full",
+      "method": "evidence_both",
+      "totals": {
+        "anchor_diverged": 5,
+        "anchor_ineligible": 159,
+        "committed": 28,
+        "competition_or_quality_reject": 310,
+        "eligible_s0_edges": 338,
+        "empty_detector_frames": 0,
+        "frames": 1220,
+        "geometry_reject": 7607,
+        "proposed": 28,
+        "rgb_crops": 338,
+        "scored_edges": 338,
+        "B_recovered": 412,
+        "anchor_box_reject": 5
+      },
+      "per_sequence": {
+        "DJI_0030_2": {
+          "mot": "784480e20568aad8797652aa5e65d0e6d003160c13f2cbeaf31f3dbf02bf3b47",
+          "native_events": "1022c7f8680a7f084904f02696d08e26ef7827a1301306bd8125edb26a7d130a",
+          "states": "7dd0f997d062f13bffeaebe59bdf4eee217aa246cc6d1d4a4701ac181aad583f",
+          "weak_events": "1c0ef0a3ec87828cc34ef79c94ea4c571494ef704606e23ac614f2150dcdff6d",
+          "counts": {
+            "anchor_diverged": 1,
+            "anchor_ineligible": 12,
+            "committed": 6,
+            "competition_or_quality_reject": 9,
+            "eligible_s0_edges": 15,
+            "empty_detector_frames": 0,
+            "frames": 590,
+            "geometry_reject": 14,
+            "proposed": 6,
+            "rgb_crops": 15,
+            "scored_edges": 15,
+            "B_recovered": 15
+          },
+          "association_and_gmc_seconds": 2.6861661550356075,
+          "replay_wall_seconds": 3.570078037912026
+        },
+        "DJI_0061_2": {
+          "mot": "4743f540e3f04620c85ec928c8f960079ca4748b742983a5b90e3f3b703c93cf",
+          "native_events": "2afd05db3627b7ee4fa76d32ece20b2799e2bc73a5dbb849c36594f2de6aa3e7",
+          "states": "543bd2a9f1bb84032d463a2b1fa39d7a60c22e577697c84d72d87ca21ea58244",
+          "weak_events": "fee55cd29da8ef90c7695fe7c9ab57082bb0d5d001965e5bb984fd474411cac3",
+          "counts": {
+            "anchor_box_reject": 5,
+            "anchor_diverged": 4,
+            "anchor_ineligible": 94,
+            "committed": 1,
+            "competition_or_quality_reject": 147,
+            "eligible_s0_edges": 148,
+            "empty_detector_frames": 0,
+            "frames": 240,
+            "geometry_reject": 5804,
+            "proposed": 1,
+            "rgb_crops": 148,
+            "scored_edges": 148,
+            "B_recovered": 221
+          },
+          "association_and_gmc_seconds": 24.015075211878866,
+          "replay_wall_seconds": 25.05692917201668
+        },
+        "DJI_0327_3": {
+          "mot": "5a9f161c21594d44be2763ab74c5c53681cd933df41c7e44eb6ae350cf79202e",
+          "native_events": "bc12b1444bf6ea89aa32f2f1ca487842600e15390a4d5177453b9172885be7f0",
+          "states": "fbf5677c5a18dfe24b6d602ff1655e0b5fe41ed0e009d926fc27ede6377a1037",
+          "weak_events": "11011a78f5ddc2a2278efec63523cb0a78996b3dfd6b004916dd120141bbb7ff",
+          "counts": {
+            "anchor_ineligible": 53,
+            "committed": 21,
+            "competition_or_quality_reject": 154,
+            "eligible_s0_edges": 175,
+            "empty_detector_frames": 0,
+            "frames": 390,
+            "geometry_reject": 1789,
+            "proposed": 21,
+            "rgb_crops": 175,
+            "scored_edges": 175,
+            "B_recovered": 176
+          },
+          "association_and_gmc_seconds": 16.011026128893718,
+          "replay_wall_seconds": 17.063260677969083
+        }
+      },
+      "per_frame_ms_cached": 35.01005532443294,
+      "replay_frames_per_second": 26.701528714896142
+    }
+  }
+}

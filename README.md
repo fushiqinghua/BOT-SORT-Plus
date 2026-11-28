@@ -2,7 +2,7 @@
 
 本分支 **research/vttiny-weak-evidence** 为毕业设计目标跟踪章节准备 W 模块及下一批实验，从 research/vttiny-track-conditioned-observation 的 **176f2a81613c34d16a860765ea7be0845116b534** 建立，继承 B、GMC、TCO/Q2 及先前实验归档。
 
-**当前阶段已完成 R3 训练侧冻结准入校准和 113 例逐帧复核。18 个有限工作点均未达到准入条件，保留拒绝全部弱框的策略，R4 未运行。** [R3 结果与图卡索引](results/vttiny/wem_v0.1/r3/README.md)
+**已完成 W R4 探索性闭环的八组全量评测。完整 W 少漏 59 帧，同时增加约 145 个误报，换号持平。R3 的默认拒绝全部策略继续有效。** [R4 结果与复现](results/vttiny/wem_v0.1/r4/README.md) [R3 结果与图卡索引](results/vttiny/wem_v0.1/r3/README.md)
 
 ## 从这里开始
 
@@ -70,7 +70,7 @@ python -X utf8 tools/audit_wem_s0.py --detections-dir "<实际检测缓存目录
 | R1b：轨迹资格、所有权、身份机会 | 已用于 R3 训练侧候选和真值离线核验 |
 | R2：冻结状态 raw/prior/posterior 比较 | 前期离线实验为 R3 提供动机 |
 | R3：身份/背景区分与校准留出 | [已完成](results/vttiny/wem_v0.1/r3/README.md)，113 例人工复核待完成 |
-| R4：W 闭环及组合消融 | 准入验收未通过，未运行 |
+| R4：W 闭环及组合消融 | [探索性八组闭环完成](results/vttiny/wem_v0.1/r4/README.md)，保留 R3 默认关闭策略 |
 
 W 首版只帮助帧首已确认活跃旧身份，使用一个当前真实弱框与过去常规观测验证，不新建 ID，不将弱外观写入长期模板，保留原生/B/起轨优先权。S1 更低导出阈值和 S2 NMS 抑制候选分开研究，默认关闭。
 
