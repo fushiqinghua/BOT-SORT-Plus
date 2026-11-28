@@ -1,0 +1,128 @@
+{
+  "schema": "wem_r41_public_run_v1",
+  "source": {
+    "github_commit": "3132e69fcca86ac5ce6d59271b2dff38454fc628",
+    "deployment_archive_sha256": "93b2b8ba6d27ad7c4448cf57b00d68ee8ec2f4950b1aca9962737124e4f58383"
+  },
+  "scope": {
+    "official_split": "test",
+    "usage": "development",
+    "sequence_count": 30,
+    "frames_per_arm": 12590,
+    "sequence_lengths": {
+      "DJI_0028_3": 570,
+      "DJI_0030_2": 590,
+      "DJI_0032_3": 290,
+      "DJI_0049_2": 90,
+      "DJI_0051_2": 580,
+      "DJI_0061_2": 240,
+      "DJI_0073_3": 360,
+      "DJI_0109_1": 90,
+      "DJI_0119_2": 180,
+      "DJI_0129_2": 590,
+      "DJI_0141_2": 410,
+      "DJI_0155_2": 410,
+      "DJI_0159_2": 250,
+      "DJI_0169_3": 290,
+      "DJI_0173_2": 450,
+      "DJI_0181_3": 320,
+      "DJI_0221_2": 590,
+      "DJI_0225_1": 329,
+      "DJI_0237_2": 410,
+      "DJI_0255_1": 600,
+      "DJI_0257_2": 590,
+      "DJI_0277_2": 366,
+      "DJI_0283_1": 450,
+      "DJI_0303_2": 577,
+      "DJI_0307_2": 180,
+      "DJI_0309_4": 603,
+      "DJI_0325_2": 595,
+      "DJI_0327_3": 390,
+      "DJI_0339_2": 600,
+      "DJI_0345_2": 600
+    },
+    "arms": [
+      "B_off",
+      "B_W0",
+      "B_W1",
+      "B_W2",
+      "B_W3",
+      "BG_off",
+      "BG_W0",
+      "BG_W1",
+      "BG_W2",
+      "BG_W3"
+    ]
+  },
+  "reference": {
+    "B": "B_early_moderate",
+    "BG": "evidence_both"
+  },
+  "runtime": {
+    "conda": "redetr",
+    "python": "3.11.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "physical_gpu": 4,
+    "workers": 4
+  },
+  "trackeval": {
+    "commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+    "manifest_sha256": "76e6608c3027a601f7cd8e724a4c3d967be8b153e811f7648ad2150b1f9a5e82",
+    "verified_source_files": 45,
+    "eol_normalized_matched": false
+  },
+  "status": {
+    "smoke": "TECHNICAL_PARITY_PASS",
+    "full": "FULL_BENCHMARK_COMPLETE",
+    "evaluation": "EVALUATION_COMPLETE",
+    "r0_reference_parity": "PASS",
+    "retries": 0,
+    "incomplete_arms": []
+  },
+  "technical_smoke": {
+    "sequence_frames": 1220,
+    "sequences": [
+      "DJI_0030_2",
+      "DJI_0061_2",
+      "DJI_0327_3"
+    ],
+    "arms": [
+      "B_off",
+      "B_shadow",
+      "B_force_reject",
+      "BG_off",
+      "BG_shadow",
+      "BG_force_reject"
+    ],
+    "checked": [
+      "MOT",
+      "native events",
+      "state chains",
+      "read-only diagnostics"
+    ]
+  },
+  "original_only_digests": {
+    "runtime_settings_sha256": "17434df9ceb525bfc5b2af74616a573c710b83076b947f6563e1f29f2b2ef11e",
+    "input_receipt_sha256": "5b59df5822a8dd13b946ff5c2e2bded7a771a669ed5e27fb33c66b65f5bb42ee",
+    "run_fingerprint": "f9e7acea5f2bf0c6c2541e53c1e1166c3918a6eb3cba407c74f0a308224e2a6d",
+    "prediction_verification_sha256": "902ec7b9f9283c89ae7103d5c8f0f2d16015c8d64fcf310e6c2d0bb55a7b161e",
+    "evaluation_receipt_sha256": "876302af2deac32f2ee1d0ebc37c7d62ada7be9d83928b882cbde014112d5972",
+    "report_manifest_sha256": "8c9d96891c05635328f40c3466d5eecb689d6dfe5d061a65d23841f10b1b8340"
+  },
+  "trajectory_parity": {
+    "B": {
+      "W0_equals_W1": 30,
+      "W1_equals_W2": 30,
+      "W2_equals_W3": 23
+    },
+    "BG": {
+      "W0_equals_W1": 30,
+      "W1_equals_W2": 30,
+      "W2_equals_W3": 23
+    }
+  }
+}

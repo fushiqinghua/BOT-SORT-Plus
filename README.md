@@ -2,7 +2,7 @@
 
 本分支 **research/vttiny-weak-evidence** 为毕业设计目标跟踪章节准备 W 模块及下一批实验，从 research/vttiny-track-conditioned-observation 的 **176f2a81613c34d16a860765ea7be0845116b534** 建立，继承 B、GMC、TCO/Q2 及先前实验归档。
 
-**当前批次为 R4.1：W0–W3 已接入真实跟踪更新，准备在 B 与 BG 两套参考上运行 10 组 × 全部 30 段闭环评测。代码与软件核验已完成，真实数据结果尚未运行回传。** [当前运行手册](docs/botsort_plus/wem_r4_1/LOCAL_RUNBOOK.md) · [实验设计](docs/botsort_plus/wem_r4_1/EXPERIMENT_PLAN.md) · [结果入口](results/vttiny/wem_r4_1/README.md)
+**W R4.1 已完成 B 和 BG 的十组闭环评测，每组覆盖官方 30 段。W0–W2 的轨迹一致，W3 相对 W2 多出 57 个误报和 27 个漏检。** [当前运行手册](docs/botsort_plus/wem_r4_1/LOCAL_RUNBOOK.md) · [实验设计](docs/botsort_plus/wem_r4_1/EXPERIMENT_PLAN.md) · [结果入口](results/vttiny/wem_r4_1/README.md)
 
 R3.1 已完成 W0–W3 与 W_old 五组冻结离线对照。785 个未知候选组仍可随后定向复核；这不构成本批完整闭环的前置条件。[R3.1 结果与复现](results/vttiny/wem_r3_1/full_20261128/README.md)
 

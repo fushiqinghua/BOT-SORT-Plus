@@ -1,0 +1,9 @@
+﻿arm,gained,lost,fp_delta,idsw_delta,B_reference,B_actual,unmatched_FP,TP_same_old_identity,TP_other_identity,TP_past_identity_unconfirmed,newly_covered,reference_B_not_matched,reference_B_coverage_lost,same_id_covered_with_recent_W,coverage_retained
+B_W0,643,135,554,-2,935,784,384,318,0,28,343,236,29,57,59
+B_W1,643,135,554,-2,935,784,384,318,0,28,343,236,29,57,59
+B_W2,643,135,554,-2,935,784,384,318,0,28,343,236,29,57,59
+B_W3,617,136,611,-2,935,791,380,307,0,28,332,237,30,52,59
+BG_W0,646,136,578,0,922,771,384,319,0,27,343,239,29,58,56
+BG_W1,646,136,578,0,922,771,384,319,0,27,343,239,29,58,56
+BG_W2,646,136,578,0,922,771,384,319,0,27,343,239,29,58,56
+BG_W3,620,137,635,0,922,778,380,308,0,27,332,240,30,53,56
