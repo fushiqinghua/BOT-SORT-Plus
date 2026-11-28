@@ -2,7 +2,7 @@
 
 **分支：`research/vttiny-weak-evidence`**  
 **承接结果：`3a6e6c4d01d3d3ee04f1a9c952e25a4790f04e77` 的 W R4.1 全量归档。**  
-**本批状态：方案与实验入口已准备，真实数据结果 `NOT_RUN`。**
+**本批已完成五组全量评测。** [实测结果与定型依据](../../../results/vttiny/wem_r4_2/full_20261128/README.md)
 
 [执行手册](LOCAL_RUNBOOK.md) · [结果记录模板](RESULTS_TEMPLATE.md) · [本批结果入口](../../../results/vttiny/wem_r4_2/README.md) · [R4.1 已完成结果](../../../results/vttiny/wem_r4_1/full_20261128/README.md)
 

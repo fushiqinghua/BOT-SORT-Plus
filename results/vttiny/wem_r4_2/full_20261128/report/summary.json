@@ -1,0 +1,479 @@
+{
+  "schema": "wem_r42_report",
+  "status": "FULL_EVALUATION_COMPLETE",
+  "sequence_count": 30,
+  "sequences": [
+    "DJI_0028_3",
+    "DJI_0030_2",
+    "DJI_0032_3",
+    "DJI_0049_2",
+    "DJI_0051_2",
+    "DJI_0061_2",
+    "DJI_0073_3",
+    "DJI_0109_1",
+    "DJI_0119_2",
+    "DJI_0129_2",
+    "DJI_0141_2",
+    "DJI_0155_2",
+    "DJI_0159_2",
+    "DJI_0169_3",
+    "DJI_0173_2",
+    "DJI_0181_3",
+    "DJI_0221_2",
+    "DJI_0225_1",
+    "DJI_0237_2",
+    "DJI_0255_1",
+    "DJI_0257_2",
+    "DJI_0277_2",
+    "DJI_0283_1",
+    "DJI_0303_2",
+    "DJI_0307_2",
+    "DJI_0309_4",
+    "DJI_0325_2",
+    "DJI_0327_3",
+    "DJI_0339_2",
+    "DJI_0345_2"
+  ],
+  "frames": 12590,
+  "arms": [
+    "BG_off",
+    "BG_W0",
+    "BG_lower_low",
+    "BG_W0_relaxed_anchor",
+    "BG_W0_emit_only"
+  ],
+  "aggregation": "TrackEval COMBINED_SEQ; never average sequence percentages",
+  "units": {
+    "percent_metrics": "percentage points (0-100 scale)",
+    "count_metrics": "official CLEAR counts",
+    "exposure": "counter-specific; do not sum sequence rows together with COMBINED_SEQ"
+  },
+  "comparison": [
+    {
+      "arm": "BG_off",
+      "reference": "BG_off",
+      "HOTA": 38.85964194370244,
+      "DetA": 26.073311749315213,
+      "AssA": 59.43302434294502,
+      "IDF1": 44.082786393293446,
+      "MOTA": 25.722025676968606,
+      "FP": 15945,
+      "FN": 117234,
+      "IDSW": 352,
+      "delta_HOTA": 0.0,
+      "delta_DetA": 0.0,
+      "delta_AssA": 0.0,
+      "delta_IDF1": 0.0,
+      "delta_MOTA": 0.0,
+      "delta_FP": 0,
+      "delta_FN": 0,
+      "delta_IDSW": 0,
+      "direction_hint": "REFERENCE"
+    },
+    {
+      "arm": "BG_W0",
+      "reference": "BG_off",
+      "HOTA": 39.03393195982692,
+      "DetA": 26.241389759758977,
+      "AssA": 59.58985029417661,
+      "IDF1": 44.23716853741956,
+      "MOTA": 25.68419998664976,
+      "FP": 16523,
+      "FN": 116724,
+      "IDSW": 352,
+      "delta_HOTA": 0.17429001612448047,
+      "delta_DetA": 0.16807801044376447,
+      "delta_AssA": 0.15682595123158904,
+      "delta_IDF1": 0.15438214412611018,
+      "delta_MOTA": -0.037825690318847194,
+      "delta_FP": 578,
+      "delta_FN": -510,
+      "delta_IDSW": 0,
+      "direction_hint": "MIXED_TRADEOFF_REVIEW_COSTS"
+    },
+    {
+      "arm": "BG_lower_low",
+      "reference": "BG_off",
+      "HOTA": 39.25636430168676,
+      "DetA": 26.56098438808951,
+      "AssA": 59.57582607428321,
+      "IDF1": 44.73315705329991,
+      "MOTA": 25.432214137908016,
+      "FP": 18118,
+      "FN": 115579,
+      "IDSW": 355,
+      "delta_HOTA": 0.39672235798431643,
+      "delta_DetA": 0.48767263877429556,
+      "delta_AssA": 0.14280173133819574,
+      "delta_IDF1": 0.650370660006466,
+      "delta_MOTA": -0.2898115390605902,
+      "delta_FP": 2173,
+      "delta_FN": -1655,
+      "delta_IDSW": 3,
+      "direction_hint": "MIXED_TRADEOFF_REVIEW_COSTS"
+    },
+    {
+      "arm": "BG_W0_relaxed_anchor",
+      "reference": "BG_off",
+      "HOTA": 39.02350426715923,
+      "DetA": 26.231621684729955,
+      "AssA": 59.58338150208146,
+      "IDF1": 44.173044438544444,
+      "MOTA": 25.482277551565318,
+      "FP": 16972,
+      "FN": 116629,
+      "IDSW": 361,
+      "delta_HOTA": 0.1638623234567902,
+      "delta_DetA": 0.15830993541474214,
+      "delta_AssA": 0.15035715913644054,
+      "delta_IDF1": 0.09025804525099801,
+      "delta_MOTA": -0.23974812540328827,
+      "delta_FP": 1027,
+      "delta_FN": -605,
+      "delta_IDSW": 9,
+      "direction_hint": "MIXED_TRADEOFF_REVIEW_COSTS"
+    },
+    {
+      "arm": "BG_W0_emit_only",
+      "reference": "BG_off",
+      "HOTA": 38.95015440434952,
+      "DetA": 26.192567247084224,
+      "AssA": 59.452570145895635,
+      "IDF1": 44.1804785368943,
+      "MOTA": 25.70366909196093,
+      "FP": 16312,
+      "FN": 116900,
+      "IDSW": 352,
+      "delta_HOTA": 0.09051246064707641,
+      "delta_DetA": 0.11925549776901079,
+      "delta_AssA": 0.01954580295061703,
+      "delta_IDF1": 0.09769214360085243,
+      "delta_MOTA": -0.018356585007676784,
+      "delta_FP": 367,
+      "delta_FN": -334,
+      "delta_IDSW": 0,
+      "direction_hint": "MIXED_TRADEOFF_REVIEW_COSTS"
+    }
+  ],
+  "component_deltas": [
+    {
+      "comparison": "BG_W0_minus_BG_off",
+      "arm": "BG_W0",
+      "reference": "BG_off",
+      "question": "complete_W0_effect",
+      "delta_HOTA": 0.17429001612448047,
+      "delta_DetA": 0.16807801044376447,
+      "delta_AssA": 0.15682595123158904,
+      "delta_IDF1": 0.15438214412611018,
+      "delta_MOTA": -0.037825690318847194,
+      "delta_FP": 578,
+      "delta_FN": -510,
+      "delta_IDSW": 0,
+      "trajectory_comparable_sequences": 30,
+      "trajectory_identical_sequences": 5,
+      "trajectory_changed_sequences": 25,
+      "sequence_metric_rows_changed": 25,
+      "decision_evidence": "TRAJECTORIES_DIFFER",
+      "direction_hint": "MIXED_TRADEOFF_REVIEW_COSTS"
+    },
+    {
+      "comparison": "BG_W0_minus_BG_lower_low",
+      "arm": "BG_W0",
+      "reference": "BG_lower_low",
+      "question": "constrained_vs_global_low_threshold",
+      "delta_HOTA": -0.22243234185983596,
+      "delta_DetA": -0.3195946283305311,
+      "delta_AssA": 0.014024219893393308,
+      "delta_IDF1": -0.49598851588035586,
+      "delta_MOTA": 0.251985848741743,
+      "delta_FP": -1595,
+      "delta_FN": 1145,
+      "delta_IDSW": -3,
+      "trajectory_comparable_sequences": 30,
+      "trajectory_identical_sequences": 2,
+      "trajectory_changed_sequences": 28,
+      "sequence_metric_rows_changed": 28,
+      "decision_evidence": "TRAJECTORIES_DIFFER",
+      "direction_hint": "MIXED_TRADEOFF_REVIEW_COSTS"
+    },
+    {
+      "comparison": "BG_W0_relaxed_anchor_minus_BG_W0",
+      "arm": "BG_W0_relaxed_anchor",
+      "reference": "BG_W0",
+      "question": "relaxed_anchor_support",
+      "delta_HOTA": -0.01042769266769028,
+      "delta_DetA": -0.009768075029022327,
+      "delta_AssA": -0.006468792095148501,
+      "delta_IDF1": -0.06412409887511217,
+      "delta_MOTA": -0.20192243508444108,
+      "delta_FP": 449,
+      "delta_FN": -95,
+      "delta_IDSW": 9,
+      "trajectory_comparable_sequences": 30,
+      "trajectory_identical_sequences": 8,
+      "trajectory_changed_sequences": 22,
+      "sequence_metric_rows_changed": 22,
+      "decision_evidence": "TRAJECTORIES_DIFFER",
+      "direction_hint": "UNFAVORABLE_DIRECTION"
+    },
+    {
+      "comparison": "BG_W0_minus_BG_W0_emit_only",
+      "arm": "BG_W0",
+      "reference": "BG_W0_emit_only",
+      "question": "future_tracker_state_feedback",
+      "delta_HOTA": 0.08377755547740406,
+      "delta_DetA": 0.04882251267475368,
+      "delta_AssA": 0.13728014828097201,
+      "delta_IDF1": 0.056690000525257744,
+      "delta_MOTA": -0.01946910531117041,
+      "delta_FP": 211,
+      "delta_FN": -176,
+      "delta_IDSW": 0,
+      "trajectory_comparable_sequences": 30,
+      "trajectory_identical_sequences": 5,
+      "trajectory_changed_sequences": 25,
+      "sequence_metric_rows_changed": 24,
+      "decision_evidence": "TRAJECTORIES_DIFFER",
+      "direction_hint": "MIXED_TRADEOFF_REVIEW_COSTS"
+    }
+  ],
+  "sequence_direction": {
+    "BG_off": {
+      "HOTA": {
+        "increased": 0,
+        "tied": 30,
+        "decreased": 0
+      },
+      "IDF1": {
+        "increased": 0,
+        "tied": 30,
+        "decreased": 0
+      },
+      "MOTA": {
+        "increased": 0,
+        "tied": 30,
+        "decreased": 0
+      }
+    },
+    "BG_W0": {
+      "HOTA": {
+        "increased": 18,
+        "tied": 5,
+        "decreased": 7
+      },
+      "IDF1": {
+        "increased": 11,
+        "tied": 5,
+        "decreased": 14
+      },
+      "MOTA": {
+        "increased": 13,
+        "tied": 5,
+        "decreased": 12
+      }
+    },
+    "BG_lower_low": {
+      "HOTA": {
+        "increased": 17,
+        "tied": 2,
+        "decreased": 11
+      },
+      "IDF1": {
+        "increased": 14,
+        "tied": 3,
+        "decreased": 13
+      },
+      "MOTA": {
+        "increased": 10,
+        "tied": 3,
+        "decreased": 17
+      }
+    },
+    "BG_W0_relaxed_anchor": {
+      "HOTA": {
+        "increased": 19,
+        "tied": 4,
+        "decreased": 7
+      },
+      "IDF1": {
+        "increased": 10,
+        "tied": 4,
+        "decreased": 16
+      },
+      "MOTA": {
+        "increased": 12,
+        "tied": 4,
+        "decreased": 14
+      }
+    },
+    "BG_W0_emit_only": {
+      "HOTA": {
+        "increased": 21,
+        "tied": 5,
+        "decreased": 4
+      },
+      "IDF1": {
+        "increased": 12,
+        "tied": 5,
+        "decreased": 13
+      },
+      "MOTA": {
+        "increased": 12,
+        "tied": 7,
+        "decreased": 11
+      }
+    }
+  },
+  "weak_activity": {
+    "BG_off": {
+      "weak_outputs_emitted": 0,
+      "weak_state_updates": 0,
+      "count_basis": "derived_from_committed_count_and_fixed_arm_semantics"
+    },
+    "BG_W0": {
+      "weak_outputs_emitted": 730,
+      "weak_state_updates": 730,
+      "count_basis": "derived_from_committed_count_and_fixed_arm_semantics"
+    },
+    "BG_lower_low": {
+      "weak_outputs_emitted": 0,
+      "weak_state_updates": 0,
+      "count_basis": "derived_from_committed_count_and_fixed_arm_semantics"
+    },
+    "BG_W0_relaxed_anchor": {
+      "weak_outputs_emitted": 946,
+      "weak_state_updates": 946,
+      "count_basis": "recorded_and_checked"
+    },
+    "BG_W0_emit_only": {
+      "weak_outputs_emitted": 701,
+      "weak_state_updates": 0,
+      "count_basis": "recorded_and_checked"
+    }
+  },
+  "anchor_intervention": {
+    "exposure_anchor_not_ready_bypassed_tracks": 525,
+    "exposure_anchor_prediction_bypassed_tracks": 131,
+    "exposure_anchor_box_bypassed_edges": 31,
+    "exposure_anchor_support_bypassed_edges": 196,
+    "anchor_support_bypassed_selected": 191,
+    "anchor_support_bypassed_committed": 191,
+    "exposure_anchor_guard_added_selected": 191,
+    "exposure_anchor_guard_removed_selected": 0,
+    "exposure_anchor_guard_changed_track_frames": 191,
+    "exposure_anchor_guard_added_eligible": 196,
+    "exposure_anchor_guard_removed_eligible": 0
+  },
+  "attribution": {
+    "BG_W0": {
+      "gained": 646,
+      "lost": 136,
+      "fp_delta": 578,
+      "idsw_delta": 0,
+      "B_reference": 922,
+      "B_actual": 771,
+      "unmatched_FP": 384,
+      "TP_same_old_identity": 319,
+      "TP_other_identity": 0,
+      "TP_past_identity_unconfirmed": 27,
+      "newly_covered": 343,
+      "reference_B_not_matched": 239,
+      "reference_B_coverage_lost": 29,
+      "same_id_covered_with_recent_W": 58,
+      "coverage_retained": 56
+    },
+    "BG_lower_low": {
+      "gained": 2176,
+      "lost": 521,
+      "fp_delta": 2173,
+      "idsw_delta": 3,
+      "B_reference": 922,
+      "B_actual": 950,
+      "unmatched_FP": 0,
+      "TP_same_old_identity": 0,
+      "TP_other_identity": 0,
+      "TP_past_identity_unconfirmed": 0,
+      "newly_covered": 0,
+      "reference_B_not_matched": 445,
+      "reference_B_coverage_lost": 84,
+      "same_id_covered_with_recent_W": 0,
+      "coverage_retained": 253
+    },
+    "BG_W0_relaxed_anchor": {
+      "gained": 785,
+      "lost": 180,
+      "fp_delta": 1027,
+      "idsw_delta": 9,
+      "B_reference": 922,
+      "B_actual": 752,
+      "unmatched_FP": 512,
+      "TP_same_old_identity": 382,
+      "TP_other_identity": 2,
+      "TP_past_identity_unconfirmed": 50,
+      "newly_covered": 431,
+      "reference_B_not_matched": 251,
+      "reference_B_coverage_lost": 31,
+      "same_id_covered_with_recent_W": 73,
+      "coverage_retained": 57
+    },
+    "BG_W0_emit_only": {
+      "gained": 334,
+      "lost": 0,
+      "fp_delta": 367,
+      "idsw_delta": 0,
+      "B_reference": 922,
+      "B_actual": 922,
+      "unmatched_FP": 364,
+      "TP_same_old_identity": 310,
+      "TP_other_identity": 0,
+      "TP_past_identity_unconfirmed": 27,
+      "newly_covered": 334,
+      "reference_B_not_matched": 0,
+      "reference_B_coverage_lost": 0,
+      "same_id_covered_with_recent_W": 0,
+      "coverage_retained": 0
+    }
+  },
+  "reference_sources": {
+    "BG_off": {
+      "kind": "reused_r41",
+      "fingerprint": "f9e7acea5f2bf0c6c2541e53c1e1166c3918a6eb3cba407c74f0a308224e2a6d",
+      "completion_sha256": "9879bae722cb25fa8132fa814e75fbcee033b2675dc2f8bb09df3240cab20dcc",
+      "arm_manifest_sha256": "514071335fb68cf2df1ee0893c7d71abd4b3dfc3ce4f684f7711ac9866e67641",
+      "protocol_sha256": "2001e66109404d3a90def2e69153e298f82fdac704d93ed0773868e5d7a21f98",
+      "eol_equivalent_source_files": []
+    },
+    "BG_W0": {
+      "kind": "reused_r41",
+      "fingerprint": "f9e7acea5f2bf0c6c2541e53c1e1166c3918a6eb3cba407c74f0a308224e2a6d",
+      "completion_sha256": "9879bae722cb25fa8132fa814e75fbcee033b2675dc2f8bb09df3240cab20dcc",
+      "arm_manifest_sha256": "3cc89578a5a2a892061bd0c6a1578266e66f4f08934d03640796ab91b8842e76",
+      "protocol_sha256": "60e2161caf3ac28fd66f31c558e2d4db7554e529ed37b7006f1c6cb29ba1ccdb",
+      "eol_equivalent_source_files": []
+    }
+  },
+  "checks": {
+    "prediction_receipts": "PASS",
+    "metric_scope": "PASS",
+    "combined_count_sums": "PASS",
+    "CLEAR_coverage_and_counts": "PASS",
+    "weak_output_ledgers": "PASS",
+    "BG_reference_pairing": "PASS",
+    "emit_only_native_events": "PASS",
+    "emit_only_canonical_native_state_chain": "PASS",
+    "weak_output_vs_state_counts": "PASS",
+    "state_hash_basis": "emit_only hashes canonical native output, not its augmented emitted MOT"
+  },
+  "scientific_acceptance": "NOT_AUTOMATICALLY_DECIDED",
+  "production_default_changed": false,
+  "timing_comparison": "NOT_COMPARABLE_WITH_IMPORTED_REFERENCE_TIMINGS",
+  "reporting_source_sha256": "cddcde27cc8fbdfd3e9a07c907e55e552a50ea4fbc70c674f565b86ddf1b6069",
+  "limitations": [
+    "Official evaluation split has already been used for development.",
+    "Directional hints are descriptive, not significance tests or automatic promotion gates.",
+    "Relaxed anchor support removes a bundle of three guards, not three separate ablations.",
+    "W0 minus emit_only measures the entire future-state feedback effect, not one Kalman formula.",
+    "CLEAR unmatched FP does not establish that the crop is human-confirmed background.",
+    "Imported reference results are reused observations, not independent experimental repetitions."
+  ]
+}

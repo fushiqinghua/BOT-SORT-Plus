@@ -2,7 +2,7 @@
 
 **核验日期：2026-11-28。**  
 **承接提交：`3a6e6c4d01d3d3ee04f1a9c952e25a4790f04e77`。**  
-**软件测试：PASS；真实 VT-Tiny-MOT 全量运行：NOT_RUN。**
+**软件阶段测试通过。** 随后已完成 [VT-Tiny-MOT 五组全量回放与评测](../../../results/vttiny/wem_r4_2/full_20261128/README.md)。
 
 [实验计划](EXPERIMENT_PLAN.md) · [执行手册](LOCAL_RUNBOOK.md) · [机器可读记录](validation.json)
 
@@ -41,14 +41,14 @@ python -B -m unittest discover -s tests -p 'test_wem_r4*.py' -q
 
 锚点组是三个支持条件的组合消融，不能分别归因。输出组取消的是全部正式状态反馈，包括 KF 和轨迹生命周期，不能称为纯 KF 消融。全程候选和 B 恢复在不同策略间可以发生分叉；只要求其满足各自定义，不要求全部策略提交相同次数。
 
-## 3. 尚未验证的内容
+## 3. 软件阶段的验证范围
 
 - 真实图像、完整检测/特征缓存、模型权重及 GPU 环境上的 R4.2 执行：`NOT_RUN`。
 - R4.2 三个新实验在真实数据上的 HOTA、IDF1、MOTA、FP、FN、IDSW：`NOT_RUN`。
 - 用户本地 Windows/Python/CUDA 环境、完整 R4.1 原始产物的复用：需本地 `check` 与技术 smoke 验证。
 - 模型定型后的端到端延迟与实际部署 FPS：本批不测量。私有状态预演、诊断日志和缓存回放会影响运行时间。
 
-本次未将合成结果填入数据集结果表，也未根据软件 PASS 声称三个新干预有收益。结果目录保持 `NOT_RUN`，等真实完整实验回传后再更新。
+本页与 `validation.json` 记录软件阶段的核验范围。后续真实运行的技术校验、指标和归因见 [全量结果归档](../../../results/vttiny/wem_r4_2/full_20261128/README.md)。
 
 ## 4. 本地验收
 

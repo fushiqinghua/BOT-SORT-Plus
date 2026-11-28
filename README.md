@@ -2,7 +2,7 @@
 
 本分支 **research/vttiny-weak-evidence** 为毕业设计目标跟踪章节准备 W 模块及下一批实验，从 research/vttiny-track-conditioned-observation 的 **176f2a81613c34d16a860765ea7be0845116b534** 建立，继承 B、GMC、TCO/Q2 及先前实验归档。
 
-**当前批次为 W R4.2：以 W0 为定型主体，默认复用两个完整参考，只新增三组完整 30 段实验。代码、执行入口和判读方案已就绪；本批真实数据状态为 NOT_RUN。** [当前运行手册](docs/botsort_plus/wem_r4_2/LOCAL_RUNBOOK.md) · [实验设计](docs/botsort_plus/wem_r4_2/EXPERIMENT_PLAN.md) · [软件核验](docs/botsort_plus/wem_r4_2/VALIDATION.md) · [结果入口](results/vttiny/wem_r4_2/README.md)
+**W R4.2 已完成五组官方 30 段开发评测。保留带原锚点约束和正式状态反馈的 W0 作为定型候选，并将原生低阈值保留为召回优先的强对照。** [当前运行手册](docs/botsort_plus/wem_r4_2/LOCAL_RUNBOOK.md) · [实验设计](docs/botsort_plus/wem_r4_2/EXPERIMENT_PLAN.md) · [软件核验](docs/botsort_plus/wem_r4_2/VALIDATION.md) · [结果入口](results/vttiny/wem_r4_2/README.md)
 
 R4.1 已完成 B 和 BG 的十组闭环评测。W0 相对两参考的 HOTA 分别 +0.1724、+0.1743 个百分点，FN 分别 −508、−510，伴随 FP +554、+578 和 MOTA 小幅下降。W1/W2 与 W0 轨迹一致，W3 相对 W2 多出 57 FP、27 FN。本轮收敛公共的受约束弱续接机制，不继续搜索运动或外观评分。[R4.1 完整结果](results/vttiny/wem_r4_1/full_20261128/README.md)
 
@@ -59,7 +59,7 @@ python -X utf8 tools/run_wem_r42.py full --settings configs/research/wem_r4_2.lo
 
 `full` 自动完成三段 × 五策略技术 smoke、固定五组完整预测（默认仅三组新跟踪）、TrackEval、CLEAR 归因和报告。emit_only 在原生更新及清理结束后才发布弱输出，正式状态链及原生事件必须与 BG_off 相同；真实发布输出另行审计。指标下降、零变化或零提交不会被当作软件失败。
 
-首先读取 `runs/wem_r4_2/full/report/REPORT.md`。本批用于完成 W0 的机制解释与代价对照，不增加阈值搜索，不把复用参考视为新的独立重复，也不将诊断耗时用作部署 FPS。
+[已完成的全量评测、逐帧复核和复现记录](results/vttiny/wem_r4_2/full_20261128/README.md)。本批用于完成 W0 的机制解释与代价对照，不增加阈值搜索，不把复用参考视为新的独立重复，也不将诊断耗时用作部署 FPS。
 
 ## 已完成批次：R4.1 十组完整闭环
 

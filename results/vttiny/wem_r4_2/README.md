@@ -1,22 +1,9 @@
 # W R4.2 定型验证结果
 
-**真实数据状态：`NOT_RUN`。** 本目录是下一批实验的归档入口，目前没有新增实测指标。
+**五组已完成。** 冻结的 BG = `evidence_both` 底座复用了 R4.1 的 `BG_off` 和 `BG_W0`，另外回放了降低原生低分阈值、放宽锚点约束、仅输出弱框三组。五组均覆盖官方开发评测的 30 段、12,590 帧。
 
-本批承接 [W R4.1 完整结果](../wem_r4_1/full_20261128/README.md)，在冻结的 BG = `evidence_both` 底座上检验三件事：与原生降阈值的取舍、锚点约束包的作用、弱观测反馈正式轨迹状态的价值。
+W0 保留原锚点约束和正式状态反馈，作为定型候选。相对关闭组，W0 的 HOTA 提升 0.1743 个百分点，少漏 510 个，同时多报 578 个，MOTA 下降 0.0378 个百分点。原生阈值降至 0.05 后，HOTA 和 IDF1 更高，误报和换号也更多，作为召回优先的强对照保留。
 
-| 组别 | 运行安排 |
-| --- | --- |
-| BG_off | 核验后复用本地完整 R4.1 参考，或显式重跑 |
-| BG_W0 | 核验后复用本地完整 R4.1 参考，或显式重跑 |
-| BG_lower_low | 新增完整 30 段 |
-| BG_W0_relaxed_anchor | 新增完整 30 段 |
-| BG_W0_emit_only | 新增完整 30 段 |
+[完整结果、定型依据与复现](full_20261128/README.md) · [五组指标报告](full_20261128/report/REPORT.md) · [逐帧案例](full_20261128/cases/ANALYSIS.md)
 
-每组覆盖 30 段、12,590 输入帧。既有官方测试划分在本项目中沿用开发评测口径。
-
-- [实验设计与后续任务](../../../docs/botsort_plus/wem_r4_2/EXPERIMENT_PLAN.md)
-- [本地执行手册](../../../docs/botsort_plus/wem_r4_2/LOCAL_RUNBOOK.md)
-- [结果记录模板](../../../docs/botsort_plus/wem_r4_2/RESULTS_TEMPLATE.md)
-- [代码与合成验证说明](../../../docs/botsort_plus/wem_r4_2/VALIDATION.md)
-
-完成后在本目录新建带实际运行日期的归档子目录，保留五组完整指标、逐序列对照、组件差值、候选曝光、提交归因和运行来源。复用结果必须保留来源凭据，不能把复制的指标表描述为新运行的轨迹。
+[实验设计](../../../docs/botsort_plus/wem_r4_2/EXPERIMENT_PLAN.md) · [运行手册](../../../docs/botsort_plus/wem_r4_2/LOCAL_RUNBOOK.md) · [软件核验](../../../docs/botsort_plus/wem_r4_2/VALIDATION.md) · [R4.1 结果](../wem_r4_1/full_20261128/README.md)

@@ -1,0 +1,723 @@
+{
+  "schema": "wem_r42_public_run_v1",
+  "source": {
+    "github_commit": "eded63f9079734560966d3df59ba5c938c3e9ac4",
+    "deployment_archive_sha256": "f29d293e55b4ba4678ce501dfa147565373a3f2144e613ffb10ab4b09648ce01"
+  },
+  "scope": {
+    "official_split": "test",
+    "usage": "development",
+    "sequence_count": 30,
+    "frames_per_arm": 12590,
+    "sequence_lengths": {
+      "DJI_0028_3": 570,
+      "DJI_0030_2": 590,
+      "DJI_0032_3": 290,
+      "DJI_0049_2": 90,
+      "DJI_0051_2": 580,
+      "DJI_0061_2": 240,
+      "DJI_0073_3": 360,
+      "DJI_0109_1": 90,
+      "DJI_0119_2": 180,
+      "DJI_0129_2": 590,
+      "DJI_0141_2": 410,
+      "DJI_0155_2": 410,
+      "DJI_0159_2": 250,
+      "DJI_0169_3": 290,
+      "DJI_0173_2": 450,
+      "DJI_0181_3": 320,
+      "DJI_0221_2": 590,
+      "DJI_0225_1": 329,
+      "DJI_0237_2": 410,
+      "DJI_0255_1": 600,
+      "DJI_0257_2": 590,
+      "DJI_0277_2": 366,
+      "DJI_0283_1": 450,
+      "DJI_0303_2": 577,
+      "DJI_0307_2": 180,
+      "DJI_0309_4": 603,
+      "DJI_0325_2": 595,
+      "DJI_0327_3": 390,
+      "DJI_0339_2": 600,
+      "DJI_0345_2": 600
+    },
+    "arms": [
+      "BG_off",
+      "BG_W0",
+      "BG_lower_low",
+      "BG_W0_relaxed_anchor",
+      "BG_W0_emit_only"
+    ]
+  },
+  "runtime": {
+    "conda": "redetr",
+    "tracking_device": "cpu",
+    "additional_rgb_feature_extraction": false,
+    "worker_limit": 4
+  },
+  "trackeval": {
+    "commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+    "manifest_sha256": "76e6608c3027a601f7cd8e724a4c3d967be8b153e811f7648ad2150b1f9a5e82",
+    "verified_source_files": 45,
+    "eol_normalized_matched": false
+  },
+  "protocol": {
+    "schema": "wem_r42_protocol_v1",
+    "source_commit": "3a6e6c4d01d3d3ee04f1a9c952e25a4790f04e77",
+    "reference_method": "evidence_both",
+    "frames_per_arm": 12590,
+    "full_modes": [
+      "off",
+      "W0",
+      "lower_low",
+      "W0_relaxed_anchor",
+      "W0_emit_only"
+    ],
+    "new_full_arms": [
+      "BG_lower_low",
+      "BG_W0_relaxed_anchor",
+      "BG_W0_emit_only"
+    ],
+    "parameters": {
+      "native_low_default": 0.1,
+      "native_low_control": 0.05,
+      "weak_score_range": [
+        0.05,
+        0.1
+      ],
+      "native_iou_floor": 0.5,
+      "anchor_iou_floor": 0.5,
+      "near_owner_iou": 0.9,
+      "top_geometry_groups": 5
+    },
+    "interventions": {
+      "lower_low": "Only native track_low_thresh 0.10 -> 0.05; W disabled; original frozen cached camera stream retained",
+      "W0_relaxed_anchor": "Remove anchor.ready plus anchor/formal-prediction and weak-box/anchor IoU guards; retain anchor presence, previous-frame ordinary observation, unspent episode, native geometry, ownership, one-to-one, finalizer and memory protections",
+      "W0_emit_only": "Reuse W0 decisions and private measurement-backed output; publish after native update finalization; canonical tracker state/events remain off-identical"
+    },
+    "state_chain_output_basis": {
+      "W0_emit_only": "canonical native output before weak publication; emitted output separately audited",
+      "others": "actual published output"
+    },
+    "controls": {
+      "ground_truth_in_prediction": false,
+      "parameter_search": false,
+      "scientific_acceptance_gate": false
+    },
+    "dataset_usage": "official test split already used for development",
+    "timing_usage": "diagnostic cached replay only; not deployment FPS; reused reference timings are not matched runtime measurements",
+    "sequences": {
+      "DJI_0028_3": 570,
+      "DJI_0030_2": 590,
+      "DJI_0032_3": 290,
+      "DJI_0049_2": 90,
+      "DJI_0051_2": 580,
+      "DJI_0061_2": 240,
+      "DJI_0073_3": 360,
+      "DJI_0109_1": 90,
+      "DJI_0119_2": 180,
+      "DJI_0129_2": 590,
+      "DJI_0141_2": 410,
+      "DJI_0155_2": 410,
+      "DJI_0159_2": 250,
+      "DJI_0169_3": 290,
+      "DJI_0173_2": 450,
+      "DJI_0181_3": 320,
+      "DJI_0221_2": 590,
+      "DJI_0225_1": 329,
+      "DJI_0237_2": 410,
+      "DJI_0255_1": 600,
+      "DJI_0257_2": 590,
+      "DJI_0277_2": 366,
+      "DJI_0283_1": 450,
+      "DJI_0303_2": 577,
+      "DJI_0307_2": 180,
+      "DJI_0309_4": 603,
+      "DJI_0325_2": 595,
+      "DJI_0327_3": 390,
+      "DJI_0339_2": 600,
+      "DJI_0345_2": 600
+    },
+    "input_identity": {
+      "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+      "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+      "source_protocol_sha256": "6f0fdff3b198315f8aac72972fcf5117c53b917e84f6c7b5f9814b9012ef2ff2"
+    }
+  },
+  "status": {
+    "smoke": "TECHNICAL_PARITY_PASS",
+    "full": "FULL_BENCHMARK_COMPLETE",
+    "evaluation": "EVALUATION_COMPLETE",
+    "retries": 0,
+    "incomplete_arms": []
+  },
+  "technical_smoke": {
+    "sequence_frames": 1220,
+    "sequences": [
+      "DJI_0030_2",
+      "DJI_0061_2",
+      "DJI_0327_3"
+    ],
+    "arms": [
+      "BG_off",
+      "BG_W0",
+      "BG_lower_low",
+      "BG_W0_relaxed_anchor",
+      "BG_W0_emit_only"
+    ],
+    "status": "PASS"
+  },
+  "reuse": {
+    "executed_r41_commit": "3132e69fcca86ac5ce6d59271b2dff38454fc628",
+    "mode": "reuse",
+    "references": {
+      "BG_off": {
+        "kind": "reused_r41",
+        "fingerprint": "f9e7acea5f2bf0c6c2541e53c1e1166c3918a6eb3cba407c74f0a308224e2a6d",
+        "completion_sha256": "9879bae722cb25fa8132fa814e75fbcee033b2675dc2f8bb09df3240cab20dcc",
+        "arm_manifest_sha256": "514071335fb68cf2df1ee0893c7d71abd4b3dfc3ce4f684f7711ac9866e67641",
+        "protocol_sha256": "2001e66109404d3a90def2e69153e298f82fdac704d93ed0773868e5d7a21f98",
+        "eol_equivalent_source_files": []
+      },
+      "BG_W0": {
+        "kind": "reused_r41",
+        "fingerprint": "f9e7acea5f2bf0c6c2541e53c1e1166c3918a6eb3cba407c74f0a308224e2a6d",
+        "completion_sha256": "9879bae722cb25fa8132fa814e75fbcee033b2675dc2f8bb09df3240cab20dcc",
+        "arm_manifest_sha256": "3cc89578a5a2a892061bd0c6a1578266e66f4f08934d03640796ab91b8842e76",
+        "protocol_sha256": "60e2161caf3ac28fd66f31c558e2d4db7554e529ed37b7006f1c6cb29ba1ccdb",
+        "eol_equivalent_source_files": []
+      }
+    }
+  },
+  "original_only_digests": {
+    "input_receipt_sha256": "c6a67d7f73ff9cbcd2878aa12592720926d584cee7a6a1506ca7734bd9353edd",
+    "settings_sha256": "226b0db0caf3e5bda20f6d8da45238ffd2e5383478331c371b158ee172b121c7",
+    "run_fingerprint": "8ad666502a87188cd9082abc608e0b4de8cd37916dc869345d81aeea5902c91f",
+    "bundle_sha256": "69f271b2a9262c6bbf4d52744e8a13e207c5bb343cae8bcf604cacdee2b963f1",
+    "full_verification_sha256": "4b83193798b5b2139a6bc05f81f5558ed4aa6993497fd494031b739f5fe222b5",
+    "evaluation_receipt_sha256": "d1b685bb3b02a5c3cfcaf9d7a2930b6ada4a40be819fbffa59f2f2776ebd5524",
+    "report_manifest_sha256": "fc2a4956fd6207176ac0151447c600a2e6139ad72acb3da4c4afdaa74729be29"
+  },
+  "frozen_input_identity": {
+    "prediction_settings": "bc97d6b83be109c6736ac625374616940a04dfb8af831b9a8ecec8b22a76b35b",
+    "r0_parity": "e4f9b4dfd9f6bbfae24d380a7fcbe37fabbb7913c0d332186aea4cc6ed427c71",
+    "reference_manifest": "600fbe2f0a4691a030e4c62553d15bed0186919a5491cbd75ea7f7dac932bae3",
+    "evaluation_manifest": "0169dd9f9536f548767a38cd32b9bc29da87715ff7155cc67e71d9917e1ce9b9",
+    "rgb_weights": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1"
+  },
+  "reference_and_state_sha256": {
+    "DJI_0028_3": {
+      "BG_off": {
+        "native_events": "d0a62b6464c1df17ee49fca62d2e4c9907a336ac68c54d3e6a213e3fd7fdaf08",
+        "states": "5b932901aa05bd69ec1369af1bee71c87c093c5620706af75d94cce83fc46cce",
+        "mot": "5dbe7c0191809ef949ff1b2c76992c0adc2cba269221731404561087e4835900"
+      },
+      "BG_W0": {
+        "native_events": "e1b613f899bd037d5ab1903b3093f7cbbc8a7ed745a660198aee4d88c4e1aa19",
+        "states": "d97096d2af9b75a74837f7cb5ec3f50b2524fded9e9f6afbfa7844bc4b3bcad8",
+        "mot": "a86ca83e6f706dca740be46bc39277c59857e8af84f63ebf57ee23bb3d299e1e"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "d0a62b6464c1df17ee49fca62d2e4c9907a336ac68c54d3e6a213e3fd7fdaf08",
+        "states": "5b932901aa05bd69ec1369af1bee71c87c093c5620706af75d94cce83fc46cce",
+        "mot": "d23b29ee3b420140872f789b60cf8e98eb8e5c773f60c45d7a4e07c7a940168f"
+      }
+    },
+    "DJI_0030_2": {
+      "BG_off": {
+        "native_events": "cd0b1432f20dc51bbba8e84897ef61d9812502ac4f2bab8ac61fcc73f7aca404",
+        "states": "b17426b05dc91e6e2325b430fef14dec3ced3949fbe2d7dfc9733954e7992624",
+        "mot": "d1749709af5d44c8c90eab2d2fb897274add25288830874d152acda3602dddf0"
+      },
+      "BG_W0": {
+        "native_events": "582e35bd22b05981f93c67d2d3c4276ef0455e6a891ac8ee7e7f0b7b3d30b34f",
+        "states": "491a0a65ae7f4775ac8d85fb2b7cb9f4977936886abe945a006fb2999e74ab39",
+        "mot": "381b8bf4ce6255b349d32d3fe8cda3880001a7a89d98f8ce791d8536a93854e1"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "cd0b1432f20dc51bbba8e84897ef61d9812502ac4f2bab8ac61fcc73f7aca404",
+        "states": "b17426b05dc91e6e2325b430fef14dec3ced3949fbe2d7dfc9733954e7992624",
+        "mot": "d247ecb646f34368a939573c889d6a75885ea3a2017498532845063179e9f095"
+      }
+    },
+    "DJI_0032_3": {
+      "BG_off": {
+        "native_events": "2da66e85a5ce89a91319b6e904a95ae3ddde609a1418092f7f9e6aad0a5e4941",
+        "states": "330d66f5202cc08d6e0b5110152e1bda1e165f9666dc12ad1a3e88abf8ac7d4e",
+        "mot": "ccdef5b621c58ce8f968819e43cf3319d0971ae57f55ee67191e1b71faa8a8c9"
+      },
+      "BG_W0": {
+        "native_events": "b6814dc9338e5a25e6543d6f5702933ce96174badf5db1196d94b3866b32aba1",
+        "states": "5f5b59fd1276373400e99232f0604dd60f67d1255e86646c38cb0b3bb4566f70",
+        "mot": "e356a1020fd7714472055d2ce8ba31d4f7ea8e21cc0753b4997c1d1087b21fad"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "2da66e85a5ce89a91319b6e904a95ae3ddde609a1418092f7f9e6aad0a5e4941",
+        "states": "330d66f5202cc08d6e0b5110152e1bda1e165f9666dc12ad1a3e88abf8ac7d4e",
+        "mot": "8861e3a684f67970684393e0174380b838993d758d785e5e704e635e850bb24b"
+      }
+    },
+    "DJI_0049_2": {
+      "BG_off": {
+        "native_events": "195ff0907135ede7e729087e0b6598c525cad748d0caa27198980209af430552",
+        "states": "1b223c3cec2b3fd9634536fb4b64a8a494662e78b522b3d2b1528a42fd794f94",
+        "mot": "d03207017440231fdb19a27c65e6e3bad2c69532e2bad269c38e42e88cfb67ff"
+      },
+      "BG_W0": {
+        "native_events": "590b44efaa9f8690b1ed4cae88579a68323faa9ba7821736f8e83ba084e8919e",
+        "states": "df4b1c5cd89bf455caefdde0848e70385492454928cc4365dbc91e6361d5b7e9",
+        "mot": "235ad950883507e0528b32dcfa69c4556ddee952c3d64ee7ffb5f912b83d2be4"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "195ff0907135ede7e729087e0b6598c525cad748d0caa27198980209af430552",
+        "states": "1b223c3cec2b3fd9634536fb4b64a8a494662e78b522b3d2b1528a42fd794f94",
+        "mot": "90970e561c97d005fc3b847a2975dba654e3476dede2c5343816bbbd26c3c61c"
+      }
+    },
+    "DJI_0051_2": {
+      "BG_off": {
+        "native_events": "2d0ba5de5d5cdfaaaaed8cd7a64d143b4fbc2444f21724c6d1d6e45bd525224d",
+        "states": "420c1f47390e2eb201874a390851a182bb1059536e38fd7ee38cafb5ef7fddd5",
+        "mot": "4891233fc5d6b951b3c870b54198698356ccbc0cdc5f7416d68fc20cf987a6f6"
+      },
+      "BG_W0": {
+        "native_events": "1c917e85d8035d51b952105ea9b1ce9dcd22f5521567a9a0ef641bc18e5130ca",
+        "states": "420734c26736ad2adacb11f791c05d4235797ac53f5fd3ad2317cfb659a59d4a",
+        "mot": "ec4b4bd7f5b13d7d6a39a48156f64c23195f10e98a63246e3e35336c13d5b1c5"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "2d0ba5de5d5cdfaaaaed8cd7a64d143b4fbc2444f21724c6d1d6e45bd525224d",
+        "states": "420c1f47390e2eb201874a390851a182bb1059536e38fd7ee38cafb5ef7fddd5",
+        "mot": "389826a130bb13d71d8873d9dc22849b8184101d3a4a62dd5a267904728f0626"
+      }
+    },
+    "DJI_0061_2": {
+      "BG_off": {
+        "native_events": "9a0b1db6147d23093ab31fc856e8468aca8e0198fa0a0761d1d42e40947f6a76",
+        "states": "7a385e1e1e2d229a0f636e7db6b2eb25e9f6100566385ab9462600491dddd7e6",
+        "mot": "2da088b0f394f683832cfcc129d1fce1e37f0273af5f890b7a05aca7ed9d9ab4"
+      },
+      "BG_W0": {
+        "native_events": "bd4764d1e59386717d1ecbe5f5130754b490a2b93fcca2abe3a360a9e5c3dc0f",
+        "states": "32f917834a4e7c3e77bd9969561c30675a18c8f1d06fcaee0fe1edcd35d12582",
+        "mot": "24039b503805616b94ae38f137f49e1d87fc72a829c4ac5185b8060a0da1f98f"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "9a0b1db6147d23093ab31fc856e8468aca8e0198fa0a0761d1d42e40947f6a76",
+        "states": "7a385e1e1e2d229a0f636e7db6b2eb25e9f6100566385ab9462600491dddd7e6",
+        "mot": "20f82c933b10cd585f76f34369f627d9d529dad6fb5edf4d30fb72f58306793b"
+      }
+    },
+    "DJI_0073_3": {
+      "BG_off": {
+        "native_events": "7d6819300c26e75514d9901d4a0099362aadcd5098014c87e1949b8e68c253b0",
+        "states": "caf7bcc6214d786a21e4b252991103312ec7d07c162eb4dad24c6bfcc8a56f26",
+        "mot": "c7448d164a2702110a75574e789c9642e12a3f013c374c2df446dbb7fb6ca8a0"
+      },
+      "BG_W0": {
+        "native_events": "d7df498e28312502d2f7657cb2abeb523932cd555f50815f9e87ff5413898ad0",
+        "states": "aecf89f57c4a99066dd6b046b825c701e35d6a6be506241fb185c162f9a13f63",
+        "mot": "df798d2db366c8efefa7b76c7b4b618a2d4a2c60a2b3d6a4ee7b96c39831d041"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "7d6819300c26e75514d9901d4a0099362aadcd5098014c87e1949b8e68c253b0",
+        "states": "caf7bcc6214d786a21e4b252991103312ec7d07c162eb4dad24c6bfcc8a56f26",
+        "mot": "d809b50889fe3ad4ce0d3aa86701c7e7d20fda20f7cd7f152ac38b808ec6b5c0"
+      }
+    },
+    "DJI_0109_1": {
+      "BG_off": {
+        "native_events": "cc4791af878ceef26647e548061fa32c7c170f5f6fe32124264b34eefdeab175",
+        "states": "efdcca90262d4a9ca0a70061f2b26094eb63b889089c8e875303edef944bbdb6",
+        "mot": "28a6b4c6636ce672c6351c96b2f09a506a5f9f72447bcf8b7f83e499066510f8"
+      },
+      "BG_W0": {
+        "native_events": "c8f0c77739f210d2fb32e3bbc010fa174aeba5f77ba868b4076b493814a5f8f4",
+        "states": "d851dbda34257b286199ddb9fbc88b33f059a308e4cb3d6f749cca95072da4a9",
+        "mot": "5f28c041297fb932f1da030f003c409f7f6d564ad3743eaaeb412472b520f132"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "cc4791af878ceef26647e548061fa32c7c170f5f6fe32124264b34eefdeab175",
+        "states": "efdcca90262d4a9ca0a70061f2b26094eb63b889089c8e875303edef944bbdb6",
+        "mot": "9957ff2f80824760126deb5d839c0a46980b2acd322f47ec9b82ae4ac6c20381"
+      }
+    },
+    "DJI_0119_2": {
+      "BG_off": {
+        "native_events": "0f6821f1463d69cb09ac7fe52d812b7967c55fce04bd46bda526fb33f5a26f95",
+        "states": "b1611301ab17d8419d7f75acc9ab7458b9a4140cf100547776fbf1cd787c2b72",
+        "mot": "6d10856ef08245e31a0d44433a903f27329d223e507d25eab44568a9ff683ced"
+      },
+      "BG_W0": {
+        "native_events": "0f6821f1463d69cb09ac7fe52d812b7967c55fce04bd46bda526fb33f5a26f95",
+        "states": "b1611301ab17d8419d7f75acc9ab7458b9a4140cf100547776fbf1cd787c2b72",
+        "mot": "6d10856ef08245e31a0d44433a903f27329d223e507d25eab44568a9ff683ced"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "0f6821f1463d69cb09ac7fe52d812b7967c55fce04bd46bda526fb33f5a26f95",
+        "states": "b1611301ab17d8419d7f75acc9ab7458b9a4140cf100547776fbf1cd787c2b72",
+        "mot": "6d10856ef08245e31a0d44433a903f27329d223e507d25eab44568a9ff683ced"
+      }
+    },
+    "DJI_0129_2": {
+      "BG_off": {
+        "native_events": "8519d5db6ccebc9614909885dbe86dbc64487140ba5c6712cd8b888e0eb6dc40",
+        "states": "e77e091150acdb1952c7ef036f29f82270e3ed9d8c8729b82fbeb1f3596a7fa1",
+        "mot": "556787e7dff9215e749c6a7c49e74a6838edff235552afca3862e0b4ec0442bc"
+      },
+      "BG_W0": {
+        "native_events": "289c50c6f2b2ddd65ed16839468bacbe4ec3425b94eea0dfbf127ed28c84267b",
+        "states": "7d93cb8975b50cd3307f5a1d2275cff10c126ab63e1a39dc951fe4592c6d5890",
+        "mot": "a251b851a199dac14f9019b2029620129b274a8021b676b69b9c58b0ec464a1f"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "8519d5db6ccebc9614909885dbe86dbc64487140ba5c6712cd8b888e0eb6dc40",
+        "states": "e77e091150acdb1952c7ef036f29f82270e3ed9d8c8729b82fbeb1f3596a7fa1",
+        "mot": "749edabb4fe479d296df903457bdbfa04129126b31e4a8436cf8a89795fc576e"
+      }
+    },
+    "DJI_0141_2": {
+      "BG_off": {
+        "native_events": "b3845fd61ad760859ece31383de4b8c3bc85bcc512d0cffbbecfb6af6f75321b",
+        "states": "097f7ff6b430e6ea07dca0e9f5402c384ea16c81688220b0a1307936397c7cf0",
+        "mot": "d787d585e0d256f02676aa6c886cb9d49c4644ecde11461aca799025246502b8"
+      },
+      "BG_W0": {
+        "native_events": "3aa401918df12d5e6a2b7e64606dde0cd3898b7a31393e64fb27d32061f62d8f",
+        "states": "7133cc6492050813ab3adc5f67753a6c80b69ad21f2884e0d5fcdc091f0d0b3b",
+        "mot": "dab3516673c62645b4c7ea7029faf34367bc5cb1125282fb44356e434d4b960c"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "b3845fd61ad760859ece31383de4b8c3bc85bcc512d0cffbbecfb6af6f75321b",
+        "states": "097f7ff6b430e6ea07dca0e9f5402c384ea16c81688220b0a1307936397c7cf0",
+        "mot": "bb6a2204cbac3aece4c575f4a826a52b8404ac5a713e05d7b36eaa5deeb485b4"
+      }
+    },
+    "DJI_0155_2": {
+      "BG_off": {
+        "native_events": "0c99e65b758de4fb98c76d8af8f056e0b44eceeeadbed51821fccfc5475ebdf4",
+        "states": "27f24138e3ed5ddfafd82a10380d51cdbf648b370e4c6ea0e029099c815c565f",
+        "mot": "6ffe7363682ab36673931ca7f682a910f788edd0ba3cbb517cb711b2a304f012"
+      },
+      "BG_W0": {
+        "native_events": "22e73347ba5f2f8029b44c68fb5923bfdeb7b7674fd6ee2af0558bb038078464",
+        "states": "c8618a9c107aa60decd18a4c390604683fb49f44b8daddea793f185188db77c4",
+        "mot": "2b3bb0cc64c0568c0f9a7c5fdefe13be1170c5f3e682fae6db9d225cde0ab3b5"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "0c99e65b758de4fb98c76d8af8f056e0b44eceeeadbed51821fccfc5475ebdf4",
+        "states": "27f24138e3ed5ddfafd82a10380d51cdbf648b370e4c6ea0e029099c815c565f",
+        "mot": "c225b733f7842f0ca46150f40cd3956997b6a1a6cd232bc612e91e3453bfb080"
+      }
+    },
+    "DJI_0159_2": {
+      "BG_off": {
+        "native_events": "37d187891fdc830e1b92e797da2efa682164629cef1c2b5c14d6ea3b7bf72cfe",
+        "states": "274b996d33bfc1513a4b3c4cee25df77626c78fdda05ed79bc8629da71e01e10",
+        "mot": "f7e7fafe5345a8161e13f6b9a1574fe11e44c59f5deee79d20844ca260e2bd63"
+      },
+      "BG_W0": {
+        "native_events": "37d187891fdc830e1b92e797da2efa682164629cef1c2b5c14d6ea3b7bf72cfe",
+        "states": "274b996d33bfc1513a4b3c4cee25df77626c78fdda05ed79bc8629da71e01e10",
+        "mot": "f7e7fafe5345a8161e13f6b9a1574fe11e44c59f5deee79d20844ca260e2bd63"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "37d187891fdc830e1b92e797da2efa682164629cef1c2b5c14d6ea3b7bf72cfe",
+        "states": "274b996d33bfc1513a4b3c4cee25df77626c78fdda05ed79bc8629da71e01e10",
+        "mot": "f7e7fafe5345a8161e13f6b9a1574fe11e44c59f5deee79d20844ca260e2bd63"
+      }
+    },
+    "DJI_0169_3": {
+      "BG_off": {
+        "native_events": "db26a9d2f155f338989b5734060935b94e0a97e05a38acdbe72b5a06dbe586d9",
+        "states": "3dab550bbb0c013caec9ebfa5522ab2daa67551c9b4fa40697924d954eb902be",
+        "mot": "50f7c1b2a1afcfea740102a63bf1e250650ccea6469c1dcc1c1f5f61a670a87d"
+      },
+      "BG_W0": {
+        "native_events": "f58c385aa67c17d5792bb9157919fec74de4f9dcef480fcacecade49b7e1c425",
+        "states": "ecac0839e78eac306554b4acaf0735ada64bec559fbddb4fa998329fefe0f029",
+        "mot": "aeb3e97fb920ff81455f7588709db02865135e26d39e1077baf8ecec0d549b8e"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "db26a9d2f155f338989b5734060935b94e0a97e05a38acdbe72b5a06dbe586d9",
+        "states": "3dab550bbb0c013caec9ebfa5522ab2daa67551c9b4fa40697924d954eb902be",
+        "mot": "9ae6eb3a490c1836cca8499a827590a10f98c009d432dbe8caa70c506ce3dcbe"
+      }
+    },
+    "DJI_0173_2": {
+      "BG_off": {
+        "native_events": "b93cb131a4ac8251c387f73d26b1d45fec8476dfc482c6468dc749406d825acf",
+        "states": "6e0d53d70fd7eca61e851e691f831c0cd9eebfdb29be47e5682fafedfce367bd",
+        "mot": "1cede6db1edd7e20230605028dfb6b960d7426a96a6d49accc4e70e5c3fb5f07"
+      },
+      "BG_W0": {
+        "native_events": "b93cb131a4ac8251c387f73d26b1d45fec8476dfc482c6468dc749406d825acf",
+        "states": "6e0d53d70fd7eca61e851e691f831c0cd9eebfdb29be47e5682fafedfce367bd",
+        "mot": "1cede6db1edd7e20230605028dfb6b960d7426a96a6d49accc4e70e5c3fb5f07"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "b93cb131a4ac8251c387f73d26b1d45fec8476dfc482c6468dc749406d825acf",
+        "states": "6e0d53d70fd7eca61e851e691f831c0cd9eebfdb29be47e5682fafedfce367bd",
+        "mot": "1cede6db1edd7e20230605028dfb6b960d7426a96a6d49accc4e70e5c3fb5f07"
+      }
+    },
+    "DJI_0181_3": {
+      "BG_off": {
+        "native_events": "15e54ccae944b6e2ffc3e020273003f263d7c779de5616a822058261e4072729",
+        "states": "abb31d5ddf8fd565619dbb79a6794bd05cf9965c1652ea93de9a2a855ef59677",
+        "mot": "c55d056300e3be9551ec716063cf429337104e075d60175461b20123089504d2"
+      },
+      "BG_W0": {
+        "native_events": "bd3661ab32b86134a9dd91156777936dd65f1062a6c19ee83cebd20743839c1f",
+        "states": "bd668cd1c40914df0029f45a3470b06d416f5f50128071e80d333f7d225a3904",
+        "mot": "d3ac1c9b02b7caba69dd9185f334158fcf7f8bef00a6b3af6f8b9802ff840967"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "15e54ccae944b6e2ffc3e020273003f263d7c779de5616a822058261e4072729",
+        "states": "abb31d5ddf8fd565619dbb79a6794bd05cf9965c1652ea93de9a2a855ef59677",
+        "mot": "9325710db20326ab4d41a3cd4d8657fe6eb408f68a7e9b7409c67f558f5e6c0b"
+      }
+    },
+    "DJI_0221_2": {
+      "BG_off": {
+        "native_events": "d0a0b24d44eac101710af35601ffac867450bdfbfd7c6b61be10ddb080ec2957",
+        "states": "eb28281df274dc241e85d883c05ec51837eb8373535671237433918ce09504fb",
+        "mot": "af9548620a1f281b8d2ec23b070bd44cbcb806cca97c40185f6bb71901f16703"
+      },
+      "BG_W0": {
+        "native_events": "04f3ead5d4d68d367b807240981c8eade371bb250a255fa29ca39e1128f98d6e",
+        "states": "a1b11c2258f97bb98ce02a1ad551e4a5948ab46e88e96558c2f76b9143758c08",
+        "mot": "b8f66f206ee717e5fd7d1f6c76589eb06fff1502ca142cd63daef3ea48a10328"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "d0a0b24d44eac101710af35601ffac867450bdfbfd7c6b61be10ddb080ec2957",
+        "states": "eb28281df274dc241e85d883c05ec51837eb8373535671237433918ce09504fb",
+        "mot": "4e0a8f233c5a05dbbd1a065f461120b3147e963e8761482ba3af5de9326dab4b"
+      }
+    },
+    "DJI_0225_1": {
+      "BG_off": {
+        "native_events": "a5384b361cb1ed283513f4c5447a54754d6f54c308a41a6223e25d9032f96e0b",
+        "states": "31be4492a6e61edeb0a117a3c4d2c7d21bb3948097cd22c81e3a71ee1fb9476c",
+        "mot": "d3cd195bf9ffde6e74fcfb97e50b3775238baa6805fd230cc39285b578bf7085"
+      },
+      "BG_W0": {
+        "native_events": "0c5ad41b0ff49a2a3e0a87eed6b3fca6391c9ee72f7cdfa5699d2787c4c2ab51",
+        "states": "02308105fcd49a59a721d2d74c041a8714820d8c62e9f10fc5d2ac1a287e3867",
+        "mot": "2bb93a5aeb5525c46f1b9e3400c5c36ec80160fcbf5a783a649de4dea7f50920"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "a5384b361cb1ed283513f4c5447a54754d6f54c308a41a6223e25d9032f96e0b",
+        "states": "31be4492a6e61edeb0a117a3c4d2c7d21bb3948097cd22c81e3a71ee1fb9476c",
+        "mot": "66033e445e35d484b3e5454004c40f562a3633d53db3e8757d31823073a6ee3f"
+      }
+    },
+    "DJI_0237_2": {
+      "BG_off": {
+        "native_events": "aa947601944081c08a826ad32201f9953326387b1542bb4cdf571e670710aa28",
+        "states": "c6c9a3a34c535e5be6ccc9533a85f0dca1d35da537631a3b61ec320c1d67f4d7",
+        "mot": "a608c589046c637b29d2a7a5bd9e345551d20d285d84e3df8150afab75f77de5"
+      },
+      "BG_W0": {
+        "native_events": "7746237b7a45e5a969bd2cc2f6b4a06205fb1f2db705a5bd8c2f6b01aebc4c32",
+        "states": "e35f1ae55a3e4c37453b1909b2fc7693382fd4209e64376b4da9aefeb247000e",
+        "mot": "514b9e65c5ad6a995aed998cc3db58d8412fca2d051642efc06ce08c456daca1"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "aa947601944081c08a826ad32201f9953326387b1542bb4cdf571e670710aa28",
+        "states": "c6c9a3a34c535e5be6ccc9533a85f0dca1d35da537631a3b61ec320c1d67f4d7",
+        "mot": "e97704563214aa84c4affeaa197e43ae2d2d40adfd23dc41e38baab30c5d0bfe"
+      }
+    },
+    "DJI_0255_1": {
+      "BG_off": {
+        "native_events": "6fc465ae36ebe32736a7616a963a351801e5f38aa34274a3646788ee2daa8c27",
+        "states": "7ad74fa40b7951f0902911e953970a2f6e648602dc7c4e4f3789cd287d116e6e",
+        "mot": "0e72b352a3d19694298a65454c205105fe2e4acdfe976cca7cc643bae82b5448"
+      },
+      "BG_W0": {
+        "native_events": "a8d118b2fa0080455a5181710938ceb10779421e877daac32ae9ae2cad09dff1",
+        "states": "d58272b24b5f1f1f6e5e12e907c9199eb347540a4156486ad70cd722b7ccff4a",
+        "mot": "abd3dc47f1c853cc1e8b96b5a9c7d7b1a65ea6fa7967ed945c0266210f503889"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "6fc465ae36ebe32736a7616a963a351801e5f38aa34274a3646788ee2daa8c27",
+        "states": "7ad74fa40b7951f0902911e953970a2f6e648602dc7c4e4f3789cd287d116e6e",
+        "mot": "d16c20f5faba1a0dc9b2bbdfab20c81ac869dca1379c8a5c47b74ef549423c1d"
+      }
+    },
+    "DJI_0257_2": {
+      "BG_off": {
+        "native_events": "f34a8d12dc8568490b34f9b7aabf08492158899840610df9452d132d366674f5",
+        "states": "4efa4fef5211437e35190185de2b9618b666bfc9dbb7db3f2afc39191e8a97ba",
+        "mot": "b014f73bf722b50340b18e39a20e467159b4fdfde16d888e8180db763ed76f01"
+      },
+      "BG_W0": {
+        "native_events": "c5fcfc86fc4930f13cf1f7f85d54a1162de787dabc751ad627d8474f69ee96a3",
+        "states": "ffae69f20f971461303b37990a868b1632a72a2aca4bc99a99e18abc4d5c2cd9",
+        "mot": "48a98fd0a19e8c5fc95cefbfec9d47168b2a37051b8b50b9020042ab65de37f4"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "f34a8d12dc8568490b34f9b7aabf08492158899840610df9452d132d366674f5",
+        "states": "4efa4fef5211437e35190185de2b9618b666bfc9dbb7db3f2afc39191e8a97ba",
+        "mot": "73758fccd87987ea3e09ba24f47f3198a80229ef40e0ef28931c66912888d007"
+      }
+    },
+    "DJI_0277_2": {
+      "BG_off": {
+        "native_events": "f76229500e048cb390820eda1fe9fe2ada945c48593472e2d168e9a0cbe1e8ad",
+        "states": "8392db1138419a3f9dc25b2ab30bc8f4d5d1ba04a8447d4d43c329753c1281f7",
+        "mot": "24c2ebdf581c445abc2458983f70e7add515ebe958808fa5966a0343cf5e2b96"
+      },
+      "BG_W0": {
+        "native_events": "f50a88ae59c14a7d27c815bc75a09fa3659b944564fa1d9a691fed6af48030fe",
+        "states": "b43d3c30be3001a08516422f24064b24f34b11e0ed1fa18323a2975a9dcdd9a3",
+        "mot": "cbd52fd3dd6f298d2cea68ffca08f9bc9fadc63bd7a726e16656cb9bc8fea5c2"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "f76229500e048cb390820eda1fe9fe2ada945c48593472e2d168e9a0cbe1e8ad",
+        "states": "8392db1138419a3f9dc25b2ab30bc8f4d5d1ba04a8447d4d43c329753c1281f7",
+        "mot": "b71404af96b1016731e61dc865aec7d052cfa23e80f15692a871404649bc3a88"
+      }
+    },
+    "DJI_0283_1": {
+      "BG_off": {
+        "native_events": "3829816d862b2309e6c205070141aa47cd7bbfb1f7889af497435fef5cdb2d39",
+        "states": "0cb4cab8f12efc7e043996932b28fcd9e51f3b18013a4973f01ef45863cfba77",
+        "mot": "1058233c7dcec58374e710cd2cf774d0237f1ce6d23616cab0a89f40b9102033"
+      },
+      "BG_W0": {
+        "native_events": "b8fab3a1f6bc3cdb0267d3457630f61ccede0f75f8d776954bfad240269f9d94",
+        "states": "b0a7054ca660a65d6bf2c836db2dadda1f724ee9df6e69f6a530bdf15eedf64d",
+        "mot": "22cbb93c35fc8be959e089e84ebc3e50f55f089f4dac1e38fc6c57f279523cc3"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "3829816d862b2309e6c205070141aa47cd7bbfb1f7889af497435fef5cdb2d39",
+        "states": "0cb4cab8f12efc7e043996932b28fcd9e51f3b18013a4973f01ef45863cfba77",
+        "mot": "a7b9f2b503f9e47168bd9844fa9cf75b07a70604b6f84652349a14abd08a97b3"
+      }
+    },
+    "DJI_0303_2": {
+      "BG_off": {
+        "native_events": "2348bded9eb33517620da5b6e238475871928c031de841fb5f9c307edb523694",
+        "states": "6885ab4758dd127c63026f78393fca0156a9ee783e714e9075c958b5bce61865",
+        "mot": "0ac43b0805e8f8f6d081a353029798d8cffdd955a75c5716a7545b21ee0749bf"
+      },
+      "BG_W0": {
+        "native_events": "fac94e41aad2b3fbba77831863973c9c1b553c9e8bd2ed8cb555efead3105873",
+        "states": "4d72c8cbf8272fc70504911844af72cb024849d984eab574f49ea7c700aaecab",
+        "mot": "9530fe6bb15ed14941133cb09f22179a9f1407f2a476fa189731bd28d5bc6b27"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "2348bded9eb33517620da5b6e238475871928c031de841fb5f9c307edb523694",
+        "states": "6885ab4758dd127c63026f78393fca0156a9ee783e714e9075c958b5bce61865",
+        "mot": "3a5561c256375146d7b72ef016978c0439a508251c94a275f7b64fc87b0327e0"
+      }
+    },
+    "DJI_0307_2": {
+      "BG_off": {
+        "native_events": "9d051fa8dc43f7ae95142ac9f3f1ab5473ba1b526059aa6b026a602b1a8893db",
+        "states": "9999a53da44f570a198595a1d781c5479e4c9a8053d8399c8040d9776e3a8561",
+        "mot": "a8495a971dfabe97f68796b2b1e19001b7d353943aca30747461ca2d4833cb39"
+      },
+      "BG_W0": {
+        "native_events": "9d051fa8dc43f7ae95142ac9f3f1ab5473ba1b526059aa6b026a602b1a8893db",
+        "states": "9999a53da44f570a198595a1d781c5479e4c9a8053d8399c8040d9776e3a8561",
+        "mot": "a8495a971dfabe97f68796b2b1e19001b7d353943aca30747461ca2d4833cb39"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "9d051fa8dc43f7ae95142ac9f3f1ab5473ba1b526059aa6b026a602b1a8893db",
+        "states": "9999a53da44f570a198595a1d781c5479e4c9a8053d8399c8040d9776e3a8561",
+        "mot": "a8495a971dfabe97f68796b2b1e19001b7d353943aca30747461ca2d4833cb39"
+      }
+    },
+    "DJI_0309_4": {
+      "BG_off": {
+        "native_events": "24a76bba9c730d017c3cd1e365af3ff111755a90939d8be6e90bc68034ffe28f",
+        "states": "59291def2de6dcb94f0d54ce4a335359c287922f86a2de4328597d0a6f4fce52",
+        "mot": "648c275d74ede3adf17ffa4356d116186f501c4f3d5b54fea1cc14d0a7bd8b9f"
+      },
+      "BG_W0": {
+        "native_events": "cc4ec43088841a65d4895ce55069a814db6703357bd665329e7ee5d691810026",
+        "states": "1f2660a572cd2104700f1b989d3f22c3daeb8d385c7d9500f270e4d82f224949",
+        "mot": "ed6a037118fea48d2d3294329cd58a0d3dc74a1fb0e07dc674fc782269002cb4"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "24a76bba9c730d017c3cd1e365af3ff111755a90939d8be6e90bc68034ffe28f",
+        "states": "59291def2de6dcb94f0d54ce4a335359c287922f86a2de4328597d0a6f4fce52",
+        "mot": "83d53a013200d9caeceec66a6f3d268480c1342998d0b66a33589a743ae12288"
+      }
+    },
+    "DJI_0325_2": {
+      "BG_off": {
+        "native_events": "37079655755dc5ad5705b4d589a662478b28c681d23242cf7f36c6cb6ec05c20",
+        "states": "65c64d374777f466e257b5f425ef48edb1849a707fafdc52568dcdf31be643d5",
+        "mot": "f15cb6ea13a8002dad776275cb9b0d5fa0bb001c83844fc9f448ec87d231d142"
+      },
+      "BG_W0": {
+        "native_events": "37079655755dc5ad5705b4d589a662478b28c681d23242cf7f36c6cb6ec05c20",
+        "states": "65c64d374777f466e257b5f425ef48edb1849a707fafdc52568dcdf31be643d5",
+        "mot": "f15cb6ea13a8002dad776275cb9b0d5fa0bb001c83844fc9f448ec87d231d142"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "37079655755dc5ad5705b4d589a662478b28c681d23242cf7f36c6cb6ec05c20",
+        "states": "65c64d374777f466e257b5f425ef48edb1849a707fafdc52568dcdf31be643d5",
+        "mot": "f15cb6ea13a8002dad776275cb9b0d5fa0bb001c83844fc9f448ec87d231d142"
+      }
+    },
+    "DJI_0327_3": {
+      "BG_off": {
+        "native_events": "0aae647b297ba5eed1de26e663f79d39ec5de4bb6aa71d3a96ca9bd1381d6f0d",
+        "states": "1b648e0802c17f8cc989884793b472a0d0101d0933b2cf02084b026492745e9c",
+        "mot": "1d11f555aee58c2e88e2ff34201b203c0594e3683e3df4a3b9f92e1b3d65423b"
+      },
+      "BG_W0": {
+        "native_events": "c30186e94fb5f6d98b2633ac1c800d279a53f443c292a9c3ec515b6a610a7830",
+        "states": "a6602226826bbd6d51923fa1c6d5924a63dcf0bef24268b647b1ad3b232994fc",
+        "mot": "a59feb5bfa7e772677e6b1f5344b527962bf51fecd41dba542c7dede33580e09"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "0aae647b297ba5eed1de26e663f79d39ec5de4bb6aa71d3a96ca9bd1381d6f0d",
+        "states": "1b648e0802c17f8cc989884793b472a0d0101d0933b2cf02084b026492745e9c",
+        "mot": "60c357861829da7cbeb1d4a0263387188304000a629ba26b60d1f00b855c2441"
+      }
+    },
+    "DJI_0339_2": {
+      "BG_off": {
+        "native_events": "373450db5d41780dd3d96c778ad95e6892b10ef5ea3eaa82f3e039b821399b39",
+        "states": "84b087ab2cb8ef1a6a2d0c4599d30dc570123be60ab65560960be1be97a42ae1",
+        "mot": "2b459accc5c11689dbf9a09cadc040eb4ef553a5677bf81e00fcb82cb14d3d8d"
+      },
+      "BG_W0": {
+        "native_events": "0fa0090d3fecf7eda7e0c5e219cb21805da3bd0e2e79afbdf927e8e1947ba687",
+        "states": "90ab2467e9c1638d2004c279ca847aa218523c78efa19dc47b53960a7050d167",
+        "mot": "52d4d7d06139fa1b64f3da8ec64ee2971fda9f9848e1dd4c484dd7c374f06307"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "373450db5d41780dd3d96c778ad95e6892b10ef5ea3eaa82f3e039b821399b39",
+        "states": "84b087ab2cb8ef1a6a2d0c4599d30dc570123be60ab65560960be1be97a42ae1",
+        "mot": "614f587d7613264758d69dbb43a014941c6c3e7141f2b9b9a588f5f67359217c"
+      }
+    },
+    "DJI_0345_2": {
+      "BG_off": {
+        "native_events": "30c8e17a24d004ca0e6dd75de0f9e669cccb3ae462d34682c238a129d23da865",
+        "states": "970d2b92bad1183d90cf018d7ea95846fa73bced85869e5e5d4352bcbe009f3d",
+        "mot": "3bb009007f62a5129d83062371fbad5658db9bf2063ee2def8ad387c528ea2b4"
+      },
+      "BG_W0": {
+        "native_events": "599b97b57ed28b663ed9ff6c1f30023986e7b720f54dc1a2c84343c83eb35f58",
+        "states": "660397cc2fd82f3d24dbf9a142d1b5cad3ff1c082c6b0384f33d3389eb62754f",
+        "mot": "12bdb4b5f9094013f3ed85fb09eaaea162c9e88500120f98810a3afcaee80622"
+      },
+      "BG_W0_emit_only": {
+        "native_events": "30c8e17a24d004ca0e6dd75de0f9e669cccb3ae462d34682c238a129d23da865",
+        "states": "970d2b92bad1183d90cf018d7ea95846fa73bced85869e5e5d4352bcbe009f3d",
+        "mot": "33dd8dd08ab53284064b51edfa84d3a734d55ddfcd7de6bc3da9fe2a9dd6c095"
+      }
+    }
+  },
+  "emit_only_canonical_state_check": "PASS",
+  "emit_only_weak_outputs": 701,
+  "emit_only_weak_state_updates": 0
+}

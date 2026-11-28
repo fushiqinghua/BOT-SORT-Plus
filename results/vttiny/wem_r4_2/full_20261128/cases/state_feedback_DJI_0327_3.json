@@ -1,0 +1,1045 @@
+{
+  "sequence": "DJI_0327_3",
+  "start": 227,
+  "end": 237,
+  "gt_ids": [
+    16
+  ],
+  "track_ids": [
+    55
+  ],
+  "commit": "eded63f9079734560966d3df59ba5c938c3e9ac4",
+  "evaluator": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "arms": {
+    "BG_off": {
+      "sequence_counts": {
+        "TP": 9256,
+        "FP": 1906,
+        "FN": 54907,
+        "IDSW": 21
+      },
+      "official_confirmed": true,
+      "verified_mot_sha256": "1d11f555aee58c2e88e2ff34201b203c0594e3683e3df4a3b9f92e1b3d65423b",
+      "verified_state_chain_sha256": "1b648e0802c17f8cc989884793b472a0d0101d0933b2cf02084b026492745e9c",
+      "verified_native_event_sha256": "0aae647b297ba5eed1de26e663f79d39ec5de4bb6aa71d3a96ca9bd1381d6f0d",
+      "state_chain_basis": "published_output",
+      "weak_outputs_emitted": 0,
+      "weak_state_updates": 0,
+      "frames": [
+        {
+          "frame": 227,
+          "clear_counts": {
+            "TP": 25,
+            "FP": 5,
+            "FN": 149,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": 16,
+              "max_iou": 0.35852725260112545,
+              "matched_iou": null,
+              "requested_gt_ious": {
+                "16": 0.35852725260112545
+              },
+              "det_index": 34,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 228,
+          "clear_counts": {
+            "TP": 25,
+            "FP": 4,
+            "FN": 148,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 229,
+          "clear_counts": {
+            "TP": 27,
+            "FP": 3,
+            "FN": 146,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 230,
+          "clear_counts": {
+            "TP": 28,
+            "FP": 3,
+            "FN": 145,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 231,
+          "clear_counts": {
+            "TP": 26,
+            "FP": 4,
+            "FN": 148,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 232,
+          "clear_counts": {
+            "TP": 24,
+            "FP": 5,
+            "FN": 149,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 233,
+          "clear_counts": {
+            "TP": 24,
+            "FP": 6,
+            "FN": 148,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 234,
+          "clear_counts": {
+            "TP": 23,
+            "FP": 5,
+            "FN": 149,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 235,
+          "clear_counts": {
+            "TP": 22,
+            "FP": 6,
+            "FN": 150,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 236,
+          "clear_counts": {
+            "TP": 24,
+            "FP": 6,
+            "FN": 148,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 237,
+          "clear_counts": {
+            "TP": 24,
+            "FP": 6,
+            "FN": 149,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": 55
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "TP",
+              "matched_gt": 16,
+              "nearest_gt": 16,
+              "max_iou": 0.7405655890467879,
+              "matched_iou": 0.7405655890467879,
+              "requested_gt_ious": {
+                "16": 0.7405655890467879
+              },
+              "det_index": 20,
+              "stage": "high",
+              "stage_events": [
+                "high"
+              ],
+              "weak_events": []
+            }
+          ]
+        }
+      ]
+    },
+    "BG_W0": {
+      "sequence_counts": {
+        "TP": 9451,
+        "FP": 1977,
+        "FN": 54712,
+        "IDSW": 19
+      },
+      "official_confirmed": true,
+      "verified_mot_sha256": "a59feb5bfa7e772677e6b1f5344b527962bf51fecd41dba542c7dede33580e09",
+      "verified_state_chain_sha256": "a6602226826bbd6d51923fa1c6d5924a63dcf0bef24268b647b1ad3b232994fc",
+      "verified_native_event_sha256": "c30186e94fb5f6d98b2633ac1c800d279a53f443c292a9c3ec515b6a610a7830",
+      "state_chain_basis": "published_output",
+      "weak_outputs_emitted": 168,
+      "weak_state_updates": 168,
+      "frames": [
+        {
+          "frame": 227,
+          "clear_counts": {
+            "TP": 25,
+            "FP": 5,
+            "FN": 149,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": 16,
+              "max_iou": 0.3580840230638613,
+              "matched_iou": null,
+              "requested_gt_ious": {
+                "16": 0.3580840230638613
+              },
+              "det_index": 34,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 228,
+          "clear_counts": {
+            "TP": 25,
+            "FP": 5,
+            "FN": 148,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": 16,
+              "max_iou": 0.38614137924048214,
+              "matched_iou": null,
+              "requested_gt_ious": {
+                "16": 0.38614137924048214
+              },
+              "det_index": 42,
+              "stage": "weak_measurement",
+              "stage_events": [
+                "weak_measurement"
+              ],
+              "weak_events": [
+                {
+                  "decision_policy": "W0",
+                  "det_index": 42,
+                  "event": "proposed",
+                  "history_frames": [
+                    225,
+                    226,
+                    227
+                  ],
+                  "motion": 0.9561390890576883,
+                  "native_iou": 0.850761151137047,
+                  "previous_regular_observations": 3,
+                  "raw_score": 0.07474648952484131
+                },
+                {
+                  "decision_policy": "W0",
+                  "det_index": 42,
+                  "event": "committed",
+                  "history_frames": [
+                    225,
+                    226,
+                    227
+                  ],
+                  "motion": 0.9561390890576883,
+                  "native_iou": 0.850761151137047,
+                  "previous_regular_observations": 3,
+                  "raw_score": 0.07474648952484131,
+                  "state_committed": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 229,
+          "clear_counts": {
+            "TP": 27,
+            "FP": 4,
+            "FN": 146,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": 16,
+              "max_iou": 0.4253977674835213,
+              "matched_iou": null,
+              "requested_gt_ious": {
+                "16": 0.4253977674835213
+              },
+              "det_index": 34,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 230,
+          "clear_counts": {
+            "TP": 29,
+            "FP": 3,
+            "FN": 144,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": 55
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "TP",
+              "matched_gt": 16,
+              "nearest_gt": 16,
+              "max_iou": 0.5582334744635211,
+              "matched_iou": 0.5582334744635211,
+              "requested_gt_ious": {
+                "16": 0.5582334744635211
+              },
+              "det_index": 35,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 231,
+          "clear_counts": {
+            "TP": 27,
+            "FP": 4,
+            "FN": 147,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": 55
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "TP",
+              "matched_gt": 16,
+              "nearest_gt": 16,
+              "max_iou": 0.6119828543485271,
+              "matched_iou": 0.6119828543485271,
+              "requested_gt_ious": {
+                "16": 0.6119828543485271
+              },
+              "det_index": 27,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 232,
+          "clear_counts": {
+            "TP": 26,
+            "FP": 6,
+            "FN": 147,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": 55
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "TP",
+              "matched_gt": 16,
+              "nearest_gt": 16,
+              "max_iou": 0.6289333465970557,
+              "matched_iou": 0.6289333465970557,
+              "requested_gt_ious": {
+                "16": 0.6289333465970557
+              },
+              "det_index": 33,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 233,
+          "clear_counts": {
+            "TP": 26,
+            "FP": 6,
+            "FN": 146,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": 55
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "TP",
+              "matched_gt": 16,
+              "nearest_gt": 16,
+              "max_iou": 0.6379032963985325,
+              "matched_iou": 0.6379032963985325,
+              "requested_gt_ious": {
+                "16": 0.6379032963985325
+              },
+              "det_index": 28,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 234,
+          "clear_counts": {
+            "TP": 24,
+            "FP": 5,
+            "FN": 148,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": 55
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "TP",
+              "matched_gt": 16,
+              "nearest_gt": 16,
+              "max_iou": 0.6810400802267879,
+              "matched_iou": 0.6810400802267879,
+              "requested_gt_ious": {
+                "16": 0.6810400802267879
+              },
+              "det_index": 30,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 235,
+          "clear_counts": {
+            "TP": 23,
+            "FP": 6,
+            "FN": 149,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": 55
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "TP",
+              "matched_gt": 16,
+              "nearest_gt": 16,
+              "max_iou": 0.7645053155973792,
+              "matched_iou": 0.7645053155973792,
+              "requested_gt_ious": {
+                "16": 0.7645053155973792
+              },
+              "det_index": 25,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 236,
+          "clear_counts": {
+            "TP": 25,
+            "FP": 5,
+            "FN": 147,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": 55
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "TP",
+              "matched_gt": 16,
+              "nearest_gt": 16,
+              "max_iou": 0.793316954083079,
+              "matched_iou": 0.793316954083079,
+              "requested_gt_ious": {
+                "16": 0.793316954083079
+              },
+              "det_index": 27,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 237,
+          "clear_counts": {
+            "TP": 24,
+            "FP": 6,
+            "FN": 149,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": 55
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "TP",
+              "matched_gt": 16,
+              "nearest_gt": 16,
+              "max_iou": 0.7729036545023253,
+              "matched_iou": 0.7729036545023253,
+              "requested_gt_ious": {
+                "16": 0.7729036545023253
+              },
+              "det_index": 20,
+              "stage": "high",
+              "stage_events": [
+                "high"
+              ],
+              "weak_events": []
+            }
+          ]
+        }
+      ]
+    },
+    "BG_W0_emit_only": {
+      "sequence_counts": {
+        "TP": 9378,
+        "FP": 1949,
+        "FN": 54785,
+        "IDSW": 22
+      },
+      "official_confirmed": true,
+      "verified_mot_sha256": "60c357861829da7cbeb1d4a0263387188304000a629ba26b60d1f00b855c2441",
+      "verified_state_chain_sha256": "1b648e0802c17f8cc989884793b472a0d0101d0933b2cf02084b026492745e9c",
+      "verified_native_event_sha256": "0aae647b297ba5eed1de26e663f79d39ec5de4bb6aa71d3a96ca9bd1381d6f0d",
+      "state_chain_basis": "canonical_native_output",
+      "weak_outputs_emitted": 165,
+      "weak_state_updates": 0,
+      "frames": [
+        {
+          "frame": 227,
+          "clear_counts": {
+            "TP": 25,
+            "FP": 5,
+            "FN": 149,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": 16,
+              "max_iou": 0.35852725260112545,
+              "matched_iou": null,
+              "requested_gt_ious": {
+                "16": 0.35852725260112545
+              },
+              "det_index": 34,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 228,
+          "clear_counts": {
+            "TP": 25,
+            "FP": 5,
+            "FN": 148,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": 16,
+              "max_iou": 0.386697463941187,
+              "matched_iou": null,
+              "requested_gt_ious": {
+                "16": 0.386697463941187
+              },
+              "det_index": 42,
+              "stage": "weak_emit_only",
+              "stage_events": [
+                "weak_emit_only"
+              ],
+              "weak_events": [
+                {
+                  "decision_policy": "W0",
+                  "det_index": 42,
+                  "event": "proposed",
+                  "history_frames": [
+                    225,
+                    226,
+                    227
+                  ],
+                  "motion": 0.9560713246655309,
+                  "native_iou": 0.8516437046225716,
+                  "previous_regular_observations": 3,
+                  "raw_score": 0.07474648952484131
+                },
+                {
+                  "decision_policy": "W0",
+                  "det_index": 42,
+                  "event": "committed",
+                  "history_frames": [
+                    225,
+                    226,
+                    227
+                  ],
+                  "motion": 0.9560713246655309,
+                  "native_iou": 0.8516437046225716,
+                  "output_only": true,
+                  "previous_regular_observations": 3,
+                  "raw_score": 0.07474648952484131,
+                  "state_committed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 229,
+          "clear_counts": {
+            "TP": 27,
+            "FP": 3,
+            "FN": 146,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 230,
+          "clear_counts": {
+            "TP": 28,
+            "FP": 3,
+            "FN": 145,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 231,
+          "clear_counts": {
+            "TP": 26,
+            "FP": 4,
+            "FN": 148,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 232,
+          "clear_counts": {
+            "TP": 25,
+            "FP": 6,
+            "FN": 148,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 233,
+          "clear_counts": {
+            "TP": 24,
+            "FP": 6,
+            "FN": 148,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 234,
+          "clear_counts": {
+            "TP": 23,
+            "FP": 5,
+            "FN": 149,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 235,
+          "clear_counts": {
+            "TP": 22,
+            "FP": 6,
+            "FN": 150,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 236,
+          "clear_counts": {
+            "TP": 24,
+            "FP": 6,
+            "FN": 148,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": null
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 237,
+          "clear_counts": {
+            "TP": 24,
+            "FP": 6,
+            "FN": 149,
+            "IDSW": 0
+          },
+          "coverage": {
+            "16": {
+              "present": true,
+              "matched_track": 55
+            }
+          },
+          "tracks": [
+            {
+              "track_id": 55,
+              "status": "TP",
+              "matched_gt": 16,
+              "nearest_gt": 16,
+              "max_iou": 0.7405655890467879,
+              "matched_iou": 0.7405655890467879,
+              "requested_gt_ious": {
+                "16": 0.7405655890467879
+              },
+              "det_index": 20,
+              "stage": "high",
+              "stage_events": [
+                "high"
+              ],
+              "weak_events": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

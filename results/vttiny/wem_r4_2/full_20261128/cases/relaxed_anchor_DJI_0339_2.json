@@ -1,0 +1,401 @@
+{
+  "sequence": "DJI_0339_2",
+  "start": 95,
+  "end": 99,
+  "gt_ids": [],
+  "track_ids": [
+    2
+  ],
+  "commit": "eded63f9079734560966d3df59ba5c938c3e9ac4",
+  "evaluator": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "arms": {
+    "BG_W0": {
+      "sequence_counts": {
+        "TP": 411,
+        "FP": 1172,
+        "FN": 1389,
+        "IDSW": 0
+      },
+      "official_confirmed": true,
+      "verified_mot_sha256": "52d4d7d06139fa1b64f3da8ec64ee2971fda9f9848e1dd4c484dd7c374f06307",
+      "verified_state_chain_sha256": "90ab2467e9c1638d2004c279ca847aa218523c78efa19dc47b53960a7050d167",
+      "verified_native_event_sha256": "0fa0090d3fecf7eda7e0c5e219cb21805da3bd0e2e79afbdf927e8e1947ba687",
+      "state_chain_basis": "published_output",
+      "weak_outputs_emitted": 14,
+      "weak_state_updates": 14,
+      "frames": [
+        {
+          "frame": 95,
+          "clear_counts": {
+            "TP": 0,
+            "FP": 2,
+            "FN": 3,
+            "IDSW": 0
+          },
+          "coverage": {},
+          "tracks": [
+            {
+              "track_id": 2,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": null,
+              "max_iou": 0.0,
+              "matched_iou": null,
+              "requested_gt_ious": {},
+              "det_index": 4,
+              "stage": "weak_measurement",
+              "stage_events": [
+                "weak_measurement"
+              ],
+              "weak_events": [
+                {
+                  "decision_policy": "W0",
+                  "det_index": 4,
+                  "event": "proposed",
+                  "history_frames": [
+                    92,
+                    93,
+                    94
+                  ],
+                  "motion": 0.8993475464466584,
+                  "native_iou": 0.8575718577256879,
+                  "previous_regular_observations": 3,
+                  "raw_score": 0.09015900641679764
+                },
+                {
+                  "decision_policy": "W0",
+                  "det_index": 4,
+                  "event": "committed",
+                  "history_frames": [
+                    92,
+                    93,
+                    94
+                  ],
+                  "motion": 0.8993475464466584,
+                  "native_iou": 0.8575718577256879,
+                  "previous_regular_observations": 3,
+                  "raw_score": 0.09015900641679764,
+                  "state_committed": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 96,
+          "clear_counts": {
+            "TP": 0,
+            "FP": 2,
+            "FN": 3,
+            "IDSW": 0
+          },
+          "coverage": {},
+          "tracks": [
+            {
+              "track_id": 2,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": null,
+              "max_iou": 0.0,
+              "matched_iou": null,
+              "requested_gt_ious": {},
+              "det_index": 3,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 97,
+          "clear_counts": {
+            "TP": 0,
+            "FP": 1,
+            "FN": 3,
+            "IDSW": 0
+          },
+          "coverage": {},
+          "tracks": [
+            {
+              "track_id": 2,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 98,
+          "clear_counts": {
+            "TP": 0,
+            "FP": 1,
+            "FN": 3,
+            "IDSW": 0
+          },
+          "coverage": {},
+          "tracks": [
+            {
+              "track_id": 2,
+              "status": "no_output",
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 99,
+          "clear_counts": {
+            "TP": 0,
+            "FP": 2,
+            "FN": 3,
+            "IDSW": 0
+          },
+          "coverage": {},
+          "tracks": [
+            {
+              "track_id": 2,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": null,
+              "max_iou": 0.0,
+              "matched_iou": null,
+              "requested_gt_ious": {},
+              "det_index": 3,
+              "stage": "B_recovery",
+              "stage_events": [
+                "B_recovery"
+              ],
+              "weak_events": []
+            }
+          ]
+        }
+      ]
+    },
+    "BG_W0_relaxed_anchor": {
+      "sequence_counts": {
+        "TP": 411,
+        "FP": 1384,
+        "FN": 1389,
+        "IDSW": 0
+      },
+      "official_confirmed": true,
+      "verified_mot_sha256": "de812c05768c9f89e96a8715f71104084b003d95ab9741f094a643032769934d",
+      "verified_state_chain_sha256": "a3648b432fec5b40f88092f811c28eaea974f92041195ae315ff75ece9256020",
+      "verified_native_event_sha256": "e3c3a173f0c6d0a79c0b7562850d7130093c74d5996ec98f7fa680c7243f98fc",
+      "state_chain_basis": "published_output",
+      "weak_outputs_emitted": 42,
+      "weak_state_updates": 42,
+      "frames": [
+        {
+          "frame": 95,
+          "clear_counts": {
+            "TP": 0,
+            "FP": 2,
+            "FN": 3,
+            "IDSW": 0
+          },
+          "coverage": {},
+          "tracks": [
+            {
+              "track_id": 2,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": null,
+              "max_iou": 0.0,
+              "matched_iou": null,
+              "requested_gt_ious": {},
+              "det_index": 4,
+              "stage": "weak_measurement",
+              "stage_events": [
+                "weak_measurement"
+              ],
+              "weak_events": [
+                {
+                  "anchor_box_mismatch": false,
+                  "anchor_not_ready": false,
+                  "anchor_prediction_mismatch": false,
+                  "anchor_support_bypassed": false,
+                  "decision_policy": "W0",
+                  "det_index": 4,
+                  "event": "proposed",
+                  "history_frames": [
+                    92,
+                    93,
+                    94
+                  ],
+                  "motion": 0.8993475464466584,
+                  "native_iou": 0.8575718577256879,
+                  "previous_regular_observations": 3,
+                  "raw_score": 0.09015900641679764
+                },
+                {
+                  "anchor_box_mismatch": false,
+                  "anchor_not_ready": false,
+                  "anchor_prediction_mismatch": false,
+                  "anchor_support_bypassed": false,
+                  "decision_policy": "W0",
+                  "det_index": 4,
+                  "event": "committed",
+                  "history_frames": [
+                    92,
+                    93,
+                    94
+                  ],
+                  "motion": 0.8993475464466584,
+                  "native_iou": 0.8575718577256879,
+                  "output_only": false,
+                  "previous_regular_observations": 3,
+                  "raw_score": 0.09015900641679764,
+                  "state_committed": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 96,
+          "clear_counts": {
+            "TP": 0,
+            "FP": 2,
+            "FN": 3,
+            "IDSW": 0
+          },
+          "coverage": {},
+          "tracks": [
+            {
+              "track_id": 2,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": null,
+              "max_iou": 0.0,
+              "matched_iou": null,
+              "requested_gt_ious": {},
+              "det_index": 3,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 97,
+          "clear_counts": {
+            "TP": 0,
+            "FP": 2,
+            "FN": 3,
+            "IDSW": 0
+          },
+          "coverage": {},
+          "tracks": [
+            {
+              "track_id": 2,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": null,
+              "max_iou": 0.0,
+              "matched_iou": null,
+              "requested_gt_ious": {},
+              "det_index": 4,
+              "stage": "weak_measurement",
+              "stage_events": [
+                "weak_measurement"
+              ],
+              "weak_events": [
+                {
+                  "anchor_box_mismatch": false,
+                  "anchor_not_ready": true,
+                  "anchor_prediction_mismatch": false,
+                  "anchor_support_bypassed": true,
+                  "decision_policy": "W0",
+                  "det_index": 4,
+                  "event": "proposed",
+                  "history_frames": [
+                    96
+                  ],
+                  "motion": null,
+                  "native_iou": 0.7200218184851883,
+                  "previous_regular_observations": 1,
+                  "raw_score": 0.06396198272705078
+                },
+                {
+                  "anchor_box_mismatch": false,
+                  "anchor_not_ready": true,
+                  "anchor_prediction_mismatch": false,
+                  "anchor_support_bypassed": true,
+                  "decision_policy": "W0",
+                  "det_index": 4,
+                  "event": "committed",
+                  "history_frames": [
+                    96
+                  ],
+                  "motion": null,
+                  "native_iou": 0.7200218184851883,
+                  "output_only": false,
+                  "previous_regular_observations": 1,
+                  "raw_score": 0.06396198272705078,
+                  "state_committed": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 98,
+          "clear_counts": {
+            "TP": 0,
+            "FP": 2,
+            "FN": 3,
+            "IDSW": 0
+          },
+          "coverage": {},
+          "tracks": [
+            {
+              "track_id": 2,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": null,
+              "max_iou": 0.0,
+              "matched_iou": null,
+              "requested_gt_ious": {},
+              "det_index": 2,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        },
+        {
+          "frame": 99,
+          "clear_counts": {
+            "TP": 0,
+            "FP": 2,
+            "FN": 3,
+            "IDSW": 0
+          },
+          "coverage": {},
+          "tracks": [
+            {
+              "track_id": 2,
+              "status": "FP",
+              "matched_gt": null,
+              "nearest_gt": null,
+              "max_iou": 0.0,
+              "matched_iou": null,
+              "requested_gt_ious": {},
+              "det_index": 3,
+              "stage": "low",
+              "stage_events": [
+                "low"
+              ],
+              "weak_events": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

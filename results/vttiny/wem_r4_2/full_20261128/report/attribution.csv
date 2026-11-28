@@ -1,0 +1,5 @@
+﻿arm,gained,lost,fp_delta,idsw_delta,B_reference,B_actual,unmatched_FP,TP_same_old_identity,TP_other_identity,TP_past_identity_unconfirmed,newly_covered,reference_B_not_matched,reference_B_coverage_lost,same_id_covered_with_recent_W,coverage_retained,weak_outputs_emitted,weak_state_updates,count_basis
+BG_W0,646,136,578,0,922,771,384,319,0,27,343,239,29,58,56,730,730,derived_from_committed_count_and_fixed_arm_semantics
+BG_lower_low,2176,521,2173,3,922,950,0,0,0,0,0,445,84,0,253,0,0,derived_from_committed_count_and_fixed_arm_semantics
+BG_W0_relaxed_anchor,785,180,1027,9,922,752,512,382,2,50,431,251,31,73,57,946,946,recorded_and_checked
+BG_W0_emit_only,334,0,367,0,922,922,364,310,0,27,334,0,0,0,0,701,0,recorded_and_checked
