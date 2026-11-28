@@ -1,0 +1,30 @@
+{
+  "schema": "tcmo_v01_settings_design_template",
+  "status": "TEMPLATE_ONLY_RUNNER_PENDING",
+  "paths": {
+    "r41_settings": "configs/research/wem_r4_1.local.json",
+    "m0_full_run": null,
+    "training_split": null,
+    "rgb_images": null,
+    "ir_images": null,
+    "rgb_gt_train": null,
+    "ir_gt_train": null,
+    "rgb_gt_eval": null,
+    "ir_gt_eval": null,
+    "rgb_aux_weights": null,
+    "ir_aux_weights": null,
+    "rgb_aux_training_receipt": null,
+    "ir_aux_training_receipt": null,
+    "rgb_aux_cache": null,
+    "ir_aux_cache": null,
+    "mapping_declaration": null,
+    "calibration_lock": null,
+    "output_root": "runs/tcmo_v0.1"
+  },
+  "runtime": {
+    "workers": 1,
+    "cuda_visible_devices": "0",
+    "device": "cuda:0"
+  },
+  "notes": "Fill only local paths; separate prediction and GT/eval config at actual implementation. null means unverified/missing. Not an executable config until implementation."
+}
