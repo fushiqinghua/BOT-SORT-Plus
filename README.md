@@ -1,4 +1,27 @@
-# BoT-SORT-Plus · W0 弱观测续接与定型实验
+# BoT-SORT-Plus · TCMO 跨模态互补观测研究
+
+本分支 `research/vttiny-multimodal-observation` 独立建立于 W R4.2 冻结提交 `f90501853b07bcca5d10e99cd17f6dc9db42bfb4`。保留 B/G/W 研究与历史归档；新 TCMO 代码、实验、图表仅在本分支维护，不改变 `research/vttiny-thesis-finalization` 和 `research/vttiny-weak-evidence`。
+
+**当前状态：DESIGN_READY / NOT_IMPLEMENTED / NOT_RUN。** 首轮实现 R0 资产与补充机会、R1 完整在线对照。R2 历史残差对齐及自适应量测仅作为后续任务。未核验独立 V/T 权重与本地数据；新 runner 尚未实现。旧执行器只复现旧 W 实验。
+
+| 入口 | 内容 |
+|---|---|
+| [实验任务书](docs/botsort_plus/tcmo_v0.1/EXPERIMENT_PLAN.md) | R0/R1/R2、六组全量、科学判读 |
+| [模块设计](docs/botsort_plus/tcmo_v0.1/MODULE_DESIGN.md) | COM/TRA/RMA/UMU，真实中心更新、W 共用事务 |
+| [实现清单](docs/botsort_plus/tcmo_v0.1/IMPLEMENTATION_TASKS.md) | 给本地 Codex 的源码接入、资产、测试和 runner 任务 |
+| [数据合同](docs/botsort_plus/tcmo_v0.1/DATA_CONTRACT.md) | 双模态缓存、映射、身份、候选所有权及事件 |
+| [本地交接](docs/botsort_plus/tcmo_v0.1/LOCAL_RUNBOOK.md) | 拉取、准备、实现顺序及待实现命令 |
+| [回传与图表](docs/botsort_plus/tcmo_v0.1/RESULTS_TEMPLATE.md) | 结果字段、真实图卡及论文图表 |
+| [设计协议](configs/research/tcmo_v0.1_protocol.json) · [本机模板](configs/research/tcmo_v0.1.example.json) | 固定组别与参数起点（待训练侧校准核验） |
+| [结果入口](results/vttiny/tcmo_v0.1/README.md) | NOT_RUN |
+
+R1 参考 M0 是历史 BG_W0（HOTA 39.0339、IDF1 44.2372、MOTA 25.6842）；新增 M1 RGB、M2 IR、M3 RGB+IR、C1 直接合并、C2 错位红外。每组完整官方开发评测 30 段、12590 输入帧。W 优先，共享弱更新预算，保护原生/B/已有 W，GT 不进入预测。R0 只读机会与在线指标必须区分。技术正确后不因科学结果负向中止；所有组正常回传。
+
+---
+
+## 继承的历史 W 实验说明（以下仅供复现）
+
+### BoT-SORT-Plus · W0 弱观测续接与定型实验
 
 本分支 **research/vttiny-weak-evidence** 为毕业设计目标跟踪章节准备 W 模块及下一批实验，从 research/vttiny-track-conditioned-observation 的 **176f2a81613c34d16a860765ea7be0845116b534** 建立，继承 B、GMC、TCO/Q2 及先前实验归档。
 
