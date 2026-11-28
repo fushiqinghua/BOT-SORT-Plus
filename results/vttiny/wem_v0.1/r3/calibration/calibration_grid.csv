@@ -1,0 +1,20 @@
+﻿accepted,accepted_confirmed_background,accepted_ignored,accepted_other_identity,accepted_same_identity,accepted_unknown,available_confirmed_background,available_groups,available_ignored,available_other_identity,available_proxy_groups_confirmed_background,available_proxy_groups_ignored,available_proxy_groups_other_identity,available_proxy_groups_same_identity,available_proxy_groups_unknown,available_same_identity,available_unknown,cosine_floor,failures,floor,margin,method,possible_target_frames,useful_fn_episodes,useful_proxy_groups,useful_target_frames
+416,0,0,1,207,208,0,427,0,1,0,0,1,6,5,211,215,,other_identity_budget_exceeded unknown_or_ignored_accepted,0.5,,geometry,206,205,6,205
+378,0,0,0,199,179,0,427,0,1,0,0,1,6,5,211,215,,unknown_or_ignored_accepted,0.6,,geometry,206,197,6,197
+300,0,0,0,171,129,0,427,0,1,0,0,1,6,5,211,215,,unknown_or_ignored_accepted,0.7,,geometry,206,169,6,169
+388,0,0,1,194,193,0,427,0,1,0,0,1,6,5,211,215,,other_identity_budget_exceeded unknown_or_ignored_accepted,0.4,,geometry_score,206,192,6,192
+265,0,0,1,128,136,0,427,0,1,0,0,1,6,5,211,215,,other_identity_budget_exceeded unknown_or_ignored_accepted,0.55,,geometry_score,206,127,6,127
+137,0,0,0,66,71,0,427,0,1,0,0,1,6,5,211,215,,unknown_or_ignored_accepted,0.7,,geometry_score,206,65,3,65
+17,0,0,0,9,8,0,427,0,1,0,0,1,6,5,211,215,0.75,unknown_or_ignored_accepted,,,history,206,9,2,9
+2,0,0,0,0,2,0,427,0,1,0,0,1,6,5,211,215,0.85,unknown_or_ignored_accepted,,,history,206,0,0,0
+1,0,0,0,0,1,0,427,0,1,0,0,1,6,5,211,215,0.92,unknown_or_ignored_accepted,,,history,206,0,0,0
+17,0,0,0,9,8,0,427,0,1,0,0,1,6,5,211,215,0.75,unknown_or_ignored_accepted,,0.02,history_competition,206,9,2,9
+17,0,0,0,9,8,0,427,0,1,0,0,1,6,5,211,215,0.75,unknown_or_ignored_accepted,,0.05,history_competition,206,9,2,9
+17,0,0,0,9,8,0,427,0,1,0,0,1,6,5,211,215,0.75,unknown_or_ignored_accepted,,0.08,history_competition,206,9,2,9
+2,0,0,0,0,2,0,427,0,1,0,0,1,6,5,211,215,0.85,unknown_or_ignored_accepted,,0.02,history_competition,206,0,0,0
+2,0,0,0,0,2,0,427,0,1,0,0,1,6,5,211,215,0.85,unknown_or_ignored_accepted,,0.05,history_competition,206,0,0,0
+2,0,0,0,0,2,0,427,0,1,0,0,1,6,5,211,215,0.85,unknown_or_ignored_accepted,,0.08,history_competition,206,0,0,0
+1,0,0,0,0,1,0,427,0,1,0,0,1,6,5,211,215,0.92,unknown_or_ignored_accepted,,0.02,history_competition,206,0,0,0
+1,0,0,0,0,1,0,427,0,1,0,0,1,6,5,211,215,0.92,unknown_or_ignored_accepted,,0.05,history_competition,206,0,0,0
+1,0,0,0,0,1,0,427,0,1,0,0,1,6,5,211,215,0.92,unknown_or_ignored_accepted,,0.08,history_competition,206,0,0,0
+0,0,0,0,0,0,0,427,0,1,0,0,1,6,5,211,215,,,,,reject_all,206,0,0,0

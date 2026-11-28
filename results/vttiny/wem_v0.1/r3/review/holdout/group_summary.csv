@@ -1,0 +1,13 @@
+﻿partition,source_video,review_pool,cases,likely_background,plausible_other_identity,same_identity_plausible,visible_target_unresolved_identity,uncertain,human_pending_at_delivery
+holdout,proxy:DJI_0057,background,1,0,0,1,0,0,1
+holdout,proxy:DJI_0071,background,3,0,0,3,0,0,3
+holdout,proxy:DJI_0071,identity,3,0,0,0,3,0,3
+holdout,proxy:DJI_0083,background,12,3,0,4,0,5,12
+holdout,proxy:DJI_0083,identity,9,0,1,5,3,0,9
+holdout,proxy:DJI_0089,identity,1,0,0,0,0,1,1
+holdout,proxy:DJI_0183,background,10,5,0,2,1,2,10
+holdout,proxy:DJI_0183,identity,2,0,0,0,1,1,2
+holdout,proxy:DJI_0273,identity,3,0,0,2,1,0,3
+holdout,proxy:DJI_0291,identity,1,0,0,0,0,1,1
+holdout,proxy:DJI_0295,background,2,0,0,0,0,2,2
+holdout,proxy:DJI_0295,identity,2,0,0,2,0,0,2

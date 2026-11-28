@@ -1,0 +1,378 @@
+{
+  "type": "public_aggregate_receipt",
+  "original_and_published_artifact_digests": {
+    "calibration_grid.csv": {
+      "original_sha256": "589c4adc80d93b88370c96b994222fdd8bbdfc776e9dcbd4923ec9b24636fe94",
+      "published_lf_sha256": "4e2a373779eb92c25c00cf0283bb54ed1d28dab89c8662897d3bcfa6a72fe3b8",
+      "publication_change": "CRLF to LF only"
+    },
+    "fixed_diagnostics.csv": {
+      "original_sha256": "b8531b0c363e97e70214b374ae52534a3aff9a8fb8b253353eae3668f19b289e",
+      "published_lf_sha256": "6e141bf981c6fde061e56bdec1a88ab66a7b0ac843373e7772179333ded94e2f",
+      "publication_change": "CRLF to LF only"
+    },
+    "gate_breakdown.json": {
+      "original_sha256": "11c470db906d21b3cf74ccb39faf169eefdb66de9429b4d71598b507831bf2df",
+      "published_lf_sha256": "11c470db906d21b3cf74ccb39faf169eefdb66de9429b4d71598b507831bf2df",
+      "publication_change": "none"
+    },
+    "R3_PROTOCOL.md": {
+      "original_sha256": "6aff764a2ef8209e96079e1cf52f65491df87bf68937ce956ec99e54f1a41ffb",
+      "published_sha256": "fb93e237330e7d5ba907cd012ac8c1523ef8a2d069d4570530a266f5d89869ca",
+      "publication_change": "Local links to split, group map and input receipts were replaced by a link to this summary. Protocol rules and thresholds are unchanged."
+    },
+    "calibration_lock.json": {
+      "type": "aggregation_and_one_reduced_case",
+      "original_sha256": "2cc752bd7d7f450d70d828b630d81892351f36d691267962441ee8ae87556719",
+      "change": "The sole known mismatch is summarized. Raw annotation IDs and coordinates, source detection index and historical annotation rows were omitted. All decision and aggregate fields are retained.",
+      "published_sha256": "d3f5595b27cf4c7fcb87934dbc506c3eb256675f23d25e2b898238d08f18754f"
+    }
+  },
+  "scope": "VT-Tiny-MOT official training-side only. Historical detector and RGB ReID were selected or calibrated using official test data. Parent-video identity is not verified.",
+  "proxy_split": {
+    "official_indexed_train_clip_count": 85,
+    "official_indexed_train_pair_count": 34111,
+    "excluded_for_test_proxy_overlap_clip_count": 11,
+    "excluded_for_test_proxy_overlap_pair_count": 5180,
+    "excluded_unindexed_entry_count_before_official_train_count": 1,
+    "original_proxy_group_map_sha256": "b7c2c964ad14eabb21651475d17e169ede57246b012e59729371f043a2d65294",
+    "frozen_split_sha256": "43329496f50105b87a9175d312f70b65b1dd3e050307697b20a0656709398c04",
+    "official_test_gt_used": false,
+    "official_mother_video_mapping_verified": false
+  },
+  "replay": {
+    "reference": "B_early_moderate",
+    "smoke": {
+      "original_sha256": "846e49c1dcc6e7ff318d1dde753776b95e0805f0bcbe4c78174eefd8edd9db8f",
+      "status": "PASS",
+      "sequence_count": 3,
+      "frames_per_role": 1190,
+      "modes": [
+        "off",
+        "on"
+      ],
+      "counts": {
+        "s0": 4569,
+        "s0_edges": 10897,
+        "geometry_feasible_edges": 421
+      }
+    },
+    "full": {
+      "original_sha256": "a213e71aa97a75a0e489252492ed4c209484471ec07d6f903e05a1a4b6fc91e6",
+      "status": "PASS",
+      "sequence_count": 74,
+      "frames_per_role": 28931,
+      "modes": [
+        "off",
+        "on"
+      ],
+      "counts": {
+        "s0": 36774,
+        "s0_edges": 34144,
+        "geometry_feasible_edges": 2198
+      }
+    },
+    "training_input_and_reference_source_pins": {
+      "split/training_split.json": "43329496f50105b87a9175d312f70b65b1dd3e050307697b20a0656709398c04",
+      "training_inputs/verified.json": "b69d05eea9c39e09e941d5a890addf0e87c78a2028eacab0accbb9ecb6ba81b1",
+      "training_inputs/protocol.json": "0e0b621de526e278b5a8a9f251b26270ef993b5e4f5cdc921510cc2918260e1e",
+      "training_runs/capture_manifest.json": "956e1d6e032fd17b7b155f5063574ac0ff5a5f41989a2a71e110b56fbc5e7fb1",
+      "training_runs/B/protocols/B_early_moderate.json": "ddb7f476ad97d870aae3acf8aa1c071ef190846cd62fcb267f8105014b0aa69a"
+    },
+    "settings_sha256": "c5d9ac2845f45f7638b1cc70f16b3e4305fd2d6ac8aa72bc61997d9cf7e0d41f",
+    "code_sha256": {
+      "capture.py": "d6d17d93138181329be3283c12ffa5336ecd83ccf1e65a4488213670a380d33a",
+      "training_capture.py": "a35b971fe23c1cba948e6bc92d94284a4a20bf5c0b302431ebbdf08c59bc0f57"
+    },
+    "assets": {
+      "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+      "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1"
+    },
+    "verified_parity": [
+      "historical MOT bytes",
+      "historical recovery event bytes",
+      "historical decoded GMC arrays",
+      "observer off/on online state chain"
+    ],
+    "w_online_updates": 0,
+    "gt_open_allowed": false
+  },
+  "feature_extraction": {
+    "original_manifest_sha256": "e3c28c4b312d575bbba2631f3bc5bdd893be4f0489849c06195833e8092edad2",
+    "encoder": {
+      "sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+      "weights_name": "clip_veri.pt",
+      "encoder": "baseline CLIP-ReID ViT-B/16 VeRi, supplied fine-tuned checkpoint",
+      "input_hw": [
+        256,
+        256
+      ],
+      "output_dim": 1280,
+      "precision": "float32",
+      "verified_visual_state_keys": 162,
+      "crop_source": "RGB BGR-to-RGB",
+      "mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "std": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "reference_protocol_sha256": "ddb7f476ad97d870aae3acf8aa1c071ef190846cd62fcb267f8105014b0aa69a",
+    "feature_implementation_sha256": "841050d903436fe0c482fb6e55500b2c52633b28799204f8ae3a7b79831993f1",
+    "decoded_rgb_matches_frozen_reference": true,
+    "verified_frozen_decode_sequence_count": 74
+  },
+  "independent_labels": {
+    "original_label_receipt_sha256": "16ad7ccc7fe3e75072defcb66fae1e0b585bf345ea2d0744ffa1627ff4e47f61",
+    "source_sha256": {
+      "labeler": "e05b72cea732ee535d4ad4564a0613b945d6500a355862d7eae45865cde01823",
+      "r1b_labeler": "c6c87150cdfcc83f5f3b2c424ed4c2d36c0afd0e2dcba12d98bb07ee4cd27927",
+      "r1b_rules": "5a13ef1f44315ff1e1913df0d4bf801abd54bd9f34140f152e22eeff1e49240b",
+      "capture": "a213e71aa97a75a0e489252492ed4c209484471ec07d6f903e05a1a4b6fc91e6",
+      "official_training_gt_manifest": "25ef30cf0418afb6281a4267851451956c7a16dc6fd0fb209ad06477534931eb",
+      "detection_manifest": "b69d05eea9c39e09e941d5a890addf0e87c78a2028eacab0accbb9ecb6ba81b1"
+    },
+    "trackeval": {
+      "commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+      "manifest_sha256": "76e6608c3027a601f7cd8e724a4c3d967be8b153e811f7648ad2150b1f9a5e82",
+      "verified_source_files": 45,
+      "eol_normalized_matched": false
+    },
+    "human_background_reviews_supplied": false,
+    "low_iou_disposition": "unknown_without_independent_confirmation"
+  },
+  "partitions": {
+    "fit": {
+      "sequence_count": 51,
+      "proxy_group_count": 46,
+      "counts": {
+        "frames": 18999,
+        "edges": 1445,
+        "weak_crops": 1445,
+        "rgb_valid": 1445
+      },
+      "edges_by_label_and_geometry": {
+        "all_edges": 20889,
+        "all_same_identity": 1008,
+        "geometry_feasible_edges": 1445,
+        "geometry_feasible_same_identity": 936,
+        "unowned_geometry_feasible_edges": 1445,
+        "unowned_geometry_feasible_same_identity": 936,
+        "all_other_identity": 4976,
+        "all_unknown": 14905,
+        "geometry_feasible_unknown": 509,
+        "unowned_geometry_feasible_unknown": 509,
+        "all_confirmed_background": 0,
+        "all_ignored": 0,
+        "geometry_feasible_other_identity": 0,
+        "geometry_feasible_confirmed_background": 0,
+        "geometry_feasible_ignored": 0,
+        "unowned_geometry_feasible_other_identity": 0,
+        "unowned_geometry_feasible_confirmed_background": 0,
+        "unowned_geometry_feasible_ignored": 0
+      },
+      "reference_baseline_aggregate": {
+        "history_valid_track_frames": 2853,
+        "history_valid_and_any_s0_track_frames": 2547,
+        "any_s0_missing_track_frames": 3372,
+        "same_identity_track_frames": 930,
+        "legal_unowned_same_identity_track_frames": 870,
+        "already_covered_legal_same_identity_track_frames": 2,
+        "candidate_edges": 20889,
+        "frames": 18999,
+        "gt_frames": 287329,
+        "reference_gt_missed": 60188,
+        "reference_covered": 227141,
+        "s0_rows": 26642,
+        "repeated_start_identity_collections": 152798,
+        "s0_frames": 7166,
+        "frame_start_active_track_frames": 233460,
+        "missing_after_native_b_track_frames": 3756,
+        "candidate_identity_labels.same_identity": 1008,
+        "candidate_identity_labels.other_identity": 4976,
+        "candidate_identity_labels.unknown": 14905,
+        "history_anchor_status.anchored_past_raw_clear": 2853,
+        "history_anchor_status.insufficient_strict_past_support": 884,
+        "official_fn_partition.no_earlier_clear_owner": 26969,
+        "official_fn_partition.conditional_uncovered_opportunity": 868,
+        "official_fn_partition.earlier_id_lost_at_start": 15317,
+        "official_fn_partition.active_missing_without_strict_history": 770,
+        "official_fn_partition.earlier_id_updated_or_otherwise_ineligible": 14822,
+        "uncovered_opportunity_gt_frames": 868,
+        "uncovered_opportunity_fn_episodes": 868,
+        "uncovered_opportunity_tracks": 379,
+        "uncovered_opportunity_gt_ids": 339,
+        "reference_clear.TP": 227141,
+        "reference_clear.FP": 7022,
+        "reference_clear.FN": 60188,
+        "reference_clear.IDSW": 611,
+        "official_fn_partition.strict_anchor_without_s0": 231,
+        "official_fn_partition.s0_without_strict_same_identity": 1135,
+        "history_anchor_status.conflicting_past_identity": 19,
+        "official_fn_partition.same_identity_blocked_by_native_geometry": 60,
+        "official_fn_partition.earlier_id_absent_at_start": 16,
+        "sequences": 51,
+        "candidate_opportunity_proxy_source_groups": 33,
+        "candidate_opportunity_sequences": 36
+      },
+      "original_label_edges_sha256": "9e3d2ab31e2e0e8a747f2222cd4521972039d4b669bd6d016ca98a9fcda4b274"
+    },
+    "calibration": {
+      "sequence_count": 11,
+      "proxy_group_count": 10,
+      "counts": {
+        "frames": 4366,
+        "edges": 427,
+        "weak_crops": 427,
+        "rgb_valid": 427
+      },
+      "edges_by_label_and_geometry": {
+        "all_edges": 10934,
+        "all_unknown": 7859,
+        "geometry_feasible_edges": 427,
+        "geometry_feasible_unknown": 215,
+        "unowned_geometry_feasible_edges": 427,
+        "unowned_geometry_feasible_unknown": 215,
+        "all_other_identity": 2845,
+        "all_same_identity": 230,
+        "geometry_feasible_same_identity": 211,
+        "unowned_geometry_feasible_same_identity": 211,
+        "geometry_feasible_other_identity": 1,
+        "unowned_geometry_feasible_other_identity": 1,
+        "all_confirmed_background": 0,
+        "all_ignored": 0,
+        "geometry_feasible_confirmed_background": 0,
+        "geometry_feasible_ignored": 0,
+        "unowned_geometry_feasible_confirmed_background": 0,
+        "unowned_geometry_feasible_ignored": 0
+      },
+      "reference_baseline_aggregate": {
+        "history_valid_track_frames": 1022,
+        "history_valid_and_any_s0_track_frames": 986,
+        "any_s0_missing_track_frames": 1376,
+        "same_identity_track_frames": 224,
+        "legal_unowned_same_identity_track_frames": 208,
+        "already_covered_legal_same_identity_track_frames": 2,
+        "candidate_edges": 10934,
+        "frames": 4366,
+        "gt_frames": 56864,
+        "reference_gt_missed": 19005,
+        "reference_covered": 37859,
+        "s0_rows": 4827,
+        "repeated_start_identity_collections": 43095,
+        "s0_frames": 1219,
+        "frame_start_active_track_frames": 39938,
+        "missing_after_native_b_track_frames": 1417,
+        "candidate_identity_labels.unknown": 7859,
+        "candidate_identity_labels.other_identity": 2845,
+        "candidate_identity_labels.same_identity": 230,
+        "history_anchor_status.insufficient_strict_past_support": 364,
+        "history_anchor_status.anchored_past_raw_clear": 1022,
+        "history_anchor_status.conflicting_past_identity": 31,
+        "official_fn_partition.no_earlier_clear_owner": 3955,
+        "official_fn_partition.earlier_id_updated_or_otherwise_ineligible": 5778,
+        "official_fn_partition.s0_without_strict_same_identity": 636,
+        "official_fn_partition.earlier_id_lost_at_start": 7724,
+        "official_fn_partition.conditional_uncovered_opportunity": 206,
+        "official_fn_partition.active_missing_without_strict_history": 651,
+        "official_fn_partition.same_identity_blocked_by_native_geometry": 16,
+        "official_fn_partition.earlier_id_absent_at_start": 14,
+        "uncovered_opportunity_gt_frames": 206,
+        "uncovered_opportunity_fn_episodes": 206,
+        "uncovered_opportunity_tracks": 87,
+        "uncovered_opportunity_gt_ids": 61,
+        "reference_clear.TP": 37859,
+        "reference_clear.FP": 2165,
+        "reference_clear.FN": 19005,
+        "reference_clear.IDSW": 474,
+        "official_fn_partition.strict_anchor_without_s0": 25,
+        "sequences": 11,
+        "candidate_opportunity_proxy_source_groups": 6,
+        "candidate_opportunity_sequences": 6
+      },
+      "original_label_edges_sha256": "d8b97457c1eb30a7f62a211974e56e1f33f7d4f57b14ed7ef5e8d5472a7a1c79"
+    },
+    "holdout": {
+      "sequence_count": 12,
+      "proxy_group_count": 10,
+      "counts": {
+        "frames": 5566,
+        "edges": 326,
+        "weak_crops": 326,
+        "rgb_valid": 326
+      },
+      "edges_by_label_and_geometry": {
+        "all_edges": 2321,
+        "all_same_identity": 250,
+        "all_unknown": 1520,
+        "geometry_feasible_edges": 326,
+        "geometry_feasible_same_identity": 231,
+        "unowned_geometry_feasible_edges": 326,
+        "unowned_geometry_feasible_same_identity": 231,
+        "geometry_feasible_unknown": 95,
+        "unowned_geometry_feasible_unknown": 95,
+        "all_other_identity": 511,
+        "all_ignored": 40,
+        "all_confirmed_background": 0,
+        "geometry_feasible_other_identity": 0,
+        "geometry_feasible_confirmed_background": 0,
+        "geometry_feasible_ignored": 0,
+        "unowned_geometry_feasible_other_identity": 0,
+        "unowned_geometry_feasible_confirmed_background": 0,
+        "unowned_geometry_feasible_ignored": 0
+      },
+      "reference_baseline_aggregate": {
+        "history_valid_track_frames": 775,
+        "history_valid_and_any_s0_track_frames": 654,
+        "any_s0_missing_track_frames": 806,
+        "same_identity_track_frames": 236,
+        "legal_unowned_same_identity_track_frames": 219,
+        "already_covered_legal_same_identity_track_frames": 0,
+        "candidate_edges": 2321,
+        "frames": 5566,
+        "gt_frames": 56162,
+        "reference_gt_missed": 11810,
+        "reference_covered": 44352,
+        "s0_rows": 5305,
+        "repeated_start_identity_collections": 57243,
+        "s0_frames": 2541,
+        "frame_start_active_track_frames": 45372,
+        "missing_after_native_b_track_frames": 955,
+        "candidate_identity_labels.same_identity": 250,
+        "candidate_identity_labels.unknown": 1520,
+        "history_anchor_status.anchored_past_raw_clear": 775,
+        "history_anchor_status.insufficient_strict_past_support": 177,
+        "official_fn_partition.no_earlier_clear_owner": 6266,
+        "official_fn_partition.same_identity_blocked_by_native_geometry": 17,
+        "official_fn_partition.earlier_id_lost_at_start": 2724,
+        "official_fn_partition.s0_without_strict_same_identity": 327,
+        "official_fn_partition.strict_anchor_without_s0": 96,
+        "official_fn_partition.active_missing_without_strict_history": 117,
+        "official_fn_partition.earlier_id_updated_or_otherwise_ineligible": 2021,
+        "official_fn_partition.conditional_uncovered_opportunity": 219,
+        "uncovered_opportunity_gt_frames": 219,
+        "uncovered_opportunity_fn_episodes": 219,
+        "uncovered_opportunity_tracks": 88,
+        "uncovered_opportunity_gt_ids": 76,
+        "reference_clear.TP": 44352,
+        "reference_clear.FP": 1128,
+        "reference_clear.FN": 11810,
+        "reference_clear.IDSW": 134,
+        "candidate_identity_labels.other_identity": 511,
+        "official_fn_partition.earlier_id_absent_at_start": 23,
+        "candidate_identity_labels.ignored": 40,
+        "history_anchor_status.conflicting_past_identity": 3,
+        "sequences": 12,
+        "candidate_opportunity_proxy_source_groups": 9,
+        "candidate_opportunity_sequences": 9
+      },
+      "original_label_edges_sha256": "cb684289f7bbf6a34a275da39fce671da5fec7e3a1d92c8c7f15f8137c9fa10d"
+    }
+  },
+  "omitted": "Operational paths, sequence rosters and image indexes, per-frame hashes, original annotation edges, feature binaries and dataset images."
+}

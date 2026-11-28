@@ -1,0 +1,85 @@
+{
+  "status": "POSTHOC_READ_ONLY",
+  "unit": "deduplicated official missing target frame, before assignment",
+  "calibration_lock_sha256": "2cc752bd7d7f450d70d828b630d81892351f36d691267962441ee8ae87556719",
+  "sequential_gates": {
+    "fit": {
+      "0.75": {
+        "eligible": 868,
+        "usable_history": 868,
+        "cosine": 140,
+        "motion": 140,
+        "joint_score": 140,
+        "competition": 138
+      },
+      "0.85": {
+        "eligible": 868,
+        "usable_history": 868,
+        "cosine": 44,
+        "motion": 44,
+        "joint_score": 44,
+        "competition": 44
+      },
+      "0.92": {
+        "eligible": 868,
+        "usable_history": 868,
+        "cosine": 2,
+        "motion": 2,
+        "joint_score": 2,
+        "competition": 2
+      }
+    },
+    "calibration": {
+      "0.75": {
+        "eligible": 206,
+        "usable_history": 206,
+        "cosine": 9,
+        "motion": 9,
+        "joint_score": 9,
+        "competition": 9
+      },
+      "0.85": {
+        "eligible": 206,
+        "usable_history": 206,
+        "cosine": 0,
+        "motion": 0,
+        "joint_score": 0,
+        "competition": 0
+      },
+      "0.92": {
+        "eligible": 206,
+        "usable_history": 206,
+        "cosine": 0,
+        "motion": 0,
+        "joint_score": 0,
+        "competition": 0
+      }
+    },
+    "holdout": {
+      "0.75": {
+        "eligible": 219,
+        "usable_history": 219,
+        "cosine": 29,
+        "motion": 29,
+        "joint_score": 29,
+        "competition": 29
+      },
+      "0.85": {
+        "eligible": 219,
+        "usable_history": 219,
+        "cosine": 6,
+        "motion": 6,
+        "joint_score": 6,
+        "competition": 6
+      },
+      "0.92": {
+        "eligible": 219,
+        "usable_history": 219,
+        "cosine": 1,
+        "motion": 1,
+        "joint_score": 1,
+        "competition": 1
+      }
+    }
+  }
+}

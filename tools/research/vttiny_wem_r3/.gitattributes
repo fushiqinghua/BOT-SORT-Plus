@@ -1,0 +1,7 @@
+/R3_PROTOCOL.md -text
+/admission.py -text
+/score_features.py -text
+/observer/capture.py -text
+/observer/training_capture.py -text
+/labels/label_train.py -text
+/labels/r1b/*.py -text

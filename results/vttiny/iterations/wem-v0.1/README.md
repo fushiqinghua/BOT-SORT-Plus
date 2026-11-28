@@ -16,3 +16,6 @@
 
 [结果模板](../../../../docs/botsort_plus/wem_v0.1/RESULTS_TEMPLATE.md) · [实验计划](../../../../docs/botsort_plus/wem_v0.1/EXPERIMENT_PLAN.md) · [运行手册](../../../../docs/botsort_plus/wem_v0.1/LOCAL_RUNBOOK.md)
 
+## R3 已归档结果
+
+训练侧校准和 113 例逐帧复核已归档，校准与留出分开记录。正式准入继续拒绝全部弱框，R4 未运行。[R3 结果与复现](../../wem_v0.1/r3/README.md)

@@ -1,0 +1,265 @@
+{
+  "status": "MODEL_ASSISTED_VISUAL_REVIEW",
+  "formal_labels_changed": false,
+  "r4_run": false,
+  "calibration": {
+    "cases": 64,
+    "proxy_groups": 3,
+    "model_assisted": {
+      "likely_background": 19,
+      "uncertain": 13,
+      "same_identity_plausible": 13,
+      "visible_target_unresolved_identity": 17,
+      "plausible_other_identity": 2
+    },
+    "human_pending_at_delivery": 64,
+    "grouping": [
+      {
+        "partition": "calibration",
+        "source_video": "proxy:DJI_0067",
+        "review_pool": "background",
+        "cases": 25,
+        "likely_background": 15,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 1,
+        "visible_target_unresolved_identity": 1,
+        "uncertain": 8,
+        "human_pending_at_delivery": 25
+      },
+      {
+        "partition": "calibration",
+        "source_video": "proxy:DJI_0067",
+        "review_pool": "identity",
+        "cases": 35,
+        "likely_background": 0,
+        "plausible_other_identity": 2,
+        "same_identity_plausible": 12,
+        "visible_target_unresolved_identity": 16,
+        "uncertain": 5,
+        "human_pending_at_delivery": 35
+      },
+      {
+        "partition": "calibration",
+        "source_video": "proxy:DJI_0113",
+        "review_pool": "background",
+        "cases": 1,
+        "likely_background": 1,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 0,
+        "visible_target_unresolved_identity": 0,
+        "uncertain": 0,
+        "human_pending_at_delivery": 1
+      },
+      {
+        "partition": "calibration",
+        "source_video": "proxy:DJI_0157",
+        "review_pool": "background",
+        "cases": 3,
+        "likely_background": 3,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 0,
+        "visible_target_unresolved_identity": 0,
+        "uncertain": 0,
+        "human_pending_at_delivery": 3
+      }
+    ],
+    "model_assisted_reviewed": 64,
+    "model_confidence": {
+      "medium": 44,
+      "high": 5,
+      "low": 15
+    },
+    "pool_sizes": {
+      "identity": 35,
+      "background": 29
+    }
+  },
+  "holdout": {
+    "cases": 49,
+    "proxy_groups": 8,
+    "model_assisted": {
+      "same_identity_plausible": 19,
+      "likely_background": 8,
+      "uncertain": 12,
+      "visible_target_unresolved_identity": 9,
+      "plausible_other_identity": 1
+    },
+    "human_pending_at_delivery": 49,
+    "grouping": [
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0057",
+        "review_pool": "background",
+        "cases": 1,
+        "likely_background": 0,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 1,
+        "visible_target_unresolved_identity": 0,
+        "uncertain": 0,
+        "human_pending_at_delivery": 1
+      },
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0071",
+        "review_pool": "background",
+        "cases": 3,
+        "likely_background": 0,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 3,
+        "visible_target_unresolved_identity": 0,
+        "uncertain": 0,
+        "human_pending_at_delivery": 3
+      },
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0071",
+        "review_pool": "identity",
+        "cases": 3,
+        "likely_background": 0,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 0,
+        "visible_target_unresolved_identity": 3,
+        "uncertain": 0,
+        "human_pending_at_delivery": 3
+      },
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0083",
+        "review_pool": "background",
+        "cases": 12,
+        "likely_background": 3,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 4,
+        "visible_target_unresolved_identity": 0,
+        "uncertain": 5,
+        "human_pending_at_delivery": 12
+      },
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0083",
+        "review_pool": "identity",
+        "cases": 9,
+        "likely_background": 0,
+        "plausible_other_identity": 1,
+        "same_identity_plausible": 5,
+        "visible_target_unresolved_identity": 3,
+        "uncertain": 0,
+        "human_pending_at_delivery": 9
+      },
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0089",
+        "review_pool": "identity",
+        "cases": 1,
+        "likely_background": 0,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 0,
+        "visible_target_unresolved_identity": 0,
+        "uncertain": 1,
+        "human_pending_at_delivery": 1
+      },
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0183",
+        "review_pool": "background",
+        "cases": 10,
+        "likely_background": 5,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 2,
+        "visible_target_unresolved_identity": 1,
+        "uncertain": 2,
+        "human_pending_at_delivery": 10
+      },
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0183",
+        "review_pool": "identity",
+        "cases": 2,
+        "likely_background": 0,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 0,
+        "visible_target_unresolved_identity": 1,
+        "uncertain": 1,
+        "human_pending_at_delivery": 2
+      },
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0273",
+        "review_pool": "identity",
+        "cases": 3,
+        "likely_background": 0,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 2,
+        "visible_target_unresolved_identity": 1,
+        "uncertain": 0,
+        "human_pending_at_delivery": 3
+      },
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0291",
+        "review_pool": "identity",
+        "cases": 1,
+        "likely_background": 0,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 0,
+        "visible_target_unresolved_identity": 0,
+        "uncertain": 1,
+        "human_pending_at_delivery": 1
+      },
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0295",
+        "review_pool": "background",
+        "cases": 2,
+        "likely_background": 0,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 0,
+        "visible_target_unresolved_identity": 0,
+        "uncertain": 2,
+        "human_pending_at_delivery": 2
+      },
+      {
+        "partition": "holdout",
+        "source_video": "proxy:DJI_0295",
+        "review_pool": "identity",
+        "cases": 2,
+        "likely_background": 0,
+        "plausible_other_identity": 0,
+        "same_identity_plausible": 2,
+        "visible_target_unresolved_identity": 0,
+        "uncertain": 0,
+        "human_pending_at_delivery": 2
+      }
+    ],
+    "model_assisted_reviewed": 49,
+    "model_confidence": {
+      "medium": 24,
+      "high": 8,
+      "low": 17
+    },
+    "pool_sizes": {
+      "background": 28,
+      "identity": 21
+    }
+  },
+  "total": {
+    "cases": 113,
+    "model_assisted_reviewed": 113,
+    "human_reviewed": 0,
+    "human_pending_at_delivery": 113,
+    "model_assisted": {
+      "same_identity_plausible": 32,
+      "likely_background": 27,
+      "uncertain": 25,
+      "visible_target_unresolved_identity": 26,
+      "plausible_other_identity": 3
+    },
+    "model_confidence": {
+      "medium": 68,
+      "high": 13,
+      "low": 32
+    }
+  },
+  "card_paths_relative_to": "local Codex workspace root",
+  "card_images_included": false
+}

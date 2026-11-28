@@ -1,0 +1,5 @@
+﻿partition,source_video,review_pool,cases,likely_background,plausible_other_identity,same_identity_plausible,visible_target_unresolved_identity,uncertain,human_pending_at_delivery
+calibration,proxy:DJI_0067,background,25,15,0,1,1,8,25
+calibration,proxy:DJI_0067,identity,35,0,2,12,16,5,35
+calibration,proxy:DJI_0113,background,1,1,0,0,0,0,1
+calibration,proxy:DJI_0157,background,3,3,0,0,0,0,3
