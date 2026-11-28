@@ -1,4 +1,14 @@
-# BoT-SORT-Plus · W0 弱观测续接与定型实验
+# BoT-SORT-Plus · 论文定型与完整实验
+
+本分支 `research/vttiny-thesis-finalization` 从已完成 W R4.2 的冻结提交 `f90501853b07bcca5d10e99cd17f6dc9db42bfb4` 建立。保留既有实现与实验归档作为可追溯参考；R5–R8 的新增实现、实验结果与论文图表在本分支独立维护，不再写入 `research/vttiny-weak-evidence`。
+
+**当前任务：[R5 完整消融及论文图表任务书](docs/botsort_plus/thesis_r5/EXPERIMENT_PLAN.md)**。状态：DESIGN_ONLY；新增执行器和实测结果尚未完成。R6 横向与困难场景分析、R7 真实案例及泛化、R8 运行效率见同一任务书。历史运行命令仅供复现，不是本轮新执行器。
+
+---
+
+## 继承的 W 研究分支历史说明（以下原文保留）
+
+### BoT-SORT-Plus · W0 弱观测续接与定型实验
 
 本分支 **research/vttiny-weak-evidence** 为毕业设计目标跟踪章节准备 W 模块及下一批实验，从 research/vttiny-track-conditioned-observation 的 **176f2a81613c34d16a860765ea7be0845116b534** 建立，继承 B、GMC、TCO/Q2 及先前实验归档。
 
