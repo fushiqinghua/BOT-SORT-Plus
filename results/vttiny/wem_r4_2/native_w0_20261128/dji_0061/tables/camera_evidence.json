@@ -1,0 +1,43 @@
+{
+  "sequence": "DJI_0061_2",
+  "ref": "3132e69fcca86ac5ce6d59271b2dff38454fc628",
+  "arms": {
+    "B_off": {
+      "frames": 240,
+      "warp_choices": {
+        "sof": 240
+      },
+      "adaptive_triggers": 0,
+      "lightglue_calls": 0,
+      "dual_low_rejected_edges": 0
+    },
+    "B_W0": {
+      "frames": 240,
+      "warp_choices": {
+        "sof": 240
+      },
+      "adaptive_triggers": 0,
+      "lightglue_calls": 0,
+      "dual_low_rejected_edges": 0
+    },
+    "BG_off": {
+      "frames": 240,
+      "warp_choices": {
+        "sof": 240
+      },
+      "adaptive_triggers": 0,
+      "lightglue_calls": 0,
+      "dual_low_rejected_edges": 0
+    },
+    "BG_W0": {
+      "frames": 240,
+      "warp_choices": {
+        "sof": 240
+      },
+      "adaptive_triggers": 0,
+      "lightglue_calls": 0,
+      "dual_low_rejected_edges": 0
+    }
+  },
+  "identical_selected_matrices": true
+}

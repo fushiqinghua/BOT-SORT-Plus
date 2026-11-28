@@ -4,6 +4,8 @@
 
 **W R4.2 已完成五组官方 30 段开发评测。保留带原锚点约束和正式状态反馈的 W0 作为定型候选，并将原生低阈值保留为召回优先的强对照。** [当前运行手册](docs/botsort_plus/wem_r4_2/LOCAL_RUNBOOK.md) · [实验设计](docs/botsort_plus/wem_r4_2/EXPERIMENT_PLAN.md) · [软件核验](docs/botsort_plus/wem_r4_2/VALIDATION.md) · [结果入口](results/vttiny/wem_r4_2/README.md)
 
+原始 BoT-SORT 开关 W0 已补齐 30 段。原始底座的 HOTA 提升 0.2402 个百分点，少漏 738 个，换号增加 8 次。三底座对照与 `DJI_0061_2` 的单段诊断已归档。 [原始／B／BG 完整对照](results/vttiny/wem_r4_2/native_w0_20261128/README.md)
+
 R4.1 已完成 B 和 BG 的十组闭环评测。W0 相对两参考的 HOTA 分别 +0.1724、+0.1743 个百分点，FN 分别 −508、−510，伴随 FP +554、+578 和 MOTA 小幅下降。W1/W2 与 W0 轨迹一致，W3 相对 W2 多出 57 FP、27 FN。本轮收敛公共的受约束弱续接机制，不继续搜索运动或外观评分。[R4.1 完整结果](results/vttiny/wem_r4_1/full_20261128/README.md)
 
 R3.1 已完成 W0–W3 与 W_old 五组冻结离线对照。785 个未知候选组仍可随后定向复核；这不构成本批完整闭环的前置条件。[R3.1 结果与复现](results/vttiny/wem_r3_1/full_20261128/README.md)

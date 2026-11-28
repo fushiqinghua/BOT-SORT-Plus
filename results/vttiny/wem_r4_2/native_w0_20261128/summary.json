@@ -1,0 +1,351 @@
+{
+  "status": "VERIFIED",
+  "evaluated_arms": [
+    "native_off",
+    "native_W0",
+    "B_off",
+    "B_W0",
+    "BG_off",
+    "BG_W0"
+  ],
+  "sequence_lengths": {
+    "DJI_0028_3": 570,
+    "DJI_0030_2": 590,
+    "DJI_0032_3": 290,
+    "DJI_0049_2": 90,
+    "DJI_0051_2": 580,
+    "DJI_0061_2": 240,
+    "DJI_0073_3": 360,
+    "DJI_0109_1": 90,
+    "DJI_0119_2": 180,
+    "DJI_0129_2": 590,
+    "DJI_0141_2": 410,
+    "DJI_0155_2": 410,
+    "DJI_0159_2": 250,
+    "DJI_0169_3": 290,
+    "DJI_0173_2": 450,
+    "DJI_0181_3": 320,
+    "DJI_0221_2": 590,
+    "DJI_0225_1": 329,
+    "DJI_0237_2": 410,
+    "DJI_0255_1": 600,
+    "DJI_0257_2": 590,
+    "DJI_0277_2": 366,
+    "DJI_0283_1": 450,
+    "DJI_0303_2": 577,
+    "DJI_0307_2": 180,
+    "DJI_0309_4": 603,
+    "DJI_0325_2": 595,
+    "DJI_0327_3": 390,
+    "DJI_0339_2": 600,
+    "DJI_0345_2": 600
+  },
+  "base_descriptions": {
+    "native": "原始 BoT-SORT，原生 SOF GMC 和 RGB ReID",
+    "B": "B_early_moderate，原生 SOF GMC",
+    "BG": "evidence_both，B、自适应 GMC、低分双重确认与关联证据"
+  },
+  "comparison": [
+    {
+      "base": "native",
+      "arm": "native_off",
+      "reference": "native_off",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 37.86084761921485,
+      "DetA": 25.186472853553692,
+      "AssA": 58.365843006546484,
+      "IDF1": 42.45072958120144,
+      "MOTA": 25.759295107135706,
+      "FP": 13397,
+      "FN": 119645,
+      "IDSW": 422,
+      "delta_HOTA": 0.0,
+      "delta_DetA": 0.0,
+      "delta_AssA": 0.0,
+      "delta_IDF1": 0.0,
+      "delta_MOTA": 0.0,
+      "delta_FP": 0,
+      "delta_FN": 0,
+      "delta_IDSW": 0,
+      "weak_commits": 0
+    },
+    {
+      "base": "native",
+      "arm": "native_W0",
+      "reference": "native_off",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.10104567625373,
+      "DetA": 25.450864028346988,
+      "AssA": 58.51226322159585,
+      "IDF1": 42.71647205710292,
+      "MOTA": 25.796008277151056,
+      "FP": 14061,
+      "FN": 118907,
+      "IDSW": 430,
+      "delta_HOTA": 0.24019805703888153,
+      "delta_DetA": 0.2643911747932961,
+      "delta_AssA": 0.14642021504936764,
+      "delta_IDF1": 0.2657424759014759,
+      "delta_MOTA": 0.036713170015350016,
+      "delta_FP": 664,
+      "delta_FN": -738,
+      "delta_IDSW": 8,
+      "weak_commits": 524
+    },
+    {
+      "base": "B",
+      "arm": "B_off",
+      "reference": "B_off",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.84495631557171,
+      "DetA": 26.061806148839445,
+      "AssA": 59.409466872314695,
+      "IDF1": 44.059591903122495,
+      "MOTA": 25.694212669381216,
+      "FP": 15943,
+      "FN": 117264,
+      "IDSW": 374,
+      "delta_HOTA": 0.0,
+      "delta_DetA": 0.0,
+      "delta_AssA": 0.0,
+      "delta_IDF1": 0.0,
+      "delta_MOTA": 0.0,
+      "delta_FP": 0,
+      "delta_FN": 0,
+      "delta_IDSW": 0,
+      "weak_commits": 0
+    },
+    {
+      "base": "B",
+      "arm": "B_W0",
+      "reference": "B_off",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 39.01738698637207,
+      "DetA": 26.229381098187197,
+      "AssA": 59.56152217129369,
+      "IDF1": 44.22238077790848,
+      "MOTA": 25.669737222704313,
+      "FP": 16497,
+      "FN": 116756,
+      "IDSW": 372,
+      "delta_HOTA": 0.17243067080035956,
+      "delta_DetA": 0.16757494934775252,
+      "delta_AssA": 0.1520552989789934,
+      "delta_IDF1": 0.16278887478598136,
+      "delta_MOTA": -0.02447544667690238,
+      "delta_FP": 554,
+      "delta_FN": -508,
+      "delta_IDSW": -2,
+      "weak_commits": 730
+    },
+    {
+      "base": "BG",
+      "arm": "BG_off",
+      "reference": "BG_off",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 38.85964194370244,
+      "DetA": 26.073311749315213,
+      "AssA": 59.43302434294502,
+      "IDF1": 44.082786393293446,
+      "MOTA": 25.722025676968606,
+      "FP": 15945,
+      "FN": 117234,
+      "IDSW": 352,
+      "delta_HOTA": 0.0,
+      "delta_DetA": 0.0,
+      "delta_AssA": 0.0,
+      "delta_IDF1": 0.0,
+      "delta_MOTA": 0.0,
+      "delta_FP": 0,
+      "delta_FN": 0,
+      "delta_IDSW": 0,
+      "weak_commits": 0
+    },
+    {
+      "base": "BG",
+      "arm": "BG_W0",
+      "reference": "BG_off",
+      "sequence": "COMBINED_SEQ",
+      "HOTA": 39.03393195982692,
+      "DetA": 26.241389759758977,
+      "AssA": 59.58985029417661,
+      "IDF1": 44.23716853741956,
+      "MOTA": 25.68419998664976,
+      "FP": 16523,
+      "FN": 116724,
+      "IDSW": 352,
+      "delta_HOTA": 0.17429001612448047,
+      "delta_DetA": 0.16807801044376447,
+      "delta_AssA": 0.15682595123158904,
+      "delta_IDF1": 0.15438214412611018,
+      "delta_MOTA": -0.037825690318847194,
+      "delta_FP": 578,
+      "delta_FN": -510,
+      "delta_IDSW": 0,
+      "weak_commits": 730
+    }
+  ],
+  "sequence_direction": {
+    "native": {
+      "HOTA": {
+        "better": 18,
+        "tied": 5,
+        "worse": 7
+      },
+      "IDF1": {
+        "better": 11,
+        "tied": 6,
+        "worse": 13
+      },
+      "MOTA": {
+        "better": 15,
+        "tied": 5,
+        "worse": 10
+      },
+      "FP": {
+        "better": 1,
+        "tied": 13,
+        "worse": 16
+      },
+      "FN": {
+        "better": 21,
+        "tied": 8,
+        "worse": 1
+      },
+      "IDSW": {
+        "better": 4,
+        "tied": 24,
+        "worse": 2
+      }
+    },
+    "B": {
+      "HOTA": {
+        "better": 18,
+        "tied": 5,
+        "worse": 7
+      },
+      "IDF1": {
+        "better": 12,
+        "tied": 5,
+        "worse": 13
+      },
+      "MOTA": {
+        "better": 13,
+        "tied": 5,
+        "worse": 12
+      },
+      "FP": {
+        "better": 1,
+        "tied": 11,
+        "worse": 18
+      },
+      "FN": {
+        "better": 22,
+        "tied": 8,
+        "worse": 0
+      },
+      "IDSW": {
+        "better": 3,
+        "tied": 26,
+        "worse": 1
+      }
+    },
+    "BG": {
+      "HOTA": {
+        "better": 18,
+        "tied": 5,
+        "worse": 7
+      },
+      "IDF1": {
+        "better": 11,
+        "tied": 5,
+        "worse": 14
+      },
+      "MOTA": {
+        "better": 13,
+        "tied": 5,
+        "worse": 12
+      },
+      "FP": {
+        "better": 1,
+        "tied": 11,
+        "worse": 18
+      },
+      "FN": {
+        "better": 22,
+        "tied": 8,
+        "worse": 0
+      },
+      "IDSW": {
+        "better": 3,
+        "tied": 25,
+        "worse": 2
+      }
+    }
+  },
+  "incremental_differences": [
+    {
+      "base": "B",
+      "reference": "native",
+      "HOTA": -0.06776738623852196,
+      "DetA": -0.09681622544554358,
+      "AssA": 0.0056350839296257504,
+      "IDF1": -0.10295360111549456,
+      "MOTA": -0.061188616692252396,
+      "FP": -110,
+      "FN": 230,
+      "IDSW": -10
+    },
+    {
+      "base": "BG",
+      "reference": "B",
+      "HOTA": 0.001859345324120909,
+      "DetA": 0.0005030610960119475,
+      "AssA": 0.004770652252595653,
+      "IDF1": -0.008406730659871187,
+      "MOTA": -0.013350243641944814,
+      "FP": 24,
+      "FN": -2,
+      "IDSW": 2
+    },
+    {
+      "base": "BG",
+      "reference": "native",
+      "HOTA": -0.06590804091440106,
+      "DetA": -0.09631316434953163,
+      "AssA": 0.010405736182221403,
+      "IDF1": -0.11136033177536575,
+      "MOTA": -0.07453886033419721,
+      "FP": -86,
+      "FN": 228,
+      "IDSW": -8
+    }
+  ],
+  "native_sequences_with_same_trajectory": 5,
+  "completion": {
+    "status": "COMPLETE",
+    "sequence_count": 30,
+    "frames_per_arm": 12590,
+    "new_replays": [
+      "native_off",
+      "native_W0"
+    ],
+    "retained_references": [
+      "B_off",
+      "B_W0",
+      "BG_off",
+      "BG_W0"
+    ],
+    "native_trajectory_parity": "PASS",
+    "prior_metric_parity": "PASS",
+    "archived_protocol_sha256": {
+      "B_off": "77a5472a2d90b63f95d6147f0711b38cff465015dfac3fe276d68aec755d2499",
+      "B_W0": "b2560193bc1f65ee1ccbd89830bd60f7a390e3763068c3013ef056e54c2e79b2",
+      "BG_off": "2001e66109404d3a90def2e69153e298f82fdac704d93ed0773868e5d7a21f98",
+      "BG_W0": "60e2161caf3ac28fd66f31c558e2d4db7554e529ed37b7006f1c6cb29ba1ccdb"
+    },
+    "frozen_evaluation_input_sha256": "0169dd9f9536f548767a38cd32b9bc29da87715ff7155cc67e71d9917e1ce9b9",
+    "full_verification_sha256": "c9bf7a12ea6692b1b4e71ff055efbcb388609a558f0fce8c643ff183e686ef06",
+    "metric_sha256": "84041e7a507c857d8461871abf006bd93074060344225648fcc9eee6e7c11e88"
+  }
+}

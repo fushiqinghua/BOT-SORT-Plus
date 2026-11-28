@@ -1,0 +1,149 @@
+{
+  "schema": "wem_native_w0_public_run_v1",
+  "execution_id": "980511f38e2934b1",
+  "source": {
+    "native_runner_sha256": "980511f38e2934b18c0eb20791cc08e2e93e1ecd968c5536d01ea3dd83b5b388",
+    "r41_source": {
+      "github_commit": "3132e69fcca86ac5ce6d59271b2dff38454fc628",
+      "deployment_archive_sha256": "93b2b8ba6d27ad7c4448cf57b00d68ee8ec2f4950b1aca9962737124e4f58383"
+    },
+    "emit_only_w0_source_commit": "eded63f9079734560966d3df59ba5c938c3e9ac4"
+  },
+  "scope": {
+    "official_split": "test",
+    "usage": "development",
+    "sequence_lengths": {
+      "DJI_0028_3": 570,
+      "DJI_0030_2": 590,
+      "DJI_0032_3": 290,
+      "DJI_0049_2": 90,
+      "DJI_0051_2": 580,
+      "DJI_0061_2": 240,
+      "DJI_0073_3": 360,
+      "DJI_0109_1": 90,
+      "DJI_0119_2": 180,
+      "DJI_0129_2": 590,
+      "DJI_0141_2": 410,
+      "DJI_0155_2": 410,
+      "DJI_0159_2": 250,
+      "DJI_0169_3": 290,
+      "DJI_0173_2": 450,
+      "DJI_0181_3": 320,
+      "DJI_0221_2": 590,
+      "DJI_0225_1": 329,
+      "DJI_0237_2": 410,
+      "DJI_0255_1": 600,
+      "DJI_0257_2": 590,
+      "DJI_0277_2": 366,
+      "DJI_0283_1": 450,
+      "DJI_0303_2": 577,
+      "DJI_0307_2": 180,
+      "DJI_0309_4": 603,
+      "DJI_0325_2": 595,
+      "DJI_0327_3": 390,
+      "DJI_0339_2": 600,
+      "DJI_0345_2": 600
+    },
+    "sequence_count": 30,
+    "frames_per_arm": 12590,
+    "arms": [
+      "native_off",
+      "native_W0",
+      "B_off",
+      "B_W0",
+      "BG_off",
+      "BG_W0"
+    ],
+    "native_new_runs": [
+      "native_off",
+      "native_W0"
+    ],
+    "r41_re_evaluation": [
+      "B_off",
+      "B_W0",
+      "BG_off",
+      "BG_W0"
+    ]
+  },
+  "runtime": {
+    "conda": "redetr",
+    "tracker_device": "cpu",
+    "worker_limit": 2,
+    "boxmot": "16.0.11",
+    "cached_native_gmc": "sof"
+  },
+  "smoke": {
+    "sequences": [
+      "DJI_0030_2",
+      "DJI_0061_2",
+      "DJI_0327_3"
+    ],
+    "frames": 1220,
+    "native_off_byte_parity": "PASS",
+    "native_w0_precommit_state_parity": "PASS"
+  },
+  "trackeval": {
+    "commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+    "manifest_sha256": "76e6608c3027a601f7cd8e724a4c3d967be8b153e811f7648ad2150b1f9a5e82",
+    "verified_source_files": 45,
+    "eol_normalized_matched": false
+  },
+  "frozen_input_identity": {
+    "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+    "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+    "source_protocol_sha256": "6f0fdff3b198315f8aac72972fcf5117c53b917e84f6c7b5f9814b9012ef2ff2"
+  },
+  "original_only_digests": {
+    "evaluation_audit_sha256": "7cd0c81427247712eb699ee3cdb7f7825f62a02c114e802a7e5712d9d9fbfd7c",
+    "r41_bundle_sha256": "557ce26799793b80666d62533ae4ad4b7d37695a131dab9ecbb90612e7009ce0",
+    "frozen_evaluation_input_sha256": "0169dd9f9536f548767a38cd32b9bc29da87715ff7155cc67e71d9917e1ce9b9",
+    "archived_native_protocol_sha256": "7c18c28f2272c6fcf497bc6234c867a3472e0acbab23b73804d9744f315d2819",
+    "full_verification_sha256": "c9bf7a12ea6692b1b4e71ff055efbcb388609a558f0fce8c643ff183e686ef06",
+    "official_metric_sha256": "84041e7a507c857d8461871abf006bd93074060344225648fcc9eee6e7c11e88"
+  },
+  "dji_0061_stream_sha256": {
+    "native_off": {
+      "mot.txt": "40ef20f3a87ded50198da251286276f21b27126c8e11f23c6dcd07c0100863d6",
+      "native_events.jsonl": "e0291c9645ac9bfd527caebd1f03b9252197926bb50843733d874ea658ad5263",
+      "weak_events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "states.sha256": "0d26074062c24d3a2680d695b64d344e51c3977c5d7d472837b04f8c104c93c3",
+      "wem_scores.jsonl.gz": "ac73670af3abed54ac6fb4695131f4099be9fbe39d6076c5d0264a6bbdae9d83"
+    },
+    "native_W0": {
+      "mot.txt": "34c9b45d00382d98930ffcd1ff7689e83301eae1e169c8e1d8d1959fd7704dba",
+      "native_events.jsonl": "025787aa6793782ce6589fb2dc597d20cf1d76f5fd5a2c16f16c8470eb6c2523",
+      "weak_events.jsonl": "f5d90f9f2f466f2f89db89ebf01760c0ed7d43ffd075b17d7ce244d4d54baf92",
+      "states.sha256": "4264c538123c5aa47efd2fc20740f67cc111378e0bf56f4d845f0ddde47154b2",
+      "wem_scores.jsonl.gz": "8dbd882b5646819e1116837c20b0fba4cbc840f4980cc003cbcc8342eac9a432"
+    },
+    "B_off": {
+      "mot.txt": "2da088b0f394f683832cfcc129d1fce1e37f0273af5f890b7a05aca7ed9d9ab4",
+      "native_events.jsonl": "9a0b1db6147d23093ab31fc856e8468aca8e0198fa0a0761d1d42e40947f6a76",
+      "weak_events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "states.sha256": "7a385e1e1e2d229a0f636e7db6b2eb25e9f6100566385ab9462600491dddd7e6",
+      "wem_scores.jsonl.gz": "ac73670af3abed54ac6fb4695131f4099be9fbe39d6076c5d0264a6bbdae9d83"
+    },
+    "B_W0": {
+      "mot.txt": "24039b503805616b94ae38f137f49e1d87fc72a829c4ac5185b8060a0da1f98f",
+      "native_events.jsonl": "bd4764d1e59386717d1ecbe5f5130754b490a2b93fcca2abe3a360a9e5c3dc0f",
+      "weak_events.jsonl": "b80992619157a15f61985092b8f52c5394c58f6e9f536a48d984ed18332888d8",
+      "states.sha256": "32f917834a4e7c3e77bd9969561c30675a18c8f1d06fcaee0fe1edcd35d12582",
+      "wem_scores.jsonl.gz": "5034b6f7327dcf75828b0220f3b3a60f21e5c1ae6d3efc13c2eb3155ba6f41cb"
+    },
+    "BG_off": {
+      "mot.txt": "2da088b0f394f683832cfcc129d1fce1e37f0273af5f890b7a05aca7ed9d9ab4",
+      "native_events.jsonl": "9a0b1db6147d23093ab31fc856e8468aca8e0198fa0a0761d1d42e40947f6a76",
+      "weak_events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "states.sha256": "7a385e1e1e2d229a0f636e7db6b2eb25e9f6100566385ab9462600491dddd7e6",
+      "wem_scores.jsonl.gz": "ac73670af3abed54ac6fb4695131f4099be9fbe39d6076c5d0264a6bbdae9d83"
+    },
+    "BG_W0": {
+      "mot.txt": "24039b503805616b94ae38f137f49e1d87fc72a829c4ac5185b8060a0da1f98f",
+      "native_events.jsonl": "bd4764d1e59386717d1ecbe5f5130754b490a2b93fcca2abe3a360a9e5c3dc0f",
+      "weak_events.jsonl": "b80992619157a15f61985092b8f52c5394c58f6e9f536a48d984ed18332888d8",
+      "states.sha256": "32f917834a4e7c3e77bd9969561c30675a18c8f1d06fcaee0fe1edcd35d12582",
+      "wem_scores.jsonl.gz": "5ea6889a3db96dd17624e844c24ef810f09277f5f09248c27076547e3c855e8e"
+    }
+  },
+  "dji_0061_detection_fingerprint": "d488450df7bfa09af24b1a9f122a746a74b286a2228a190ca7002bf99aa9a7dc"
+}

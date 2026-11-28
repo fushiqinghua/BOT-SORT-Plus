@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETE",
+  "sequence_count": 30,
+  "frames_per_arm": 12590,
+  "new_replays": [
+    "native_off",
+    "native_W0"
+  ],
+  "retained_references": [
+    "B_off",
+    "B_W0",
+    "BG_off",
+    "BG_W0"
+  ],
+  "native_trajectory_parity": "PASS",
+  "prior_metric_parity": "PASS",
+  "archived_protocol_sha256": {
+    "B_off": "77a5472a2d90b63f95d6147f0711b38cff465015dfac3fe276d68aec755d2499",
+    "B_W0": "b2560193bc1f65ee1ccbd89830bd60f7a390e3763068c3013ef056e54c2e79b2",
+    "BG_off": "2001e66109404d3a90def2e69153e298f82fdac704d93ed0773868e5d7a21f98",
+    "BG_W0": "60e2161caf3ac28fd66f31c558e2d4db7554e529ed37b7006f1c6cb29ba1ccdb"
+  },
+  "frozen_evaluation_input_sha256": "0169dd9f9536f548767a38cd32b9bc29da87715ff7155cc67e71d9917e1ce9b9",
+  "full_verification_sha256": "c9bf7a12ea6692b1b4e71ff055efbcb388609a558f0fce8c643ff183e686ef06",
+  "metric_sha256": "84041e7a507c857d8461871abf006bd93074060344225648fcc9eee6e7c11e88"
+}

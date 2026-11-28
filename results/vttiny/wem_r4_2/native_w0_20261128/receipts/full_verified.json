@@ -1,0 +1,668 @@
+{
+  "status": "PASS",
+  "sequences": {
+    "DJI_0028_3": 570,
+    "DJI_0030_2": 590,
+    "DJI_0032_3": 290,
+    "DJI_0049_2": 90,
+    "DJI_0051_2": 580,
+    "DJI_0061_2": 240,
+    "DJI_0073_3": 360,
+    "DJI_0109_1": 90,
+    "DJI_0119_2": 180,
+    "DJI_0129_2": 590,
+    "DJI_0141_2": 410,
+    "DJI_0155_2": 410,
+    "DJI_0159_2": 250,
+    "DJI_0169_3": 290,
+    "DJI_0173_2": 450,
+    "DJI_0181_3": 320,
+    "DJI_0221_2": 590,
+    "DJI_0225_1": 329,
+    "DJI_0237_2": 410,
+    "DJI_0255_1": 600,
+    "DJI_0257_2": 590,
+    "DJI_0277_2": 366,
+    "DJI_0283_1": 450,
+    "DJI_0303_2": 577,
+    "DJI_0307_2": 180,
+    "DJI_0309_4": 603,
+    "DJI_0325_2": 595,
+    "DJI_0327_3": 390,
+    "DJI_0339_2": 600,
+    "DJI_0345_2": 600
+  },
+  "native_MOT_parity": true,
+  "results": {
+    "DJI_0028_3": {
+      "native_off": {
+        "mot": "ccbee1ec0096227b29ecdd930e3bd8fa87bbf585aab5b9bfdefca9f0deec6086",
+        "states": "209ec95827692fa7f86c26abc2913dccc745e4422b7319a9f8d07e898a851612",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 570,
+        "warp_sha256": "3c0e4d2aa3752fe2216f879f25fc24e0d475737d36e6680d80708b89a4be0c02"
+      },
+      "native_W0": {
+        "mot": "9c1deb8844df873b604ff0159a23b243515eeb1cd9f1b6ae3fb8a383eef92f1a",
+        "states": "c270c6a4b71756f49c8125d07ee0161b97161ba9f16de715e569f51cfcf79e6b",
+        "weak_events": "483f7683ff420d343c1655d61e54bd29610021956bc6a20a64ad46b874f410c2",
+        "first_commit": 208,
+        "commits": 13,
+        "frames": 570,
+        "warp_sha256": "3c0e4d2aa3752fe2216f879f25fc24e0d475737d36e6680d80708b89a4be0c02"
+      },
+      "prefix_verified": 207
+    },
+    "DJI_0030_2": {
+      "native_off": {
+        "mot": "ed9b4775b4539446a0e87d7a2f77bbb92edbe898a5fe36a2b8c63add6b579489",
+        "states": "632ab304e11c965d7f5a756589d31c444f2d9a64db00f6e056833cb91a700932",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 590,
+        "warp_sha256": "68bce9db7324ba5da60b0d6d29f81c6432258cd5a14df5930ccb9ebb80483442"
+      },
+      "native_W0": {
+        "mot": "973391a88b390e4a27ebb6dbf31f816726a792bca36f05a985bd396ce2d8fab2",
+        "states": "94fbfc672244e719bfb11753a924b2a405edfa18079583cd4e37fc22750660b3",
+        "weak_events": "4484158751e46a7eeab55f806e6b68372e84e0ccd08244e66a1c8824942370f8",
+        "first_commit": 100,
+        "commits": 5,
+        "frames": 590,
+        "warp_sha256": "68bce9db7324ba5da60b0d6d29f81c6432258cd5a14df5930ccb9ebb80483442"
+      },
+      "prefix_verified": 99
+    },
+    "DJI_0032_3": {
+      "native_off": {
+        "mot": "0f357be7ab2b8ff2fcb1066eb95a9a51adafed42eb71dc31ed0c017cbaf5b4d9",
+        "states": "ecfe0a08752fb2745b95924b7f56981ad9071395ea25ec32751405b58fa6b58d",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 290,
+        "warp_sha256": "a4b595cb1b2b2e1a5f0764df90a147b696da4d4221798e80f5da0066e8ef7185"
+      },
+      "native_W0": {
+        "mot": "72aa580cacbe45647ba369ac4d9cfd59b521507d5d2aa49a9ecbbda85b59d45f",
+        "states": "3b041249fef7f1fa7631cb08d91b00a63b65e64743767204226bdceabb29c99e",
+        "weak_events": "2b21ddcfc03231c21900b04657a1e1089f519da826593d11230127c4bd80dea3",
+        "first_commit": 46,
+        "commits": 9,
+        "frames": 290,
+        "warp_sha256": "a4b595cb1b2b2e1a5f0764df90a147b696da4d4221798e80f5da0066e8ef7185"
+      },
+      "prefix_verified": 45
+    },
+    "DJI_0049_2": {
+      "native_off": {
+        "mot": "eec8a2b1bdf145c87894252ef0e15bbe72269a6064d8e8be27c5043f26909bd6",
+        "states": "1a263e41b408a30c3773d6f7aec8200cfede3b5322a8c70cc9c9d77ccf07c28e",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 90,
+        "warp_sha256": "e2987ad786d4bd38a64fb82991c71d98d7c519717eb74d24f17bf15123e0bef8"
+      },
+      "native_W0": {
+        "mot": "f5ae2a7a4f1588d3197974d5721074a9784b4af9008cd00270fbf843e92c5e6b",
+        "states": "a96303e4754e667066c9e7b5dc0dd64a64f1cea628a77da6caca7883a3a8244f",
+        "weak_events": "63d4d71618780b02fa28358f06511a25e6e15142c9204ab907e1c8eb87fc31c1",
+        "first_commit": 6,
+        "commits": 5,
+        "frames": 90,
+        "warp_sha256": "e2987ad786d4bd38a64fb82991c71d98d7c519717eb74d24f17bf15123e0bef8"
+      },
+      "prefix_verified": 5
+    },
+    "DJI_0051_2": {
+      "native_off": {
+        "mot": "153b213bb5bfea65e733df31e5807e1952f5b627133c4eaa0d073acc5cdc957c",
+        "states": "0de7a0e4961adb3c43d64bb092b65a7688ca2b59b628b9e7d8140d14cf04b9bc",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 580,
+        "warp_sha256": "131d34c01fb279427f58a666a675a8ba7bdef7103938c472c64d672eef6a0ec1"
+      },
+      "native_W0": {
+        "mot": "88a13bb23ef48b16c5a8420ec9d13d977a3072f924e773a72c82632b64e28c16",
+        "states": "0143c628d2fdebcd91403888cd726c1c63c4d2e034958d9187b2238e70132a74",
+        "weak_events": "ee7ab68afdaceed9905b12c399193038ef34ff42838fb29e11fefe31ecb732a7",
+        "first_commit": 63,
+        "commits": 7,
+        "frames": 580,
+        "warp_sha256": "131d34c01fb279427f58a666a675a8ba7bdef7103938c472c64d672eef6a0ec1"
+      },
+      "prefix_verified": 62
+    },
+    "DJI_0061_2": {
+      "native_off": {
+        "mot": "40ef20f3a87ded50198da251286276f21b27126c8e11f23c6dcd07c0100863d6",
+        "states": "0d26074062c24d3a2680d695b64d344e51c3977c5d7d472837b04f8c104c93c3",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 240,
+        "warp_sha256": "aff2a99364d63752738ba0b2519e9f83a3184e2d68377b8a5f3b2a7966e622e6"
+      },
+      "native_W0": {
+        "mot": "34c9b45d00382d98930ffcd1ff7689e83301eae1e169c8e1d8d1959fd7704dba",
+        "states": "4264c538123c5aa47efd2fc20740f67cc111378e0bf56f4d845f0ddde47154b2",
+        "weak_events": "f5d90f9f2f466f2f89db89ebf01760c0ed7d43ffd075b17d7ce244d4d54baf92",
+        "first_commit": 7,
+        "commits": 124,
+        "frames": 240,
+        "warp_sha256": "aff2a99364d63752738ba0b2519e9f83a3184e2d68377b8a5f3b2a7966e622e6"
+      },
+      "prefix_verified": 6
+    },
+    "DJI_0073_3": {
+      "native_off": {
+        "mot": "fae8079dd77780aa232ae2bce8991509b0fb5b0e5483458b8bac07133b79a48e",
+        "states": "3fd2893064d15bba40c46ef3678cf7b05e2e6f70fd43dd349992031094e5ca1b",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 360,
+        "warp_sha256": "89c46318f382977df06a961b2dcf669c508fa3796141ef9ee3b82581777a8ae2"
+      },
+      "native_W0": {
+        "mot": "bdb168b2d974ec6d333b601cd19de942b7f22d0b4d9e84944a25bddaf136e041",
+        "states": "0941a550df031d256304d9c8562b1978edb7dd3651bcc3c2c23c63ae3d446195",
+        "weak_events": "a8f3d436b2fa289d5155f7be9eef1557aac8bc27c920fa3934424a463c8e93f4",
+        "first_commit": 10,
+        "commits": 57,
+        "frames": 360,
+        "warp_sha256": "89c46318f382977df06a961b2dcf669c508fa3796141ef9ee3b82581777a8ae2"
+      },
+      "prefix_verified": 9
+    },
+    "DJI_0109_1": {
+      "native_off": {
+        "mot": "4ae9c87976e3ec09ccbac88f1dfd6ecc4c086a946d67fa9f27af9a7be9709965",
+        "states": "2a776f498d08431490bdf32fa22679cb59591fcfa2c66004da0b9d2bf97cb328",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 90,
+        "warp_sha256": "94057d275635adb9efe2baf90a22b0f22334664d7650eab9acd9b3ee9dec4c41"
+      },
+      "native_W0": {
+        "mot": "a597dd98e72af4fde69cd4d9d43d3ec6163e1d3ab8951bd2a99842b185aaa63e",
+        "states": "7701d8b5c1aa861c0692936d9df7671746a7337de97d59e78ef1d3f4e44847ac",
+        "weak_events": "4c686199b45149776da91d43a99893a03c2236ed11923c4774a6b70de57f8394",
+        "first_commit": 6,
+        "commits": 1,
+        "frames": 90,
+        "warp_sha256": "94057d275635adb9efe2baf90a22b0f22334664d7650eab9acd9b3ee9dec4c41"
+      },
+      "prefix_verified": 5
+    },
+    "DJI_0119_2": {
+      "native_off": {
+        "mot": "6d10856ef08245e31a0d44433a903f27329d223e507d25eab44568a9ff683ced",
+        "states": "a3fd52fbe5e3c135dc96ff39f0ad119150968b41c0cb6ee007d6454773b44fee",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 180,
+        "warp_sha256": "011db4630655f3c43afe85f2c8bab1834ef96a817f99f431beffe123f601109f"
+      },
+      "native_W0": {
+        "mot": "6d10856ef08245e31a0d44433a903f27329d223e507d25eab44568a9ff683ced",
+        "states": "a3fd52fbe5e3c135dc96ff39f0ad119150968b41c0cb6ee007d6454773b44fee",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 180,
+        "warp_sha256": "011db4630655f3c43afe85f2c8bab1834ef96a817f99f431beffe123f601109f"
+      },
+      "prefix_verified": 180
+    },
+    "DJI_0129_2": {
+      "native_off": {
+        "mot": "605d745d79a77fa27b523b7bec36c9cedf96b1ee2667dee93ef74f8dadc9c682",
+        "states": "6e5dea87b51e9d7c85352c51ae875b4aa75b2aa6361a5f5eabe45cfc2aa54dae",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 590,
+        "warp_sha256": "8d266b00a0bb311738af2d8e097cbf7a29c05d4bbc1c3d803c95459bfeea2535"
+      },
+      "native_W0": {
+        "mot": "42fb9a4a1ff25f743f758bd8d7cafd193e6c450405a9a4657cc40e431e7e3b68",
+        "states": "84b3682c921ad7e38554b3bbb0d706a5bb48dbcd8e0c25ee10e23514f3a0e243",
+        "weak_events": "5243d8bf153e64c4bd4ca6e8c7e5927b89db994ad82f6b904f7baa31a3885cad",
+        "first_commit": 55,
+        "commits": 8,
+        "frames": 590,
+        "warp_sha256": "8d266b00a0bb311738af2d8e097cbf7a29c05d4bbc1c3d803c95459bfeea2535"
+      },
+      "prefix_verified": 54
+    },
+    "DJI_0141_2": {
+      "native_off": {
+        "mot": "6c8143b560c3fe891c3e43ed8c6349626cf1969a69c8a7f1853df1c7c07cc2c1",
+        "states": "7c77282a4fa4958af12c2b358471a3a9cef7d93a07fba7b3e2aa9c79a3f2194c",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 410,
+        "warp_sha256": "8e93a668b64b0d949eb2f48b0368c7fa47dbfd4ad0d84186e1d324cb8f6b9f90"
+      },
+      "native_W0": {
+        "mot": "6a6a8fd2633960581fd8958af669e65c64e267b7d14d898c508db6c0aedfd187",
+        "states": "f12fb405256d5fc3495a1373c1e868b5860412f0fe4d4b2a781c682bdaa342a8",
+        "weak_events": "e203a15849e90dc67e3ef851f1defdc4342657472644866ed187efe3839924a7",
+        "first_commit": 6,
+        "commits": 47,
+        "frames": 410,
+        "warp_sha256": "8e93a668b64b0d949eb2f48b0368c7fa47dbfd4ad0d84186e1d324cb8f6b9f90"
+      },
+      "prefix_verified": 5
+    },
+    "DJI_0155_2": {
+      "native_off": {
+        "mot": "4f75fc1840ffddd7851fb19175676416c8f35ea56dcc7f4a1b4d53cb1373170a",
+        "states": "1636dfc3173f3196d574fc6765932beb5f16ecddf613284600b8b61c4d30dd1c",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 410,
+        "warp_sha256": "5109f4648285b6cb1d200375ef891bac1daa82d65c7dc9031171655dad62b506"
+      },
+      "native_W0": {
+        "mot": "faf0369deed726fb82211b8ebfac9da00e41599736023b3a8df1d702ecd7ad63",
+        "states": "47fbea2f43936fa0c54081fa9833152823a21622e06572e405e80acf1d882816",
+        "weak_events": "4275b4db4d2dd084274bce8893df9995d373045dbac121e52c457b995fd9afdf",
+        "first_commit": 9,
+        "commits": 1,
+        "frames": 410,
+        "warp_sha256": "5109f4648285b6cb1d200375ef891bac1daa82d65c7dc9031171655dad62b506"
+      },
+      "prefix_verified": 8
+    },
+    "DJI_0159_2": {
+      "native_off": {
+        "mot": "99e592710a038150ad885c0f62672f26495a78557ff35ab61747c3943d004a91",
+        "states": "1d298d712c5e754bb4525117fa492cb5fe53d8e6e6ee7f2eb74349be255fc9d9",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 250,
+        "warp_sha256": "382a4896f509a212b225f1335988d3788b33aa33de441fc95a499c4971441109"
+      },
+      "native_W0": {
+        "mot": "99e592710a038150ad885c0f62672f26495a78557ff35ab61747c3943d004a91",
+        "states": "1d298d712c5e754bb4525117fa492cb5fe53d8e6e6ee7f2eb74349be255fc9d9",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 250,
+        "warp_sha256": "382a4896f509a212b225f1335988d3788b33aa33de441fc95a499c4971441109"
+      },
+      "prefix_verified": 250
+    },
+    "DJI_0169_3": {
+      "native_off": {
+        "mot": "61c1fe75f2903ce186b6a4287daa7dd5f1c1b273890c8451ab0cb516c1ef2b02",
+        "states": "73d3759ceffe2ad5a1787ff355c30f5c5a28121443120bc3426ea0bf45acaa32",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 290,
+        "warp_sha256": "db4f4680e1ccf25bf8749b3a8da7608e384b787bb10a023e3ab1e7e8625006e4"
+      },
+      "native_W0": {
+        "mot": "37271746f330808c2930bf133a8b58332046bf6f0973a13c7877b50c83931f38",
+        "states": "a98743f8562b668c89b51d6508586f3f93fbe19c31e9731d499827f0cc4f449d",
+        "weak_events": "a97f2470a8224295a7155424946e6ea0cb78ec222f2087c89d389649dce9aaf5",
+        "first_commit": 34,
+        "commits": 16,
+        "frames": 290,
+        "warp_sha256": "db4f4680e1ccf25bf8749b3a8da7608e384b787bb10a023e3ab1e7e8625006e4"
+      },
+      "prefix_verified": 33
+    },
+    "DJI_0173_2": {
+      "native_off": {
+        "mot": "0fbeb1f68daeedfd9b443321786bff522a15237a0bc64c15f12e7692dc21366e",
+        "states": "769869c8e0e5e308973797897c91b1a43ca002340de6a3262f1238d48b566e23",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 450,
+        "warp_sha256": "c90b9ba6cbf1f5f16aab96bb5f99b3ff59b841f49a9626e0d4f4391ce88b9cac"
+      },
+      "native_W0": {
+        "mot": "0fbeb1f68daeedfd9b443321786bff522a15237a0bc64c15f12e7692dc21366e",
+        "states": "769869c8e0e5e308973797897c91b1a43ca002340de6a3262f1238d48b566e23",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 450,
+        "warp_sha256": "c90b9ba6cbf1f5f16aab96bb5f99b3ff59b841f49a9626e0d4f4391ce88b9cac"
+      },
+      "prefix_verified": 450
+    },
+    "DJI_0181_3": {
+      "native_off": {
+        "mot": "a07dfde8417b5ad4c83ef63263f1f06be20cf7dc13bbfd1c980815ce883426a6",
+        "states": "1a5761b7f7153c4bc8f7d43da55949c5b842bcb85e6f448c0d4f358b775aafd6",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 320,
+        "warp_sha256": "06891f3e36440a199523a7825315acdc3f80858be8d70e920c0585439eadadd9"
+      },
+      "native_W0": {
+        "mot": "be3ba4b3b2eef93de373d9ef1add727ae2193d1ec3ca93834679622cfb6a985c",
+        "states": "462cfc1fbb5104c6f6f7ed23e96b3af4eddcff3ae94fcf79f7f2259cc5223758",
+        "weak_events": "26c6c2cf0a13a25e5ffeaf7144bd302618ae63859c794ce2641ce6a18fa7d6fe",
+        "first_commit": 12,
+        "commits": 32,
+        "frames": 320,
+        "warp_sha256": "06891f3e36440a199523a7825315acdc3f80858be8d70e920c0585439eadadd9"
+      },
+      "prefix_verified": 11
+    },
+    "DJI_0221_2": {
+      "native_off": {
+        "mot": "b72d13b526054428974de9a943f4f690f063704bba58aa8c32cffc8401e8996b",
+        "states": "bac6f212469d43fce7db499f9296de99bb7683a0077fcb89c6cd6f1783bd0597",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 590,
+        "warp_sha256": "2ca74bb3981f496e8d06275090a89208ddfa5a63bc88f1b8480b1c043c31d57e"
+      },
+      "native_W0": {
+        "mot": "002b07bb0d399de89626492fad5dd3b89da2db2837203250b23c6678398e216b",
+        "states": "3053dd221ad0ec05c2f61c4e184b2f6f167434afea17ccbd6ad51e3e6e48e41f",
+        "weak_events": "c07fda61826bc6aebe74dade425a5dee054380d16f01b07beafb489f81baa12a",
+        "first_commit": 212,
+        "commits": 1,
+        "frames": 590,
+        "warp_sha256": "2ca74bb3981f496e8d06275090a89208ddfa5a63bc88f1b8480b1c043c31d57e"
+      },
+      "prefix_verified": 211
+    },
+    "DJI_0225_1": {
+      "native_off": {
+        "mot": "7354a583aa3b4f9ab8c088d57cd53f66054ebddc86eac06a58d62be16dfc0c66",
+        "states": "ebef062a47098b32f34e9db9b758b68d7b0afb1b76ce6284b72ef97a58b3324d",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 329,
+        "warp_sha256": "a477a7748cb54d1f346fdaeb1b4aba38b3ac9449bdf90d2bd3ff15890d005cb5"
+      },
+      "native_W0": {
+        "mot": "e251b9d098b59e83627cc268dc076cd7ea7c626e4fe944b4c04846a2d626ed24",
+        "states": "0bab8221eac98c407228e035a5197c97dd2a3bbbda5dc9b45ec0b00a1bc44d88",
+        "weak_events": "35f4205e52f767480303256f21cc89ecae2b790ce74cd9f0105af21739220fb2",
+        "first_commit": 7,
+        "commits": 12,
+        "frames": 329,
+        "warp_sha256": "a477a7748cb54d1f346fdaeb1b4aba38b3ac9449bdf90d2bd3ff15890d005cb5"
+      },
+      "prefix_verified": 6
+    },
+    "DJI_0237_2": {
+      "native_off": {
+        "mot": "df1af032ec80cb2406abc4477bc39b2401dd838e264488aa4eb675cffe7dbeac",
+        "states": "88afb783700465923408a397d358e18a7e671e19eb64d077d8c392c48e2b7036",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 410,
+        "warp_sha256": "7c48ddd7102004999ce45da6e88deb6f7d4bf006d257acdb597ba02cf30d61c1"
+      },
+      "native_W0": {
+        "mot": "9d706cdc8dc78ea7af1031c285f5a73f02e55e3cc1780f2d38b28683a1365cb9",
+        "states": "8947cdbdc48005039a6b19d80bd26e87b6183678a4b09207d32a2b14171ecd82",
+        "weak_events": "ae65f0698f9f8f6f437961fe3942a99757bbd5175b5f10a79127c90589d488a7",
+        "first_commit": 27,
+        "commits": 7,
+        "frames": 410,
+        "warp_sha256": "7c48ddd7102004999ce45da6e88deb6f7d4bf006d257acdb597ba02cf30d61c1"
+      },
+      "prefix_verified": 26
+    },
+    "DJI_0255_1": {
+      "native_off": {
+        "mot": "ade24e3225e147fc4d4824993783d285e6fbf3fe0d397f8b82d3995d8b225472",
+        "states": "f070209a60c7069ae1aca660ee95a02b20cdd050a1af2d17623449fbcb91ec40",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 600,
+        "warp_sha256": "46efe07e61c4e53584e4af964c85ef017b54164bf059f6d76b2a3d9bc0bb8b1b"
+      },
+      "native_W0": {
+        "mot": "055c0d308f13c7283c32af6287f177a352bad628bc9f8cb01afd1ea4ac6567cf",
+        "states": "e547d744d45086b4b45caf1d033b6041f49b07629681293207ce442975427c1c",
+        "weak_events": "cfa6205fe7c924ac78a72e9beca40e21a8eb523a9a6ea9c746eb935c9290234c",
+        "first_commit": 147,
+        "commits": 1,
+        "frames": 600,
+        "warp_sha256": "46efe07e61c4e53584e4af964c85ef017b54164bf059f6d76b2a3d9bc0bb8b1b"
+      },
+      "prefix_verified": 146
+    },
+    "DJI_0257_2": {
+      "native_off": {
+        "mot": "6a5daf96b5bcdc16ab5a2830700aa23f8ecb673ecddc5e0a9383eec89d23bb85",
+        "states": "b6e5db299bd946c3b5e6ac8d45a72024829d5822c24e37826e921a0f61b85091",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 590,
+        "warp_sha256": "faf271121990066cb25508400ae1d8d2f4a687a1477bb5ccb90ba54c2b317f4a"
+      },
+      "native_W0": {
+        "mot": "794ed97581ac98b48dc6bc8f3cabfdb84e837c5bcfc882af0bb8e26b1511de52",
+        "states": "0b8b8466d55aade5e8ff2a7f03d78873618c50263d602e1f4416774cf36a0ef4",
+        "weak_events": "ea1760462626a57421adc10d92a3d659a41558121927829b0041d197514a0ce5",
+        "first_commit": 64,
+        "commits": 3,
+        "frames": 590,
+        "warp_sha256": "faf271121990066cb25508400ae1d8d2f4a687a1477bb5ccb90ba54c2b317f4a"
+      },
+      "prefix_verified": 63
+    },
+    "DJI_0277_2": {
+      "native_off": {
+        "mot": "86f36ec3f1c2778377a4bd4efb33b3f023f9f57f039342eb30a3cac37a9b6b9d",
+        "states": "5439bb53385cb6482c4dfbe51e04aaa03c2d87efc02ca3a707ae531ca5ed304f",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 366,
+        "warp_sha256": "70f3d31de6a74f5432698ea5637139636ed31623ef0f35693e447d979acf7b68"
+      },
+      "native_W0": {
+        "mot": "c8e1b34a7601a3a5be2c03f0ea23de7948446556ef62fb95765369085089f063",
+        "states": "e590d391121e96967d562979983f65e839beb5648205453e96058c103d835ee2",
+        "weak_events": "bf4f9322789889f5dc0ebc57e7e23bb3a60d31a260e2025b6ee23fc78a4dde89",
+        "first_commit": 106,
+        "commits": 5,
+        "frames": 366,
+        "warp_sha256": "70f3d31de6a74f5432698ea5637139636ed31623ef0f35693e447d979acf7b68"
+      },
+      "prefix_verified": 105
+    },
+    "DJI_0283_1": {
+      "native_off": {
+        "mot": "6552ad60a8237ca1a4224fb34d6f68d38e947eeaa1e84df48bc04630f74bd6f7",
+        "states": "6275c2cadf694863180fddf1c5122fed147e489ab470765522694941c9b1ee38",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 450,
+        "warp_sha256": "21a50c6cea1cd7b6935ee6253f8d5a25936e4187ad1ac02318a8878619ee128f"
+      },
+      "native_W0": {
+        "mot": "aff55c8ba7a212d2f0f73c0057bd8e9075975a13c9172ac17812d147d2387620",
+        "states": "c4ea5a9deb8cc8bc050f19b6f6aeb62af593227d0a33e31ed8b08ab535dcacef",
+        "weak_events": "a32b6dc35aa95c332962f1fcb6bbc4b8a09a9e36c7c9d23addbcba27e02762c9",
+        "first_commit": 18,
+        "commits": 29,
+        "frames": 450,
+        "warp_sha256": "21a50c6cea1cd7b6935ee6253f8d5a25936e4187ad1ac02318a8878619ee128f"
+      },
+      "prefix_verified": 17
+    },
+    "DJI_0303_2": {
+      "native_off": {
+        "mot": "c334f13af369cbeaf1caa86f47040a8bfb2d7b205863c1175ea2ff6fa8cd2392",
+        "states": "43a24f92f35ecf2e2ac9e86c455595f60f0acf8a07fc3bc94fd381584220806f",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 577,
+        "warp_sha256": "f6521dc8c80c16bd60ac24117d1df61251952ceaf857f96bc837e6b81cffeadf"
+      },
+      "native_W0": {
+        "mot": "23df7ff8f728cd019cdc32bee6e67e88cfeb982628bbbda3ddfe34a9cab842f6",
+        "states": "8dae91a5badcb7d23de1af7b4da68f559065e7bf3d65bd39fb3e7154991bc1be",
+        "weak_events": "aa58e9fc54836c601413ddb91c344de90129318c40d2aa5eeb5d414338fb3b05",
+        "first_commit": 28,
+        "commits": 7,
+        "frames": 577,
+        "warp_sha256": "f6521dc8c80c16bd60ac24117d1df61251952ceaf857f96bc837e6b81cffeadf"
+      },
+      "prefix_verified": 27
+    },
+    "DJI_0307_2": {
+      "native_off": {
+        "mot": "a8495a971dfabe97f68796b2b1e19001b7d353943aca30747461ca2d4833cb39",
+        "states": "a8840d64aded3a005f7c79773e10b884ed342056307348839550d30d659e6f03",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 180,
+        "warp_sha256": "1d6bfc3b1db7a5b8d5629394bc82477c33e70f5a13f285fb4403fd5bde7a365a"
+      },
+      "native_W0": {
+        "mot": "a8495a971dfabe97f68796b2b1e19001b7d353943aca30747461ca2d4833cb39",
+        "states": "a8840d64aded3a005f7c79773e10b884ed342056307348839550d30d659e6f03",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 180,
+        "warp_sha256": "1d6bfc3b1db7a5b8d5629394bc82477c33e70f5a13f285fb4403fd5bde7a365a"
+      },
+      "prefix_verified": 180
+    },
+    "DJI_0309_4": {
+      "native_off": {
+        "mot": "2b5c2aaafb8a25586d629d7d1162b711fec3b7e77b03ea32e195a231658bab28",
+        "states": "2f739ff8d766849d24c6c652cde2b99b483faf0e6313b966b393e406466379df",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 603,
+        "warp_sha256": "523b115b2e30ed1d30de797c31788b62ec41ab43f096957bf61bb0d963dbd802"
+      },
+      "native_W0": {
+        "mot": "854fb85551d713480c9030d12110502350941508a11069401c3520786ad7ad1b",
+        "states": "e1ca422e25602f837a7257d4db52d2664395e294da969926caea9df00e173318",
+        "weak_events": "6cb41f3f55904458e1c785cda72998c851b979e503ef607bf850c74c6f5c0bbf",
+        "first_commit": 155,
+        "commits": 13,
+        "frames": 603,
+        "warp_sha256": "523b115b2e30ed1d30de797c31788b62ec41ab43f096957bf61bb0d963dbd802"
+      },
+      "prefix_verified": 154
+    },
+    "DJI_0325_2": {
+      "native_off": {
+        "mot": "f15cb6ea13a8002dad776275cb9b0d5fa0bb001c83844fc9f448ec87d231d142",
+        "states": "f345851f8795c0fc07a3d5ee57e53a906cb183793f7e16aae7c6bb02d8109ff1",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 595,
+        "warp_sha256": "5cca39a381520cb656b52c94d60f5aa2309d69df7a9d4a0ab6f03f5c0fcc2560"
+      },
+      "native_W0": {
+        "mot": "f15cb6ea13a8002dad776275cb9b0d5fa0bb001c83844fc9f448ec87d231d142",
+        "states": "f345851f8795c0fc07a3d5ee57e53a906cb183793f7e16aae7c6bb02d8109ff1",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 595,
+        "warp_sha256": "5cca39a381520cb656b52c94d60f5aa2309d69df7a9d4a0ab6f03f5c0fcc2560"
+      },
+      "prefix_verified": 595
+    },
+    "DJI_0327_3": {
+      "native_off": {
+        "mot": "2d0ff56b4b8f43c3d6bf6a1f02e03ef1e08a37897d8f275e2e5173415d3626f8",
+        "states": "6f31cbc94d94c99c83bfc93300df5dfed6334ee748e57da8c7be4ea712e9cb92",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 390,
+        "warp_sha256": "0fc3d3035ccdbc13e5701dccbf68401034ddd09cb6faad0664e6f55fb46b7770"
+      },
+      "native_W0": {
+        "mot": "f18cc1ca6a1eb12885797f90323f85b754437c54c1f8f3bd7931e49fcde57001",
+        "states": "b3a89cd9175afd7793e0a61845b617b66b799e2b38fcb0fbe1d54fdfb3e2852f",
+        "weak_events": "5f449a21cbd8a2be96b1eee64b53f5c84b648f0ec13609c7d5976ecea17ccc32",
+        "first_commit": 10,
+        "commits": 107,
+        "frames": 390,
+        "warp_sha256": "0fc3d3035ccdbc13e5701dccbf68401034ddd09cb6faad0664e6f55fb46b7770"
+      },
+      "prefix_verified": 9
+    },
+    "DJI_0339_2": {
+      "native_off": {
+        "mot": "f701880c6dde7bd49b8185f4b108cae81c389f5391a67e36875b2230c25bf105",
+        "states": "bd857b4b88e3f7dda5eda565d08f74f74c04de73e830333edfe4e95c7b4631bd",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 600,
+        "warp_sha256": "0f66cd618ae7134a74b9042fbdf4703ebfd5e05b461520e4613bf09ca665eea5"
+      },
+      "native_W0": {
+        "mot": "cc1304399e0d9bb8f6c4c67f82941d2ccbcdd1c7f0b548f447a5c31c9800cb57",
+        "states": "3163ee6c89bb782210ea7eaf6f9e8eb0a9f4d58e7591f7d42cbe05945408353f",
+        "weak_events": "5be2d5c330ffd917c44160a561417336f03d53661a01f4e96fcb8a443ea9d15b",
+        "first_commit": 45,
+        "commits": 6,
+        "frames": 600,
+        "warp_sha256": "0f66cd618ae7134a74b9042fbdf4703ebfd5e05b461520e4613bf09ca665eea5"
+      },
+      "prefix_verified": 44
+    },
+    "DJI_0345_2": {
+      "native_off": {
+        "mot": "37740f5a6b8ab687a9da1e532238b809566491ee6070128477943e326a711da0",
+        "states": "7d64621d928e0adab1c757a853db2d7d3b531521bc52c5c8205ab33b40dfde3e",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 600,
+        "warp_sha256": "7f03508e4c654416c02add6dd4e477ef63aa3f747b989f769278df8dc117c1cb"
+      },
+      "native_W0": {
+        "mot": "e2fdc5adb2285b44a344e49cf1ed8ce962d17f235c83fabe5708a5cbd76981df",
+        "states": "eee17e9696fceee19094905fb9790dd9b888c5f56228bd5162613d6fd17a78f7",
+        "weak_events": "f74b08b4c0503ec8c7769762901d431bcdffa8f7d23ce54ff10da36c4aa9c378",
+        "first_commit": 44,
+        "commits": 8,
+        "frames": 600,
+        "warp_sha256": "7f03508e4c654416c02add6dd4e477ef63aa3f747b989f769278df8dc117c1cb"
+      },
+      "prefix_verified": 43
+    }
+  }
+}

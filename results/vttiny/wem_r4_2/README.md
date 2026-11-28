@@ -6,4 +6,8 @@ W0 保留原锚点约束和正式状态反馈，作为定型候选。相对关�
 
 [完整结果、定型依据与复现](full_20261128/README.md) · [五组指标报告](full_20261128/report/REPORT.md) · [逐帧案例](full_20261128/cases/ANALYSIS.md)
 
+## 原始 BoT-SORT 补充消融
+
+原始 BoT-SORT 关闭、开启 W0 均回放了同一套完整 30 段，和 B、BG 的既有结果统一重评。 [六组指标、三底座增量和复现](native_w0_20261128/README.md) · [DJI_0061_2 换号分析及只输出对照](native_w0_20261128/dji_0061/ANALYSIS.md)
+
 [实验设计](../../../docs/botsort_plus/wem_r4_2/EXPERIMENT_PLAN.md) · [运行手册](../../../docs/botsort_plus/wem_r4_2/LOCAL_RUNBOOK.md) · [软件核验](../../../docs/botsort_plus/wem_r4_2/VALIDATION.md) · [R4.1 结果](../wem_r4_1/full_20261128/README.md)

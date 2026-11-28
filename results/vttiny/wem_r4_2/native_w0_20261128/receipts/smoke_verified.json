@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "sequences": {
+    "DJI_0030_2": 590,
+    "DJI_0061_2": 240,
+    "DJI_0327_3": 390
+  },
+  "native_MOT_parity": true,
+  "results": {
+    "DJI_0030_2": {
+      "native_off": {
+        "mot": "ed9b4775b4539446a0e87d7a2f77bbb92edbe898a5fe36a2b8c63add6b579489",
+        "states": "632ab304e11c965d7f5a756589d31c444f2d9a64db00f6e056833cb91a700932",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 590,
+        "warp_sha256": "68bce9db7324ba5da60b0d6d29f81c6432258cd5a14df5930ccb9ebb80483442"
+      },
+      "native_W0": {
+        "mot": "973391a88b390e4a27ebb6dbf31f816726a792bca36f05a985bd396ce2d8fab2",
+        "states": "94fbfc672244e719bfb11753a924b2a405edfa18079583cd4e37fc22750660b3",
+        "weak_events": "4484158751e46a7eeab55f806e6b68372e84e0ccd08244e66a1c8824942370f8",
+        "first_commit": 100,
+        "commits": 5,
+        "frames": 590,
+        "warp_sha256": "68bce9db7324ba5da60b0d6d29f81c6432258cd5a14df5930ccb9ebb80483442"
+      },
+      "prefix_verified": 99
+    },
+    "DJI_0061_2": {
+      "native_off": {
+        "mot": "40ef20f3a87ded50198da251286276f21b27126c8e11f23c6dcd07c0100863d6",
+        "states": "0d26074062c24d3a2680d695b64d344e51c3977c5d7d472837b04f8c104c93c3",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 240,
+        "warp_sha256": "aff2a99364d63752738ba0b2519e9f83a3184e2d68377b8a5f3b2a7966e622e6"
+      },
+      "native_W0": {
+        "mot": "34c9b45d00382d98930ffcd1ff7689e83301eae1e169c8e1d8d1959fd7704dba",
+        "states": "4264c538123c5aa47efd2fc20740f67cc111378e0bf56f4d845f0ddde47154b2",
+        "weak_events": "f5d90f9f2f466f2f89db89ebf01760c0ed7d43ffd075b17d7ce244d4d54baf92",
+        "first_commit": 7,
+        "commits": 124,
+        "frames": 240,
+        "warp_sha256": "aff2a99364d63752738ba0b2519e9f83a3184e2d68377b8a5f3b2a7966e622e6"
+      },
+      "prefix_verified": 6
+    },
+    "DJI_0327_3": {
+      "native_off": {
+        "mot": "2d0ff56b4b8f43c3d6bf6a1f02e03ef1e08a37897d8f275e2e5173415d3626f8",
+        "states": "6f31cbc94d94c99c83bfc93300df5dfed6334ee748e57da8c7be4ea712e9cb92",
+        "weak_events": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "first_commit": null,
+        "commits": 0,
+        "frames": 390,
+        "warp_sha256": "0fc3d3035ccdbc13e5701dccbf68401034ddd09cb6faad0664e6f55fb46b7770"
+      },
+      "native_W0": {
+        "mot": "f18cc1ca6a1eb12885797f90323f85b754437c54c1f8f3bd7931e49fcde57001",
+        "states": "b3a89cd9175afd7793e0a61845b617b66b799e2b38fcb0fbe1d54fdfb3e2852f",
+        "weak_events": "5f449a21cbd8a2be96b1eee64b53f5c84b648f0ec13609c7d5976ecea17ccc32",
+        "first_commit": 10,
+        "commits": 107,
+        "frames": 390,
+        "warp_sha256": "0fc3d3035ccdbc13e5701dccbf68401034ddd09cb6faad0664e6f55fb46b7770"
+      },
+      "prefix_verified": 9
+    }
+  }
+}
