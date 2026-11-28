@@ -1,22 +1,27 @@
-# BoT-SORT-Plus · 弱检测证据挖掘与关联消融
+# BoT-SORT-Plus · 弱检测证据挖掘与完整闭环评测
 
 本分支 **research/vttiny-weak-evidence** 为毕业设计目标跟踪章节准备 W 模块及下一批实验，从 research/vttiny-track-conditioned-observation 的 **176f2a81613c34d16a860765ea7be0845116b534** 建立，继承 B、GMC、TCO/Q2 及先前实验归档。
 
-**当前批次已完成 R3.1 的 W0–W3 与 W_old 五组全量离线对照。785 个未知候选组待人工复核。本轮暂缓新的 R4。** [R3.1 结果与复现](results/vttiny/wem_r3_1/full_20261128/README.md) 本批复用 R3 已有特征和离线标签，不需要重新运行检测器或 ReID，不启用在线 W。另重算 W_old 作为历史对照。[当前运行手册](docs/botsort_plus/wem_r3_1/LOCAL_RUNBOOK.md) · [实验协议](docs/botsort_plus/wem_r3_1/EXPERIMENT_PLAN.md)
+**当前批次为 R4.1：W0–W3 已接入真实跟踪更新，准备在 B 与 BG 两套参考上运行 10 组 × 全部 30 段闭环评测。代码与软件核验已完成，真实数据结果尚未运行回传。** [当前运行手册](docs/botsort_plus/wem_r4_1/LOCAL_RUNBOOK.md) · [实验设计](docs/botsort_plus/wem_r4_1/EXPERIMENT_PLAN.md) · [结果入口](results/vttiny/wem_r4_1/README.md)
+
+R3.1 已完成 W0–W3 与 W_old 五组冻结离线对照。785 个未知候选组仍可随后定向复核；这不构成本批完整闭环的前置条件。[R3.1 结果与复现](results/vttiny/wem_r3_1/full_20261128/README.md)
 
 历史 R3 已完成训练侧冻结校准和 **113 例模型辅助图卡复核，人工确认 0/113**。18 个工作点未达到原准入条件，冻结策略继续为 `REJECT_ALL_FALLBACK`。[历史 R3 结果](results/vttiny/wem_v0.1/r3/README.md)
 
 **已归档 W R4 探索性闭环的八组全量评测。完整 W 少漏 59 帧，同时增加约 145 个误报，换号持平。R3 的默认拒绝全部策略继续有效。** [R4 结果与复现](results/vttiny/wem_v0.1/r4/README.md)
 
-本次 R3.1 对照复用训练侧 R3 缓存，研究外观作为软关联证据的作用；既有 R4 使用 0.75 外观门的探索点，另行保留，不重复其八组回放。
+R4.1 固定策略沿用 R3.1 的 W0–W3 定义；旧 R4 的 0.75 外观门结果单独保留。当前实验采用真实状态演化，最终以完整 TrackEval 指标及逐帧归因判断继续、修改或停止；不按旧 R3 reject-all、人工复核状态或指标正负阻断运行。
 
 ## 从这里开始
 
 | 入口 | 内容 |
 | --- | --- |
-| [当前 R3.1 运行手册](docs/botsort_plus/wem_r3_1/LOCAL_RUNBOOK.md) | 复用现有缓存，一次运行 W0、W1、W2、W3 与 W_old |
-| [当前 R3.1 实验安排](docs/botsort_plus/wem_r3_1/EXPERIMENT_PLAN.md) | 固定机制、单因素比较、适用范围与停止条件 |
-| [当前 R3.1 回传模板](docs/botsort_plus/wem_r3_1/RESULTS_TEMPLATE.md) | 条件覆盖、未知采用、相对竞争与来源分层 |
+| [当前 R4.1 运行手册](docs/botsort_plus/wem_r4_1/LOCAL_RUNBOOK.md) | 本机配置、完整闭环、自动评测、续跑及回传 |
+| [当前 R4.1 实验设计](docs/botsort_plus/wem_r4_1/EXPERIMENT_PLAN.md) | B/BG × off、W0、W1、W2、W3；完整 30 段 |
+| [当前 R4.1 回传模板](docs/botsort_plus/wem_r4_1/RESULTS_TEMPLATE.md) | 完整指标、组件增量、组合增量与错误传播 |
+| [当前 R4.1 软件核验](docs/botsort_plus/wem_r4_1/VALIDATION.md) | 接入、资产、闭环机制和汇总测试；区分真实评测 |
+| [已完成 R3.1 运行手册](docs/botsort_plus/wem_r3_1/LOCAL_RUNBOOK.md) | 复用冻结缓存的历史离线比较 |
+| [已完成 R3.1 实验安排](docs/botsort_plus/wem_r3_1/EXPERIMENT_PLAN.md) | 固定关联机制与条件覆盖诊断 |
 | [前期本地运行手册](docs/botsort_plus/wem_v0.1/LOCAL_RUNBOOK.md) | 拉取、填路径、检查、运行首批审计、回传结果 |
 | [W 完整设计](docs/botsort_plus/wem_v0.1/MODULE_DESIGN.md) | 候选来源、历史、身份竞争、可信锚与 B/GMC 衔接 |
 | [分批实验安排](docs/botsort_plus/wem_v0.1/EXPERIMENT_PLAN.md) | R0、R1a/R1b、R2、R3、R4 的输入、对照、验收与停止条件 |
@@ -26,9 +31,38 @@
 | [历史证据与文献](docs/botsort_plus/wem_v0.1/EVIDENCE_AND_REFERENCES.md) | TCO/Q2 结果、相关工作和可验证增量 |
 | [本次软件核验](docs/botsort_plus/wem_v0.1/VALIDATION.md) | 新工具测试、适用范围和未验证内容 |
 
-当前批次配置：[R3.1 本地模板](configs/research/wem_r3_1.example.json) · [R3.1 固定协议](configs/research/wem_r3_1_protocol.json)。前期配置与设计继续保留在 wem_v0.1 目录。
+当前批次配置：[R4.1 本地模板](configs/research/wem_r4_1.example.json) · [R4.1 固定协议](configs/research/wem_r4_1_protocol.json)。此前 R3.1 与 wem_v0.1 的配置、结果和设计继续保留。
 
-## 当前批次：R3.1 四组关联对照
+## 当前批次：R4.1 十组完整闭环
+
+在已成功运行旧 R4 的环境中，从仓库根目录执行：
+
+~~~bash
+python -X utf8 tools/run_wem_r41.py init --settings configs/research/wem_r4_1.local.json
+~~~
+
+按 [运行手册](docs/botsort_plus/wem_r4_1/LOCAL_RUNBOOK.md) 填入已有 R0 预测设置、一致性凭据、参考与评测清单、微调 RGB 权重和本机路径。然后执行：
+
+~~~bash
+python -X utf8 tools/run_wem_r41.py check --settings configs/research/wem_r4_1.local.json
+python -X utf8 tools/run_wem_r41.py full --settings configs/research/wem_r4_1.local.json
+~~~
+
+`full` 自动完成技术 smoke、十组全部 30 段跟踪、TrackEval、CLEAR 归因与汇总。默认顺序运行，已完成且摘要一致的实验臂可复用。核心输出为 `runs/wem_r4_1/full/report/REPORT.md`。
+
+| 策略 | B 参考 | BG 参考 |
+| --- | --- | --- |
+| 关闭 W | B_off | BG_off |
+| 原生几何 W0 | B_W0 | BG_W0 |
+| 几何＋运动 W1 | B_W1 | BG_W1 |
+| 软外观 W2 | B_W2 | BG_W2 |
+| 相对竞争 W3 | B_W3 | BG_W3 |
+
+BG 沿用 `evidence_both`，包含既有自适应 GMC、低分双几何和关联证据配置；各 BG 变体与自身 BG_off 比较。接纳弱框后真实更新 KF 状态并进入后续帧，原 ID 保持、弱框不写外观记忆，原生关联及 B 仍优先。W_H 只在当前在线状态上记录反事实诊断，不增加重复完整实验臂。
+
+软件核验不代表新模块已有效。完整评测按已查看的官方开发评测集解释，以 HOTA、IDF1、FP/FN/IDSW、逐序列分布及 B 恢复事件变化共同决定后续去留。
+
+## 历史批次：R3.1 四组关联对照
 
 继续使用当前分支：
 

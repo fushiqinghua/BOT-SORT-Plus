@@ -1,0 +1,39 @@
+{
+  "schema": "wem_r41_software_validation_v1",
+  "date": "2026-11-28",
+  "status": "PASS",
+  "base_commit": "31ab38029b3997572c339dd6d926ba1500d482f9",
+  "command": "python -m unittest discover -s tests -p 'test_wem_r41_*.py' -q",
+  "tests_passed": 48,
+  "tests_failed": 0,
+  "suites": {
+    "online": 15,
+    "hooks": 2,
+    "batch": 15,
+    "reporting": 16
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "Linux",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "real_dataset": "NOT_RUN",
+  "real_boxmot_gpu_parity": "NOT_RUN",
+  "windows_gpu": "NOT_RUN",
+  "synthetic_data_only": true,
+  "files": {
+    "configs/research/wem_r4_1.example.json": "16f1b2634c2f4fa4697287bb368c4ab864bd7f014a596c6045eda4163eade04d",
+    "configs/research/wem_r4_1_protocol.json": "e4cad96714e8e958048f4857bff4c39ecff5bce679cbb3abb2fe33696781d14a",
+    "tests/test_wem_r41_batch.py": "26fc6992c801f894fe6e4ddf1ccb843addd656cdc2696ee3c0228a3a534d9106",
+    "tests/test_wem_r41_hooks.py": "28ebdb9758f0c94eab9c8a56e4c2310f0cbc668a5134d6efa46643f962cfba8a",
+    "tests/test_wem_r41_online.py": "eae25bfe877d8fc447ec083e3347b8f2d914301be0bd229a426b41a0ef36661e",
+    "tests/test_wem_r41_reporting.py": "0a9ba3f5979f958ed14f56913daf35c65a43b55a6502b8383ccb18edd2a78d58",
+    "tools/research/wem_r41/__init__.py": "72d9e90c9fb3ebc026e9069bab5eaf07d0fc945e8517ccbe3b782cf10eec11c3",
+    "tools/research/wem_r41/assets.py": "01b9f56f7180e0f6b8733b6c96c503bfdcbe9bb04679382734edb1765f3eb07d",
+    "tools/research/wem_r41/batch.py": "9bdc0ea47403d5ae99d6459755b315c8b01050684a47cee056f1e739c7bbb9a8",
+    "tools/research/wem_r41/online.py": "9615716a58c4046544305f1db1ca048c7bb98a85faba33a554b62fb92f1621ea",
+    "tools/research/wem_r41/reporting.py": "03943e06db4d958460f4b48e36593852a6703ee50e2eb5eb1e5e53b2096a552d",
+    "tools/run_wem_r41.py": "e8b9e96289049ff02858c3220fd1466862a0f47ca04e7a320dc3494a7ec27d05"
+  }
+}

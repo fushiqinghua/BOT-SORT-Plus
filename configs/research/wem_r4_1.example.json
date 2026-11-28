@@ -1,0 +1,20 @@
+{
+  "schema": "wem_r41_settings",
+  "paths": {
+    "prediction_settings": null,
+    "r0_parity": null,
+    "reference_manifest": "results/vttiny/iterations/tco-v0.1/T0/reference_manifest.json",
+    "evaluation_manifest": "results/vttiny/iterations/tco-v0.1/T0/input_manifest.json",
+    "rgb_weights": null,
+    "output_root": "runs/wem_r4_1"
+  },
+  "prediction_overrides": {},
+  "evaluation_overrides": {},
+  "reference_overrides": {},
+  "runtime": {
+    "python": null,
+    "cuda_visible_devices": "0",
+    "rgb_device": "cuda:0",
+    "workers": 1
+  }
+}

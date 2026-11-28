@@ -1,0 +1,88 @@
+{
+  "schema": "wem_r41_protocol_v1",
+  "base_commit": "31ab38029b3997572c339dd6d926ba1500d482f9",
+  "branch": "research/vttiny-weak-evidence",
+  "purpose": "Online fixed-policy full benchmark; scientific outcome is determined after complete evaluation",
+  "roles": {
+    "B": {
+      "tracker": "B_early_moderate",
+      "camera": "native"
+    },
+    "BG": {
+      "tracker": "evidence_both",
+      "camera": "adaptive_gmc",
+      "dual_low": true,
+      "evidence_both": true
+    }
+  },
+  "full_modes": [
+    "off",
+    "W0",
+    "W1",
+    "W2",
+    "W3"
+  ],
+  "sequences": {
+    "DJI_0028_3": 570,
+    "DJI_0030_2": 590,
+    "DJI_0032_3": 290,
+    "DJI_0049_2": 90,
+    "DJI_0051_2": 580,
+    "DJI_0061_2": 240,
+    "DJI_0073_3": 360,
+    "DJI_0109_1": 90,
+    "DJI_0119_2": 180,
+    "DJI_0129_2": 590,
+    "DJI_0141_2": 410,
+    "DJI_0155_2": 410,
+    "DJI_0159_2": 250,
+    "DJI_0169_3": 290,
+    "DJI_0173_2": 450,
+    "DJI_0181_3": 320,
+    "DJI_0221_2": 590,
+    "DJI_0225_1": 329,
+    "DJI_0237_2": 410,
+    "DJI_0255_1": 600,
+    "DJI_0257_2": 590,
+    "DJI_0277_2": 366,
+    "DJI_0283_1": 450,
+    "DJI_0303_2": 577,
+    "DJI_0307_2": 180,
+    "DJI_0309_4": 603,
+    "DJI_0325_2": 595,
+    "DJI_0327_3": 390,
+    "DJI_0339_2": 600,
+    "DJI_0345_2": 600
+  },
+  "input_identity": {
+    "detector_sha256": "59ecddb827adb8b6ed75d78b644cc09e8fcdc9c83870cd1f8a9446ad679dc3ec",
+    "rgb_encoder_sha256": "27f110f2fa8ae3c619941c126699486771a42d252b4e675d1c077bb91e0bd2d1",
+    "source_protocol_sha256": "6f0fdff3b198315f8aac72972fcf5117c53b917e84f6c7b5f9814b9012ef2ff2"
+  },
+  "upstream_git_blobs": {
+    "botsort_plus/adapter_v2.py": "6818f98fb9b02b32c33e89e603e68a0f06928f79",
+    "experiments/vttiny_gmc/round3_joint/worker.py": "1611bb7f5527cd7ca9fd539b9535ab763325a416",
+    "tools/research/vttiny_wem_r3/observer/capture.py": "0c912f7e37eae7ce10042b6985582c00ff43d659",
+    "tools/research/vttiny_wem_r3/score_features.py": "426b951e86cfdab2f43ac4f937aef08c63e1ddbc",
+    "tools/research/vttiny_wem_r4/online.py": "6918f8f35d9e702d3874aed19efc98348ef8bd88",
+    "tools/research/wem_r31/engine.py": "0e229fb2a77136239c7a8eddf00bbe32779821d4"
+  },
+  "engine": {
+    "budget": 5,
+    "native_iou_floor": 0.5,
+    "motion_floor": 0.25,
+    "appearance_weight": 0.2,
+    "relative_margin": 0.05
+  },
+  "outer_rule": "unchanged R4 anchor/ownership/GMC/one weak update per episode; no new identity or appearance write",
+  "insertion": "after native association, B and birth, before native finalization",
+  "H": "read-only history-available plus IoU counterfactual; no redundant full arm",
+  "prediction_gt": false,
+  "manual_review_prerequisite": false,
+  "prior_r3_acceptance_prerequisite": false,
+  "full_run_performance_gate": false,
+  "threshold_search": false,
+  "evaluation_scope": "official 30-sequence development benchmark; already inspected",
+  "research_only": true,
+  "production_default_changed": false
+}
